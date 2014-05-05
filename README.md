@@ -3,5 +3,5 @@ sensorSim
 
 author: Thomas Rückert, TU Chemnitz (Informatik)
 
-* Documentation sources can be found inside docs/
+* documentations and informational content can be found inside docs/
 * source code inside src/
