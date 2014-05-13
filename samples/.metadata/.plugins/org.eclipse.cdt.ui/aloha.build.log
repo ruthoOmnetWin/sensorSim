@@ -1,0 +1,6 @@
+12:52:04 **** Build of configuration gcc-debug for project aloha ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+Creating executable: out/gcc-debug//aloha
+
+12:52:05 Build Finished (took 703ms)
+
