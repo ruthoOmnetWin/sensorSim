@@ -1,180 +1,42 @@
-12:48:18 **** Build of configuration gcc-debug for project MiXiM ****
+12:30:00 **** Incremental Build of configuration gcc-release for project TICTOC ****
+make MODE=release CONFIGNAME=gcc-release all 
+txc1.cc
+Creating executable: out/gcc-release//TICTOC
+
+12:30:02 Build Finished (took 2s.372ms)
+
+12:30:02 **** Incremental Build of configuration gcc-debug for project TICTOC ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+txc1.cc
+Creating executable: out/gcc-debug//TICTOC
+12:30:09 **** Incremental Build of configuration gcc-debug for project MiXiM ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && make
 make[1]: Entering directory `/home/rutho/BA/mixim-2.3/src'
-base/connectionManager/ConnectionManagerAccess.cc
-base/connectionManager/BaseConnectionManager.cc
-base/connectionManager/NicEntryDirect.cc
-base/connectionManager/NicEntryDebug.cc
-base/connectionManager/ConnectionManager.cc
-base/modules/BaseApplLayer.cc
-base/modules/BaseWorldUtility.cc
-base/modules/MiximBatteryAccess.cc
-base/modules/BaseArp.cc
-base/modules/BaseBattery.cc
-base/modules/BaseLayer.cc
-MSGC: base/messages/ApplPkt.msg
-base/modules/TestApplLayer.cc
-MSGC: base/messages/MacPkt.msg
-base/modules/BaseMacLayer.cc
-MSGC: base/messages/NetwPkt.msg
-base/modules/BaseNetwLayer.cc
-base/modules/BaseModule.cc
-base/phyLayer/MappingBase.cc
-MSGC: base/messages/ChannelSenseRequest.msg
-MSGC: base/messages/MiximAirFrame.msg
-base/phyLayer/BasePhyLayer.cc
-base/phyLayer/BaseDecider.cc
-base/phyLayer/ChannelInfo.cc
-base/phyLayer/MappingUtils.cc
-base/phyLayer/ChannelState.cc
-base/phyLayer/Signal.cc
-base/phyLayer/Decider.cc
-base/phyLayer/PhyUtils.cc
-base/utils/winsupport.cc
-base/utils/SimpleAddress.cc
-MSGC: inet_stub/linklayer/contract/Ieee802Ctrl.msg
-base/utils/NetwToMacControlInfo.cc
-inet_stub/base/Coord.cc
-inet_stub/base/ModuleAccess.cc
-inet_stub/base/NotificationBoard.cc
-inet_stub/base/NotifierConsts.cc
-inet_stub/base/BasicModule.cc
-inet_stub/linklayer/contract/MACAddress.cc
-inet_stub/mobility/models/ANSimMobility.cc
-inet_stub/mobility/models/MobilityBase.cc
-inet_stub/mobility/models/GaussMarkovMobility.cc
-inet_stub/mobility/models/MovingMobilityBase.cc
-inet_stub/mobility/models/RectangleMobility.cc
-inet_stub/mobility/models/TurtleMobility.cc
-inet_stub/mobility/models/LineSegmentsMobilityBase.cc
-inet_stub/mobility/models/LinearMobility.cc
-inet_stub/mobility/models/RandomWPMobility.cc
-inet_stub/mobility/models/ChiangMobility.cc
-inet_stub/mobility/models/LinearNodeDistributionMobility.cc
-inet_stub/mobility/models/BonnMotionFileCache.cc
-inet_stub/mobility/models/StaticGridMobility.cc
-inet_stub/mobility/models/CircleMobility.cc
-inet_stub/mobility/models/Ns2MotionMobility.cc
-inet_stub/mobility/models/StationaryMobility.cc
-inet_stub/mobility/models/Posture.cc
-inet_stub/mobility/models/PostureTransition.cc
-inet_stub/mobility/models/ConstSpeedMobility.cc
-inet_stub/mobility/models/BonnMotionMobility.cc
-inet_stub/mobility/models/MoBANCoordinator.cc
-inet_stub/mobility/models/MassMobility.cc
-inet_stub/mobility/models/TraCIMobility.cc
-inet_stub/mobility/models/MobilityAccess.cc
-inet_stub/mobility/models/MoBANLocal.cc
-inet_stub/mobility/models/TractorMobility.cc
-inet_stub/networklayer/common/InterfaceTable.cc
-inet_stub/networklayer/common/InterfaceEntry.cc
-modules/analogueModel/UWBIRStochasticPathlossModel.cc
-modules/analogueModel/UWBIRIEEE802154APathlossModel.cc
-modules/analogueModel/BreakpointPathlossModel.cc
-In file included from modules/analogueModel/BreakpointPathlossModel.cc:1:0:
-modules/analogueModel/BreakpointPathlossModel.h: In constructor ‘BreakpointPathlossModel::BreakpointPathlossModel()’:
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::alpha1’ is initialized with itself [-Winit-self]
-  BreakpointPathlossModel()
-  ^
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::alpha2’ is initialized with itself [-Winit-self]
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::breakpointDistance’ is initialized with itself [-Winit-self]
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::carrierFrequency’ is initialized with itself [-Winit-self]
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::useTorus’ is initialized with itself [-Winit-self]
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::playgroundSize’ is initialized with itself [-Winit-self]
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::debug’ is initialized with itself [-Winit-self]
-modules/analogueModel/JakesFading.cc
-modules/analogueModel/PERModel.cc
-modules/analogueModel/LogNormalShadowing.cc
-modules/analogueModel/SimplePathlossModel.cc
-modules/application/BurstApplLayerBattery.cc
-modules/application/TestApplication.cc
-modules/application/SensorApplLayer.cc
-modules/application/BurstApplLayer.cc
-modules/application/TrafficGen.cc
-modules/connectionManager/UnitDisk.cc
-modules/mac/BMacLayer.cc
-MSGC: modules/messages/Mac80211Pkt.msg
-modules/mac/Mac80211.cc
-modules/mac/CSMA802154.cc
-modules/mac/csma.cc
-modules/mac/Mac80211MultiChannel.cc
-modules/mac/CSMAMacLayer.cc
-MSGC: modules/messages/LMacPkt.msg
-modules/mac/LMacLayer.cc
-MSGC: modules/messages/UWBIRMacPkt.msg
-modules/mac/UWBIRMac.cc
-modules/mac/AlohaMacLayer.cc
-modules/messages/UWBIRMacPkt.cc
-MSGC: modules/messages/AggrPkt.msg
-modules/messages/AggrPkt.cc
-modules/netw/Flood.cc
-MSGC: modules/messages/ProbabilisticBroadcastPkt.msg
-modules/netw/AdaptiveProbabilisticBroadcast.cc
-MSGC: modules/messages/DummyRoutePkt.msg
-modules/netw/DummyRoute.cc
-MSGC: modules/messages/WiseRoutePkt.msg
-modules/netw/WiseRoute.cc
-modules/netw/ProbabilisticBroadcast.cc
-modules/netw/ArpHost.cc
-modules/phy/Decider802154Narrow.cc
-modules/phy/DeciderUWBIREDSync.cc
-modules/phy/Decider80211MultiChannel.cc
-modules/phy/Decider80211.cc
-modules/phy/PhyLayer.cc
-In file included from modules/phy/PhyLayer.cc:13:0:
-modules/analogueModel/BreakpointPathlossModel.h: In constructor ‘BreakpointPathlossModel::BreakpointPathlossModel()’:
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::alpha1’ is initialized with itself [-Winit-self]
-  BreakpointPathlossModel()
-  ^
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::alpha2’ is initialized with itself [-Winit-self]
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::breakpointDistance’ is initialized with itself [-Winit-self]
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::carrierFrequency’ is initialized with itself [-Winit-self]
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::useTorus’ is initialized with itself [-Winit-self]
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::playgroundSize’ is initialized with itself [-Winit-self]
-modules/analogueModel/BreakpointPathlossModel.h:65:2: warning: ‘BreakpointPathlossModel::debug’ is initialized with itself [-Winit-self]
-modules/phy/SNRThresholdDecider.cc
-modules/phy/DeciderUWBIREDSyncOnAddress.cc
-modules/phy/Decider80211Battery.cc
-MSGC: modules/messages/AirFrameUWBIR.msg
-modules/phy/DeciderUWBIRED.cc
-modules/phy/PhyLayerUWBIR.cc
-modules/phy/PhyLayerBattery.cc
-modules/power/battery/BatteryStats.cc
-modules/power/battery/SimpleBattery.cc
-modules/transport/Aggregation.cc
-modules/utility/phyPER.cc
-modules/utility/IEEE802154A.cc
-modules/utility/SimTracer.cc
-MSGC: base/messages/BorderMsg.msg
-base/messages/BorderMsg_m.cc
-base/messages/NetwPkt_m.cc
-base/messages/MiximAirFrame_m.cc
-base/messages/ApplPkt_m.cc
-base/messages/ChannelSenseRequest_m.cc
-base/messages/MacPkt_m.cc
-inet_stub/linklayer/contract/Ieee802Ctrl_m.cc
-modules/messages/LMacPkt_m.cc
-modules/messages/Mac80211Pkt_m.cc
-modules/messages/AirFrameUWBIR_m.cc
-modules/messages/AggrPkt_m.cc
-modules/messages/ProbabilisticBroadcastPkt_m.cc
-modules/messages/WiseRoutePkt_m.cc
-modules/messages/DummyRoutePkt_m.cc
-modules/messages/UWBIRMacPkt_m.cc
-Creating shared library: ../out/gcc-debug/src/libmixim.so
 make[1]: Leaving directory `/home/rutho/BA/mixim-2.3/src'
 cd examples && make
 make[1]: Entering directory `/home/rutho/BA/mixim-2.3/examples'
-CSMAMac/SimpleNetwLayer.cc
-analogueModels/RandomFreqTimeModel.cc
-analogueModels/SimpleMacLayer.cc
-analogueModels/SamplePhyLayer.cc
-analogueModels/RandomFrequencyOnlyModel.cc
-ieee802154Narrow/WorldUtilityStats.cc
-ieee802154Narrow/NetworkStackTrafficGen.cc
-Creating executable: ../out/gcc-debug/examples/miximexamples
 make[1]: Leaving directory `/home/rutho/BA/mixim-2.3/examples'
-12:52:04 **** Build of configuration gcc-debug for project aloha ****
+12:30:10 **** Incremental Build of configuration gcc-debug for project TICTOC ****
 make MODE=debug CONFIGNAME=gcc-debug all 
-Creating executable: out/gcc-debug//aloha
+12:30:11 **** Incremental Build of configuration gcc-debug for project aloha ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+12:30:11 **** Build of configuration gcc-debug for project tictoc ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+txc16.cc
+txc6.cc
+MSGC: tictoc15.msg
+txc15.cc
+MSGC: tictoc13.msg
+txc13.cc
+txc8.cc
+txc1.cc
+MSGC: tictoc14.msg
+txc14.cc
+txc3.cc
+txc4.cc
+tictoc16_m.cc
+tictoc15_m.cc
+tictoc13_m.cc
+tictoc14_m.cc
+Creating executable: out/gcc-debug//tictoc

@@ -19,4 +19,5 @@
 <intAttribute key="org.omnetpp.launch.NUM_CONCURRENT_PROCESSES" value="1"/>
 <stringAttribute key="org.omnetpp.launch.SHARED_LIBS" value="${opp_shared_libs:/TICTOC}"/>
 <stringAttribute key="org.omnetpp.launch.WORKING_DIRECTORY" value="/TICTOC"/>
+<stringAttribute key="process_factory_id" value="org.eclipse.cdt.dsf.gdb.GdbProcessFactory"/>
 </launchConfiguration>

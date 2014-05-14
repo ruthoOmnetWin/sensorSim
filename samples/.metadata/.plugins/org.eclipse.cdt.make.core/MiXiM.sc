@@ -81,6 +81,7 @@
 <includePath path="/home/rutho/BA/mixim-2.3/tests/connectionManager"/>
 <includePath path="/home/rutho/BA/mixim-2.3/tests/channelInfo"/>
 <includePath path="/home/rutho/BA/mixim-2.3/tests/basePhyLayer"/>
+<includePath path="/home/rutho/BA/mixim-2.3/examples/baseNetwork/results"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>

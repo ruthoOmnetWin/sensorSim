@@ -25,6 +25,7 @@ Define_Module(Txc1);
 
 void Txc1::initialize()
 {
+
     // Initialize is called at the beginning of the simulation.
     // To bootstrap the tic-toc-tic-toc process, one of the modules needs
     // to send the first message. Let this be `tic'.
@@ -32,6 +33,7 @@ void Txc1::initialize()
     // Am I Tic or Toc?
     if (strcmp("tic", getName()) == 0)
     {
+        ev << "Sending initial message\n";
         // create and send first message on gate "out". "tictocMsg" is an
         // arbitrary string which will be the name of the message object.
         cMessage *msg = new cMessage("tictocMsg");
@@ -41,6 +43,7 @@ void Txc1::initialize()
 
 void Txc1::handleMessage(cMessage *msg)
 {
+    EV << "Received message `" << msg->getName() << "', sending it out again\n";
     // The handleMessage() method is called whenever a message arrives
     // at the module. Here, we just send it to the other module, through
     // gate `out'. Because both `tic' and `toc' does the same, the message

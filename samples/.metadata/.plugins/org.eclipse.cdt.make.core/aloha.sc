@@ -12,6 +12,7 @@
 <includePath path="/usr/include"/>
 <includePath path="/home/rutho/BA/omnetpp-4.4.1/include"/>
 <includePath path="/home/rutho/BA/omnetpp-4.4.1/samples/aloha"/>
+<includePath path="/home/rutho/BA/git-repo/samples/aloha"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
