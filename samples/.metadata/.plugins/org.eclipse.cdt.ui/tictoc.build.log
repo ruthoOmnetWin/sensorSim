@@ -1,5 +1,5 @@
-15:12:46 **** Incremental Build of configuration gcc-debug for project tictoc ****
+10:30:30 **** Incremental Build of configuration gcc-debug for project tictoc ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 
-15:12:46 Build Finished (took 187ms)
+10:30:30 Build Finished (took 228ms)
 
