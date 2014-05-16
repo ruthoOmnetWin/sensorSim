@@ -16,6 +16,8 @@ class Txc1 : public cSimpleModule
 {
   private:
     int counter;  // Note the counter here
+    cMessage *event; // pointer to the event object which we'll use for timing
+    cMessage *tictocMsg; // variable to remember the message until we send it back
   protected:
     // The following redefined virtual function holds the algorithm.
     virtual void initialize();
@@ -34,7 +36,7 @@ void Txc1::initialize()
     // to send the first message. Let this be `tic'.
 
     // Am I Tic or Toc?
-    if (if (par("sendMsgOnInit").boolValue() == true))
+    if (par("sendMsgOnInit").boolValue() == true)
     {
 	EV << "Sending initial message\n";
         // create and send first message on gate "out". "tictocMsg" is an

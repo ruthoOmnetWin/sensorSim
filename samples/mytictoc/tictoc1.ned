@@ -20,6 +20,21 @@ simple Txc1
         output out;
 }
 
+simple Tic extends Txc1
+{
+    parameters:
+        sendMsgOnInit = true;
+        @display("i=,cyan"); // do not change the icon (first arg of i=) just colorize it
+}
+
+simple Toc extends Txc1
+{
+    parameters:
+        sendMsgOnInit = false;
+        @display("i=,gold"); // do not change the icon (first arg of i=) just colorize it
+           
+}
+
 //
 // Two instances (tic and toc) of Txc1 connected both ways.
 // Tic and toc will pass messages to one another.
@@ -27,16 +42,8 @@ simple Txc1
 network Tictoc1
 {
     submodules:
-        tic: Txc1{
-            parameters:
-                sendMsgOnInit = true;
-                @display("i=,cyan"); // do not change the icon (first arg of i=) just colorize it
-        }
-        toc: Txc1{
-            parameters:
-                sendMsgOnInit = false;
-                @display("i=,gold"); // do not change the icon (first arg of i=) just colorize it
-        }
+        tic: Tic;
+        toc: Toc;
     connections:
         tic.out --> {  delay = 100ms; } --> toc.in;
         tic.in <-- {  delay = 100ms; } <-- toc.out;
