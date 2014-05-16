@@ -11,3 +11,4 @@ e-mail: thomas.rueckert@s2010.tu-chemnitz.de
 * samples/ contains both ready samples from omnetpp and my own tutorial work
 * samplesOld/ contains almost the same as samples, but created with older libraries (can be ignored)
 
+REF: http://dl.acm.org/citation.cfm?id=1416302
