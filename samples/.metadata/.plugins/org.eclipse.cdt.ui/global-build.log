@@ -7,3 +7,5 @@ make MODE=release CONFIGNAME=gcc-release all
 make MODE=debug CONFIGNAME=gcc-debug all 
 14:25:55 **** Incremental Build of configuration gcc-debug for project tictoc ****
 make MODE=debug CONFIGNAME=gcc-debug all 
+15:12:46 **** Incremental Build of configuration gcc-debug for project tictoc ****
+make MODE=debug CONFIGNAME=gcc-debug all 
