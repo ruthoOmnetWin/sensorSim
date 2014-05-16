@@ -1,2 +1,5 @@
 # Partial Tkenv config file -- see $HOME/.tkenvrc as well
+inspector "Tictoc1" "Tictoc1" "2" "607x336+808+460:normal"
+inspector "Tictoc1.tic.limit" "cPar" "1" "460x313+102+18:normal"
+inspector "Tictoc1.toc.limit" "cPar" "1" "460x313+1138+17:normal"
 

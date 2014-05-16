@@ -27,14 +27,14 @@ Define_Module(Txc1);
 
 void Txc1::initialize()
 {
-    counter = 10;
+    counter = par("limit");
     WATCH(counter);
     // Initialize is called at the beginning of the simulation.
     // To bootstrap the tic-toc-tic-toc process, one of the modules needs
     // to send the first message. Let this be `tic'.
 
     // Am I Tic or Toc?
-    if (strcmp("tic", getName()) == 0)
+    if (if (par("sendMsgOnInit").boolValue() == true))
     {
 	EV << "Sending initial message\n";
         // create and send first message on gate "out". "tictocMsg" is an
