@@ -1,63 +1,104 @@
 //
 // This file is part of an OMNeT++/OMNEST simulation example.
 //
-// Copyright (C) 2003 Ahmet Sekercioglu
 // Copyright (C) 2003-2008 Andras Varga
 //
 // This file is distributed WITHOUT ANY WARRANTY. See the file
 // `license' for details on this and other legal matters.
 //
 
+#include <stdio.h>
 #include <string.h>
 #include <omnetpp.h>
 
 
-class Txc1 : public cSimpleModule
+class Tic : public cSimpleModule
 {
   private:
-    int counter;  // Note the counter here
-    cMessage *event; // pointer to the event object which we'll use for timing
-    cMessage *tictocMsg; // variable to remember the message until we send it back
+    simtime_t timeout;  // timeout
+    cMessage *timeoutEvent;  // holds pointer to the timeout self-message
+
+  public:
+    Tic();
+    virtual ~Tic();
+
   protected:
-    // The following redefined virtual function holds the algorithm.
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
 };
 
-// The module class needs to be registered with OMNeT++
-Define_Module(Txc1);
+Define_Module(Tic);
 
-void Txc1::initialize()
+Tic::Tic()
 {
-    counter = par("limit");
-    WATCH(counter);
-    // Initialize is called at the beginning of the simulation.
-    // To bootstrap the tic-toc-tic-toc process, one of the modules needs
-    // to send the first message. Let this be `tic'.
+    timeoutEvent = NULL;
+}
 
-    // Am I Tic or Toc?
-    if (par("sendMsgOnInit").boolValue() == true)
+Tic::~Tic()
+{
+    cancelAndDelete(timeoutEvent);
+}
+
+void Tic::initialize()
+{
+    // Initialize variables.
+    timeout = 1.0;
+    timeoutEvent = new cMessage("timeoutEvent");
+
+    // Generate and send initial message.
+    EV << "Sending initial message\n";
+    cMessage *msg = new cMessage("tictocMsg");
+    send(msg, "out");
+    scheduleAt(simTime()+timeout, timeoutEvent);
+}
+
+void Tic::handleMessage(cMessage *msg)
+{
+    if (msg==timeoutEvent)
     {
-	EV << "Sending initial message\n";
-        // create and send first message on gate "out". "tictocMsg" is an
-        // arbitrary string which will be the name of the message object.
-        cMessage *msg = new cMessage("tictocMsg");
+        // If we receive the timeout event, that means the packet hasn't
+        // arrived in time and we have to re-send it.
+        EV << "Timeout expired, resending message and restarting timer\n";
+        cMessage *newMsg = new cMessage("tictocMsg");
+        send(newMsg, "out");
+        scheduleAt(simTime()+timeout, timeoutEvent);
+    }
+    else // message arrived
+    {
+        // Acknowledgement received -- delete the received message and cancel
+        // the timeout event.
+        EV << "Timer cancelled.\n";
+        cancelEvent(timeoutEvent);
+        delete msg;
+
+        // Ready to send another one.
+        cMessage *newMsg = new cMessage("tictocMsg");
+        send(newMsg, "out");
+        scheduleAt(simTime()+timeout, timeoutEvent);
+    }
+}
+
+
+class Toc : public cSimpleModule
+{
+  protected:
+    virtual void handleMessage(cMessage *msg);
+};
+
+Define_Module(Toc);
+
+void Toc::handleMessage(cMessage *msg)
+{
+    if (uniform(0,1) < 0.5)
+    {
+        EV << "\"Losing\" message.\n";
+        bubble("message lost");  // making animation more informative...
+        delete msg;
+    }
+    else
+    {
+        EV << "Sending back same message as acknowledgement.\n";
         send(msg, "out");
     }
 }
 
-void Txc1::handleMessage(cMessage *msg)
-{
-   if (counter >= 0) {
-    counter--;		
-    EV << "Received message `" << msg->getName() << "', sending it out again\n";
-    // The handleMessage() method is called whenever a message arrives
-    // at the module. Here, we just send it to the other module, through
-    // gate `out'. Because both `tic' and `toc' does the same, the message
-    // will bounce between the two.
-    send(msg, "out");
-   } else {
-    EV << msg->getName() << "'s counter reached zero\n"; delete msg;
-  }
-	EV << counter;
-}

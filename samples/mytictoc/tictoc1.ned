@@ -9,30 +9,22 @@
 //
 
 
-simple Txc1
+simple Tic
 {
     parameters:
-        bool sendMsgOnInit = default(false); // whether the module should send out a message on initialization
-        int limit = default(2);   // another parameter with a default value
-        @display("i=block/routing"); // add a default icon
+        @display("i=block/routing");
     gates:
         input in;
         output out;
 }
 
-simple Tic extends Txc1
+simple Toc
 {
     parameters:
-        sendMsgOnInit = true;
-        @display("i=,cyan"); // do not change the icon (first arg of i=) just colorize it
-}
-
-simple Toc extends Txc1
-{
-    parameters:
-        sendMsgOnInit = false;
-        @display("i=,gold"); // do not change the icon (first arg of i=) just colorize it
-           
+        @display("i=block/process");
+    gates:
+        input in;
+        output out;
 }
 
 //
