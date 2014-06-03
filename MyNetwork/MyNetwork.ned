@@ -15,8 +15,9 @@
 
 package mynetwork;
 
-import org.mixim.modules.node.WirelessNode;
+//import org.mixim.modules.node.WirelessNode;
 import org.mixim.base.modules.BaseNetwork;
+import org.mixim.base.modules.IBaseNetwLayer;
 
 network MyNetwork extends BaseNetwork
 {
