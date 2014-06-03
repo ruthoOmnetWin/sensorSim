@@ -15,19 +15,15 @@
 
 package mynetwork;
 
-import org.mixim.modules.node.WirelessNode;
-import org.mixim.base.modules.BaseNetwork;
+import org.mixim.modules.node.WirelessNodeBatteryNetwl;
 
-network MyNetwork extends BaseNetwork
+module MyWirelessNode extends WirelessNodeBatteryNetwl
 {
     parameters:
-        int numNodes; // total number of hosts in the network
+        networkType = "mynetwork.MyNetwork";
+        nicType     = "Nic802154_TI_CC2420";
+        arpType     = "ArpHost";
+        int numHosts; // total number of hosts in the network
 
-    submodules:
-        node[numNodes]: MyWirelessNode {
-            parameters:
-                @display("i=device/card_l");
-        }
     connections allowunconnected:
-    // all connections and gates are to be generated dynamically
 }
