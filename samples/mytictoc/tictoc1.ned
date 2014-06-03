@@ -1,7 +1,6 @@
 //
 // This file is part of an OMNeT++/OMNEST simulation example.
 //
-// Copyright (C) 2003 Ahmet Sekercioglu
 // Copyright (C) 2003-2008 Andras Varga
 //
 // This file is distributed WITHOUT ANY WARRANTY. See the file
@@ -9,34 +8,30 @@
 //
 
 
-simple Tic
+simple Txc10
 {
     parameters:
         @display("i=block/routing");
     gates:
-        input in;
-        output out;
+        inout gate[];  // declare in[] and out[] to be vector gates
 }
 
-simple Toc
+network Tictoc10
 {
-    parameters:
-        @display("i=block/process");
-    gates:
-        input in;
-        output out;
-}
-
-//
-// Two instances (tic and toc) of Txc1 connected both ways.
-// Tic and toc will pass messages to one another.
-//
-network Tictoc1
-{
+    types:
+        channel Channel extends ned.DelayChannel {
+            delay = 100ms;
+        }
     submodules:
-        tic: Tic;
-        toc: Toc;
+        tic[6]: Txc10;
     connections:
-        tic.out --> {  delay = 100ms; } --> toc.in;
-        tic.in <-- {  delay = 100ms; } <-- toc.out;
+        tic[0].gate++ <--> Channel <--> tic[1].gate++;
+
+        tic[1].gate++ <--> Channel <--> tic[2].gate++;
+
+        tic[1].gate++ <--> Channel <--> tic[4].gate++;
+
+        tic[3].gate++ <--> Channel <--> tic[4].gate++;
+
+        tic[4].gate++ <--> Channel <--> tic[5].gate++;
 }

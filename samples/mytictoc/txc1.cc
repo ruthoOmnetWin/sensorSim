@@ -1,6 +1,7 @@
 //
 // This file is part of an OMNeT++/OMNEST simulation example.
 //
+// Copyright (C) 2003 Ahmet Sekercioglu
 // Copyright (C) 2003-2008 Andras Varga
 //
 // This file is distributed WITHOUT ANY WARRANTY. See the file
@@ -11,94 +12,77 @@
 #include <string.h>
 #include <omnetpp.h>
 
-
-class Tic : public cSimpleModule
+class Txc10 : public cSimpleModule
 {
-  private:
-    simtime_t timeout;  // timeout
-    cMessage *timeoutEvent;  // holds pointer to the timeout self-message
-
-  public:
-    Tic();
-    virtual ~Tic();
-
   protected:
+    virtual void forwardMessage(cMessage *msg);
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
 };
 
-Define_Module(Tic);
+Define_Module(Txc10);
 
-Tic::Tic()
+void Txc10::initialize()
 {
-    timeoutEvent = NULL;
-}
-
-Tic::~Tic()
-{
-    cancelAndDelete(timeoutEvent);
-}
-
-void Tic::initialize()
-{
-    // Initialize variables.
-    timeout = 1.0;
-    timeoutEvent = new cMessage("timeoutEvent");
-
-    // Generate and send initial message.
-    EV << "Sending initial message\n";
-    cMessage *msg = new cMessage("tictocMsg");
-    send(msg, "out");
-    scheduleAt(simTime()+timeout, timeoutEvent);
-}
-
-void Tic::handleMessage(cMessage *msg)
-{
-    if (msg==timeoutEvent)
+    if (getIndex()==0)
     {
-        // If we receive the timeout event, that means the packet hasn't
-        // arrived in time and we have to re-send it.
-        EV << "Timeout expired, resending message and restarting timer\n";
-        cMessage *newMsg = new cMessage("tictocMsg");
-        send(newMsg, "out");
-        scheduleAt(simTime()+timeout, timeoutEvent);
-    }
-    else // message arrived
-    {
-        // Acknowledgement received -- delete the received message and cancel
-        // the timeout event.
-        EV << "Timer cancelled.\n";
-        cancelEvent(timeoutEvent);
-        delete msg;
-
-        // Ready to send another one.
-        cMessage *newMsg = new cMessage("tictocMsg");
-        send(newMsg, "out");
-        scheduleAt(simTime()+timeout, timeoutEvent);
+        // Boot the process scheduling the initial message as a self-message.
+        char msgname[20];
+        sprintf(msgname, "tic-%d", getIndex());
+        cMessage *msg = new cMessage(msgname);
+        scheduleAt(0.0, msg);
     }
 }
 
-
-class Toc : public cSimpleModule
+void Txc10::handleMessage(cMessage *msg)
 {
-  protected:
-    virtual void handleMessage(cMessage *msg);
-};
-
-Define_Module(Toc);
-
-void Toc::handleMessage(cMessage *msg)
-{
-    if (uniform(0,1) < 0.5)
+    if (getIndex()==3)
     {
-        EV << "\"Losing\" message.\n";
-        bubble("message lost");  // making animation more informative...
+        // Message arrived.
+        EV << "Message " << msg << " arrived.\n";
         delete msg;
     }
     else
     {
-        EV << "Sending back same message as acknowledgement.\n";
-        send(msg, "out");
+        // We need to forward the message.
+        forwardMessage(msg);
     }
 }
+
+void Txc10::forwardMessage(cMessage *msg)
+{
+    // In this example, we just pick a random gate to send it on.
+    // We draw a random number between 0 and the size of gate `out[]'.
+    int n = gateSize("gate");
+    int k = intuniform(0,n-1);
+
+    if (getIndex() != 2 && getIndex() != 5 && getIndex() != 0) {
+        cGate* arrGate = msg->getArrivalGate();
+        if (arrGate != NULL) {
+                  int gateIndex = arrGate->getIndex();
+                  while (k == gateIndex) {
+                      k = intuniform(0,n-1);
+                  }
+              }
+    }
+
+    EV << "Forwarding message " << msg << " on gate[" << k << "]\n";
+    send(msg, "gate$o", k);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
