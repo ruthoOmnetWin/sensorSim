@@ -12,10 +12,10 @@ network MyNetwork extends sensorDataBaseNetwork
         int numNodes; // total number of hosts in the network
 
     submodules:
-        node[numNodes]: Host802154_2400MHz {
+        node[numNodes]: MyWirelessNode {
             parameters:
                 numHosts = numNodes;
-                @display("i=device/card_l");
+                @display("i=device/card_l;p=173,108");
         }
     connections allowunconnected:
     // all connections and gates are to be generated dynamically

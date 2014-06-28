@@ -28,8 +28,8 @@ PROJECT_OUTPUT_DIR = out
 PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
-# Object files for local .cc and .msg files
-OBJS =
+# Object files for local .cpp and .msg files
+OBJS = $O/dataVector.o
 
 # Message files
 MSGFILES =
@@ -91,16 +91,16 @@ $O/$(TARGET): $(OBJS)  $(wildcard $(EXTRA_OBJS)) Makefile
 
 .PHONY: all clean cleanall depend msgheaders
 
-.SUFFIXES: .cc
+.SUFFIXES: .cpp
 
-$O/%.o: %.cc $(COPTS_FILE)
+$O/%.o: %.cpp $(COPTS_FILE)
 	@$(MKPATH) $(dir $@)
 	$(qecho) "$<"
 	$(Q)$(CXX) -c $(CXXFLAGS) $(COPTS) -o $@ $<
 
-%_m.cc %_m.h: %.msg
+%_m.cpp %_m.h: %.msg
 	$(qecho) MSGC: $<
-	$(Q)$(MSGC) -s _m.cc $(MSGCOPTS) $?
+	$(Q)$(MSGC) -s _m.cpp $(MSGCOPTS) $?
 
 msgheaders: $(MSGFILES:.msg=_m.h)
 
@@ -108,15 +108,16 @@ clean:
 	$(qecho) Cleaning...
 	$(Q)-rm -rf $O
 	$(Q)-rm -f MyNetwork MyNetwork.exe libMyNetwork.so libMyNetwork.a libMyNetwork.dll libMyNetwork.dylib
-	$(Q)-rm -f ./*_m.cc ./*_m.h
-	$(Q)-rm -f results/*_m.cc results/*_m.h
+	$(Q)-rm -f ./*_m.cpp ./*_m.h
+	$(Q)-rm -f results/*_m.cpp results/*_m.h
 
 cleanall: clean
 	$(Q)-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cpp results/*.cpp
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/dataVector.o: dataVector.cpp
 

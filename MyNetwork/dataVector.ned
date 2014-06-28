@@ -11,5 +11,6 @@ simple dataVector
         //value of the data
         int value;
 	gates: 
-	    output out;   
+	    output out; 
+	    input in;  
 }

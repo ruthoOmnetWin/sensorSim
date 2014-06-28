@@ -5,7 +5,29 @@
  *      Author: rutho
  */
 
-#include <dataVector.h>
+#define STRAIGTH 1
+#define EXPONENTIALLY 2
+
+#include <stdio.h>
+#include <string.h>
+#include <omnetpp.h>
+
+class dataVector : cSimpleModule
+{
+private:
+    int dataVectorType;
+public:
+    dataVector(int);
+    virtual ~dataVector();
+    int straight(int, int);
+    int exponentially(int, int);
+    void setDataVectorType(int);
+    int getDataVectorType();
+protected:
+    void initialize();
+};
+
+//Define_Module(dataVector(int));
 
 dataVector::dataVector(int dataVectorType) {
     // TODO Auto-generated constructor stub
@@ -16,7 +38,7 @@ dataVector::~dataVector() {
     // TODO Auto-generated destructor stub
 }
 
-Define_Module(dataVector);
+
 
 void dataVector::initialize()
 {

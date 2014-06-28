@@ -14,21 +14,12 @@
 // 
 
 package mynetwork;
+import mynetwork.dataVector;
 
-import org.mixim.modules.node.WirelessNodeBatteryNetwl;
-
-module MyWirelessNode extends WirelessNodeBatteryNetwl
+module Sensor
 {
-    parameters:
-        networkType = "mynetwork.MyNetwork";
-        nicType     = "Nic802154_TI_CC2420";
-        arpType     = "ArpHost";
-        int numHosts; // total number of hosts in the network
-
-	submodules:
-        Sensor: Sensor {
+    submodules:
+        data: dataVector {
             @display("p=140,310");
         }
-
-    connections allowunconnected:
 }

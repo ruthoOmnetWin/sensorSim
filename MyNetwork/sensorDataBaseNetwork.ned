@@ -8,5 +8,5 @@ import org.mixim.base.modules.BaseNetwork;
 
 network sensorDataBaseNetwork extends BaseNetwork
 {
-	    
+
 }
