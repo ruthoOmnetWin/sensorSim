@@ -10,6 +10,7 @@ network MyNetwork extends sensorDataBaseNetwork
 {
     parameters:
         int numNodes; // total number of hosts in the network
+        int sensorAlgorithm;
 
     submodules:
         node[numNodes]: MyWirelessNode {

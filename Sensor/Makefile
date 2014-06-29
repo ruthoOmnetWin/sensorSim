@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for MyNetwork
+# OMNeT++/OMNEST Makefile for Sensor
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM -KSENSOR_PROJ=../Sensor
+#  opp_makemake -f --deep -O out
 #
 
 # Name of target to be created (-o option)
-TARGET = MyNetwork$(EXE_SUFFIX)
+TARGET = Sensor$(EXE_SUFFIX)
 
 # User interface (uncomment one) (-u option)
 USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
@@ -14,29 +14,24 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Iresults
+INCLUDE_PATH = -I.
 
 # Additional object and library files to link with
 EXTRA_OBJS =
 
 # Additional libraries (-L, -l options)
-LIBS = -L../MiXiM/out/$(CONFIGNAME)/src  -lmixim
-LIBS += -Wl,-rpath,`abspath ../MiXiM/out/$(CONFIGNAME)/src`
+LIBS =
 
 # Output directory
 PROJECT_OUTPUT_DIR = out
 PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
-# Object files for local .cc and .msg files
-OBJS =
+# Object files for local .cpp and .msg files
+OBJS = $O/dataVector.o
 
 # Message files
 MSGFILES =
-
-# Other makefile variables (-K)
-MIXIM_PROJ=../MiXiM
-SENSOR_PROJ=../Sensor
 
 #------------------------------------------------------------------------------
 
@@ -92,32 +87,32 @@ $O/$(TARGET): $(OBJS)  $(wildcard $(EXTRA_OBJS)) Makefile
 
 .PHONY: all clean cleanall depend msgheaders
 
-.SUFFIXES: .cc
+.SUFFIXES: .cpp
 
-$O/%.o: %.cc $(COPTS_FILE)
+$O/%.o: %.cpp $(COPTS_FILE)
 	@$(MKPATH) $(dir $@)
 	$(qecho) "$<"
 	$(Q)$(CXX) -c $(CXXFLAGS) $(COPTS) -o $@ $<
 
-%_m.cc %_m.h: %.msg
+%_m.cpp %_m.h: %.msg
 	$(qecho) MSGC: $<
-	$(Q)$(MSGC) -s _m.cc $(MSGCOPTS) $?
+	$(Q)$(MSGC) -s _m.cpp $(MSGCOPTS) $?
 
 msgheaders: $(MSGFILES:.msg=_m.h)
 
 clean:
 	$(qecho) Cleaning...
 	$(Q)-rm -rf $O
-	$(Q)-rm -f MyNetwork MyNetwork.exe libMyNetwork.so libMyNetwork.a libMyNetwork.dll libMyNetwork.dylib
-	$(Q)-rm -f ./*_m.cc ./*_m.h
-	$(Q)-rm -f results/*_m.cc results/*_m.h
+	$(Q)-rm -f Sensor Sensor.exe libSensor.so libSensor.a libSensor.dll libSensor.dylib
+	$(Q)-rm -f ./*_m.cpp ./*_m.h
 
 cleanall: clean
 	$(Q)-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cpp
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/dataVector.o: dataVector.cpp
 
