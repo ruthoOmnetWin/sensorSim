@@ -1,4 +1,4 @@
-package mynetwork;
+package sensor;
 
 module dataVector
 {
