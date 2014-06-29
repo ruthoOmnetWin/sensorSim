@@ -16,6 +16,7 @@
 package mynetwork;
 
 import org.mixim.modules.node.WirelessNodeBatteryNetwl;
+import sensor.Sensor;
 
 module MyWirelessNode extends WirelessNodeBatteryNetwl
 {

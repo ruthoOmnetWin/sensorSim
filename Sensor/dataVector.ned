@@ -1,6 +1,6 @@
 package mynetwork;
 
-simple dataVector
+module dataVector
 {
     parameters:
         //postion of the data

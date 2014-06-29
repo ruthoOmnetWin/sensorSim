@@ -13,13 +13,11 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package mynetwork;
-import mynetwork.dataVector;
+package sensor;
+import sensor.dataVector;
 
-module Sensor
+module Sensor extends dataVector
 {
-    submodules:
-        data: dataVector {
-            @display("p=140,310");
-        }
+	parameters:
+	    @display("i=block/wrx");
 }
