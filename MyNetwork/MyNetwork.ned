@@ -7,7 +7,7 @@ import org.mixim.base.modules.IBaseNetwLayer;
 import org.mixim.modules.node.Host802154_2400MHz;
 
 
-network MyNetwork extends sensorDataBaseNetwork
+network MyNetwork extends sensorDataBaseNetwork 
 {
     parameters:
         int numNodes; // total number of hosts in the network
@@ -18,9 +18,6 @@ network MyNetwork extends sensorDataBaseNetwork
             parameters:
                 numHosts = numNodes;
                 @display("i=device/card_l;p=173,108");
-        }
-        connectionManager1: ConnectionManager {
-            @display("p=198,16");
         }
     connections allowunconnected:
     // all connections and gates are to be generated dynamically

@@ -23,8 +23,9 @@
 
 class DataVector : public cSimpleModule
 {
+private:
+    int dataVectorType;
 protected:
-    //int dataVectorType;
     int straight(int, int);
     int exponentially(int, int);
 public:

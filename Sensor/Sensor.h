@@ -18,7 +18,7 @@
 
 #include <Coords.h>
 #include <omnetpp.h>
-#include <dataVector.h>
+#include <DataVector.h>
 
 class Sensor : public DataVector
 {

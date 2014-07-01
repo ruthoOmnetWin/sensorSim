@@ -1,6 +1,6 @@
 package sensor;
 
-simple dataVector 
+simple DataVector 
 {
     parameters:
         //postion of the data

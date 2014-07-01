@@ -15,7 +15,6 @@
 
 package org.mixim.examples.WSNRouting;
 
-
 import org.mixim.base.modules.BaseNetwork;
 import org.mixim.modules.node.Host802154_2400MHz;
 

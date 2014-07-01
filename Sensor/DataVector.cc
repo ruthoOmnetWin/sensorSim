@@ -7,7 +7,7 @@
 
 #include <string.h>
 #include <omnetpp.h>
-#include <dataVector.h>
+#include <DataVector.h>
 
 void DataVector::setDataVectorType(int dataVectorType)
 {

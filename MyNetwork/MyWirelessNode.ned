@@ -15,16 +15,12 @@
 
 package mynetwork;
 
-import org.mixim.modules.node.WirelessNodeBatteryNetwl;
+import org.mixim.modules.node.Host802154_2400MHz;
 import sensor.Sensor;
 
-module MyWirelessNode extends WirelessNodeBatteryNetwl
+module MyWirelessNode extends Host802154_2400MHz
 {
     parameters:
-        networkType = "mynetwork.MyNetwork";
-        nicType     = "Nic802154_TI_CC2420";
-        arpType     = "ArpHost";
-        int numHosts; // total number of hosts in the network
 
 	submodules:
         Sensor: Sensor {
