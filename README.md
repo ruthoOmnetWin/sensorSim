@@ -1,10 +1,12 @@
 sensorSim
 =========
 
-author: Thomas Rückert, TU Chemnitz (Informatik)
-e-mail: thomas.rueckert@s2010.tu-chemnitz.de
+>author: Thomas Rückert, TU Chemnitz (Informatik)
 
-* the implementations itself can be found inside MyNetwork/ and Sensor/
+>e-mail: thomas.rueckert@s2010.tu-chemnitz.de
+
+### the main implementations can be found inside MyNetwork/ and Sensor/
+
 * documentations and informational content can be found inside docs/
  * raw files inside src/
  * external/ aswell as guides/ contain informational files from different external sources 
