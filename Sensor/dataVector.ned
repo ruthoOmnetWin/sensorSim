@@ -1,7 +1,6 @@
 package sensor;
-//import org.mixim.base.connectionManager.NicEntry;
 
-simple dataVector //extends Nic
+simple dataVector 
 {
     parameters:
         //postion of the data

@@ -17,11 +17,15 @@
 #define SENSOR_H_
 
 #include <Coords.h>
+#include <omnetpp.h>
 
-class Sensor {
+class Sensor : public cSimpleModule
+{
 public:
     int getSensorData();
     Coords getLocation();
 };
+
+Define_Module(Sensor);
 
 #endif /* SENSOR_H_ */

@@ -16,10 +16,12 @@
 #ifndef DATAVECTOR_H_
 #define DATAVECTOR_H_
 
-class DataVector
+#include <omnetpp.h>
+
+class DataVector : public cSimpleModule
 {
-protected:
-    int dataVectorType;
+//protected:
+    //int dataVectorType;
 public:
     //DataVector(int);
     //virtual ~DataVector();
@@ -28,5 +30,7 @@ public:
     void setDataVectorType(int);
     int getDataVectorType();
 };
+
+Define_Module(DataVector);
 
 #endif /* DATAVECTOR_H_ */
