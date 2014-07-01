@@ -16,17 +16,20 @@
 #ifndef DATAVECTOR_H_
 #define DATAVECTOR_H_
 
+#define STRAIGTH 1
+#define EXPONENTIALLY 2
+
 #include <omnetpp.h>
 
 class DataVector : public cSimpleModule
 {
-//protected:
+protected:
     //int dataVectorType;
+    int straight(int, int);
+    int exponentially(int, int);
 public:
     //DataVector(int);
     //virtual ~DataVector();
-    int straight(int, int);
-    int exponentially(int, int);
     void setDataVectorType(int);
     int getDataVectorType();
 };

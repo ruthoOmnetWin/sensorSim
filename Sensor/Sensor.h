@@ -18,12 +18,12 @@
 
 #include <Coords.h>
 #include <omnetpp.h>
+#include <dataVector.h>
 
-class Sensor : public cSimpleModule
+class Sensor : public DataVector
 {
 public:
     int getSensorData();
-    Coords getLocation();
 };
 
 Define_Module(Sensor);

@@ -25,15 +25,3 @@ int Sensor::getSensorData()
 {
     return 0;
 }
-
-/**
- * returns the location of the sensor chip in the moment
- * returns it as an array(0 => xPos, 1 => yPos)
- *
- * @return Coords
- */
-Coords Sensor::getLocation()
-{
-    Coords *coords = new Coords();
-    return *coords;
-}

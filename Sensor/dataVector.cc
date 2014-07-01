@@ -5,9 +5,6 @@
  *      Author: rutho
  */
 
-#define STRAIGTH 1
-#define EXPONENTIALLY 2
-
 #include <string.h>
 #include <omnetpp.h>
 #include <dataVector.h>
