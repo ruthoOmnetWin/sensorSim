@@ -16,7 +16,7 @@
 #ifndef MYWIRELESSNODE_H_
 #define MYWIRELESSNODE_H_
 
-#include <Coords.cc>
+#include <Coords.h>
 
 class MyWirelessNode
 {

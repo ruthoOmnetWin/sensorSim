@@ -122,5 +122,5 @@ depend:
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/MyWirelessNode.o: MyWirelessNode.cc \
 	MyWirelessNode.h \
-	$(SENSOR_PROJ)/Coords.cc
+	$(SENSOR_PROJ)/Coords.h
 

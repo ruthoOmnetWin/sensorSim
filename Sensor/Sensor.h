@@ -16,7 +16,7 @@
 #ifndef SENSOR_H_
 #define SENSOR_H_
 
-#include <Coords.cc>
+#include <Coords.h>
 
 class Sensor {
 public:
