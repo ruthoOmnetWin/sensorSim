@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>180</x>
+      <y>110</y>
+      <w>240</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Class: DataVector
+--
+extends: cSimpleModule
+--
+protected:
+    int straight(int, int);
+    int exponentially(int, int);
+public:
+    void setDataVectorType(int);
+    int getDataVectorType();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>270</x>
+      <y>230</y>
+      <w>50</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>200</x>
+      <y>310</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Class: Sensor
+--
+public:
+    int getSensorData();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>440</x>
+      <y>110</y>
+      <w>110</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Class: Coords
+--
+protected:
+    int posX;
+    int posY;
+public:
+    int getX();
+    int getY();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>170</x>
+      <y>80</y>
+      <w>400</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>{innerclass
+Module: Sensor
+innerclass}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>580</x>
+      <y>80</y>
+      <w>430</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>{innerclass
+Module: MyNetwork
+innerclass}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>590</x>
+      <y>140</y>
+      <w>260</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Class: MyWirelessNode
+--
+extends: WirelessNodeBatteryNetwl
+--
+public:
+    Coords getPosition();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>520</x>
+      <y>180</y>
+      <w>90</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;70;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>720</x>
+      <y>240</y>
+      <w>280</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>network: MyNetwork
+--
+extends: sensorDataBaseNetwork
+--
+parameters:
+    int numNodes;
+    int sensorAlgorithm;
+--
+submodules:
+    node[numNodes]: MyWirelessNode</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>630</x>
+      <y>190</y>
+      <w>110</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90;170;30;170;30;30</additional_attributes>
+  </element>
+</diagram>
