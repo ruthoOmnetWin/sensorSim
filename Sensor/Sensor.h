@@ -16,12 +16,12 @@
 #ifndef SENSOR_H_
 #define SENSOR_H_
 
+#include <Coords.cc>
+
 class Sensor {
 public:
-    Sensor();
-    virtual ~Sensor();
     int getSensorData();
-    array getLocation();
+    Coords getLocation();
 };
 
 #endif /* SENSOR_H_ */

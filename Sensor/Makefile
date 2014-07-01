@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for Sensor
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out
+#  opp_makemake -f --deep -O out -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM
 #
 
 # Name of target to be created (-o option)
@@ -20,18 +20,22 @@ INCLUDE_PATH = -I.
 EXTRA_OBJS =
 
 # Additional libraries (-L, -l options)
-LIBS =
+LIBS = -L../MiXiM/out/$(CONFIGNAME)/src  -lmixim
+LIBS += -Wl,-rpath,`abspath ../MiXiM/out/$(CONFIGNAME)/src`
 
 # Output directory
 PROJECT_OUTPUT_DIR = out
 PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
-# Object files for local .cpp and .msg files
-OBJS = $O/dataVector.o
+# Object files for local .cc and .msg files
+OBJS = $O/dataVector.o $O/Sensor.o $O/Coords.o
 
 # Message files
 MSGFILES =
+
+# Other makefile variables (-K)
+MIXIM_PROJ=../MiXiM
 
 #------------------------------------------------------------------------------
 
@@ -87,16 +91,16 @@ $O/$(TARGET): $(OBJS)  $(wildcard $(EXTRA_OBJS)) Makefile
 
 .PHONY: all clean cleanall depend msgheaders
 
-.SUFFIXES: .cpp
+.SUFFIXES: .cc
 
-$O/%.o: %.cpp $(COPTS_FILE)
+$O/%.o: %.cc $(COPTS_FILE)
 	@$(MKPATH) $(dir $@)
 	$(qecho) "$<"
 	$(Q)$(CXX) -c $(CXXFLAGS) $(COPTS) -o $@ $<
 
-%_m.cpp %_m.h: %.msg
+%_m.cc %_m.h: %.msg
 	$(qecho) MSGC: $<
-	$(Q)$(MSGC) -s _m.cpp $(MSGCOPTS) $?
+	$(Q)$(MSGC) -s _m.cc $(MSGCOPTS) $?
 
 msgheaders: $(MSGFILES:.msg=_m.h)
 
@@ -104,15 +108,20 @@ clean:
 	$(qecho) Cleaning...
 	$(Q)-rm -rf $O
 	$(Q)-rm -f Sensor Sensor.exe libSensor.so libSensor.a libSensor.dll libSensor.dylib
-	$(Q)-rm -f ./*_m.cpp ./*_m.h
+	$(Q)-rm -f ./*_m.cc ./*_m.h
 
 cleanall: clean
 	$(Q)-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cpp
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-$O/dataVector.o: dataVector.cpp
+$O/Coords.o: Coords.cc
+$O/Sensor.o: Sensor.cc \
+	Coords.cc \
+	Sensor.h
+$O/dataVector.o: dataVector.cc \
+	dataVector.h
 

@@ -16,36 +16,24 @@
 #include <Sensor.h>
 #include <omnetpp.h>
 
-Sensor::Sensor()
-{
-    // TODO Auto-generated constructor stub
-
-}
-
-Sensor::~Sensor()
-{
-    // TODO Auto-generated destructor stub
-}
-
-Define_Module(Sensor);
-
 /**
  * reads the data the sensor returns at the current position
  *
  * @return integer
  */
-Sensor::getSensorData()
+int Sensor::getSensorData()
 {
-
+    return 0;
 }
 
 /**
  * returns the location of the sensor chip in the moment
  * returns it as an array(0 => xPos, 1 => yPos)
  *
- * @return array
+ * @return Coords
  */
-Sensor::getLocation()
+Coords Sensor::getLocation()
 {
-
+    Coords *coords = new Coords();
+    return *coords;
 }

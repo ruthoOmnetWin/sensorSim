@@ -1,5 +1,6 @@
 package mynetwork;
 
+import org.mixim.base.connectionManager.ConnectionManager;
 //import org.mixim.modules.node.WirelessNode;
 import org.mixim.base.modules.BaseNetwork;
 import org.mixim.base.modules.IBaseNetwLayer;
@@ -17,6 +18,9 @@ network MyNetwork extends sensorDataBaseNetwork
             parameters:
                 numHosts = numNodes;
                 @display("i=device/card_l;p=173,108");
+        }
+        connectionManager1: ConnectionManager {
+            @display("p=198,16");
         }
     connections allowunconnected:
     // all connections and gates are to be generated dynamically

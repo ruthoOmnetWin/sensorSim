@@ -13,11 +13,20 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensor;
-import sensor.dataVector;
+#ifndef DATAVECTOR_H_
+#define DATAVECTOR_H_
 
-simple Sensor extends dataVector
+class DataVector
 {
-	parameters:
-	    @display("i=block/wrx");
-}
+protected:
+    int dataVectorType;
+public:
+    //DataVector(int);
+    //virtual ~DataVector();
+    int straight(int, int);
+    int exponentially(int, int);
+    void setDataVectorType(int);
+    int getDataVectorType();
+};
+
+#endif /* DATAVECTOR_H_ */

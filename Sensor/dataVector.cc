@@ -10,21 +10,7 @@
 
 #include <string.h>
 #include <omnetpp.h>
-
-class DataVector : public cSimpleModule
-{
-protected:
-    int dataVectorType;
-public:
-    //DataVector(int);
-    //virtual ~DataVector();
-    int straight(int, int);
-    int exponentially(int, int);
-    void setDataVectorType(int);
-    int getDataVectorType();
-};
-
-Define_Module(DataVector);
+#include <dataVector.h>
 
 void DataVector::setDataVectorType(int dataVectorType)
 {

@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for MyNetwork
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM -KSENSOR_PROJ=../Sensor
+#  opp_makemake -f --deep -O out -I../Sensor -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM -KSENSOR_PROJ=../Sensor
 #
 
 # Name of target to be created (-o option)
@@ -14,7 +14,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Iresults
+INCLUDE_PATH = -I../Sensor -I. -Iresults
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -29,7 +29,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS =
+OBJS = $O/MyWirelessNode.o
 
 # Message files
 MSGFILES =
@@ -120,4 +120,7 @@ depend:
 	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/MyWirelessNode.o: MyWirelessNode.cc \
+	MyWirelessNode.h \
+	$(SENSOR_PROJ)/Coords.cc
 

@@ -13,11 +13,15 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensor;
-import sensor.dataVector;
+#ifndef MYWIRELESSNODE_H_
+#define MYWIRELESSNODE_H_
 
-simple Sensor extends dataVector
+#include <Coords.cc>
+
+class MyWirelessNode
 {
-	parameters:
-	    @display("i=block/wrx");
-}
+public:
+    Coords getPosition();
+};
+
+#endif /* MYWIRELESSNODE_H_ */

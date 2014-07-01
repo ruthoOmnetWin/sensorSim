@@ -13,11 +13,10 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensor;
-import sensor.dataVector;
+#include <MyWirelessNode.h>
+#include <omnetpp.h>
 
-simple Sensor extends dataVector
+MyWirelessNode::Coords MyWirelessNode::getPosition()
 {
-	parameters:
-	    @display("i=block/wrx");
+
 }
