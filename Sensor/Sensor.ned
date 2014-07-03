@@ -14,9 +14,9 @@
 // 
 
 package sensor;
-import sensor.DataVector;
+//import sensor.DataVector;
 
-simple Sensor extends DataVector
+simple Sensor //extends DataVector
 {
 	parameters:
 	    @display("i=block/wrx");

@@ -17,8 +17,9 @@
 #define MYWIRELESSNODE_H_
 
 #include <Coords.h>
+#include <MovingMobilityBase.h>
 
-class MyWirelessNode
+class MyWirelessNode : public MovingMobilityBase
 {
 public:
     Coords getPosition();

@@ -7,7 +7,7 @@ import org.mixim.base.modules.IBaseNetwLayer;
 import org.mixim.modules.node.Host802154_2400MHz;
 
 
-network MyNetwork extends sensorDataBaseNetwork 
+network MyNetwork extends BaseNetwork 
 {
     parameters:
         int numNodes; // total number of hosts in the network

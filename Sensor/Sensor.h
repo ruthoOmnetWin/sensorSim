@@ -20,12 +20,13 @@
 #include <omnetpp.h>
 #include <DataVector.h>
 
-class Sensor : public DataVector
+class Sensor : public cSimpleModule //: public DataVector
 {
 public:
     int getSensorData();
 };
 
+Register_Class(Sensor);
 Define_Module(Sensor);
 
 #endif /* SENSOR_H_ */

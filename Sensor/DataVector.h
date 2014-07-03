@@ -35,6 +35,4 @@ public:
     int getDataVectorType();
 };
 
-Define_Module(DataVector);
-
 #endif /* DATAVECTOR_H_ */

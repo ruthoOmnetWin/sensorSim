@@ -15,7 +15,7 @@
 
 #include <MyWirelessNode.h>
 #include <omnetpp.h>
-#include <Move.h>
+#include <Sensor.h>
 
 /**
  * returns the position of the node
