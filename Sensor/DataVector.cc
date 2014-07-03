@@ -9,8 +9,6 @@
 #include <omnetpp.h>
 #include <DataVector.h>
 
-Define_Module(DataVector);
-
 void DataVector::setDataVectorType(int dataVectorType)
 {
     this->dataVectorType = dataVectorType;

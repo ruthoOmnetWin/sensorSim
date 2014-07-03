@@ -20,7 +20,7 @@
 #include <omnetpp.h>
 #include <DataVector.h>
 
-class Sensor : public cSimpleModule //: public DataVector
+class Sensor : public DataVector
 {
 public:
     int getSensorData();
