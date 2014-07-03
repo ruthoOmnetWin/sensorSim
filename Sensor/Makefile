@@ -29,7 +29,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/Sensor.o $O/DataVector.o $O/Coords.o
+OBJS = $O/Sensor.o $O/DataVector.o
 
 # Message files
 MSGFILES =
@@ -118,8 +118,6 @@ depend:
 	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-$O/Coords.o: Coords.cc \
-	Coords.h
 $O/DataVector.o: DataVector.cc \
 	DataVector.h
 $O/Sensor.o: Sensor.cc \

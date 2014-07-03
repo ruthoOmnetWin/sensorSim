@@ -15,9 +15,18 @@
 
 #include <MyWirelessNode.h>
 #include <omnetpp.h>
+#include <Move.h>
 
+/**
+ * returns the position of the node
+ *
+ * @return Coords
+ */
 Coords MyWirelessNode::getPosition()
 {
     Coords *coords = new Coords();
+    //TODO get the position of the node
+    coords->posX = 0;
+    coords->posY = 0;
     return *coords;
 }
