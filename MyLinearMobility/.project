@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>MyNetwork</name>
+	<name>MyLinearMobility</name>
 	<comment></comment>
 	<projects>
 		<project>MiXiM</project>
-		<project>MyLinearMobility</project>
-		<project>Sensor</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

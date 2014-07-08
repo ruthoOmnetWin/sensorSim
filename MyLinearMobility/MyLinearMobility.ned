@@ -13,34 +13,12 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#include <MyWirelessNode.h>
-#include <omnetpp.h>
-#include <Sensor.h>
+package mylinearmobility;
 
-/**
- * returns the position of the node
- *
- * @return Coords
- */
-Coord MyWirelessNode::getPosition()
-{
-    Coord pos = this->getCurrentPosition();
-    return pos;
-    //Coords *coords = new Coords();
-    //TODO get the position of the node
-    //coords->posX = 0;
-    //coords->posY = 0;
-    //return *coords;
-}
+import org.mixim.base.modules.BaseNetwork;
+import inet.mobility.models.LinearMobility;
 
-void MyWirelessNode::initialize(int stage)
+simple MyLinearMobility extends LinearMobility
 {
-    EV << "initialize";
-    //LinearMobility::initialize(stage);
-}
-
-void MyWirelessNode::moveAndUpdate()
-{
-    EV << "moveAndUpdate";
-    MovingMobilityBase::moveAndUpdate();
+    parameters:
 }

@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for MyNetwork
+# OMNeT++/OMNEST Makefile for MyLinearMobility
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/base -I../Sensor -I../MiXiM/src/inet_stub/mobility/models -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM -KMYLINEARMOBILITY_PROJ=../MyLinearMobility -KSENSOR_PROJ=../Sensor
+#  opp_makemake -f --deep -O out -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/base -I../MiXiM/src/inet_stub/mobility/models -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM
 #
 
 # Name of target to be created (-o option)
-TARGET = MyNetwork$(EXE_SUFFIX)
+TARGET = MyLinearMobility$(EXE_SUFFIX)
 
 # User interface (uncomment one) (-u option)
 USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
@@ -14,14 +14,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = \
-    -I../MiXiM/src/inet_stub/mobility \
-    -I../MiXiM/src/inet_stub/util \
-    -I../MiXiM/src/inet_stub/base \
-    -I../Sensor \
-    -I../MiXiM/src/inet_stub/mobility/models \
-    -I. \
-    -Iresults
+INCLUDE_PATH = -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/base -I../MiXiM/src/inet_stub/mobility/models -I.
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -36,15 +29,13 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/MyWirelessNode.o
+OBJS = $O/MyLinearMobility.o
 
 # Message files
 MSGFILES =
 
 # Other makefile variables (-K)
 MIXIM_PROJ=../MiXiM
-MYLINEARMOBILITY_PROJ=../MyLinearMobility
-SENSOR_PROJ=../Sensor
 
 #------------------------------------------------------------------------------
 
@@ -116,19 +107,18 @@ msgheaders: $(MSGFILES:.msg=_m.h)
 clean:
 	$(qecho) Cleaning...
 	$(Q)-rm -rf $O
-	$(Q)-rm -f MyNetwork MyNetwork.exe libMyNetwork.so libMyNetwork.a libMyNetwork.dll libMyNetwork.dylib
+	$(Q)-rm -f MyLinearMobility MyLinearMobility.exe libMyLinearMobility.so libMyLinearMobility.a libMyLinearMobility.dll libMyLinearMobility.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
-	$(Q)-rm -f results/*_m.cc results/*_m.h
 
 cleanall: clean
 	$(Q)-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
-$O/MyWirelessNode.o: MyWirelessNode.cc \
+$O/MyLinearMobility.o: MyLinearMobility.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
@@ -137,10 +127,9 @@ $O/MyWirelessNode.o: MyWirelessNode.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/NotificationBoard.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/NotifierConsts.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/LinearMobility.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
-	MyWirelessNode.h \
-	$(SENSOR_PROJ)/DataVector.h \
-	$(SENSOR_PROJ)/Sensor.h
+	MyLinearMobility.h
 

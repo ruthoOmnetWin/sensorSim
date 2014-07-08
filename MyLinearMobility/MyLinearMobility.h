@@ -13,34 +13,15 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#include <MyWirelessNode.h>
-#include <omnetpp.h>
-#include <Sensor.h>
+#ifndef MYLINEARMOBILITY_H_
+#define MYLINEARMOBILITY_H_
+#include "LinearMobility.h"
 
-/**
- * returns the position of the node
- *
- * @return Coords
- */
-Coord MyWirelessNode::getPosition()
+class MyLinearMobility : public LinearMobility
 {
-    Coord pos = this->getCurrentPosition();
-    return pos;
-    //Coords *coords = new Coords();
-    //TODO get the position of the node
-    //coords->posX = 0;
-    //coords->posY = 0;
-    //return *coords;
-}
+public:
+    void blub();
+    virtual void initialize(int stage);
+};
 
-void MyWirelessNode::initialize(int stage)
-{
-    EV << "initialize";
-    //LinearMobility::initialize(stage);
-}
-
-void MyWirelessNode::moveAndUpdate()
-{
-    EV << "moveAndUpdate";
-    MovingMobilityBase::moveAndUpdate();
-}
+#endif /* MYLINEARMOBILITY_H_ */
