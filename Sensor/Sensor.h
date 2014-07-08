@@ -16,7 +16,6 @@
 #ifndef SENSOR_H_
 #define SENSOR_H_
 
-#include <Coords.h>
 #include <omnetpp.h>
 #include <DataVector.h>
 

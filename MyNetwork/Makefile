@@ -140,7 +140,6 @@ $O/MyWirelessNode.o: MyWirelessNode.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	MyWirelessNode.h \
-	$(SENSOR_PROJ)/Coords.h \
 	$(SENSOR_PROJ)/DataVector.h \
 	$(SENSOR_PROJ)/Sensor.h
 

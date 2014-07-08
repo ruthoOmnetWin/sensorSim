@@ -19,5 +19,13 @@ import sensor.DataVector;
 simple Sensor extends DataVector
 {
 	parameters:
+	    int sensorPosX;
+        int sensorPosY;
+        int sensorValue;
+        int sensorType;
+        posX = sensorPosX;
+        posY = sensorPosY;
+        value = sensorValue;
+        type = sensorType;
 	    @display("i=block/wrx");
 }

@@ -22,11 +22,25 @@
  *
  * @return Coords
  */
-Coords MyWirelessNode::getPosition()
+Coord MyWirelessNode::getPosition()
 {
-    Coords *coords = new Coords();
+    Coord pos = this->getCurrentPosition();
+    return pos;
+    //Coords *coords = new Coords();
     //TODO get the position of the node
-    coords->posX = 0;
-    coords->posY = 0;
-    return *coords;
+    //coords->posX = 0;
+    //coords->posY = 0;
+    //return *coords;
+}
+
+void MyWirelessNode::initialize(int stage)
+{
+    EV << "initialize";
+    LinearMobility::initialize(stage);
+}
+
+void MyWirelessNode::moveAndUpdate()
+{
+    EV << "moveAndUpdate";
+    MovingMobilityBase::moveAndUpdate();
 }

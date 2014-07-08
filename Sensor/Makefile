@@ -121,7 +121,6 @@ depend:
 $O/DataVector.o: DataVector.cc \
 	DataVector.h
 $O/Sensor.o: Sensor.cc \
-	Coords.h \
 	DataVector.h \
 	Sensor.h
 

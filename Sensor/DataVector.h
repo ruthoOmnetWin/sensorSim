@@ -16,8 +16,8 @@
 #ifndef DATAVECTOR_H_
 #define DATAVECTOR_H_
 
-#define STRAIGTH 1
-#define EXPONENTIALLY 2
+#define STRAIGTH 0
+#define EXPONENTIALLY 1
 
 #include <omnetpp.h>
 

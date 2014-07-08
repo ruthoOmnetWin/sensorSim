@@ -11,12 +11,21 @@ network MyNetwork extends BaseNetwork
 {
     parameters:
         int numNodes; // total number of hosts in the network
-        int sensorAlgorithm;
+        int networkSensorAlgorithm;
+        //postion of the data
+        int networkPosX;
+        int networkPosY;
+        //value of the data
+        int networkValue;
 
     submodules:
         node[numNodes]: MyWirelessNode {
             parameters:
                 numHosts = numNodes;
+                nodePosX = networkPosX;
+        		nodePosY = networkPosY;
+        		nodeValue = networkValue;
+        		nodeType = networkSensorAlgorithm;
                 @display("i=device/card_l;p=173,108");
         }
     connections allowunconnected:

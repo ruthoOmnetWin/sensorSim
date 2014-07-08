@@ -7,7 +7,7 @@ simple DataVector
         int posX;
         int posY;
         //type of the data
-        string type;
+        int type;
         //value of the data
         int value;
 	gates: 

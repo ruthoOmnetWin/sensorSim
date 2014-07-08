@@ -21,9 +21,17 @@ import sensor.Sensor;
 module MyWirelessNode extends Host802154_2400MHz
 {
     parameters:
+		int nodePosX;
+        int nodePosY;
+        int nodeValue;
+        int nodeType;
 
 	submodules:
         Sensor: Sensor {
+            sensorPosX = nodePosX;
+        	sensorPosY = nodePosY;
+        	sensorValue = nodeValue;
+        	sensorType = nodeType;
             @display("p=140,310");
         }
 

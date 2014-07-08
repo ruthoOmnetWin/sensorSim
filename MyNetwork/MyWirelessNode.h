@@ -16,13 +16,15 @@
 #ifndef MYWIRELESSNODE_H_
 #define MYWIRELESSNODE_H_
 
-#include <Coords.h>
 #include <MovingMobilityBase.h>
 
 class MyWirelessNode : public MovingMobilityBase
 {
+protected:
+    void initialize(int stage);
+    void moveAndUpdate();
 public:
-    Coords getPosition();
+    Coord getPosition();
 };
 
 #endif /* MYWIRELESSNODE_H_ */
