@@ -13,29 +13,16 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package mynetwork;
+#include <CustomLinearMobility.h>
 
-import org.mixim.modules.node.Host802154_2400MHz;
-import sensor.Sensor;
-
-
-module MyWirelessNode extends Host802154_2400MHz
+void CustomLinearMobility::initialize(int stage)
 {
-    parameters:
-		int nodePosX;
-        int nodePosY;
-        int nodeValue;
-        int nodeType;
-        mobilityType = default("CustomLinearMobility");
+    EV << "This is MyLinearMobility" << endl;
+    LinearMobility::initialize(stage);
+}
 
-	submodules:
-        Sensor: Sensor {
-            sensorPosX = nodePosX;
-        	sensorPosY = nodePosY;
-        	sensorValue = nodeValue;
-        	sensorType = nodeType;
-            @display("p=140,310");
-        }
-
-    connections allowunconnected:
+void CustomLinearMobility::move()
+{
+    EV << "This is MyLinearMobility" << endl;
+    LinearMobility::move();
 }

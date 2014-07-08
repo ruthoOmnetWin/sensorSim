@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for MyNetwork
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/base -I../Sensor -I../MiXiM/src/inet_stub/mobility/models -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM -KMYLINEARMOBILITY_PROJ=../MyLinearMobility -KSENSOR_PROJ=../Sensor
+#  opp_makemake -f --deep -O out -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/base -I../Sensor -I../MiXiM/src/inet_stub/mobility/models -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM -KSENSOR_PROJ=../Sensor
 #
 
 # Name of target to be created (-o option)
@@ -36,14 +36,13 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/MyWirelessNode.o
+OBJS = $O/MyWirelessNode.o $O/CustomLinearMobility.o
 
 # Message files
 MSGFILES =
 
 # Other makefile variables (-K)
 MIXIM_PROJ=../MiXiM
-MYLINEARMOBILITY_PROJ=../MyLinearMobility
 SENSOR_PROJ=../Sensor
 
 #------------------------------------------------------------------------------
@@ -128,6 +127,20 @@ depend:
 	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/CustomLinearMobility.o: CustomLinearMobility.cc \
+	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INotifiable.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/NotificationBoard.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/NotifierConsts.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/LinearMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityBase.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	CustomLinearMobility.h
 $O/MyWirelessNode.o: MyWirelessNode.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \

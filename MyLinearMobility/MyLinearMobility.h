@@ -15,13 +15,17 @@
 
 #ifndef MYLINEARMOBILITY_H_
 #define MYLINEARMOBILITY_H_
+
 #include "LinearMobility.h"
 
 class MyLinearMobility : public LinearMobility
 {
-public:
-    void blub();
+protected:
     virtual void initialize(int stage);
+    virtual void move();
 };
+
+//Register_Class(MyLinearMobility);
+Define_Module(MyLinearMobility);
 
 #endif /* MYLINEARMOBILITY_H_ */

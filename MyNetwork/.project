@@ -4,7 +4,6 @@
 	<comment></comment>
 	<projects>
 		<project>MiXiM</project>
-		<project>MyLinearMobility</project>
 		<project>Sensor</project>
 	</projects>
 	<buildSpec>

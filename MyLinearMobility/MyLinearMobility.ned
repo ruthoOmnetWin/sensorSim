@@ -21,4 +21,5 @@ import inet.mobility.models.LinearMobility;
 simple MyLinearMobility extends LinearMobility
 {
     parameters:
+        @class(MyLinearMobility);
 }

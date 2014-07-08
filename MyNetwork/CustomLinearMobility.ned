@@ -15,27 +15,11 @@
 
 package mynetwork;
 
-import org.mixim.modules.node.Host802154_2400MHz;
-import sensor.Sensor;
+import org.mixim.base.modules.BaseNetwork;
+import inet.mobility.models.LinearMobility;
 
-
-module MyWirelessNode extends Host802154_2400MHz
+simple CustomLinearMobility extends LinearMobility
 {
     parameters:
-		int nodePosX;
-        int nodePosY;
-        int nodeValue;
-        int nodeType;
-        mobilityType = default("CustomLinearMobility");
-
-	submodules:
-        Sensor: Sensor {
-            sensorPosX = nodePosX;
-        	sensorPosY = nodePosY;
-        	sensorValue = nodeValue;
-        	sensorType = nodeType;
-            @display("p=140,310");
-        }
-
-    connections allowunconnected:
+        @class(CustomLinearMobility);
 }
