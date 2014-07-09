@@ -1,3 +1,0 @@
-package mylinearmobility;
-
-@license(LGPL);

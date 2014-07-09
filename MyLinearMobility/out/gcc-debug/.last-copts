@@ -1,1 +1,0 @@
--g -Wall -fPIC  -fno-stack-protector -DHAVE_SWAPCONTEXT  -DHAVE_PCAP -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER  -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/base -I../MiXiM/src/inet_stub/mobility/models -I. -I/home/rutho/BA/omnetpp-4.4.1/include
