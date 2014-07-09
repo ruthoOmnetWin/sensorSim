@@ -17,12 +17,12 @@
 
 void CustomLinearMobility::initialize(int stage)
 {
-    EV << "This is MyLinearMobility" << endl;
     LinearMobility::initialize(stage);
 }
 
 void CustomLinearMobility::move()
 {
-    EV << "This is MyLinearMobility" << endl;
+    EV << "Position letzter Runde " << lastPosition.x << endl;
     LinearMobility::move();
+    EV << "Position diese Runde " << lastPosition.x << endl;
 }
