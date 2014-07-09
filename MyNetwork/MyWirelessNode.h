@@ -18,12 +18,14 @@
 
 #include <MovingMobilityBase.h>
 
-class MyWirelessNode : public MovingMobilityBase
+class MyWirelessNode : public cCompoundModule
 {
 protected:
     void initialize(int stage);
-    void moveAndUpdate();
+    void handleMessage();
+    void finish();
 public:
+    MyWirelessNode();
     Coord getPosition();
 };
 

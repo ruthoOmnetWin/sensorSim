@@ -17,6 +17,14 @@
 #include <omnetpp.h>
 #include <Sensor.h>
 
+Define_Module(MyWirelessNode);
+Register_Class(MyWirelessNode);
+
+MyWirelessNode::MyWirelessNode()
+{
+
+}
+
 /**
  * returns the position of the node
  *
@@ -24,23 +32,28 @@
  */
 Coord MyWirelessNode::getPosition()
 {
-    Coord pos = this->getCurrentPosition();
-    return pos;
-    //Coords *coords = new Coords();
-    //TODO get the position of the node
-    //coords->posX = 0;
-    //coords->posY = 0;
-    //return *coords;
+    Coord* pos = new Coord();
+    return *pos;
 }
 
+/**
+ * initialize the node
+ */
 void MyWirelessNode::initialize(int stage)
 {
-    EV << "initialize";
-    //LinearMobility::initialize(stage);
+    EV << "-----------------------> Init MyWirelessNode" << endl;
+    //MovingMobilityBase::initialize(stage);
 }
 
-void MyWirelessNode::moveAndUpdate()
+void MyWirelessNode::handleMessage()
 {
-    EV << "moveAndUpdate";
-    MovingMobilityBase::moveAndUpdate();
+    EV << "-----------------------> handleMessage MyWirelessNode" << endl;
+}
+
+/**
+ * is called after the simulation terminated successfully
+ */
+void MyWirelessNode::finish()
+{
+    EV << "-----------------------> finish MyWirelessNode" << endl;
 }

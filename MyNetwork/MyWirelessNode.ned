@@ -27,6 +27,7 @@ module MyWirelessNode extends Host802154_2400MHz
         int nodeValue;
         int nodeType;
         mobilityType = default("CustomLinearMobility");
+        @class(MyWirelessNode);
 
 	submodules:
         Sensor: Sensor {
