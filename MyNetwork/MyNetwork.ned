@@ -17,6 +17,7 @@ network MyNetwork extends BaseNetwork
         int networkPosY;
         //value of the data
         int networkValue;
+        wuType = default("CustomWorldUtility"); 
 
     submodules:
         node[numNodes]: MyWirelessNode {
