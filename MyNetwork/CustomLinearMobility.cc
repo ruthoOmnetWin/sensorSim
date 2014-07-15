@@ -18,12 +18,14 @@
 CustomLinearMobility::CustomLinearMobility()
 {
     hasMaxSpeed = false;
+    //rand() % 100 = 0-99
+    //maxSpeed = 0-20
+    maxSpeed = (rand() % 100)/5;
 }
 
 
 void CustomLinearMobility::initialize(int stage)
 {
-    maxSpeed = par("maxSpeed");
     LinearMobility::initialize(stage);
 }
 
@@ -55,6 +57,7 @@ void CustomLinearMobility::move()
             }
         }
     }
+    EV << maxSpeed << endl;
     EV << " t= " << SIMTIME_STR(simTime()) << " xpos= " << lastPosition.x << " ypos=" << lastPosition.y << " speed=" << speed << endl;
     //EV << "Position diese Runde " << lastPosition.x << endl;
 }

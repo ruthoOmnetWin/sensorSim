@@ -14,7 +14,6 @@
 // 
 
 #include <Sensor.h>
-#include <omnetpp.h>
 
 /**
  * reads the data the sensor returns at the current position
@@ -24,4 +23,12 @@
 int Sensor::getSensorData()
 {
     return 0;
+}
+
+/**
+ * update the position data inside the sensor by a given Coord object
+ */
+void Sensor::updatePosition(Coord position)
+{
+    this->position = position;
 }

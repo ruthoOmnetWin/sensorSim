@@ -18,11 +18,15 @@
 
 #include <omnetpp.h>
 #include <DataVector.h>
+#include <Coord.h>
 
 class Sensor : public DataVector
 {
+protected:
+    Coord position;
 public:
     int getSensorData();
+    void updatePosition(Coord);
 };
 
 Register_Class(Sensor);

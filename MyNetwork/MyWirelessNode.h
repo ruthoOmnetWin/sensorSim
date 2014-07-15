@@ -17,10 +17,12 @@
 #define MYWIRELESSNODE_H_
 
 #include <MovingMobilityBase.h>
+#include <Sensor.h>
 
 class MyWirelessNode : public cCompoundModule
 {
 protected:
+    Sensor sensor;
     void initialize(int stage);
     void handleMessage();
     void finish();

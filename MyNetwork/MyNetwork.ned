@@ -26,7 +26,7 @@ network MyNetwork extends BaseNetwork
         		nodePosY = networkPosY;
         		nodeValue = networkValue;
         		nodeType = networkSensorAlgorithm;
-                @display("i=device/card_l");
+                @display("i=device/card");
         }
     connections allowunconnected:
     // all connections and gates are to be generated dynamically

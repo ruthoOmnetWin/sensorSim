@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for Sensor
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM
+#  opp_makemake -f --deep -O out -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/base -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM
 #
 
 # Name of target to be created (-o option)
@@ -14,7 +14,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I.
+INCLUDE_PATH = -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/base -I.
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -121,6 +121,9 @@ depend:
 $O/DataVector.o: DataVector.cc \
 	DataVector.h
 $O/Sensor.o: Sensor.cc \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	DataVector.h \
 	Sensor.h
 
