@@ -21,5 +21,6 @@ import inet.mobility.models.LinearMobility;
 simple CustomLinearMobility extends LinearMobility
 {
     parameters:
+        double maxSpeed @unit(mps);
         @class(CustomLinearMobility);
 }

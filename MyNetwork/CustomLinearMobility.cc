@@ -15,14 +15,46 @@
 
 #include <CustomLinearMobility.h>
 
+CustomLinearMobility::CustomLinearMobility()
+{
+    hasMaxSpeed = false;
+}
+
+
 void CustomLinearMobility::initialize(int stage)
 {
+    maxSpeed = par("maxSpeed");
     LinearMobility::initialize(stage);
 }
 
 void CustomLinearMobility::move()
 {
-    EV << "Position letzter Runde " << lastPosition.x << endl;
-    LinearMobility::move();
-    EV << "Position diese Runde " << lastPosition.x << endl;
+    //EV << "Position letzte Runde " << lastPosition.x << endl;
+    double rad = PI * angle / 180;
+    Coord direction(cos(rad), sin(rad));
+    lastSpeed = direction * speed;
+    double elapsedTime = (simTime() - lastUpdate).dbl();
+    lastPosition += lastSpeed * elapsedTime;
+
+    // do something if we reach the wall
+    Coord dummy;
+    handleIfOutside(REFLECT, dummy, dummy, angle);
+
+    // accelerate
+    if (!hasMaxSpeed) {
+        double newSpeed = speed;
+        newSpeed += acceleration * elapsedTime;
+        if (newSpeed > maxSpeed) {
+            speed = maxSpeed;
+            hasMaxSpeed = true;
+        } else {
+            speed = newSpeed;
+            if (speed <= 0) {
+                speed = 0;
+                stationary = true;
+            }
+        }
+    }
+    EV << " t= " << SIMTIME_STR(simTime()) << " xpos= " << lastPosition.x << " ypos=" << lastPosition.y << " speed=" << speed << endl;
+    //EV << "Position diese Runde " << lastPosition.x << endl;
 }

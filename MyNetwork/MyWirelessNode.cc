@@ -42,9 +42,11 @@ Coord MyWirelessNode::getPosition()
 void MyWirelessNode::initialize(int stage)
 {
     EV << "-----------------------> Init MyWirelessNode" << endl;
-    //MovingMobilityBase::initialize(stage);
 }
 
+/**
+ * proceed an incoming message
+ */
 void MyWirelessNode::handleMessage()
 {
     EV << "-----------------------> handleMessage MyWirelessNode" << endl;

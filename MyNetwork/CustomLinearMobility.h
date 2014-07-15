@@ -21,8 +21,13 @@
 class CustomLinearMobility : public LinearMobility
 {
 protected:
+    double maxSpeed;
+    bool hasMaxSpeed;
+protected:
     virtual void initialize(int stage);
     virtual void move();
+public:
+    CustomLinearMobility();
 };
 
 Define_Module(CustomLinearMobility);
