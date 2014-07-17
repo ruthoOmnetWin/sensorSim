@@ -19,5 +19,7 @@ import org.mixim.base.modules.BaseWorldUtility;
 simple CustomWorldUtility extends BaseWorldUtility
 {
     parameters:
-        string temperatur = default("12 12 12 13 13 14 13 13 13 12 12");
+        //string temperature = default("12 12 12 13 13 14 13 13 13 12 12");
+        xml xmlTemperature = xmldoc("data/temperature.xml");
+        
 }
