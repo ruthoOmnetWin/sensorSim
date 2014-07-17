@@ -29,7 +29,7 @@ public:
     void updatePosition(Coord);
 };
 
-Register_Class(Sensor);
+//Register_Class(Sensor);
 Define_Module(Sensor);
 
 #endif /* SENSOR_H_ */

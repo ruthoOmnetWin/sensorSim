@@ -16,7 +16,7 @@
 package mynetwork.Node;
 
 import org.mixim.modules.node.Host802154_2400MHz;
-import sensor.Sensor;
+import mynetwork.Node.Sensor.Sensor;
 import mynetwork.Mobility.CustomLinearMobility;
 
 module MyWirelessNode extends Host802154_2400MHz

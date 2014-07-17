@@ -13,29 +13,24 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef DATAVECTOR_H_
-#define DATAVECTOR_H_
-
-#define STRAIGTH 0
-#define EXPONENTIALLY 1
+#ifndef SENSOR_H_
+#define SENSOR_H_
 
 #include <omnetpp.h>
+#include <DataVector.h>
+#include <Coord.h>
 
-class DataVector : public cSimpleModule
+class Sensor : public DataVector
 {
-private:
-    int dataVectorType;
 protected:
-    int straight(int, int);
-    int exponentially(int, int);
+    Coord position;
 public:
-    //DataVector(int);
-    //virtual ~DataVector();
-    void setDataVectorType(int);
-    int getDataVectorType();
+    int getSensorData();
+    void updatePosition(Coord);
+    Coord getCurrentPosition();
 };
 
-//Register_Class(DataVector);
-Define_Module(DataVector);
+//Register_Class(Sensor);
+Define_Module(Sensor);
 
-#endif /* DATAVECTOR_H_ */
+#endif /* SENSOR_H_ */

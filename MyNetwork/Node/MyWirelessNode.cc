@@ -22,7 +22,7 @@ Register_Class(MyWirelessNode);
 
 MyWirelessNode::MyWirelessNode()
 {
-
+    SensorModule = new Sensor;
 }
 
 /**
@@ -34,6 +34,12 @@ Coord MyWirelessNode::getPosition()
 {
     Coord* pos = new Coord();
     return *pos;
+}
+
+int MyWirelessNode::readSensor()
+{
+    int data = SensorModule->getSensorData();
+    return data;
 }
 
 /**

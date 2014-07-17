@@ -22,10 +22,11 @@
 class MyWirelessNode : public cCompoundModule
 {
 protected:
-    Sensor sensor;
+    Sensor* SensorModule;
     void initialize(int stage);
     void handleMessage();
     void finish();
+    int readSensor();
 public:
     MyWirelessNode();
     Coord getPosition();

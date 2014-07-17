@@ -4,7 +4,6 @@
 	<comment></comment>
 	<projects>
 		<project>MiXiM</project>
-		<project>Sensor</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
