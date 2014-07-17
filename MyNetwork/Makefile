@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for MyNetwork
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I../MiXiM/src/base/phyLayer -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/networklayer/common -I../MiXiM/src -I../MiXiM/src/inet_stub/base -I../MiXiM/src/base/messages -I../MiXiM/src/base/utils -I../Sensor -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility/models -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM -KSENSOR_PROJ=../Sensor
+#  opp_makemake -f --deep -O out -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/base -I../Sensor -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/networklayer/common -I../MiXiM/src -I../MiXiM/src/base/utils -I../MiXiM/src/base -I../MiXiM/src/base/phyLayer -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/messages -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM -KSENSOR_PROJ=../Sensor
 #
 
 # Name of target to be created (-o option)
@@ -15,21 +15,22 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 
 # C++ include paths (with -I)
 INCLUDE_PATH = \
-    -I../MiXiM/src/base/phyLayer \
-    -I../MiXiM/src/base/modules \
     -I../MiXiM/src/inet_stub/mobility \
     -I../MiXiM/src/inet_stub/util \
-    -I../MiXiM/src/inet_stub/linklayer/contract \
-    -I../MiXiM/src/base/connectionManager \
+    -I../MiXiM/src/inet_stub/base \
+    -I../Sensor \
+    -I../MiXiM/src/inet_stub/mobility/models \
+    -I../MiXiM/src/base/modules \
     -I../MiXiM/src/inet_stub/networklayer/common \
     -I../MiXiM/src \
-    -I../MiXiM/src/inet_stub/base \
-    -I../MiXiM/src/base/messages \
     -I../MiXiM/src/base/utils \
-    -I../Sensor \
     -I../MiXiM/src/base \
-    -I../MiXiM/src/inet_stub/mobility/models \
+    -I../MiXiM/src/base/phyLayer \
+    -I../MiXiM/src/base/connectionManager \
+    -I../MiXiM/src/inet_stub/linklayer/contract \
+    -I../MiXiM/src/base/messages \
     -I. \
+    -IWorldModel \
     -Iresults
 
 # Additional object and library files to link with
@@ -45,7 +46,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/MyWirelessNode.o $O/CustomLinearMobility.o $O/CustomWorldUtility.o
+OBJS = $O/MyWirelessNode.o $O/CustomLinearMobility.o $O/WorldModel/CustomWorldUtility.o
 
 # Message files
 MSGFILES =
@@ -126,6 +127,7 @@ clean:
 	$(Q)-rm -rf $O
 	$(Q)-rm -f MyNetwork MyNetwork.exe libMyNetwork.so libMyNetwork.a libMyNetwork.dll libMyNetwork.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
+	$(Q)-rm -f WorldModel/*_m.cc WorldModel/*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
 
 cleanall: clean
@@ -133,7 +135,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc WorldModel/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/CustomLinearMobility.o: CustomLinearMobility.cc \
@@ -150,14 +152,6 @@ $O/CustomLinearMobility.o: CustomLinearMobility.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	CustomLinearMobility.h
-$O/CustomWorldUtility.o: CustomWorldUtility.cc \
-	$(MIXIM_PROJ)/src/base/modules/BaseWorldUtility.h \
-	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
-	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
-	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
-	CustomWorldUtility.h
 $O/MyWirelessNode.o: MyWirelessNode.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
@@ -173,4 +167,12 @@ $O/MyWirelessNode.o: MyWirelessNode.cc \
 	MyWirelessNode.h \
 	$(SENSOR_PROJ)/DataVector.h \
 	$(SENSOR_PROJ)/Sensor.h
+$O/WorldModel/CustomWorldUtility.o: WorldModel/CustomWorldUtility.cc \
+	$(MIXIM_PROJ)/src/base/modules/BaseWorldUtility.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	WorldModel/CustomWorldUtility.h
 

@@ -13,7 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package mynetwork;
+package mynetwork.Mobility;
 
 import org.mixim.base.modules.BaseNetwork;
 import inet.mobility.models.LinearMobility;

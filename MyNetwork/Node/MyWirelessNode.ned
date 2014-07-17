@@ -13,11 +13,30 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package mynetwork;
-import org.mixim.base.modules.BaseWorldUtility;
+package mynetwork.Node;
 
-simple CustomWorldUtility extends BaseWorldUtility
+import org.mixim.modules.node.Host802154_2400MHz;
+import sensor.Sensor;
+import mynetwork.Mobility.CustomLinearMobility;
+
+module MyWirelessNode extends Host802154_2400MHz
 {
     parameters:
-        string temperatur = default("12 12 12 13 13 14 13 13 13 12 12");
+		int nodePosX;
+        int nodePosY;
+        int nodeValue;
+        int nodeType;
+        mobilityType = default("CustomLinearMobility");
+        @class(MyWirelessNode);
+
+	submodules:
+        Sensor: Sensor {
+            sensorPosX = nodePosX;
+        	sensorPosY = nodePosY;
+        	sensorValue = nodeValue;
+        	sensorType = nodeType;
+            @display("p=140,310");
+        }
+
+    connections allowunconnected:
 }

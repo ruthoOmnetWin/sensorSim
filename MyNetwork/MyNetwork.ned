@@ -5,7 +5,8 @@ import org.mixim.base.connectionManager.ConnectionManager;
 import org.mixim.base.modules.BaseNetwork;
 import org.mixim.base.modules.IBaseNetwLayer;
 import org.mixim.modules.node.Host802154_2400MHz;
-
+import mynetwork.Node.MyWirelessNode;
+import mynetwork.WorldModel.CustomWorldUtility;
 
 network MyNetwork extends BaseNetwork 
 {

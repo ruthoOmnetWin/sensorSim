@@ -22,6 +22,7 @@
 class MIXIM_API CustomWorldUtility : public BaseWorldUtility
 {
 protected:
+
 public:
     CustomWorldUtility();
 };
