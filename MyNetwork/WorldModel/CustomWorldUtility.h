@@ -18,11 +18,14 @@
 
 #include <BaseWorldUtility.h>
 #include <omnetpp.h>
+#include <string.h>
 
 class MIXIM_API CustomWorldUtility : public BaseWorldUtility
 {
 protected:
-
+    int* temperatureArray;
+    int* readXML(char*);
+    void setTemperature();
 public:
     CustomWorldUtility();
 };

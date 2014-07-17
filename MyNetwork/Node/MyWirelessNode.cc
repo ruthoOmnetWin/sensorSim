@@ -16,6 +16,7 @@
 #include <MyWirelessNode.h>
 #include <omnetpp.h>
 #include <Sensor.h>
+#include <string.h>
 
 Define_Module(MyWirelessNode);
 Register_Class(MyWirelessNode);

@@ -33,6 +33,7 @@ INCLUDE_PATH = \
     -INode \
     -INode/Sensor \
     -IWorldModel \
+    -IWorldModel/data \
     -Iresults
 
 # Additional object and library files to link with
@@ -132,6 +133,7 @@ clean:
 	$(Q)-rm -f Node/*_m.cc Node/*_m.h
 	$(Q)-rm -f Node/Sensor/*_m.cc Node/Sensor/*_m.h
 	$(Q)-rm -f WorldModel/*_m.cc WorldModel/*_m.h
+	$(Q)-rm -f WorldModel/data/*_m.cc WorldModel/data/*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
 
 cleanall: clean
@@ -139,7 +141,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc WorldModel/*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/Mobility/CustomLinearMobility.o: Mobility/CustomLinearMobility.cc \

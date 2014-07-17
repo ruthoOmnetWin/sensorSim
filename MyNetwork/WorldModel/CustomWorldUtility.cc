@@ -15,7 +15,37 @@
 
 #include <CustomWorldUtility.h>
 
-CustomWorldUtility::CustomWorldUtility() {
+CustomWorldUtility::CustomWorldUtility()
+{
     // TODO Auto-generated constructor stub
+
+}
+
+void CustomWorldUtility::setTemperature()
+{
+    this->temperatureArray = readXML("xmlTemperature");
+}
+
+int* CustomWorldUtility::readXML(char* fileName)
+{
+    // get the xml from the parameter, return type cXMLElement
+    cXMLElement *rootE = par(fileName).xmlValue();
+
+    // get a vector (of type cXMLElement) with all childs of the root-tag
+    cXMLElementList nList = rootE->getChildren();
+
+    int length = nList.size();
+
+    int temperature[length];
+
+    for (int i = 0; i < length; i++) {
+        // access the data from a child
+        //EV << nList[i]->getNodeValue() << endl;
+
+        temperature[i] = atoi(nList[i]->getNodeValue());
+
+    }
+
+    return temperature;
 
 }
