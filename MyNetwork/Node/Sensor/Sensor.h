@@ -23,6 +23,9 @@
 class Sensor : public DataVector
 {
 protected:
+    void initialize();
+
+protected:
     Coord position;
 public:
     int getSensorData();

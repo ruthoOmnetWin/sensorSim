@@ -9,6 +9,34 @@
 #include <omnetpp.h>
 #include <DataVector.h>
 
+//---------------------------------------------------------------------------
+//--------------------------- BASE FUNCTIONS --------------------------------
+//---------------------------------------------------------------------------
+
+void DataVector::initialize()
+{
+    EV << ">>>>>>>>>>>>>> INIT DataVector" << endl;
+}
+
+void DataVector::handleMessage(cMessage *msg)
+{
+    EV << ">>>>>>>>>>>>>> HANDLEMESSAGE DataVector";
+}
+
+void DataVector::activity()
+{
+    EV << ">>>>>>>>>>>>>> ACTIVITY DataVector";
+}
+
+void DataVector::finish()
+{
+    EV << ">>>>>>>>>>>>>> FINISH DataVector";
+}
+
+//---------------------------------------------------------------------------
+//--------------------------- META FUNCTIONS --------------------------------
+//---------------------------------------------------------------------------
+
 void DataVector::setDataVectorType(int dataVectorType)
 {
     this->dataVectorType = dataVectorType;
@@ -20,7 +48,7 @@ int DataVector::getDataVectorType()
 }
 
 //---------------------------------------------------------------------------
-//----------------------FUNCTIONS TO PROVIDE DATA----------------------------
+//--------------------- FUNCTIONS TO PROVIDE DATA ---------------------------
 //---------------------------------------------------------------------------
 
 /**

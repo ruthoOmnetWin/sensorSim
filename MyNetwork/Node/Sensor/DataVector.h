@@ -23,6 +23,12 @@
 
 class DataVector : public cSimpleModule
 {
+protected:
+    void initialize();
+    void handleMessage(cMessage *msg);
+    void activity();
+    void finish();
+
 private:
     int dataVectorType;
 protected:

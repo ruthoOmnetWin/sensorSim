@@ -27,4 +27,5 @@ simple Sensor extends DataVector
         value = sensorValue;
         type = sensorType;
 	    @display("i=block/wrx");
+	    @class("Sensor");
 }

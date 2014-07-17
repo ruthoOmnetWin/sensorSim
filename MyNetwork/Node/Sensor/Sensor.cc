@@ -15,6 +15,13 @@
 
 #include <Sensor.h>
 
+void Sensor::initialize()
+{
+    DataVector::initialize();
+    EV << "(and Sensor)" << endl;
+}
+
+
 /**
  * reads the data the sensor returns at the current position
  *
