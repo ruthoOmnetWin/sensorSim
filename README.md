@@ -5,7 +5,7 @@ sensorSim
 
 >e-mail: thomas.rueckert@s2010.tu-chemnitz.de
 
-### the main implementations can be found inside MyNetwork/ and Sensor/
+### the main implementations can be found inside MyNetwork/
 
 * documentations and informational content can be found inside docs/
  * raw files inside src/
