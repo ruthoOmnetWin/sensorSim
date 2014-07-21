@@ -30,6 +30,10 @@ module MyWirelessNode extends Host802154_2400MHz
         @class(MyWirelessNode);
         xml test = xmldoc("Node/test.xml");
 
+    gates:
+	    inout wirelessNodeToSensor;
+	    inout worldGate;
+	    
 	submodules:
         Sensor: Sensor {
             sensorPosX = nodePosX;
@@ -37,7 +41,10 @@ module MyWirelessNode extends Host802154_2400MHz
         	sensorValue = nodeValue;
         	sensorType = nodeType;
             @display("p=140,310");
+            
         }
 
     connections allowunconnected:
+        wirelessNodeToSensor <--> {  delay = 100ms; } <--> Sensor.sensorOutGate;
+        worldGate <--> {  delay = 100ms; } <--> Sensor.worldDataGate;
 }

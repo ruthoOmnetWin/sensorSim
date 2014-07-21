@@ -19,7 +19,9 @@ import org.mixim.base.modules.BaseWorldUtility;
 simple CustomWorldUtility extends BaseWorldUtility
 {
     parameters:
-        //string temperature = default("12 12 12 13 13 14 13 13 13 12 12");
+        int numGates;
+         //string temperature = default("12 12 12 13 13 14 13 13 13 12 12");
         xml xmlTemperature = xmldoc("WorldModel/data/temperature.xml");
-        
+    gates:
+        inout worldDataGate[numGates];
 }

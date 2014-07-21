@@ -28,4 +28,7 @@ simple Sensor extends DataVector
         type = sensorType;
 	    @display("i=block/wrx");
 	    @class("Sensor");
+	gates: 
+	    inout sensorOutGate;
+	    inout worldDataGate;
 }

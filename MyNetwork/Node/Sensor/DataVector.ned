@@ -10,7 +10,5 @@ simple DataVector
         int type;
         //value of the data
         int value;
-	gates: 
-	    output out; 
-	    input in;  
+	 
 }
