@@ -49,7 +49,13 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/Mobility/CustomLinearMobility.o $O/Node/MyWirelessNode.o $O/Node/Sensor/Sensor.o $O/Node/Sensor/DataVector.o $O/WorldModel/CustomWorldUtility.o
+OBJS = \
+    $O/generateEnvironmentData.o \
+    $O/Mobility/CustomLinearMobility.o \
+    $O/Node/MyWirelessNode.o \
+    $O/Node/Sensor/Sensor.o \
+    $O/Node/Sensor/DataVector.o \
+    $O/WorldModel/CustomWorldUtility.o
 
 # Message files
 MSGFILES =
@@ -144,6 +150,7 @@ depend:
 	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/generateEnvironmentData.o: generateEnvironmentData.cc
 $O/Mobility/CustomLinearMobility.o: Mobility/CustomLinearMobility.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \

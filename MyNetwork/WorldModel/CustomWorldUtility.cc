@@ -14,38 +14,129 @@
 // 
 
 #include <CustomWorldUtility.h>
+#include <iostream>
+#include <fstream>
+#include <stdio.h>
+#include <cstdlib>
+#include <string>
+#include <cstring>
+using namespace std;
+
+#define xmlPressure 1
+#define xmlTemperature 2
 
 CustomWorldUtility::CustomWorldUtility()
 {
     // TODO Auto-generated constructor stub
+}
 
+CustomWorldUtility::~CustomWorldUtility()
+{
+    delete temperatureArray;
+    delete pressureArray;
 }
 
 void CustomWorldUtility::setTemperature()
 {
-    this->temperatureArray = readXML("xmlTemperature");
+    int* data = readXML(xmlTemperature);
+    this->temperatureArray = new int[tempLength];
+    for (int i = 0; i < tempLength; i++) {
+        this->temperatureArray[i] = data[i];
+    }
+    delete data;
 }
 
-int* CustomWorldUtility::readXML(char* fileName)
+void CustomWorldUtility::setPressure()
+{
+    int* data = readXML(xmlPressure);
+    this->pressureArray = new int[pressLength];
+    for (int i = 0; i < pressLength; i++) {
+        this->pressureArray[i] = data[i];
+    }
+    delete data;
+}
+
+int* CustomWorldUtility::readXML(int fileName)
 {
     // get the xml from the parameter, return type cXMLElement
-    cXMLElement *rootE = par(fileName).xmlValue();
+    cXMLElement *rootE;
+    if (fileName == xmlPressure) {
+        rootE = par("xmlPressure").xmlValue();
+    } else if (fileName == xmlTemperature) {
+        rootE = par("xmlTemperature").xmlValue();
+    }
 
     // get a vector (of type cXMLElement) with all childs of the root-tag
     cXMLElementList nList = rootE->getChildren();
 
     int length = nList.size();
 
-    int temperature[length];
+    int* data = new int[length];
+    if (fileName == xmlTemperature) {
+        tempLength = length;
+    } else if (fileName == xmlPressure) {
+        pressLength = length;
+    }
 
     for (int i = 0; i < length; i++) {
         // access the data from a child
         //EV << nList[i]->getNodeValue() << endl;
-
-        temperature[i] = atoi(nList[i]->getNodeValue());
-
+        data[i] = atoi(nList[i]->getNodeValue());
     }
 
-    return temperature;
+    return data;
+}
+
+void CustomWorldUtility::initialize(int stage)
+{
+    EV << "Initializing World Model" << endl;
+    this->setTemperature();
+    this->setPressure();
+}
+
+void CustomWorldUtility::handleMessage(cMessage *msg)
+{
+    send(msg, "out");
+}
+
+void CustomWorldUtility::generateEnvironmentData()
+{
+    string filenames[2] = {"pressure", "temperature"};
+
+    int numberOfFiles = sizeof(filenames);
+
+    int numNodes = 100;
+    if (numNodes == 0) {
+
+        cout << "Didn't create any file" << endl;
+    } else {
+
+        cout << "Starting to create files" << endl;
+
+        for (int files = 0; files < numberOfFiles; files++) {
+
+            ofstream myfile;
+
+            string filename = "data/";
+            filename += filenames[files];
+            filename += ".xml";
+            char * filenameChar = new char[filename.length()];
+            strcpy(filenameChar,filename.c_str());
+
+            myfile.open (filenameChar);
+            cout << "Creating " << filenameChar << endl;
+            myfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl << "<" << filenames[files] << ">" << endl;
+
+            for (int i = 0; i < numNodes; i++) {
+                myfile << "<pos" << i << ">" << (rand() % 100)/3 << "</pos" << i << ">" << endl;
+            }
+
+            myfile << "</" << filenames[files] << ">";
+            myfile.close();
+
+        }
+
+        cout << "Done creating" << endl;
+    }
 
 }

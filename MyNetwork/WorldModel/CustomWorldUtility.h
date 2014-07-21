@@ -23,11 +23,20 @@
 class MIXIM_API CustomWorldUtility : public BaseWorldUtility
 {
 protected:
+    int numNodes;
     int* temperatureArray;
-    int* readXML(char*);
+    int tempLength;
+    int* pressureArray;
+    int pressLength;
+    int* readXML(int);
     void setTemperature();
+    void setPressure();
+    void initialize(int stage);
+    void handleMessage(cMessage *msg);
+    void generateEnvironmentData();
 public:
     CustomWorldUtility();
+    ~CustomWorldUtility();
 };
 
 Define_Module(CustomWorldUtility);
