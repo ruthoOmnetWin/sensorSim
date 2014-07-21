@@ -14,6 +14,7 @@ import org.mixim.base.connectionManager.IConnectionManager;
 network MyNetwork //extends BaseNetwork 
 {
     parameters:
+        bool createNewEnvironmentData;
         int numNodes; // total number of hosts in the network
         int networkSensorAlgorithm;
         //postion of the data
@@ -54,6 +55,7 @@ network MyNetwork //extends BaseNetwork
         }
         world: CustomWorldUtility {
         	numGates = numNodes;    
+        	createData = createNewEnvironmentData;
         };
     connections allowunconnected:
         world.worldDataGate[i] <--> {  delay = 100ms; } <--> node[i].worldGate for i=0..(numNodes-1);

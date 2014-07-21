@@ -19,6 +19,7 @@ import org.mixim.base.modules.BaseWorldUtility;
 simple CustomWorldUtility extends BaseWorldUtility
 {
     parameters:
+        bool createData;
         int numGates;
         xml xmlTemperature = xmldoc("WorldModel/data/temperature.xml");
         xml xmlPressure = xmldoc("WorldModel/data/pressure.xml");

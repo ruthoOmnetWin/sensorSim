@@ -90,8 +90,15 @@ int* CustomWorldUtility::readXML(int fileName)
 void CustomWorldUtility::initialize(int stage)
 {
     EV << "Initializing World Model" << endl;
+
+    if (par("createData")) {
+        EV << "Generating New Environment Data" << endl;
+        this->generateEnvironmentData();
+    }
+
     this->setTemperature();
     this->setPressure();
+
 }
 
 void CustomWorldUtility::handleMessage(cMessage *msg)
@@ -125,6 +132,7 @@ void CustomWorldUtility::generateEnvironmentData()
 
             myfile.open (filenameChar);
             cout << "Creating " << filenameChar << endl;
+            delete filenameChar;
             myfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl << "<" << filenames[files] << ">" << endl;
 
             for (int i = 0; i < numNodes; i++) {
