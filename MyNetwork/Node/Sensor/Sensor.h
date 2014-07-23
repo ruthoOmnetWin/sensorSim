@@ -28,6 +28,7 @@ protected:
 protected:
     Coord* position;
 public:
+    void handleMessage(cMessage *msg);
     int getSensorData();
     void updatePosition(Coord*);
     Coord* getCurrentPosition();

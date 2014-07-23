@@ -35,6 +35,30 @@ CustomWorldUtility::~CustomWorldUtility()
     delete[] pressureArray;
 }
 
+void CustomWorldUtility::initialize(int stage)
+{
+    BaseWorldUtility::initialize(stage);
+    EV << "Initializing World Model" << endl;
+
+    if (par("createData")) {
+        EV << "Generating New Environment Data" << endl;
+        this->generateEnvironmentData();
+    }
+
+    this->setTemperature();
+    this->setPressure();
+
+    //generate a message
+    cMessage *msg = new cMessage("Init World");
+    //object = new cObject();
+    send(msg, "worldDataGate$o", 1);
+}
+
+void CustomWorldUtility::handleMessage(cMessage *msg)
+{
+    //send(msg, "out");
+}
+
 void CustomWorldUtility::setTemperature()
 {
     int* data = readXML(xmlTemperature);
@@ -84,31 +108,6 @@ int* CustomWorldUtility::readXML(int fileName)
     }
 
     return data;
-}
-
-void CustomWorldUtility::initialize(int stage)
-{
-    BaseWorldUtility::initialize(stage);
-    EV << "Initializing World Model" << endl;
-
-    if (par("createData")) {
-        EV << "Generating New Environment Data" << endl;
-        this->generateEnvironmentData();
-    }
-
-    this->setTemperature();
-    this->setPressure();
-
-    //generate a message
-    cMessage *msg = new cMessage("World says hello");
-    send(msg, "worldDataGate$o", 1);
-
-}
-
-void CustomWorldUtility::handleMessage(cMessage *msg)
-{
-    bubble("message");
-    //send(msg, "out");
 }
 
 void CustomWorldUtility::generateEnvironmentData()

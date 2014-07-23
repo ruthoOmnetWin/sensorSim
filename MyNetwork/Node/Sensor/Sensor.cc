@@ -14,6 +14,8 @@
 // 
 
 #include <Sensor.h>
+#include <string.h>
+using namespace std;
 
 Sensor::Sensor()
 {
@@ -31,6 +33,14 @@ void Sensor::initialize()
     EV << "(and Sensor)" << endl;
 }
 
+void Sensor::handleMessage(cMessage *msg)
+{
+    bubble("Sensor red data");
+    string message;
+    message = msg->getName();
+    EV << "received:" << msg->info() << endl;
+    send(msg, "worldDataGate$o");
+}
 
 /**
  * reads the data the sensor returns at the current position
