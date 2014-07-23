@@ -1,21 +1,27 @@
 package mynetwork;
 
 import org.mixim.base.connectionManager.ConnectionManager;
-//import org.mixim.modules.node.WirelessNode;
 import org.mixim.base.modules.BaseNetwork;
 import org.mixim.base.modules.IBaseNetwLayer;
 import org.mixim.modules.node.Host802154_2400MHz;
-import mynetwork.Node.MyWirelessNode;
-import mynetwork.WorldModel.CustomWorldUtility;
-
 import org.mixim.base.connectionManager.IConnectionManager;
 
+import mynetwork.WorldModel.CustomWorldUtility;
+import mynetwork.Node.TNode;
+import mynetwork.Node.PNode;
+import mynetwork.Node.HNode;
+import mynetwork.Node.THNode;
 
 network MyNetwork //extends BaseNetwork 
 {
     parameters:
         bool createNewEnvironmentData;
-        int numNodes; // total number of hosts in the network
+        
+        int numTNodes = default(1);
+        int numPNodes = default(1);
+        int numHNodes = default(1);
+        int numTHNodes = default(1);
+        int numNodes = numTNodes + numPNodes + numHNodes + numTHNodes; // total number of hosts in the network
         string wuType = default("CustomWorldUtility");
 
         //BaseNetwork
@@ -29,14 +35,29 @@ network MyNetwork //extends BaseNetwork
         **.mobility.constraintAreaMaxY = default(playgroundSizeY);
         **.mobility.constraintAreaMaxZ = default(playgroundSizeZ);
         string cmType = default("org.mixim.base.connectionManager.ConnectionManager"); // connection manager to use
-        //string wuType = default("org.mixim.base.modules.BaseWorldUtility");            // world utility to use
 
         @display("bgb=475,297,white;bgp=0,0");
 
     submodules:
-        node[numNodes]: MyWirelessNode {
+        tnode[numTNodes]: TNode {
             parameters:
                 @display("i=device/card");
+                numHosts = numNodes;
+        }
+        hnode[numHNodes]: HNode {
+            parameters:
+                @display("i=device/card");
+                numHosts = numNodes;
+        }
+        pnode[numPNodes]: PNode {
+            parameters:
+                @display("i=device/card");
+                numHosts = numNodes;
+        }
+        thnode[numTHNodes]: THNode {
+            parameters:
+                @display("i=device/card");
+                numHosts = numNodes;
         }
         connectionManager: <cmType> like IConnectionManager {
             parameters:
@@ -46,8 +67,10 @@ network MyNetwork //extends BaseNetwork
         	numGates = numNodes;    
         	createData = createNewEnvironmentData;
         };
-    connections allowunconnected:
-        world.worldDataGate[i] <--> {  delay = 100ms; } <--> node[i].worldGate for i=0..(numNodes-1);
-    // all connections and gates are to be generated dynamically
-
+        
+    connections allowunconnected: // some connections and gates are to be generated dynamically
+        world.worldDataGate[i] <--> {  delay = 100ms; } <--> tnode[i].worldGate for i=0..(numTNodes-1);
+    	world.worldDataGate[numTNodes+i] <--> {  delay = 100ms; } <--> hnode[i].worldGate for i=0..(numHNodes-1);
+    	world.worldDataGate[numTNodes+numHNodes+i] <--> {  delay = 100ms; } <--> pnode[i].worldGate for i=0..(numPNodes-1);
+	    world.worldDataGate[numTNodes+numHNodes+numPNodes+i] <--> {  delay = 100ms; } <--> thnode[i].worldGate for i=0..(numTHNodes-1);
 }

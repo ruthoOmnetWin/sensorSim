@@ -27,9 +27,8 @@ Sensor::~Sensor()
     delete position;
 }
 
-void Sensor::initialize()
+void Sensor::initialize(int stage)
 {
-    DataVector::initialize();
     EV << "(and Sensor)" << endl;
 }
 

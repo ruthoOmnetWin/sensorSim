@@ -49,7 +49,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/Mobility/CustomLinearMobility.o $O/Node/MyWirelessNode.o $O/Node/Sensor/Sensor.o $O/Node/Sensor/DataVector.o $O/WorldModel/CustomWorldUtility.o
+OBJS = $O/Mobility/CustomLinearMobility.o $O/Node/MyWirelessNode.o $O/Node/Sensor/Sensor.o $O/WorldModel/CustomWorldUtility.o
 
 # Message files
 MSGFILES =
@@ -171,15 +171,11 @@ $O/Node/MyWirelessNode.o: Node/MyWirelessNode.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	Node/MyWirelessNode.h \
-	Node/Sensor/DataVector.h \
 	Node/Sensor/Sensor.h
-$O/Node/Sensor/DataVector.o: Node/Sensor/DataVector.cc \
-	Node/Sensor/DataVector.h
 $O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
-	Node/Sensor/DataVector.h \
 	Node/Sensor/Sensor.h
 $O/WorldModel/CustomWorldUtility.o: WorldModel/CustomWorldUtility.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseWorldUtility.h \

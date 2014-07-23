@@ -22,11 +22,11 @@ import mynetwork.Mobility.CustomLinearMobility;
 module MyWirelessNode extends Host802154_2400MHz
 {
     parameters:
-        int measureTime @unit(ms) = defaul(100);
+        int measureTime @unit(ms) = default(100ms);
         mobilityType = default("CustomLinearMobility");
         @class(MyWirelessNode);
         xml test = xmldoc("Node/test.xml");
-        string type; 
+        //string type; 
 
     gates:
 	    inout wirelessNodeToSensor;

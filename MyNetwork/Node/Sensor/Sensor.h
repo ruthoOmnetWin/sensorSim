@@ -17,7 +17,6 @@
 #define SENSOR_H_
 
 #include <omnetpp.h>
-#include <DataVector.h>
 #include <Coord.h>
 
 class Sensor : public cSimpleModule
@@ -25,13 +24,12 @@ class Sensor : public cSimpleModule
 protected:
     void initialize(int stage);
     void handleMessage(cMessage *msg);
-    void activity();
-    void finish();
+    void activity(){};
+    void finish(){};
 
 protected:
     Coord* position;
 public:
-    void handleMessage(cMessage *msg);
     int getSensorData();
     void updatePosition(Coord*);
     Coord* getCurrentPosition();
