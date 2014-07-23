@@ -15,6 +15,16 @@
 
 #include <Sensor.h>
 
+Sensor::Sensor()
+{
+    position = new Coord();
+}
+
+Sensor::~Sensor()
+{
+    delete position;
+}
+
 void Sensor::initialize()
 {
     DataVector::initialize();
@@ -35,12 +45,12 @@ int Sensor::getSensorData()
 /**
  * update the position data inside the sensor by a given Coord object
  */
-void Sensor::updatePosition(Coord position)
+void Sensor::updatePosition(Coord* position)
 {
     this->position = position;
 }
 
-Coord Sensor::getCurrentPosition()
+Coord* Sensor::getCurrentPosition()
 {
     return this->position;
 }

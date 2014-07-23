@@ -26,11 +26,13 @@ protected:
     void initialize();
 
 protected:
-    Coord position;
+    Coord* position;
 public:
     int getSensorData();
-    void updatePosition(Coord);
-    Coord getCurrentPosition();
+    void updatePosition(Coord*);
+    Coord* getCurrentPosition();
+    Sensor();
+    ~Sensor();
 };
 
 //Register_Class(Sensor);

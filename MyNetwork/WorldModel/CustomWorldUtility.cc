@@ -27,13 +27,12 @@ using namespace std;
 
 CustomWorldUtility::CustomWorldUtility()
 {
-    // TODO Auto-generated constructor stub
 }
 
 CustomWorldUtility::~CustomWorldUtility()
 {
-    delete temperatureArray;
-    delete pressureArray;
+    delete[] temperatureArray;
+    delete[] pressureArray;
 }
 
 void CustomWorldUtility::setTemperature()
@@ -43,7 +42,7 @@ void CustomWorldUtility::setTemperature()
     for (int i = 0; i < tempLength; i++) {
         this->temperatureArray[i] = data[i];
     }
-    delete data;
+    delete[] data;
 }
 
 void CustomWorldUtility::setPressure()
@@ -53,7 +52,7 @@ void CustomWorldUtility::setPressure()
     for (int i = 0; i < pressLength; i++) {
         this->pressureArray[i] = data[i];
     }
-    delete data;
+    delete[] data;
 }
 
 int* CustomWorldUtility::readXML(int fileName)
@@ -89,6 +88,7 @@ int* CustomWorldUtility::readXML(int fileName)
 
 void CustomWorldUtility::initialize(int stage)
 {
+    BaseWorldUtility::initialize(stage);
     EV << "Initializing World Model" << endl;
 
     if (par("createData")) {
@@ -99,11 +99,16 @@ void CustomWorldUtility::initialize(int stage)
     this->setTemperature();
     this->setPressure();
 
+    //generate a message
+    cMessage *msg = new cMessage("World says hello");
+    send(msg, "worldDataGate$o", 1);
+
 }
 
 void CustomWorldUtility::handleMessage(cMessage *msg)
 {
-    send(msg, "out");
+    bubble("message");
+    //send(msg, "out");
 }
 
 void CustomWorldUtility::generateEnvironmentData()
@@ -132,7 +137,7 @@ void CustomWorldUtility::generateEnvironmentData()
 
             myfile.open (filenameChar);
             cout << "Creating " << filenameChar << endl;
-            delete filenameChar;
+            delete[] filenameChar;
             myfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl << "<" << filenames[files] << ">" << endl;
 
             for (int i = 0; i < numNodes; i++) {

@@ -21,6 +21,7 @@ void DataVector::initialize()
 void DataVector::handleMessage(cMessage *msg)
 {
     EV << ">>>>>>>>>>>>>> HANDLEMESSAGE DataVector";
+    delete msg;
 }
 
 void DataVector::activity()

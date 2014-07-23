@@ -26,6 +26,11 @@ MyWirelessNode::MyWirelessNode()
     SensorModule = new Sensor;
 }
 
+MyWirelessNode::~MyWirelessNode()
+{
+    delete SensorModule;
+}
+
 /**
  * returns the position of the node
  *
@@ -33,8 +38,8 @@ MyWirelessNode::MyWirelessNode()
  */
 Coord MyWirelessNode::getPosition()
 {
-    Coord* pos = new Coord();
-    return *pos;
+    //Coord* pos = new Coord();
+    //return *pos;
 }
 
 int MyWirelessNode::readSensor()
@@ -54,9 +59,10 @@ void MyWirelessNode::initialize(int stage)
 /**
  * proceed an incoming message
  */
-void MyWirelessNode::handleMessage()
+void MyWirelessNode::handleMessage(cMessage *msg)
 {
     EV << "-----------------------> handleMessage MyWirelessNode" << endl;
+    //worldGate
 }
 
 /**

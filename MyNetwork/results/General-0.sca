@@ -1,14 +1,14 @@
 version 2
-run General-0-20140721-15:45:21-23376
+run General-0-20140723-13:32:29-11529
 attr configname General
-attr datetime 20140721-15:45:21
+attr datetime 20140723-13:32:29
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network MyNetwork
-attr processid 23376
+attr processid 11529
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -40,4 +40,30 @@ attr unit  mW-s
 scalar MyNetwork.node[0].batteryStats 	lifetime 	-1
 attr unit  s
 scalar MyNetwork.node[0].batteryStats 	"Mean power consumption" 	0
+attr unit  mW
+scalar MyNetwork.node[1].nic.mac 	nbTxFrames 	0
+scalar MyNetwork.node[1].nic.mac 	nbRxFrames 	0
+scalar MyNetwork.node[1].nic.mac 	nbDroppedFrames 	0
+scalar MyNetwork.node[1].nic.mac 	nbMissedAcks 	0
+scalar MyNetwork.node[1].nic.mac 	nbRecvdAcks 	0
+scalar MyNetwork.node[1].nic.mac 	nbTxAcks 	0
+scalar MyNetwork.node[1].nic.mac 	nbDuplicates 	0
+scalar MyNetwork.node[1].nic.mac 	meanBackoff 	0
+scalar MyNetwork.node[1].nic.mac 	nbBackoffs 	0
+scalar MyNetwork.node[1].nic.mac 	backoffDurations 	0
+scalar MyNetwork.node[1].nic.phy 	nbFramesWithInterference 	0
+scalar MyNetwork.node[1].nic.phy 	nbFramesWithoutInterference 	0
+scalar MyNetwork.node[1].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar MyNetwork.node[1].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar MyNetwork.node[1].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar MyNetwork.node[1].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar MyNetwork.node[1].tranl 	nbAggrPktReceived 	0
+scalar MyNetwork.node[1].tranl 	"nbAggrPktSentDown " 	0
+scalar MyNetwork.node[1].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar MyNetwork.node[1].batteryStats 	total 	0
+attr unit  mW-s
+scalar MyNetwork.node[1].batteryStats 	lifetime 	-1
+attr unit  s
+scalar MyNetwork.node[1].batteryStats 	"Mean power consumption" 	0
 attr unit  mW
