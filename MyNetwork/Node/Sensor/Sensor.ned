@@ -15,17 +15,11 @@
 
 package mynetwork.Node.Sensor;
 
-simple Sensor extends DataVector
+simple Sensor 
 {
-	parameters:
-	    int sensorPosX;
-        int sensorPosY;
-        int sensorValue;
-        int sensorType;
-        posX = sensorPosX;
-        posY = sensorPosY;
-        value = sensorValue;
-        type = sensorType;
+    parameters:
+        //type of the sensor
+        string type;
 	    @display("i=block/wrx");
 	    @class("Sensor");
 	gates: 

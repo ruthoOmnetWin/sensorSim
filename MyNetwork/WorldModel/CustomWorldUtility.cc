@@ -22,6 +22,7 @@
 #include <cstring>
 using namespace std;
 
+#define xmlHumidity 0
 #define xmlPressure 1
 #define xmlTemperature 2
 
@@ -112,43 +113,75 @@ int* CustomWorldUtility::readXML(int fileName)
 
 void CustomWorldUtility::generateEnvironmentData()
 {
-    string filenames[2] = {"pressure", "temperature"};
+    int size = 100;
+    string filenames[3] = {"humidity", "pressure", "temperature"};
 
     int numberOfFiles = sizeof(filenames);
+    EV << "Starting to create files" << endl;
 
-    int numNodes = 100;
-    if (numNodes == 0) {
+    for (int files = 0; files < numberOfFiles; files++) {
 
-        cout << "Didn't create any file" << endl;
-    } else {
+        ofstream myfile;
 
-        cout << "Starting to create files" << endl;
+        string filename = "data/";
+        filename += filenames[files];
+        filename += ".xml";
+        char * filenameChar = new char[filename.length()];
+        strcpy(filenameChar,filename.c_str());
 
-        for (int files = 0; files < numberOfFiles; files++) {
+        myfile.open (filenameChar);
+        EV << "Creating " << filenameChar << endl;
+        delete[] filenameChar;
+        myfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl << "<" << filenames[files] << ">" << endl;
 
-            ofstream myfile;
+        // Data Creation here
+        if (files == xmlHumidity) {
 
-            string filename = "data/";
-            filename += filenames[files];
-            filename += ".xml";
-            char * filenameChar = new char[filename.length()];
-            strcpy(filenameChar,filename.c_str());
+        } else if (files == xmlPressure) {
 
-            myfile.open (filenameChar);
-            cout << "Creating " << filenameChar << endl;
-            delete[] filenameChar;
-            myfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl << "<" << filenames[files] << ">" << endl;
-
-            for (int i = 0; i < numNodes; i++) {
-                myfile << "<pos" << i << ">" << (rand() % 100)/3 << "</pos" << i << ">" << endl;
+        } else if (files == xmlTemperature) {
+            int* temperature = generateTemperature(size);
+            for (int i = 0; i < size; i++) {
+                myfile << "<pos" << i << ">" << temperature[i] << "</pos" << i << ">" << endl;
             }
-
-            myfile << "</" << filenames[files] << ">";
-            myfile.close();
-
+            delete[] temperature;
         }
 
-        cout << "Done creating" << endl;
+        myfile << "</" << filenames[files] << ">";
+        myfile.close();
+
     }
 
+    cout << "Done creating" << endl;
+
+}
+
+int* CustomWorldUtility::generateTemperature(int size)
+{
+    int* data = new int[size];
+    for (int i = 0; i < size; i++) {
+        //10 - 30
+        data[i] = (int)((rand() % 100)/5) + 10;
+    }
+    return data;
+}
+
+int* CustomWorldUtility::generatePressure(int size)
+{
+    int* data = new int[size];
+    for (int i = 0; i < size; i++) {
+        //995 - 1005
+        data[i] = (int)((rand() % 100)/10) + 995;
+    }
+    return data;
+}
+
+int* CustomWorldUtility::generateHumidity(int size)
+{
+    int* data = new int[size];
+    for (int i = 0; i < size; i++) {
+        //70 - 75
+        data[i] = (int)((rand() % 100)/20 + 70);
+    }
+    return data;
 }

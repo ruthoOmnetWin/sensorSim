@@ -13,35 +13,11 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef DATAVECTOR_H_
-#define DATAVECTOR_H_
+package mynetwork.Node.Sensor;
 
-#define STRAIGTH 0
-#define EXPONENTIALLY 1
-
-#include <omnetpp.h>
-
-class DataVector : public cSimpleModule
+simple PressureSensor extends Sensor
 {
-protected:
-    void initialize();
-    void handleMessage(cMessage *msg);
-    void activity();
-    void finish();
+    parameters:
+        type = "pressure";
+}
 
-private:
-    int dataVectorType;
-protected:
-    int straight(int, int);
-    int exponentially(int, int);
-public:
-    //DataVector(int);
-    //virtual ~DataVector();
-    void setDataVectorType(int);
-    int getDataVectorType();
-};
-
-//Register_Class(DataVector);
-Define_Module(DataVector);
-
-#endif /* DATAVECTOR_H_ */

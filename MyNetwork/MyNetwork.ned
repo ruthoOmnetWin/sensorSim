@@ -16,12 +16,6 @@ network MyNetwork //extends BaseNetwork
     parameters:
         bool createNewEnvironmentData;
         int numNodes; // total number of hosts in the network
-        int networkSensorAlgorithm;
-        //postion of the data
-        int networkPosX;
-        int networkPosY;
-        //value of the data
-        int networkValue;
         string wuType = default("CustomWorldUtility");
 
         //BaseNetwork
@@ -42,11 +36,6 @@ network MyNetwork //extends BaseNetwork
     submodules:
         node[numNodes]: MyWirelessNode {
             parameters:
-                numHosts = numNodes;
-                nodePosX = networkPosX;
-                nodePosY = networkPosY;
-                nodeValue = networkValue;
-                nodeType = networkSensorAlgorithm;
                 @display("i=device/card");
         }
         connectionManager: <cmType> like IConnectionManager {

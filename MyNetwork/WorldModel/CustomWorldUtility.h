@@ -34,6 +34,9 @@ protected:
     void initialize(int stage);
     void handleMessage(cMessage *msg);
     void generateEnvironmentData();
+    int* generateTemperature(int size);
+    int* generatePressure(int size);
+    int* generateHumidity(int size);
 public:
     CustomWorldUtility();
     ~CustomWorldUtility();

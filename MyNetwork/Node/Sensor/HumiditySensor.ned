@@ -13,27 +13,10 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package mynetwork.Node;
+package mynetwork.Node.Sensor;
 
-import org.mixim.modules.node.Host802154_2400MHz;
-import mynetwork.Node.Sensor.Sensor;
-import mynetwork.Mobility.CustomLinearMobility;
-
-module MyWirelessNode extends Host802154_2400MHz
+simple HumiditySensor extends Sensor
 {
     parameters:
-        int measureTime @unit(ms) = defaul(100);
-        mobilityType = default("CustomLinearMobility");
-        @class(MyWirelessNode);
-        xml test = xmldoc("Node/test.xml");
-        string type; 
-
-    gates:
-	    inout wirelessNodeToSensor;
-	    inout worldGate;
-	    
-	submodules:
-
-    connections allowunconnected:
-        
+        type = "humidity";
 }

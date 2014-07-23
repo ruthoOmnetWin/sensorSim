@@ -14,26 +14,16 @@
 // 
 
 package mynetwork.Node;
+import mynetwork.Node.Sensor.HumiditySensor;
 
-import org.mixim.modules.node.Host802154_2400MHz;
-import mynetwork.Node.Sensor.Sensor;
-import mynetwork.Mobility.CustomLinearMobility;
-
-module MyWirelessNode extends Host802154_2400MHz
+module HNode extends MyWirelessNode
 {
-    parameters:
-        int measureTime @unit(ms) = defaul(100);
-        mobilityType = default("CustomLinearMobility");
-        @class(MyWirelessNode);
-        xml test = xmldoc("Node/test.xml");
-        string type; 
-
-    gates:
-	    inout wirelessNodeToSensor;
-	    inout worldGate;
-	    
-	submodules:
-
-    connections allowunconnected:
-        
+    submodules:
+        HumiditySensor: HumiditySensor {
+            @display("p=140,310");
+        }
+    
+    connections:
+        wirelessNodeToSensor <--> {  delay = measureTime; } <--> HumiditySensor.sensorOutGate;
+        worldGate <--> {  delay = measureTime; } <--> HumiditySensor.worldDataGate;
 }

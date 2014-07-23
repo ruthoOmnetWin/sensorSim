@@ -20,10 +20,13 @@
 #include <DataVector.h>
 #include <Coord.h>
 
-class Sensor : public DataVector
+class Sensor : public cSimpleModule
 {
 protected:
-    void initialize();
+    void initialize(int stage);
+    void handleMessage(cMessage *msg);
+    void activity();
+    void finish();
 
 protected:
     Coord* position;
