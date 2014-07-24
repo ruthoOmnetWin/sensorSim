@@ -18,7 +18,11 @@ import mynetwork.Node.Sensor.TemperatureSensor;
 import mynetwork.Node.Sensor.HumiditySensor;
 
 module THNode extends MyWirelessNode
-{
+{        
+    gates:
+	    wirelessNodeToSensor[2];
+	    worldGate[2];
+	    
     submodules:
         TemperatureSensor: TemperatureSensor {
             @display("p=140,380");
@@ -28,9 +32,9 @@ module THNode extends MyWirelessNode
         }
         
     connections:
-        wirelessNodeToSensor <--> {  delay = measureTime; } <--> TemperatureSensor.sensorOutGate;
-        worldGate <--> {  delay = measureTime; } <--> TemperatureSensor.worldDataGate;
+        wirelessNodeToSensor[0] <--> {  delay = measureTime; } <--> TemperatureSensor.sensorOutGate;
+        worldGate[0] <--> {  delay = measureTime; } <--> TemperatureSensor.worldDataGate;
         
-        wirelessNodeToSensor <--> {  delay = measureTime; } <--> HumiditySensor.sensorOutGate;
-        worldGate <--> {  delay = measureTime; } <--> HumiditySensor.worldDataGate;
+        wirelessNodeToSensor[1] <--> {  delay = measureTime; } <--> HumiditySensor.sensorOutGate;
+        worldGate[1] <--> {  delay = measureTime; } <--> HumiditySensor.worldDataGate;
 }

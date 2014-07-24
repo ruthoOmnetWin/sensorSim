@@ -18,12 +18,16 @@ import mynetwork.Node.Sensor.TemperatureSensor;
 
 module TNode extends MyWirelessNode
 {
+     gates:
+	    wirelessNodeToSensor[1];
+	    worldGate[1];
+	    
     submodules:
         TemperatureSensor: TemperatureSensor {
             @display("p=140,310");
         }
     
     connections:
-        wirelessNodeToSensor <--> {  delay = measureTime; } <--> TemperatureSensor.sensorOutGate;
-        worldGate <--> {  delay = measureTime; } <--> TemperatureSensor.worldDataGate;
+        wirelessNodeToSensor[0] <--> {  delay = measureTime; } <--> TemperatureSensor.sensorOutGate;
+        worldGate[0] <--> {  delay = measureTime; } <--> TemperatureSensor.worldDataGate;
 }
