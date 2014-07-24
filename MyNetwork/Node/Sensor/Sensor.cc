@@ -35,11 +35,10 @@ void Sensor::initialize(int stage)
 void Sensor::handleMessage(cMessage *msg)
 {
     bubble("Sensor red data");
-    //string message;
-    //message = msg->getName();
-    //EV << "received:" << msg->info() << endl;
-    //send(msg, "worldDataGate$o");
-    delete msg;
+    string message;
+    message = msg->getName();
+    EV << "received:" << msg->info() << "with message" << message << endl;
+    send(msg, "worldDataGate$o");
 }
 
 /**

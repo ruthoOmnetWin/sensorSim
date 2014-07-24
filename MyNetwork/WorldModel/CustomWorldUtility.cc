@@ -61,7 +61,8 @@ void CustomWorldUtility::initialize(int stage)
 
 void CustomWorldUtility::handleMessage(cMessage *msg)
 {
-    //send(msg, "out");
+    EV << "GOT MESSAGE: " << msg->getName() << endl;
+    delete msg;
 }
 
 void CustomWorldUtility::setTemperature()
