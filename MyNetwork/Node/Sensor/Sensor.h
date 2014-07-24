@@ -19,7 +19,7 @@
 #include <omnetpp.h>
 #include <Coord.h>
 
-class Sensor : public cSimpleModule
+class SIM_API Sensor : public cSimpleModule
 {
 protected:
     void initialize(int stage);

@@ -28,6 +28,10 @@ using namespace std;
 
 CustomWorldUtility::CustomWorldUtility()
 {
+    tempLength = 0;
+    pressLength = 0;
+    temperatureArray = 0;
+    pressureArray = 0;
 }
 
 CustomWorldUtility::~CustomWorldUtility()
@@ -138,7 +142,11 @@ void CustomWorldUtility::generateEnvironmentData()
         if (files == xmlHumidity) {
 
         } else if (files == xmlPressure) {
-
+            int* pressure = generatePressure(size);
+            for (int i = 0; i < size; i++) {
+                myfile << "<pos" << i << ">" << pressure[i] << "</pos" << i << ">" << endl;
+            }
+            delete[] pressure;
         } else if (files == xmlTemperature) {
             int* temperature = generateTemperature(size);
             for (int i = 0; i < size; i++) {

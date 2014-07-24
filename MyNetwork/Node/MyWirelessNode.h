@@ -19,7 +19,7 @@
 #include <MovingMobilityBase.h>
 #include <Sensor.h>
 
-class MyWirelessNode : public cCompoundModule
+class SIM_API MyWirelessNode : public cCompoundModule
 {
 protected:
     Sensor* SensorModule;

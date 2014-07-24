@@ -18,7 +18,7 @@
 
 #include "LinearMobility.h"
 
-class CustomLinearMobility : public LinearMobility
+class INET_API CustomLinearMobility : public LinearMobility
 {
 protected:
     double maxSpeed;

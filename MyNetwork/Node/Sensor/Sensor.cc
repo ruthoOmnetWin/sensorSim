@@ -19,12 +19,12 @@ using namespace std;
 
 Sensor::Sensor()
 {
-    position = new Coord();
+    //position = new Coord();
 }
 
 Sensor::~Sensor()
 {
-    delete position;
+    //delete position;
 }
 
 void Sensor::initialize(int stage)
@@ -35,10 +35,11 @@ void Sensor::initialize(int stage)
 void Sensor::handleMessage(cMessage *msg)
 {
     bubble("Sensor red data");
-    string message;
-    message = msg->getName();
-    EV << "received:" << msg->info() << endl;
-    send(msg, "worldDataGate$o");
+    //string message;
+    //message = msg->getName();
+    //EV << "received:" << msg->info() << endl;
+    //send(msg, "worldDataGate$o");
+    delete msg;
 }
 
 /**
