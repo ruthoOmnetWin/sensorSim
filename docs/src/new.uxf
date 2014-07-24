@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>296</x>
+      <y>0</y>
+      <w>720</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;MyNetwork&gt;&gt;
+--
+parameters:
+bool createNewEnvironmentData;
+int howManyTemperatureNodes;
+int howManyPressureNodes;
+int howManyHumidityNodes;
+int howManyHumidityAndTemperatureNodes;
+int howManyTemperatureAndPressureNodes;
+int howManyHumidityAndPressureNodes;
+int howManyTemperatureAndHumidityAndPressureNodes;
+--
+submodules:
+tnode[howManyTemperatureNodes]: TNode;
+hnode[numHNodes]: HNode;
+pnode[numPNodes]: PNode;
+thnode[numTHNodes]: THNode;
+connectionManager: 
+ org.mixim.base.connectionManager.ConnectionManager 
+ like IConnectionManager;
+world: CustomWorldUtility;
+--
+Gates:
+world.worldDataGate++ &lt;--&gt; {  delay = 100ms; } &lt;--&gt; tnode[i].worldGate[0] for i=0..(numTNodes-1);
+world.worldDataGate++ &lt;--&gt; {  delay = 100ms; } &lt;--&gt; hnode[i].worldGate[0] for i=0..(numHNodes-1);
+world.worldDataGate++ &lt;--&gt; {  delay = 100ms; } &lt;--&gt; pnode[i].worldGate[0] for i=0..(numPNodes-1);
+world.worldDataGate++ &lt;--&gt; {  delay = 100ms; } &lt;--&gt; thnode[i].worldGate[0] for i=0..((numTHNodes-1));
+world.worldDataGate++ &lt;--&gt; {  delay = 100ms; } &lt;--&gt; thnode[i].worldGate[1] for i=0..(numTHNodes-1);
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>336</x>
+      <y>384</y>
+      <w>128</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>CustomLinearMobility</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>768</x>
+      <y>384</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>CustomWorldUtility</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>568</x>
+      <y>384</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>MyWirelessNode</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>360</x>
+      <y>384</y>
+      <w>56</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>40;24;24;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>808</x>
+      <y>384</y>
+      <w>48</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>32;24;24;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>448</x>
+      <y>384</y>
+      <w>184</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>168;24;24;200</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>608</x>
+      <y>472</y>
+      <w>408</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;CustomWorldUtility&gt;&gt;
+--
+subclass of BaseWorldUtility
+--
+parameters:
+bool createData;
+int numGates;
+xml xmlTemperature = xmldoc("WorldModel/data/temperature.xml");
+xml xmlPressure = xmldoc("WorldModel/data/pressure.xml");
+@class("CustomWorldUtility");
+--
+gates:
+inout worldDataGate[numGates];
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>296</x>
+      <y>448</y>
+      <w>176</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;CustomLinearMobility&gt;&gt;
+--
+subclass of LinearMobility
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>296</x>
+      <y>584</y>
+      <w>280</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;MyWirelessNode&gt;&gt;
+--
+subclass of Host802154_2400MHz
+--
+int measureTime @unit(ms) = default(100ms);
+mobilityType = default("CustomLinearMobility");
+@class(MyWirelessNode);
+--
+gates:
+inout wirelessNodeToSensor[];
+inout worldGate[];
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>848</x>
+      <y>896</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;HNode&gt;&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>552</x>
+      <y>696</y>
+      <w>336</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;24;320;200</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>552</x>
+      <y>664</y>
+      <w>312</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;24;296;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>296</x>
+      <y>760</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;THNode&gt;&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>848</x>
+      <y>640</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;TNode&gt;&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>848</x>
+      <y>760</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;PNode&gt;&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>296</x>
+      <y>896</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;PHNode&gt;&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>480</x>
+      <y>896</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;PTNode&gt;&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>552</x>
+      <y>632</y>
+      <w>312</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;24;296;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>408</x>
+      <y>712</y>
+      <w>48</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>32;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>440</x>
+      <y>712</y>
+      <w>64</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>48;24;24;184</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>488</x>
+      <y>712</y>
+      <w>96</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;24;80;184</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>664</x>
+      <y>896</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;PTHNode&gt;&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>520</x>
+      <y>712</y>
+      <w>232</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;24;216;184</additional_attributes>
+  </element>
+</diagram>
