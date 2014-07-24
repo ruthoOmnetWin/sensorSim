@@ -17,10 +17,18 @@ network MyNetwork //extends BaseNetwork
     parameters:
         bool createNewEnvironmentData;
 
-        int numTNodes = default(1);
-        int numPNodes = default(1);
-        int numHNodes = default(1);
-        int numTHNodes = default(1);
+		int howManyTemperatureNodes;
+		int howManyPressureNodes;
+		int howManyHumidityNodes;
+		int howManyHumidityAndTemperatureNodes;
+		//int howManyTemperatureAndPressureNodes;
+		//int howManyHumidityAndPressureNodes;
+		//int howManyTemperatureAndHumidityAndPressureNodes;
+
+        int numTNodes = howManyTemperatureNodes;
+        int numPNodes = howManyPressureNodes;
+        int numHNodes = howManyHumidityNodes;
+        int numTHNodes = howManyHumidityAndTemperatureNodes;
         int numNodes = numTNodes + numPNodes + numHNodes + numTHNodes; // total number of hosts in the network
         string wuType = default("CustomWorldUtility");
 
@@ -36,7 +44,7 @@ network MyNetwork //extends BaseNetwork
         **.mobility.constraintAreaMaxZ = default(playgroundSizeZ);
         string cmType = default("org.mixim.base.connectionManager.ConnectionManager"); // connection manager to use
 
-        @display("bgb=475,297,white;bgp=0,0");
+        @display("bgb=$playgroundSizeX,$playgroundSizeY,white;bgp=0,0");
 
     submodules:
         tnode[numTNodes]: TNode {
@@ -70,10 +78,10 @@ network MyNetwork //extends BaseNetwork
 
     connections allowunconnected: // some connections and gates are to be generated dynamically
 
-        world.worldDataGate[i] <--> {  delay = 100ms; } <--> tnode[i].worldGate[0] for i=0..(numTNodes-1);
-        world.worldDataGate[numTNodes+i] <--> {  delay = 100ms; } <--> hnode[i].worldGate[0] for i=0..(numHNodes-1);
-        world.worldDataGate[numTNodes+numHNodes+i] <--> {  delay = 100ms; } <--> pnode[i].worldGate[0] for i=0..(numPNodes-1);
+        world.worldDataGate++ <--> {  delay = 100ms; } <--> tnode[i].worldGate[0] for i=0..(numTNodes-1);
+        world.worldDataGate++ <--> {  delay = 100ms; } <--> hnode[i].worldGate[0] for i=0..(numHNodes-1);
+        world.worldDataGate++ <--> {  delay = 100ms; } <--> pnode[i].worldGate[0] for i=0..(numPNodes-1);
         //for the THNode 2 connections must exist
-        world.worldDataGate[numTNodes+numHNodes+numPNodes+i] <--> {  delay = 100ms; } <--> thnode[i].worldGate[0] for i=0..((numTHNodes-1));
-        world.worldDataGate[numTNodes+numHNodes+numPNodes+numTHNodes+i] <--> {  delay = 100ms; } <--> thnode[i].worldGate[1] for i=0..(numTHNodes-1);
+        world.worldDataGate++ <--> {  delay = 100ms; } <--> thnode[i].worldGate[0] for i=0..((numTHNodes-1));
+        world.worldDataGate++ <--> {  delay = 100ms; } <--> thnode[i].worldGate[1] for i=0..(numTHNodes-1);
 }
