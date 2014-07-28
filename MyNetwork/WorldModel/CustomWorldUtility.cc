@@ -68,8 +68,8 @@ void CustomWorldUtility::handleMessage(cMessage *msg)
     string requestType = msg->getName();
     requestType = requestType.substr(0,3);
     delete msg;
-    //cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
-    //send(newmsg , "worldDataGate$o", 1);
+    cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
+    send(newmsg , "worldDataGate$o", 1);
 }
 
 void CustomWorldUtility::setTemperature()

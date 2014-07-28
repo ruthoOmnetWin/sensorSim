@@ -31,6 +31,7 @@ module MyWirelessNode extends Host802154_2400MHz
     gates:
 	    inout wirelessNodeToSensor[];
 	    inout worldGate[];
+	    inout auchtestigate;
 	    
 	submodules:
 

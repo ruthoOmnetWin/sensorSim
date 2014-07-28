@@ -33,7 +33,7 @@ protected:
 public:
     int getSensorData();
     void updatePosition(Coord*);
-    //Coord* getCurrentPosition();
+    Coord getPosition();
     Sensor();
     ~Sensor();
 };

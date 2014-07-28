@@ -26,4 +26,5 @@ simple CustomWorldUtility extends BaseWorldUtility
         @class("CustomWorldUtility");
     gates:
         inout worldDataGate[numGates];
+        inout testigate[numGates];
 }

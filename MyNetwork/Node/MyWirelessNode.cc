@@ -17,6 +17,7 @@
 #include <Sensor.h>
 #include <string.h>
 
+
 Define_Module(MyWirelessNode);
 Register_Class(MyWirelessNode);
 
@@ -39,14 +40,29 @@ int MyWirelessNode::readSensor()
     int data = SensorModule->getSensorData();
     return data;
 }
+/*
+Coord* getPosition(){
+    Coord *back=NULL;
+    ConnectionManagerAccess *const pChanAccess = dynamic_cast<ConnectionManagerAccess *const>(this->getParentModule()->getSubmodule(sNameOfNIC.c_str())->getSubmodule(sNameOfPhyLayer.c_str()));
+    if(pChanAccess != NULL){
+        ChannelMobilityPtrType pMobType = pChanAccess->getMobilityModule();
+        if(pMobType != NULL){
+            back = new Coord(pMobType->getCurrentPosition());
+        }
+    }
+    return back;
+}*/
 
 /**
  * initialize the node
  */
 void MyWirelessNode::initialize(int stage)
 {
-    Coord pos = getCurrentPosition();
-    ev << pos.x;
+    Coord back = getPosition();
+    std::stringstream s;
+    s << back.x << " " << back.y << " " << back.z;
+    cMessage *newmsg = new cMessage(s.str().c_str());
+    send(newmsg, "auchtestigate$o");
 }
 
 /**

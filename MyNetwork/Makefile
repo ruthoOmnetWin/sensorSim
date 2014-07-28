@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for MyNetwork
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I/home/rutho/BA/mixim-2.3/src/inet_stub/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/util -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility/models -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility -I/home/rutho/BA/mixim-2.3/src/base/phyLayer -I/home/rutho/BA/mixim-2.3/src -I/home/rutho/BA/mixim-2.3/src/base -I/home/rutho/BA/mixim-2.3/src/base/utils -I/home/rutho/BA/mixim-2.3/src/base/modules -I/home/rutho/BA/mixim-2.3/src/inet_stub/linklayer/contract -I/home/rutho/BA/mixim-2.3/src/base/messages -I/home/rutho/BA/mixim-2.3/src/base/connectionManager -I/home/rutho/BA/mixim-2.3/src/inet_stub/networklayer/common -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
+#  opp_makemake -f --deep -O out -IMIXIM_INET -I/home/rutho/BA/mixim-2.3/src/base/phyLayer -I/home/rutho/BA/mixim-2.3/src -I/home/rutho/BA/mixim-2.3/src/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility -I/home/rutho/BA/mixim-2.3/src/base/utils -I/home/rutho/BA/mixim-2.3/src/base/modules -I/home/rutho/BA/mixim-2.3/src/inet_stub/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/util -I/home/rutho/BA/mixim-2.3/src/inet_stub/linklayer/contract -I/home/rutho/BA/mixim-2.3/src/base/messages -I/home/rutho/BA/mixim-2.3/src/base/connectionManager -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility/models -I/home/rutho/BA/mixim-2.3/src/inet_stub/networklayer/common -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
 #
 
 # Name of target to be created (-o option)
@@ -15,18 +15,19 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 
 # C++ include paths (with -I)
 INCLUDE_PATH = \
-    -I$(MIXIM_PROJ)/src/inet_stub/base \
-    -I$(MIXIM_PROJ)/src/inet_stub/util \
-    -I$(MIXIM_PROJ)/src/inet_stub/mobility/models \
-    -I$(MIXIM_PROJ)/src/inet_stub/mobility \
+    -IMIXIM_INET \
     -I$(MIXIM_PROJ)/src/base/phyLayer \
     -I$(MIXIM_PROJ)/src \
     -I$(MIXIM_PROJ)/src/base \
+    -I$(MIXIM_PROJ)/src/inet_stub/mobility \
     -I$(MIXIM_PROJ)/src/base/utils \
     -I$(MIXIM_PROJ)/src/base/modules \
+    -I$(MIXIM_PROJ)/src/inet_stub/base \
+    -I$(MIXIM_PROJ)/src/inet_stub/util \
     -I$(MIXIM_PROJ)/src/inet_stub/linklayer/contract \
     -I$(MIXIM_PROJ)/src/base/messages \
     -I$(MIXIM_PROJ)/src/base/connectionManager \
+    -I$(MIXIM_PROJ)/src/inet_stub/mobility/models \
     -I$(MIXIM_PROJ)/src/inet_stub/networklayer/common \
     -I. \
     -IMobility \
@@ -81,7 +82,7 @@ include $(CONFIGFILE)
 OMNETPP_LIB_SUBDIR = $(OMNETPP_LIB_DIR)/$(TOOLCHAIN_NAME)
 OMNETPP_LIBS = -L"$(OMNETPP_LIB_SUBDIR)" -L"$(OMNETPP_LIB_DIR)" -loppmain$D $(USERIF_LIBS) $(KERNEL_LIBS) $(SYS_LIBS)
 
-COPTS = $(CFLAGS)  $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
+COPTS = $(CFLAGS) -DMIXIM_INET=1 $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
 MSGCOPTS = $(INCLUDE_PATH)
 
 # we want to recompile everything if COPTS changes,
@@ -175,6 +176,28 @@ $O/Node/MyWirelessNode.o: Node/MyWirelessNode.cc \
 	Node/MyWirelessNode.h \
 	Node/Sensor/Sensor.h
 $O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
+	$(MIXIM_PROJ)/src/base/utils/HostState.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
@@ -184,6 +207,7 @@ $O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/NotifierConsts.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/LinearMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
