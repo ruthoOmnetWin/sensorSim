@@ -18,8 +18,9 @@
 
 #include <omnetpp.h>
 #include <Coord.h>
+#include <CustomLinearMobility.h>
 
-class SIM_API Sensor : public cSimpleModule
+class Sensor : public CustomLinearMobility
 {
 protected:
     void initialize(int stage);
@@ -32,7 +33,7 @@ protected:
 public:
     int getSensorData();
     void updatePosition(Coord*);
-    Coord* getCurrentPosition();
+    //Coord* getCurrentPosition();
     Sensor();
     ~Sensor();
 };

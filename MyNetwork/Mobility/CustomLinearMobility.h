@@ -28,6 +28,7 @@ protected:
     virtual void move();
 public:
     CustomLinearMobility();
+    Coord getCurrentPosition();
 };
 
 Define_Module(CustomLinearMobility);

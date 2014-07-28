@@ -62,8 +62,3 @@ void Sensor::updatePosition(Coord* position)
 {
     this->position = position;
 }
-
-Coord* Sensor::getCurrentPosition()
-{
-    return this->position;
-}

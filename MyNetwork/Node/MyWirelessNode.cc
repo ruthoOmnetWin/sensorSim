@@ -20,6 +20,8 @@
 Define_Module(MyWirelessNode);
 Register_Class(MyWirelessNode);
 
+//scheduleAt
+
 MyWirelessNode::MyWirelessNode()
 {
     SensorModule = new Sensor;
@@ -30,17 +32,6 @@ MyWirelessNode::MyWirelessNode()
 MyWirelessNode::~MyWirelessNode()
 {
     delete SensorModule;
-}
-
-/**
- * returns the position of the node
- *
- * @return Coords
- */
-Coord MyWirelessNode::getPosition()
-{
-    Coord* pos = new Coord();
-    return *pos;
 }
 
 int MyWirelessNode::readSensor()
@@ -54,6 +45,8 @@ int MyWirelessNode::readSensor()
  */
 void MyWirelessNode::initialize(int stage)
 {
+    Coord pos = getCurrentPosition();
+    ev << pos.x;
 }
 
 /**

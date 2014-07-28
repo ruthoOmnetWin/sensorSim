@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for MyNetwork
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I/home/rutho/BA/mixim-2.3/src/inet_stub/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/util -I/home/rutho/BA/mixim-2.3/src/base/phyLayer -I/home/rutho/BA/mixim-2.3/src -I/home/rutho/BA/mixim-2.3/src/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility -I/home/rutho/BA/mixim-2.3/src/base/utils -I/home/rutho/BA/mixim-2.3/src/base/modules -I/home/rutho/BA/mixim-2.3/src/inet_stub/linklayer/contract -I/home/rutho/BA/mixim-2.3/src/base/messages -I/home/rutho/BA/mixim-2.3/src/base/connectionManager -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility/models -I/home/rutho/BA/mixim-2.3/src/inet_stub/networklayer/common -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
+#  opp_makemake -f --deep -O out -I/home/rutho/BA/mixim-2.3/src/inet_stub/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/util -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility/models -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility -I/home/rutho/BA/mixim-2.3/src/base/phyLayer -I/home/rutho/BA/mixim-2.3/src -I/home/rutho/BA/mixim-2.3/src/base -I/home/rutho/BA/mixim-2.3/src/base/utils -I/home/rutho/BA/mixim-2.3/src/base/modules -I/home/rutho/BA/mixim-2.3/src/inet_stub/linklayer/contract -I/home/rutho/BA/mixim-2.3/src/base/messages -I/home/rutho/BA/mixim-2.3/src/base/connectionManager -I/home/rutho/BA/mixim-2.3/src/inet_stub/networklayer/common -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
 #
 
 # Name of target to be created (-o option)
@@ -17,16 +17,16 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 INCLUDE_PATH = \
     -I$(MIXIM_PROJ)/src/inet_stub/base \
     -I$(MIXIM_PROJ)/src/inet_stub/util \
+    -I$(MIXIM_PROJ)/src/inet_stub/mobility/models \
+    -I$(MIXIM_PROJ)/src/inet_stub/mobility \
     -I$(MIXIM_PROJ)/src/base/phyLayer \
     -I$(MIXIM_PROJ)/src \
     -I$(MIXIM_PROJ)/src/base \
-    -I$(MIXIM_PROJ)/src/inet_stub/mobility \
     -I$(MIXIM_PROJ)/src/base/utils \
     -I$(MIXIM_PROJ)/src/base/modules \
     -I$(MIXIM_PROJ)/src/inet_stub/linklayer/contract \
     -I$(MIXIM_PROJ)/src/base/messages \
     -I$(MIXIM_PROJ)/src/base/connectionManager \
-    -I$(MIXIM_PROJ)/src/inet_stub/mobility/models \
     -I$(MIXIM_PROJ)/src/inet_stub/networklayer/common \
     -I. \
     -IMobility \
@@ -167,15 +167,27 @@ $O/Node/MyWirelessNode.o: Node/MyWirelessNode.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/NotificationBoard.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/NotifierConsts.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/LinearMobility.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	Mobility/CustomLinearMobility.h \
 	Node/MyWirelessNode.h \
 	Node/Sensor/Sensor.h
 $O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \
+	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INotifiable.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/NotificationBoard.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/NotifierConsts.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/LinearMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityBase.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	Mobility/CustomLinearMobility.h \
 	Node/Sensor/Sensor.h
 $O/WorldModel/CustomWorldUtility.o: WorldModel/CustomWorldUtility.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseWorldUtility.h \

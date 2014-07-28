@@ -23,6 +23,10 @@ CustomLinearMobility::CustomLinearMobility()
     maxSpeed = (rand() % 100)/5;
 }
 
+Coord CustomLinearMobility::getCurrentPosition()
+{
+    return lastPosition;
+}
 
 void CustomLinearMobility::initialize(int stage)
 {
@@ -41,7 +45,7 @@ void CustomLinearMobility::move()
     // do something if we reach the wall
     Coord dummy;
     handleIfOutside(REFLECT, dummy, dummy, angle);
-
+    //Coord curr = getCurrentPosition();
     // accelerate
     if (!hasMaxSpeed) {
         double newSpeed = speed;

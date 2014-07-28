@@ -19,8 +19,9 @@
 #include <MovingMobilityBase.h>
 #include <Sensor.h>
 #include <omnetpp.h>
+#include <CustomLinearMobility.h>
 
-class MyWirelessNode : public cSimpleModule //cCompoundModule
+class MyWirelessNode : public Sensor     //cCompoundModule public cSimpleModule,
 {
 protected:
     Sensor* SensorModule;
@@ -32,7 +33,6 @@ protected:
 public:
     MyWirelessNode();
     ~MyWirelessNode();
-    Coord getPosition();
 };
 
 #endif /* MYWIRELESSNODE_H_ */
