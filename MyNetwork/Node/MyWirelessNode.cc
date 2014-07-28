@@ -14,7 +14,6 @@
 // 
 
 #include <MyWirelessNode.h>
-#include <omnetpp.h>
 #include <Sensor.h>
 #include <string.h>
 
@@ -24,6 +23,8 @@ Register_Class(MyWirelessNode);
 MyWirelessNode::MyWirelessNode()
 {
     SensorModule = new Sensor;
+    //cModuleType type = new cModuleType("MyWirelessNode");
+    //cComponentType = type;
 }
 
 MyWirelessNode::~MyWirelessNode()
@@ -38,8 +39,8 @@ MyWirelessNode::~MyWirelessNode()
  */
 Coord MyWirelessNode::getPosition()
 {
-    //Coord* pos = new Coord();
-    //return *pos;
+    Coord* pos = new Coord();
+    return *pos;
 }
 
 int MyWirelessNode::readSensor()
@@ -53,7 +54,6 @@ int MyWirelessNode::readSensor()
  */
 void MyWirelessNode::initialize(int stage)
 {
-    EV << "-----------------------> Init MyWirelessNode" << endl;
 }
 
 /**
@@ -62,6 +62,8 @@ void MyWirelessNode::initialize(int stage)
 void MyWirelessNode::handleMessage(cMessage *msg)
 {
     EV << "-----------------------> handleMessage MyWirelessNode" << endl;
+    //cMessage *newmsg = new cMessage(SIMTIME_STR(simTime()));
+    //send(newmsg, "worldGate$o");
     //worldGate
 }
 

@@ -18,8 +18,9 @@
 
 #include <MovingMobilityBase.h>
 #include <Sensor.h>
+#include <omnetpp.h>
 
-class SIM_API MyWirelessNode : public cCompoundModule
+class MyWirelessNode : public cSimpleModule //cCompoundModule
 {
 protected:
     Sensor* SensorModule;
@@ -27,6 +28,7 @@ protected:
     void handleMessage(cMessage *msg);
     void finish();
     int readSensor();
+    //cModuleType *componenttype;
 public:
     MyWirelessNode();
     ~MyWirelessNode();

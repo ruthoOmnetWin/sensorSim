@@ -29,7 +29,11 @@ Sensor::~Sensor()
 
 void Sensor::initialize(int stage)
 {
-    EV << "(and Sensor)" << endl;
+    std::string type = par("type");
+    std::string request = "GET ";
+    request += type;
+    cMessage *msg = new cMessage(request.c_str());
+    send(msg, "worldDataGate$o");
 }
 
 void Sensor::handleMessage(cMessage *msg)

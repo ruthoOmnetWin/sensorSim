@@ -43,7 +43,7 @@ CustomWorldUtility::~CustomWorldUtility()
 void CustomWorldUtility::initialize(int stage)
 {
     BaseWorldUtility::initialize(stage);
-    EV << "Initializing World Model" << endl;
+    ev << "Initializing World Model" << endl;
 
     if (par("createData")) {
         EV << "Generating New Environment Data" << endl;
@@ -53,16 +53,23 @@ void CustomWorldUtility::initialize(int stage)
     this->setTemperature();
     this->setPressure();
 
-    //generate a message
-    cMessage *msg = new cMessage("Init World");
     //object = new cObject();
-    send(msg, "worldDataGate$o", 1);
+    int amountNodes = par("numGates");
+    for (int i = 0; i < amountNodes; i++) {
+        //generate a message
+        simtime_t time = simTime();
+        cMessage *msg = new cMessage(SIMTIME_STR(time));
+        send(msg, "worldDataGate$o", i);
+    }
 }
 
 void CustomWorldUtility::handleMessage(cMessage *msg)
 {
-    EV << "GOT MESSAGE: " << msg->getName() << endl;
+    string requestType = msg->getName();
+    requestType = requestType.substr(0,3);
     delete msg;
+    //cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
+    //send(newmsg , "worldDataGate$o", 1);
 }
 
 void CustomWorldUtility::setTemperature()
