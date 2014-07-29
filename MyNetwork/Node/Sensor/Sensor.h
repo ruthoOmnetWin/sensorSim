@@ -20,7 +20,7 @@
 #include <Coord.h>
 #include <CustomLinearMobility.h>
 
-class Sensor : public CustomLinearMobility
+class Sensor : public cSimpleModule//: public CustomLinearMobility
 {
 protected:
     void initialize(int stage);

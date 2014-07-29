@@ -19,13 +19,15 @@
 #include <FindModule.h>
 #include <MacToPhyInterface.h>
 #include <BasePhyLayer.h>
-
+#include <NodeType.h>
 //#define MIXIM_INET
 using namespace std;
 
 Sensor::Sensor()
 {
     //position = new Coord();
+    NodeType* thisType = new NodeType("SensorNode");
+    this->setComponentType(thisType);
 }
 
 Sensor::~Sensor()
