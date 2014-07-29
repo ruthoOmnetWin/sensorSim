@@ -34,7 +34,6 @@ INCLUDE_PATH = \
     -INode \
     -INode/Sensor \
     -INodeType \
-    -IType \
     -IWorldModel \
     -IWorldModel/data \
     -Iresults
@@ -136,7 +135,6 @@ clean:
 	$(Q)-rm -f Node/*_m.cc Node/*_m.h
 	$(Q)-rm -f Node/Sensor/*_m.cc Node/Sensor/*_m.h
 	$(Q)-rm -f NodeType/*_m.cc NodeType/*_m.h
-	$(Q)-rm -f Type/*_m.cc Type/*_m.h
 	$(Q)-rm -f WorldModel/*_m.cc WorldModel/*_m.h
 	$(Q)-rm -f WorldModel/data/*_m.cc WorldModel/data/*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
@@ -146,7 +144,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc NodeType/*.cc Type/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc NodeType/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/Mobility/CustomLinearMobility.o: Mobility/CustomLinearMobility.cc \
@@ -178,7 +176,8 @@ $O/Node/MyWirelessNode.o: Node/MyWirelessNode.cc \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	Mobility/CustomLinearMobility.h \
 	Node/MyWirelessNode.h \
-	Node/Sensor/Sensor.h
+	Node/Sensor/Sensor.h \
+	NodeType/NodeType.h
 $O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \

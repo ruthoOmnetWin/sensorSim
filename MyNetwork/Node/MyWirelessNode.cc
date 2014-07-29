@@ -16,6 +16,7 @@
 #include <MyWirelessNode.h>
 #include <Sensor.h>
 #include <string.h>
+#include <NodeType.h>
 
 
 Define_Module(MyWirelessNode);
@@ -25,21 +26,21 @@ Register_Class(MyWirelessNode);
 
 MyWirelessNode::MyWirelessNode()
 {
-    SensorModule = new Sensor;
-    //cModuleType type = new cModuleType("MyWirelessNode");
-    //cComponentType = type;
+    //SensorModule = new Sensor;
+    NodeType *type = new NodeType("MyWirelessNode");
+    this->componenttype = type;
 }
 
 MyWirelessNode::~MyWirelessNode()
 {
-    delete SensorModule;
+    //delete SensorModule;
 }
-
+/*
 int MyWirelessNode::readSensor()
 {
     int data = SensorModule->getSensorData();
     return data;
-}
+}*/
 /*
 Coord* getPosition(){
     Coord *back=NULL;
@@ -58,11 +59,13 @@ Coord* getPosition(){
  */
 void MyWirelessNode::initialize(int stage)
 {
+    /*
     Coord back = getPosition();
     std::stringstream s;
     s << back.x << " " << back.y << " " << back.z;
     cMessage *newmsg = new cMessage(s.str().c_str());
     send(newmsg, "auchtestigate$o");
+    */
 }
 
 /**

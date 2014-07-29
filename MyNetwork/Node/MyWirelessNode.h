@@ -24,12 +24,12 @@
 class MyWirelessNode : public Sensor     //cCompoundModule public cSimpleModule,
 {
 protected:
-    Sensor* SensorModule;
+    //Sensor* SensorModule;
     void initialize(int stage);
     void handleMessage(cMessage *msg);
     void finish();
     int readSensor();
-    //cModuleType *componenttype;
+    cModuleType *componenttype;
 public:
     MyWirelessNode();
     ~MyWirelessNode();

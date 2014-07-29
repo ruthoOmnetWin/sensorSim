@@ -19,8 +19,8 @@ import mynetwork.Node.Sensor.TemperatureSensor;
 module TNode extends MyWirelessNode
 {
      gates:
-	    wirelessNodeToSensor[1];
-	    worldGate[1];
+	    inout wirelessNodeToSensor[1];
+	    inout worldGate[1];
 	    
     submodules:
         TemperatureSensor: TemperatureSensor {

@@ -20,8 +20,8 @@ import mynetwork.Node.Sensor.HumiditySensor;
 module THNode extends MyWirelessNode
 {        
     gates:
-	    wirelessNodeToSensor[2];
-	    worldGate[2];
+	    inout wirelessNodeToSensor[2];
+	    inout worldGate[2];
 	    
     submodules:
         TemperatureSensor: TemperatureSensor {

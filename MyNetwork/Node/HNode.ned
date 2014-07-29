@@ -19,8 +19,8 @@ import mynetwork.Node.Sensor.HumiditySensor;
 module HNode extends MyWirelessNode
 {
     gates:
-	    wirelessNodeToSensor[1];
-	    worldGate[1];
+	    inout wirelessNodeToSensor[1];
+	    inout worldGate[1];
 	    
     submodules:
         HumiditySensor: HumiditySensor {

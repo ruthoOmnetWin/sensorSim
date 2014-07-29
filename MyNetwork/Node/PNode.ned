@@ -19,8 +19,8 @@ import mynetwork.Node.Sensor.PressureSensor;
 module PNode extends MyWirelessNode
 {
     gates:
-	    wirelessNodeToSensor[1];
-	    worldGate[1];
+	    inout wirelessNodeToSensor[1];
+	    inout worldGate[1];
 	    
     submodules:
         PressureSensor: PressureSensor {
