@@ -60,11 +60,11 @@ void CustomWorldUtility::initialize(int stage)
     for (int i = 0; i < amountNodes; i++) {
         //generate a message
         //simtime_t time = simTime();
-        cMessage *msg = new cMessage("world init");
+        /*cMessage *msg = new cMessage("world init");
         send(msg, "worldDataGate$o", i);
+        cMessage *newmsg = new cMessage("update pos");
+        send(newmsg, "toNode$o", i);*/
     }
-    cMessage *msg = new cMessage("update pos");
-    send(msg, "toNode$o", 0);
 }
 
 void CustomWorldUtility::handleMessage(cMessage *msg)
@@ -90,8 +90,8 @@ void CustomWorldUtility::handleMessage(cMessage *msg)
         } else if (sensorType == "humidity") {
 
         }
-        cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
-        send(newmsg , "worldDataGate$o", 1);
+        //cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
+        //send(newmsg , "worldDataGate$o", 1);
     }
 }
 
