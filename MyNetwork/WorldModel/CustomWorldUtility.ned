@@ -21,6 +21,7 @@ simple CustomWorldUtility extends BaseWorldUtility
     parameters:
         bool createData;
         int numGates;
+        int numSensorNodes;
         xml xmlTemperature = xmldoc("WorldModel/data/temperature.xml");
         xml xmlPressure = xmldoc("WorldModel/data/pressure.xml");
         @class("CustomWorldUtility");

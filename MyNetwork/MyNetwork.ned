@@ -73,6 +73,7 @@ network MyNetwork //extends BaseNetwork
         }
         world: CustomWorldUtility {
             numGates = numNodes + numTHNodes;
+            numSensorNodes = numNodes;
             createData = createNewEnvironmentData;
         }
 

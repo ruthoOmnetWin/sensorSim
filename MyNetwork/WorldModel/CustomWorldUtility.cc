@@ -60,10 +60,13 @@ void CustomWorldUtility::initialize(int stage)
     for (int i = 0; i < amountNodes; i++) {
         //generate a message
         //simtime_t time = simTime();
-        /*cMessage *msg = new cMessage("world init");
+        cMessage *msg = new cMessage("world init");
         send(msg, "worldDataGate$o", i);
+    }
+    amountNodes = par("numSensorNodes");
+    for (int i = 0; i < amountNodes; i++) {
         cMessage *newmsg = new cMessage("update pos");
-        send(newmsg, "toNode$o", i);*/
+        send(newmsg, "toNode$o", i);
     }
 }
 
