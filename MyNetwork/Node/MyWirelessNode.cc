@@ -17,7 +17,11 @@
 #include <Sensor.h>
 #include <string.h>
 #include <NodeType.h>
+#include <SimpleCoord.h>
 
+#include <FindModule.h>
+#include <MacToPhyInterface.h>
+#include <BasePhyLayer.h>
 
 Define_Module(MyWirelessNode);
 Register_Class(MyWirelessNode);
@@ -26,6 +30,7 @@ Register_Class(MyWirelessNode);
 
 MyWirelessNode::MyWirelessNode()
 {
+    position = new Coord();
     //SensorModule = new Sensor;
     NodeType *type = new NodeType("MyWirelessNode");
     this->componenttype = type;
@@ -33,7 +38,8 @@ MyWirelessNode::MyWirelessNode()
 
 MyWirelessNode::~MyWirelessNode()
 {
-    //delete SensorModule;
+    delete componenttype;
+    delete position;
 }
 /*
 int MyWirelessNode::readSensor()
@@ -55,6 +61,22 @@ Coord* getPosition(){
 }*/
 
 /**
+ * update the position data inside the sensor by a given Coord object
+ */
+void MyWirelessNode::updatePosition()
+{
+    Coord* back;
+    //getPosition();
+    BasePhyLayer* phy = FindModule<BasePhyLayer*>::findSubModule(this);
+    ChannelMobilityPtrType pMobType = phy->getMobilityModule();
+    if(pMobType != NULL){
+        back = new Coord(pMobType->getCurrentPosition());
+    }
+    delete position;
+    position = back;
+}
+
+/**
  * initialize the node
  */
 void MyWirelessNode::initialize(int stage)
@@ -73,10 +95,16 @@ void MyWirelessNode::initialize(int stage)
  */
 void MyWirelessNode::handleMessage(cMessage *msg)
 {
-    EV << "-----------------------> handleMessage MyWirelessNode" << endl;
-    //cMessage *newmsg = new cMessage(SIMTIME_STR(simTime()));
-    //send(newmsg, "worldGate$o");
-    //worldGate
+    updatePosition();
+    std::string type = "type";
+    std::string request = "GET ";
+    request += type;
+    cMessage *newmsg = new cMessage(request.c_str());
+    //cArray *array = new cArray("position");
+    SimpleCoord *coord = new SimpleCoord("pos", position);
+    //array->add(coord);
+    newmsg->getParList().add(coord);
+    send(newmsg, "toWorld$o");
 }
 
 /**

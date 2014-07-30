@@ -18,5 +18,5 @@ package mynetwork.Node.Sensor;
 simple TemperatureSensor extends Sensor
 {
     parameters:
-        type = "temperature";
+        type = "temp";
 }

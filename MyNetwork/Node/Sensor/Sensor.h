@@ -17,7 +17,6 @@
 #define SENSOR_H_
 
 #include <omnetpp.h>
-#include <Coord.h>
 #include <CustomLinearMobility.h>
 
 class Sensor : public cSimpleModule//: public CustomLinearMobility
@@ -28,12 +27,9 @@ protected:
     void activity(){};
     void finish(){};
 
-protected:
-    Coord* position;
+
 public:
     int getSensorData();
-    void updatePosition(Coord*);
-    Coord getPosition();
     Sensor();
     ~Sensor();
 };

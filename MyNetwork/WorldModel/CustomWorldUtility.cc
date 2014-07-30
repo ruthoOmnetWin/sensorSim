@@ -20,6 +20,8 @@
 #include <cstdlib>
 #include <string>
 #include <cstring>
+#include <Coord.h>
+#include <SimpleCoord.h>
 using namespace std;
 
 #define xmlHumidity 0
@@ -57,19 +59,40 @@ void CustomWorldUtility::initialize(int stage)
     int amountNodes = par("numGates");
     for (int i = 0; i < amountNodes; i++) {
         //generate a message
-        simtime_t time = simTime();
-        cMessage *msg = new cMessage(SIMTIME_STR(time));
+        //simtime_t time = simTime();
+        cMessage *msg = new cMessage("world init");
         send(msg, "worldDataGate$o", i);
     }
+    cMessage *msg = new cMessage("update pos");
+    send(msg, "toNode$o", 0);
 }
 
 void CustomWorldUtility::handleMessage(cMessage *msg)
 {
-    string requestType = msg->getName();
-    requestType = requestType.substr(0,3);
+    //Coord* par = (Coord*) msg->getParList().get(0);
+    SimpleCoord *array = (SimpleCoord*) msg->getParList().remove("pos");
+    //array->remove("pos");
+    //double x = par->x;
+    //double y = par->y;
+    string name = msg->getName();
     delete msg;
-    cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
-    send(newmsg , "worldDataGate$o", 1);
+    delete array;
+    //msg->getParList().remove(msg->getParList().get(0));
+    //delete msg;
+    string requestType = name.substr(0,3);
+    if (requestType == "GET") {
+        int* data;
+        string sensorType = name.substr(4);
+        if (sensorType == "temperature") {
+            data = this->temperatureArray;
+        } else if (sensorType == "pressure") {
+            data = this->pressureArray;
+        } else if (sensorType == "humidity") {
+
+        }
+        cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
+        send(newmsg , "worldDataGate$o", 1);
+    }
 }
 
 void CustomWorldUtility::setTemperature()

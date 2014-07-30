@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for MyNetwork
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -IMIXIM_INET -I/home/rutho/BA/mixim-2.3/src/base/phyLayer -I/home/rutho/BA/mixim-2.3/src -I/home/rutho/BA/mixim-2.3/src/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility -I/home/rutho/BA/mixim-2.3/src/base/utils -I/home/rutho/BA/mixim-2.3/src/base/modules -I/home/rutho/BA/mixim-2.3/src/inet_stub/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/util -I/home/rutho/BA/mixim-2.3/src/inet_stub/linklayer/contract -I/home/rutho/BA/mixim-2.3/src/base/messages -I/home/rutho/BA/mixim-2.3/src/base/connectionManager -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility/models -I/home/rutho/BA/mixim-2.3/src/inet_stub/networklayer/common -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
+#  opp_makemake -f --deep -O out -I/home/rutho/BA/mixim-2.3/src/base/phyLayer -I/home/rutho/BA/mixim-2.3/src -I/home/rutho/BA/mixim-2.3/src/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility -I/home/rutho/BA/mixim-2.3/src/base/utils -I/home/rutho/BA/mixim-2.3/src/base/modules -I/home/rutho/BA/mixim-2.3/src/inet_stub/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/util -I/home/rutho/BA/mixim-2.3/src/inet_stub/linklayer/contract -I/home/rutho/BA/mixim-2.3/src/base/messages -I/home/rutho/BA/mixim-2.3/src/base/connectionManager -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility/models -I/home/rutho/BA/mixim-2.3/src/inet_stub/networklayer/common -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
 #
 
 # Name of target to be created (-o option)
@@ -15,7 +15,6 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 
 # C++ include paths (with -I)
 INCLUDE_PATH = \
-    -IMIXIM_INET \
     -I$(MIXIM_PROJ)/src/base/phyLayer \
     -I$(MIXIM_PROJ)/src \
     -I$(MIXIM_PROJ)/src/base \
@@ -34,6 +33,7 @@ INCLUDE_PATH = \
     -INode \
     -INode/Sensor \
     -INodeType \
+    -ISimpleCoord \
     -IWorldModel \
     -IWorldModel/data \
     -Iresults
@@ -51,7 +51,13 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/Mobility/CustomLinearMobility.o $O/Node/MyWirelessNode.o $O/Node/Sensor/Sensor.o $O/NodeType/NodeType.o $O/WorldModel/CustomWorldUtility.o
+OBJS = \
+    $O/Mobility/CustomLinearMobility.o \
+    $O/Node/MyWirelessNode.o \
+    $O/Node/Sensor/Sensor.o \
+    $O/NodeType/NodeType.o \
+    $O/SimpleCoord/SimpleCoord.o \
+    $O/WorldModel/CustomWorldUtility.o
 
 # Message files
 MSGFILES =
@@ -135,6 +141,7 @@ clean:
 	$(Q)-rm -f Node/*_m.cc Node/*_m.h
 	$(Q)-rm -f Node/Sensor/*_m.cc Node/Sensor/*_m.h
 	$(Q)-rm -f NodeType/*_m.cc NodeType/*_m.h
+	$(Q)-rm -f SimpleCoord/*_m.cc SimpleCoord/*_m.h
 	$(Q)-rm -f WorldModel/*_m.cc WorldModel/*_m.h
 	$(Q)-rm -f WorldModel/data/*_m.cc WorldModel/data/*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
@@ -144,7 +151,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc NodeType/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc NodeType/*.cc SimpleCoord/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/Mobility/CustomLinearMobility.o: Mobility/CustomLinearMobility.cc \
@@ -162,23 +169,6 @@ $O/Mobility/CustomLinearMobility.o: Mobility/CustomLinearMobility.cc \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	Mobility/CustomLinearMobility.h
 $O/Node/MyWirelessNode.o: Node/MyWirelessNode.cc \
-	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/INotifiable.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/NotificationBoard.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/NotifierConsts.h \
-	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
-	$(MIXIM_PROJ)/src/inet_stub/mobility/models/LinearMobility.h \
-	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityBase.h \
-	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
-	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
-	Mobility/CustomLinearMobility.h \
-	Node/MyWirelessNode.h \
-	Node/Sensor/Sensor.h \
-	NodeType/NodeType.h
-$O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
 	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
@@ -215,6 +205,24 @@ $O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	Mobility/CustomLinearMobility.h \
+	Node/MyWirelessNode.h \
+	Node/Sensor/Sensor.h \
+	NodeType/NodeType.h \
+	SimpleCoord/SimpleCoord.h
+$O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \
+	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INotifiable.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/NotificationBoard.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/NotifierConsts.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/LinearMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityBase.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	Mobility/CustomLinearMobility.h \
 	Node/Sensor/Sensor.h \
 	NodeType/NodeType.h
 $O/NodeType/NodeType.o: NodeType/NodeType.cc \
@@ -234,6 +242,11 @@ $O/NodeType/NodeType.o: NodeType/NodeType.cc \
 	Node/MyWirelessNode.h \
 	Node/Sensor/Sensor.h \
 	NodeType/NodeType.h
+$O/SimpleCoord/SimpleCoord.o: SimpleCoord/SimpleCoord.cc \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	SimpleCoord/SimpleCoord.h
 $O/WorldModel/CustomWorldUtility.o: WorldModel/CustomWorldUtility.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseWorldUtility.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
@@ -241,5 +254,6 @@ $O/WorldModel/CustomWorldUtility.o: WorldModel/CustomWorldUtility.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	SimpleCoord/SimpleCoord.h \
 	WorldModel/CustomWorldUtility.h
 

@@ -19,7 +19,7 @@ import mynetwork.Node.Sensor.HumiditySensor;
 module HNode extends MyWirelessNode
 {
     gates:
-	    inout wirelessNodeToSensor[1];
+	    inout toSensor[1];
 	    inout worldGate[1];
 	    
     submodules:
@@ -28,6 +28,6 @@ module HNode extends MyWirelessNode
         }
     
     connections:
-        wirelessNodeToSensor[0] <--> {  delay = measureTime; } <--> HumiditySensor.sensorOutGate;
+        toSensor[0] <--> {  delay = 0ms; } <--> HumiditySensor.toNode;
         worldGate[0] <--> {  delay = measureTime; } <--> HumiditySensor.worldDataGate;
 }

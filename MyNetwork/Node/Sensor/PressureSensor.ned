@@ -18,6 +18,6 @@ package mynetwork.Node.Sensor;
 simple PressureSensor extends Sensor
 {
     parameters:
-        type = "pressure";
+        type = "pres";
 }
 

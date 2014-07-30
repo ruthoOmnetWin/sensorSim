@@ -20,6 +20,7 @@
 #include <Sensor.h>
 #include <omnetpp.h>
 #include <CustomLinearMobility.h>
+#include <Coord.h>
 
 class MyWirelessNode : public Sensor     //cCompoundModule public cSimpleModule,
 {
@@ -30,7 +31,10 @@ protected:
     void finish();
     int readSensor();
     cModuleType *componenttype;
+protected:
+    Coord* position;
 public:
+    void updatePosition();
     MyWirelessNode();
     ~MyWirelessNode();
 };

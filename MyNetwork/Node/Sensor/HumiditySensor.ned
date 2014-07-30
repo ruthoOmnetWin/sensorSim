@@ -18,5 +18,5 @@ package mynetwork.Node.Sensor;
 simple HumiditySensor extends Sensor
 {
     parameters:
-        type = "humidity";
+        type = "humi";
 }

@@ -23,6 +23,6 @@ simple Sensor
 	    @display("i=block/wrx");
 	    @class("Sensor");
 	gates: 
-	    inout sensorOutGate;
+	    inout toNode;
 	    inout worldDataGate;
 }

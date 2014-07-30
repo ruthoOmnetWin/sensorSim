@@ -19,7 +19,7 @@ import mynetwork.Node.Sensor.PressureSensor;
 module PNode extends MyWirelessNode
 {
     gates:
-	    inout wirelessNodeToSensor[1];
+	    inout toSensor[1];
 	    inout worldGate[1];
 	    
     submodules:
@@ -28,6 +28,6 @@ module PNode extends MyWirelessNode
         }
         
     connections:
-        wirelessNodeToSensor[0] <--> {  delay = measureTime; } <--> PressureSensor.sensorOutGate;
+        toSensor[0] <--> {  delay = 0ms; } <--> PressureSensor.toNode;
         worldGate[0] <--> {  delay = measureTime; } <--> PressureSensor.worldDataGate;
 }

@@ -1280,3 +1280,17 @@ Tcl error: moduleinspector.cc#631: ptr0x302a4f0 not found
 "ModuleInspector:drawNextEventMarker .inspector0.c ptr0x302a4f0 1"
 
 
+----------------------------------------------------------------------
+
+
+Tcl error: tkenv.cc#1838: grab failed: window not viewable
+    while executing
+"grab $w"
+    (procedure "execOkCancelDialog" line 20)
+    invoked from within
+"execOkCancelDialog $w"
+    (procedure "inputbox" line 27)
+    invoked from within
+"inputbox {Requested to Ask Parameter} {Enter parameter `MyNetwork.howManyTemperatureNodes':} opp(result) {Use this value for all similar parameters} o..."
+
+

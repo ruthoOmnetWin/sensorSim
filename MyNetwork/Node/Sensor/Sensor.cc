@@ -15,68 +15,33 @@
 
 #include <Sensor.h>
 #include <string.h>
-//#include <ConnectionManagerAccess.h>
-#include <FindModule.h>
-#include <MacToPhyInterface.h>
-#include <BasePhyLayer.h>
 #include <NodeType.h>
-//#define MIXIM_INET
 using namespace std;
 
 Sensor::Sensor()
 {
-    //position = new Coord();
     NodeType* thisType = new NodeType("SensorNode");
     this->setComponentType(thisType);
 }
 
 Sensor::~Sensor()
 {
-    //delete position;
-}
-
-Coord Sensor::getPosition()
-{
-    Coord* back;
-    //getPosition();
-    BasePhyLayer* phy = FindModule<BasePhyLayer*>::findSubModule(this);
-    ChannelMobilityPtrType pMobType = phy->getMobilityModule();
-    if(pMobType != NULL){
-        back = new Coord(pMobType->getCurrentPosition());
-    }
-    return *back;
 }
 
 void Sensor::initialize(int stage)
 {
-
-
-    //4 7 10 11
-    //17 - displaystring
-    //cClassDescriptor* thisDescr = cClassDescriptor::getDescriptorFor(this);
-    //int count = thisDescr->getFieldCount(this);
-    /*
-    for ( int i = 0; i < count; i++) {
-        std::stringstream s;
-        s << i <<" " << thisDescr->getFieldName(this, i) << " " << thisDescr->getFieldAsString(this, i, 0);
-        //s << i << " " << thisDescr->getFieldName(this, i);
-        cMessage *mseg = new cMessage(s.str().c_str());
-        send(mseg, "worldDataGate$o");
-    }*/
-
-    /*
-    std::string type = par("type");
+    std::string type = "type";
     std::string request = "GET ";
-    request += type;*/
-
-
-
+    request += type;
+    //this->updatePosition();
+    cMessage *newmsg = new cMessage(request.c_str());
+    //newmsg->getParList().add(position);
+    send(newmsg, "toNode$o");
 }
 
 void Sensor::handleMessage(cMessage *msg)
 {
     delete msg;
-
     /*
     bubble("Sensor red data");
     string message;
@@ -93,12 +58,4 @@ void Sensor::handleMessage(cMessage *msg)
 int Sensor::getSensorData()
 {
     return 0;
-}
-
-/**
- * update the position data inside the sensor by a given Coord object
- */
-void Sensor::updatePosition(Coord* position)
-{
-    this->position = position;
 }
