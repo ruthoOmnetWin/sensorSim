@@ -17,10 +17,10 @@ network MyNetwork //extends BaseNetwork
     parameters:
         bool createNewEnvironmentData;
 
-		int howManyTemperatureNodes;
-		int howManyPressureNodes;
-		int howManyHumidityNodes;
-		int howManyHumidityAndTemperatureNodes;
+		int howManyTemperatureNodes = default(1);
+		int howManyPressureNodes = default(1);
+		int howManyHumidityNodes = default(1);
+		int howManyHumidityAndTemperatureNodes = default(1);
 		//int howManyTemperatureAndPressureNodes;
 		//int howManyHumidityAndPressureNodes;
 		//int howManyTemperatureAndHumidityAndPressureNodes;
