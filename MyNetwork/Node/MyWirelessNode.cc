@@ -40,6 +40,7 @@ MyWirelessNode::~MyWirelessNode()
 {
     delete componenttype;
     delete position;
+    //cancelAndDelete(timeoutmsg);
 }
 /*
 int MyWirelessNode::readSensor()
@@ -95,6 +96,7 @@ void MyWirelessNode::initialize(int stage)
  */
 void MyWirelessNode::handleMessage(cMessage *msg)
 {
+    delete msg;
     updatePosition();
     std::string type = "type";
     std::string request = "GET ";

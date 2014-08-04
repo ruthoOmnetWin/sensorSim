@@ -7,6 +7,7 @@
 
 #include <NodeType.h>
 #include <MyWirelessNode.h>
+#include <omnetpp.h>
 
 NodeType::NodeType(const char *name) : cModuleType(name) {
     // TODO Auto-generated constructor stub

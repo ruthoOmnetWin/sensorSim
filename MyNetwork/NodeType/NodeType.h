@@ -28,7 +28,7 @@ public:
     bool isNetwork() const {return false;}
     bool isSimple() const {return true;}
     NodeType(const char *name);
-    virtual ~NodeType();
+    ~NodeType();
 };
 
 #endif /* NODETYPE_H_ */

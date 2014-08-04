@@ -1,0 +1,43 @@
+version 2
+run General-0-20140804-15:10:32-14386
+attr configname General
+attr datetime 20140804-15:10:32
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network MyNetwork
+attr processid 14386
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar MyNetwork.tnode[0].nic.mac 	nbTxFrames 	3
+scalar MyNetwork.tnode[0].nic.mac 	nbRxFrames 	0
+scalar MyNetwork.tnode[0].nic.mac 	nbDroppedFrames 	0
+scalar MyNetwork.tnode[0].nic.mac 	nbMissedAcks 	0
+scalar MyNetwork.tnode[0].nic.mac 	nbRecvdAcks 	0
+scalar MyNetwork.tnode[0].nic.mac 	nbTxAcks 	0
+scalar MyNetwork.tnode[0].nic.mac 	nbDuplicates 	0
+scalar MyNetwork.tnode[0].nic.mac 	meanBackoff 	0.41333333333333
+scalar MyNetwork.tnode[0].nic.mac 	nbBackoffs 	3
+scalar MyNetwork.tnode[0].nic.mac 	backoffDurations 	1.24
+scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithInterference 	0
+scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar MyNetwork.tnode[0].tranl 	nbAggrPktReceived 	0
+scalar MyNetwork.tnode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar MyNetwork.tnode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar MyNetwork.tnode[0].batteryStats 	total 	0
+attr unit  mW-s
+scalar MyNetwork.tnode[0].batteryStats 	lifetime 	-1
+attr unit  s
+scalar MyNetwork.tnode[0].batteryStats 	"Mean power consumption" 	0
+attr unit  mW
