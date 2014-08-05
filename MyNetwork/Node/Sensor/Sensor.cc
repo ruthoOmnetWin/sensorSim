@@ -16,12 +16,13 @@
 #include <Sensor.h>
 #include <string.h>
 #include <NodeType.h>
+#include <FindModule.h>
 using namespace std;
 
 Sensor::Sensor()
 {
-    NodeType* thisType = new NodeType("SensorNode");
-    this->setComponentType(thisType);
+    NodeType* testtype = FindModule<NodeType*>::findSubModule(this);
+    this->setComponentType(testtype);
 }
 
 Sensor::~Sensor()

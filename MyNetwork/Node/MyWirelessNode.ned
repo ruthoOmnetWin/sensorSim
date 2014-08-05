@@ -31,8 +31,6 @@ module MyWirelessNode extends Host802154_2400MHz
 	    //inout wirelessNodeToSensor[];
 	    //inout worldGate[];
 	    inout toWorld;
-	    
-	submodules:
 
     connections allowunconnected:
         
