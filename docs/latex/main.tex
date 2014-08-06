@@ -3,13 +3,11 @@
 %%==========================================================================================
 \include{meta/layout}
 
-
 \begin{document}
 	%%========================================================================================
 	%% Variablen, \hypersetup, etc
 	%%========================================================================================
 	\include{meta/metadaten}
-	
 	%%========================================================================================
 	%% formaler Aufbau - Anfang
 	%%========================================================================================
@@ -25,15 +23,15 @@
 	%% Verzeichnissauflistung mit weißer Seite abschließen und danach Seitennummerierung bei 1
 	%%========================================================================================
 	\input{formalLayout/chapterInitilisation}
-	
+
 	%%========================================================================================	
 	%% I N H A L T 	
 	%%========================================================================================
 	\input{chapters/einleitung}
     \input{chapters/vorbetrachtungen}
-	\input{chapters/anforderungen}
+	%\input{chapters/anforderungen}
 	\input{chapters/implementierung}
-    \input{chapters/evaluation}
+    %\input{chapters/evaluation}
     \input{chapters/zusammenfassung}
 	
 	%%========================================================================================	
@@ -44,4 +42,9 @@
 	\input{formalLayout/literaturverzeichnis}
 	\input{formalLayout/selbststaendigkeitserklaerung}
 	%\input{formalLayout/anhang}
+	
+\nocite{sensornetzwiki}
+\nocite{miximapiref}
+\nocite{omnetman}	
+	
 \end{document}

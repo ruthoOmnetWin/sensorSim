@@ -258,6 +258,24 @@
   emphstyle       =[4]\color{blue}
 }
 
+\lstset{
+  language        = ned,
+  basicstyle      = \small\ttfamily,
+  keywordstyle    = \color{blue},
+  stringstyle     = \color{red},
+  identifierstyle = \color{black},
+  commentstyle    = \color{gray},
+  showstringspaces=false,
+  emph            =[1]{simple, module, network, extends, channel},
+  emphstyle       =[1]\color{blue},
+  emph            =[2]{if,and,or,else,for,input,output,inout},
+  emphstyle       =[2]\color{yellow},
+  emph            =[3]{types, parameters, gates, connections, submodules},
+  emphstyle       =[3]\color{orange},
+  emph			  =[4]{int, string, double, @display, @class, volatile, xmldoc, xml, bool},
+  emphstyle       =[4]\color{red}
+}
+
 %======================================================================
 %	includeonly
 %======================================================================

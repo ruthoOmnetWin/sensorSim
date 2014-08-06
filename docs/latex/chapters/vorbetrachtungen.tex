@@ -1,1 +1,59 @@
 \chapter{Vorbetrachtungen}
+
+Im folgenden werden die verwendeten Technologien betrachtet. Als Versionsverwaltungssoftware wurde Git\cite{git} auf der Platform Github\cite{github} verwendet, worauf nicht weiter eingegangen wird. Zum Erstellen der Simulation wurde Omnet++\cite{omnet} mithilfe des MiXiM-Frameworks\cite{mixim} benutzt.
+
+\section{Omnet++}
+
+\subsection{Einleitung}
+
+Omnet++\cite{omnet} ist eine C++-Bibliothek und ein C++-Framework, welches primär zum Simulieren von Netzwerk dient. Außerdem bietet es eine Netzwerkbeschreibungssprache namens NED (NEtwork Description) und eine auf Eclipse\cite{eclipse} basierende Entwicklungsumgebung.
+
+- simulation time
+- event system
+
+\subsection{Einige Techniken und Funktionen}
+
+Im folgenden Abschnitt wird ein Ausschnitt darüber gegeben, was Omnet++ an Funktionalitäten bereitstellt.
+
+\paragraph{NED language\cite{ned}}
+
+Die Netzwerkbeschreibungssprache NED bietet eine Möglichkeit auch komplexe Netzwerke relativ einfach zu beschreiben und darzustellen. Man kann schnell ein einfach Modul mit Gates für die Kommunikation beschreiben oder ihm Submodule für verschiedene andere Aufgaben zuweisen und dieses in ein Netzwerk integrieren und dort mehrere und auch verschiedene Instanzen von Modulen verknüpfen.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[language=ned]
+simple Knoten
+{
+	gates:
+		input in;
+		output out;
+}
+\end{lstlisting}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[language=ned]
+network Netzwerk
+{
+	submodules:
+		node1: Knoten;
+		node2: Knoten;
+	connections:
+		node1.in <-- node2.out;
+		node1.out --> node2.in;
+}
+\end{lstlisting}
+\end{minipage}
+
+\paragraph{Nodes and Messages}
+
+\paragraph{XML Support}
+
+\section{MiXiM}
+
+\subsection{Einleitung}
+
+MiXiM\cite{mixim} ist ein Framework welches die Funkionalität von Omnet++ in erster Linie um mobile und kabellose Knoten erweitert. Es implementiert einige Protokolle und stellt verschiedene Knoten bereit.
+
+- find module
+
+\section{Sensoren}
