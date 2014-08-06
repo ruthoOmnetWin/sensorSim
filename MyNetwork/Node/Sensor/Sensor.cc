@@ -50,13 +50,3 @@ void Sensor::handleMessage(cMessage *msg)
     EV << "received:" << msg->info() << "with message" << message << endl;
     send(msg, "worldDataGate$o");*/
 }
-
-/**
- * reads the data the sensor returns at the current position
- *
- * @return integer
- */
-int Sensor::getSensorData()
-{
-    return 0;
-}

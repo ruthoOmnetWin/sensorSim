@@ -29,7 +29,12 @@ protected:
 
 
 public:
-    int getSensorData();
+    /**
+     * reads the data the sensor returns at the current position
+     *
+     * @return integer
+     */
+    virtual int getSensorData(){};
     Sensor();
     ~Sensor();
 };

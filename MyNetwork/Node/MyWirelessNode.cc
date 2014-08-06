@@ -18,7 +18,6 @@
 #include <string.h>
 #include <NodeType.h>
 #include <SimpleCoord.h>
-
 #include <FindModule.h>
 #include <MacToPhyInterface.h>
 #include <BasePhyLayer.h>
@@ -26,12 +25,9 @@
 Define_Module(MyWirelessNode);
 Register_Class(MyWirelessNode);
 
-//scheduleAt
-
 MyWirelessNode::MyWirelessNode()
 {
     position = new Coord();
-    //SensorModule = new Sensor;
     NodeType *type = new NodeType("MyWirelessNode");
     this->componenttype = type;
 }
@@ -40,41 +36,21 @@ MyWirelessNode::~MyWirelessNode()
 {
     delete componenttype;
     delete position;
-    //cancelAndDelete(timeoutmsg);
 }
-/*
-int MyWirelessNode::readSensor()
-{
-    int data = SensorModule->getSensorData();
-    return data;
-}*/
-/*
-Coord* getPosition(){
-    Coord *back=NULL;
-    ConnectionManagerAccess *const pChanAccess = dynamic_cast<ConnectionManagerAccess *const>(this->getParentModule()->getSubmodule(sNameOfNIC.c_str())->getSubmodule(sNameOfPhyLayer.c_str()));
-    if(pChanAccess != NULL){
-        ChannelMobilityPtrType pMobType = pChanAccess->getMobilityModule();
-        if(pMobType != NULL){
-            back = new Coord(pMobType->getCurrentPosition());
-        }
-    }
-    return back;
-}*/
 
 /**
- * update the position data inside the sensor by a given Coord object
+ * update the position data by a given Coord object
  */
 void MyWirelessNode::updatePosition()
 {
     Coord* back;
-    //getPosition();
     BasePhyLayer* phy = FindModule<BasePhyLayer*>::findSubModule(this);
     ChannelMobilityPtrType pMobType = phy->getMobilityModule();
     if(pMobType != NULL){
         back = new Coord(pMobType->getCurrentPosition());
+        delete position;
+        position = back;
     }
-    delete position;
-    position = back;
 }
 
 /**
@@ -82,13 +58,22 @@ void MyWirelessNode::updatePosition()
  */
 void MyWirelessNode::initialize(int stage)
 {
-    /*
-    Coord back = getPosition();
-    std::stringstream s;
-    s << back.x << " " << back.y << " " << back.z;
-    cMessage *newmsg = new cMessage(s.str().c_str());
-    send(newmsg, "auchtestigate$o");
-    */
+    this->updatePosition();
+    ev.bubble(this, "Initialized Position");
+    numSent = 0;
+    WATCH(numSent);
+    numReceived = 0;
+    WATCH(numReceived);
+    if (ev.isGUI()) {
+        updateDisplay();
+    }
+}
+
+void MyWirelessNode::updateDisplay()
+{
+    char buf[40];
+    sprintf(buf, "rcvd: %ld sent: %ld", numReceived, numSent);
+    getDisplayString().setTagArg("t",0,buf);
 }
 
 /**
@@ -96,17 +81,23 @@ void MyWirelessNode::initialize(int stage)
  */
 void MyWirelessNode::handleMessage(cMessage *msg)
 {
-    delete msg;
-    updatePosition();
-    std::string type = "type";
-    std::string request = "GET ";
-    request += type;
-    cMessage *newmsg = new cMessage(request.c_str());
-    //cArray *array = new cArray("position");
-    SimpleCoord *coord = new SimpleCoord("pos", position);
-    //array->add(coord);
-    newmsg->getParList().add(coord);
-    send(newmsg, "toWorld$o");
+    ev.bubble(this, msg->getName());
+    if (!msg->isSelfMessage()) {
+        delete msg;
+        updatePosition();
+        std::string type = "type";
+        std::string request = "GET ";
+        request += type;
+        cMessage *newmsg = new cMessage(request.c_str());
+        //cArray *array = new cArray("position");
+        SimpleCoord *coord = new SimpleCoord("pos", position);
+        //array->add(coord);
+        newmsg->getParList().add(coord);
+        std::stringstream s;
+        s << "X: " << coord->x << " Y: " << coord->y;
+        ev.bubble(this, s.str().c_str());
+        send(newmsg, "toWorld$o");
+    }
 }
 
 /**
@@ -114,5 +105,11 @@ void MyWirelessNode::handleMessage(cMessage *msg)
  */
 void MyWirelessNode::finish()
 {
-    EV << "-----------------------> finish MyWirelessNode" << endl;
+
 }
+
+int MyWirelessNode::getSensorData()
+{
+    return 0;
+}
+

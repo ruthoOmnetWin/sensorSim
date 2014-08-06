@@ -24,8 +24,10 @@
 
 class MyWirelessNode : public Sensor     //cCompoundModule public cSimpleModule,
 {
+private:
+    long numSent;
+    long numReceived;
 protected:
-    //Sensor* SensorModule;
     void initialize(int stage);
     void handleMessage(cMessage *msg);
     void finish();
@@ -33,10 +35,12 @@ protected:
     cModuleType *componenttype;
 protected:
     Coord* position;
+    void updateDisplay();
 public:
     void updatePosition();
     MyWirelessNode();
     ~MyWirelessNode();
+    int getSensorData();
 };
 
 #endif /* MYWIRELESSNODE_H_ */
