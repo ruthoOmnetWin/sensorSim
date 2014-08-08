@@ -81,6 +81,7 @@ void MyWirelessNode::updateDisplay()
  */
 void MyWirelessNode::handleMessage(cMessage *msg)
 {
+    numReceived++;
     ev.bubble(this, msg->getName());
     if (!msg->isSelfMessage()) {
         delete msg;
@@ -89,14 +90,16 @@ void MyWirelessNode::handleMessage(cMessage *msg)
         std::string request = "GET ";
         request += type;
         cMessage *newmsg = new cMessage(request.c_str());
-        //cArray *array = new cArray("position");
         SimpleCoord *coord = new SimpleCoord("pos", position);
-        //array->add(coord);
         newmsg->getParList().add(coord);
         std::stringstream s;
         s << "X: " << coord->x << " Y: " << coord->y;
         ev.bubble(this, s.str().c_str());
         send(newmsg, "toWorld$o");
+        numSent++;
+    }
+    if (ev.isGUI()) {
+        updateDisplay();
     }
 }
 

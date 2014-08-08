@@ -20,7 +20,6 @@ CustomLinearMobility::CustomLinearMobility()
     hasMaxSpeed = false;
     //rand() % 100 = 0-99
     //maxSpeed = 0-20
-    maxSpeed = (rand() % 100)/5;
 }
 
 Coord CustomLinearMobility::getCurrentPosition()
@@ -31,6 +30,13 @@ Coord CustomLinearMobility::getCurrentPosition()
 void CustomLinearMobility::initialize(int stage)
 {
     LinearMobility::initialize(stage);
+    double globalMaxSpeed = par("maxSpeed");
+    if (globalMaxSpeed != 0) {
+        int x = 100/globalMaxSpeed;
+        maxSpeed = (rand() % 100)/x;
+    } else {
+        maxSpeed = 0;
+    }
 }
 
 void CustomLinearMobility::move()
