@@ -1,32 +1,32 @@
 version 2
-run General-0-20140808-13:59:56-12322
+run General-0-20140808-14:01:43-12487
 attr configname General
-attr datetime 20140808-13:59:56
+attr datetime 20140808-14:01:43
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network MyNetwork
-attr processid 12322
+attr processid 12487
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-scalar MyNetwork.tnode[0].nic.mac 	nbTxFrames 	6
-scalar MyNetwork.tnode[0].nic.mac 	nbRxFrames 	3
+scalar MyNetwork.tnode[0].nic.mac 	nbTxFrames 	5
+scalar MyNetwork.tnode[0].nic.mac 	nbRxFrames 	2
 scalar MyNetwork.tnode[0].nic.mac 	nbDroppedFrames 	0
 scalar MyNetwork.tnode[0].nic.mac 	nbMissedAcks 	0
 scalar MyNetwork.tnode[0].nic.mac 	nbRecvdAcks 	0
 scalar MyNetwork.tnode[0].nic.mac 	nbTxAcks 	0
 scalar MyNetwork.tnode[0].nic.mac 	nbDuplicates 	0
-scalar MyNetwork.tnode[0].nic.mac 	meanBackoff 	0.36
+scalar MyNetwork.tnode[0].nic.mac 	meanBackoff 	0.42666666666667
 scalar MyNetwork.tnode[0].nic.mac 	nbBackoffs 	6
-scalar MyNetwork.tnode[0].nic.mac 	backoffDurations 	2.16
+scalar MyNetwork.tnode[0].nic.mac 	backoffDurations 	2.56
 scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithInterference 	0
-scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithoutInterference 	10
+scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithoutInterference 	11
 scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar MyNetwork.tnode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -41,16 +41,16 @@ scalar MyNetwork.tnode[0].batteryStats 	lifetime 	-1
 attr unit  s
 scalar MyNetwork.tnode[0].batteryStats 	"Mean power consumption" 	0
 attr unit  mW
-scalar MyNetwork.hnode[0].nic.mac 	nbTxFrames 	6
-scalar MyNetwork.hnode[0].nic.mac 	nbRxFrames 	4
+scalar MyNetwork.hnode[0].nic.mac 	nbTxFrames 	3
+scalar MyNetwork.hnode[0].nic.mac 	nbRxFrames 	5
 scalar MyNetwork.hnode[0].nic.mac 	nbDroppedFrames 	0
 scalar MyNetwork.hnode[0].nic.mac 	nbMissedAcks 	0
 scalar MyNetwork.hnode[0].nic.mac 	nbRecvdAcks 	0
 scalar MyNetwork.hnode[0].nic.mac 	nbTxAcks 	0
 scalar MyNetwork.hnode[0].nic.mac 	nbDuplicates 	0
-scalar MyNetwork.hnode[0].nic.mac 	meanBackoff 	0.52666666666667
-scalar MyNetwork.hnode[0].nic.mac 	nbBackoffs 	6
-scalar MyNetwork.hnode[0].nic.mac 	backoffDurations 	3.16
+scalar MyNetwork.hnode[0].nic.mac 	meanBackoff 	0.57333333333333
+scalar MyNetwork.hnode[0].nic.mac 	nbBackoffs 	3
+scalar MyNetwork.hnode[0].nic.mac 	backoffDurations 	1.72
 scalar MyNetwork.hnode[0].nic.phy 	nbFramesWithInterference 	0
 scalar MyNetwork.hnode[0].nic.phy 	nbFramesWithoutInterference 	8
 scalar MyNetwork.hnode[0].nic.phy 	nbFramesWithInterferencePartial 	0
@@ -67,21 +67,21 @@ scalar MyNetwork.hnode[0].batteryStats 	lifetime 	-1
 attr unit  s
 scalar MyNetwork.hnode[0].batteryStats 	"Mean power consumption" 	0
 attr unit  mW
-scalar MyNetwork.pnode[0].nic.mac 	nbTxFrames 	8
-scalar MyNetwork.pnode[0].nic.mac 	nbRxFrames 	4
+scalar MyNetwork.pnode[0].nic.mac 	nbTxFrames 	5
+scalar MyNetwork.pnode[0].nic.mac 	nbRxFrames 	3
 scalar MyNetwork.pnode[0].nic.mac 	nbDroppedFrames 	0
 scalar MyNetwork.pnode[0].nic.mac 	nbMissedAcks 	0
 scalar MyNetwork.pnode[0].nic.mac 	nbRecvdAcks 	0
 scalar MyNetwork.pnode[0].nic.mac 	nbTxAcks 	0
 scalar MyNetwork.pnode[0].nic.mac 	nbDuplicates 	0
-scalar MyNetwork.pnode[0].nic.mac 	meanBackoff 	0.405
-scalar MyNetwork.pnode[0].nic.mac 	nbBackoffs 	8
-scalar MyNetwork.pnode[0].nic.mac 	backoffDurations 	3.24
+scalar MyNetwork.pnode[0].nic.mac 	meanBackoff 	0.35428571428571
+scalar MyNetwork.pnode[0].nic.mac 	nbBackoffs 	7
+scalar MyNetwork.pnode[0].nic.mac 	backoffDurations 	2.48
 scalar MyNetwork.pnode[0].nic.phy 	nbFramesWithInterference 	0
-scalar MyNetwork.pnode[0].nic.phy 	nbFramesWithoutInterference 	12
+scalar MyNetwork.pnode[0].nic.phy 	nbFramesWithoutInterference 	11
 scalar MyNetwork.pnode[0].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar MyNetwork.pnode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar MyNetwork.pnode[0].nic.phy 	nbFramesWithInterferenceDropped 	1
+scalar MyNetwork.pnode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar MyNetwork.pnode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar MyNetwork.pnode[0].tranl 	nbAggrPktReceived 	0
 scalar MyNetwork.pnode[0].tranl 	"nbAggrPktSentDown " 	0
@@ -93,18 +93,18 @@ scalar MyNetwork.pnode[0].batteryStats 	lifetime 	-1
 attr unit  s
 scalar MyNetwork.pnode[0].batteryStats 	"Mean power consumption" 	0
 attr unit  mW
-scalar MyNetwork.thnode[0].nic.mac 	nbTxFrames 	9
-scalar MyNetwork.thnode[0].nic.mac 	nbRxFrames 	0
+scalar MyNetwork.thnode[0].nic.mac 	nbTxFrames 	3
+scalar MyNetwork.thnode[0].nic.mac 	nbRxFrames 	3
 scalar MyNetwork.thnode[0].nic.mac 	nbDroppedFrames 	0
 scalar MyNetwork.thnode[0].nic.mac 	nbMissedAcks 	0
 scalar MyNetwork.thnode[0].nic.mac 	nbRecvdAcks 	0
 scalar MyNetwork.thnode[0].nic.mac 	nbTxAcks 	0
 scalar MyNetwork.thnode[0].nic.mac 	nbDuplicates 	0
-scalar MyNetwork.thnode[0].nic.mac 	meanBackoff 	0.26909090909091
-scalar MyNetwork.thnode[0].nic.mac 	nbBackoffs 	11
-scalar MyNetwork.thnode[0].nic.mac 	backoffDurations 	2.96
+scalar MyNetwork.thnode[0].nic.mac 	meanBackoff 	0.36
+scalar MyNetwork.thnode[0].nic.mac 	nbBackoffs 	4
+scalar MyNetwork.thnode[0].nic.mac 	backoffDurations 	1.44
 scalar MyNetwork.thnode[0].nic.phy 	nbFramesWithInterference 	0
-scalar MyNetwork.thnode[0].nic.phy 	nbFramesWithoutInterference 	11
+scalar MyNetwork.thnode[0].nic.phy 	nbFramesWithoutInterference 	7
 scalar MyNetwork.thnode[0].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar MyNetwork.thnode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar MyNetwork.thnode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
