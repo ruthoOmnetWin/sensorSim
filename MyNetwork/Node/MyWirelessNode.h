@@ -21,12 +21,15 @@
 #include <omnetpp.h>
 #include <CustomLinearMobility.h>
 #include <Coord.h>
+#include <ExtendedMessage_m.h>
 
 class MyWirelessNode : public Sensor     //cCompoundModule public cSimpleModule,
 {
 private:
     long numSent;
     long numReceived;
+    cLongHistogram hopCountStats;
+    cOutVector hopCountVector;
 protected:
     void initialize(int stage);
     void handleMessage(cMessage *msg);

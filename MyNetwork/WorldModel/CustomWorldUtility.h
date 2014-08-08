@@ -19,6 +19,7 @@
 #include <BaseWorldUtility.h>
 #include <omnetpp.h>
 #include <string.h>
+#include <ExtendedMessage_m.h>
 
 class MIXIM_API CustomWorldUtility : public BaseWorldUtility
 {

@@ -81,6 +81,9 @@ void MyWirelessNode::updateDisplay()
  */
 void MyWirelessNode::handleMessage(cMessage *msg)
 {
+    //int hopcount = msg->getHopCount();
+    hopCountVector.record(1);
+    hopCountStats.collect(1);
     numReceived++;
     ev.bubble(this, msg->getName());
     if (!msg->isSelfMessage()) {
@@ -89,7 +92,7 @@ void MyWirelessNode::handleMessage(cMessage *msg)
         std::string type = "type";
         std::string request = "GET ";
         request += type;
-        cMessage *newmsg = new cMessage(request.c_str());
+        ExtendedMessage *newmsg = new ExtendedMessage(request.c_str());
         SimpleCoord *coord = new SimpleCoord("pos", position);
         newmsg->getParList().add(coord);
         std::stringstream s;
@@ -108,7 +111,18 @@ void MyWirelessNode::handleMessage(cMessage *msg)
  */
 void MyWirelessNode::finish()
 {
+    // This function is called by OMNeT++ at the end of the simulation.
+    EV << "Sent:     " << numSent << endl;
+    EV << "Received: " << numReceived << endl;
+    EV << "Hop count, min:    " << hopCountStats.getMin() << endl;
+    EV << "Hop count, max:    " << hopCountStats.getMax() << endl;
+    EV << "Hop count, mean:   " << hopCountStats.getMean() << endl;
+    EV << "Hop count, stddev: " << hopCountStats.getStddev() << endl;
 
+    recordScalar("#sent", numSent);
+    recordScalar("#received", numReceived);
+
+    hopCountStats.recordAs("hop count");
 }
 
 int MyWirelessNode::getSensorData()

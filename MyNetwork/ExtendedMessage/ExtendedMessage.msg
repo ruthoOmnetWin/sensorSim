@@ -11,36 +11,11 @@
 // 
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see http://www.gnu.org/licenses/.
-// 
+//
 
-#ifndef SENSOR_H_
-#define SENSOR_H_
-
-#include <omnetpp.h>
-#include <CustomLinearMobility.h>
-#include <ExtendedMessage_m.h>
-
-class Sensor : public cSimpleModule//: public CustomLinearMobility
+message ExtendedMessage extends cMessage
 {
-protected:
-    void initialize(int stage);
-    void handleMessage(cMessage *msg);
-    void activity(){};
-    void finish(){};
-
-
-public:
-    /**
-     * reads the data the sensor returns at the current position
-     *
-     * @return integer
-     */
-    virtual int getSensorData(){return 0};
-    Sensor();
-    ~Sensor();
-};
-
-//Register_Class(Sensor);
-Define_Module(Sensor);
-
-#endif /* SENSOR_H_ */
+	int source;
+    int destination;
+    int hopCount = 0;    
+}

@@ -29,6 +29,7 @@ INCLUDE_PATH = \
     -I$(MIXIM_PROJ)/src/inet_stub/mobility/models \
     -I$(MIXIM_PROJ)/src/inet_stub/networklayer/common \
     -I. \
+    -IExtendedMessage \
     -IMobility \
     -INode \
     -INode/Sensor \
@@ -57,10 +58,12 @@ OBJS = \
     $O/Node/Sensor/Sensor.o \
     $O/NodeType/NodeType.o \
     $O/SimpleCoord/SimpleCoord.o \
-    $O/WorldModel/CustomWorldUtility.o
+    $O/WorldModel/CustomWorldUtility.o \
+    $O/ExtendedMessage/ExtendedMessage_m.o
 
 # Message files
-MSGFILES =
+MSGFILES = \
+    ExtendedMessage/ExtendedMessage.msg
 
 # Other makefile variables (-K)
 MIXIM_PROJ=/home/rutho/BA/mixim-2.3
@@ -137,6 +140,7 @@ clean:
 	$(Q)-rm -rf $O
 	$(Q)-rm -f MyNetwork MyNetwork.exe libMyNetwork.so libMyNetwork.a libMyNetwork.dll libMyNetwork.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
+	$(Q)-rm -f ExtendedMessage/*_m.cc ExtendedMessage/*_m.h
 	$(Q)-rm -f Mobility/*_m.cc Mobility/*_m.h
 	$(Q)-rm -f Node/*_m.cc Node/*_m.h
 	$(Q)-rm -f Node/Sensor/*_m.cc Node/Sensor/*_m.h
@@ -151,9 +155,11 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc NodeType/*.cc SimpleCoord/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ExtendedMessage/*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc NodeType/*.cc SimpleCoord/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/ExtendedMessage/ExtendedMessage_m.o: ExtendedMessage/ExtendedMessage_m.cc \
+	ExtendedMessage/ExtendedMessage_m.h
 $O/Mobility/CustomLinearMobility.o: Mobility/CustomLinearMobility.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
@@ -204,6 +210,7 @@ $O/Node/MyWirelessNode.o: Node/MyWirelessNode.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	ExtendedMessage/ExtendedMessage_m.h \
 	Mobility/CustomLinearMobility.h \
 	Node/MyWirelessNode.h \
 	Node/Sensor/Sensor.h \
@@ -223,6 +230,7 @@ $O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	ExtendedMessage/ExtendedMessage_m.h \
 	Mobility/CustomLinearMobility.h \
 	Node/Sensor/Sensor.h \
 	NodeType/NodeType.h
@@ -239,6 +247,7 @@ $O/NodeType/NodeType.o: NodeType/NodeType.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MovingMobilityBase.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	ExtendedMessage/ExtendedMessage_m.h \
 	Mobility/CustomLinearMobility.h \
 	Node/MyWirelessNode.h \
 	Node/Sensor/Sensor.h \
@@ -255,6 +264,7 @@ $O/WorldModel/CustomWorldUtility.o: WorldModel/CustomWorldUtility.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	ExtendedMessage/ExtendedMessage_m.h \
 	SimpleCoord/SimpleCoord.h \
 	WorldModel/CustomWorldUtility.h
 

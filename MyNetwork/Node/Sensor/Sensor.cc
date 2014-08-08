@@ -35,7 +35,7 @@ void Sensor::initialize(int stage)
     std::string request = "GET ";
     request += type;
     //this->updatePosition();
-    cMessage *newmsg = new cMessage(request.c_str());
+    ExtendedMessage *newmsg = new ExtendedMessage(request.c_str());
     //newmsg->getParList().add(position);
     send(newmsg, "toNode$o");
 }
