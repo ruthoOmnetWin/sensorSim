@@ -20,8 +20,9 @@
 #include <omnetpp.h>
 #include <string.h>
 #include <ExtendedMessage_m.h>
+#include <StatisticsInterface.h>
 
-class MIXIM_API CustomWorldUtility : public BaseWorldUtility
+class MIXIM_API CustomWorldUtility : public BaseWorldUtility, public StatisticsInterface
 {
 protected:
     int numNodes;
@@ -39,6 +40,8 @@ protected:
     int* generatePressure(int size);
     int* generateHumidity(int size);
     ExtendedMessage* generateMessage(const char* msgname);
+    void updateDisplay();
+    void finish();
 public:
     CustomWorldUtility();
     ~CustomWorldUtility();

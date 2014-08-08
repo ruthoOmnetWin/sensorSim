@@ -22,25 +22,20 @@
 #include <CustomLinearMobility.h>
 #include <Coord.h>
 #include <ExtendedMessage_m.h>
+#include <StatisticsInterface.h>
 
-class MyWirelessNode : public Sensor     //cCompoundModule public cSimpleModule,
+class MyWirelessNode : public Sensor, public StatisticsInterface     //cCompoundModule public cSimpleModule,
 {
-private:
-    long numSent;
-    long numReceived;
-    cLongHistogram hopCountStats;
-    cOutVector hopCountVector;
 protected:
     void initialize(int stage);
     void handleMessage(cMessage *msg);
-    void handleMessage(ExtendedMessage *msg);
     void finish();
     int readSensor();
+    void updateDisplay();
     ExtendedMessage* generateMessage(const char* msgname);
     cModuleType *componenttype;
 protected:
     Coord* position;
-    void updateDisplay();
 public:
     void updatePosition();
     MyWirelessNode();

@@ -70,21 +70,6 @@ void CustomWorldUtility::initialize(int stage)
     }
 }
 
-ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)
-{
-    // Produce source and destination addresses.
-    int src = getIndex();   // our module index
-    int n = size();      // module vector size
-    int dest = intuniform(0,n-2);
-    if (dest>=src) dest++;
-
-    // Create message object and set source and destination field.
-    ExtendedMessage *msg = new ExtendedMessage(msgname);
-    msg->setSource(src);
-    msg->setDestination(dest);
-    return msg;
-}
-
 void CustomWorldUtility::handleMessage(cMessage *msg)
 {
     //Coord* par = (Coord*) msg->getParList().get(0);
@@ -241,4 +226,41 @@ int* CustomWorldUtility::generateHumidity(int size)
         data[i] = (int)((rand() % 100)/20 + 70);
     }
     return data;
+}
+
+ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)
+{
+    // Produce source and destination addresses.
+    int src = getIndex();   // our module index
+    int n = size();      // module vector size
+    int dest = intuniform(0,n-2);
+    if (dest>=src) dest++;
+
+    // Create message object and set source and destination field.
+    ExtendedMessage *msg = new ExtendedMessage(msgname);
+    msg->setSource(src);
+    msg->setDestination(dest);
+    return msg;
+}
+
+void CustomWorldUtility::updateDisplay()
+{
+    char buf[40];
+    sprintf(buf, "rcvd: %ld sent: %ld", numReceived, numSent);
+    getDisplayString().setTagArg("t",0,buf);
+}
+
+void CustomWorldUtility::finish()
+{
+    EV << "Sent:     " << numSent << endl;
+    EV << "Received: " << numReceived << endl;
+    EV << "Hop count, min:    " << hopCountStats.getMin() << endl;
+    EV << "Hop count, max:    " << hopCountStats.getMax() << endl;
+    EV << "Hop count, mean:   " << hopCountStats.getMean() << endl;
+    EV << "Hop count, stddev: " << hopCountStats.getStddev() << endl;
+
+    recordScalar("#sent", numSent);
+    recordScalar("#received", numReceived);
+
+    hopCountStats.recordAs("hop count");
 }

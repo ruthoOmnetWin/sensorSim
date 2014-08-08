@@ -35,6 +35,7 @@ INCLUDE_PATH = \
     -INode/Sensor \
     -INodeType \
     -ISimpleCoord \
+    -IStatisticsInterface \
     -IWorldModel \
     -IWorldModel/data \
     -Iresults
@@ -58,6 +59,7 @@ OBJS = \
     $O/Node/Sensor/Sensor.o \
     $O/NodeType/NodeType.o \
     $O/SimpleCoord/SimpleCoord.o \
+    $O/StatisticsInterface/StatisticsInterface.o \
     $O/WorldModel/CustomWorldUtility.o \
     $O/ExtendedMessage/ExtendedMessage_m.o
 
@@ -146,6 +148,7 @@ clean:
 	$(Q)-rm -f Node/Sensor/*_m.cc Node/Sensor/*_m.h
 	$(Q)-rm -f NodeType/*_m.cc NodeType/*_m.h
 	$(Q)-rm -f SimpleCoord/*_m.cc SimpleCoord/*_m.h
+	$(Q)-rm -f StatisticsInterface/*_m.cc StatisticsInterface/*_m.h
 	$(Q)-rm -f WorldModel/*_m.cc WorldModel/*_m.h
 	$(Q)-rm -f WorldModel/data/*_m.cc WorldModel/data/*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
@@ -155,7 +158,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ExtendedMessage/*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc NodeType/*.cc SimpleCoord/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ExtendedMessage/*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc NodeType/*.cc SimpleCoord/*.cc StatisticsInterface/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/ExtendedMessage/ExtendedMessage_m.o: ExtendedMessage/ExtendedMessage_m.cc \
@@ -215,7 +218,8 @@ $O/Node/MyWirelessNode.o: Node/MyWirelessNode.cc \
 	Node/MyWirelessNode.h \
 	Node/Sensor/Sensor.h \
 	NodeType/NodeType.h \
-	SimpleCoord/SimpleCoord.h
+	SimpleCoord/SimpleCoord.h \
+	StatisticsInterface/StatisticsInterface.h
 $O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \
 	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/BasicModule.h \
@@ -251,12 +255,16 @@ $O/NodeType/NodeType.o: NodeType/NodeType.cc \
 	Mobility/CustomLinearMobility.h \
 	Node/MyWirelessNode.h \
 	Node/Sensor/Sensor.h \
-	NodeType/NodeType.h
+	NodeType/NodeType.h \
+	StatisticsInterface/StatisticsInterface.h
 $O/SimpleCoord/SimpleCoord.o: SimpleCoord/SimpleCoord.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	SimpleCoord/SimpleCoord.h
+$O/StatisticsInterface/StatisticsInterface.o: StatisticsInterface/StatisticsInterface.cc \
+	ExtendedMessage/ExtendedMessage_m.h \
+	StatisticsInterface/StatisticsInterface.h
 $O/WorldModel/CustomWorldUtility.o: WorldModel/CustomWorldUtility.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseWorldUtility.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
@@ -266,5 +274,6 @@ $O/WorldModel/CustomWorldUtility.o: WorldModel/CustomWorldUtility.cc \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	ExtendedMessage/ExtendedMessage_m.h \
 	SimpleCoord/SimpleCoord.h \
+	StatisticsInterface/StatisticsInterface.h \
 	WorldModel/CustomWorldUtility.h
 

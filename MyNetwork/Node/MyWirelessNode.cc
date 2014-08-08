@@ -69,13 +69,6 @@ void MyWirelessNode::initialize(int stage)
     }
 }
 
-void MyWirelessNode::updateDisplay()
-{
-    char buf[40];
-    sprintf(buf, "rcvd: %ld sent: %ld", numReceived, numSent);
-    getDisplayString().setTagArg("t",0,buf);
-}
-
 /**
  * proceed an incoming message
  */
@@ -107,6 +100,11 @@ void MyWirelessNode::handleMessage(cMessage *msg)
     }
 }
 
+int MyWirelessNode::getSensorData()
+{
+    return 0;
+}
+
 ExtendedMessage* MyWirelessNode::generateMessage(const char* msgname)
 {
     // Produce source and destination addresses.
@@ -122,12 +120,15 @@ ExtendedMessage* MyWirelessNode::generateMessage(const char* msgname)
     return msg;
 }
 
-/**
- * is called after the simulation terminated successfully
- */
+void MyWirelessNode::updateDisplay()
+{
+    char buf[40];
+    sprintf(buf, "rcvd: %ld sent: %ld", numReceived, numSent);
+    getDisplayString().setTagArg("t",0,buf);
+}
+
 void MyWirelessNode::finish()
 {
-    // This function is called by OMNeT++ at the end of the simulation.
     EV << "Sent:     " << numSent << endl;
     EV << "Received: " << numReceived << endl;
     EV << "Hop count, min:    " << hopCountStats.getMin() << endl;
@@ -140,9 +141,3 @@ void MyWirelessNode::finish()
 
     hopCountStats.recordAs("hop count");
 }
-
-int MyWirelessNode::getSensorData()
-{
-    return 0;
-}
-
