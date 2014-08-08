@@ -2,3 +2,4 @@
 .plugins/
 .log
 core.*
+MyNetwork/results/
