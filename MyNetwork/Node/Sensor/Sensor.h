@@ -35,7 +35,7 @@ public:
      *
      * @return integer
      */
-    virtual int getSensorData(){return 0};
+    virtual int getSensorData(){return 0;}
     Sensor();
     ~Sensor();
 };

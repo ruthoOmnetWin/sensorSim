@@ -33,8 +33,10 @@ private:
 protected:
     void initialize(int stage);
     void handleMessage(cMessage *msg);
+    void handleMessage(ExtendedMessage *msg);
     void finish();
     int readSensor();
+    ExtendedMessage* generateMessage(const char* msgname);
     cModuleType *componenttype;
 protected:
     Coord* position;

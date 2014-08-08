@@ -81,9 +81,10 @@ void MyWirelessNode::updateDisplay()
  */
 void MyWirelessNode::handleMessage(cMessage *msg)
 {
-    //int hopcount = msg->getHopCount();
-    hopCountVector.record(1);
-    hopCountStats.collect(1);
+    ExtendedMessage *extmsg = check_and_cast<ExtendedMessage *>(msg);
+    int hopcount = extmsg->getHopCount();
+    hopCountVector.record(hopcount);
+    hopCountStats.collect(hopcount);
     numReceived++;
     ev.bubble(this, msg->getName());
     if (!msg->isSelfMessage()) {
@@ -92,7 +93,7 @@ void MyWirelessNode::handleMessage(cMessage *msg)
         std::string type = "type";
         std::string request = "GET ";
         request += type;
-        ExtendedMessage *newmsg = new ExtendedMessage(request.c_str());
+        ExtendedMessage *newmsg = generateMessage(request.c_str());
         SimpleCoord *coord = new SimpleCoord("pos", position);
         newmsg->getParList().add(coord);
         std::stringstream s;
@@ -104,6 +105,21 @@ void MyWirelessNode::handleMessage(cMessage *msg)
     if (ev.isGUI()) {
         updateDisplay();
     }
+}
+
+ExtendedMessage* MyWirelessNode::generateMessage(const char* msgname)
+{
+    // Produce source and destination addresses.
+    int src = getIndex();   // our module index
+    int n = size();      // module vector size
+    int dest = intuniform(0,n-2);
+    if (dest>=src) dest++;
+
+    // Create message object and set source and destination field.
+    ExtendedMessage *msg = new ExtendedMessage(msgname);
+    msg->setSource(src);
+    msg->setDestination(dest);
+    return msg;
 }
 
 /**

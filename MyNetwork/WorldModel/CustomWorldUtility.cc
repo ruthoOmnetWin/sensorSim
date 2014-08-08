@@ -60,15 +60,29 @@ void CustomWorldUtility::initialize(int stage)
     for (int i = 0; i < amountNodes; i++) {
         //generate a message
         //simtime_t time = simTime();
-        ExtendedMessage *msg = new ExtendedMessage("world init");
+        ExtendedMessage *msg = generateMessage("world init");
         send(msg, "worldDataGate$o", i);
     }
     amountNodes = par("numSensorNodes");
     for (int i = 0; i < amountNodes; i++) {
-        ExtendedMessage *newmsg = new ExtendedMessage("update pos");
+        ExtendedMessage *newmsg = generateMessage("update pos");
         send(newmsg, "toNode$o", i);
     }
+}
 
+ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)
+{
+    // Produce source and destination addresses.
+    int src = getIndex();   // our module index
+    int n = size();      // module vector size
+    int dest = intuniform(0,n-2);
+    if (dest>=src) dest++;
+
+    // Create message object and set source and destination field.
+    ExtendedMessage *msg = new ExtendedMessage(msgname);
+    msg->setSource(src);
+    msg->setDestination(dest);
+    return msg;
 }
 
 void CustomWorldUtility::handleMessage(cMessage *msg)

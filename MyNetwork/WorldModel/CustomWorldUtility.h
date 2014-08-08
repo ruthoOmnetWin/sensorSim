@@ -38,6 +38,7 @@ protected:
     int* generateTemperature(int size);
     int* generatePressure(int size);
     int* generateHumidity(int size);
+    ExtendedMessage* generateMessage(const char* msgname);
 public:
     CustomWorldUtility();
     ~CustomWorldUtility();
