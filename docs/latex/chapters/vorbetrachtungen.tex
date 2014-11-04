@@ -2,14 +2,29 @@
 
 Im folgenden werden die verwendeten Technologien betrachtet. Als Versionsverwaltungssoftware wurde Git\cite{git} auf der Platform Github\cite{github} verwendet, worauf nicht weiter eingegangen wird. Zum Erstellen der Simulation wurde Omnet++\cite{omnet} mithilfe des MiXiM-Frameworks\cite{mixim} benutzt.
 
+\section{Evaluation von Systemen}
+
+Im Entwicklungsprozess eines jeden Systems müssen neue Teile oder Module evaluiert werden. Für das Testen gibt es verschiedene Möglichkeiten, die einem zur Verfügung stehen. Im frühen Stadium der Entwicklung bietet das Abschätzen ohne Implementierung und daher ohne zu messen eine kostengünstige Variante zum Bestimmen von Designparametern. Allerdings sind diese Ergebnisse oftmals sehr grob und es lässt sich auch nicht jeder Wert so einfach bestimmen. \newline
+Es ist daher notwendig genauere Tests durchzuführen. Wenn man ein komplett implementiertes und produziertes System anschließend testen möchte kann das sehr teuer werden, sollten viele Fehler auftreten oder wenn man merkt, dass die Implementierung wohl doch nicht die Optimale für ein gewünschtes Ziel ist. \newline
+Man kann diesen Problemen zuvor kommen, indem man noch vor der ersten Implementierung eines Systems Simulationen und Emulationen erstellt und Prototypen anfertigt. Das senkt die Kosten mitunter erheblich und es lassen sich beinahe alle Parameter des zukünftigen Produkts überprüfen, auch wenn es das Testen des fertigen Produkts nicht komplett ersetzen kann.
+
+\paragraph{Simulation}
+
+Eine Simulation ist ein Modell eines Systems, welches dieses passend abbildet. Mit diesem Modell kann herausgefunden werden, was im realen System später umsetzbar ist. Der Zustand eines solchen Modells ändert sich im Laufe der (Simulations-)Zeit. Daher führt das Modell Zustandsübergange durch, welche als Events bezeichnet werden. Man kann Systeme nach den Zeitpunkten an denen Zustandswechsel möglich sind, in analoge und diskrete unterteilen. Wie der Name vermuten lässt können im analogen Fall zu jeder Zeit Zustandsübergänge stattfinden, im diskreten dagegen nur zu bestimmten Zeitpunkten.
+
+\paragraph{Emulationen}
+
+Eine Emulation ist die Implementierung eines Systems, welche den kompletten Funktionsumfang des Entwurfs abdeckt. Diese kann mit einer Hardwarebeschreibungssprache wie VHDL definiert werden und auf einem FPGA oder innerhalb eines Netzwerks von FPGAs ausgeführt werden. Man spricht daher von einer homogenen Hardwareplattform.
+
+\paragraph{(Rapid) Prototyping}
+
+Ein Prototyp ist ebenfalls eine Implementierung eines Systems, die den kompletten Funktionsumfang des Entwurfs abdeckt, allerdings geringere Anforderungen and Timing, Größe und Kosten stellt. Prototypen zum Beispiel oftmals wesentlich größer als das Endprodukt. Wenn er alle sonstigen Anforderungen zur Genüge erfüllt, so kann er in das finale Design umgewandelt werden und verliert bei diesem Prozess alle Grenzen des Prototyps. Im Gegensatz zur Emulation kommt eine heterogene Hardwareplattform zum Einsatz. So können etwa fertige Prozessoren, Speicher, weiterhin FPGAs oder spezielle Chips wie ein ASIC zum Einsatz kommen.
+
 \section{Omnet++}
 
 \subsection{Einleitung}
 
-Omnet++\cite{omnet} ist eine C++-Bibliothek und ein C++-Framework, welches primär zum Simulieren von Netzwerk dient. Außerdem bietet es eine Netzwerkbeschreibungssprache namens NED (NEtwork Description) und eine auf Eclipse\cite{eclipse} basierende Entwicklungsumgebung.
-
-- simulation time
-- event system
+Omnet++\cite{omnet} ist eine C++-Bibliothek und ein C++-Framework, welches primär zum Simulieren von Netzwerken dient. Außerdem bietet es eine Netzwerkbeschreibungssprache namens NED (NEtwork Description) und eine auf Eclipse\cite{eclipse} basierende Entwicklungsumgebung.
 
 \subsection{Einige Techniken und Funktionen}
 
@@ -17,12 +32,14 @@ Im folgenden Abschnitt wird ein Ausschnitt darüber gegeben, was Omnet++ an Funk
 
 \paragraph{NED language\cite{ned}}
 
-Die Netzwerkbeschreibungssprache NED bietet eine Möglichkeit auch komplexe Netzwerke relativ einfach zu beschreiben und darzustellen. Man kann schnell ein einfach Modul mit Gates für die Kommunikation beschreiben oder ihm Submodule für verschiedene andere Aufgaben zuweisen und dieses in ein Netzwerk integrieren und dort mehrere und auch verschiedene Instanzen von Modulen verknüpfen.
+Die Netzwerkbeschreibungssprache NED bietet eine Möglichkeit auch komplexe Netzwerke relativ einfach zu beschreiben und darzustellen. Man kann schnell ein einfaches Modul mit Gates (siehe Listing \ref{lst:simpleNode}) für die Kommunikation beschreiben oder ihm Submodule für verschiedene andere Aufgaben zuweisen und dieses in ein Netzwerk integrieren und dort mehrere und auch verschiedene Instanzen von Modulen verknüpfen (siehe Listing \ref{lst:simpleNetwork}). 
 
 \begin{minipage}{\textwidth}
-\begin{lstlisting}[language=ned]
+\begin{lstlisting}[language=ned,caption={einfacher Beispielknoten},label=lst:simpleNode]
 simple Knoten
 {
+	parameters:
+		string name="NodeName";
 	gates:
 		input in;
 		output out;
@@ -31,7 +48,7 @@ simple Knoten
 \end{minipage}
 
 \begin{minipage}{\textwidth}
-\begin{lstlisting}[language=ned]
+\begin{lstlisting}[language=ned,caption={einfaches Netzwerk},label=lst:simpleNetwork]
 network Netzwerk
 {
 	submodules:
@@ -44,9 +61,52 @@ network Netzwerk
 \end{lstlisting}
 \end{minipage}
 
-\paragraph{Nodes and Messages}
+Wenn nicht anders über den Parameter \"@class\" angegeben sucht \textbf{Omnet++} nach einer Klasse, die den gleichen Namen wie das erstellte Modul besitzt. In dieser können Funktionen deklariert und implementiert werden, die das Verhalten des Moduls beeinflusst. Welche Funktionen von \textbf{Omnet++} interpretiert werden, wird im Kapitel \ref{para:Nodes and Messages} näher erklärt.
+
+\paragraph{Nodes and Messages}\label{para:Nodes and Messages}
+
+Für die Steuerung innerhalb einer Simulation sind Nachrichten das wichtigste Werkzeug in \textbf{Omnet++}. So kann man eine Nachricht zu einer festgelegten Simulationszeit verschicken, um diese als Events einzusetzen. Dabei können Knoten auch Nachrichten an sich selbst versenden.
+
+Um einem selbst definierten Modul die Möglichkeit zu geben Nachrichten zu verstehen und zu benutzen werden einige Funktionen bereit gestellt, die man selbst definieren muss.
+
+Diese sind für die Funktionalität eines \textbf{cSimpleModule} entscheidend und sollten nach dem Erstellen eines neuen Moduls implementiert werden:
+
+\begin{itemize}
+\item void initialize()
+\item void handleMessage(cMessage *msg)
+\item void activity()
+\item void finish()
+\end{itemize}
+
+\subparagraph{initialize()}
+
+Die Funktion \textbf{initialize()} wird nach dem Erstellen eines Modules aufgerufen. Es kann ähnlich wie ein Konstruktor verwendet werden. Entscheidend ist, dass die Methode erst aufgerufen wird, nachdem auch der \textbf{NED}-Teil des Moduls eingelesen wurde. Das bedeuted, dass erst an dieser Stelle auf Parameter des Moduls zugegriffen werden kann und das ist im Konstruktor noch nicht möglich. Auch Nachrichten kann das Modul erst ab diesem Zeitpunkt verschicken. 
+
+\subparagraph{handleMessage(cMessage *msg)}
+
+Diese Methode kann eingehende Nachrichten auswerten. Sollten bei einem Modul Nachrichten ankommen, ohne dass diese Funktion definiert wurde, wird ein Fehler auftreten. Wie Nachrichten genauer aufgebaut sind ist im Abschnitt \textbf{cMessage} beschrieben.
+Nachrichten können zeitgesteuert Events auslösen. Die Methode \textbf{handleMessage()} ist somit das Herzstück der meisten Module, da hier das komplette Verhalten geregelt wird. 
+
+\subparagraph{activity()}
+
+Diese Methode ist eine eher unwichtige Funktion. Wenn \textbf{handleMessage()} korrekt verwendet wird, sollte man auf die Benutzung von \textbf{activity()} am besten komplett verzichten. Es verhält sich oberflächlich betrachtet wie \textbf{handleMessage()}, allerdings wird diese Methode nicht einfach aufgerufen, sollte eine Nachricht ankommen, sondern läuft in einer Endllosschleife und wartet permanet aktiv auf Nachrichten. Daher ist sie wesentlich Speicherintensiver als das Gegenstück \textbf{handleMessage()}.
+
+\subparagraph{finish()}
+
+Diese Methode wird aufgerufen nachdem die Simulation beendet wurde und noch bevor das Modul gelöscht wurde. Sie sollte nicht zum Löschen anderer Module verwendet werden, sondern dient zum Auswerten von statistischen Daten. 
+
+\subparagraph{cMessage}
+
+Für die Nachrichten selbst existiert ein fertig implementiertes Modul namens \textbf{cMessage}. Dieses erfüllt schon die wichtigsten Anforderungen, die man an ein Nachrichtenmodul stellt. So können Nachrichten nicht nur \textbf{strings} übertragen, sondern alle Klassen, die von \textbf{cNamedObject} erben. Man kann also auch komplexe, selbst definierte Objekte mithilfe von cMessage übertragen.
+Es empfiehlt sich dennoch eine eigene Kindklasse von cMessage zu definieren, da man in diesem eigene Parameter definieren kann, die verschiedene Werte beschreiben. So kann man zum Beispiel genauere Informationen für Quelle und Senke in der Nachricht speichern oder verschiedene Werte für Statistiken. Sollte man eine veränderte Kindklasse von cMessage definieren, so wird zusätzlich eine Klasse dazu generiert, die viele Funktionen bereitstellt, die zum Beispiel das kopieren einer Nachricht ermöglichen - auch inklusive der extra hinzugefügten Parameter.
+
+\paragraph{Event}
+
+Die Zeit einer Simulation verläuft linear. Anhand dieser kann die Ausführung von Events für einen bestimmten Zeitpunkt geplant werden. Dies ist möglich durch die Verwendung von cMessage in Kombination mit einer Scheduletime.
 
 \paragraph{XML Support}
+
+NED-Parameter eines Moduls können vom Typ xml sein. Die dazu gehörende Klasse cXMLElement bietet ihrerseits umfangreiche Unterstützung dafür an. Diese orientiert sich dabei an einem DOM-Parser, ist allerdings aus Performanzgründen nur ähnlich aufgebaut. Dabei stellt die Klasse die für X-Path typischen Funktionen für XML-Zugriffe bereit wie zum Beispiel \textbf{getParentNode()} oder \textbf{getChildren()}.
 
 \section{MiXiM}
 
@@ -54,6 +114,10 @@ network Netzwerk
 
 MiXiM\cite{mixim} ist ein Framework welches die Funkionalität von Omnet++ in erster Linie um mobile und kabellose Knoten erweitert. Es implementiert einige Protokolle und stellt verschiedene Knoten bereit.
 
-- find module
+\paragraph{Find Module}
+
+\paragraph{Mobility}
+
+\paragraph{Coord}
 
 \section{Sensoren}
