@@ -18,7 +18,7 @@ import mynetwork.Node.TLNode;
 import mynetwork.Node.TPNode;
 import mynetwork.Node.HLNode;
 import mynetwork.Node.HPNode;
-import mynetwork.Node.LPNode; 
+import mynetwork.Node.LPNode;
 
 import mynetwork.Node.THLNode;
 import mynetwork.Node.TLPNode;
