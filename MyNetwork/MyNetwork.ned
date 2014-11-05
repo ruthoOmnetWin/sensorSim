@@ -32,10 +32,12 @@ network MyNetwork //extends BaseNetwork
     parameters:
         bool createNewEnvironmentData;
 
+		//these parameters are only for a more clear naming in the omnet ini
         int howManyTemperatureNodes = default(1);
         int howManyPressureNodes = default(1);
         int howManyHumidityNodes = default(1);
         int howManyLightNodes = default(1);
+
         int howManyHumidityAndTemperatureNodes = default(0);
         int howManyTemperatureAndPressureNodes = default(0);
         int howManyHumidityAndPressureNodes = default(0);
@@ -43,26 +45,32 @@ network MyNetwork //extends BaseNetwork
         int howManyLightAndHumidityNodes = default(0);
         int howManyLightAndTemperatureNodes = default(0);
         int howManyLightAndPressureNodes = default(0);
+
         int howManyLightAndPressureAndHumidityNodes = default(0);
         int howManyLightAndPressureAndTemperatureNodes = default(0);
         int howManyLightAndHumidityAndTemperatureNodes = default(0);
         int howManyPressureAndHumidityAndTemperatureNodes = default(0);
+
         int howManyLightAndPressureAndHumidityAndTemperatureNodes = default(0);
 
+		//these parameters are actually in use by the network
         int numTNodes = howManyTemperatureNodes;
         int numPNodes = howManyPressureNodes;
         int numHNodes = howManyHumidityNodes;
         int numLNodes = howManyLightNodes;
+
         int numTHNodes = howManyHumidityAndTemperatureNodes;
         int numTLNodes = howManyLightAndTemperatureNodes;
         int numTPNodes = howManyTemperatureAndPressureNodes;
         int numHLNodes = howManyLightAndHumidityNodes;
         int numHPNodes = howManyHumidityAndPressureNodes;
         int numLPNodes = howManyLightAndPressureNodes;
+
         int numTHLNodes = howManyLightAndHumidityAndTemperatureNodes;
         int numTLPNodes = howManyLightAndPressureAndTemperatureNodes;
         int numTHPNodes = howManyPressureAndHumidityAndTemperatureNodes;
         int numHLPNodes = howManyLightAndPressureAndHumidityNodes;
+
         int numTHLPNodes = howManyLightAndPressureAndHumidityAndTemperatureNodes;
 
         // total number of hosts in the network
@@ -84,7 +92,7 @@ network MyNetwork //extends BaseNetwork
         **.mobility.constraintAreaMaxZ = default(playgroundSizeZ);
         string cmType = default("org.mixim.base.connectionManager.ConnectionManager"); // connection manager to use
 
-        @display("bgb=$playgroundSizeX,$playgroundSizeY,white;bgp=0,0");
+        @display("bgi=maps/germany,bgb,$playgroundSizeX,$playgroundSizeY,white;bgp=0,0;bgb=$playgroundSizeX,$playgroundSizeY");
 
     submodules:
         tnode[numTNodes]: TNode {
