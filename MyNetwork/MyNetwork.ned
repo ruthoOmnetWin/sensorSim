@@ -27,7 +27,7 @@ import mynetwork.Node.HLPNode;
 
 import mynetwork.Node.THLPNode;
 
-network MyNetwork //extends BaseNetwork 
+network MyNetwork //extends BaseNetwork
 {
     parameters:
         bool createNewEnvironmentData;
