@@ -1,11 +1,9 @@
 package mynetwork; 
-
 import org.mixim.base.connectionManager.ConnectionManager;
 import org.mixim.base.modules.BaseNetwork;
 import org.mixim.base.modules.IBaseNetwLayer;
 import org.mixim.modules.node.Host802154_2400MHz;
 import org.mixim.base.connectionManager.IConnectionManager;
-
 import mynetwork.WorldModel.CustomWorldUtility;
 
 import mynetwork.Node.TNode;
