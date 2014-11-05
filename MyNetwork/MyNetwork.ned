@@ -233,7 +233,6 @@ network MyNetwork //extends BaseNetwork
         world.worldDataGate++ <--> {  delay = 100ms; } <--> thlpnode[i].worldGate[2] for i=0..((numTHLPNodes-1));
         world.worldDataGate++ <--> {  delay = 100ms; } <--> thlpnode[i].worldGate[3] for i=0..((numTHLPNodes-1));
 
-
         world.toNode++ <--> {  delay = 0ms; } <--> tnode[i].toWorld for i=0..(numTNodes-1);
         world.toNode++ <--> {  delay = 0ms; } <--> hnode[i].toWorld for i=0..(numHNodes-1);
         world.toNode++ <--> {  delay = 0ms; } <--> pnode[i].toWorld for i=0..(numPNodes-1);
