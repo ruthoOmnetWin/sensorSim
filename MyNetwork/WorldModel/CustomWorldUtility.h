@@ -39,6 +39,7 @@ protected:
     int* generateTemperature(int size);
     int* generatePressure(int size);
     int* generateHumidity(int size);
+    int* generateLight(int size);
     ExtendedMessage* generateMessage(const char* msgname);
     void updateDisplay();
     void finish();

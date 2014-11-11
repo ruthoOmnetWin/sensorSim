@@ -27,6 +27,7 @@ using namespace std;
 #define xmlHumidity 0
 #define xmlPressure 1
 #define xmlTemperature 2
+#define xmlLight 3
 
 CustomWorldUtility::CustomWorldUtility()
 {
@@ -50,10 +51,42 @@ void CustomWorldUtility::initialize(int stage)
     if (par("createData")) {
         EV << "Generating New Environment Data" << endl;
         this->generateEnvironmentData();
+    } else {
+        bool filesExist = true;
+        ifstream ifile("WorldModel/data/temperature.xml");
+        if (!ifile) {
+            filesExist = false;
+        }
+        ifile.close();
+        if (filesExist) {
+            ifstream ifile("WorldModel/data/pressure.xml");
+            if (!ifile) {
+                filesExist = false;
+            }
+            ifile.close();
+        }
+        if (filesExist) {
+            ifstream ifile("WorldModel/data/humidity.xml");
+            if (!ifile) {
+                filesExist = false;
+            }
+            ifile.close();
+        }
+        if (filesExist) {
+            ifstream ifile("WorldModel/data/light.xml");
+            if (!ifile) {
+                filesExist = false;
+            }
+            ifile.close();
+        }
+        if (!filesExist) {
+            EV << "Generating New Environment Data due to missing files" << endl;
+            this->generateEnvironmentData();
+        }
     }
 
-    this->setTemperature();
-    this->setPressure();
+    //this->setTemperature();
+    //this->setPressure();
 
     //object = new cObject();
     int amountNodes = par("numGates");
@@ -149,7 +182,8 @@ int* CustomWorldUtility::readXML(int fileName)
     return data;
 }
 
-void CustomWorldUtility::generateEnvironmentData()
+/*
+void CustomWorldUtility::oldgenerateEnvironmentData()
 {
     int size = 100;
     string filenames[3] = {"humidity", "pressure", "temperature"};
@@ -195,6 +229,66 @@ void CustomWorldUtility::generateEnvironmentData()
     }
 
     cout << "Done creating" << endl;
+}
+*/
+
+
+void CustomWorldUtility::generateEnvironmentData()
+{
+    int sizeA = 10;
+    int sizeB = 10;
+    int size = sizeA * sizeB;
+    string filenames[4] = {"humidity", "pressure", "temperature", "light"};
+
+    int numberOfFiles = sizeof(filenames)/sizeof(filenames[0]);
+    EV << "Starting to create files" << endl;
+
+    for (int files = 0; files < numberOfFiles; files++) {
+
+        ofstream myfile;
+
+        string filename = "WorldModel/data/";
+        stringstream data;
+        filename += filenames[files];
+        filename += ".xml";
+        char * filenameChar = new char[filename.length()];
+        strcpy(filenameChar,filename.c_str());
+
+        EV << "Creating " << filenameChar << endl;
+
+        data << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl << "<" << filenames[files] << ">" << endl;
+        int* newData;
+
+        // Data Creation here
+        if (files == xmlHumidity) {
+            newData = generateHumidity(size);
+        } else if (files == xmlPressure) {
+            newData = generatePressure(size);
+        } else if (files == xmlTemperature) {
+            newData = generateTemperature(size);
+        } else if (files == xmlLight) {
+            newData = generateLight(size);
+        }
+
+        for (int i = 0; i < sizeA; i++) {
+            data << "<pos" << i << ">";
+            for (int j = 0; j < sizeB; j++) {
+                data << "<pos" << j << ">" << newData[i*j] << "</pos" << j << ">";
+            }
+            data << "</pos" << i << ">" << endl;
+        }
+        delete[] newData;
+
+        myfile.open (filenameChar);
+        data << "</" << filenames[files] << ">";
+        //string dataString = data.str();
+        myfile << data.str();
+        myfile.close();
+        delete[] filenameChar;
+
+    }
+
+    cout << "Done creating" << endl;
 
 }
 
@@ -219,6 +313,16 @@ int* CustomWorldUtility::generatePressure(int size)
 }
 
 int* CustomWorldUtility::generateHumidity(int size)
+{
+    int* data = new int[size];
+    for (int i = 0; i < size; i++) {
+        //70 - 75
+        data[i] = (int)((rand() % 100)/20 + 70);
+    }
+    return data;
+}
+
+int* CustomWorldUtility::generateLight(int size)
 {
     int* data = new int[size];
     for (int i = 0; i < size; i++) {

@@ -93,6 +93,16 @@ network MyNetwork //extends BaseNetwork
         @display("bgi=maps/germany,bgb,$playgroundSizeX,$playgroundSizeY,white;bgp=0,0;bgb=$playgroundSizeX,$playgroundSizeY");
 
     submodules:
+        world: CustomWorldUtility {
+            //for every sensor (NOT only every node) there is one gate needed
+            numGates = numNodes 
+            + numTHNodes + numTLNodes + numTPNodes + numHLNodes + numHPNodes + numLPNodes 
+            + 2*numTHLNodes + 2*numTLPNodes + 2*numTHPNodes + 2*numHLPNodes 
+            + 3*numTHLPNodes;
+            numSensorNodes = numNodes;
+            createData = createNewEnvironmentData;
+        }
+        
         tnode[numTNodes]: TNode {
             parameters:
                 @display("i=device/card");
@@ -174,15 +184,7 @@ network MyNetwork //extends BaseNetwork
             parameters:
                 @display("i=abstract/multicast;is=s");
         }
-        world: CustomWorldUtility {
-            //for every sensor (NOT only every node) there is one gate needed
-            numGates = numNodes 
-            + numTHNodes + numTLNodes + numTPNodes + numHLNodes + numHPNodes + numLPNodes 
-            + 2*numTHLNodes + 2*numTLPNodes + 2*numTHPNodes + 2*numHLPNodes 
-            + 3*numTHLPNodes;
-            numSensorNodes = numNodes;
-            createData = createNewEnvironmentData;
-        }
+
 
     connections allowunconnected: // some connections and gates are to be generated dynamically
 

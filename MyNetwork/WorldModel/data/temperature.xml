@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <temperature>
-<pos0>27</pos0>
-<pos1>28</pos1>
-<pos2>25</pos2>
-<pos3>5</pos3>
-<pos4>31</pos4>
-<pos5>11</pos5>
-<pos6>28</pos6>
-<pos7>30</pos7>
-<pos8>16</pos8>
-<pos9>7</pos9>
+<pos0><pos0>29</pos0><pos1>29</pos1><pos2>29</pos2><pos3>29</pos3><pos4>29</pos4><pos5>29</pos5><pos6>29</pos6><pos7>29</pos7><pos8>29</pos8><pos9>29</pos9></pos0>
+<pos1><pos0>29</pos0><pos1>14</pos1><pos2>12</pos2><pos3>15</pos3><pos4>18</pos4><pos5>18</pos5><pos6>27</pos6><pos7>24</pos7><pos8>23</pos8><pos9>13</pos9></pos1>
+<pos2><pos0>29</pos0><pos1>12</pos1><pos2>18</pos2><pos3>27</pos3><pos4>23</pos4><pos5>20</pos5><pos6>14</pos6><pos7>20</pos7><pos8>27</pos8><pos9>21</pos9></pos2>
+<pos3><pos0>29</pos0><pos1>15</pos1><pos2>27</pos2><pos3>13</pos3><pos4>14</pos4><pos5>18</pos5><pos6>21</pos6><pos7>10</pos7><pos8>14</pos8><pos9>19</pos9></pos3>
+<pos4><pos0>29</pos0><pos1>18</pos1><pos2>23</pos2><pos3>14</pos3><pos4>27</pos4><pos5>19</pos5><pos6>14</pos6><pos7>18</pos7><pos8>26</pos8><pos9>21</pos9></pos4>
+<pos5><pos0>29</pos0><pos1>18</pos1><pos2>20</pos2><pos3>18</pos3><pos4>19</pos4><pos5>28</pos5><pos6>19</pos6><pos7>24</pos7><pos8>24</pos8><pos9>13</pos9></pos5>
+<pos6><pos0>29</pos0><pos1>27</pos1><pos2>14</pos2><pos3>21</pos3><pos4>14</pos4><pos5>19</pos5><pos6>21</pos6><pos7>22</pos7><pos8>16</pos8><pos9>15</pos9></pos6>
+<pos7><pos0>29</pos0><pos1>24</pos1><pos2>20</pos2><pos3>10</pos3><pos4>18</pos4><pos5>24</pos5><pos6>22</pos6><pos7>29</pos7><pos8>16</pos8><pos9>26</pos9></pos7>
+<pos8><pos0>29</pos0><pos1>23</pos1><pos2>27</pos2><pos3>14</pos3><pos4>26</pos4><pos5>24</pos5><pos6>16</pos6><pos7>16</pos7><pos8>26</pos8><pos9>11</pos9></pos8>
+<pos9><pos0>29</pos0><pos1>13</pos1><pos2>21</pos2><pos3>19</pos3><pos4>21</pos4><pos5>13</pos5><pos6>15</pos6><pos7>26</pos7><pos8>11</pos8><pos9>28</pos9></pos9>
 </temperature>
