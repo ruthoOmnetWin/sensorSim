@@ -31,6 +31,12 @@ MyWirelessNode::MyWirelessNode()
     NodeType *type = new NodeType("MyWirelessNode");
     this->componenttype = type;
     this->type = new sensorType;
+    std::string *names = new std::string[4];
+    names[0] = "humidity";
+    names[1] = "pressure";
+    names[2] = "temperature";
+    names[3] = "light";
+    this->typenames = names;
 }
 
 MyWirelessNode::~MyWirelessNode()
@@ -85,22 +91,39 @@ void MyWirelessNode::handleMessage(cMessage *msg)
     if (!msg->isSelfMessage()) {
         delete msg;
         updatePosition();
-        std::string type = "type";
-        std::string request = "GET ";
-        request += type;
         this->findSensorType();
-        ExtendedMessage *newmsg = generateMessage(request.c_str());
-        SimpleCoord *coord = new SimpleCoord("pos", position);
-        newmsg->getParList().add(coord);
-        std::stringstream s;
-        s << "X: " << coord->x << " Y: " << coord->y;
-        ev.bubble(this, s.str().c_str());
-        send(newmsg, "toWorld$o");
-        numSent++;
+
+        //generate messages for data requests
+        std::string request = "GET ";
+        if (this->type->humidity) {
+            this->sendDataRequest(request + this->typenames[0]);
+        }
+        if (this->type->pressure) {
+            this->sendDataRequest(request + this->typenames[1]);
+        }
+        if (this->type->temperature) {
+            this->sendDataRequest(request + this->typenames[2]);
+        }
+        if (this->type->light) {
+            this->sendDataRequest(request + this->typenames[3]);
+        }
+
     }
     if (ev.isGUI()) {
         updateDisplay();
     }
+}
+
+void MyWirelessNode::sendDataRequest(std::string request)
+{
+    ExtendedMessage *newmsg = generateMessage(request.c_str());
+    SimpleCoord *coord = new SimpleCoord("pos", position);
+    newmsg->getParList().add(coord);
+    std::stringstream s;
+    s << "X: " << coord->x << " Y: " << coord->y;
+    ev.bubble(this, s.str().c_str());
+    send(newmsg, "toWorld$o");
+    numSent++;
 }
 
 void MyWirelessNode::findSensorType()

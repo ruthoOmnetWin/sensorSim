@@ -43,6 +43,7 @@ protected:
     cModuleType *componenttype;
     void findSensorType();
     bool isPositive(int value);
+    void sendDataRequest(std::string);
 protected:
     Coord* position;
     sensorType* type;
@@ -51,6 +52,7 @@ public:
     MyWirelessNode();
     ~MyWirelessNode();
     int getSensorData();
+    std::string* typenames;
 };
 
 #endif /* MYWIRELESSNODE_H_ */
