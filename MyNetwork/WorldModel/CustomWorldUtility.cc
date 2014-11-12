@@ -182,61 +182,13 @@ int* CustomWorldUtility::readXML(int fileName)
     return data;
 }
 
-/*
-void CustomWorldUtility::oldgenerateEnvironmentData()
-{
-    int size = 100;
-    string filenames[3] = {"humidity", "pressure", "temperature"};
-
-    int numberOfFiles = sizeof(filenames);
-    EV << "Starting to create files" << endl;
-
-    for (int files = 0; files < numberOfFiles; files++) {
-
-        ofstream myfile;
-
-        string filename = "data/";
-        filename += filenames[files];
-        filename += ".xml";
-        char * filenameChar = new char[filename.length()];
-        strcpy(filenameChar,filename.c_str());
-
-        myfile.open (filenameChar);
-        EV << "Creating " << filenameChar << endl;
-        delete[] filenameChar;
-        myfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl << "<" << filenames[files] << ">" << endl;
-
-        // Data Creation here
-        if (files == xmlHumidity) {
-
-        } else if (files == xmlPressure) {
-            int* pressure = generatePressure(size);
-            for (int i = 0; i < size; i++) {
-                myfile << "<pos" << i << ">" << pressure[i] << "</pos" << i << ">" << endl;
-            }
-            delete[] pressure;
-        } else if (files == xmlTemperature) {
-            int* temperature = generateTemperature(size);
-            for (int i = 0; i < size; i++) {
-                myfile << "<pos" << i << ">" << temperature[i] << "</pos" << i << ">" << endl;
-            }
-            delete[] temperature;
-        }
-
-        myfile << "</" << filenames[files] << ">";
-        myfile.close();
-
-    }
-
-    cout << "Done creating" << endl;
-}
-*/
-
-
 void CustomWorldUtility::generateEnvironmentData()
 {
-    int sizeA = 10;
-    int sizeB = 10;
+    double playgroundSizeX = par("playgroundSizeX");
+    double playgroundSizeY = par("playgroundSizeY");
+
+    int sizeA = (int)playgroundSizeX;
+    int sizeB = (int)playgroundSizeY;
     int size = sizeA * sizeB;
     string filenames[4] = {"humidity", "pressure", "temperature", "light"};
 
@@ -273,7 +225,7 @@ void CustomWorldUtility::generateEnvironmentData()
         for (int i = 0; i < sizeA; i++) {
             data << "<pos" << i << ">";
             for (int j = 0; j < sizeB; j++) {
-                data << "<pos" << j << ">" << newData[i*j] << "</pos" << j << ">";
+                data << "<pos" << j << ">" << newData[((i+1)*(j+1))-1] << "</pos" << j << ">";
             }
             data << "</pos" << i << ">" << endl;
         }
@@ -281,7 +233,6 @@ void CustomWorldUtility::generateEnvironmentData()
 
         myfile.open (filenameChar);
         data << "</" << filenames[files] << ">";
-        //string dataString = data.str();
         myfile << data.str();
         myfile.close();
         delete[] filenameChar;
@@ -292,6 +243,11 @@ void CustomWorldUtility::generateEnvironmentData()
 
 }
 
+/**
+ * generates values for the temperature on the playground
+ * values will be between 10 and 30
+ * unit: °C
+ */
 int* CustomWorldUtility::generateTemperature(int size)
 {
     int* data = new int[size];
@@ -302,6 +258,11 @@ int* CustomWorldUtility::generateTemperature(int size)
     return data;
 }
 
+/**
+ * generates values for the pressure on the playground
+ * values will be between 995 and 1005
+ * unit: hPa
+ */
 int* CustomWorldUtility::generatePressure(int size)
 {
     int* data = new int[size];
@@ -312,6 +273,11 @@ int* CustomWorldUtility::generatePressure(int size)
     return data;
 }
 
+/**
+ * generates values for the humidity on the playground
+ * values will be between 70 and 75
+ * unit: %
+ */
 int* CustomWorldUtility::generateHumidity(int size)
 {
     int* data = new int[size];
@@ -322,12 +288,17 @@ int* CustomWorldUtility::generateHumidity(int size)
     return data;
 }
 
+/**
+ * generates values for the light intensity on the playground
+ * values will be between 10'000 and 100'000
+ * unit: lx
+ */
 int* CustomWorldUtility::generateLight(int size)
 {
     int* data = new int[size];
     for (int i = 0; i < size; i++) {
         //70 - 75
-        data[i] = (int)((rand() % 100)/20 + 70);
+        data[i] = (int)((rand() % 100)*1000);
     }
     return data;
 }
