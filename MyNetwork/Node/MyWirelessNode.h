@@ -24,6 +24,13 @@
 #include <ExtendedMessage_m.h>
 #include <StatisticsInterface.h>
 
+struct sensorType {
+    bool temperature;
+    bool pressure;
+    bool light;
+    bool humidity;
+};
+
 class MyWirelessNode : public Sensor, public StatisticsInterface     //cCompoundModule public cSimpleModule,
 {
 protected:
@@ -34,8 +41,11 @@ protected:
     void updateDisplay();
     ExtendedMessage* generateMessage(const char* msgname);
     cModuleType *componenttype;
+    void findSensorType();
+    bool isPositive(int value);
 protected:
     Coord* position;
+    sensorType* type;
 public:
     void updatePosition();
     MyWirelessNode();

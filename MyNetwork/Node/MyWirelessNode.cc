@@ -30,12 +30,14 @@ MyWirelessNode::MyWirelessNode()
     position = new Coord();
     NodeType *type = new NodeType("MyWirelessNode");
     this->componenttype = type;
+    this->type = new sensorType;
 }
 
 MyWirelessNode::~MyWirelessNode()
 {
     delete componenttype;
     delete position;
+    delete type;
 }
 
 /**
@@ -86,6 +88,7 @@ void MyWirelessNode::handleMessage(cMessage *msg)
         std::string type = "type";
         std::string request = "GET ";
         request += type;
+        this->findSensorType();
         ExtendedMessage *newmsg = generateMessage(request.c_str());
         SimpleCoord *coord = new SimpleCoord("pos", position);
         newmsg->getParList().add(coord);
@@ -97,6 +100,22 @@ void MyWirelessNode::handleMessage(cMessage *msg)
     }
     if (ev.isGUI()) {
         updateDisplay();
+    }
+}
+
+void MyWirelessNode::findSensorType()
+{
+    this->type->temperature = isPositive(this->findSubmodule("TemperatureSensor"));
+    this->type->light = isPositive(this->findSubmodule("LightSensor"));
+    this->type->pressure = isPositive(this->findSubmodule("PressureSensor"));
+    this->type->humidity = isPositive(this->findSubmodule("HumiditySensor"));
+}
+
+bool MyWirelessNode::isPositive(int value) {
+    if (value > 0) {
+        return true;
+    } else {
+        return false;
     }
 }
 

@@ -17,7 +17,7 @@ package mynetwork.Node;
 import mynetwork.Node.Sensor.LightSensor;
 import mynetwork.Node.Sensor.HumiditySensor;
 
-module HLNode extends MyWirelessNode
+module HLNode extends MyWirelessNode 
 {        
     gates:
 	    inout toSensor[2];
