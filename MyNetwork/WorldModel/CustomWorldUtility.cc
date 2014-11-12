@@ -31,14 +31,17 @@ using namespace std;
 
 CustomWorldUtility::CustomWorldUtility()
 {
-    tempLength = 0;
-    pressLength = 0;
+    tempLengthX = 0;
+    pressLengthX = 0;
+    tempLengthY = 0;
+    pressLengthY = 0;
     temperatureArray = 0;
     pressureArray = 0;
 }
 
 CustomWorldUtility::~CustomWorldUtility()
 {
+    //TODO delete the 2-dim arrays
     delete[] temperatureArray;
     delete[] pressureArray;
 }
@@ -52,6 +55,8 @@ void CustomWorldUtility::initialize(int stage)
         EV << "Generating New Environment Data" << endl;
         this->generateEnvironmentData();
     } else {
+
+        //if any of the 4 xml files doesn't exists new environment data will be created
         bool filesExist = true;
         ifstream ifile("WorldModel/data/temperature.xml");
         if (!ifile) {
@@ -85,8 +90,8 @@ void CustomWorldUtility::initialize(int stage)
         }
     }
 
-    //this->setTemperature();
-    //this->setPressure();
+    this->setTemperature();
+    this->setPressure();
 
     //object = new cObject();
     int amountNodes = par("numGates");
@@ -105,19 +110,12 @@ void CustomWorldUtility::initialize(int stage)
 
 void CustomWorldUtility::handleMessage(cMessage *msg)
 {
-    //Coord* par = (Coord*) msg->getParList().get(0);
-    SimpleCoord *array = (SimpleCoord*) msg->getParList().remove("pos");
-    //array->remove("pos");
-    //double x = par->x;
-    //double y = par->y;
+    SimpleCoord *position = (SimpleCoord*) msg->getParList().remove("pos");
     string name = msg->getName();
     delete msg;
-    delete array;
-    //msg->getParList().remove(msg->getParList().get(0));
-    //delete msg;
     string requestType = name.substr(0,3);
     if (requestType == "GET") {
-        int* data;
+        int** data;
         string sensorType = name.substr(4);
         if (sensorType == "temperature") {
             data = this->temperatureArray;
@@ -129,29 +127,36 @@ void CustomWorldUtility::handleMessage(cMessage *msg)
         //cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
         //send(newmsg , "worldDataGate$o", 1);
     }
+    delete position;
 }
 
 void CustomWorldUtility::setTemperature()
 {
-    int* data = readXML(xmlTemperature);
-    this->temperatureArray = new int[tempLength];
-    for (int i = 0; i < tempLength; i++) {
-        this->temperatureArray[i] = data[i];
+    int** data = readXML(xmlTemperature);
+    this->temperatureArray = new int*[tempLengthX];
+    for (int i = 0; i < tempLengthX; i++) {
+        this->pressureArray[i] = new int[tempLengthY];
+        for (int j = 0; j < tempLengthY; j++) {
+            this->temperatureArray[i][j] = data[i][j];
+        }
     }
     delete[] data;
 }
 
 void CustomWorldUtility::setPressure()
 {
-    int* data = readXML(xmlPressure);
-    this->pressureArray = new int[pressLength];
-    for (int i = 0; i < pressLength; i++) {
-        this->pressureArray[i] = data[i];
+    int** data = readXML(xmlPressure);
+    this->pressureArray = new int*[pressLengthX];
+    for (int i = 0; i < pressLengthX; i++) {
+        this->pressureArray[i] = new int[pressLengthY];
+        for (int j = 0; j < pressLengthY; j++) {
+            this->pressureArray[i][j] = data[i][j];
+        }
     }
     delete[] data;
 }
 
-int* CustomWorldUtility::readXML(int fileName)
+int** CustomWorldUtility::readXML(int fileName)
 {
     // get the xml from the parameter, return type cXMLElement
     cXMLElement *rootE;
@@ -162,21 +167,20 @@ int* CustomWorldUtility::readXML(int fileName)
     }
 
     // get a vector (of type cXMLElement) with all childs of the root-tag
-    cXMLElementList nList = rootE->getChildren();
+    cXMLElementList nListRows = rootE->getChildren();
+    int amountRows = nListRows.size();
 
-    int length = nList.size();
-
-    int* data = new int[length];
-    if (fileName == xmlTemperature) {
-        tempLength = length;
-    } else if (fileName == xmlPressure) {
-        pressLength = length;
-    }
-
-    for (int i = 0; i < length; i++) {
-        // access the data from a child
-        //EV << nList[i]->getNodeValue() << endl;
-        data[i] = atoi(nList[i]->getNodeValue());
+    int** data = new int*[amountRows];
+    for (int i = 0; i < amountRows; i++){
+        //this is a row as cXMLElement
+        cXMLElement* nListRowArray = nListRows[i];
+        //this is a list of an entire row as cXMLElements
+        cXMLElementList nLeafElementsList = nListRowArray->getChildren();
+        int amountColumns = nLeafElementsList.size();
+        data[i] = new int[amountColumns];
+        for (int j = 0; j < amountColumns; j++) {
+            data[i][j] = atoi(nLeafElementsList[i]->getNodeValue());
+        }
     }
 
     return data;

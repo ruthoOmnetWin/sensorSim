@@ -26,11 +26,13 @@ class MIXIM_API CustomWorldUtility : public BaseWorldUtility, public StatisticsI
 {
 protected:
     int numNodes;
-    int* temperatureArray;
-    int tempLength;
-    int* pressureArray;
-    int pressLength;
-    int* readXML(int);
+    int** temperatureArray;
+    int tempLengthX;
+    int tempLengthY;
+    int** pressureArray;
+    int pressLengthX;
+    int pressLengthY;
+    int** readXML(int);
     void setTemperature();
     void setPressure();
     void initialize(int stage);

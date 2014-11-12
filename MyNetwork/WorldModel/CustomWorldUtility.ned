@@ -22,8 +22,8 @@ simple CustomWorldUtility extends BaseWorldUtility
         bool createData;
         int numGates;
         int numSensorNodes;
-        //xml xmlTemperature = xmldoc("WorldModel/data/temperature.xml");
-        //xml xmlPressure = xmldoc("WorldModel/data/pressure.xml");
+        xml xmlTemperature = xmldoc("WorldModel/data/temperature.xml");
+        xml xmlPressure = xmldoc("WorldModel/data/pressure.xml");
         @class("CustomWorldUtility");
     gates:
         inout worldDataGate[numGates];
