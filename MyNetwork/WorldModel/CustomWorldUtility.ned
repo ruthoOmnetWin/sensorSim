@@ -24,6 +24,9 @@ simple CustomWorldUtility extends BaseWorldUtility
         int numSensorNodes;
         xml xmlTemperature = xmldoc("WorldModel/data/temperature.xml");
         xml xmlPressure = xmldoc("WorldModel/data/pressure.xml");
+        xml xmlHumidity = xmldoc("WorldModel/data/humidity.xml");
+        xml xmlLight = xmldoc("WorldModel/data/light.xml");
+        
         @class("CustomWorldUtility");
     gates:
         inout worldDataGate[numGates];

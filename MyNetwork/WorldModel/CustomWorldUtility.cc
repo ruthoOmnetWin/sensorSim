@@ -31,12 +31,19 @@ using namespace std;
 
 CustomWorldUtility::CustomWorldUtility()
 {
-    tempLengthX = 0;
-    pressLengthX = 0;
-    tempLengthY = 0;
-    pressLengthY = 0;
-    temperatureArray = 0;
-    pressureArray = 0;
+    this->tempLengthX = 0;
+    this->tempLengthY = 0;
+    this->pressLengthX = 0;
+    this->pressLengthY = 0;
+    this->lightLengthX = 0;
+    this->lightLengthY = 0;
+    this->humidityLengthX = 0;
+    this->humidityLengthY = 0;
+
+    this->temperatureArray = 0;
+    this->pressureArray = 0;
+    this->humidityArray = 0;
+    this->lightArray = 0;
 }
 
 CustomWorldUtility::~CustomWorldUtility()
@@ -44,6 +51,8 @@ CustomWorldUtility::~CustomWorldUtility()
     //TODO delete the 2-dim arrays
     delete[] temperatureArray;
     delete[] pressureArray;
+    delete[] lightArray;
+    delete[] humidityArray;
 }
 
 void CustomWorldUtility::initialize(int stage)
@@ -92,6 +101,8 @@ void CustomWorldUtility::initialize(int stage)
 
     this->setTemperature();
     this->setPressure();
+    this->setHumidity();
+    this->setLight();
 
     //object = new cObject();
     int amountNodes = par("numGates");
@@ -115,14 +126,14 @@ void CustomWorldUtility::handleMessage(cMessage *msg)
     delete msg;
     string requestType = name.substr(0,3);
     if (requestType == "GET") {
-        int** data;
+        //int** data;
         string sensorType = name.substr(4);
         if (sensorType == "temperature") {
-            data = this->temperatureArray;
+            //data = this->temperatureArray;
         } else if (sensorType == "pressure") {
-            data = this->pressureArray;
+            //data = this->pressureArray;
         } else if (sensorType == "humidity") {
-
+            //data = this->humidityArray;
         }
         //cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
         //send(newmsg , "worldDataGate$o", 1);
@@ -156,6 +167,32 @@ void CustomWorldUtility::setPressure()
     delete[] data;
 }
 
+void CustomWorldUtility::setHumidity()
+{
+    int** data = readXML(xmlHumidity);
+    this->humidityArray= new int*[humidityLengthX];
+    for (int i = 0; i < pressLengthX; i++) {
+        this->humidityArray[i] = new int[humidityLengthY];
+        for (int j = 0; j < humidityLengthY; j++) {
+            this->humidityArray[i][j] = data[i][j];
+        }
+    }
+    delete[] data;
+}
+
+void CustomWorldUtility::setLight()
+{
+    int** data = readXML(xmlLight);
+    this->lightArray = new int*[lightLengthX];
+    for (int i = 0; i < pressLengthX; i++) {
+        this->lightArray[i] = new int[lightLengthY];
+        for (int j = 0; j < lightLengthY; j++) {
+            this->lightArray[i][j] = data[i][j];
+        }
+    }
+    delete[] data;
+}
+
 int** CustomWorldUtility::readXML(int fileName)
 {
     // get the xml from the parameter, return type cXMLElement
@@ -164,6 +201,12 @@ int** CustomWorldUtility::readXML(int fileName)
         rootE = par("xmlPressure").xmlValue();
     } else if (fileName == xmlTemperature) {
         rootE = par("xmlTemperature").xmlValue();
+    } else if (fileName == xmlHumidity) {
+        rootE = par("xmlHumidity").xmlValue();
+    } else if (fileName == xmlLight) {
+        rootE = par("xmlLight").xmlValue();
+    } else {
+        throw new exception;
     }
 
     // get a vector (of type cXMLElement) with all childs of the root-tag

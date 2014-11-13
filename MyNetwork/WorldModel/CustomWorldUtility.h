@@ -25,16 +25,11 @@
 class MIXIM_API CustomWorldUtility : public BaseWorldUtility, public StatisticsInterface
 {
 protected:
-    int numNodes;
-    int** temperatureArray;
-    int tempLengthX;
-    int tempLengthY;
-    int** pressureArray;
-    int pressLengthX;
-    int pressLengthY;
     int** readXML(int);
     void setTemperature();
     void setPressure();
+    void setHumidity();
+    void setLight();
     void initialize(int stage);
     void handleMessage(cMessage *msg);
     void generateEnvironmentData();
@@ -45,6 +40,22 @@ protected:
     ExtendedMessage* generateMessage(const char* msgname);
     void updateDisplay();
     void finish();
+protected:
+    int numNodes;
+    //sensor (world) data
+    int** temperatureArray;
+    int** pressureArray;
+    int** humidityArray;
+    int** lightArray;
+    //meta information about data
+    int tempLengthX;
+    int tempLengthY;
+    int pressLengthX;
+    int pressLengthY;
+    int humidityLengthX;
+    int humidityLengthY;
+    int lightLengthX;
+    int lightLengthY;
 public:
     CustomWorldUtility();
     ~CustomWorldUtility();
