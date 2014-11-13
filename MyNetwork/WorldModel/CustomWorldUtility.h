@@ -40,6 +40,7 @@ protected:
     ExtendedMessage* generateMessage(const char* msgname);
     void updateDisplay();
     void finish();
+    void sendSensorResponse(std::string);
 protected:
     int numNodes;
     //sensor (world) data
@@ -48,14 +49,8 @@ protected:
     int** humidityArray;
     int** lightArray;
     //meta information about data
-    int tempLengthX;
-    int tempLengthY;
-    int pressLengthX;
-    int pressLengthY;
-    int humidityLengthX;
-    int humidityLengthY;
-    int lightLengthX;
-    int lightLengthY;
+    int sizeX;
+    int sizeY;
 public:
     CustomWorldUtility();
     ~CustomWorldUtility();

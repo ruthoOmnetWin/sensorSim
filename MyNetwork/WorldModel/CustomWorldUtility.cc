@@ -22,6 +22,7 @@
 #include <cstring>
 #include <Coord.h>
 #include <SimpleCoord.h>
+#include <SimpleSensorData.h>
 using namespace std;
 
 #define xmlHumidity 0
@@ -31,14 +32,8 @@ using namespace std;
 
 CustomWorldUtility::CustomWorldUtility()
 {
-    this->tempLengthX = 0;
-    this->tempLengthY = 0;
-    this->pressLengthX = 0;
-    this->pressLengthY = 0;
-    this->lightLengthX = 0;
-    this->lightLengthY = 0;
-    this->humidityLengthX = 0;
-    this->humidityLengthY = 0;
+    this->sizeX = 0;
+    this->sizeY = 0;
 
     this->temperatureArray = 0;
     this->pressureArray = 0;
@@ -59,6 +54,9 @@ void CustomWorldUtility::initialize(int stage)
 {
     BaseWorldUtility::initialize(stage);
     ev << "Initializing World Model" << endl;
+
+    this->sizeX = par("playgroundSizeX");
+    this->sizeY = par("playgroundSizeY");
 
     if (par("createData")) {
         EV << "Generating New Environment Data" << endl;
@@ -104,6 +102,7 @@ void CustomWorldUtility::initialize(int stage)
     this->setHumidity();
     this->setLight();
 
+    /*
     //object = new cObject();
     int amountNodes = par("numGates");
     for (int i = 0; i < amountNodes; i++) {
@@ -117,6 +116,7 @@ void CustomWorldUtility::initialize(int stage)
         ExtendedMessage *newmsg = generateMessage("update pos");
         send(newmsg, "toNode$o", i);
     }
+    */
 }
 
 void CustomWorldUtility::handleMessage(cMessage *msg)
@@ -126,28 +126,66 @@ void CustomWorldUtility::handleMessage(cMessage *msg)
     delete msg;
     string requestType = name.substr(0,3);
     if (requestType == "GET") {
-        //int** data;
-        string sensorType = name.substr(4);
-        if (sensorType == "temperature") {
-            //data = this->temperatureArray;
-        } else if (sensorType == "pressure") {
-            //data = this->pressureArray;
-        } else if (sensorType == "humidity") {
-            //data = this->humidityArray;
-        }
+        this->sendSensorResponse(name.substr(4));
         //cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
         //send(newmsg , "worldDataGate$o", 1);
     }
     delete position;
 }
 
+void CustomWorldUtility::sendSensorResponse(string sensorType)
+{
+    SimpleSensorData *data;
+    if (sensorType == "temperature") {
+
+        data = new SimpleSensorData("data", this->temperatureArray);
+
+    } else if (sensorType == "pressure") {
+
+        data = new SimpleSensorData("data", this->pressureArray);
+
+    } else if (sensorType == "humidity") {
+
+        data = new SimpleSensorData("data", this->humidityArray);
+
+    } else if (sensorType == "light") {
+
+        data = new SimpleSensorData("data", this->humidityArray);
+
+    } else {
+        throw new exception;
+    }
+
+    ExtendedMessage *newmsg = generateMessage(sensorType.c_str());
+    newmsg->getParList().add(data);
+    send(newmsg, "toWorld$o");
+    numSent++;
+}
+
+ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)
+{
+    // Produce source and destination addresses.
+    int src = getIndex();   // our module index
+    int n = size();      // module vector size
+    int dest = 1;//intuniform(0,n-2);
+    if (dest==src) {
+        throw new exception;
+    }
+
+    // Create message object and set source and destination field.
+    ExtendedMessage *msg = new ExtendedMessage(msgname);
+    msg->setSource(src);
+    msg->setDestination(dest);
+    return msg;
+}
+
 void CustomWorldUtility::setTemperature()
 {
     int** data = readXML(xmlTemperature);
-    this->temperatureArray = new int*[tempLengthX];
-    for (int i = 0; i < tempLengthX; i++) {
-        this->pressureArray[i] = new int[tempLengthY];
-        for (int j = 0; j < tempLengthY; j++) {
+    this->temperatureArray = new int*[this->sizeX];
+    for (int i = 0; i < this->sizeX; i++) {
+        this->temperatureArray[i] = new int[this->sizeY];
+        for (int j = 0; j < this->sizeY; j++) {
             this->temperatureArray[i][j] = data[i][j];
         }
     }
@@ -157,10 +195,10 @@ void CustomWorldUtility::setTemperature()
 void CustomWorldUtility::setPressure()
 {
     int** data = readXML(xmlPressure);
-    this->pressureArray = new int*[pressLengthX];
-    for (int i = 0; i < pressLengthX; i++) {
-        this->pressureArray[i] = new int[pressLengthY];
-        for (int j = 0; j < pressLengthY; j++) {
+    this->pressureArray = new int*[this->sizeX];
+    for (int i = 0; i < this->sizeX; i++) {
+        this->pressureArray[i] = new int[this->sizeY];
+        for (int j = 0; j < this->sizeY; j++) {
             this->pressureArray[i][j] = data[i][j];
         }
     }
@@ -170,10 +208,10 @@ void CustomWorldUtility::setPressure()
 void CustomWorldUtility::setHumidity()
 {
     int** data = readXML(xmlHumidity);
-    this->humidityArray= new int*[humidityLengthX];
-    for (int i = 0; i < pressLengthX; i++) {
-        this->humidityArray[i] = new int[humidityLengthY];
-        for (int j = 0; j < humidityLengthY; j++) {
+    this->humidityArray= new int*[this->sizeX];
+    for (int i = 0; i < this->sizeX; i++) {
+        this->humidityArray[i] = new int[this->sizeY];
+        for (int j = 0; j < this->sizeY; j++) {
             this->humidityArray[i][j] = data[i][j];
         }
     }
@@ -183,10 +221,10 @@ void CustomWorldUtility::setHumidity()
 void CustomWorldUtility::setLight()
 {
     int** data = readXML(xmlLight);
-    this->lightArray = new int*[lightLengthX];
-    for (int i = 0; i < pressLengthX; i++) {
-        this->lightArray[i] = new int[lightLengthY];
-        for (int j = 0; j < lightLengthY; j++) {
+    this->lightArray = new int*[this->sizeX];
+    for (int i = 0; i < this->sizeX; i++) {
+        this->lightArray[i] = new int[this->sizeY];
+        for (int j = 0; j < this->sizeY; j++) {
             this->lightArray[i][j] = data[i][j];
         }
     }
@@ -231,11 +269,8 @@ int** CustomWorldUtility::readXML(int fileName)
 
 void CustomWorldUtility::generateEnvironmentData()
 {
-    double playgroundSizeX = par("playgroundSizeX");
-    double playgroundSizeY = par("playgroundSizeY");
-
-    int sizeA = (int)playgroundSizeX;
-    int sizeB = (int)playgroundSizeY;
+    int sizeA = this->sizeX;
+    int sizeB = this->sizeY;
     int size = sizeA * sizeB;
     string filenames[4] = {"humidity", "pressure", "temperature", "light"};
 
@@ -350,20 +385,6 @@ int* CustomWorldUtility::generateLight(int size)
     return data;
 }
 
-ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)
-{
-    // Produce source and destination addresses.
-    int src = getIndex();   // our module index
-    int n = size();      // module vector size
-    int dest = intuniform(0,n-2);
-    if (dest>=src) dest++;
-
-    // Create message object and set source and destination field.
-    ExtendedMessage *msg = new ExtendedMessage(msgname);
-    msg->setSource(src);
-    msg->setDestination(dest);
-    return msg;
-}
 
 void CustomWorldUtility::updateDisplay()
 {

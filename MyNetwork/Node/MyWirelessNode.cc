@@ -152,8 +152,10 @@ ExtendedMessage* MyWirelessNode::generateMessage(const char* msgname)
     // Produce source and destination addresses.
     int src = getIndex();   // our module index
     int n = size();      // module vector size
-    int dest = intuniform(0,n-2);
-    if (dest>=src) dest++;
+    int dest = 1;//intuniform(0,n-2);
+    if (dest==src) {
+        throw new std::exception;
+    }
 
     // Create message object and set source and destination field.
     ExtendedMessage *msg = new ExtendedMessage(msgname);
