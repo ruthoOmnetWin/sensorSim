@@ -21,6 +21,7 @@
 #include <FindModule.h>
 #include <MacToPhyInterface.h>
 #include <BasePhyLayer.h>
+#include <SimpleSensorData.h>
 
 Define_Module(MyWirelessNode);
 Register_Class(MyWirelessNode);
@@ -80,6 +81,7 @@ void MyWirelessNode::initialize(int stage)
     if (ev.isGUI()) {
         updateDisplay();
     }
+    this->requestData();
 }
 
 /**
@@ -87,51 +89,42 @@ void MyWirelessNode::initialize(int stage)
  */
 void MyWirelessNode::handleMessage(cMessage *msg)
 {
+    std::string msgName = msg->getName();
     if (msg->isSelfMessage()) {
         ev.bubble(this, "Selfmessage received");
-        delete msg;
     } else if (msg->getSenderModuleId() == 16){
         EV << "MyWirelessNode: Message from Network received" << endl;
-        std::string msgName = msg->getName();
         if (msgName == "GET type") {
             this->handleGetType(msg);
         }
-        delete msg;
     } else {
-        ExtendedMessage *extmsg = check_and_cast<ExtendedMessage *>(msg);
-        int hopcount = extmsg->getHopCount();
-        hopCountVector.record(hopcount);
-        hopCountStats.collect(hopcount);
-        numReceived++;
-        ev.bubble(this, msg->getName());
-        if (!msg->isSelfMessage()) {
-            delete msg;
-            updatePosition();
+        if (msgName.substr(0,4) == "POST") {
 
-            //generate messages for data requests
-            std::string request = "GET ";
-            if (this->type->humidity) {
-                this->sendDataRequest(request + this->typenames[0]);
-            }
-            if (this->type->pressure) {
-                this->sendDataRequest(request + this->typenames[1]);
-            }
-            if (this->type->temperature) {
-                this->sendDataRequest(request + this->typenames[2]);
-            }
-            if (this->type->light) {
-                this->sendDataRequest(request + this->typenames[3]);
-            }
+            SimpleSensorData* data = (SimpleSensorData*) msg->getParList().remove("data");
+            delete data;
 
-        }
-        if (ev.isGUI()) {
-            updateDisplay();
+        } else {
+            ExtendedMessage *extmsg = check_and_cast<ExtendedMessage *>(msg);
+            int hopcount = extmsg->getHopCount();
+            hopCountVector.record(hopcount);
+            hopCountStats.collect(hopcount);
+            numReceived++;
+            ev.bubble(this, msg->getName());
+            if (!msg->isSelfMessage()) {
+                this->requestData();
+            }
+            if (ev.isGUI()) {
+                updateDisplay();
+            }
         }
     }
+    delete msg;
 }
+
 
 void MyWirelessNode::handleGetType(cMessage* msg)
 {
+    /*
     EV << "MyWirelessNode: Got request for type" << endl;
     std::string name = "POST type";
     SimpleSensorType* sensorType = new SimpleSensorType("type", this->type);
@@ -144,6 +137,27 @@ void MyWirelessNode::handleGetType(cMessage* msg)
     gateName += "$o";
     int gateIndex = arrivalGate->getIndex();
     sendDirect(response, senderGate);//gateName.c_str(), gateIndex
+    */
+}
+
+void MyWirelessNode::requestData()
+{
+    updatePosition();
+
+    //generate messages for data requests
+    std::string request = "GET ";
+    if (this->type->humidity) {
+        this->sendDataRequest(request + this->typenames[0]);
+    }
+    if (this->type->pressure) {
+        this->sendDataRequest(request + this->typenames[1]);
+    }
+    if (this->type->temperature) {
+        this->sendDataRequest(request + this->typenames[2]);
+    }
+    if (this->type->light) {
+        this->sendDataRequest(request + this->typenames[3]);
+    }
 }
 
 void MyWirelessNode::sendDataRequest(std::string request)

@@ -69,6 +69,9 @@ ExtendedMessage::ExtendedMessage(const ExtendedMessage& other) : ::cMessage(othe
 
 ExtendedMessage::~ExtendedMessage()
 {
+    this->source_var = 0;
+    this->destination_var = 0;
+    this->hopCount_var = 0;
 }
 
 ExtendedMessage& ExtendedMessage::operator=(const ExtendedMessage& other)

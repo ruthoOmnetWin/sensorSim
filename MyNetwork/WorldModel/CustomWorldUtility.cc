@@ -39,6 +39,9 @@ CustomWorldUtility::CustomWorldUtility()
     this->pressureArray = 0;
     this->humidityArray = 0;
     this->lightArray = 0;
+
+    numSent = 0;
+    numReceived = 0;
 }
 
 CustomWorldUtility::~CustomWorldUtility()
@@ -137,30 +140,31 @@ void CustomWorldUtility::sendSensorResponse(string sensorType, cGate* srcGate)
     SimpleSensorData *data;
     if (sensorType == "temperature") {
 
-        data = new SimpleSensorData("data", this->temperatureArray);
+        data = new SimpleSensorData("data", this->temperatureArray, this->sizeX, this->sizeY);
 
     } else if (sensorType == "pressure") {
 
-        data = new SimpleSensorData("data", this->pressureArray);
+        data = new SimpleSensorData("data", this->pressureArray, this->sizeX, this->sizeY);
 
     } else if (sensorType == "humidity") {
 
-        data = new SimpleSensorData("data", this->humidityArray);
+        data = new SimpleSensorData("data", this->humidityArray, this->sizeX, this->sizeY);
 
     } else if (sensorType == "light") {
 
-        data = new SimpleSensorData("data", this->humidityArray);
+        data = new SimpleSensorData("data", this->lightArray, this->sizeX, this->sizeY);
 
     } else {
         throw new exception;
     }
 
-    ExtendedMessage *newmsg = generateMessage(sensorType.c_str());
+    string messageName = "POST ";
+    messageName += sensorType;
+    ExtendedMessage *newmsg = generateMessage(messageName.c_str());
     newmsg->getParList().add(data);
     string gateName = srcGate->getBaseName();
     gateName += "$o";
     int index = srcGate->getIndex();
-
     send(newmsg, gateName.c_str(), index);//"worldDataGate$o"
     numSent++;
 }

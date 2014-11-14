@@ -15,10 +15,12 @@ class SimpleSensorData : public cNamedObject
 public:
     virtual SimpleSensorData *dup() const {return new SimpleSensorData(*this);}
 public:
+    int sizeX;
+    int sizeY;
     int** sensorData;
     SimpleSensorData();
     virtual ~SimpleSensorData();
-    explicit SimpleSensorData(const char *name, int** sensorData, bool namepooling=true);
+    explicit SimpleSensorData(const char *name, int** sensorData, int sizeX, int sizeY, bool namepooling=true);
 };
 
 

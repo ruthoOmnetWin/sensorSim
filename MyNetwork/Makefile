@@ -225,6 +225,7 @@ $O/Node/MyWirelessNode.o: Node/MyWirelessNode.cc \
 	Node/Sensor/Sensor.h \
 	NodeType/NodeType.h \
 	SimpleCoord/SimpleCoord.h \
+	SimpleSensorData/SimpleSensorData.h \
 	SimpleSensorType/SimpleSensorType.h \
 	StatisticsInterface/StatisticsInterface.h
 $O/Node/Sensor/Sensor.o: Node/Sensor/Sensor.cc \

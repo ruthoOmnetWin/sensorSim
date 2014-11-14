@@ -39,6 +39,7 @@ protected:
     bool isPositive(int value);
     void sendDataRequest(std::string);
     void handleGetType(cMessage *msg);
+    void requestData();
 protected:
     Coord* position;
     SensorType* type;
