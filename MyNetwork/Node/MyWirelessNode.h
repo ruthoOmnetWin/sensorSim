@@ -43,10 +43,11 @@ protected:
 protected:
     Coord* position;
     SensorType* type;
+    int** sensorData;
 public:
     void updatePosition();
-    MyWirelessNode();
-    ~MyWirelessNode();
+    explicit MyWirelessNode();
+    virtual ~MyWirelessNode();
     int getSensorData();
     std::string* typenames;
 };

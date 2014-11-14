@@ -30,7 +30,7 @@ using namespace std;
 #define xmlTemperature 2
 #define xmlLight 3
 
-CustomWorldUtility::CustomWorldUtility()
+CustomWorldUtility::CustomWorldUtility() : BaseWorldUtility()
 {
     this->sizeX = 0;
     this->sizeY = 0;
@@ -46,11 +46,7 @@ CustomWorldUtility::CustomWorldUtility()
 
 CustomWorldUtility::~CustomWorldUtility()
 {
-    //TODO delete the 2-dim arrays
-    delete[] temperatureArray;
-    delete[] pressureArray;
-    delete[] lightArray;
-    delete[] humidityArray;
+
 }
 
 void CustomWorldUtility::initialize(int stage)
@@ -402,6 +398,8 @@ void CustomWorldUtility::updateDisplay()
 
 void CustomWorldUtility::finish()
 {
+    //this->destroySensorData();
+
     EV << "Sent:     " << numSent << endl;
     EV << "Received: " << numReceived << endl;
     EV << "Hop count, min:    " << hopCountStats.getMin() << endl;
@@ -413,4 +411,31 @@ void CustomWorldUtility::finish()
     recordScalar("#received", numReceived);
 
     hopCountStats.recordAs("hop count");
+}
+
+void CustomWorldUtility::destroySensorData()
+{
+    for (int i = 0; i < this->sizeX; i++) {
+        delete[] temperatureArray[i];
+        temperatureArray[i] = NULL;
+    }
+    //delete[] temperatureArray;
+
+    for (int i = 0; i < this->sizeX; i++) {
+        delete[] pressureArray[i];
+        pressureArray[i] = NULL;
+    }
+    //delete[] pressureArray;
+
+    for (int i = 0; i < this->sizeX; i++) {
+        delete[] lightArray[i];
+        lightArray[i] = NULL;
+    }
+    //delete[] lightArray;
+
+    for (int i = 0; i < this->sizeX; i++) {
+        delete[] humidityArray[i];
+        humidityArray[i] = NULL;
+    }
+    //delete[] humidityArray;
 }

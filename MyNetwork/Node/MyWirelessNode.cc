@@ -46,9 +46,11 @@ MyWirelessNode::MyWirelessNode()
 
 MyWirelessNode::~MyWirelessNode()
 {
-    delete componenttype;
-    delete position;
-    delete type;
+    delete this->componenttype;
+    delete this->position;
+    delete this->type;
+
+    //delete this->sensorData;
 }
 
 /**
@@ -68,6 +70,7 @@ void MyWirelessNode::updatePosition()
 
 /**
  * initialize the node
+ *
  */
 void MyWirelessNode::initialize(int stage)
 {
@@ -101,6 +104,15 @@ void MyWirelessNode::handleMessage(cMessage *msg)
         if (msgName.substr(0,4) == "POST") {
 
             SimpleSensorData* data = (SimpleSensorData*) msg->getParList().remove("data");
+            this->sensorData = data->sensorData;
+            int** arr = new int*[400];
+            for (int i = 0; i < 400; i++) {
+                arr[i] = new int[550];
+                for (int j = 0; j <550; j++) {
+                    arr[i][j] = data->sensorData[i][j];
+                }
+            }
+            this->sensorData = arr;
             delete data;
 
         } else {

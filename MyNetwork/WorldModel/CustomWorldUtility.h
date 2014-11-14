@@ -41,6 +41,7 @@ protected:
     void updateDisplay();
     void finish();
     void sendSensorResponse(std::string,cGate*);
+    void destroySensorData();
 protected:
     int numNodes;
     //sensor (world) data
@@ -52,8 +53,8 @@ protected:
     int sizeX;
     int sizeY;
 public:
-    CustomWorldUtility();
-    ~CustomWorldUtility();
+    explicit CustomWorldUtility();
+    virtual ~CustomWorldUtility();
 };
 
 Define_Module(CustomWorldUtility);
