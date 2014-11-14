@@ -31,6 +31,10 @@ MyWirelessNode::MyWirelessNode()
     NodeType *type = new NodeType("MyWirelessNode");
     this->componenttype = type;
     this->type = new sensorType;
+    this->type->humidity = false;
+    this->type->light = false;
+    this->type->pressure = false;
+    this->type->temperature = false;
     std::string *names = new std::string[4];
     names[0] = "humidity";
     names[1] = "pressure";
@@ -66,6 +70,7 @@ void MyWirelessNode::updatePosition()
  */
 void MyWirelessNode::initialize(int stage)
 {
+    this->findSensorType();
     this->updatePosition();
     ev.bubble(this, "Initialized Position");
     numSent = 0;
@@ -82,35 +87,46 @@ void MyWirelessNode::initialize(int stage)
  */
 void MyWirelessNode::handleMessage(cMessage *msg)
 {
-    ExtendedMessage *extmsg = check_and_cast<ExtendedMessage *>(msg);
-    int hopcount = extmsg->getHopCount();
-    hopCountVector.record(hopcount);
-    hopCountStats.collect(hopcount);
-    numReceived++;
-    ev.bubble(this, msg->getName());
-    if (!msg->isSelfMessage()) {
+    if (msg->isSelfMessage()) {
+        ev.bubble(this, "Selfmessage received");
         delete msg;
-        updatePosition();
-        this->findSensorType();
+    } else if (msg->getSenderModuleId()){
+        EV << "MyWirelessNode: Message from Network received" << endl;
+        if (msg->getName() == "GET type") {
+            EV << "MyWirelessNode: Got request for type" << endl;
+            this->type;
+        }
+        delete msg;
+    } else {
+        ExtendedMessage *extmsg = check_and_cast<ExtendedMessage *>(msg);
+        int hopcount = extmsg->getHopCount();
+        hopCountVector.record(hopcount);
+        hopCountStats.collect(hopcount);
+        numReceived++;
+        ev.bubble(this, msg->getName());
+        if (!msg->isSelfMessage()) {
+            delete msg;
+            updatePosition();
 
-        //generate messages for data requests
-        std::string request = "GET ";
-        if (this->type->humidity) {
-            this->sendDataRequest(request + this->typenames[0]);
-        }
-        if (this->type->pressure) {
-            this->sendDataRequest(request + this->typenames[1]);
-        }
-        if (this->type->temperature) {
-            this->sendDataRequest(request + this->typenames[2]);
-        }
-        if (this->type->light) {
-            this->sendDataRequest(request + this->typenames[3]);
-        }
+            //generate messages for data requests
+            std::string request = "GET ";
+            if (this->type->humidity) {
+                this->sendDataRequest(request + this->typenames[0]);
+            }
+            if (this->type->pressure) {
+                this->sendDataRequest(request + this->typenames[1]);
+            }
+            if (this->type->temperature) {
+                this->sendDataRequest(request + this->typenames[2]);
+            }
+            if (this->type->light) {
+                this->sendDataRequest(request + this->typenames[3]);
+            }
 
-    }
-    if (ev.isGUI()) {
-        updateDisplay();
+        }
+        if (ev.isGUI()) {
+            updateDisplay();
+        }
     }
 }
 
@@ -153,12 +169,10 @@ ExtendedMessage* MyWirelessNode::generateMessage(const char* msgname)
     int src = getIndex();   // our module index
     int n = size();      // module vector size
     int dest = 1;//intuniform(0,n-2);
-    if (dest==src) {
-        throw new std::exception;
-    }
 
     // Create message object and set source and destination field.
     ExtendedMessage *msg = new ExtendedMessage(msgname);
+    dest = msg->getArrivalGateId();
     msg->setSource(src);
     msg->setDestination(dest);
     return msg;

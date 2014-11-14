@@ -123,17 +123,18 @@ void CustomWorldUtility::handleMessage(cMessage *msg)
 {
     SimpleCoord *position = (SimpleCoord*) msg->getParList().remove("pos");
     string name = msg->getName();
+    cGate* srcGate = msg->getArrivalGate();
     delete msg;
     string requestType = name.substr(0,3);
     if (requestType == "GET") {
-        this->sendSensorResponse(name.substr(4));
+        this->sendSensorResponse(name.substr(4), srcGate);
         //cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
         //send(newmsg , "worldDataGate$o", 1);
     }
     delete position;
 }
 
-void CustomWorldUtility::sendSensorResponse(string sensorType)
+void CustomWorldUtility::sendSensorResponse(string sensorType, cGate* srcGate)
 {
     SimpleSensorData *data;
     if (sensorType == "temperature") {
@@ -158,7 +159,11 @@ void CustomWorldUtility::sendSensorResponse(string sensorType)
 
     ExtendedMessage *newmsg = generateMessage(sensorType.c_str());
     newmsg->getParList().add(data);
-    send(newmsg, "toWorld$o");
+    string gateName = srcGate->getBaseName();
+    gateName += "$o";
+    int index = srcGate->getIndex();
+
+    send(newmsg, gateName.c_str(), index);//"worldDataGate$o"
     numSent++;
 }
 

@@ -40,7 +40,7 @@ protected:
     ExtendedMessage* generateMessage(const char* msgname);
     void updateDisplay();
     void finish();
-    void sendSensorResponse(std::string);
+    void sendSensorResponse(std::string,cGate*);
 protected:
     int numNodes;
     //sensor (world) data
