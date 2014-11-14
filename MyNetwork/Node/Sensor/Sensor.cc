@@ -14,7 +14,6 @@
 // 
 
 #include <Sensor.h>
-#include <string.h>
 #include <NodeType.h>
 #include <FindModule.h>
 using namespace std;
@@ -31,22 +30,9 @@ Sensor::~Sensor()
 
 void Sensor::initialize(int stage)
 {
-    std::string type = "type";
-    std::string request = "GET ";
-    request += type;
-    //this->updatePosition();
-    ExtendedMessage *newmsg = new ExtendedMessage(request.c_str());
-    //newmsg->getParList().add(position);
-    send(newmsg, "toNode$o");
 }
 
 void Sensor::handleMessage(cMessage *msg)
 {
     delete msg;
-    /*
-    bubble("Sensor red data");
-    string message;
-    message = msg->getName();
-    EV << "received:" << msg->info() << "with message" << message << endl;
-    send(msg, "worldDataGate$o");*/
 }

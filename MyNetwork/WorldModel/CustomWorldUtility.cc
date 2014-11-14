@@ -128,8 +128,6 @@ void CustomWorldUtility::handleMessage(cMessage *msg)
     string requestType = name.substr(0,3);
     if (requestType == "GET") {
         this->sendSensorResponse(name.substr(4), srcGate);
-        //cMessage *newmsg  = new cMessage(SIMTIME_STR(simTime()));
-        //send(newmsg , "worldDataGate$o", 1);
     }
     delete position;
 }

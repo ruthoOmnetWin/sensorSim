@@ -19,6 +19,7 @@
 #include <omnetpp.h>
 #include <CustomLinearMobility.h>
 #include <ExtendedMessage_m.h>
+#include <string.h>
 
 class Sensor : public cSimpleModule//: public CustomLinearMobility
 {
@@ -27,7 +28,6 @@ protected:
     void handleMessage(cMessage *msg);
     void activity(){};
     void finish(){};
-
 
 public:
     /**

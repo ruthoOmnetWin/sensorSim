@@ -23,13 +23,7 @@
 #include <Coord.h>
 #include <ExtendedMessage_m.h>
 #include <StatisticsInterface.h>
-
-struct sensorType {
-    bool temperature;
-    bool pressure;
-    bool light;
-    bool humidity;
-};
+#include <SimpleSensorType.h>
 
 class MyWirelessNode : public Sensor, public StatisticsInterface     //cCompoundModule public cSimpleModule,
 {
@@ -44,9 +38,10 @@ protected:
     void findSensorType();
     bool isPositive(int value);
     void sendDataRequest(std::string);
+    void handleGetType(cMessage *msg);
 protected:
     Coord* position;
-    sensorType* type;
+    SensorType* type;
 public:
     void updatePosition();
     MyWirelessNode();

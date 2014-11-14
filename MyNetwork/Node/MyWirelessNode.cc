@@ -30,7 +30,7 @@ MyWirelessNode::MyWirelessNode()
     position = new Coord();
     NodeType *type = new NodeType("MyWirelessNode");
     this->componenttype = type;
-    this->type = new sensorType;
+    this->type = new SensorType;
     this->type->humidity = false;
     this->type->light = false;
     this->type->pressure = false;
@@ -90,11 +90,11 @@ void MyWirelessNode::handleMessage(cMessage *msg)
     if (msg->isSelfMessage()) {
         ev.bubble(this, "Selfmessage received");
         delete msg;
-    } else if (msg->getSenderModuleId()){
+    } else if (msg->getSenderModuleId() == 16){
         EV << "MyWirelessNode: Message from Network received" << endl;
-        if (msg->getName() == "GET type") {
-            EV << "MyWirelessNode: Got request for type" << endl;
-            this->type;
+        std::string msgName = msg->getName();
+        if (msgName == "GET type") {
+            this->handleGetType(msg);
         }
         delete msg;
     } else {
@@ -130,10 +130,26 @@ void MyWirelessNode::handleMessage(cMessage *msg)
     }
 }
 
+void MyWirelessNode::handleGetType(cMessage* msg)
+{
+    EV << "MyWirelessNode: Got request for type" << endl;
+    std::string name = "POST type";
+    SimpleSensorType* sensorType = new SimpleSensorType("type", this->type);
+    ExtendedMessage* response = this->generateMessage(name.c_str());
+    response->getParList().add(sensorType);
+    cGate* senderGate = msg->getSenderGate();
+    std::string fullName = senderGate->getFullName();
+    cGate* arrivalGate = msg->getArrivalGate();
+    std::string gateName = arrivalGate->getBaseName();
+    gateName += "$o";
+    int gateIndex = arrivalGate->getIndex();
+    sendDirect(response, senderGate);//gateName.c_str(), gateIndex
+}
+
 void MyWirelessNode::sendDataRequest(std::string request)
 {
     ExtendedMessage *newmsg = generateMessage(request.c_str());
-    SimpleCoord *coord = new SimpleCoord("pos", position);
+    SimpleCoord *coord = new SimpleCoord("pos", this->position);
     newmsg->getParList().add(coord);
     std::stringstream s;
     s << "X: " << coord->x << " Y: " << coord->y;

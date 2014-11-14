@@ -28,6 +28,6 @@ module LNode extends MyWirelessNode
         }
     
     connections:
-        toSensor[0] <--> {  delay = 0ms; } <--> LightSensor.toNode;
-        worldGate[0] <--> {  delay = measureTime; } <--> LightSensor.worldDataGate;
+        toSensor++ <--> {  delay = 0ms; } <--> LightSensor.toNode;
+        worldGate++ <--> {  delay = measureTime; } <--> LightSensor.worldDataGate;
 }

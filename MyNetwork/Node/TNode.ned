@@ -28,6 +28,6 @@ module TNode extends MyWirelessNode
         }
     
     connections:
-        toSensor[0] <--> {  delay = 0ms; } <--> TemperatureSensor.toNode;
-        worldGate[0] <--> {  delay = measureTime; } <--> TemperatureSensor.worldDataGate;
+        toSensor++ <--> {  delay = 0ms; } <--> TemperatureSensor.toNode;
+        worldGate++ <--> {  delay = measureTime; } <--> TemperatureSensor.worldDataGate;
 }
