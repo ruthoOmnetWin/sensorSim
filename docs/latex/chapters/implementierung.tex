@@ -46,9 +46,57 @@ Sollte nun ein Sensor nach dem Wert an seiner aktuellen Position fragen, so kann
 \includegraphics[width=\textwidth]{CustomWorldUtility2}
 \end{center}
 
+\paragraph{ExtendedMessage}
+
+ExtendedMessage erbt direkt von der Klasse cMessage, der Standard-Nachrichtenklasse in Omnet++. Im Grunde stellt cMessage alle benötigten Funktionen bereit. ExtendedMessage ist nur aus dem Grund vorhanden, um zusätzliche Statistiken über Nachrichten erstellen zu können, zum Beispiel wie oft eine einzelne Nachricht weitergesendet wurde.
+
+\begin{center}
+\includegraphics{ExtendedMessage}
+\end{center}
+
+\paragraph{MyWirelessNode und Sensor}
+
+MyWirelessNode implementiert das StatisticsInterface und erbt von der Klasse Sensor, welche vom cSimpleModule erbt. Die Klasse Sensor soll lediglich mehr Struktur in die Klasse MyWirelessNode bringen und die Funktionen und Attribute in jene unterteilen, welche für die allgemeine Kommunikation und weiteres verantwortlich sind und jene, die nur für die Sensordaten zuständig sind. \newline
+
+\begin{center}
+\includegraphics{MyWirelessNode}
+\end{center}
+
+Es ist neben der Klasse für die Umwelt CustomWorldUtility die zweite essentielle Klasse der Simulation. Das Verhalten aller Knoten im Netzwerk wird durch MyWirelessNode definiert. Neben den Standardfunktionen eines Omnet++-Moduls, \textbf{initialize()}, \textbf{handleMessage()} und \textbf{finish()}, können Knoten zum Beispiel ihre Position abfragen. \newline
+Dazu dient die Funktion \textbf{updatePosition()}, welche das Attribut \textbf{position} aktualisiert. Des weiteren beinhaltet das Modul Funktionen zum Anfordern von Umweltdaten. Dies erfolgt über einen GET request an das World-Modul, welches anschließend eine Antwort darauf sendet.
+
+\paragraph{NodeType}
+
+\begin{center}
+\includegraphics{NodeType}
+\end{center}
+
+NodeType erbt von der Klasse cModuleType und erfüllt den gleichen Zweck. Es ist dazu da die MyWirelessNode-Klassen für jeden Knoten anzulegen, sodass diese global bekannt sind, verwendet werden können und am Ende der Simulation wieder gelöscht werden.
+
+\paragraph{SensorType}
+
+\begin{center}
+\includegraphics{SensorType}
+\end{center}
+
+Die Klasse SensorType ist eine Helferklasse für MyWirelessNode. Es besitzt lediglich 4 Attribute, welche definieren ob der jeweilige Knoten einen bestimmten Typ von Sensor besitzt oder nicht.
+
+\paragraph{Simple*}
+
+\begin{center}
+\includegraphics{SimpleClasses}
+\end{center}
+
+Es gibt die 3 Klassen SimpleCoord, SimpleSensorData und SimpleSensorType.  Sie erben jeweils direkt von cNamedObject und beinhalten nur wenige Attribute. So enthält SimpleCoord beispielsweise 3 Attribute x, y und z, um Koordinaten zu repräsentieren.\newline
+cNamedObject und ebenso Kinderklassen davon lassen sich per leicht cMessage übertragen. Alle haben daher den Zweck eine einfache Kommunikation zu ermöglichen. So wird beispielsweise SimpleCoord benutzt, um beim Anfordern von Sensordaten in MyWirelessNode die Koordinaten an die CustomWorldUtility mit zu übertragen, damit in der Response der jeweilige Datensatz der richtigen Position zurückgegeben wird.
+
+\paragraph{StatisticsInterface}
+
+Dieses Interface enthält grundlegende Attribute für Statistiken. Klassen die dieses implementieren speichern somit zum Beispiel wie viele Nachrichten sie empfangen oder gesendet haben.
+
 \subsection{Netzwerk}
 
-alle elemente in NED beschreiben (also alles was nicht schon in der vorherigen section erklärt wurde)
+
 
 \section{Funktionsweise}
 
