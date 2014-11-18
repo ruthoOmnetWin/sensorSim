@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{doxygen}
+{\em Doxygen}.
+\newblock Online unter \url{www.doxygen.org/}; zuletzt besucht am 18. November
+  2014.
+
 \bibitem{eclipse}
 {\em Eclipse}.
 \newblock Online unter \url{https://www.eclipse.org/}; zuletzt besucht am 5.
@@ -46,11 +51,29 @@
 \newblock Online unter \url{http://de.wikipedia.org/wiki/Sensornetz}; zuletzt
   besucht am 5. August 2014.
 
+\bibitem{openwns}
+{\sc Daniel~Bültmann, Maciej~Mühleisen, Sebastian Max (Chair of Communication
+  Networks RWTH Aachen~University)}: {\em openWNS}.
+\newblock Online unter \url{http://openwns.org}; zuletzt besucht am 18.
+  November 2014.
+
+\bibitem{ns3}
+{\sc George F.~Riley, Thomas R.~Henderson}: {\em The ns-3 Network Simulator}.
+\newblock Online unter \url{http://www.nsnam.org/}; zuletzt besucht am 18.
+  November 2014.
+
 \bibitem{hsc}
 {\sc Hardt, Prof. Dr.~Wolfram}: {\em Veranstaltungen zu Hard-/Software Codesign
   2}.
 \newblock Online unter
   \url{https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/4563599363};
   zuletzt besucht am 18. August 2014.
+
+\bibitem{ikr}
+{\sc Jörg~Sommer, Joachim Scharf (Institute of Communication~Networks}
+  \btxandlong{}\ {\sc Computer~Engineering der Universität~Stuttgart)}: {\em
+  IKR Simulation Library (IKR SimLib)}.
+\newblock Online unter \url{http://www.ikr.uni-stuttgart.de/IKRSimLib/};
+  zuletzt besucht am 18. November 2014.
 
 \end{thebibliography}

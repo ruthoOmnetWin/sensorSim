@@ -1,0 +1,477 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Compound Module <i>TPNode</i></h2>
+<b>Package:</b> mynetwork.Node<br/><b>File: <a href="Node-TPNode.ned.html">Node/TPNode.ned</a></b><br/><p>(no description)</p><img src="mynetwork.Node.TPNode-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseArp.html" title="IBaseArp" alt="IBaseArp" coords="122,124,166,187">
+<area shape="rect" href="../../../MiXiM/doc/neddoc/inet.mobility.IMobility.html" title="IMobility" alt="IMobility" coords="116,54,168,117">
+<area shape="rect" href="../../../MiXiM/doc/neddoc/org.mixim.modules.nic.IWirelessNicUpperCtrl.html" title="IWirelessNicUpperCtrl" alt="IWirelessNicUpperCtrl" coords="52,404,96,467">
+<area shape="rect" href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html" title="IBaseNetwLayer" alt="IBaseNetwLayer" coords="52,334,96,397">
+<area shape="rect" href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html" title="IBaseNetwLayer" alt="IBaseNetwLayer" coords="52,264,96,327">
+<area shape="rect" href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html" title="IBaseNetwLayer" alt="IBaseNetwLayer" coords="52,194,96,257">
+<area shape="rect" href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html" title="IBaseNetwLayer" alt="IBaseNetwLayer" coords="52,124,96,187">
+<area shape="rect" href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseApplLayer.html" title="IBaseApplLayer" alt="IBaseApplLayer" coords="55,61,94,110">
+<area shape="rect" href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html" title="BatteryStats" alt="BatteryStats" coords="105,264,180,327">
+<area shape="rect" href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html" title="SimpleBattery" alt="SimpleBattery" coords="120,194,166,257">
+<area shape="rect" href="mynetwork.Node.Sensor.TemperatureSensor.html" title="TemperatureSensor" alt="TemperatureSensor" coords="82,404,202,467">
+<area shape="rect" href="mynetwork.Node.Sensor.PressureSensor.html" title="PressureSensor" alt="PressureSensor" coords="95,334,189,397">
+</map>
+<h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="mynetwork.Node.MyWirelessNode.html">MyWirelessNode</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Networks:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="mynetwork.MyNetwork.html">MyNetwork</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+
+<p>extends BaseNetwork</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>networkType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"BaseNetwLayer"</td>
+   <td>
+<p>type of the network layer</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>transportType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"Aggregation"</td>
+   <td>
+<p>type of the transport layer</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>sessionType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>type of the session layer</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>presentationType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>type of the presentation layer</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>applicationType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"SensorApplLayer"</td>
+   <td>
+<p>type of the application layer</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>mobilityType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"CustomLinearMobility"</td>
+   <td>
+<p>type of the mobility module</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>arpType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"org.mixim.modules.netw.ArpHost"</td>
+   <td>
+<p>type of address resolution module</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>nicType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"Nic802154_TI_CC2420"</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>numHosts</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>total number of hosts in the network</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>measureTime</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100ms</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>test</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td>xmldoc("Node/test.xml")</td>
+   <td>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>bgb=210,450,white;i=device/palm;i2=status/battery;b=40,40,rect</i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>node</td>
+   <td><i></i></td>
+   <td>
+</td>
+</tr>
+<tr>
+   <td>class</td>
+   <td><i>MyWirelessNode</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>radioIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>gate for sendDirect</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>toWorld</xsl:if></td>
+   <td><i>inout</i></td>
+   <td></td>   <td>
+<p>inout wirelessNodeToSensor[];
+inout worldGate[];</p>
+</td>
+</tr>
+<tr class="local">
+   <td>toSensor [ ]</xsl:if></td>
+   <td><i>inout</i></td>
+   <td>2</td>   <td></td>
+</tr>
+<tr class="local">
+   <td>worldGate [ ]</xsl:if></td>
+   <td><i>inout</i></td>
+   <td>2</td>   <td>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">netwl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">netwl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">tranl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">tranl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">sessl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">sessl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">presl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">presl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseApplLayer.html">appl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the application message header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.notAffectedByHostState</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>write per-activity and per-device statistics to omnetpp.sca
+(if false, only total energy and lifetime are written)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.detail</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>subscribe to battery status and record time series
+data in omnetpp.vec (resolution depends on battery's 
+publishDelta)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.timeSeries</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.nominal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>nominal battery capacity</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.capacity</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>battery capacity</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.voltage</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>nominal voltage</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.resolution</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>capacity is updated at least every resolution time</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.publishDelta</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>if &gt; 0, capacity is published to the BB each publishTime 
+interval</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.publishTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>number of modules that will draw energy from the 
+battery</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.numDevices</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #800000; font-weight: bold; ">module</span><span style="color: #000000; "> </span><span style="color: #000000; ">TPNode</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">MyWirelessNode</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">inout</span><span style="color: #000000; "> </span><span style="color: #000000; ">toSensor</span><span style="color: #000000; ">[</span><span style="color: #008000; ">2</span><span style="color: #000000; ">];
+        </span><span style="color: #000080; font-weight: bold; ">inout</span><span style="color: #000000; "> </span><span style="color: #000000; ">worldGate</span><span style="color: #000000; ">[</span><span style="color: #008000; ">2</span><span style="color: #000000; ">];
+
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">TemperatureSensor</span><span style="color: #000000; ">: </span><span style="color: #000000; ">TemperatureSensor</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=140,380&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">PressureSensor</span><span style="color: #000000; ">: </span><span style="color: #000000; ">PressureSensor</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=140,310&quot;</span><span style="color: #000000; ">);
+        }
+
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">toSensor</span><span style="color: #000000; ">[</span><span style="color: #008000; ">0</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> {  </span><span style="color: #000000; ">delay</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">; } </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">TemperatureSensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toNode</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">worldGate</span><span style="color: #000000; ">[</span><span style="color: #008000; ">0</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> {  </span><span style="color: #000000; ">delay</span><span style="color: #000000; "> = </span><span style="color: #000000; ">measureTime</span><span style="color: #000000; ">; } </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">TemperatureSensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">worldDataGate</span><span style="color: #000000; ">;
+
+        </span><span style="color: #000000; ">toSensor</span><span style="color: #000000; ">[</span><span style="color: #008000; ">1</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> {  </span><span style="color: #000000; ">delay</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">ms</span><span style="color: #000000; ">; } </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">PressureSensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toNode</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">worldGate</span><span style="color: #000000; ">[</span><span style="color: #008000; ">1</span><span style="color: #000000; ">] </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> {  </span><span style="color: #000000; ">delay</span><span style="color: #000000; "> = </span><span style="color: #000000; ">measureTime</span><span style="color: #000000; ">; } </span><span style="color: #800000; font-weight: bold; ">&lt;--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">PressureSensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">worldDataGate</span><span style="color: #000000; ">;
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

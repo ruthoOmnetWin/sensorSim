@@ -1,0 +1,194 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>LightSensor</i></h2>
+<b>Package:</b> mynetwork.Node.Sensor<br/><b>File: <a href="Node-Sensor-LightSensor.ned.html">Node/Sensor/LightSensor.ned</a></b><br/><p><a href="../doxy/classSensor.html" target="mainframe"><b>C++ definition</b></a></p>
+<p>(no description)</p><img src="mynetwork.Node.Sensor.LightSensor-type.png" ismap="yes" usemap="#type-diagram"/><map name="type-diagram">
+<area shape="rect" href="mynetwork.Node.Sensor.LightSensor.html" title="LightSensor" alt="LightSensor" coords="0,33,117,73">
+</map>
+<h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="mynetwork.Node.Sensor.Sensor.html">Sensor</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Used in compound modules:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="mynetwork.Node.HLNode.html">HLNode</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="mynetwork.Node.HLPNode.html">HLPNode</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="mynetwork.Node.LNode.html">LNode</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="mynetwork.Node.LPNode.html">LPNode</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="mynetwork.Node.THLNode.html">THLNode</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="mynetwork.Node.THLPNode.html">THLPNode</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="mynetwork.Node.TLNode.html">TLNode</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="mynetwork.Node.TLPNode.html">TLPNode</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>type</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"light"</td>
+   <td>
+<p>type of the sensor</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=block/wrx</i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>class</td>
+   <td><i>Sensor</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>toNode</xsl:if></td>
+   <td><i>inout</i></td>
+   <td></td>   <td></td>
+</tr>
+<tr class="inherited">
+   <td>worldDataGate</xsl:if></td>
+   <td><i>inout</i></td>
+   <td></td>   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">LightSensor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">type</span><span style="color: #000000; "> = </span><span style="color: #008000; ">&quot;light&quot;</span><span style="color: #000000; ">;
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>
