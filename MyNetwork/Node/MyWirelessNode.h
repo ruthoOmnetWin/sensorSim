@@ -43,7 +43,10 @@ protected:
 protected:
     Coord* position;
     SensorType* type;
-    int** sensorData;
+    int temperatureData;
+    int pressureData;
+    int lightData;
+    int humidityData;
 public:
     void updatePosition();
     explicit MyWirelessNode();

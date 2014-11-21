@@ -15,7 +15,7 @@ Die Klassenübersichten wurden teilweise mit Hilfe von doxygen\cite{doxygen} ers
 \includegraphics{Klassenuebersicht}
 \end{center}
 
-\paragraph{CustomLinearMobility}
+\subsubsection{CustomLinearMobility}
 
 \begin{center}
 \includegraphics{CustomLinearMobility}
@@ -24,7 +24,7 @@ Die Klassenübersichten wurden teilweise mit Hilfe von doxygen\cite{doxygen} ers
 Diese Klasse erbt direkt von der in MiXiM definierten LinearMobility. Sie ist um einige Parameter erweitert, die es ermöglichen, dass die Knoten beschleunigen können und eine maximale Geschwindigkeit \textbf{maxSpeed} erreichen, sollte eine definiert sein.
 Der Parameter \textbf{maxSpeed} kann ebenso auf 0 gesetzt werden, um die Knoten von mobil in stationär umzuwandeln.
 
-\paragraph{CustomWorldUtility}
+\subsubsection{CustomWorldUtility}
 
 Die Klasse CustomWorldUtility ist eine der wichtigsten für die Simulation. Sie repräsentiert den \textbf{Playground}, also den Bereich indem sich die Knoten befinden. Sie erbt von der Klasse BaseWorldUtility aus dem MiXiM-Framework. BaseWorldUtility stellt die nötigen Funktionalitäten für den Playground bereit. \newline
 
@@ -46,15 +46,97 @@ Sollte nun ein Sensor nach dem Wert an seiner aktuellen Position fragen, so kann
 \includegraphics[width=\textwidth]{CustomWorldUtility2}
 \end{center}
 
-\paragraph{ExtendedMessage}
+\paragraph{Einblick in einige Funktionen}
 
-ExtendedMessage erbt direkt von der Klasse cMessage, der Standard-Nachrichtenklasse in Omnet++. Im Grunde stellt cMessage alle benötigten Funktionen bereit. ExtendedMessage ist nur aus dem Grund vorhanden, um zusätzliche Statistiken über Nachrichten erstellen zu können, zum Beispiel wie oft eine einzelne Nachricht weitergesendet wurde.
+Wie im vorigen Abschnitt beschrieben übernimmt die Funktion generateEnvironmentData() das Erstellen von Umweltparametern. Dafür ruft sie, je nach Sensordatentyp, eine der folgenden Funktionen auf:
 
-\begin{center}
-\includegraphics{ExtendedMessage}
-\end{center}
+\begin{multicols}{2}
+\begin{itemize}
+\item generateTemperature() - $^\circ $C
+\item generatePressure() - hPa
+\item generateHumidity()- \%
+\item generateLight() - lx
+\end{itemize}
+\end{multicols}
 
-\paragraph{MyWirelessNode und Sensor}
+Diese Funktionen generieren ein 2-dimensionales Array in der Größe des Playgrounds mit Werten, die die jeweils oben angegebenen Einheiten besitzen. In Listing \ref{lst:generateTemp} ist die generateTemperature()-Funktion als ein Beispiel aufgeführt. Im Falle dieser Funktion werden Zufällige integer-Werte generiert, welche sich im Bereich 10 bis 30 bewegen.
+
+\begin{lstlisting}[language=C++, label=lst:generateTemp]
+int* CustomWorldUtility::generateTemperature(int size)
+{
+    int* data = new int[size];
+    for (int i = 0; i < size; i++) {
+        //10 - 30
+        data[i] = (int)((rand() % 100)/5) + 10;
+    }
+    return data;
+}
+\end{lstlisting}
+
+Um eben diese Daten wieder lesen zu können dient die Funktion readXML(). Sie verwendet die cXMLElement-Funktionen aus dem Omnet++-Framework. Diese ist sehr hilfreich beim Verarbeiten von XML-Dateien. Da in dieser Simulation die Umweltparameter in Form von XML gespeichert sind, ist dies eine sehr nützliche Funktionalität.
+
+\begin{lstlisting}[language=C++]
+int** CustomWorldUtility::readXML(int fileName)
+{
+    // get the xml from the parameter, return type cXMLElement
+    [...]
+
+    // get a vector (of type cXMLElement) with all childs of the root-tag
+    cXMLElementList nListRows = rootE->getChildren();
+    int amountRows = nListRows.size();
+
+    int** data = new int*[amountRows];
+    for (int i = 0; i < amountRows; i++){
+        //this is a row as cXMLElement
+        cXMLElement* nListRowArray = nListRows[i];
+        //this is a list of an entire row as cXMLElements
+        cXMLElementList nLeafElementsList = nListRowArray->getChildren();
+        int amountColumns = nLeafElementsList.size();
+        data[i] = new int[amountColumns];
+        for (int j = 0; j < amountColumns; j++) {
+            data[i][j] = atoi(nLeafElementsList[i]->getNodeValue());
+        }
+    }
+
+    return data;
+}
+\end{lstlisting}
+
+Die bis jetzt beschriebenen Funktionen werden alle bereits bei der Initialisierung der Simulation ausgeführt. Während der Laufzeit sind dagegen Andere von Bedeutung. Die zentrale Funktion für die Kommunikation ist hier, wie auch bei anderen Klassen, die handleMessage(cMessage)-Funktion. \newline
+Diese wartet auf eine Nachricht vom Typ 'GET [Sensortyp]'. Sollte eine solche Nachricht ankommen, so ist diese vom Typ ExtendedMessage, kommt von einem Sensor und enthält einen Parameter, welcher die Position des anfragenden Sensors beinhaltet. Mit diesen Informationen wird die Funktion sendSensorResponse aufgerufen.
+
+\begin{lstlisting}[language=C++]
+void CustomWorldUtility::sendSensorResponse(string sensorType, cGate* srcGate, SimpleCoord* position)
+{
+    SimpleSensorData *data;
+    if (sensorType == "temperature") {
+        data = new SimpleSensorData("data", this->temperatureArray[(int)position->x][(int)position->y]);
+    } else if (sensorType == "pressure") {
+        data = new SimpleSensorData("data", this->pressureArray[(int)position->x][(int)position->y]);
+    } else if (sensorType == "humidity") {
+        data = new SimpleSensorData("data", this->humidityArray[(int)position->x][(int)position->y]);
+    } else if (sensorType == "light") {
+        data = new SimpleSensorData("data", this->lightArray[(int)position->x][(int)position->y]);
+    } else {
+        throw new exception;
+    }
+
+    string messageName = "POST ";
+    messageName += sensorType;
+    ExtendedMessage *newmsg = generateMessage(messageName.c_str());
+    newmsg->getParList().add(data);
+    string gateName = srcGate->getBaseName();
+    gateName += "$o";
+    int index = srcGate->getIndex();
+    send(newmsg, gateName.c_str(), index);//"worldDataGate$o"
+    numSent++;
+}
+\end{lstlisting}
+
+Diese erzeugt eine Antwort auf den GET-Request. Mit Hilfe des Sensortypes und der Position auf dem Playground wird das korrekte Parameterarray und die x- und y-Koordinate bestimmt und der darin stehende Integer-Wert als SimpleSensorData gespeichert.
+Diese neu erzeugt Instanz wird anschließend an eine Nachricht der Form 'POST [Sensortyp]' angehängt und an den Sender zurück geschickt.
+
+\subsubsection{MyWirelessNode und Sensor}
 
 MyWirelessNode implementiert das StatisticsInterface und erbt von der Klasse Sensor, welche vom cSimpleModule erbt. Die Klasse Sensor soll lediglich mehr Struktur in die Klasse MyWirelessNode bringen und die Funktionen und Attribute in jene unterteilen, welche für die allgemeine Kommunikation und weiteres verantwortlich sind und jene, die nur für die Sensordaten zuständig sind. \newline
 
@@ -65,7 +147,7 @@ MyWirelessNode implementiert das StatisticsInterface und erbt von der Klasse Sen
 Es ist neben der Klasse für die Umwelt CustomWorldUtility die zweite essentielle Klasse der Simulation. Das Verhalten aller Knoten im Netzwerk wird durch MyWirelessNode definiert. Neben den Standardfunktionen eines Omnet++-Moduls, \textbf{initialize()}, \textbf{handleMessage()} und \textbf{finish()}, können Knoten zum Beispiel ihre Position abfragen. \newline
 Dazu dient die Funktion \textbf{updatePosition()}, welche das Attribut \textbf{position} aktualisiert. Des weiteren beinhaltet das Modul Funktionen zum Anfordern von Umweltdaten. Dies erfolgt über einen GET request an das World-Modul, welches anschließend eine Antwort darauf sendet.
 
-\paragraph{NodeType}
+\subsubsection{NodeType}
 
 \begin{center}
 \includegraphics{NodeType}
@@ -73,7 +155,7 @@ Dazu dient die Funktion \textbf{updatePosition()}, welche das Attribut \textbf{p
 
 NodeType erbt von der Klasse cModuleType und erfüllt den gleichen Zweck. Es ist dazu da die MyWirelessNode-Klassen für jeden Knoten anzulegen, sodass diese global bekannt sind, verwendet werden können und am Ende der Simulation wieder gelöscht werden.
 
-\paragraph{SensorType}
+\subsubsection{SensorType}
 
 \begin{center}
 \includegraphics{SensorType}
@@ -81,7 +163,7 @@ NodeType erbt von der Klasse cModuleType und erfüllt den gleichen Zweck. Es ist
 
 Die Klasse SensorType ist eine Helferklasse für MyWirelessNode. Es besitzt lediglich 4 Attribute, welche definieren ob der jeweilige Knoten einen bestimmten Typ von Sensor besitzt oder nicht.
 
-\paragraph{Simple*}
+\subsubsection{Simple*}
 
 \begin{center}
 \includegraphics{SimpleClasses}
@@ -90,7 +172,15 @@ Die Klasse SensorType ist eine Helferklasse für MyWirelessNode. Es besitzt ledi
 Es gibt die 3 Klassen SimpleCoord, SimpleSensorData und SimpleSensorType.  Sie erben jeweils direkt von cNamedObject und beinhalten nur wenige Attribute. So enthält SimpleCoord beispielsweise 3 Attribute x, y und z, um Koordinaten zu repräsentieren.\newline
 cNamedObject und ebenso Kinderklassen davon lassen sich per leicht cMessage übertragen. Alle haben daher den Zweck eine einfache Kommunikation zu ermöglichen. So wird beispielsweise SimpleCoord benutzt, um beim Anfordern von Sensordaten in MyWirelessNode die Koordinaten an die CustomWorldUtility mit zu übertragen, damit in der Response der jeweilige Datensatz der richtigen Position zurückgegeben wird.
 
-\paragraph{StatisticsInterface}
+\subsubsection{ExtendedMessage}
+
+ExtendedMessage erbt direkt von der Klasse cMessage, der Standard-Nachrichtenklasse in Omnet++. Im Grunde stellt cMessage alle benötigten Funktionen bereit. ExtendedMessage ist nur aus dem Grund vorhanden, um zusätzliche Statistiken über Nachrichten erstellen zu können, zum Beispiel wie oft eine einzelne Nachricht weitergesendet wurde.
+
+\begin{center}
+\includegraphics{ExtendedMessage}
+\end{center}
+
+\subsubsection{StatisticsInterface}
 
 Dieses Interface enthält grundlegende Attribute für Statistiken. Klassen die dieses implementieren speichern somit zum Beispiel wie viele Nachrichten sie empfangen oder gesendet haben.
 

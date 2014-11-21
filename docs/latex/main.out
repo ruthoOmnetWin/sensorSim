@@ -15,12 +15,20 @@
 \BOOKMARK [1][-]{section.4.1}{Einleitung}{chapter.4}% 15
 \BOOKMARK [1][-]{section.4.2}{Aufbau und Struktur}{chapter.4}% 16
 \BOOKMARK [2][-]{subsection.4.2.1}{Klassen\374bersicht}{section.4.2}% 17
-\BOOKMARK [2][-]{subsection.4.2.2}{Netzwerk}{section.4.2}% 18
-\BOOKMARK [3][-]{section*.30}{Simple Module}{subsection.4.2.2}% 19
-\BOOKMARK [3][-]{section*.34}{Compound Module}{subsection.4.2.2}% 20
-\BOOKMARK [3][-]{section*.37}{Networks}{subsection.4.2.2}% 21
-\BOOKMARK [3][-]{section*.39}{Messages}{subsection.4.2.2}% 22
-\BOOKMARK [3][-]{section*.41}{omnetpp.ini}{subsection.4.2.2}% 23
-\BOOKMARK [1][-]{section.4.3}{Funktionsweise}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Zusammenfassung}{}% 25
-\BOOKMARK [0][-]{chapter*.42}{Literatur- und Webverzeichnis}{}% 26
+\BOOKMARK [3][-]{section*.22}{CustomLinearMobility}{subsection.4.2.1}% 18
+\BOOKMARK [3][-]{section*.23}{CustomWorldUtility}{subsection.4.2.1}% 19
+\BOOKMARK [3][-]{section*.25}{MyWirelessNode und Sensor}{subsection.4.2.1}% 20
+\BOOKMARK [3][-]{section*.26}{NodeType}{subsection.4.2.1}% 21
+\BOOKMARK [3][-]{section*.27}{SensorType}{subsection.4.2.1}% 22
+\BOOKMARK [3][-]{section*.28}{Simple*}{subsection.4.2.1}% 23
+\BOOKMARK [3][-]{section*.29}{ExtendedMessage}{subsection.4.2.1}% 24
+\BOOKMARK [3][-]{section*.30}{StatisticsInterface}{subsection.4.2.1}% 25
+\BOOKMARK [2][-]{subsection.4.2.2}{Netzwerk}{section.4.2}% 26
+\BOOKMARK [3][-]{section*.31}{Simple Module}{subsection.4.2.2}% 27
+\BOOKMARK [3][-]{section*.35}{Compound Module}{subsection.4.2.2}% 28
+\BOOKMARK [3][-]{section*.38}{Networks}{subsection.4.2.2}% 29
+\BOOKMARK [3][-]{section*.40}{Messages}{subsection.4.2.2}% 30
+\BOOKMARK [3][-]{section*.42}{omnetpp.ini}{subsection.4.2.2}% 31
+\BOOKMARK [1][-]{section.4.3}{Funktionsweise}{chapter.4}% 32
+\BOOKMARK [0][-]{chapter.5}{Zusammenfassung}{}% 33
+\BOOKMARK [0][-]{chapter*.43}{Literatur- und Webverzeichnis}{}% 34

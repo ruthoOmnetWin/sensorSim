@@ -21,6 +21,7 @@
 #include <string.h>
 #include <ExtendedMessage_m.h>
 #include <StatisticsInterface.h>
+#include <SimpleCoord.h>
 
 class MIXIM_API CustomWorldUtility : public BaseWorldUtility, public StatisticsInterface
 {
@@ -40,7 +41,7 @@ protected:
     ExtendedMessage* generateMessage(const char* msgname);
     void updateDisplay();
     void finish();
-    void sendSensorResponse(std::string,cGate*);
+    void sendSensorResponse(std::string,cGate*,SimpleCoord*);
     void destroySensorData();
 protected:
     int numNodes;

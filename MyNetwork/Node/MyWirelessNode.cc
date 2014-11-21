@@ -104,16 +104,19 @@ void MyWirelessNode::handleMessage(cMessage *msg)
         if (msgName.substr(0,4) == "POST") {
 
             SimpleSensorData* data = (SimpleSensorData*) msg->getParList().remove("data");
-            this->sensorData = data->sensorData;
-            int** arr = new int*[400];
-            for (int i = 0; i < 400; i++) {
-                arr[i] = new int[550];
-                for (int j = 0; j <550; j++) {
-                    arr[i][j] = data->sensorData[i][j];
-                }
+
+            std::string type = msgName.substr(5);
+            if (type == "temperature") {
+                this->temperatureData = data->sensorData;
+            }else if (type == "pressure") {
+                this->pressureData = data->sensorData;
+            }else if (type == "light") {
+                this->lightData = data->sensorData;
+            } else if (type == "humidity") {
+                this->humidityData = data->sensorData;
+            } else {
+                throw new std::exception;
             }
-            this->sensorData = arr;
-            delete data;
 
         } else {
             ExtendedMessage *extmsg = check_and_cast<ExtendedMessage *>(msg);

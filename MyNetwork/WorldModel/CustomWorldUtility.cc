@@ -21,7 +21,6 @@
 #include <string>
 #include <cstring>
 #include <Coord.h>
-#include <SimpleCoord.h>
 #include <SimpleSensorData.h>
 using namespace std;
 
@@ -46,7 +45,7 @@ CustomWorldUtility::CustomWorldUtility() : BaseWorldUtility()
 
 CustomWorldUtility::~CustomWorldUtility()
 {
-
+    this->destroySensorData();
 }
 
 void CustomWorldUtility::initialize(int stage)
@@ -120,35 +119,35 @@ void CustomWorldUtility::initialize(int stage)
 
 void CustomWorldUtility::handleMessage(cMessage *msg)
 {
-    SimpleCoord *position = (SimpleCoord*) msg->getParList().remove("pos");
     string name = msg->getName();
-    cGate* srcGate = msg->getArrivalGate();
-    delete msg;
     string requestType = name.substr(0,3);
     if (requestType == "GET") {
-        this->sendSensorResponse(name.substr(4), srcGate);
+        SimpleCoord *position = (SimpleCoord*) msg->getParList().remove("pos");
+        cGate* srcGate = msg->getArrivalGate();
+        this->sendSensorResponse(name.substr(4), srcGate, position);
+        delete position;
     }
-    delete position;
+    delete msg;
 }
 
-void CustomWorldUtility::sendSensorResponse(string sensorType, cGate* srcGate)
+void CustomWorldUtility::sendSensorResponse(string sensorType, cGate* srcGate, SimpleCoord* position)
 {
     SimpleSensorData *data;
     if (sensorType == "temperature") {
 
-        data = new SimpleSensorData("data", this->temperatureArray, this->sizeX, this->sizeY);
+        data = new SimpleSensorData("data", this->temperatureArray[(int)position->x][(int)position->y]);
 
     } else if (sensorType == "pressure") {
 
-        data = new SimpleSensorData("data", this->pressureArray, this->sizeX, this->sizeY);
+        data = new SimpleSensorData("data", this->pressureArray[(int)position->x][(int)position->y]);
 
     } else if (sensorType == "humidity") {
 
-        data = new SimpleSensorData("data", this->humidityArray, this->sizeX, this->sizeY);
+        data = new SimpleSensorData("data", this->humidityArray[(int)position->x][(int)position->y]);
 
     } else if (sensorType == "light") {
 
-        data = new SimpleSensorData("data", this->lightArray, this->sizeX, this->sizeY);
+        data = new SimpleSensorData("data", this->lightArray[(int)position->x][(int)position->y]);
 
     } else {
         throw new exception;
@@ -398,8 +397,6 @@ void CustomWorldUtility::updateDisplay()
 
 void CustomWorldUtility::finish()
 {
-    //this->destroySensorData();
-
     EV << "Sent:     " << numSent << endl;
     EV << "Received: " << numReceived << endl;
     EV << "Hop count, min:    " << hopCountStats.getMin() << endl;
