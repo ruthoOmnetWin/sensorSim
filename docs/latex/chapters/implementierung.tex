@@ -98,7 +98,7 @@ Dieses Interface enthält grundlegende Attribute für Statistiken. Klassen die d
 
 Im folgenden Abschnitt werden alle Simulationsobjekte erläutert, also all jene, die durch die Sprache NED beschrieben wurden:
 
-\begin{itemize} 
+\begin{itemize}{\label{enum:Netzwerk}}
 \item Simple Module
 \begin{multicols}{2}
 \begin{itemize}
@@ -196,7 +196,7 @@ Es gibt 5 Module welche die Sensoren definieren. Zum einen den allgemeinen Senso
 \end{itemize}
 \end{multicols}
 
-Die 4 Sensortypen, welche vom allgemeinen Sensor erben, definieren jeweils nur den Typ des Sensors. Sie können auf den Knoten als Submodule verwendet werden und somit 15 verschiedene Sensorknoten bilden.
+Die 4 Sensortypen, welche vom allgemeinen Sensor erben, definieren jeweils nur den Typ des Sensors. Sie können auf den Knoten als Submodule verwendet werden. Jeder Sensorknoten kann 1 bis 4 Sensoren verschiedener Typen beinhalten und somit ergeben sich 15 verschiedene Arten von Sensorknoten.
 
 \begin{minipage}{\textwidth}
 \begin{lstlisting}[language=ned,caption={Sensor},label=lst:Sensor]
@@ -223,20 +223,223 @@ Alle Sensorknoten, die in dieser Simulation vorkommen sind solche Compound Modul
 
 \paragraph{MyWirelessNode}
 
-Zum einen existiert das Modul MyWirelessNode, welches das Vatermodul für alle 
+Zum einen existiert das Modul MyWirelessNode, welches das Vatermodul für alle Sensorknoten bildet. Es erbt selbst von einem Modul, welches die kabellose Kommunikation unter den Knoten und Batteriestatistiken ermöglicht. Außerdem beinhalten die Knoten auch Funktionen der Mobility, genauer gesagt der CustomLinearMobility, welche auch mobile Knoten ermöglicht. \newline
+Es besitzt weiterhin ein inout Gate zur World.
 
 \paragraph{Sensorknoten}
 
+Es gibt insgesamt 15 verschiedene Arten von Sensorknoten, welche am Anfang von Kapitel \ref{enum:Netzwerk} aufgelistet sind. Die Benennung ergibt sich wie folgt (jeweils aus dem Anfangsbuchstaben des englischen Begriffs):
+\begin{itemize}
+\item T - Temperatur
+\item H - Luftfeuchtigkeit
+\item L - Licht
+\item P - Druck
+\end{itemize}
+Hierzu ein Codebeispiel des NED-Modules des Knotens, der alle 4 Sensoren enthält: Listing \ref{lst:THLPNode}.
+
+\begin{lstlisting}[language=ned,caption={THLPNode},label=lst:THLPNode]
+package mynetwork.Node;
+import mynetwork.Node.Sensor.TemperatureSensor;
+import mynetwork.Node.Sensor.HumiditySensor;
+import mynetwork.Node.Sensor.LightSensor;
+import mynetwork.Node.Sensor.PressureSensor;
+
+module THLPNode extends MyWirelessNode
+{
+    @display("bgb=210,491");
+    gates:
+        inout toSensor[4];
+        inout worldGate[4];
+
+    submodules:
+        TemperatureSensor: TemperatureSensor {
+            @display("p=140,380");
+        }
+        HumiditySensor: HumiditySensor {
+            @display("p=140,310");
+        }
+        LightSensor: LightSensor {
+            @display("p=140,450");
+        }
+        PressureSensor: PressureSensor {
+            @display("p=70,450");
+        }
+
+    connections:
+        toSensor[0] <--> { delay = 0ms; } <--> TemperatureSensor.toNode;
+        worldGate[0] <--> { delay = measureTime; } <--> TemperatureSensor.worldDataGate;
+
+        toSensor[1] <--> { delay = 0ms; } <--> HumiditySensor.toNode;
+        worldGate[1] <--> { delay = measureTime; } <--> HumiditySensor.worldDataGate;
+        
+        toSensor[2] <--> { delay = 0ms; } <--> LightSensor.toNode;
+        worldGate[2] <--> { delay = measureTime; } <--> LightSensor.worldDataGate;
+        
+        toSensor[3] <--> { delay = 0ms; } <--> PressureSensor.toNode;
+        worldGate[3] <--> { delay = measureTime; } <--> PressureSensor.worldDataGate;
+}
+\end{lstlisting}
+
+Wie man sehen kann erbt der Sensorknoten von MyWirelessNode. Er übernimmt zunächst also alle Eigenschaften des vorher bereits erklärten Modules. Hinzu kommen pro Sensor jeweils 1 Gate zum Sensor und zur world, welches den Sensor mit der Welt verbindet. \newline
+Entscheidend für das jeweilige Modul ist jedoch die Definition der Submodule. Im Falle des THLPNode werden genau 4 Submodule definiert:
+\begin{itemize}
+\item TemperatureSensor
+\item HumiditySensor
+\item LightSensor
+\item PressureSensor
+\end{itemize}
+Also für jeden Sensor das jeweilige Modul.\newline
+Zuletzt werden noch für die Gates die Verbindungen definiert.
+
 \subsubsection{Networks}
+
+Das Netzwerk ist das wichtigste Modul jeder Omnet++-Simulation, denn es fügt alle Elemente zusammen. Ein Netzwerk ist den Compound-Modulen daher nicht unähnlich. 
 
 \paragraph{MyNetwork}
 
+Für das Modul MyNetwork heißt das, dass es eine Instanz des CustomWorldUtility und variabel viele Sensorknoten zusammenfügt, indem es diese als Submodule definiert und deren Gates miteinandern verbindet. Die Definition ist dem MiXiM-Modul BaseNetwork ähnlich, aber hat deutlich mehr zusätzliche Submodule und Parameter. \newline
+So sind die Definitionen des Playgrounds, der Mobilität und des ConnectionManager analog, die Submodule der World und des Sensorknoten und die dazu benötigten Parameter, die zum Beispiel die Anzahl der jeweiligen Sensorknoten definieren und die Gateverbindungen jedoch kommen nur hier vor.
+
+\begin{lstlisting}[language=ned,caption={Network},label=lst:Network]
+network MyNetwork
+{
+    parameters:
+        bool createNewEnvironmentData;
+
+        //...
+
+        int numTNodes = default(0);
+        //...
+        int numTHLPNodes = default(0);
+
+        // total number of hosts in the network
+        int numNodes = numTNodes + numPNodes + numHNodes + numLNodes + numTHNodes + numTLNodes + numTPNodes + numHLNodes + numHPNodes + numLPNodes + numTHLNodes + numTLPNodes + numTHPNodes + numHLPNodes + numTHLPNodes;
+        string wuType = default("CustomWorldUtility");
+
+        //BaseNetwork
+        double playgroundSizeX @unit(m); // x size of the area the nodes are in (in meters)
+        double playgroundSizeY @unit(m); // y size of the area the nodes are in (in meters)
+        double playgroundSizeZ @unit(m); // z size of the area the nodes are in (in meters)
+        **.mobility.constraintAreaMinX = default(0m);
+        **.mobility.constraintAreaMinY = default(0m);
+        **.mobility.constraintAreaMinZ = default(0m);
+        **.mobility.constraintAreaMaxX = default(playgroundSizeX);
+        **.mobility.constraintAreaMaxY = default(playgroundSizeY);
+        **.mobility.constraintAreaMaxZ = default(playgroundSizeZ);
+        string cmType = default("org.mixim.base.connectionManager.ConnectionManager"); // connection manager to use
+
+        @display("bgi=maps/germany,bgb,$playgroundSizeX,$playgroundSizeY,white;bgp=0,0;bgb=$playgroundSizeX,$playgroundSizeY");
+
+    submodules:
+        world: CustomWorldUtility {
+            //for every sensor (NOT only every node) there is one gate needed
+            numGates = numNodes 
+            + numTHNodes + numTLNodes + numTPNodes + numHLNodes + numHPNodes + numLPNodes 
+            + 2*numTHLNodes + 2*numTLPNodes + 2*numTHPNodes + 2*numHLPNodes 
+            + 3*numTHLPNodes;
+            numSensorNodes = numNodes;
+            createData = createNewEnvironmentData;
+        }
+        
+        tnode[numTNodes]: TNode {
+            parameters:
+                @display("i=device/card");
+                numHosts = numNodes;
+        }
+        //...
+        thlpnode[numTHLPNodes]: THLPNode {
+            parameters:
+                @display("i=device/card");
+                numHosts = numNodes;
+        }
+
+        connectionManager: <cmType> like IConnectionManager {
+            parameters:
+                @display("i=abstract/multicast;is=s");
+        }
+
+
+    connections allowunconnected:
+
+        world.worldDataGate++ 
+        <--> {  delay = 100ms; } <--> 
+        tnode[i].worldGate[0] for i=0..(numTNodes-1);		
+        //...		
+        world.worldDataGate++ 
+        <--> {  delay = 100ms; } <--> 
+        thlpnode[i].worldGate[3] for i=0..((numTHLPNodes-1));
+
+        world.toNode++ 
+        <--> {  delay = 0ms; } <--> 
+        tnode[i].toWorld for i=0..(numTNodes-1);
+        //...
+        world.toNode++ 
+        <--> {  delay = 0ms; } <--> 
+        thlpnode[i].toWorld for i=0..(numTHLPNodes-1);
+}
+\end{lstlisting}
+
+Nicht auf den ersten Blick zu erkennen ist die Kommunikation zwischen den Knoten selbst. Die connections sind durch den Term allowunconnected so definiert, dass auch dynamisch Verbindungen aufgebaut werden können, die nicht strikt im Compound Module  definiert sind. Mit Hilfe der sendDirect()-Funktion können so dennoch Nachrichten zwischen Gates versendet werden.
+
 \subsubsection{Messages}
+
+Nachrichten sind das essentielle Werkzeug, um in einem Netzwerk Kommunikation zu ermöglichen. Es gibt ein vordefiniertes Modul cMessage, welches dafür genutzt werden kann. Dieses beinhaltet notwendige Informationen wie zum Beispiel Sendermodul und -gate, Empängermodul und -gate, Sende-, Empfangs- und Erstellzeit und mehr.
 
 \paragraph{ExtendedMessage}
 
+Die ExtendedMessage erweitert diese Funktionalität um einige Informationen für die Statistik.
+
+\begin{lstlisting}[language=ned,caption={ExtendedMessage},label=lst:ExtendedMessage]
+message ExtendedMessage extends cMessage
+{
+    int source;
+    int destination;
+    int hopCount = 0;    
+}
+\end{lstlisting}
+
+\subsubsection{omnetpp.ini}
+
+Die omnetpp.ini ist eine Datei, in der Eigenschaften der Simulation geändert werden können, ohne das man den Sourcecode bearbeiten und danach neu kompilieren muss. Es bietet sich daher an, alle Variablen und Konstanten, welche sich öfters ändern hier zu definieren.\newline
+
+\begin{lstlisting}
+##########################################################
+#    		   Custom Parameters	                     #
+##########################################################
+
+#informations
+##set maxspeed to 0mps for stationary nodes or to any higher value for mobility nodes
+**.mobility.maxSpeed = 0mps
+#**.mobility.maxSpeed = 10mps
+
+#this boolean value defines if new data for the sensor will be created
+MyNetwork.createNewEnvironmentData = ask
+
+#set the amount of nodes here
+MyNetwork.howManyHumidityAndTemperatureNodes = ask
+[...]
+
+#set the number of nodes for the simulation here
+#MyNetwork.numNodes = 1
+MyNetwork.networkPosX = 0
+MyNetwork.networkPosY = 0
+MyNetwork.networkSensorAlgorithm = 1
+MyNetwork.networkValue = -1
+**.netwl.headerLength = 24bit
+
+#**.mobilityType = "CustomLinearMobility" -> NED default
+#Gaussian distribution for the acceleration with a mean of 1 leads to a result if ~half of the nodes will end stationary
+**.mobility.speed = 1mps
+**.mobility.acceleration = normal(1, 1)
+**.mobility.angle = default
+
+#Playground
+**.playgroundSizeX = 400m
+**.playgroundSizeY = 550m
+\end{lstlisting}
+
+Für die relevanten Parameter wurde in der ini-Datei eine spezielle Sektion eingeteilt. Hier können beispielsweise Werte für die playgroundSize vergeben oder festgelegt werden ob Mobilität der Knoten erlaubt sein soll.
+
 \section{Funktionsweise}
 
-was funktioniert wie
-was wurde überhaupt umgesetzt
-was fehlt evtl/verbesserungsideen
+All die in diesem Kapitel beschriebenen Module wirken für die Simulation zusammen, um ein Netzwerk aus Sensorknoten zu schaffen, in dem die Knoten miteinander und mit ihrer Umgebung gemeinsam agieren können. Dazu werden nach dem Start der Simulation Umweltparameter bereitgestellt und eine festgelegte Anzahl von verschiedenen Sensorknoten erzeugt. Diese können sich anschließend bewegen oder ihr Position beibehalten. Sie können mit ihren Sensoren Werte der Umgebung erfassen und diese über Funk an andere Sensorknoten übertragen, sollte diese in der näheren Umgebung zur Verfügung stehen.
