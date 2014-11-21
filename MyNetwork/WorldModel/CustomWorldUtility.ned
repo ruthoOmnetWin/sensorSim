@@ -30,5 +30,5 @@ simple CustomWorldUtility extends BaseWorldUtility
         @class("CustomWorldUtility");
     gates:
         inout worldDataGate[numGates];
-        inout toNode[numGates];
+        inout toNode[numSensorNodes];
 }

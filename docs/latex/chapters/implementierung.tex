@@ -96,7 +96,144 @@ Dieses Interface enthält grundlegende Attribute für Statistiken. Klassen die d
 
 \subsection{Netzwerk}
 
+Im folgenden Abschnitt werden alle Simulationsobjekte erläutert, also all jene, die durch die Sprache NED beschrieben wurden:
 
+\begin{itemize} 
+\item Simple Module
+\begin{multicols}{2}
+\begin{itemize}
+\item CustomLinearMobility
+\item CustomWorldUtility  
+\item HumiditySensor
+\item LightSensor
+\item PressureSensor
+\item Sensor
+\item TemperatureSensor 
+\end{itemize}
+\end{multicols}
+\item Compound Module
+\begin{multicols}{2}
+\begin{itemize}
+\item HLNode
+\item HLPNode
+\item HNode
+\item HPNode
+\item LNode
+\item LPNode
+\item MyWirelessNode
+\item PNode
+\item THLNode
+\item THLPNode
+\item THNode
+\item THPNode
+\item TLNode
+\item TLPNode
+\item TNode
+\item TPNode 
+\end{itemize}
+\end{multicols}
+\begin{multicols}{2}
+\item Networks
+\begin{itemize}
+\item MyNetwork
+\end{itemize}
+\item Messages
+\begin{itemize}
+\item ExtendedMessage
+\end{itemize}
+\end{multicols}
+\end{itemize}
+
+\subsubsection{Simple Module}
+
+Simple Module sind Komponenten in einer Omnet++ Simulation, die die größte Auswirkung auf die Wirkungsweise des Netzwerkes haben. Das liegt daran, dass bei ihnen neben einer Beschreibung in NED auch eine Beschreibung in C++ vorliegt. Daher kann das Verhalten jener Module während der Simulation ausführlich definiert werden.
+
+\paragraph{CustomLinearMobility}
+
+Das Modul CustomLinearMobility ist eine Erweiterung der LinearMobility, welche MiXiM bereitstellt. Neben dem Verhalten welches in C++ beschrieben ist, ist das Modul lediglich um den Parameter maxSpeed erweitert, welcher in der omnetpp.ini definiert werden kann.
+
+\paragraph{CustomWorldUtility}
+
+Wie im Codebeispiel (\ref{lst:CustomWorldUtility}) zu sehen ist, ist das Modul CustomWorldUtility eine Erweiterung des Moduls BaseWorldUtility. Zusätzlich zu den darin definierten Eigenschaften hat es einige weitere Parameter. Zunächst eine bool'sche Variable, welche festlegt, ob zu Beginn der Simulation neue Umweltparameter generiert werden sollen. \newline Während numSensorNodes definiert, wieviele Sensorknoten im Netzwerk vorhanden sind und somit wieviele Gates zu Sensorknoten gehen, so definiert numGates die Anzahl der einzelnen Sensoren und somit auch die Anzahl der dahin gehenden notwendigen Gates. Da Sensorknoten auch mit mehr als einem Sensor bestückt sein können, ist der Wert beider Variablen mitunter durchaus verschieden.\newline
+Die restlichen Variablen speichern die Umweltparameter in Form einer xml-Datei.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[language=ned,caption={CustomWorldUtility},label=lst:CustomWorldUtility]
+package mynetwork.WorldModel;
+import org.mixim.base.modules.BaseWorldUtility;
+
+simple CustomWorldUtility extends BaseWorldUtility
+{
+    parameters:
+        bool createData;
+        int numGates;
+        int numSensorNodes;
+        xml xmlTemperature = xmldoc("WorldModel/data/temperature.xml");
+        xml xmlPressure = xmldoc("WorldModel/data/pressure.xml");
+        xml xmlHumidity = xmldoc("WorldModel/data/humidity.xml");
+        xml xmlLight = xmldoc("WorldModel/data/light.xml");
+        
+        @class("CustomWorldUtility");
+    gates:
+        inout worldDataGate[numGates];
+        inout toNode[numSensorNodes];
+}
+\end{lstlisting}
+\end{minipage}
+
+Neben den Parametern besitzt dieses Modul auch noch zusätzlich 2 verschiedene Arten von inout-Gates. Die Menge von worldDataGates verbindet die Welt mit jedem Sensor der auf einem Sensorknoten verbaut ist. Die Menge der toNode-Gates dient für die direkte Verbindung zwischen World und Nodes.
+
+\paragraph{Sensoren}
+
+Es gibt 5 Module welche die Sensoren definieren. Zum einen den allgemeinen Sensor, der das Vatermodul für alle 4 Sensortypen bildet. Er enthält nicht viel, lediglich Gates für Verbindungen zur Welt, um die Umweltparameter abfragen zu können und zum jeweiligen Knoten, für die Kommunikation innerhalb des Bauteils. Weiterhin besitzt er noch einen Parameter, der im Kindmodul den Typ des Sensors beschreibt.
+
+\begin{multicols}{2}
+\begin{itemize}
+\item HumiditySensor
+\item LightSensor
+\item PressureSensor
+\item TemperatureSensor
+\end{itemize}
+\end{multicols}
+
+Die 4 Sensortypen, welche vom allgemeinen Sensor erben, definieren jeweils nur den Typ des Sensors. Sie können auf den Knoten als Submodule verwendet werden und somit 15 verschiedene Sensorknoten bilden.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[language=ned,caption={Sensor},label=lst:Sensor]
+package mynetwork.Node.Sensor;
+
+simple Sensor 
+{
+    parameters:
+        //type of the sensor
+        string type;
+	    @display("i=block/wrx");
+	    @class("Sensor");
+	gates: 
+	    inout toNode;
+	    inout worldDataGate;
+}
+\end{lstlisting}
+\end{minipage}
+
+\subsubsection{Compound Module}
+
+Compound Module dienen dazu, andere Module zusammenzufassen, sollen jedoch keine eigene aktive Funktionalität definieren. Ihr Verhalten soll sich allein durch die Submodule ergeben. Es ist daher nicht sinnvoll eine C++-Klasse für diese Module zu definieren.\newline
+Alle Sensorknoten, die in dieser Simulation vorkommen sind solche Compound Module.
+
+\paragraph{MyWirelessNode}
+
+
+
+\paragraph{Sensorknoten}
+
+\subsubsection{Networks}
+
+\paragraph{MyNetwork}
+
+\subsubsection{Messages}
+
+\paragraph{ExtendedMessage}
 
 \section{Funktionsweise}
 

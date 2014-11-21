@@ -40,6 +40,10 @@ INCLUDE_PATH = \
     -IStatisticsInterface \
     -IWorldModel \
     -IWorldModel/data \
+    -Idoc \
+    -Idoc/doxy \
+    -Idoc/doxy/search \
+    -Idoc/neddoc \
     -Iresults
 
 # Additional object and library files to link with
@@ -157,6 +161,10 @@ clean:
 	$(Q)-rm -f StatisticsInterface/*_m.cc StatisticsInterface/*_m.h
 	$(Q)-rm -f WorldModel/*_m.cc WorldModel/*_m.h
 	$(Q)-rm -f WorldModel/data/*_m.cc WorldModel/data/*_m.h
+	$(Q)-rm -f doc/*_m.cc doc/*_m.h
+	$(Q)-rm -f doc/doxy/*_m.cc doc/doxy/*_m.h
+	$(Q)-rm -f doc/doxy/search/*_m.cc doc/doxy/search/*_m.h
+	$(Q)-rm -f doc/neddoc/*_m.cc doc/neddoc/*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
 
 cleanall: clean
@@ -164,7 +172,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ExtendedMessage/*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc NodeType/*.cc SimpleCoord/*.cc SimpleSensorData/*.cc SimpleSensorType/*.cc StatisticsInterface/*.cc WorldModel/*.cc WorldModel/data/*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ExtendedMessage/*.cc Mobility/*.cc Node/*.cc Node/Sensor/*.cc NodeType/*.cc SimpleCoord/*.cc SimpleSensorData/*.cc SimpleSensorType/*.cc StatisticsInterface/*.cc WorldModel/*.cc WorldModel/data/*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/ExtendedMessage/ExtendedMessage_m.o: ExtendedMessage/ExtendedMessage_m.cc \
