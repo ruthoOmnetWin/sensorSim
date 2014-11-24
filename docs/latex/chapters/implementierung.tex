@@ -145,15 +145,72 @@ MyWirelessNode implementiert das StatisticsInterface und erbt von der Klasse Sen
 \end{center}
 
 Es ist neben der Klasse für die Umwelt CustomWorldUtility die zweite essentielle Klasse der Simulation. Das Verhalten aller Knoten im Netzwerk wird durch MyWirelessNode definiert. Neben den Standardfunktionen eines Omnet++-Moduls, \textbf{initialize()}, \textbf{handleMessage()} und \textbf{finish()}, können Knoten zum Beispiel ihre Position abfragen. \newline
-Dazu dient die Funktion \textbf{updatePosition()}, welche das Attribut \textbf{position} aktualisiert. Des weiteren beinhaltet das Modul Funktionen zum Anfordern von Umweltdaten. Dies erfolgt über einen GET request an das World-Modul, welches anschließend eine Antwort darauf sendet.
+Dazu dient die Funktion \textbf{updatePosition()} \ref{lst:updatePosition}, welche das Attribut \textbf{position} aktualisiert.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[language=C++, label=lst:updatePosition]
+/**
+ * update the position data by a given Coord object
+ */
+void MyWirelessNode::updatePosition()
+{
+    Coord* back;
+    BasePhyLayer* phy = FindModule<BasePhyLayer*>::findSubModule(this);
+    ChannelMobilityPtrType pMobType = phy->getMobilityModule();
+    if(pMobType != NULL){
+        back = new Coord(pMobType->getCurrentPosition());
+        delete position;
+        position = back;
+    }
+}
+\end{lstlisting}
+\end{minipage}
+Dafür wird die Klasse FindModule aus dem MiXiM-Framework verwendet. Diese enthält eine Funktion findSubModule(cModule), welche zum Finden von service-ähnlichen Modulen dient. Die FindModule-Klasse verhält sich für diese Art von Klassen, wie eine Art Servicemanager.\newline
+Auf diese Weise hat man Zugriff auf das Mobility-Modul eines bestimmten Sensorknotens und kann aus diesem die aktuelle Position auf dem Playground abrufen.\newline
+Des weiteren beinhaltet das Modul MyWirelessNode Funktionen zum Anfordern von Umweltdaten. Dies erfolgt über einen GET request an das World-Modul, welches anschließend eine Antwort darauf sendet. Dafür stehen die Funktionen requestData() und sendDataRequest(std::string)\ref{lst:requestData} zur Verfügung, wobei sendDataRequest(std::string) innerhalb von requestData() aufgerufen wird.
+\begin{lstlisting}[language=C++, label=lst:requestData]
+void MyWirelessNode::requestData()
+{
+    updatePosition();
+
+    //generate messages for data requests
+    std::string request = "GET ";
+    if (this->type->humidity) {
+        this->sendDataRequest(request + this->typenames[0]);
+    }
+    if (this->type->pressure) {
+        this->sendDataRequest(request + this->typenames[1]);
+    }
+    if (this->type->temperature) {
+        this->sendDataRequest(request + this->typenames[2]);
+    }
+    if (this->type->light) {
+        this->sendDataRequest(request + this->typenames[3]);
+    }
+}
+
+void MyWirelessNode::sendDataRequest(std::string request)
+{
+    ExtendedMessage *newmsg = generateMessage(request.c_str());
+    SimpleCoord *coord = new SimpleCoord("pos", this->position);
+    newmsg->getParList().add(coord);
+    std::stringstream s;
+    s << "X: " << coord->x << " Y: " << coord->y;
+    ev.bubble(this, s.str().c_str());
+    send(newmsg, "toWorld$o");
+    numSent++;
+}
+\end{lstlisting}
+
+Um aktuelle Daten anfordern zu können wird zunächst immer die aktuell gespeicherte Position des Knoten aktualisiert. Danach wird zu jedem Sensortyp des Knotens eine Nachricht vom Typ 'GET [Sensortyp]' erstellt, mit den aktuellen Koordinaten bestückt und anschließen an die CustomWorldUtility gesendet.
 
 \subsubsection{NodeType}
+
+NodeType erbt von der Klasse cModuleType und erfüllt den gleichen Zweck. Es ist dazu da die MyWirelessNode-Klassen für jeden Knoten anzulegen, sodass diese global bekannt sind, verwendet werden können und am Ende der Simulation wieder gelöscht werden.
 
 \begin{center}
 \includegraphics{NodeType}
 \end{center}
-
-NodeType erbt von der Klasse cModuleType und erfüllt den gleichen Zweck. Es ist dazu da die MyWirelessNode-Klassen für jeden Knoten anzulegen, sodass diese global bekannt sind, verwendet werden können und am Ende der Simulation wieder gelöscht werden.
 
 \subsubsection{SensorType}
 
@@ -170,7 +227,22 @@ Die Klasse SensorType ist eine Helferklasse für MyWirelessNode. Es besitzt ledi
 \end{center}
 
 Es gibt die 3 Klassen SimpleCoord, SimpleSensorData und SimpleSensorType.  Sie erben jeweils direkt von cNamedObject und beinhalten nur wenige Attribute. So enthält SimpleCoord beispielsweise 3 Attribute x, y und z, um Koordinaten zu repräsentieren.\newline
-cNamedObject und ebenso Kinderklassen davon lassen sich per leicht cMessage übertragen. Alle haben daher den Zweck eine einfache Kommunikation zu ermöglichen. So wird beispielsweise SimpleCoord benutzt, um beim Anfordern von Sensordaten in MyWirelessNode die Koordinaten an die CustomWorldUtility mit zu übertragen, damit in der Response der jeweilige Datensatz der richtigen Position zurückgegeben wird.
+cNamedObject und ebenso Kinderklassen davon lassen sich per leicht cMessage übertragen. Alle haben daher den Zweck eine einfache Kommunikation zu ermöglichen. So wird beispielsweise SimpleCoord benutzt, um beim Anfordern von Sensordaten in MyWirelessNode die Koordinaten an die CustomWorldUtility mit zu übertragen, damit in der Response der jeweilige Datensatz der richtigen Position zurückgegeben wird.\newline
+Aus diesem Grund ist die einzig benutzte Funktion in diesen Modulen der Konstruktor. Beim Erstellen einer der Klassen werden die nötigen Variablen gesetzt und an die Instanz ein Name vergeben. So lassen sich diese Objekte nach dem Hinzufügen zur Parameterliste einer Klasse auch leicht wieder abrufen (siehe Bespiel \ref{lst:SimpleExample}).
+
+\begin{lstlisting}[language=C++, label=lst:SimpleExample]
+//im Sender:
+cMessage *msg = new cMessage(msgname);
+SimpleCoord *coord = new SimpleCoord("position", this->position);
+msg->getParList().add(coord);
+
+//
+// Nachricht uebertragen    
+//  
+  
+//im Empfaenger:  
+SimpleCoord *position = (SimpleCoord*) msg->getParList().remove("position");
+\end{lstlisting}
 
 \subsubsection{ExtendedMessage}
 
@@ -179,6 +251,17 @@ ExtendedMessage erbt direkt von der Klasse cMessage, der Standard-Nachrichtenkla
 \begin{center}
 \includegraphics{ExtendedMessage}
 \end{center}
+
+Im Listing \ref{lst:ExtendedMessage} ist zu sehen welche Statistikparameter erhoben werden.
+
+\begin{lstlisting}[language=NED, label=lst:ExtendedMessage]
+message ExtendedMessage extends cMessage
+{
+	int source;
+    int destination;
+    int hopCount = 0;    
+}
+\end{lstlisting}
 
 \subsubsection{StatisticsInterface}
 

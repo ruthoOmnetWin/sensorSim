@@ -31,16 +31,16 @@ protected:
     void initialize(int stage);
     void handleMessage(cMessage *msg);
     void finish();
-    int readSensor();
     void updateDisplay();
-    ExtendedMessage* generateMessage(const char* msgname);
-    cModuleType *componenttype;
     void findSensorType();
-    bool isPositive(int value);
     void sendDataRequest(std::string);
     void handleGetType(cMessage *msg);
     void requestData();
+    ExtendedMessage* generateMessage(const char* msgname);
+    bool isPositive(int value);
+    int readSensor();
 protected:
+    cModuleType *componenttype;
     Coord* position;
     SensorType* type;
     int temperatureData;
