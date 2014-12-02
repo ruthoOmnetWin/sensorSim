@@ -8,18 +8,25 @@ Warning--to sort, need author or key in omnet
 Warning--to sort, need author or key in git
 Warning--to sort, need author or key in github
 Warning--to sort, need author or key in mixim
+Warning--to sort, need author or key in wrowser
+Warning--to sort, need author or key in emacs
+Warning--to sort, need author or key in TopGen
 Warning--to sort, need author or key in eclipse
 Warning--to sort, need author or key in ned
 Warning--to sort, need author or key in doxygen
 Warning--to sort, need author or key in sensornetzwiki
 Warning--to sort, need author or key in miximapiref
 Warning--to sort, need author or key in omnetman
+Warning--to sort, need author or key in ns3-wiki
 Warning--empty author in doxygen
 Warning--empty booktitle in doxygen
 Warning--empty year in doxygen
 Warning--empty author in eclipse
 Warning--empty booktitle in eclipse
 Warning--empty year in eclipse
+Warning--empty author in emacs
+Warning--empty booktitle in emacs
+Warning--empty year in emacs
 Warning--empty author in git
 Warning--empty booktitle in git
 Warning--empty year in git
@@ -35,12 +42,21 @@ Warning--empty year in mixim
 Warning--empty author in ned
 Warning--empty booktitle in ned
 Warning--empty year in ned
+Warning--empty author in ns3-wiki
+Warning--empty booktitle in ns3-wiki
+Warning--empty year in ns3-wiki
 Warning--empty author in omnetman
 Warning--empty booktitle in omnetman
 Warning--empty year in omnetman
 Warning--empty author in omnet
 Warning--empty booktitle in omnet
 Warning--empty year in omnet
+Warning--empty author in wrowser
+Warning--empty booktitle in wrowser
+Warning--empty year in wrowser
+Warning--empty author in TopGen
+Warning--empty booktitle in TopGen
+Warning--empty year in TopGen
 Warning--empty author in sensornetzwiki
 Warning--empty booktitle in sensornetzwiki
 Warning--empty year in sensornetzwiki
@@ -52,45 +68,45 @@ Warning--empty booktitle in hsc
 Warning--empty year in hsc
 Warning--empty booktitle in ikr
 Warning--empty year in ikr
-You've used 14 entries,
+You've used 18 entries,
             2343 wiz_defined-function locations,
-            590 strings with 6520 characters,
-and the built_in function-call counts, 3196 in all, are:
-= -- 265
-> -- 44
+            603 strings with 7025 characters,
+and the built_in function-call counts, 4036 in all, are:
+= -- 333
+> -- 48
 < -- 0
-+ -- 25
++ -- 29
 - -- 10
-* -- 232
-:= -- 405
-add.period$ -- 28
-call.type$ -- 14
-change.case$ -- 33
+* -- 296
+:= -- 497
+add.period$ -- 36
+call.type$ -- 18
+change.case$ -- 41
 chr.to.int$ -- 0
-cite$ -- 62
-duplicate$ -- 201
-empty$ -- 408
+cite$ -- 82
+duplicate$ -- 257
+empty$ -- 524
 format.name$ -- 10
-if$ -- 741
+if$ -- 941
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 14
-newline$ -- 59
+int.to.str$ -- 18
+missing$ -- 18
+newline$ -- 75
 num.names$ -- 8
-pop$ -- 141
+pop$ -- 181
 preamble$ -- 1
-purify$ -- 33
+purify$ -- 41
 quote$ -- 0
-skip$ -- 112
+skip$ -- 144
 stack$ -- 0
-substring$ -- 71
-swap$ -- 33
+substring$ -- 91
+swap$ -- 41
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
-warning$ -- 48
+type$ -- 72
+warning$ -- 64
 while$ -- 8
-width$ -- 16
-write$ -- 104
-(There were 48 warnings)
+width$ -- 20
+write$ -- 132
+(There were 64 warnings)

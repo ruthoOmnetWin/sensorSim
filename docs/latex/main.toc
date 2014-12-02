@@ -1,62 +1,66 @@
 \contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{iii}{chapter*.2}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{vii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Vorbetrachtungen}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Evaluation von Systemen}{3}{section.2.1}
-\contentsline {paragraph}{\nonumberline Simulation}{3}{section*.3}
-\contentsline {paragraph}{\nonumberline Emulationen}{4}{section*.4}
-\contentsline {paragraph}{\nonumberline (Rapid) Prototyping}{4}{section*.5}
+\contentsline {paragraph}{\nonumberline Simulation}{3}{section*.5}
+\contentsline {paragraph}{\nonumberline Emulationen}{4}{section*.6}
+\contentsline {paragraph}{\nonumberline (Rapid) Prototyping}{4}{section*.7}
 \contentsline {section}{\numberline {2.2}Sensoren}{4}{section.2.2}
 \contentsline {section}{\numberline {2.3}Sensornetzwerke}{4}{section.2.3}
-\contentsline {section}{\numberline {2.4}Wake-up Receiver}{4}{section.2.4}
-\contentsline {chapter}{\numberline {3}Simulationsumgebung Omnet++}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Alternativen}{5}{section.3.1}
-\contentsline {paragraph}{\nonumberline Simulation Library (IKR SimLib)\cite {ikr}}{5}{section*.6}
-\contentsline {paragraph}{\nonumberline openWNS\cite {openwns}}{5}{section*.7}
-\contentsline {paragraph}{\nonumberline NS-3\cite {ns3}}{5}{section*.8}
-\contentsline {paragraph}{\nonumberline weitere}{5}{section*.9}
-\contentsline {section}{\numberline {3.2}Einleitung}{5}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Einige Techniken und Funktionen}{6}{subsection.3.2.1}
-\contentsline {paragraph}{\nonumberline NED language\cite {ned}}{6}{section*.10}
-\contentsline {paragraph}{\nonumberline Nodes and Messages}{7}{section*.11}
-\contentsline {subparagraph}{\nonumberline initialize()}{7}{section*.12}
-\contentsline {subparagraph}{\nonumberline handleMessage(cMessage *msg)}{7}{section*.13}
-\contentsline {subparagraph}{\nonumberline activity()}{7}{section*.14}
-\contentsline {subparagraph}{\nonumberline finish()}{8}{section*.15}
-\contentsline {subparagraph}{\nonumberline cMessage}{8}{section*.16}
-\contentsline {paragraph}{\nonumberline Event}{8}{section*.17}
-\contentsline {paragraph}{\nonumberline XML Support}{8}{section*.18}
-\contentsline {section}{\numberline {3.3}MiXiM}{8}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Einleitung}{8}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Einige wichtige Module}{9}{subsection.3.3.2}
-\contentsline {paragraph}{\nonumberline Find Module}{9}{section*.19}
-\contentsline {paragraph}{\nonumberline Mobility}{9}{section*.20}
-\contentsline {paragraph}{\nonumberline Coord}{9}{section*.21}
-\contentsline {chapter}{\numberline {4}Implementierung}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Einleitung}{11}{section.4.1}
-\contentsline {section}{\numberline {4.2}Aufbau und Struktur}{11}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Klassen\IeC {\"u}bersicht}{11}{subsection.4.2.1}
-\contentsline {subsubsection}{\nonumberline CustomLinearMobility}{12}{section*.22}
-\contentsline {subsubsection}{\nonumberline CustomWorldUtility}{12}{section*.23}
-\contentsline {paragraph}{\nonumberline Einblick in einige Funktionen}{14}{section*.24}
-\contentsline {subsubsection}{\nonumberline MyWirelessNode und Sensor}{16}{section*.25}
-\contentsline {subsubsection}{\nonumberline NodeType}{19}{section*.26}
-\contentsline {subsubsection}{\nonumberline SensorType}{20}{section*.27}
-\contentsline {subsubsection}{\nonumberline Simple*}{21}{section*.28}
-\contentsline {subsubsection}{\nonumberline ExtendedMessage}{22}{section*.29}
-\contentsline {subsubsection}{\nonumberline StatisticsInterface}{22}{section*.30}
-\contentsline {subsection}{\numberline {4.2.2}Netzwerk}{23}{subsection.4.2.2}
-\contentsline {subsubsection}{\nonumberline Simple Module}{23}{section*.31}
-\contentsline {paragraph}{\nonumberline CustomLinearMobility}{24}{section*.32}
-\contentsline {paragraph}{\nonumberline CustomWorldUtility}{24}{section*.33}
-\contentsline {paragraph}{\nonumberline Sensoren}{25}{section*.34}
-\contentsline {subsubsection}{\nonumberline Compound Module}{25}{section*.35}
-\contentsline {paragraph}{\nonumberline MyWirelessNode}{26}{section*.36}
-\contentsline {paragraph}{\nonumberline Sensorknoten}{26}{section*.37}
-\contentsline {subsubsection}{\nonumberline Networks}{28}{section*.38}
-\contentsline {paragraph}{\nonumberline MyNetwork}{28}{section*.39}
-\contentsline {subsubsection}{\nonumberline Messages}{31}{section*.40}
-\contentsline {paragraph}{\nonumberline ExtendedMessage}{31}{section*.41}
-\contentsline {subsubsection}{\nonumberline omnetpp.ini}{31}{section*.42}
-\contentsline {section}{\numberline {4.3}Funktionsweise}{32}{section.4.3}
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{33}{chapter.5}
-\contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{35}{chapter*.43}
+\contentsline {section}{\numberline {2.4}Wake-up Receiver}{5}{section.2.4}
+\contentsline {chapter}{\numberline {3}Simulationsumgebung (Omnet++)}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Alternativen zu Omnet++}{7}{section.3.1}
+\contentsline {paragraph}{\nonumberline Simulation Library (IKR SimLib)\cite {ikr}}{7}{section*.11}
+\contentsline {paragraph}{\nonumberline openWNS\cite {openwns}}{8}{section*.12}
+\contentsline {paragraph}{\nonumberline NS-3\cite {ns3}}{8}{section*.13}
+\contentsline {paragraph}{\nonumberline weitere}{9}{section*.14}
+\contentsline {section}{\numberline {3.2}Omnet++}{9}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Einleitung}{9}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}NED language}{9}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Einige Techniken, Funktionen und wichtige Module}{11}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Nodes and Messages}{11}{subsubsection.3.2.3.1}
+\contentsline {paragraph}{\nonumberline initialize()}{13}{section*.15}
+\contentsline {paragraph}{\nonumberline handleMessage(cMessage *msg)}{13}{section*.16}
+\contentsline {paragraph}{\nonumberline activity()}{13}{section*.17}
+\contentsline {paragraph}{\nonumberline finish()}{13}{section*.18}
+\contentsline {subsubsection}{\numberline {3.2.3.2}cMessage}{14}{subsubsection.3.2.3.2}
+\contentsline {subsubsection}{\numberline {3.2.3.3}Event}{14}{subsubsection.3.2.3.3}
+\contentsline {subsubsection}{\numberline {3.2.3.4}XML Support}{15}{subsubsection.3.2.3.4}
+\contentsline {section}{\numberline {3.3}MiXiM-Framework als Omnet++-Erweiterung}{16}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Einleitung}{16}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Einige wichtige Module}{16}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}FindModule}{16}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}Coord}{17}{subsubsection.3.3.2.2}
+\contentsline {subsubsection}{\numberline {3.3.2.3}Mobility}{17}{subsubsection.3.3.2.3}
+\contentsline {subsubsection}{\numberline {3.3.2.4}Wireless}{17}{subsubsection.3.3.2.4}
+\contentsline {paragraph}{\nonumberline Host80211}{17}{section*.19}
+\contentsline {chapter}{\numberline {4}Implementierung}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Einleitung}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Aufbau und Struktur}{19}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Klassen\IeC {\"u}bersicht}{19}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1.1}CustomLinearMobility}{19}{subsubsection.4.2.1.1}
+\contentsline {subsubsection}{\numberline {4.2.1.2}CustomWorldUtility}{19}{subsubsection.4.2.1.2}
+\contentsline {paragraph}{\nonumberline Einblick in einige Funktionen}{21}{section*.21}
+\contentsline {subsubsection}{\numberline {4.2.1.3}MyWirelessNode und Sensor}{25}{subsubsection.4.2.1.3}
+\contentsline {subsubsection}{\numberline {4.2.1.4}NodeType}{28}{subsubsection.4.2.1.4}
+\contentsline {subsubsection}{\numberline {4.2.1.5}SensorType}{28}{subsubsection.4.2.1.5}
+\contentsline {subsubsection}{\numberline {4.2.1.6}Simple*}{29}{subsubsection.4.2.1.6}
+\contentsline {subsubsection}{\numberline {4.2.1.7}ExtendedMessage}{30}{subsubsection.4.2.1.7}
+\contentsline {subsubsection}{\numberline {4.2.1.8}StatisticsInterface}{31}{subsubsection.4.2.1.8}
+\contentsline {subsection}{\numberline {4.2.2}\IeC {\"U}bersicht NED-Module}{31}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Simple Module}{32}{subsubsection.4.2.2.1}
+\contentsline {paragraph}{\nonumberline CustomLinearMobility}{32}{section*.22}
+\contentsline {paragraph}{\nonumberline CustomWorldUtility}{32}{section*.23}
+\contentsline {paragraph}{\nonumberline Sensoren}{33}{section*.24}
+\contentsline {subsubsection}{\numberline {4.2.2.2}Compound Module}{34}{subsubsection.4.2.2.2}
+\contentsline {paragraph}{\nonumberline MyWirelessNode}{34}{section*.25}
+\contentsline {paragraph}{\nonumberline Sensorknoten}{34}{section*.26}
+\contentsline {subsubsection}{\numberline {4.2.2.3}Networks}{36}{subsubsection.4.2.2.3}
+\contentsline {paragraph}{\nonumberline MyNetwork}{36}{section*.27}
+\contentsline {subsubsection}{\numberline {4.2.2.4}Messages}{39}{subsubsection.4.2.2.4}
+\contentsline {paragraph}{\nonumberline ExtendedMessage}{39}{section*.28}
+\contentsline {subsubsection}{\numberline {4.2.2.5}omnetpp.ini}{40}{subsubsection.4.2.2.5}
+\contentsline {section}{\numberline {4.3}Funktionsweise}{41}{section.4.3}
+\contentsline {chapter}{\numberline {5}Zusammenfassung}{43}{chapter.5}
+\contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{45}{chapter*.29}

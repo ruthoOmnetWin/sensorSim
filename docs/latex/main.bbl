@@ -10,6 +10,11 @@
 \newblock Online unter \url{https://www.eclipse.org/}; zuletzt besucht am 5.
   August 2014.
 
+\bibitem{emacs}
+{\em Emacs}.
+\newblock Online unter \url{http://www.gnu.org/software/emacs/}; zuletzt
+  besucht am 25. November 2014.
+
 \bibitem{git}
 {\em Git}.
 \newblock Online unter \url{http://git-scm.com/}; zuletzt besucht am 5. August
@@ -35,6 +40,11 @@
 \newblock Online unter \url{http://www.ewh.ieee.org/soc/es/Nov1999/18/ned.htm};
   zuletzt besucht am 5. August 2014.
 
+\bibitem{ns3-wiki}
+{\em NS-Simulator auf Wikipedia}.
+\newblock Online unter \url{http://en.wikipedia.org/wiki/Ns_%28simulator%28};
+  zuletzt besucht am 25. November 2014.
+
 \bibitem{omnetman}
 {\em Omnet++ Manual}.
 \newblock Online unter
@@ -45,6 +55,16 @@
 {\em Omnet++ Official Website}.
 \newblock Online unter \url{http://www.omnetpp.org}; zuletzt besucht am 5.
   August 2014.
+
+\bibitem{wrowser}
+{\em OpenWNS Wrowser}.
+\newblock Online unter \url{https://launchpad.net/openwns-wrowser}; zuletzt
+  besucht am 25. November 2014.
+
+\bibitem{TopGen}
+{\em Topology Generator des NS-Simulators}.
+\newblock Online unter \url{https://www.nsnam.org/wiki/Topology_Generator};
+  zuletzt besucht am 25. November 2014.
 
 \bibitem{sensornetzwiki}
 {\em Wikipediaeintrag Sensornetz}.

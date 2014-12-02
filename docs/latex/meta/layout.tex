@@ -106,6 +106,7 @@
 			% und in jedem Drucker verfügbar
 
 \usepackage{
+pifont,
 %	german,			% Deutsche Trennungen (ALTE Rechtschreibung), 
 				% Anführungsstriche und mehr 
 	ngerman,		% Deutsche Trennungen (NEUE Rechtschreibung), 
@@ -153,6 +154,11 @@
 %	marvosym,		% Euro etc.
 }
 
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\specialcell}[2][l]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
 %\usepackage{pstricks}
 \usepackage{listings}
 
@@ -174,7 +180,7 @@
 
 \usepackage{url}      		% irgendwas mit urls
 \usepackage[table]{xcolor} % farbige Zeilen in Tabellen
-
+\usepackage{todonotes}
 %======================================================================
 %	Bilder, Links
 %======================================================================
@@ -240,6 +246,9 @@
 \newtheorem{bsp}{Beispiel}[chapter]
 \newtheorem{satz}{Satz}[chapter]
 
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3} 
+
 \lstset{
   language        = php,
   basicstyle      = \small\ttfamily,
@@ -272,15 +281,13 @@
   showstringspaces=false,
   emph            =[1]{simple, module, network, extends, channel, channelinterface,import,like,moduleinterface,package,property},
   emphstyle       =[1]\color{blue},
-  emph            =[2]{if,and,or,else,for,input,output,inout, false,default,index,sizeof,true,typename,types,'<-->'},
+  emph            =[2]{if,and,or,else,for,input,output,inout, false,default,index,sizeof,true,typename,'<-->'},
   emphstyle       =[2]\color{yellow},
   emph            =[3]{types, parameters, gates, connections, submodules, allowunconnected},
   emphstyle       =[3]\color{orange},
   emph			  =[4]{int, string, double, @display, @class, volatile, xmldoc, xml, bool,const,this},
   emphstyle       =[4]\color{red}
 }
-
-
 %======================================================================
 %	includeonly
 %======================================================================
