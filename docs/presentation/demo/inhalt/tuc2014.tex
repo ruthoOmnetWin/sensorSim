@@ -1,0 +1,47 @@
+\begin{frame}[containsverbatim]
+\frametitle{Beamer-Themes für das TUC2014-Layout}
+
+\begin{itemize}
+\item Für das TUC-Layout wurde ein eigenes Beamer-Theme erstellt.
+\item Es kann über \lstinline[language={[LaTeX]TeX}]+\usetheme{tuc2014}+ geladen werden.
+\item Dadurch werden wiederum folgende Unter-Themes geladen:
+  \begin{description}
+  \item[Color Theme] Legt das Farbschema für jeder Fakultät fest.
+  \item[Font Theme]  Lädt die Hausschrift "`Roboto Condensed"'.
+  \item[Inner Theme] Legt dir Formatierung von Hervorhebungen, Aufzählungslisten,
+                     Titelseite und Inhaltsverzeichnis fest.
+  \item[Outer Theme] Stellt die Formatierung von Kopf- und Fußzeile sowie der
+                     linken Logospalte einer Folie ein.
+  \end{description}
+
+\bigskip
+
+\item Die Teil-Themes können ggf. auch unabhängig voneinander genutzt werden.
+  \begin{itemize}
+  \item In den meisten Fällen wird es aber nur Sinn machen das Color Theme
+        und/oder das Font Theme im Kombination mit anderen Beamer-Themes zu
+        nutzen.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[containsverbatim]
+\frametitle{Zusatzfunktionen des Haupt-Themes}
+
+\begin{itemize}
+\item Folgende Einstellungen werden Haupt-Theme \structure{zusätzlich} zum
+      Laden der Unter-Themes vorgenommen.
+  \begin{itemize}
+  \item \lstinline[language={[LaTeX]TeX}]+\usefonttheme{professionalfonts}+ \\
+        für die üblichen Mathematik-Schriften
+  \smallskip
+  \item \lstinline[language={[LaTeX]TeX}]+\setbeamercovered{transparent}+ \\
+        für die Schattierung ausgeblendeter Folieninhalte
+  \smallskip
+  \item Ferner werden die Folien im Zweibildschirmmodus (siehe Kapitel~19
+        in \cite{beamerguide}) nur klein skaliert, wenn tatsächlich Notizen
+        für diese Folie hinterlegt wurden.
+  \end{itemize}
+\end{itemize}
+\end{frame}

@@ -1,0 +1,11 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Einleitung}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Aufgabe}{4}{0}{1}
+\beamer@sectionintoc {2}{Vorbetrachtungen}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Simulation vs. Emulation und Prototyping}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Sensoren}{6}{0}{2}
+\beamer@sectionintoc {3}{Umsetzung}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{Omnet++}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{bisherige Anwendung}{8}{0}{3}
+\beamer@subsectionintoc {3}{3}{Beispiel}{9}{0}{3}

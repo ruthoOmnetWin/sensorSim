@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.1)  2 DEC 2014 12:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.1)  3 DEC 2014 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1398,14 +1398,7 @@ Overfull \hbox (14.02925pt too wide) in alignment at lines 226--226
 [][][] 
  []
 
-[14] <img/messageEvent.png, id=381, 884.30376pt x 378.41376pt>
-File: img/messageEvent.png Graphic file (type png)
-
-<use img/messageEvent.png>
-Package pdftex.def Info: img/messageEvent.png used on input line 238.
-(pdftex.def)             Requested size: 431.05931pt x 184.46008pt.
-
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+[14] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1413,29 +1406,36 @@ File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
-) [15 <./img/messageEvent.png>]
-Overfull \hbox (4.62202pt too wide) in paragraph at lines 282--283
+) [15]
+<img/messageEvent.pdf, id=415, 707.11676pt x 302.15384pt>
+File: img/messageEvent.pdf Graphic file (type pdf)
+
+<use img/messageEvent.pdf>
+Package pdftex.def Info: img/messageEvent.pdf used on input line 277.
+(pdftex.def)             Requested size: 431.05931pt x 184.1983pt.
+ [16 <./img/messageEvent.pdf>] [17]
+Overfull \hbox (4.62202pt too wide) in paragraph at lines 339--340
 \T1/aer/m/n/12 Coord ist ei-ne ein-fa-che Klas-se zur Re-prä-sen-ta-ti-on von K
 o-or-di-na-ten im 3-dimensionalen
  []
 
-[16]) (./chapters/implementierung.tex [17
-\pgfsyspdfmark {pgfid16}{4630621}{12818345}
-\pgfsyspdfmark {pgfid19}{36059787}{12835451}
-\pgfsyspdfmark {pgfid20}{38397561}{12564725}
-] [18
+[18]) (./chapters/implementierung.tex [19
+\pgfsyspdfmark {pgfid16}{4630621}{36504117}
+\pgfsyspdfmark {pgfid19}{36059787}{36521223}
+\pgfsyspdfmark {pgfid20}{38397561}{36250497}
+] [20
 
 
 ]
 Kapitel 4.
-<img/Klassenuebersicht.png, id=426, 168.02776pt x 240.9pt>
+<img/Klassenuebersicht.png, id=491, 168.02776pt x 240.9pt>
 File: img/Klassenuebersicht.png Graphic file (type png)
 
 <use img/Klassenuebersicht.png>
 Package pdftex.def Info: img/Klassenuebersicht.png used on input line 17.
 (pdftex.def)             Requested size: 168.02734pt x 240.8994pt.
 
-<img/CustomLinearMobility.png, id=427, 122.25674pt x 79.19588pt>
+<img/CustomLinearMobility.png, id=493, 122.25674pt x 79.19588pt>
 File: img/CustomLinearMobility.png Graphic file (type png)
 
 <use img/CustomLinearMobility.png>
@@ -1446,98 +1446,122 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-<img/CustomWorldUtility1.png, id=428, 202.95825pt x 77.99138pt>
+<img/CustomWorldUtility1.png, id=494, 202.95825pt x 77.99138pt>
 File: img/CustomWorldUtility1.png Graphic file (type png)
 
 <use img/CustomWorldUtility1.png>
 Package pdftex.def Info: img/CustomWorldUtility1.png used on input line 38.
 (pdftex.def)             Requested size: 202.95775pt x 77.99118pt.
- [19] [20 <./img/Klassenuebersicht.png> <./img/CustomLinearMobility.png> <./img
+ [21] [22 <./img/Klassenuebersicht.png> <./img/CustomLinearMobility.png> <./img
 /CustomWorldUtility1.png>]
-<img/CustomWorldUtility3.png, id=444, 718.18312pt x 138.81862pt>
+<img/CustomWorldUtility3.png, id=509, 718.18312pt x 138.81862pt>
 File: img/CustomWorldUtility3.png Graphic file (type png)
 
 <use img/CustomWorldUtility3.png>
 Package pdftex.def Info: img/CustomWorldUtility3.png used on input line 48.
 (pdftex.def)             Requested size: 431.05931pt x 83.32146pt.
 
-<img/CustomWorldUtility2.png, id=445, 712.16063pt x 470.35725pt>
+<img/CustomWorldUtility2.png, id=510, 712.16063pt x 470.35725pt>
 File: img/CustomWorldUtility2.png Graphic file (type png)
 
 <use img/CustomWorldUtility2.png>
 Package pdftex.def Info: img/CustomWorldUtility2.png used on input line 57.
 (pdftex.def)             Requested size: 431.05931pt x 284.69978pt.
- [21 <./img/CustomWorldUtility3.png>] [22 <./img/CustomWorldUtility2.png>] [23]
- [24]
+ [23 <./img/CustomWorldUtility3.png>] [24 <./img/CustomWorldUtility2.png>] [25]
+ [26]
 Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-<img/MyWirelessNode.png, id=531, 359.84438pt x 428.50087pt>
+<img/MyWirelessNode.png, id=596, 359.84438pt x 428.50087pt>
 File: img/MyWirelessNode.png Graphic file (type png)
 
 <use img/MyWirelessNode.png>
 Package pdftex.def Info: img/MyWirelessNode.png used on input line 157.
 (pdftex.def)             Requested size: 359.84349pt x 428.49982pt.
- [25] [26 <./img/MyWirelessNode.png>] [27]
-<img/NodeType.png, id=596, 291.489pt x 296.60812pt>
+ [27] [28 <./img/MyWirelessNode.png>] [29]
+<img/NodeType.png, id=661, 291.489pt x 296.60812pt>
 File: img/NodeType.png Graphic file (type png)
  <use img/NodeType.png>
 Package pdftex.def Info: img/NodeType.png used on input line 227.
 (pdftex.def)             Requested size: 291.48828pt x 296.60739pt.
 
-<img/SensorType.png, id=597, 691.08188pt x 77.99138pt>
+<img/SensorType.png, id=662, 691.08188pt x 77.99138pt>
 File: img/SensorType.png Graphic file (type png)
 
 <use img/SensorType.png>
 Package pdftex.def Info: img/SensorType.png used on input line 235.
 (pdftex.def)             Requested size: 431.05931pt x 48.6469pt.
 
-<img/SimpleClasses.png, id=598, 103.587pt x 117.43875pt>
+<img/SimpleClasses.png, id=663, 103.587pt x 117.43875pt>
 File: img/SimpleClasses.png Graphic file (type png)
 
 <use img/SimpleClasses.png>
 Package pdftex.def Info: img/SimpleClasses.png used on input line 245.
 (pdftex.def)             Requested size: 103.58675pt x 117.43845pt.
- [28 <./img/NodeType.png>] [29 <./img/SensorType.png> <./img/SimpleClasses.png>
+ [30 <./img/NodeType.png>] [31 <./img/SensorType.png> <./img/SimpleClasses.png>
 ]
 Overfull \hbox (8.12608pt too wide) in paragraph at lines 268--269
 \T1/aer/m/n/12 ExtendedMessage erbt di-rekt von der Klas-se cMes-sa-ge, der Sta
 ndard-Nachrichtenklasse
  []
 
-<img/ExtendedMessage.png, id=622, 110.21175pt x 215.3646pt>
+<img/ExtendedMessage.png, id=688, 110.21175pt x 215.3646pt>
 File: img/ExtendedMessage.png Graphic file (type png)
 
 <use img/ExtendedMessage.png>
 Package pdftex.def Info: img/ExtendedMessage.png used on input line 273.
 (pdftex.def)             Requested size: 110.21147pt x 215.36406pt.
- [30 <./img/ExtendedMessage.png>] [31] [32]
-[33] [34] [35] [36] [37] [38]
+ [32 <./img/ExtendedMessage.png>] [33] [34]
+[35] [36] [37] [38] [39] [40]
 Underfull \hbox (badness 10000) in paragraph at lines 599--600
 
  []
 
-[39] [40] <img/Nachrichtenverlauf.png, id=894, 747.79375pt x 1056.94875pt>
-File: img/Nachrichtenverlauf.png Graphic file (type png)
+[41] [42] <img/Nachrichtenverlauf.pdf, id=958, 597.50786pt x 845.04686pt>
+File: img/Nachrichtenverlauf.pdf Graphic file (type pdf)
 
-<use img/Nachrichtenverlauf.png>
-Package pdftex.def Info: img/Nachrichtenverlauf.png used on input line 646.
-(pdftex.def)             Requested size: 431.05931pt x 609.27295pt.
+<use img/Nachrichtenverlauf.pdf>
+Package pdftex.def Info: img/Nachrichtenverlauf.pdf used on input line 646.
+(pdftex.def)             Requested size: 431.05931pt x 609.64536pt.
 
 
-LaTeX Warning: Float too large for page by 28.27293pt on input line 647.
+LaTeX Warning: Float too large for page by 28.64534pt on input line 647.
 
-) (./chapters/zusammenfassung.tex [41] [42 <./img/Nachrichtenverlauf.png>]
+) (./chapters/zusammenfassung.tex [43] [44 <./img/Nachrichtenverlauf.pdf>]
 Kapitel 5.
+
+Overfull \hbox (28.56389pt too wide) in paragraph at lines 5--5
+[][][][]\T1/aer/m/n/12 zusammenfassung 
+ []
+
+
+Overfull \hbox (28.56389pt too wide) in paragraph at lines 5--5
+[][][][]\T1/aer/m/n/12 zusammenfassung 
+ []
+
+
+Overfull \hbox (28.56389pt too wide) in paragraph at lines 5--5
+[][][][]\T1/aer/m/n/12 zusammenfassung 
+ []
+
+
+Overfull \hbox (28.56389pt too wide) in paragraph at lines 5--5
+[][][][]\T1/aer/m/n/12 zusammenfassung 
+ []
+
 ) (./formalLayout/glossar.tex) (./formalLayout/literaturverzeichnis.tex
-(./main.bbl [43
+(./main.bbl [45
 
 
-] [44
+
+\pgfsyspdfmark {pgfid21}{4630621}{39252534}
+\pgfsyspdfmark {pgfid24}{36059787}{39269640}
+\pgfsyspdfmark {pgfid25}{38397561}{38998914}
+] [46
 
 
-] [45]
+] [47]
 
 Class scrreprt Warning: Usage of deprecated font command `\sc'!
 (scrreprt)              You should note, that in 1994 font command `\sc' has
@@ -1614,13 +1638,13 @@ Underfull \hbox (badness 1122) in paragraph at lines 93--98
 li-ne un-ter [][]$\T1/aett/m/n/12 http : / / www . ikr .
  []
 
-) [46]) (./formalLayout/selbststaendigkeitserklaerung.tex
+) [48]) (./formalLayout/selbststaendigkeitserklaerung.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--10
 
  []
 
 \us=\skip57
-) [47
+) [49
 
 
 
@@ -1632,7 +1656,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0405A407C1922B8F9BC9A422DE9DCC01;1670.
+(rerunfilecheck)             Checksum: B438EB28E1C20248DBC9A2E554AF9C43;1670.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1640,10 +1664,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
  ) 
 Here is how much of TeX's memory you used:
- 22770 strings out of 493108
- 401598 string characters out of 6140725
+ 22861 strings out of 493108
+ 402978 string characters out of 6140725
  912252 words of memory out of 5000000
- 25156 multiletter control sequences out of 15000+600000
+ 25207 multiletter control sequences out of 15000+600000
  50983 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,18n,99p,825b,1927s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1660,10 +1684,10 @@ fonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 re/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/ur
 w/zapfding/uzdr.pfb>
-Output written on main.pdf (59 pages, 730076 bytes).
+Output written on main.pdf (61 pages, 654915 bytes).
 PDF statistics:
- 1125 PDF objects out of 1200 (max. 8388607)
- 1013 compressed objects within 11 object streams
- 538 named destinations out of 1000 (max. 500000)
+ 1206 PDF objects out of 1440 (max. 8388607)
+ 1088 compressed objects within 11 object streams
+ 578 named destinations out of 1000 (max. 500000)
  286 words of extra memory for PDF output out of 10000 (max. 10000000)
 

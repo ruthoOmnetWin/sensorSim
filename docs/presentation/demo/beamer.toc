@@ -1,0 +1,17 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Anwendungsbeispiele f\IeC {\"u}r \LaTeX -Beamer}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Formatierung}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Listen}{7}{0}{1}
+\beamer@subsectionintoc {1}{3}{Mathematik}{8}{0}{1}
+\beamer@subsectionintoc {1}{4}{Bilder}{9}{0}{1}
+\beamer@subsectionintoc {1}{5}{Quellcode}{10}{0}{1}
+\beamer@sectionintoc {2}{Das Template}{11}{0}{2}
+\beamer@subsectionintoc {2}{1}{Farben (Color-Theme)}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Schriften (Font-Theme)}{17}{0}{2}
+\beamer@subsectionintoc {2}{3}{Folienrahmen (Outer-Theme)}{18}{0}{2}
+\beamer@subsectionintoc {2}{4}{Folieninhalt (Inner-Theme)}{25}{0}{2}
+\beamer@subsectionintoc {2}{5}{Das \LaTeX -Beamer-Grundger\IeC {\"u}st}{28}{0}{2}
+\beamer@sectionintoc {3}{Verschiedenes}{30}{0}{3}
+\beamer@subsectionintoc {3}{1}{Kontakt}{30}{0}{3}
+\beamer@subsectionintoc {3}{2}{Literatur}{31}{0}{3}

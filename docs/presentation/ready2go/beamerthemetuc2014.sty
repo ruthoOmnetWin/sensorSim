@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                             %
+% Beamer-Template für das Corporate Design 2014 der TU Chemnitz               %
+% (c) Mario Haustein (mario.haustein@hrz.tu-chemnitz.de), 2013                %
+%                                                                             %
+% Dieses Material steht unter der Creative-Commons-Lizenz Namensnennung -     %
+% Weitergabe unter gleichen Bedingungen 4.0 International. Um eine Kopie      %
+% dieser Lizenz zu sehen, besuchen Sie                                        %
+% http://creativecommons.org/licenses/by-sa/4.0/deed.de.                      %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mode<presentation>
+
+\DeclareOptionBeamer{fakcolor}{\PassOptionsToPackage{fakcolor=#1}{beamercolorthemetuc2014}}
+\DeclareOptionBeamer{colorspace}{\PassOptionsToPackage{colorspace=#1}{beamercolorthemetuc2014}}
+\DeclareOptionBeamer{latexfonts}{\PassOptionsToPackage{latexfonts}{beamerfontthemetuc2014}}
+\DeclareOptionBeamer{latexfontsbody}{\PassOptionsToPackage{latexfontsbody}{beamerfontthemetuc2014}}
+\ProcessOptionsBeamer
+
+\usefonttheme{professionalfonts}
+\usecolortheme{tuc2014}
+\usefonttheme{tuc2014}
+\useinnertheme{tuc2014}
+\useoutertheme{tuc2014}
+
+% Noch nicht dargestellte Folieninhalte schattieren.
+\setbeamercovered{transparent}
+
+% Notizen für die aktuelle Folie nur einblenden, wenn es welche gibt.
+\defbeamertemplate*{note page}{layout 1}{%
+\begin{minipage}{\textwidth}
+\begin{center}%
+\ifx\beamer@notes\@empty%
+  \hspace*{-\Gm@lmargin}\insertslideintonotes{1.0}\hspace*{-\Gm@rmargin}\hss%
+\else%
+  \vbox{\hspace*{\fill}\insertslideintonotes{0.4}}%
+  \vspace*{1ex}%
+  \vbox{\parbox{\linewidth}{\insertnote}}%
+  \vspace*{1ex}%
+\fi%
+\end{center}%
+\end{minipage}}
+
+\mode<beamer>{\setbeamertemplate{note page}[layout 1]}
+\mode<trans>{\setbeamertemplate{note page}[default]}
+
+\mode<all>

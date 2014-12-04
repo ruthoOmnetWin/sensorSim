@@ -1,0 +1,122 @@
+\begin{frame}[containsverbatim]
+\frametitle{Die Kopzeile}
+
+\begin{itemize}
+\item Die Kopfzeile existiert in einer dreizeiligen und einer zweizeiligen Version.
+\item Standarmäßig ist die zweizeilige Version aktiv.
+\item Mittels \lstinline[language={[LaTeX]TeX}]+\tucthreeheadlines+ und
+      \lstinline[language={[LaTeX]TeX}]+\tuctwoheadlines+ kann zwischen den Versionen
+      umgeschaltet werden.
+
+\medskip
+\begin{alertblock}{Achtung}
+\centering
+%Da diese Befehle den Satzspiegel ändern, dürfen Sie nur außerhalb von
+%\texttt{frame}-Umgebungen und dort auch nur außerhalb von Gruppen oder weiteren
+%Umgebungen aufgerufen werden.
+Da diese Befehle den Satzspiegel ändern, dürfen Sie nur außerhalb von
+\texttt{frame}-Umgebungen aufgerufen werden.
+\end{alertblock}
+\medskip
+
+\item Bei einer Umschaltung der Kopfzeile wird \structure{stets} die Logospalte
+      durch Aufruf von \lstinline[language={[LaTeX]TeX}]+\tucwideframe+ deaktiviert.
+\end{itemize}
+\end{frame}
+
+
+\begingroup
+\setbeamertemplate{tuc2 headline 1}{Zeile 1}
+\setbeamertemplate{tuc2 headline 2}{Zeile 2}
+
+\begin{frame}[containsverbatim]
+\frametitle{Änderung der Kopzeile}
+
+\begin{itemize}
+\item Die Kopfzeile kann durch folgende Beamer-Templates angepasst werden.
+  \begin{center}
+  \begin{tabularx}{\linewidth}{>{\ttfamily}lX}
+  tuc2 headline 1 & obere Zeile (2-zeilige Kopfzeile)    \\
+  tuc2 headline 2 & untere Zeile (2-zeilige Kopfzeile)   \\
+  tuc3 headline 1 & obere Zeile (3-zeilige Kopfzeile)    \\
+  tuc3 headline 2 & mittlere Zeile (3-zeilige Kopfzeile) \\
+  tuc3 headline 3 & untere Zeile (3-zeilige Kopfzeile)   \\
+  \end{tabularx}
+  \end{center}
+
+\item Für diese Folie gilt z.B.:
+\begingroup
+\small
+\begin{lstlisting}[style=numberedblock,language={[LaTeX]TeX}]
+\begingroup
+\setbeamertemplate{tuc2 headline 1}{Zeile 1}
+\setbeamertemplate{tuc2 headline 2}{Zeile 2}
+
+\begin{frame}
+% Inhalt
+\end{frame}
+\endgroup
+\end{lstlisting}
+\endgroup
+\end{itemize}
+\end{frame}
+\endgroup
+
+
+\begin{frame}[containsverbatim]
+\frametitle{Vordefinierte Kopfzeilen (2-zeilig)}
+
+\begin{itemize}
+\item Mit \lstinline[language={[LaTeX]{TeX}}]+\setbeamertemplate+ können
+      vordefinierte Einstellungen geladen werden.
+
+\bigskip
+
+\item \lstinline[language={[LaTeX]{TeX}}]+\setbeamertemplate{tuc2 headlines}[section]+
+  \begin{description}
+  \item[oben]  Aktueller Abschnitt
+  \item[unten] Aktueller Unterabschnitt
+  \end{description}
+
+\item \lstinline[language={[LaTeX]{TeX}}]+\setbeamertemplate{tuc2 headlines}[title]+
+  \begin{description}
+  \item[oben]  Präsentationstitel
+  \item[unten] Untertitel (sofern angegeben)
+  \end{description}
+
+\bigskip
+
+\item Standardmäßig ist die Option \texttt{section} aktiv.
+\item Für Titel und Untertitel kommen die Alternativversionen zur Anwendung.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[containsverbatim]
+\frametitle{Vordefinierte Kopfzeilen (3-zeilig)}
+
+\begin{itemize}
+\item Analog zum 2-zeiligen Fall \dots
+
+\bigskip
+
+\item \lstinline[language={[LaTeX]{TeX}}]+\setbeamertemplate{tuc3 headlines}[section]+
+  \begin{description}
+  \item[oben]  Präsentationstitel
+  \item[mitte] Aktueller Abschnitt
+  \item[unten] Aktueller Unterabschnitt
+  \end{description}
+
+\item \lstinline[language={[LaTeX]{TeX}}]+\setbeamertemplate{tuc3 headlines}[title]+
+  \begin{description}
+  \item[oben]  Präsentationstitel
+  \item[mitte] Untertitel (bzw. Institut, wenn kein Untertitel angegeben ist)
+  \item[unten] Insititut (wenn nicht schon in mittlerer Zeile genannt)
+  \end{description}
+
+\bigskip
+
+\item Standardmäßig ist die Option \texttt{title} aktiv.
+\item Für Titel und Untertitel kommen die Alternativversionen zur Anwendung.
+\end{itemize}
+\end{frame}

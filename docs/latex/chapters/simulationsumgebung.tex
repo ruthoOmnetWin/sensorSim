@@ -226,18 +226,6 @@ Es empfiehlt sich dennoch eine eigene Kindklasse von cMessage zu definieren, da 
 \end{tabularx}
 \end{table}
 
-\subsubsection{Event}
-
-Die Zeit einer Simulation verläuft linear. Anhand dieser kann die Ausführung von Events für einen bestimmten Zeitpunkt geplant werden. Dies ist möglich durch das Versenden von cMessage in Kombination mit einer Scheduletime und wenn nötig als Selfmessage.\\
-Wenn ein Modul einen Zeitraum der Ausführung abgeschlossen hat, soll es unter Umständen eingefroren werden und erst zu einem späteren Zeitpunkt reaktiviert werden. Damit es in dieser Zeit nicht aktiv warten muss und somit unnötig Prozessorlast oder im Fall von mobilen Geräten auch noch zusätzlich Energie verbraucht, kann ein Modul jegliche Aktionen unterlassen, bis eine Nachricht, wie ein Event, die weitere Ausführung wieder anstößt (siehe Abbildung \ref{fig:messageEvent}). 
-
-\begin{figure}[htbp]
-\centering
-\caption{Beispiel cMessage als Event}
-\label{fig:messageEvent}
-\includegraphics[width=\textwidth]{messageEvent}
-\end{figure}
-
 \subsubsection{XML Support}
 
 NED-Parameter eines Moduls können vom Typ xml sein. Die dazu gehörende Klasse cXMLElement bietet ihrerseits umfangreiche Unterstützung dafür an. Diese orientiert sich dabei an einem DOM-Parser, ist allerdings aus Performanzgründen nur ähnlich aufgebaut. Dabei stellt die Klasse die für X-Path typischen Funktionen für XML-Zugriffe bereit wie zum Beispiel \textbf{getParentNode()} oder \textbf{getChildren()}.
@@ -256,6 +244,75 @@ for (int i = 0; i < amountRows; i++){
 }
 \end{lstlisting}
 \end{minipage}
+
+\subsubsection{weitere Beispiele}
+
+\paragraph{cClassDescriptor} Eine Klasse die dabei behilflich ist die Felder eines Objektes zu finden. Dazu muss eine Klasse lediglich von cClassDescriptor erben. Die Verwendung funktioniert wie im Listing \ref{lst:cclassdescriptor} beschrieben.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[language=C++,caption={Verwendung von cClassDescriptor },label=lst:cclassdescriptor]
+cClassDescriptor* thisDescr = cClassDescriptor::getDescriptorFor(this);
+int count = thisDescr->getFieldCount(this);
+
+for ( int i = 0; i < count; i++) {
+    std::stringstream s;
+    s << i <<" " << thisDescr->getFieldName(this, i) << " " ;
+    s << thisDescr->getFieldAsString(this, i, 0);
+    s << i << " " << thisDescr->getFieldName(this, i);
+    cMessage *msg = new cMessage(s.str().c_str());
+    send(msg, "gate$o");
+}
+\end{lstlisting}
+\end{minipage}
+
+\paragraph{Simulationszeit und Events}
+
+Die Zeit einer Simulation verläuft linear. Anhand dieser kann die Ausführung von Events für einen bestimmten Zeitpunkt geplant werden. Dies ist möglich durch das Versenden von cMessage in Kombination mit einer Scheduletime und wenn nötig als Selfmessage.\\
+Wenn ein Modul einen Zeitraum der Ausführung abgeschlossen hat, soll es unter Umständen eingefroren werden und erst zu einem späteren Zeitpunkt reaktiviert werden. Damit es in dieser Zeit nicht aktiv warten muss und somit unnötig Prozessorlast oder im Fall von mobilen Geräten auch noch zusätzlich Energie verbraucht, kann ein Modul jegliche Aktionen unterlassen, bis eine Nachricht, wie ein Event, die weitere Ausführung wieder anstößt (siehe Abbildung \ref{fig:messageEvent}). 
+
+\begin{figure}[htbp]
+\centering
+\caption{Beispiel cMessage als Event}
+\label{fig:messageEvent}
+\includegraphics[width=\textwidth]{messageEvent}
+\end{figure}
+
+Die Simulationszeit hat den Typ simtime\_t. Im Listing \ref{lst:simtime} sind Beispiele beschrieben, auf welche Weise die aktuelle Zeit abgefragt werden kann und wie ein Event zu einem bestimmten Zeitpunkt ausgelöst werden kann. Dabei kann einfach ein beliebiger Wert als Verzögerung gewählt werden. Dieser wird zur momentanen Zeit addiert und dann wird der Event in Auftrag gegeben.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[language=C++,caption={Simulationszeit und Event},label=lst:simtime]
+//get the simtime
+simtime_t time = simTime();
+//define a delay
+simtime_t delay = 10.0;
+//schedule an event at a given time
+scheduleAt(simTime()+delay, event);
+\end{lstlisting}
+\end{minipage}
+
+\paragraph{cArray} Ist eine Klasse, die als Sammlung für Objekte vom Typ cObject dient. Sie kommt zum Beispiel innerhalt der cMessage zum Einsatz. Die Parameterliste der Nachrichten besteht aus einem solchen cArray. Die wichtigsten Funktionen sind hier add() und remove(), die in Listing \ref{lst:carray} kurz an einem Beispiel gezeigt werden.
+
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[language=C++,caption={cArray add und remove},label=lst:carray]
+//adding object
+cMessage *newmsg = new cMessage("any name");
+SimpleCoord *coord = new SimpleCoord("pos", position);
+newmsg->getParList().add(coord);
+send(newmsg, "toWorld$o");
+
+//getting (and removing) objects
+SimpleCoord *array = (SimpleCoord*) msg->getParList().remove(
+"pos");
+//double x = par->x;
+//double y = par->y;
+string name = msg->getName();
+delete msg;
+delete array;
+
+\end{lstlisting}
+\end{minipage}
+
+Weiterhin gibt es noch Funktionen wie size(), find() oder clear(), die selbsterklärend sind. Neben remove() gibt es auch noch die Möglichkeit per get() auf Elemente zuzugreifen, ohne sie dabei sofort zu entfernen.
 
 \section{MiXiM-Framework als Omnet++-Erweiterung}
 

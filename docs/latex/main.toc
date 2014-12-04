@@ -25,42 +25,45 @@
 \contentsline {paragraph}{\nonumberline activity()}{13}{section*.17}
 \contentsline {paragraph}{\nonumberline finish()}{13}{section*.18}
 \contentsline {subsubsection}{\numberline {3.2.3.2}cMessage}{14}{subsubsection.3.2.3.2}
-\contentsline {subsubsection}{\numberline {3.2.3.3}Event}{14}{subsubsection.3.2.3.3}
-\contentsline {subsubsection}{\numberline {3.2.3.4}XML Support}{15}{subsubsection.3.2.3.4}
-\contentsline {section}{\numberline {3.3}MiXiM-Framework als Omnet++-Erweiterung}{16}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Einleitung}{16}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Einige wichtige Module}{16}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}FindModule}{16}{subsubsection.3.3.2.1}
-\contentsline {subsubsection}{\numberline {3.3.2.2}Coord}{17}{subsubsection.3.3.2.2}
-\contentsline {subsubsection}{\numberline {3.3.2.3}Mobility}{17}{subsubsection.3.3.2.3}
-\contentsline {subsubsection}{\numberline {3.3.2.4}Wireless}{17}{subsubsection.3.3.2.4}
-\contentsline {paragraph}{\nonumberline Host80211}{17}{section*.19}
-\contentsline {chapter}{\numberline {4}Implementierung}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Einleitung}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}Aufbau und Struktur}{19}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Klassen\IeC {\"u}bersicht}{19}{subsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.1.1}CustomLinearMobility}{19}{subsubsection.4.2.1.1}
-\contentsline {subsubsection}{\numberline {4.2.1.2}CustomWorldUtility}{19}{subsubsection.4.2.1.2}
-\contentsline {paragraph}{\nonumberline Einblick in einige Funktionen}{21}{section*.21}
-\contentsline {subsubsection}{\numberline {4.2.1.3}MyWirelessNode und Sensor}{25}{subsubsection.4.2.1.3}
-\contentsline {subsubsection}{\numberline {4.2.1.4}NodeType}{28}{subsubsection.4.2.1.4}
-\contentsline {subsubsection}{\numberline {4.2.1.5}SensorType}{28}{subsubsection.4.2.1.5}
-\contentsline {subsubsection}{\numberline {4.2.1.6}Simple*}{29}{subsubsection.4.2.1.6}
-\contentsline {subsubsection}{\numberline {4.2.1.7}ExtendedMessage}{30}{subsubsection.4.2.1.7}
-\contentsline {subsubsection}{\numberline {4.2.1.8}StatisticsInterface}{31}{subsubsection.4.2.1.8}
-\contentsline {subsection}{\numberline {4.2.2}\IeC {\"U}bersicht NED-Module}{31}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Simple Module}{32}{subsubsection.4.2.2.1}
-\contentsline {paragraph}{\nonumberline CustomLinearMobility}{32}{section*.22}
-\contentsline {paragraph}{\nonumberline CustomWorldUtility}{32}{section*.23}
-\contentsline {paragraph}{\nonumberline Sensoren}{33}{section*.24}
-\contentsline {subsubsection}{\numberline {4.2.2.2}Compound Module}{34}{subsubsection.4.2.2.2}
-\contentsline {paragraph}{\nonumberline MyWirelessNode}{34}{section*.25}
-\contentsline {paragraph}{\nonumberline Sensorknoten}{34}{section*.26}
-\contentsline {subsubsection}{\numberline {4.2.2.3}Networks}{36}{subsubsection.4.2.2.3}
-\contentsline {paragraph}{\nonumberline MyNetwork}{36}{section*.27}
-\contentsline {subsubsection}{\numberline {4.2.2.4}Messages}{39}{subsubsection.4.2.2.4}
-\contentsline {paragraph}{\nonumberline ExtendedMessage}{39}{section*.28}
-\contentsline {subsubsection}{\numberline {4.2.2.5}omnetpp.ini}{40}{subsubsection.4.2.2.5}
-\contentsline {section}{\numberline {4.3}Funktionsweise}{41}{section.4.3}
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{43}{chapter.5}
-\contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{45}{chapter*.29}
+\contentsline {subsubsection}{\numberline {3.2.3.3}XML Support}{14}{subsubsection.3.2.3.3}
+\contentsline {subsubsection}{\numberline {3.2.3.4}weitere Beispiele}{15}{subsubsection.3.2.3.4}
+\contentsline {paragraph}{\nonumberline cClassDescriptor}{15}{section*.19}
+\contentsline {paragraph}{\nonumberline Simulationszeit und Events}{15}{section*.20}
+\contentsline {paragraph}{\nonumberline cArray}{16}{section*.21}
+\contentsline {section}{\numberline {3.3}MiXiM-Framework als Omnet++-Erweiterung}{17}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Einleitung}{17}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Einige wichtige Module}{18}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}FindModule}{18}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}Coord}{18}{subsubsection.3.3.2.2}
+\contentsline {subsubsection}{\numberline {3.3.2.3}Mobility}{18}{subsubsection.3.3.2.3}
+\contentsline {subsubsection}{\numberline {3.3.2.4}Wireless}{19}{subsubsection.3.3.2.4}
+\contentsline {paragraph}{\nonumberline Host80211}{19}{section*.22}
+\contentsline {chapter}{\numberline {4}Implementierung}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Einleitung}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Aufbau und Struktur}{21}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Klassen\IeC {\"u}bersicht}{21}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1.1}CustomLinearMobility}{21}{subsubsection.4.2.1.1}
+\contentsline {subsubsection}{\numberline {4.2.1.2}CustomWorldUtility}{21}{subsubsection.4.2.1.2}
+\contentsline {paragraph}{\nonumberline Einblick in einige Funktionen}{23}{section*.24}
+\contentsline {subsubsection}{\numberline {4.2.1.3}MyWirelessNode und Sensor}{27}{subsubsection.4.2.1.3}
+\contentsline {subsubsection}{\numberline {4.2.1.4}NodeType}{30}{subsubsection.4.2.1.4}
+\contentsline {subsubsection}{\numberline {4.2.1.5}SensorType}{30}{subsubsection.4.2.1.5}
+\contentsline {subsubsection}{\numberline {4.2.1.6}Simple*}{31}{subsubsection.4.2.1.6}
+\contentsline {subsubsection}{\numberline {4.2.1.7}ExtendedMessage}{32}{subsubsection.4.2.1.7}
+\contentsline {subsubsection}{\numberline {4.2.1.8}StatisticsInterface}{33}{subsubsection.4.2.1.8}
+\contentsline {subsection}{\numberline {4.2.2}\IeC {\"U}bersicht NED-Module}{33}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Simple Module}{34}{subsubsection.4.2.2.1}
+\contentsline {paragraph}{\nonumberline CustomLinearMobility}{34}{section*.25}
+\contentsline {paragraph}{\nonumberline CustomWorldUtility}{34}{section*.26}
+\contentsline {paragraph}{\nonumberline Sensoren}{35}{section*.27}
+\contentsline {subsubsection}{\numberline {4.2.2.2}Compound Module}{36}{subsubsection.4.2.2.2}
+\contentsline {paragraph}{\nonumberline MyWirelessNode}{36}{section*.28}
+\contentsline {paragraph}{\nonumberline Sensorknoten}{36}{section*.29}
+\contentsline {subsubsection}{\numberline {4.2.2.3}Networks}{38}{subsubsection.4.2.2.3}
+\contentsline {paragraph}{\nonumberline MyNetwork}{38}{section*.30}
+\contentsline {subsubsection}{\numberline {4.2.2.4}Messages}{41}{subsubsection.4.2.2.4}
+\contentsline {paragraph}{\nonumberline ExtendedMessage}{41}{section*.31}
+\contentsline {subsubsection}{\numberline {4.2.2.5}omnetpp.ini}{42}{subsubsection.4.2.2.5}
+\contentsline {section}{\numberline {4.3}Funktionsweise}{43}{section.4.3}
+\contentsline {chapter}{\numberline {5}Zusammenfassung}{45}{chapter.5}
+\contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{47}{chapter*.33}
