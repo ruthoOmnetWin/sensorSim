@@ -1,11 +1,12 @@
-\chapter{Simulationsumgebung (Omnet++)}
+\chapter{Simulationsumgebung}
 
-Um eine Simulation in einem geeigneten zeitlichen Rahmen erstellen zu können, bietet sich die Verwendung von einer Simulationsumgebung an. Diese enthält hauptsächlich ein Framework mit vielen Bibliotheken, welche für den speziellen Anwendungsfall viel Arbeit ersparen können. So bieten Simulationsumgebungen für Netzwerke beispielsweise viele Funktionen zum Anlegen von Knotenpunkten, welche wiederum verbunden werden können um miteinander zu kommunizieren.\newline
-Ebenfalls oft enthalten sind eine IDE, welche unter Umständen auch spezielle Sprachen unterstützt, wie zum Beispiel die Netzwerkbeschreibungssprache NED in Omnet++. Eine weitere nützliche Funktionalität ist das generieren einer Simulation in Form einer grafischen Oberfläche, sodass Informationen nicht nur aus Dateien ausgelesen werden können, sondern für den Nutzer auch auf den ersten Blick sichtbar sind.
+Um eine Simulation in einem geeigneten zeitlichen Rahmen erstellen zu können, bietet sich die Verwendung von einer Simulationsumgebung an. Diese enthält hauptsächlich ein Framework mit vielen Bibliotheken, welche für den speziellen Anwendungsfall viel Arbeit ersparen können. \newline
+Es gibt eine große Auswahl an verschiedenen Simulationsumgebungen, wobei jede ihre Vor- und Nachteile mit sich bringt. Wichtig für die Arbeit ist ein Simulator der Netzwerke bereitstellt und auch drahtlose Kommunikation ermöglicht. Es sollten eigene Knoten erstellt und angepasst werden können, damit die Hardwaresensorik und das Verhalten im Umgang mit Nachrichten untereinander genau definiert werden kann. Auch Funktionen für die Repräsentation von Batterieeigenschaften und die Erfassung und Analyse von Statistiken sollten vorhanden sein.\newline
+Im Falle von speziellen Anforderungen der Frameworks sollte eine IDE vorhanden sein, die diese unterstützt. Auch eine sehr wichtige Anforderung an den Simulator ist eine grafische Umgebung für die Simulation selbst, sodass Informationen nicht nur aus Dateien ausgelesen werden können, sondern für den Nutzer auch auf den ersten Blick sichtbar sind.
 
-\section{Alternativen zu Omnet++}
+\section{wichtige Simulationsumgebungen}
 
-Neben Omnet++ gibt es natürlich auch viele weiter Umgebungen zum Simulieren von Netzwerken. Zunächst werden hier 3 alternativen zu der in der Arbeit benutzten Umgebung Omnet++ vorgestellt: die \textbf{IKR Simulation Library (IKR SimLib)} von der Universität Stuttgart, der \textbf{Open Source Wireless Network Simulator} kurz \textbf{openWNS} von der Universität Aachen und \textbf{ns-3} vom ns-3 project.
+Es gibt viele Umgebungen zum Simulieren von Netzwerken. Zunächst werden hier 4 wichtige vorgestellt: die \textbf{IKR Simulation Library (IKR SimLib)} von der Universität Stuttgart, der \textbf{Open Source Wireless Network Simulator} kurz \textbf{openWNS} von der Universität Aachen, \textbf{ns-3} vom ns-3 project und \textbf{Simanet} von der TU Chemnitz.
 
 \paragraph{Simulation Library (IKR SimLib)\cite{ikr}}
 
@@ -25,14 +26,32 @@ ns-3 ist ein freier Netzwerksimulator, der unter der GPLv2 lizensiert ist. Das E
 Es werden sowohl kabelgebundene als auch kabellose Verbindungen unterstützt. Allerdings besteht nicht für alle wichtigen Protokolle eine Unterstützung, wie beispielsweise WSN.\newline
 Ein weiterer großer Nachteil ist, dass es keine Oberfläche während der Ausführung gibt. Die Simulation wird per Textausgabe auf der Kommandozeile ausgeführt. Die gesammelten Daten können anschließend mit Plot-Tools visualisiert werden. Für das generieren von Netzwerken steht jedoch ein grafisches Hilfsmittel zur Verfügung. Mit dem Topology Generator\cite{TopGen} können per GUI Netzwerke angelegt werden und anschließend in C++ oder Python-Code umgewandelt werden. 
 
+\paragraph{Simanet\cite{simanet}}
+
+\todo{simanet beschreiben}
+
+\paragraph{Omnet++\cite{omnet}}
+
+\todo{omnet kurzbeschreibung(mixim)}
+
+\paragraph{weitere}
+
+Es gibt natürlich außer den bisher genannten Simulationsumgebungen auch noch weitere, auf die hier aber nicht näher eingegangen werden soll. So gibt es beispielsweise GloMoSim, welches die parallele Programmiersprache Parsec benutzt. Es ist geeignet um sowohl kabellose, als auch -gebundene Netzwerke zu simulieren, jedoch wird es zum aktuellen Stand nicht mehr weiterentwickelt. \newline
+Eine weitere Alternative wäre NetSim, welches von Tetcos, zusammen mit dem Indian Institute of Science entwickelt wurde. Die bestehenden Bibliotheken sind in C geschrieben und implementieren viele Protokolle wie beispielsweise WLAN, TCP oder LTE.
+
+\section{Vergleich}
+
+Simanet unterstützt leider keine komplexe Codeausführung innerhalb von Netzwerkknoten. Es ist daher für diese Arbeit nicht geeignet, da das Verhalten der Sensorik nicht abgebildet werden kann. Daher wird Simanet im folgenden Vergleich nicht weiter berücksichtigt. 
+
 \begin{table}[!ht]
   \centering
   \caption{Übersicht Simulatoren}
+  \label{Übersicht Simulatoren}
 \begin{tabularx}{\textwidth}{lllll}
 	\toprule
 	& Omnet++ & IKR SimLib & OpenWNS & NS-3 \\
 	\midrule
-	\specialcell{free}  & \cmark & \cmark(LGPL) & \cmark (LGPLv2) & \cmark (GPLv2) \\
+	\specialcell{freie Lizenz}  & \cmark & \cmark(LGPL) & \cmark (LGPLv2) & \cmark (GPLv2) \\
 	\specialcell{alle gängigen\\Betriebssysteme} & \cmark & \specialcell{kein\\Windows} & \cmark & \specialcell{kein\\Windows} \\
 	\specialcell{GUI bei Simulation} & \cmark & \xmark & (\cmark) & \xmark \\
 	IDE & \cmark & (\xmark) & (\xmark) & (\cmark) \\
@@ -42,18 +61,25 @@ Ein weiterer großer Nachteil ist, dass es keine Oberfläche während der Ausfü
 \end{tabularx}
 \end{table}
 
-\paragraph{weitere}
-
-Es gibt natürlich außer den bisher genannten Simulationsumgebungen auch noch weitere, auf die hier aber nicht näher eingegangen werden soll. So gibt es beispielsweise GloMoSim, welches die parallele Programmiersprache Parsec benutzt. Es ist geeignet um sowohl kabellose, als auch -gebundene Netzwerke zu simulieren, jedoch wird es zum aktuellen Stand nicht mehr weiterentwickelt. \newline
-Eine weitere Alternative wäre NetSim, welches von Tetcos, zusammen mit dem Indian Institute of Science entwickelt wurde. Die bestehenden Bibliotheken sind in C geschrieben und implementieren viele Protokolle wie beispielsweise WLAN, TCP oder LTE.
+In Tabelle \ref{Übersicht Simulatoren} ist ein direkter Vergleich der größten Unterschiede zwischen den Simulatoren Omnet++, IKR SimLib, OpenWNS und NS-3 aufgezeigt. Es ist sehr positiv zu bewerten, dass alle Simulationsumgebungen über freie Lizenzen verfügen und die für die Arbeit relevante Drahtlose Kommunikation ermöglichen.\newline
+Der größte Nachteil der Simulatoren IKR SimLib und ns-Simulator liegt darin, dass beide keine grafische Umgebung für die Simulation selbst bieten. Das wirkt sich wiederum natürlich positiv auf die Performanz aus, allerdings lässt sich über eine grafische Übersicht deutlich leichter und schneller ein Eindruck über die Zustände der Simulation gewinnen. Ein weiterer Nachteil der beiden ist die eingeschränkte Verfügbarkeit auf verschiedenen Betriebssystemen. \newline
+OpenWNS bietet nur teilweise Unterstützung in grafischer Hinsicht. Es ist möglich mit Hilfe des sogenannten Wrowser die Simulation zu starten und die statistischen Daten zu erfassen. Jedoch bietet es keine so Umfassende Oberfläche wie Omnet++. \newline
+Letztendlich ist die Entscheidung zu Gunsten von Omnet++ gefallen. Die Simulationsumgebung wird im folgenden Abschnitt ausführlicher beschrieben.
 
 \section{Omnet++}
 
 \subsection{Einleitung}
 
-Für diese Arbeit ist Wahl allerdings auf Omnet++ gefallen. Omnet++\cite{omnet} ist eine C++-Bibliothek und ein C++-Framework, welches primär zum Simulieren von Netzwerken dient. Außerdem bietet es eine Netzwerkbeschreibungssprache namens NED (NEtwork Description) und eine auf Eclipse\cite{eclipse} basierende Entwicklungsumgebung. Für die Simulation besteht außerdem ein grafisches Interface, mit dem die Kommunikation der Knoten im Netzwerk gut verfolgt werden kann.
+Omnet++\cite{omnet} ist eine C++-Bibliothek und ein C++-Framework, welches primär zum Simulieren von Netzwerken dient. Außerdem bietet es eine Netzwerkbeschreibungssprache namens NED (NEtwork Description) und eine auf Eclipse\cite{eclipse} basierende Entwicklungsumgebung. Für die Simulation besteht außerdem ein grafisches Interface, mit dem die Kommunikation der Knoten im Netzwerk gut verfolgt werden kann.
 \newline Standardmäßig werden keine mobilen oder kabellosen Protokolle in Omnet++ unterstützt. Jedoch kann mit Hilfe des MiXiM-Frameworks die Funktionalität um eben Diese erweitert werden.
 \newline Es bietet unterstützt alle gängigen Betriebssysteme wie Linux, andere Unixbasierte Systeme, Mac OS und Windows und besitzt außerdem eine kostenlose Lizenz.
+
+\begin{figure}[htbp]
+\centering
+\caption{GUI bei der Ausführung einer Simulation }
+\label{fig:messageEvent}
+\includegraphics[width=\textwidth]{SimulationUI}
+\end{figure}
 
 \subsection{NED language}
 
@@ -159,6 +185,13 @@ Eine Übersicht mit Kurzbeschreibung zu den wichtigsten Schlüsselwörtern in NE
 \end{tabularx}
 \label{tab:NED}
 \end{table}
+
+\begin{figure}[htbp]
+\centering
+\caption{Oberfläche der Entwicklungsumgebung mit Bespiel für die NED-Integration}
+\label{fig:messageEvent}
+\includegraphics[width=\textwidth]{omnetEclipse}
+\end{figure}
 
 \subsection{Einige Techniken, Funktionen und wichtige Module}
 
