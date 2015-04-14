@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   id="svg3352"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="sensorknoten.svg"
+   inkscape:export-filename="/home/rutho/BA/sensorSim/docs/presentation/pptx/knoten.png"
+   inkscape:export-xdpi="401.60001"
+   inkscape:export-ydpi="401.60001">
+  <defs
+     id="defs3354">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker4571"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path4573" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4290"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker4571-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         id="path4573-2" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker4571-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         id="path4573-9" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.61399264"
+     inkscape:cx="424.37325"
+     inkscape:cy="371.13212"
+     inkscape:current-layer="layer1"
+     id="namedview3356"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-paths="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="743"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3358">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.27196828;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3441"
+       width="192.14078"
+       height="191.22513"
+       x="102.04081"
+       y="17.046253" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25705835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3361"
+       width="68.046173"
+       height="42.698547"
+       x="5.3506699"
+       y="19.173256" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25705835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3361-1"
+       width="68.046173"
+       height="42.698547"
+       x="5.3506699"
+       y="67.121826" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25705835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3361-6"
+       width="68.046173"
+       height="42.698547"
+       x="5.3506699"
+       y="115.0704" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25705835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3361-63"
+       width="68.046173"
+       height="42.698547"
+       x="5.3506699"
+       y="163.01897" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25705835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3361-68"
+       width="68.046173"
+       height="42.698547"
+       x="105.25797"
+       y="19.58132" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25705835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3361-1-2"
+       width="68.046173"
+       height="42.698547"
+       x="105.25797"
+       y="67.5299" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25705835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3361-6-3"
+       width="68.046173"
+       height="42.698547"
+       x="105.25797"
+       y="115.47846" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25705835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3361-63-0"
+       width="68.046173"
+       height="42.698547"
+       x="105.25797"
+       y="163.427" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="10.341695"
+       y="39.469543"
+       id="text3451"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3453"
+         x="10.341695"
+         y="39.469543">Druck</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="10.341695"
+       y="89.571472"
+       id="text3455"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3457"
+         x="10.341695"
+         y="89.571472">Helligkeit</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="11.197469"
+       y="137.37517"
+       id="text3459"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3461"
+         x="11.197469"
+         y="137.37517">Temperatur</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="10.341695"
+       y="183.79991"
+       id="text3463"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3465"
+         x="10.341695"
+         y="183.79991">Feuchtigkeit</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="23.901844"
+       y="15.567701"
+       id="text3467"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3469"
+         x="23.901844"
+         y="15.567701">Daten</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="116.7513"
+       y="14.188749"
+       id="text3471"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3473"
+         x="116.7513"
+         y="14.188749">Sensoren</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 105.12944,40.930593 -32.175555,0"
+       id="path4281"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4571)"
+       d="m 104.80039,89.341659 -31.25626,0"
+       id="path4563"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4571-8)"
+       d="m 105.29529,136.41967 -31.256266,0"
+       id="path4563-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker4571-7)"
+       d="m 105.12944,184.77628 -31.256256,0"
+       id="path4563-2"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="110.87522"
+       y="39.047413"
+       id="text3451-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3453-1"
+         x="110.87522"
+         y="39.047413">Drucksensor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="110.87522"
+       y="89.149338"
+       id="text3455-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3457-9"
+         x="110.87522"
+         y="89.149338">Helligkeits-</tspan><tspan
+         sodipodi:role="line"
+         x="110.87522"
+         y="99.732674"
+         id="tspan5982">sensor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="111.73099"
+       y="136.95305"
+       id="text3459-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3461-6"
+         x="111.73099"
+         y="136.95305">Temperatur-</tspan><tspan
+         sodipodi:role="line"
+         x="111.73099"
+         y="147.53638"
+         id="tspan5984">sensor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="110.87522"
+       y="183.37778"
+       id="text3463-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3465-4"
+         x="110.87522"
+         y="183.37778">Feuchtigkeits-</tspan><tspan
+         sodipodi:role="line"
+         x="110.87522"
+         y="193.96111"
+         id="tspan5986">sensor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="172.36906"
+       y="8.2132893"
+       id="text5988"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5990"
+         x="172.36906"
+         y="8.2132893">Sensorknoten</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25705835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3361-63-0-7"
+       width="68.046173"
+       height="42.698547"
+       x="217.40591"
+       y="25.474686" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25705835;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3361-63-0-7-7"
+       width="68.046173"
+       height="42.698547"
+       x="217.86557"
+       y="76.955574" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="222.47101"
+       y="43.146751"
+       id="text6024"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6026"
+         x="222.47101"
+         y="43.146751">Batterie</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46666622px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="222.93065"
+       y="91.869743"
+       id="text6028"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6030"
+         x="222.93065"
+         y="91.869743">Funk</tspan></text>
+  </g>
+</svg>

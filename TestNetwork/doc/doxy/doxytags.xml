@@ -1,0 +1,1190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>CustomLinearMobility.cc</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/Mobility/</path>
+    <filename>CustomLinearMobility_8cc</filename>
+    <includes id="CustomLinearMobility_8h" name="CustomLinearMobility.h" local="no" imported="no">CustomLinearMobility.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>CustomLinearMobility.h</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/Mobility/</path>
+    <filename>CustomLinearMobility_8h</filename>
+    <class kind="class">CustomLinearMobility</class>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>CustomLinearMobility_8h.html</anchorfile>
+      <anchor>a7c7ad7971d5c2380ca025d1709496b2b</anchor>
+      <arglist>(CustomLinearMobility)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CustomWorldUtility.cc</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/WorldModel/</path>
+    <filename>CustomWorldUtility_8cc</filename>
+    <includes id="CustomWorldUtility_8h" name="CustomWorldUtility.h" local="no" imported="no">CustomWorldUtility.h</includes>
+    <includes id="SimpleCoord_8h" name="SimpleCoord.h" local="no" imported="no">SimpleCoord.h</includes>
+    <includes id="SimpleSensorData_8h" name="SimpleSensorData.h" local="no" imported="no">SimpleSensorData.h</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>xmlHumidity</name>
+      <anchorfile>CustomWorldUtility_8cc.html</anchorfile>
+      <anchor>a13f627f38b9d70e55d986eaaabf7e2b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>xmlPressure</name>
+      <anchorfile>CustomWorldUtility_8cc.html</anchorfile>
+      <anchor>a9dafe0a706238c6d9f4aac8ffe247dd7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>xmlTemperature</name>
+      <anchorfile>CustomWorldUtility_8cc.html</anchorfile>
+      <anchor>ae8306faf2c75c0444af368646794aacc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>xmlLight</name>
+      <anchorfile>CustomWorldUtility_8cc.html</anchorfile>
+      <anchor>a19676c482ab5a16017cafb0b585ba45f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CustomWorldUtility.h</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/WorldModel/</path>
+    <filename>CustomWorldUtility_8h</filename>
+    <includes id="ExtendedMessage__m_8h" name="ExtendedMessage_m.h" local="no" imported="no">ExtendedMessage_m.h</includes>
+    <includes id="StatisticsInterface_8h" name="StatisticsInterface.h" local="no" imported="no">StatisticsInterface.h</includes>
+    <class kind="class">CustomWorldUtility</class>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>CustomWorldUtility_8h.html</anchorfile>
+      <anchor>a2d092fd3cbbee6747837de856fd06730</anchor>
+      <arglist>(CustomWorldUtility)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ExtendedMessage_m.h</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/ExtendedMessage/</path>
+    <filename>ExtendedMessage__m_8h</filename>
+    <class kind="class">ExtendedMessage</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>MSGC_VERSION</name>
+      <anchorfile>ExtendedMessage__m_8h.html</anchorfile>
+      <anchor>a77f5ea746b531cbdbc322a93741e33a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>doPacking</name>
+      <anchorfile>ExtendedMessage__m_8h.html</anchorfile>
+      <anchor>a5f1dbc3f7818e07ebbdcd23bc006ad7f</anchor>
+      <arglist>(cCommBuffer *b, ExtendedMessage &amp;obj)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>doUnpacking</name>
+      <anchorfile>ExtendedMessage__m_8h.html</anchorfile>
+      <anchor>a7edd4e36f3588e0490c0b25fc5caed0d</anchor>
+      <arglist>(cCommBuffer *b, ExtendedMessage &amp;obj)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>MyWirelessNode.cc</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/Node/</path>
+    <filename>MyWirelessNode_8cc</filename>
+    <includes id="MyWirelessNode_8h" name="MyWirelessNode.h" local="no" imported="no">MyWirelessNode.h</includes>
+    <includes id="Sensor_8h" name="Sensor.h" local="no" imported="no">Sensor.h</includes>
+    <includes id="NodeType_8h" name="NodeType.h" local="no" imported="no">NodeType.h</includes>
+    <includes id="SimpleCoord_8h" name="SimpleCoord.h" local="no" imported="no">SimpleCoord.h</includes>
+    <includes id="SimpleSensorData_8h" name="SimpleSensorData.h" local="no" imported="no">SimpleSensorData.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>MyWirelessNode_8cc.html</anchorfile>
+      <anchor>a12377eb18b5b48e726ef81fae508348a</anchor>
+      <arglist>(MyWirelessNode)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Register_Class</name>
+      <anchorfile>MyWirelessNode_8cc.html</anchorfile>
+      <anchor>a9be8bf7eaf81d28d850a9956f2bb3572</anchor>
+      <arglist>(MyWirelessNode)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>MyWirelessNode.h</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/Node/</path>
+    <filename>MyWirelessNode_8h</filename>
+    <includes id="Sensor_8h" name="Sensor.h" local="no" imported="no">Sensor.h</includes>
+    <includes id="CustomLinearMobility_8h" name="CustomLinearMobility.h" local="no" imported="no">CustomLinearMobility.h</includes>
+    <includes id="ExtendedMessage__m_8h" name="ExtendedMessage_m.h" local="no" imported="no">ExtendedMessage_m.h</includes>
+    <includes id="StatisticsInterface_8h" name="StatisticsInterface.h" local="no" imported="no">StatisticsInterface.h</includes>
+    <includes id="SimpleSensorType_8h" name="SimpleSensorType.h" local="no" imported="no">SimpleSensorType.h</includes>
+    <class kind="class">MyWirelessNode</class>
+  </compound>
+  <compound kind="file">
+    <name>NodeType.cc</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/NodeType/</path>
+    <filename>NodeType_8cc</filename>
+    <includes id="NodeType_8h" name="NodeType.h" local="no" imported="no">NodeType.h</includes>
+    <includes id="MyWirelessNode_8h" name="MyWirelessNode.h" local="no" imported="no">MyWirelessNode.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>NodeType.h</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/NodeType/</path>
+    <filename>NodeType_8h</filename>
+    <class kind="class">NodeType</class>
+  </compound>
+  <compound kind="file">
+    <name>Sensor.cc</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/Node/Sensor/</path>
+    <filename>Sensor_8cc</filename>
+    <includes id="Sensor_8h" name="Sensor.h" local="no" imported="no">Sensor.h</includes>
+    <includes id="NodeType_8h" name="NodeType.h" local="no" imported="no">NodeType.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Sensor.h</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/Node/Sensor/</path>
+    <filename>Sensor_8h</filename>
+    <includes id="CustomLinearMobility_8h" name="CustomLinearMobility.h" local="no" imported="no">CustomLinearMobility.h</includes>
+    <includes id="ExtendedMessage__m_8h" name="ExtendedMessage_m.h" local="no" imported="no">ExtendedMessage_m.h</includes>
+    <class kind="class">Sensor</class>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>Sensor_8h.html</anchorfile>
+      <anchor>a37f9d89cfdc64344631675232f9b89cc</anchor>
+      <arglist>(Sensor)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>SimpleCoord.cc</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/SimpleCoord/</path>
+    <filename>SimpleCoord_8cc</filename>
+    <includes id="SimpleCoord_8h" name="SimpleCoord.h" local="no" imported="no">SimpleCoord/SimpleCoord.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>SimpleCoord.h</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/SimpleCoord/</path>
+    <filename>SimpleCoord_8h</filename>
+    <class kind="class">SimpleCoord</class>
+  </compound>
+  <compound kind="file">
+    <name>SimpleSensorData.cc</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/SimpleSensorData/</path>
+    <filename>SimpleSensorData_8cc</filename>
+    <includes id="SimpleSensorData_8h" name="SimpleSensorData.h" local="no" imported="no">SimpleSensorData/SimpleSensorData.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>SimpleSensorData.h</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/SimpleSensorData/</path>
+    <filename>SimpleSensorData_8h</filename>
+    <class kind="class">SimpleSensorData</class>
+  </compound>
+  <compound kind="file">
+    <name>SimpleSensorType.cc</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/SimpleSensorType/</path>
+    <filename>SimpleSensorType_8cc</filename>
+    <includes id="SimpleSensorType_8h" name="SimpleSensorType.h" local="no" imported="no">SimpleSensorType/SimpleSensorType.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>SimpleSensorType.h</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/SimpleSensorType/</path>
+    <filename>SimpleSensorType_8h</filename>
+    <class kind="struct">SensorType</class>
+    <class kind="class">SimpleSensorType</class>
+  </compound>
+  <compound kind="file">
+    <name>StatisticsInterface.cc</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/StatisticsInterface/</path>
+    <filename>StatisticsInterface_8cc</filename>
+    <includes id="StatisticsInterface_8h" name="StatisticsInterface.h" local="no" imported="no">StatisticsInterface.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>StatisticsInterface.h</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/StatisticsInterface/</path>
+    <filename>StatisticsInterface_8h</filename>
+    <includes id="ExtendedMessage__m_8h" name="ExtendedMessage_m.h" local="no" imported="no">ExtendedMessage_m.h</includes>
+    <class kind="class">StatisticsInterface</class>
+  </compound>
+  <compound kind="class">
+    <name>CustomLinearMobility</name>
+    <filename>classCustomLinearMobility.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CustomLinearMobility</name>
+      <anchorfile>classCustomLinearMobility.html</anchorfile>
+      <anchor>ac43877db013db3bcb63350597be303f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Coord</type>
+      <name>getCurrentPosition</name>
+      <anchorfile>classCustomLinearMobility.html</anchorfile>
+      <anchor>a41fef75955bbfaea4571d937bab4c7eb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>initialize</name>
+      <anchorfile>classCustomLinearMobility.html</anchorfile>
+      <anchor>aab0ea271c37a1073f8b3d911dfe69765</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>move</name>
+      <anchorfile>classCustomLinearMobility.html</anchorfile>
+      <anchor>acf9bc9ca320e8a065877a8bc61d7fc91</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>maxSpeed</name>
+      <anchorfile>classCustomLinearMobility.html</anchorfile>
+      <anchor>a4386de7f7358c394f995dd5f73f39ea2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>hasMaxSpeed</name>
+      <anchorfile>classCustomLinearMobility.html</anchorfile>
+      <anchor>a279ee60fec621ffb1ef3e93c6b71e83c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>CustomWorldUtility</name>
+    <filename>classCustomWorldUtility.html</filename>
+    <base>StatisticsInterface</base>
+    <member kind="function">
+      <type></type>
+      <name>CustomWorldUtility</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a8ae1cd5aea3572589a1f02e2321ccb70</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CustomWorldUtility</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a73b162553cbc92e2c76c5a7f0366e522</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int **</type>
+      <name>readXML</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a28c389f5d3c6226b054948aa9b691ea6</anchor>
+      <arglist>(int)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setTemperature</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>acc66fcf67be28acc729c0959b8a1dcf6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setPressure</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a99b8e3a05742bf8075be601297b153aa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setHumidity</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>afa8e8a57f4670d18a5f4cfb2d9cddd67</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setLight</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>aa1f812e94036c2b388337ced4a2ea6a2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a3c3e94f910e3591afe8614703dfd0b54</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>afc6e38ea4c7a202fa2ae1d09c3ad9627</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>generateEnvironmentData</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a868e823f29c00d25a3f245f035372521</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int *</type>
+      <name>generateTemperature</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a4f4564b45f65f2f5ea52fa30447b118f</anchor>
+      <arglist>(int size)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int *</type>
+      <name>generatePressure</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>ab36b97b0202e13c2ce7fa5d6f2db297a</anchor>
+      <arglist>(int size)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int *</type>
+      <name>generateHumidity</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a10d06e6d8acbc176591e2dbd3abda155</anchor>
+      <arglist>(int size)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int *</type>
+      <name>generateLight</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a1173bef536d5a4c365a851c95a3aa750</anchor>
+      <arglist>(int size)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>ExtendedMessage *</type>
+      <name>generateMessage</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>ae8e5ca8ba35d32db08967c36b673d5ff</anchor>
+      <arglist>(const char *msgname)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>updateDisplay</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a709aaca388e19d04a3fb4f165d0ceceb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a2c0bbdcf5488fc82de7a10b29194d91d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>sendSensorResponse</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>aa0342b3c927132184a6f653216abefde</anchor>
+      <arglist>(std::string, cGate *)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>destroySensorData</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>af8d94b266ed2030d6b7db56d69265f8e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>numNodes</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a32f28e6a1a08c7c677d1163979956117</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int **</type>
+      <name>temperatureArray</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a710a87cfadb3abd780ea026ecd2662f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int **</type>
+      <name>pressureArray</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>ad21b5986a074b08fe488e7f1b7f56103</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int **</type>
+      <name>humidityArray</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>ab5cced51c07ea7fbf24b515e997f7b7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int **</type>
+      <name>lightArray</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a26255c27d073e3f1f14bb35b4458c465</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>sizeX</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a05f35ec3e94509d81b44e891be8d52e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>sizeY</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a9941ba5f5607868671de963e427c019e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>numSent</name>
+      <anchorfile>classStatisticsInterface.html</anchorfile>
+      <anchor>a42d887601ec32670fd2892b4ef48e91a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>numReceived</name>
+      <anchorfile>classStatisticsInterface.html</anchorfile>
+      <anchor>ab8903c2fc5b9b6e93172a89f37b3f620</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cLongHistogram</type>
+      <name>hopCountStats</name>
+      <anchorfile>classStatisticsInterface.html</anchorfile>
+      <anchor>a14368dced736b91c2b3208308175c946</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cOutVector</type>
+      <name>hopCountVector</name>
+      <anchorfile>classStatisticsInterface.html</anchorfile>
+      <anchor>a8cfabbb0aa6c933032214ac7b117d225</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ExtendedMessage</name>
+    <filename>classExtendedMessage.html</filename>
+    <base>cMessage</base>
+    <member kind="function">
+      <type></type>
+      <name>ExtendedMessage</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>ade0274ccdff9560ffe8fad9df854f319</anchor>
+      <arglist>(const char *name=NULL, int kind=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ExtendedMessage</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>a98cc3e001bc44e7f13db49556bbfde09</anchor>
+      <arglist>(const ExtendedMessage &amp;other)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ExtendedMessage</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>a910195e5d212e7efbc1289613f61c6ff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ExtendedMessage &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>ad9aa685b7360efaa3777167677343f51</anchor>
+      <arglist>(const ExtendedMessage &amp;other)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ExtendedMessage *</type>
+      <name>dup</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>af3e6533074e0f1804f7d4c1ca2bdccd9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>parsimPack</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>abad8c6d568cff093239ebcb024034f1e</anchor>
+      <arglist>(cCommBuffer *b)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>parsimUnpack</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>aa9d0e2513c59d1dc2e31373b155a2e51</anchor>
+      <arglist>(cCommBuffer *b)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>getSource</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>af7eaaeebebdcd783212aa9ff2170f145</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setSource</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>adccfc56b16455ecc18975b22bc8f9e2b</anchor>
+      <arglist>(int source)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>getDestination</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>a996afd43620680ce68c75604babd091b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setDestination</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>a813ecbc567b0127c4d57b451b3afb364</anchor>
+      <arglist>(int destination)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>getHopCount</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>a9b4ec09ba1a5913dd6c3952c09748779</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setHopCount</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>a71e081f7cdc58d2f55a589757639365c</anchor>
+      <arglist>(int hopCount)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>ad6bf387750a00b6352c7054e58a110d7</anchor>
+      <arglist>(const ExtendedMessage &amp;)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>source_var</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>ad94fa5e715f14f856756f4b76fa7adbf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>destination_var</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>a5500e69efec5761be0282886f730541e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>hopCount_var</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>a976f580abc29bb900761b567615a7b5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>copy</name>
+      <anchorfile>classExtendedMessage.html</anchorfile>
+      <anchor>ab07ff9eccc340341355a0a341bb971fb</anchor>
+      <arglist>(const ExtendedMessage &amp;other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>MyWirelessNode</name>
+    <filename>classMyWirelessNode.html</filename>
+    <base>Sensor</base>
+    <base>StatisticsInterface</base>
+    <member kind="function">
+      <type>void</type>
+      <name>updatePosition</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>ad48f3b00e973fc7149950804b9d87785</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MyWirelessNode</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a1067c47020744af3a913c19c00af10be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~MyWirelessNode</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a5cd4369d73a5ca74a38ace3c69c057b8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getSensorData</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>afb1f5d3bdd8d0e813829437a4066aa0b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Sensor</name>
+      <anchorfile>classSensor.html</anchorfile>
+      <anchor>a342d6d11ef572c8cba92cb76fb1a294b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Sensor</name>
+      <anchorfile>classSensor.html</anchorfile>
+      <anchor>aee8c70e7ef05ce65e7ee33686b5d7db2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string *</type>
+      <name>typenames</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a2548e6df411f5f131233fccdc02eac00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a9961a87d633c0b80c00c76bf5def85aa</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a31e7856a30f56552e15d1b827ed935ff</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a8eee7deca41209d6e93f64aff50b9472</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>readSensor</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>aaefd0d4e5c1f29ac47487dc1ffedd5c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>updateDisplay</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a1d7b5aaca68f99d7ccad312dd1727a94</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>ExtendedMessage *</type>
+      <name>generateMessage</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a52f97761751990790816c490d2930f5b</anchor>
+      <arglist>(const char *msgname)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>findSensorType</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a924d80e64218770e25c39958f98e62b1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>isPositive</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a0bf1144cd5e7a9f48fa9715612e3bec9</anchor>
+      <arglist>(int value)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>sendDataRequest</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a99ff1139c54f0b2a43012be3974f2677</anchor>
+      <arglist>(std::string)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleGetType</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>abb84a9f01ee5761debf971ecfb807dfa</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>requestData</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a6706997c7d5fbf54ddf5b6f428f0feeb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classSensor.html</anchorfile>
+      <anchor>a7e8f8d7e9563dd259cdc2d6a599e2666</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classSensor.html</anchorfile>
+      <anchor>a1f177124922161374841f28f00e3d778</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>activity</name>
+      <anchorfile>classSensor.html</anchorfile>
+      <anchor>a55b5db4378432b6386d7081764602b2a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classSensor.html</anchorfile>
+      <anchor>a56073dd4ca6b1cdbaa62bc07fbf0fa00</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cModuleType *</type>
+      <name>componenttype</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a673b6b1833c259d3d71db45c648ef9d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Coord *</type>
+      <name>position</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>ae6cbae85353f3eb2dce9dd86b3f288e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SensorType *</type>
+      <name>type</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>a5157a0be576da554135d14534525ef06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int **</type>
+      <name>sensorData</name>
+      <anchorfile>classMyWirelessNode.html</anchorfile>
+      <anchor>af2717ec4284f325ddc38e7aab334a697</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>NodeType</name>
+    <filename>classNodeType.html</filename>
+    <base>cModuleType</base>
+    <member kind="function">
+      <type>bool</type>
+      <name>isNetwork</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>aa6ec522be1154d794d19e31301f8f6da</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isSimple</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>aeac0fd6cb9c050730d32ada2eb510f3d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>NodeType</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>a4745205245eb560ff66adb96f8e5a6fe</anchor>
+      <arglist>(const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~NodeType</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>afc1c7581cf92a98632486d97ec69a37d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>cProperties *</type>
+      <name>getProperties</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>a3e175fb02855e3de8c3d6c3c71fa0206</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>cProperties *</type>
+      <name>getParamProperties</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>a80e9699e5b5fa2af0cbf9e6919cb24e4</anchor>
+      <arglist>(const char *paramName) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>cProperties *</type>
+      <name>getGateProperties</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>a3270f19d9768377befa0812592730d46</anchor>
+      <arglist>(const char *gateName) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>cProperties *</type>
+      <name>getSubmoduleProperties</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>a49ee39b5c3ad9abb64a8a86d8d037147</anchor>
+      <arglist>(const char *submoduleName, const char *submoduleType) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>cProperties *</type>
+      <name>getConnectionProperties</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>ad2b6ed2fc26ceb16e1da13185ca43a41</anchor>
+      <arglist>(int connectionId, const char *channelType) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const char *</type>
+      <name>getImplementationClassName</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>a905283dec0d40dfe2a8964767a5b65dc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>cModule *</type>
+      <name>createModuleObject</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>af090db07402657fc75b7e836e9c37207</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>addParametersAndGatesTo</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>a20d2c71b12b0091b0d4c66fce9e994b0</anchor>
+      <arglist>(cModule *mod)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setupGateVectors</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>af5969ad4997b799010a97c9b41499fe7</anchor>
+      <arglist>(cModule *mod)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>buildInside</name>
+      <anchorfile>classNodeType.html</anchorfile>
+      <anchor>aec0f32188e1bf4c76727feaa01b9b6a3</anchor>
+      <arglist>(cModule *mod)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Sensor</name>
+    <filename>classSensor.html</filename>
+    <base>cSimpleModule</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>getSensorData</name>
+      <anchorfile>classSensor.html</anchorfile>
+      <anchor>a20d09c2544102747809c72db7b6ea832</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>SensorType</name>
+    <filename>structSensorType.html</filename>
+    <member kind="variable">
+      <type>bool</type>
+      <name>temperature</name>
+      <anchorfile>structSensorType.html</anchorfile>
+      <anchor>a101ab24e3f8976cac261b0d852943a56</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>pressure</name>
+      <anchorfile>structSensorType.html</anchorfile>
+      <anchor>a244163d8d6d2dc5909c3bfff81946359</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>light</name>
+      <anchorfile>structSensorType.html</anchorfile>
+      <anchor>a79dd638b982c097c9f09c5b0de270e1e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>humidity</name>
+      <anchorfile>structSensorType.html</anchorfile>
+      <anchor>ab597eb8b3bf9f572ed1f0b74c089289b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>SimpleCoord</name>
+    <filename>classSimpleCoord.html</filename>
+    <base>cNamedObject</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual SimpleCoord *</type>
+      <name>dup</name>
+      <anchorfile>classSimpleCoord.html</anchorfile>
+      <anchor>a434e2e3cd9788663e2f93267b2280c38</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SimpleCoord</name>
+      <anchorfile>classSimpleCoord.html</anchorfile>
+      <anchor>a37ab4d0084af1172c2575cffaa36fdb5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SimpleCoord</name>
+      <anchorfile>classSimpleCoord.html</anchorfile>
+      <anchor>af663b9f80277911f125793353554e802</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SimpleCoord</name>
+      <anchorfile>classSimpleCoord.html</anchorfile>
+      <anchor>ab3da4ddd61e6b668c9c1938eb5e8fde9</anchor>
+      <arglist>(const char *name, Coord *coord, bool namepooling=true)</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>x</name>
+      <anchorfile>classSimpleCoord.html</anchorfile>
+      <anchor>ad8d88f139da61a0bc30fee4518c01788</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>y</name>
+      <anchorfile>classSimpleCoord.html</anchorfile>
+      <anchor>a10cd9244f71d5694962ef6dcfa419127</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>z</name>
+      <anchorfile>classSimpleCoord.html</anchorfile>
+      <anchor>a2d02de11069b84ba78781eb5793f1df6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>SimpleSensorData</name>
+    <filename>classSimpleSensorData.html</filename>
+    <base>cNamedObject</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual SimpleSensorData *</type>
+      <name>dup</name>
+      <anchorfile>classSimpleSensorData.html</anchorfile>
+      <anchor>a3596358623935b76f49335ccc4a3c91d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SimpleSensorData</name>
+      <anchorfile>classSimpleSensorData.html</anchorfile>
+      <anchor>a11e346aae50f95840a5a92824e3fecc1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SimpleSensorData</name>
+      <anchorfile>classSimpleSensorData.html</anchorfile>
+      <anchor>a3700727cd38b4754462cbab02d2b202d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SimpleSensorData</name>
+      <anchorfile>classSimpleSensorData.html</anchorfile>
+      <anchor>a5e99f281acd0b3d053f492a764e57e6d</anchor>
+      <arglist>(const char *name, int **sensorData, int sizeX, int sizeY, bool namepooling=true)</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>sizeX</name>
+      <anchorfile>classSimpleSensorData.html</anchorfile>
+      <anchor>ae3a383449d35b0afd07db924fc0b64e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>sizeY</name>
+      <anchorfile>classSimpleSensorData.html</anchorfile>
+      <anchor>a13f60172b2b6b49258eabd4a676e6cc6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int **</type>
+      <name>sensorData</name>
+      <anchorfile>classSimpleSensorData.html</anchorfile>
+      <anchor>aee32bc9486031b580968610d8aa692ef</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>SimpleSensorType</name>
+    <filename>classSimpleSensorType.html</filename>
+    <base>cNamedObject</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual SimpleSensorType *</type>
+      <name>dup</name>
+      <anchorfile>classSimpleSensorType.html</anchorfile>
+      <anchor>a4b6fb4df3dd43b55a04290a6f9aaae3e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SimpleSensorType</name>
+      <anchorfile>classSimpleSensorType.html</anchorfile>
+      <anchor>a080246947a1a4e8122e8896a8e7a5760</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SimpleSensorType</name>
+      <anchorfile>classSimpleSensorType.html</anchorfile>
+      <anchor>a2b0c45da21aa87053444533f733df935</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SimpleSensorType</name>
+      <anchorfile>classSimpleSensorType.html</anchorfile>
+      <anchor>a6219abaf28dcbd452ffe7ffd56151eb7</anchor>
+      <arglist>(const char *name, SensorType *sensorType, bool namepooling=true)</arglist>
+    </member>
+    <member kind="variable">
+      <type>SensorType *</type>
+      <name>sensorType</name>
+      <anchorfile>classSimpleSensorType.html</anchorfile>
+      <anchor>a0ccb4b3b0340fd7e6d9f83a4c8b9b69e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>StatisticsInterface</name>
+    <filename>classStatisticsInterface.html</filename>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual ExtendedMessage *</type>
+      <name>generateMessage</name>
+      <anchorfile>classStatisticsInterface.html</anchorfile>
+      <anchor>a519db68a06bb988bceea9183224033fe</anchor>
+      <arglist>(const char *msgname)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>updateDisplay</name>
+      <anchorfile>classStatisticsInterface.html</anchorfile>
+      <anchor>a72197f87748af10d75ac70caddb2712e</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>finish</name>
+      <anchorfile>classStatisticsInterface.html</anchorfile>
+      <anchor>a50a7b06a009cc7693e5677f67e1ab23c</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="dir">
+    <name>ExtendedMessage</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/ExtendedMessage/</path>
+    <filename>dir_7bff9155bf3c065d12e6a02b32d81bfe.html</filename>
+    <file>ExtendedMessage_m.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Mobility</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/Mobility/</path>
+    <filename>dir_9a4ec1e8822d709936ea2486e9229f46.html</filename>
+    <file>CustomLinearMobility.cc</file>
+    <file>CustomLinearMobility.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Node</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/Node/</path>
+    <filename>dir_d587c2ac2532168f2ec4659101815a2e.html</filename>
+    <dir>Sensor</dir>
+    <file>MyWirelessNode.cc</file>
+    <file>MyWirelessNode.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>NodeType</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/NodeType/</path>
+    <filename>dir_f0119a13528f1a80e1ca289cdb0e6925.html</filename>
+    <file>NodeType.cc</file>
+    <file>NodeType.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Sensor</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/Node/Sensor/</path>
+    <filename>dir_672d1bb3d0d9b6e6a4d2d0d96346f67c.html</filename>
+    <file>Sensor.cc</file>
+    <file>Sensor.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>SimpleCoord</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/SimpleCoord/</path>
+    <filename>dir_e4568979748b98b0595aacd61bc333f6.html</filename>
+    <file>SimpleCoord.cc</file>
+    <file>SimpleCoord.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>SimpleSensorData</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/SimpleSensorData/</path>
+    <filename>dir_d5fbd4c17986aa3b87ebfb4af3073da8.html</filename>
+    <file>SimpleSensorData.cc</file>
+    <file>SimpleSensorData.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>SimpleSensorType</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/SimpleSensorType/</path>
+    <filename>dir_d8ab235102b4b4d89e91495faa377e2a.html</filename>
+    <file>SimpleSensorType.cc</file>
+    <file>SimpleSensorType.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>StatisticsInterface</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/StatisticsInterface/</path>
+    <filename>dir_ffb46712de3d55903546372eadfb27eb.html</filename>
+    <file>StatisticsInterface.cc</file>
+    <file>StatisticsInterface.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>WorldModel</name>
+    <path>/home/rutho/BA/sensorSim/MyNetwork/WorldModel/</path>
+    <filename>dir_fc6bee5831f69f08a1886b59600f10db.html</filename>
+    <file>CustomWorldUtility.cc</file>
+    <file>CustomWorldUtility.h</file>
+  </compound>
+</tagfile>

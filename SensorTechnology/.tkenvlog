@@ -1,0 +1,1310 @@
+----------------------------------------------------------------------
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 148.09 ypos=123.818 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 148.185 ypos=123.848 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 148.281 ypos=123.878 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 148.376 ypos=123.908 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 148.471 ypos=123.938 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 148.567 ypos=123.969 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 148.662 ypos=123.999 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 148.757 ypos=124.029 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 148.853 ypos=124.059 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 148.948 ypos=124.089 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.043 ypos=124.12 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.139 ypos=124.15 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.234 ypos=124.18 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.329 ypos=124.21 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.425 ypos=124.24 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.52 ypos=124.271 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.615 ypos=124.301 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.711 ypos=124.331 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.806 ypos=124.361 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.901 ypos=124.391 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 149.997 ypos=124.421 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 150.092 ypos=124.452 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 150.187 ypos=124.482 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 150.283 ypos=124.512 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 150.378 ypos=124.542 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 150.473 ypos=124.572 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 150.569 ypos=124.603 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 150.664 ypos=124.633 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 150.759 ypos=124.663 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 150.855 ypos=124.693 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 150.95 ypos=124.723 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.045 ypos=124.754 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.141 ypos=124.784 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.236 ypos=124.814 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.331 ypos=124.844 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.427 ypos=124.874 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.522 ypos=124.905 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.617 ypos=124.935 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.713 ypos=124.965 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.808 ypos=124.995 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.903 ypos=125.025 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 151.999 ypos=125.056 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 152.094 ypos=125.086 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 152.189 ypos=125.116 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 152.285 ypos=125.146 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 152.38 ypos=125.176 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 152.475 ypos=125.206 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 152.571 ypos=125.237 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 152.666 ypos=125.267 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 152.761 ypos=125.297 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 152.857 ypos=125.327 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 152.952 ypos=125.357 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 153.047 ypos=125.388 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 153.143 ypos=125.418 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 153.238 ypos=125.448 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 153.333 ypos=125.478 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 153.429 ypos=125.508 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 153.524 ypos=125.539 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 153.619 ypos=125.569 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 153.715 ypos=125.599 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 153.81 ypos=125.629 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 153.905 ypos=125.659 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.001 ypos=125.69 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.096 ypos=125.72 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.191 ypos=125.75 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.287 ypos=125.78 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.382 ypos=125.81 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.477 ypos=125.84 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.573 ypos=125.871 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.668 ypos=125.901 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.763 ypos=125.931 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.859 ypos=125.961 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 154.954 ypos=125.991 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 155.049 ypos=126.022 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 155.145 ypos=126.052 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 155.24 ypos=126.082 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 155.335 ypos=126.112 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 155.431 ypos=126.142 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 155.526 ypos=126.173 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 155.621 ypos=126.203 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 155.717 ypos=126.233 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 155.812 ypos=126.263 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 155.907 ypos=126.293 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.003 ypos=126.324 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.098 ypos=126.354 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.193 ypos=126.384 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.289 ypos=126.414 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.384 ypos=126.444 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.479 ypos=126.475 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.575 ypos=126.505 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.67 ypos=126.535 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.765 ypos=126.565 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.861 ypos=126.595 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 156.956 ypos=126.625 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 157.051 ypos=126.656 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 157.147 ypos=126.686 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 157.242 ypos=126.716 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 157.337 ypos=126.746 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 157.433 ypos=126.776 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 157.528 ypos=126.807 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 157.623 ypos=126.837 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 157.719 ypos=126.867 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 157.814 ypos=126.897 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 157.909 ypos=126.927 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.005 ypos=126.958 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.1 ypos=126.988 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.195 ypos=127.018 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.291 ypos=127.048 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.386 ypos=127.078 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.481 ypos=127.109 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.577 ypos=127.139 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.672 ypos=127.169 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.767 ypos=127.199 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.863 ypos=127.229 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+Tcl error: tkutil.cc#279: out of stack space (infinite loop?)
+    while executing
+".main.text insert end { t= 0.1 xpos= 158.958 ypos=127.26 speed=1
+}"
+
+
+Tcl error: tkutil.cc#286: out of stack space (infinite loop?)
+    while executing
+".main.text see end"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#631: ptr0x302a4f0 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $modptr"
+    (procedure "ModuleInspector:drawNextEventMarker" line 2)
+    invoked from within
+"ModuleInspector:drawNextEventMarker .inspector0.c ptr0x302a4f0 1"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: tkenv.cc#1838: grab failed: window not viewable
+    while executing
+"grab $w"
+    (procedure "execOkCancelDialog" line 20)
+    invoked from within
+"execOkCancelDialog $w"
+    (procedure "inputbox" line 27)
+    invoked from within
+"inputbox {Requested to Ask Parameter} {Enter parameter `SensorTechnology.howManyTemperatureNodes':} opp(result) {Use this value for all similar parameters} o..."
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: tkenv.cc#1838: grab failed: window not viewable
+    while executing
+"grab $w"
+    (procedure "execOkCancelDialog" line 20)
+    invoked from within
+"execOkCancelDialog $w"
+    (procedure "inputbox" line 27)
+    invoked from within
+"inputbox {Requested to Ask Parameter} {Enter parameter `SensorTechnology.createNewEnvironmentData':} opp(result) {Use this value for all similar parameters} ..."
+
+

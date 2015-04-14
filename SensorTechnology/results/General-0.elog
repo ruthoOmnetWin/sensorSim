@@ -1,0 +1,5 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1029 rid General-0-20150414-10:25:50-5228 b 1000
+KF p -1 c "" s ""
+MC id 1 c cModule t sensortechnology.SensorTechnology n SensorTechnology cm 1
+MS id 1 d ""
