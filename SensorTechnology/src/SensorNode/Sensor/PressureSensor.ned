@@ -14,8 +14,8 @@
 // 
 
 package sensortechnology.src.SensorNode.Sensor;
-import sensortechnology.src.Sensor.SensorNode.SensingUnit.*;
-import sensortechnology.src.Sensor.SensorNode.SignalConverter.*;
+import sensortechnology.src.SensorNode.Sensor.SensingUnit.*;
+import sensortechnology.src.SensorNode.Sensor.SignalConverter.*;
 
 module PressureSensor extends AbstractSensor
 {
