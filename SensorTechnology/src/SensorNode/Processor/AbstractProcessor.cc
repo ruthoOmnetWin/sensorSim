@@ -13,14 +13,14 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Sensor;
-import sensortechnology.src.SensorNode.Sensor.SensingUnit.*;
-import sensortechnology.src.SensorNode.Sensor.SignalConverter.*;
-import sensortechnology.src.SensorNode.Sensor.SignalConditioner.*;
-import sensortechnology.src.SensorNode.Sensor.Transducer.*;
+#include <AbstractProcessor.h>
 
-module LightSensor extends AbstractSensor
-{
-    parameters:
-        type = "Light";
+AbstractProcessor::AbstractProcessor() {
+    // TODO Auto-generated constructor stub
+
 }
+
+AbstractProcessor::~AbstractProcessor() {
+    // TODO Auto-generated destructor stub
+}
+

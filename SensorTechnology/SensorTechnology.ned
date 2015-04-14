@@ -1,8 +1,9 @@
 package sensortechnology; 
 import sensortechnology.src.SensorNode.Sensor.*;
+import sensortechnology.src.SensorNode.*;
 
 network SensorTechnology
 {
     submodules: 
-        TemperatureSensor: TemperatureSensor;
+        AbstractSensorNode: AbstractSensorNode;
 }

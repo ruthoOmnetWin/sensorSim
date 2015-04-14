@@ -19,6 +19,10 @@ INCLUDE_PATH = \
     -Iresults \
     -Isrc \
     -Isrc/SensorNode \
+    -Isrc/SensorNode/Battery \
+    -Isrc/SensorNode/Memory \
+    -Isrc/SensorNode/Processor \
+    -Isrc/SensorNode/Radio \
     -Isrc/SensorNode/Sensor \
     -Isrc/SensorNode/Sensor/SensingUnit \
     -Isrc/SensorNode/Sensor/SignalConditioner \
@@ -38,7 +42,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o
+OBJS = $O/src/SensorNode/Processor/AbstractProcessor.o $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o
 
 # Message files
 MSGFILES =
@@ -121,6 +125,10 @@ clean:
 	$(Q)-rm -f results/*_m.cc results/*_m.h
 	$(Q)-rm -f src/*_m.cc src/*_m.h
 	$(Q)-rm -f src/SensorNode/*_m.cc src/SensorNode/*_m.h
+	$(Q)-rm -f src/SensorNode/Battery/*_m.cc src/SensorNode/Battery/*_m.h
+	$(Q)-rm -f src/SensorNode/Memory/*_m.cc src/SensorNode/Memory/*_m.h
+	$(Q)-rm -f src/SensorNode/Processor/*_m.cc src/SensorNode/Processor/*_m.h
+	$(Q)-rm -f src/SensorNode/Radio/*_m.cc src/SensorNode/Radio/*_m.h
 	$(Q)-rm -f src/SensorNode/Sensor/*_m.cc src/SensorNode/Sensor/*_m.h
 	$(Q)-rm -f src/SensorNode/Sensor/SensingUnit/*_m.cc src/SensorNode/Sensor/SensingUnit/*_m.h
 	$(Q)-rm -f src/SensorNode/Sensor/SignalConditioner/*_m.cc src/SensorNode/Sensor/SignalConditioner/*_m.h
@@ -132,9 +140,11 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc src/SensorNode/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc src/SensorNode/*.cc src/SensorNode/Battery/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/Radio/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/src/SensorNode/Processor/AbstractProcessor.o: src/SensorNode/Processor/AbstractProcessor.cc \
+	src/SensorNode/Processor/AbstractProcessor.h
 $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.cc \
 	src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.h
 $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o: src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.cc \

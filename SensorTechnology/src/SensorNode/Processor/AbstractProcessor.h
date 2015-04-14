@@ -13,14 +13,17 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Sensor;
-import sensortechnology.src.SensorNode.Sensor.SensingUnit.*;
-import sensortechnology.src.SensorNode.Sensor.SignalConverter.*;
-import sensortechnology.src.SensorNode.Sensor.SignalConditioner.*;
-import sensortechnology.src.SensorNode.Sensor.Transducer.*;
+#ifndef ABSTRACTPROCESSOR_H_
+#define ABSTRACTPROCESSOR_H_
 
-module LightSensor extends AbstractSensor
-{
-    parameters:
-        type = "Light";
-}
+#include <omnetpp.h>
+
+class AbstractProcessor : public cSimpleModule {
+public:
+    AbstractProcessor();
+    virtual ~AbstractProcessor();
+};
+
+Define_Module(AbstractProcessor);
+
+#endif /* ABSTRACTPROCESSOR_H_ */

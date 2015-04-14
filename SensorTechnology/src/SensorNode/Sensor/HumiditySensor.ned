@@ -16,9 +16,11 @@
 package sensortechnology.src.SensorNode.Sensor;
 import sensortechnology.src.SensorNode.Sensor.SensingUnit.*;
 import sensortechnology.src.SensorNode.Sensor.SignalConverter.*;
+import sensortechnology.src.SensorNode.Sensor.SignalConditioner.*;
+import sensortechnology.src.SensorNode.Sensor.Transducer.*;
 
 module HumiditySensor extends AbstractSensor
 {
     parameters:
-        type = "humi";
+        type = "Humidity";
 }

@@ -13,14 +13,14 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Sensor;
-import sensortechnology.src.SensorNode.Sensor.SensingUnit.*;
-import sensortechnology.src.SensorNode.Sensor.SignalConverter.*;
-import sensortechnology.src.SensorNode.Sensor.SignalConditioner.*;
-import sensortechnology.src.SensorNode.Sensor.Transducer.*;
+package sensortechnology.src.SensorNode.Processor;
 
-module LightSensor extends AbstractSensor
+//
+// TODO auto-generated type
+//
+simple AbstractProcessor
 {
     parameters:
-        type = "Light";
+    gates:
+        inout sensorGate[0];
 }

@@ -15,12 +15,35 @@
 
 package sensortechnology.src.SensorNode;
 import sensortechnology.src.SensorNode.Sensor.*;
+import sensortechnology.src.SensorNode.Processor.*;
 
 //
 // TODO auto-generated type
 //
 module AbstractSensorNode
 {
+    parameters:
+        bool hasTemperatureSensor;
+        bool hasHumiditySensor;
+        bool hasPressureSensor;
+        bool hasLightSensor;
+
     submodules:
-        Sensor: AbstractSensor;
+        TemperatureSensor: TemperatureSensor if hasTemperatureSensor {
+            @display("p=75,50");
+        }
+        HumiditySensor: HumiditySensor if hasHumiditySensor {
+            @display("p=75,120");
+        }
+        PressureSensor: PressureSensor if hasPressureSensor {
+            @display("p=75,190");
+        }
+        LightSensor: LightSensor if hasLightSensor {
+            @display("p=75,260");
+        }
+        Processor: AbstractProcessor {
+        }
+
+	connections:
+	    
 }
