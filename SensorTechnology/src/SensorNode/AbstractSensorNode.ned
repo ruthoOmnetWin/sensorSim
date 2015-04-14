@@ -27,7 +27,9 @@ module AbstractSensorNode
         bool hasHumiditySensor;
         bool hasPressureSensor;
         bool hasLightSensor;
-
+        int numSensors = default(0);
+		@class("AbstractSensorNode");
+		
     submodules:
         TemperatureSensor: TemperatureSensor if hasTemperatureSensor {
             @display("p=75,50");
@@ -42,6 +44,8 @@ module AbstractSensorNode
             @display("p=75,260");
         }
         Processor: AbstractProcessor {
+            parameters:
+            	numGates = numSensors;
         }
 
 	connections:

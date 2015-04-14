@@ -13,15 +13,20 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Processor;
+#ifndef ABSTRACTSENSORNODE_H_
+#define ABSTRACTSENSORNODE_H_
 
-//
-// TODO auto-generated type
-//
-simple AbstractProcessor
-{
-    parameters:
-        int numGates = default(0);
-    gates:
-        inout sensorGate[numGates];
-}
+#include <omnetpp.h>
+
+class AbstractSensorNode : public cModule {
+public:
+    AbstractSensorNode();
+    virtual ~AbstractSensorNode();
+protected:
+    void initialize(int);
+    void setNumGates();
+};
+
+Define_Module(AbstractSensorNode);
+
+#endif /* ABSTRACTSENSORNODE_H_ */

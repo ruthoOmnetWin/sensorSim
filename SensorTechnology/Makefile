@@ -42,7 +42,13 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/src/SensorNode/Processor/AbstractProcessor.o $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o
+OBJS = \
+    $O/src/SensorNode/AbstractSensorNode.o \
+    $O/src/SensorNode/Processor/AbstractProcessor.o \
+    $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o \
+    $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o \
+    $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o \
+    $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o
 
 # Message files
 MSGFILES =
@@ -143,6 +149,8 @@ depend:
 	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc src/SensorNode/*.cc src/SensorNode/Battery/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/Radio/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/src/SensorNode/AbstractSensorNode.o: src/SensorNode/AbstractSensorNode.cc \
+	src/SensorNode/AbstractSensorNode.h
 $O/src/SensorNode/Processor/AbstractProcessor.o: src/SensorNode/Processor/AbstractProcessor.cc \
 	src/SensorNode/Processor/AbstractProcessor.h
 $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.cc \

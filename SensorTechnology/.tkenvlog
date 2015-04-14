@@ -1308,3 +1308,39 @@ Tcl error: tkenv.cc#1838: grab failed: window not viewable
 "inputbox {Requested to Ask Parameter} {Enter parameter `SensorTechnology.createNewEnvironmentData':} opp(result) {Use this value for all similar parameters} ..."
 
 
+----------------------------------------------------------------------
+
+
+Tcl error: tkenv.cc#1838: grab failed: window not viewable
+    while executing
+"grab $w"
+    (procedure "execOkCancelDialog" line 20)
+    invoked from within
+"execOkCancelDialog $w"
+    (procedure "inputbox" line 27)
+    invoked from within
+"inputbox {Unassigned Parameter} {Enter parameter `SensorTechnology.AbstractSensorNode.hasHumiditySensor':} opp(result) {Use this value for all similar..."
+
+
+Tcl error: tkenv.cc#1838: grab failed: window not viewable
+    while executing
+"grab $w"
+    (procedure "execOkCancelDialog" line 20)
+    invoked from within
+"execOkCancelDialog $w"
+    (procedure "inputbox" line 27)
+    invoked from within
+"inputbox {Unassigned Parameter} {Enter parameter `SensorTechnology.AbstractSensorNode.hasPressureSensor':} opp(result) {Use this value for all similar..."
+
+
+Tcl error: tkenv.cc#1838: grab failed: window not viewable
+    while executing
+"grab $w"
+    (procedure "execOkCancelDialog" line 20)
+    invoked from within
+"execOkCancelDialog $w"
+    (procedure "inputbox" line 27)
+    invoked from within
+"inputbox {Unassigned Parameter} {Enter parameter `SensorTechnology.AbstractSensorNode.hasLightSensor':} opp(result) {Use this value for all similar pa..."
+
+
