@@ -20,7 +20,9 @@ package sensortechnology.src.SensorNode.Sensor.SignalConverter;
 //
 moduleinterface SignalConverterInterface
 {
+    parameters:
+    	@display("i=block/mac");
     gates:
-        input fromSensingUnit;
-        output toController;
+        input fromSignalConditioner;
+        output toTransducer;
 }

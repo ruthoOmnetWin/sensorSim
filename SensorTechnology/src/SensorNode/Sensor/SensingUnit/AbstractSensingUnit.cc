@@ -13,13 +13,14 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Sensor;
+#include <AbstractSensingUnit.h>
 
-moduleinterface SensorInterface
-{
-    parameters:
-        //type of the sensor
-        string type;
-	    @display("i=block/wrx");
-	gates: 
+AbstractSensingUnit::AbstractSensingUnit() {
+    // TODO Auto-generated constructor stub
+
 }
+
+AbstractSensingUnit::~AbstractSensingUnit() {
+    // TODO Auto-generated destructor stub
+}
+

@@ -13,13 +13,17 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Sensor;
+#ifndef ABSTRACTSENSINGUNIT_H_
+#define ABSTRACTSENSINGUNIT_H_
 
-moduleinterface SensorInterface
-{
-    parameters:
-        //type of the sensor
-        string type;
-	    @display("i=block/wrx");
-	gates: 
-}
+#include <omnetpp.h>
+
+class AbstractSensingUnit : public cSimpleModule {
+public:
+    AbstractSensingUnit();
+    virtual ~AbstractSensingUnit();
+};
+
+Define_Module(AbstractSensingUnit);
+
+#endif /* ABSTRACTSENSINGUNIT_H_ */

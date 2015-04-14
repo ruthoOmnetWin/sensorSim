@@ -18,6 +18,6 @@ package sensortechnology.src.SensorNode.Sensor.SensingUnit;
 //
 // TODO auto-generated type
 //
-simple SensingUnitTemperature extends AbstractSensingUnit
+simple SensingUnitTemperature extends AbstractSensingUnit like SensingUnitInterface
 {
 }

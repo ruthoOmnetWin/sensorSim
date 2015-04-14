@@ -14,9 +14,14 @@
 // 
 
 package sensortechnology.src.SensorNode.Sensor;
-import sensortechnology.src.SensorNode.Sensor.SensingUnit.*;
-import sensortechnology.src.SensorNode.Sensor.SignalConverter.*;
-
+import sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface;
+import sensortechnology.src.SensorNode.Sensor.SensingUnit.AbstractSensingUnit;
+import sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface;
+import sensortechnology.src.SensorNode.Sensor.SignalConditioner.AbstractSignalConditioner;
+import sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface;
+import sensortechnology.src.SensorNode.Sensor.SignalConverter.AbstractSignalConverter;
+import sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface;
+import sensortechnology.src.SensorNode.Sensor.Transducer.AbstractTransducer;
 //
 // TODO auto-generated module
 //
@@ -26,8 +31,23 @@ module AbstractSensor like SensorInterface
     	string type;
     	
 	submodules:
-	    //SensingUnit: <> like SensingUnitInterface;
-	    //SignalConverter: <> like SignalConverterInterface;
-	    
-	    
+	    SensingUnit: <"SensingUnit"+type> like SensingUnitInterface {
+	    	@display("p=100,50");   
+	    }
+	    SignalConditioner: <"SignalConditioner"+type> like SignalConditionerInterface {
+
+            @display("p=100,120");
+        }
+        SignalConverter: <"SignalConverter"+type> like SignalConverterInterface {
+
+            @display("p=100,190");
+        }
+        Transducer: <"Transducer"+type> like TransducerInterface {
+            @display("p=100,260");
+        }
+        
+    connections:
+        SensingUnit.toSignalConditioner --> ned.DelayChannel --> SignalConditioner.fromSensingUnit;
+        SignalConditioner.toSignalConverter --> ned.DelayChannel --> SignalConverter.fromSignalConditioner;
+        SignalConverter.toTransducer --> ned.DelayChannel --> Transducer.fromSignalConverter;
 }

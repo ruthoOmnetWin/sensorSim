@@ -1,5 +1,38 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20150414-10:25:50-5228 b 1000
+SB v 1029 rid General-0-20150414-16:50:46-6349 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t sensortechnology.SensorTechnology n SensorTechnology cm 1
 MS id 1 d ""
+MC id 2 c cModule t sensortechnology.src.SensorNode.Sensor.TemperatureSensor pid 1 n TemperatureSensor cm 1
+MS id 2 d bgb=200,300
+MC id 3 c AbstractSensingUnit t sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitTemperature pid 2 n SensingUnit
+GC m 3 g 1 n toSignalConditioner o 1
+MS id 3 d p=100,50;i=block/filter
+MC id 4 c AbstractSignalConditioner t sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerTemperature pid 2 n SignalConditioner
+GC m 4 g 0 n fromSensingUnit o 0
+GC m 4 g 3 n toSignalConverter o 1
+MS id 4 d p=100,120;i=block/opticaldelay
+MC id 5 c AbstractSignalConverter t sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterTemperature pid 2 n SignalConverter
+GC m 5 g 0 n fromSignalConditioner o 0
+GC m 5 g 3 n toTransducer o 1
+MS id 5 d p=100,190;i=block/mac
+MC id 6 c AbstractTransducer t sensortechnology.src.SensorNode.Sensor.Transducer.TransducerTemperature pid 2 n Transducer
+GC m 6 g 0 n fromSignalConverter o 0
+MS id 6 d p=100,260;i=old/xconn
+CC sm 3 sg 1 dm 4 dg 0
+CS sm 3 sg 1 d ""
+CC sm 4 sg 3 dm 5 dg 0
+CS sm 4 sg 3 d ""
+CC sm 5 sg 3 dm 6 dg 0
+CS sm 5 sg 3 d ""
+MB sm 1 tm 2 m initialize(0)
+ME
+MB sm 1 tm 3 m initialize(0)
+ME
+MB sm 1 tm 4 m initialize(0)
+ME
+MB sm 1 tm 5 m initialize(0)
+ME
+MB sm 1 tm 6 m initialize(0)
+ME
+SE e 0 c 9 m "The user has finished the simulation at event #1, t=0."

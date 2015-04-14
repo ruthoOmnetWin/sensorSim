@@ -18,9 +18,10 @@ package sensortechnology.src.SensorNode.Sensor.SignalConditioner;
 //
 // TODO auto-generated type
 //
-simple AbstractSignalConditioner
+simple AbstractSignalConditioner like SignalConditionerInterface
 {
-    @display("i=block/opticaldelay");
+    parameters:
+    	@display("i=block/opticaldelay");
     gates:
         input fromSensingUnit;
         output toSignalConverter;

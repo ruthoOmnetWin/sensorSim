@@ -18,9 +18,11 @@ package sensortechnology.src.SensorNode.Sensor.Transducer;
 //
 // TODO auto-generated type
 //
-simple AbstractTransducer
+simple AbstractTransducer like TransducerInterface
 {
-    @display("i=old/xconn");
+    parameters:
+    	@display("i=old/xconn");
     gates:
         input fromSignalConverter;
+        //output toNodeController;
 }

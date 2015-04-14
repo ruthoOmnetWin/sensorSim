@@ -13,13 +13,14 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Sensor;
+#include <AbstractSignalConverter.h>
 
-moduleinterface SensorInterface
-{
-    parameters:
-        //type of the sensor
-        string type;
-	    @display("i=block/wrx");
-	gates: 
+AbstractSignalConverter::AbstractSignalConverter() {
+    // TODO Auto-generated constructor stub
+
 }
+
+AbstractSignalConverter::~AbstractSignalConverter() {
+    // TODO Auto-generated destructor stub
+}
+

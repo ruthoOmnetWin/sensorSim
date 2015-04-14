@@ -20,7 +20,8 @@ package sensortechnology.src.SensorNode.Sensor.SignalConverter;
 //
 simple AbstractSignalConverter like SignalConverterInterface
 {
-    @display("i=block/mac");
+    parameters:
+    	@display("i=block/mac");
     gates:
         input fromSignalConditioner;
         output toTransducer;

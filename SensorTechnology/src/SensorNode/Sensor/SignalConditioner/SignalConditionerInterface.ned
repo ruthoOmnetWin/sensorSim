@@ -13,13 +13,16 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Sensor;
+package sensortechnology.src.SensorNode.Sensor.SignalConditioner;
 
-moduleinterface SensorInterface
+//
+// TODO auto-generated type
+//
+moduleinterface SignalConditionerInterface
 {
     parameters:
-        //type of the sensor
-        string type;
-	    @display("i=block/wrx");
-	gates: 
+    	@display("i=block/opticaldelay");
+    gates:
+        input fromSensingUnit;
+        output toSignalConverter;
 }

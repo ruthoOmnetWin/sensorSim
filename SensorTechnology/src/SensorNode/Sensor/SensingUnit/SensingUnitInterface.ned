@@ -21,6 +21,7 @@ package sensortechnology.src.SensorNode.Sensor.SensingUnit;
 moduleinterface SensingUnitInterface
 {       
     parameters:
+        @display("i=block/filter");
         string serialNumber;
         string measuringUnit;
         bool isActiveSensingUnit;
@@ -28,5 +29,5 @@ moduleinterface SensingUnitInterface
         int measurementPowerConsumption;
        
 	gates:
-	    output toSignalConverter;
+	    output toSignalConditioner;
 }

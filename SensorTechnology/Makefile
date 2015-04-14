@@ -14,7 +14,16 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Iresults -Isrc
+INCLUDE_PATH = \
+    -I. \
+    -Iresults \
+    -Isrc \
+    -Isrc/SensorNode \
+    -Isrc/SensorNode/Sensor \
+    -Isrc/SensorNode/Sensor/SensingUnit \
+    -Isrc/SensorNode/Sensor/SignalConditioner \
+    -Isrc/SensorNode/Sensor/SignalConverter \
+    -Isrc/SensorNode/Sensor/Transducer
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -29,7 +38,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS =
+OBJS = $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o
 
 # Message files
 MSGFILES =
@@ -111,13 +120,27 @@ clean:
 	$(Q)-rm -f ./*_m.cc ./*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
 	$(Q)-rm -f src/*_m.cc src/*_m.h
+	$(Q)-rm -f src/SensorNode/*_m.cc src/SensorNode/*_m.h
+	$(Q)-rm -f src/SensorNode/Sensor/*_m.cc src/SensorNode/Sensor/*_m.h
+	$(Q)-rm -f src/SensorNode/Sensor/SensingUnit/*_m.cc src/SensorNode/Sensor/SensingUnit/*_m.h
+	$(Q)-rm -f src/SensorNode/Sensor/SignalConditioner/*_m.cc src/SensorNode/Sensor/SignalConditioner/*_m.h
+	$(Q)-rm -f src/SensorNode/Sensor/SignalConverter/*_m.cc src/SensorNode/Sensor/SignalConverter/*_m.h
+	$(Q)-rm -f src/SensorNode/Sensor/Transducer/*_m.cc src/SensorNode/Sensor/Transducer/*_m.h
 
 cleanall: clean
 	$(Q)-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc src/SensorNode/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.cc \
+	src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.h
+$O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o: src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.cc \
+	src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.h
+$O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o: src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.cc \
+	src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.h
+$O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o: src/SensorNode/Sensor/Transducer/AbstractTransducer.cc \
+	src/SensorNode/Sensor/Transducer/AbstractTransducer.h
 

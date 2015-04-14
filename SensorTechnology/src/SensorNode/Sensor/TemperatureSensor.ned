@@ -22,27 +22,11 @@ import sensortechnology.src.SensorNode.Sensor.Transducer.*;
 module TemperatureSensor extends AbstractSensor
 {
     parameters:
-        type = "temperature";
+        type = "Temperature";
 
         @display("bgb=200,300");
     submodules:
-        SensingUnit: SensingUnitTemperature {
-            @display("p=100,50");
-        }
-        SignalConditioner: SignalConditionerTemperature {
-
-            @display("p=100,120");
-        }
-        SignalConverter: SignalConverterTemperature {
-
-            @display("p=100,190");
-        }
-        Transducer: TransducerTemperature {
-            @display("p=100,260");
-        }
 
     connections:
-        SensingUnit.toSignalConditioner --> ned.DelayChannel --> SignalConditioner.fromSensingUnit;
-        SignalConditioner.toSignalConverter --> ned.DelayChannel --> SignalConverter.fromSignalConditioner;
-        SignalConverter.toTransducer --> ned.DelayChannel --> Transducer.fromSignalConverter;
+        
 }

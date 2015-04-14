@@ -13,13 +13,17 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Sensor;
+#ifndef ABSTRACTSIGNALCONDITIONER_H_
+#define ABSTRACTSIGNALCONDITIONER_H_
 
-moduleinterface SensorInterface
-{
-    parameters:
-        //type of the sensor
-        string type;
-	    @display("i=block/wrx");
-	gates: 
-}
+#include <omnetpp.h>
+
+class AbstractSignalConditioner : public cSimpleModule {
+public:
+    AbstractSignalConditioner();
+    virtual ~AbstractSignalConditioner();
+};
+
+Define_Module(AbstractSignalConditioner);
+
+#endif /* ABSTRACTSIGNALCONDITIONER_H_ */
