@@ -13,11 +13,14 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.Sensor;
+package sensortechnology.src.SensorNode;
+import sensortechnology.src.SensorNode.Sensor.*;
 
-simple PressureSensor extends Sensor
+//
+// TODO auto-generated type
+//
+module AbstractSensorNode
 {
-    parameters:
-        type = "pres";
+    submodules:
+        Sensor: AbstractSensor;
 }
-

@@ -13,34 +13,13 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef SENSOR_H_
-#define SENSOR_H_
+package sensortechnology.src.SensorNode.Sensor;
+import sensortechnology.src.Sensor.SensorNode.SensingUnit.*;
+import sensortechnology.src.Sensor.SensorNode.SignalConverter.*;
 
-#include <omnetpp.h>
-#include <CustomLinearMobility.h>
-#include <ExtendedMessage_m.h>
-#include <string.h>
-
-class Sensor : public cSimpleModule//: public CustomLinearMobility
+module PressureSensor extends AbstractSensor
 {
-protected:
-    void initialize(int stage);
-    void handleMessage(cMessage *msg);
-    void activity(){};
-    void finish(){};
+    parameters:
+        type = "pres";
+}
 
-public:
-    /**
-     * reads the data the sensor returns at the current position
-     *
-     * @return integer
-     */
-    virtual int getSensorData(){return 0;}
-    Sensor();
-    ~Sensor();
-};
-
-//Register_Class(Sensor);
-Define_Module(Sensor);
-
-#endif /* SENSOR_H_ */

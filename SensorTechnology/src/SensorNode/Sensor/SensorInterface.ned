@@ -13,20 +13,16 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.Sensor.SensingUnit;
+package sensortechnology.src.SensorNode.Sensor;
 
-//
-// TODO auto-generated type
-//
-moduleinterface SensingUnit
-{       
+moduleinterface SensorInterface
+{
     parameters:
-        string serialNumber;
-        string measuringUnit;
-        bool isActiveSensingUnit;
-        int standByPowerConsumtion;
-        int measurementPowerConsumption;
-       
-        
-	gates:
+        //type of the sensor
+        string type;
+	    @display("i=block/wrx");
+	    @class("Sensor");
+	gates: 
+	    inout toNode;
+	    inout worldDataGate;
 }

@@ -13,10 +13,12 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.Sensor;
+package sensortechnology.src.SensorNode.Sensor;
+import sensortechnology.src.Sensor.SensorNode.SensingUnit.*;
+import sensortechnology.src.Sensor.SensorNode.SignalConverter.*;
 
-simple HumiditySensor extends Sensor
+module LightSensor extends AbstractSensor
 {
     parameters:
-        type = "humi";
+        type = "light";
 }

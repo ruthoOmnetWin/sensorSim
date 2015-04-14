@@ -13,10 +13,20 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.Sensor;
+package sensortechnology.src.SensorNode.Sensor.SensingUnit;
 
-simple LightSensor extends Sensor
-{
+//
+// TODO auto-generated type
+//
+moduleinterface SensingUnitInterface
+{       
     parameters:
-        type = "light";
+        string serialNumber;
+        string measuringUnit;
+        bool isActiveSensingUnit;
+        int standByPowerConsumtion;
+        int measurementPowerConsumption;
+       
+	gates:
+	    output toSignalConverter;
 }

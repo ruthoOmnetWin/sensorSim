@@ -13,26 +13,11 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#include <Sensor.h>
-#include <NodeType.h>
-#include <FindModule.h>
-using namespace std;
+package sensortechnology.src.SensorNode.Sensor.SensingUnit;
 
-Sensor::Sensor()
+//
+// TODO auto-generated type
+//
+simple SensingUnitTemperature extends AbstractSensingUnit
 {
-    NodeType* testtype = FindModule<NodeType*>::findSubModule(this);
-    this->setComponentType(testtype);
-}
-
-Sensor::~Sensor()
-{
-}
-
-void Sensor::initialize(int stage)
-{
-}
-
-void Sensor::handleMessage(cMessage *msg)
-{
-    delete msg;
 }

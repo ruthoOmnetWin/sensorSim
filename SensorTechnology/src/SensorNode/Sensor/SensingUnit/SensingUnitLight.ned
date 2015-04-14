@@ -13,10 +13,11 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.Sensor;
+package sensortechnology.src.SensorNode.Sensor.SensingUnit;
 
-simple TemperatureSensor extends Sensor
+//
+// TODO auto-generated type
+//
+simple SensingUnitLight extends AbstractSensingUnit
 {
-    parameters:
-        type = "temp";
 }

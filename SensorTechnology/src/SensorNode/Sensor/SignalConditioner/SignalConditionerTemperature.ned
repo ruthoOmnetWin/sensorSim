@@ -13,16 +13,11 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.Sensor;
+package sensortechnology.src.SensorNode.Sensor.SignalConditioner;
 
-simple Sensor 
+//
+// TODO auto-generated type
+//
+simple SignalConditionerTemperature extends AbstractSignalConditioner
 {
-    parameters:
-        //type of the sensor
-        string type;
-	    @display("i=block/wrx");
-	    @class("Sensor");
-	gates: 
-	    inout toNode;
-	    inout worldDataGate;
 }

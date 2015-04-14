@@ -13,12 +13,14 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.Sensor.SensingUnit;
+package sensortechnology.src.SensorNode.Sensor.Transducer;
 
 //
 // TODO auto-generated type
 //
-simple Temperature like SensingUnit
+simple AbstractTransducer
 {
-    
+    @display("i=old/xconn");
+    gates:
+        input fromSignalConverter;
 }
