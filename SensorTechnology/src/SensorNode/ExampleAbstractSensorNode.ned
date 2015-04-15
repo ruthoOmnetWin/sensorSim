@@ -17,11 +17,12 @@ package sensortechnology.src.SensorNode;
 import sensortechnology.src.SensorNode.Sensor.*;
 import sensortechnology.src.SensorNode.Processor.*;
 import sensortechnology.src.SensorNode.Memory.*;
+import org.mixim.modules.node.Host802154_2400MHz;
 
 //
 // TODO auto-generated type
 //
-module AbstractSensorNode
+module Host802154_2400MHzSensorNode extends Host802154_2400MHz
 {
     parameters:
         bool hasTemperatureSensor;
@@ -34,27 +35,28 @@ module AbstractSensorNode
         //these are used to draw the overview of the model
         bool fakeProcessor = false;
 
-        @display("bgb=245,450;i=block/ifcard");
+        @display("bgb=445,450");
     submodules:
         TemperatureSensor: TemperatureSensor if hasTemperatureSensor {
-            @display("p=75,51");
+            @display("p=275,51");
         }
         HumiditySensor: HumiditySensor if hasHumiditySensor {
-            @display("p=75,120");
+            @display("p=275,120");
         }
         PressureSensor: PressureSensor if hasPressureSensor {
-            @display("p=75,190");
+            @display("p=275,190");
         }
         LightSensor: LightSensor if hasLightSensor {
-            @display("p=75,260");
+            @display("p=275,260");
         }
         Memory: AbstractMemory {
-            @display("p=200,51");
+            @display("p=400,51");
         }
         //Processor is created inside the C++-Class in order to create the gates to the
         //different sensors dynamically by the input
         Processor: ExampleProcessor if fakeProcessor {
-            @display("p=200,159");
+
+            @display("p=400,159");
         }
     connections:
         //these connections will never be created, they only exist to draw the model

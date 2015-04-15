@@ -25,4 +25,5 @@ moduleinterface TransducerInterface
     gates:
         input fromSignalConverter;
         output toNodeProcessor;
+        input fromNodeProcessor;
 }

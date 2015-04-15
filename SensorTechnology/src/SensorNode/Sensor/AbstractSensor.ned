@@ -28,16 +28,18 @@ import sensortechnology.src.SensorNode.Sensor.Transducer.AbstractTransducer;
 module AbstractSensor like SensorInterface
 {
     parameters:
-    	string type;
-    	
-	gates:
+        string type;
+
+        @display("i=block/join");
+    gates:
         output fromTransducerToNodeProcessor;
-    	
-	submodules:
-	    SensingUnit: <"SensingUnit"+type> like SensingUnitInterface {
-	    	@display("p=100,50");   
-	    }
-	    SignalConditioner: <"SignalConditioner"+type> like SignalConditionerInterface {
+        input toTransducerFromNodeProcessor;
+
+    submodules:
+        SensingUnit: <"SensingUnit"+type> like SensingUnitInterface {
+            @display("p=100,50");
+        }
+        SignalConditioner: <"SignalConditioner"+type> like SignalConditionerInterface {
 
             @display("p=100,120");
         }
@@ -48,11 +50,12 @@ module AbstractSensor like SensorInterface
         Transducer: <"Transducer"+type> like TransducerInterface {
             @display("p=100,260");
         }
-        
+
     connections:
         SensingUnit.toSignalConditioner --> ned.DelayChannel --> SignalConditioner.fromSensingUnit;
         SignalConditioner.toSignalConverter --> ned.DelayChannel --> SignalConverter.fromSignalConditioner;
         SignalConverter.toTransducer --> ned.DelayChannel --> Transducer.fromSignalConverter;
-        Transducer.toNodeProcessor -->  ned.DelayChannel --> fromTransducerToNodeProcessor;
-        
+        Transducer.toNodeProcessor --> ned.DelayChannel --> fromTransducerToNodeProcessor;
+        toTransducerFromNodeProcessor --> ned.DelayChannel --> Transducer.fromNodeProcessor;
+
 }

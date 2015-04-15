@@ -27,6 +27,8 @@ void AbstractSensorNode::initialize(int stage) {
     setNumGates();
     //generate Processor dynamically
     createProcessor();
+    //connect Memory with Processor
+    connectProcessorAndMemory();
 }
 
 void AbstractSensorNode::setNumGates() {
@@ -54,7 +56,6 @@ void AbstractSensorNode::setNumGates() {
 void AbstractSensorNode::createProcessor() {
     //find the factory
     cModuleType *moduleType = cModuleType::get("sensortechnology.src.SensorNode.Processor.AbstractProcessor");
-    EV << "hi" << endl;
 
     //create module
     cModule *module = moduleType->create("Processor", this);
@@ -79,4 +80,20 @@ void AbstractSensorNode::createProcessor() {
     }
 
     module->buildInside();
+}
+
+void AbstractSensorNode::connectProcessorAndMemory() {
+    //get memory gates
+    cModule *Memory =  this->getSubmodule("Memory");
+    Memory->addGate("connectToProcessor", cGate::INOUT);
+    cGate *inMemoryFromProcessor = Memory->gate("connectToProcessor$i");
+    cGate *outMemoryToProcessor = Memory->gate("connectToProcessor$o");
+    //get processor gates
+    cModule *Processor =  this->getSubmodule("Processor");
+    Processor->addGate("connectToMemory", cGate::INOUT);
+    cGate *inProcessorFromMemory = Processor->gate("connectToMemory$i");
+    cGate *outProcessorToMemory = Processor->gate("connectToMemory$o");
+    //connect
+    outMemoryToProcessor->connectTo(inProcessorFromMemory);
+    outProcessorToMemory->connectTo(inMemoryFromProcessor);
 }

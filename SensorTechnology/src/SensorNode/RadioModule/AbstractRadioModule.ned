@@ -13,16 +13,11 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Memory;
+package sensortechnology.src.SensorNode.RadioModule;
 
 //
 // TODO auto-generated type
 //
-simple AbstractMemory
+simple AbstractRadioModule
 {
-    parameters:
-        xml keyValueMemory = xml("<data></data>");
-        @display("i=block/buffer2");
-    gates:
-        //inout connectToProcessor;
 }

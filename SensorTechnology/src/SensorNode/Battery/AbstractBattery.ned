@@ -14,10 +14,11 @@
 // 
 
 package sensortechnology.src.SensorNode.Battery;
+import org.mixim.modules.power.battery.SimpleBattery;
 
 //
 // TODO auto-generated type
 //
-simple AbstractBattery
+simple AbstractBattery extends SimpleBattery
 {
 }

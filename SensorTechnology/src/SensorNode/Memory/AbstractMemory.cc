@@ -13,11 +13,14 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Radio;
+#include <AbstractMemory.h>
 
-//
-// TODO auto-generated type
-//
-simple AbstractRadio
-{
+AbstractMemory::AbstractMemory() {
+    // TODO Auto-generated constructor stub
+
 }
+
+AbstractMemory::~AbstractMemory() {
+    // TODO Auto-generated destructor stub
+}
+

@@ -13,16 +13,17 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Memory;
+#ifndef ABSTRACTMEMORY_H_
+#define ABSTRACTMEMORY_H_
 
-//
-// TODO auto-generated type
-//
-simple AbstractMemory
-{
-    parameters:
-        xml keyValueMemory = xml("<data></data>");
-        @display("i=block/buffer2");
-    gates:
-        //inout connectToProcessor;
-}
+#include <omnetpp.h>
+
+class AbstractMemory : public cSimpleModule {
+public:
+    AbstractMemory();
+    virtual ~AbstractMemory();
+};
+
+Define_Module(AbstractMemory);
+
+#endif /* ABSTRACTMEMORY_H_ */

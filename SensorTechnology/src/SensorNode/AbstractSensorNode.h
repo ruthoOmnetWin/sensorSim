@@ -26,6 +26,7 @@ protected:
     void initialize(int);
     void setNumGates();
     void createProcessor();
+    void connectProcessorAndMemory();
 };
 
 Define_Module(AbstractSensorNode);
