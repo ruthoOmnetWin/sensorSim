@@ -23,8 +23,10 @@ AbstractSensorNode::~AbstractSensorNode() {
 }
 
 void AbstractSensorNode::initialize(int stage) {
+    //get the amount of sensors and gates needed
     setNumGates();
     //generate Processor dynamically
+    createProcessor();
 }
 
 void AbstractSensorNode::setNumGates() {
@@ -47,4 +49,34 @@ void AbstractSensorNode::setNumGates() {
     numGates = countGates;
     par("numSensors") = numGates;
     EV << "Counted " << countGates << " Sensor(s) on the Node." << endl;
+}
+
+void AbstractSensorNode::createProcessor() {
+    //find the factory
+    cModuleType *moduleType = cModuleType::get("sensortechnology.src.SensorNode.Processor.AbstractProcessor");
+    EV << "hi" << endl;
+
+    //create module
+    cModule *module = moduleType->create("Processor", this);
+    module->finalizeParameters();
+
+    //add gates
+    if (par("hasTemperatureSensor")) {
+        module->addGate("fromTemperatureSensor", cGate::INPUT);
+        module->addGate("toTemperatureSensor", cGate::OUTPUT);
+    }
+    if (par("hasHumiditySensor")) {
+        module->addGate("fromHumiditySensor", cGate::INPUT);
+        module->addGate("toHumiditySensor", cGate::OUTPUT);
+    }
+    if (par("hasPressureSensor")) {
+        module->addGate("fromPressureSensor", cGate::INPUT);
+        module->addGate("toPressureSensor", cGate::OUTPUT);
+    }
+    if (par("hasLightSensor")) {
+        module->addGate("fromLightSensor", cGate::INPUT);
+        module->addGate("toLightSensor", cGate::OUTPUT);
+    }
+
+    module->buildInside();
 }

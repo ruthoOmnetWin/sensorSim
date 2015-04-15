@@ -18,9 +18,16 @@ package sensortechnology.src.SensorNode.Processor;
 //
 // TODO auto-generated type
 //
-simple AbstractProcessor
+simple ExampleProcessor extends AbstractProcessor
 {
     parameters:
-        int numGates = default(0);
     gates:
+        input fromTemperatureSensor;
+        output toTemperatureSensor;
+        input fromHumiditySensor;
+        output toHumiditySensor;
+    	input fromPressureSensor;
+        output toPressureSensor;
+        input fromLightSensor;
+        output toLightSensor;
 }

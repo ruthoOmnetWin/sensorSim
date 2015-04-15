@@ -25,6 +25,7 @@ public:
 protected:
     void initialize(int);
     void setNumGates();
+    void createProcessor();
 };
 
 Define_Module(AbstractSensorNode);

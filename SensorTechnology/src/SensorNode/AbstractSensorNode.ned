@@ -28,11 +28,15 @@ module AbstractSensorNode
         bool hasPressureSensor;
         bool hasLightSensor;
         int numSensors = default(0);
-		@class("AbstractSensorNode");
-		
+        @class("AbstractSensorNode");
+
+        //these are used to draw the overview of the model
+        bool fakeProcessor = false;
+        bool fakeCount = false;
+
     submodules:
         TemperatureSensor: TemperatureSensor if hasTemperatureSensor {
-            @display("p=75,50");
+            @display("p=75,51");
         }
         HumiditySensor: HumiditySensor if hasHumiditySensor {
             @display("p=75,120");
@@ -43,11 +47,18 @@ module AbstractSensorNode
         LightSensor: LightSensor if hasLightSensor {
             @display("p=75,260");
         }
-        Processor: AbstractProcessor {
-            parameters:
-            	numGates = numSensors;
+        //Processor is created inside the C++-Class in order to create the gates to the
+        //different sensors dynamically by the input
+        Processor: ExampleProcessor if fakeProcessor {
+
+            @display("p=200,159");
+        }
+    connections:
+        if fakeCount {
+            HumiditySensor.fromTransducerToNodeProcessor --> Processor.fromHumiditySensor;
+            TemperatureSensor.fromTransducerToNodeProcessor --> Processor.fromTemperatureSensor;
+            PressureSensor.fromTransducerToNodeProcessor --> Processor.fromPressureSensor;
+            LightSensor.fromTransducerToNodeProcessor --> Processor.fromLightSensor;
         }
 
-	connections:
-	    
 }

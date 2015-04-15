@@ -24,5 +24,5 @@ simple AbstractTransducer like TransducerInterface
     	@display("i=old/xconn");
     gates:
         input fromSignalConverter;
-        //output toNodeController;
+        output toNodeProcessor;
 }

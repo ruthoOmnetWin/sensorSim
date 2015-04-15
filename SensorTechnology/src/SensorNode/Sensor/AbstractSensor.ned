@@ -30,6 +30,9 @@ module AbstractSensor like SensorInterface
     parameters:
     	string type;
     	
+	gates:
+        output fromTransducerToNodeProcessor;
+    	
 	submodules:
 	    SensingUnit: <"SensingUnit"+type> like SensingUnitInterface {
 	    	@display("p=100,50");   
@@ -50,4 +53,6 @@ module AbstractSensor like SensorInterface
         SensingUnit.toSignalConditioner --> ned.DelayChannel --> SignalConditioner.fromSensingUnit;
         SignalConditioner.toSignalConverter --> ned.DelayChannel --> SignalConverter.fromSignalConditioner;
         SignalConverter.toTransducer --> ned.DelayChannel --> Transducer.fromSignalConverter;
+        Transducer.toNodeProcessor -->  ned.DelayChannel --> fromTransducerToNodeProcessor;
+        
 }

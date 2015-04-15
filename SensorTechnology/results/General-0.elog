@@ -1,46 +1,15 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20150414-22:38:27-7326 b 1000
+SB v 1029 rid General-0-20150415-11:26:43-5924 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t sensortechnology.SensorTechnology n SensorTechnology cm 1
 MS id 1 d ""
 MC id 2 c AbstractSensorNode t sensortechnology.src.SensorNode.AbstractSensorNode pid 1 n AbstractSensorNode cm 1
 MS id 2 d ""
-MC id 3 c cModule t sensortechnology.src.SensorNode.Sensor.TemperatureSensor pid 2 n TemperatureSensor cm 1
-MS id 3 d p=75,50;bgb=200,300
-MC id 4 c AbstractProcessor t sensortechnology.src.SensorNode.Processor.AbstractProcessor pid 2 n Processor
-MS id 4 d ""
-MC id 5 c AbstractSensingUnit t sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitTemperature pid 3 n SensingUnit
-GC m 5 g 1 n toSignalConditioner o 1
-MS id 5 d p=100,50;i=block/filter
-MC id 6 c AbstractSignalConditioner t sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerTemperature pid 3 n SignalConditioner
-GC m 6 g 0 n fromSensingUnit o 0
-GC m 6 g 3 n toSignalConverter o 1
-MS id 6 d p=100,120;i=block/opticaldelay
-MC id 7 c AbstractSignalConverter t sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterTemperature pid 3 n SignalConverter
-GC m 7 g 0 n fromSignalConditioner o 0
-GC m 7 g 3 n toTransducer o 1
-MS id 7 d p=100,190;i=block/mac
-MC id 8 c AbstractTransducer t sensortechnology.src.SensorNode.Sensor.Transducer.TransducerTemperature pid 3 n Transducer
-GC m 8 g 0 n fromSignalConverter o 0
-MS id 8 d p=100,260;i=old/xconn
-CC sm 5 sg 1 dm 6 dg 0
-CS sm 5 sg 1 d ""
-CC sm 6 sg 3 dm 7 dg 0
-CS sm 6 sg 3 d ""
-CC sm 7 sg 3 dm 8 dg 0
-CS sm 7 sg 3 d ""
 MB sm 1 tm 2 m initialize(0)
-- Counted 1 Sensors on the Node.
+- Counted 0 Sensor(s) on the Node.
+- hi
+MC id 3 c AbstractProcessor t sensortechnology.src.SensorNode.Processor.AbstractProcessor pid 2 n Processor
+MS id 3 d p=200,159
 ME
 MB sm 1 tm 3 m initialize(0)
-ME
-MB sm 1 tm 5 m initialize(0)
-ME
-MB sm 1 tm 6 m initialize(0)
-ME
-MB sm 1 tm 7 m initialize(0)
-ME
-MB sm 1 tm 8 m initialize(0)
-ME
-MB sm 1 tm 4 m initialize(0)
 ME
