@@ -31,6 +31,9 @@ void AbstractSensorNode::initialize(int stage) {
     connectProcessorAndMemory();
 }
 
+/**
+ * counts how many sensors exist on the node
+ */
 void AbstractSensorNode::setNumGates() {
 
     int countGates = 0;
@@ -53,38 +56,62 @@ void AbstractSensorNode::setNumGates() {
     EV << "Counted " << countGates << " Sensor(s) on the Node." << endl;
 }
 
+/**
+ * creates the processor module
+ * depending on the different boolean parameters set inside the parameters list
+ * by these parameters the sensors are created or not
+ * if created, they get connected to the newly created processor gates
+ */
 void AbstractSensorNode::createProcessor() {
     //find the factory
     cModuleType *moduleType = cModuleType::get("sensortechnology.src.SensorNode.Processor.AbstractProcessor");
 
     //create module
-    cModule *module = moduleType->create("Processor", this);
-    module->finalizeParameters();
+    cModule *processor = moduleType->create("Processor", this);
+    processor->finalizeParameters();
 
     //add gates
+    //connect them to the sensors
     if (par("hasTemperatureSensor")) {
-        module->addGate("fromTemperatureSensor", cGate::INPUT);
-        module->addGate("toTemperatureSensor", cGate::OUTPUT);
+        createProcessorsGatesAndConnect(*processor, "Temperature");
     }
     if (par("hasHumiditySensor")) {
-        module->addGate("fromHumiditySensor", cGate::INPUT);
-        module->addGate("toHumiditySensor", cGate::OUTPUT);
+        createProcessorsGatesAndConnect(*processor, "Humidity");
     }
     if (par("hasPressureSensor")) {
-        module->addGate("fromPressureSensor", cGate::INPUT);
-        module->addGate("toPressureSensor", cGate::OUTPUT);
+        createProcessorsGatesAndConnect(*processor, "Pressure");
     }
     if (par("hasLightSensor")) {
-        module->addGate("fromLightSensor", cGate::INPUT);
-        module->addGate("toLightSensor", cGate::OUTPUT);
+        createProcessorsGatesAndConnect(*processor, "Light");
     }
 
-    module->buildInside();
+    processor->buildInside();
 }
 
+/**
+ * dynamically creates gates of the processor depending on the sensor type given (by name)
+ * connects these gates to the gates of the given sensor type
+ */
+void AbstractSensorNode::createProcessorsGatesAndConnect(cModule &processor, std::string SensorType) {
+    //new gates
+    cGate *fromSensor = processor.addGate(("from" + SensorType + "Sensor").c_str(), cGate::INPUT);
+    cGate *toSensor = processor.addGate(("to" + SensorType + "Sensor").c_str(), cGate::OUTPUT);
+    //find gates inside sensor
+    cModule *Sensor = this->getSubmodule((SensorType + "Sensor").c_str());
+    cGate *sensorOut = Sensor->gate("fromTransducerToNodeProcessor");
+    cGate *sensorIn = Sensor->gate("toTransducerFromNodeProcessor");
+    //connect
+    sensorOut->connectTo(fromSensor);
+    toSensor->connectTo(sensorIn);
+    EV << "Created connections from " << SensorType << "-sensor to the processor." << endl;
+}
+
+/**
+ * connects gates of the processor with gates of the memory module
+ */
 void AbstractSensorNode::connectProcessorAndMemory() {
     //get memory gates
-    cModule *Memory =  this->getSubmodule("Memory");
+    cModule *Memory = this->getSubmodule("Memory");
     Memory->addGate("connectToProcessor", cGate::INOUT);
     cGate *inMemoryFromProcessor = Memory->gate("connectToProcessor$i");
     cGate *outMemoryToProcessor = Memory->gate("connectToProcessor$o");

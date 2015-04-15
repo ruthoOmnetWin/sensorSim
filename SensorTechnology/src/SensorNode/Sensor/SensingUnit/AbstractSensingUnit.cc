@@ -14,6 +14,8 @@
 // 
 
 #include <AbstractSensingUnit.h>
+#include <CustomWorldUtility.h>
+#include <FindModule.h>
 
 AbstractSensingUnit::AbstractSensingUnit() {
     // TODO Auto-generated constructor stub
@@ -24,3 +26,12 @@ AbstractSensingUnit::~AbstractSensingUnit() {
     // TODO Auto-generated destructor stub
 }
 
+void AbstractSensingUnit::initialize(int stage) {
+    CustomWorldUtility *world = FindModule<CustomWorldUtility*>::findGlobalModule();
+    //save world and provide data inside world
+    EV << "CustomWorldUtility found" << endl;
+}
+
+float AbstractSensingUnit::readData() {
+
+}

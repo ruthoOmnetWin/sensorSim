@@ -17,11 +17,16 @@
 #define ABSTRACTSENSINGUNIT_H_
 
 #include <omnetpp.h>
+#include <Coord.h>
 
 class AbstractSensingUnit : public cSimpleModule {
+protected:
+    Coord *Position;
 public:
     AbstractSensingUnit();
     virtual ~AbstractSensingUnit();
+    float readData();
+    void initialize(int stage);
 };
 
 Define_Module(AbstractSensingUnit);

@@ -58,6 +58,9 @@ module AbstractSensorNode
         }
     connections:
         //these connections will never be created, they only exist to draw the model
+        //
+        //the real connections between processor and sensor are created dynamically because 
+        //only the gates needed are created in order to avoid unused (not connected) gates
         if fakeProcessor {
             HumiditySensor.fromTransducerToNodeProcessor --> Processor.fromHumiditySensor;
             TemperatureSensor.fromTransducerToNodeProcessor --> Processor.fromTemperatureSensor;
@@ -69,5 +72,4 @@ module AbstractSensorNode
             PressureSensor.toTransducerFromNodeProcessor <-- Processor.toPressureSensor;
             LightSensor.toTransducerFromNodeProcessor <-- Processor.toLightSensor;
         }
-
 }

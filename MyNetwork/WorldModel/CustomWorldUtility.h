@@ -23,7 +23,7 @@
 #include <StatisticsInterface.h>
 #include <SimpleCoord.h>
 
-class MIXIM_API CustomWorldUtility : public BaseWorldUtility, public StatisticsInterface
+class CustomWorldUtility : public BaseWorldUtility, public StatisticsInterface
 {
 protected:
     int** readXML(int);

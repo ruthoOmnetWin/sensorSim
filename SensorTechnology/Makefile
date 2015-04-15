@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for SensorTechnology
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
+#  opp_makemake -f --deep -O out -I/home/rutho/BA/mixim-2.3/src/base/phyLayer -I/home/rutho/BA/mixim-2.3/src -I/home/rutho/BA/mixim-2.3/src/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility -I/home/rutho/BA/mixim-2.3/src/base/utils -I/home/rutho/BA/mixim-2.3/src/base/modules -I/home/rutho/BA/mixim-2.3/src/inet_stub/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/util -I/home/rutho/BA/mixim-2.3/src/inet_stub/linklayer/contract -I/home/rutho/BA/mixim-2.3/src/base/messages -I/home/rutho/BA/mixim-2.3/src/base/connectionManager -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility/models -I/home/rutho/BA/mixim-2.3/src/inet_stub/networklayer/common -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
 #
 
 # Name of target to be created (-o option)
@@ -15,9 +15,23 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 
 # C++ include paths (with -I)
 INCLUDE_PATH = \
+    -I$(MIXIM_PROJ)/src/base/phyLayer \
+    -I$(MIXIM_PROJ)/src \
+    -I$(MIXIM_PROJ)/src/base \
+    -I$(MIXIM_PROJ)/src/inet_stub/mobility \
+    -I$(MIXIM_PROJ)/src/base/utils \
+    -I$(MIXIM_PROJ)/src/base/modules \
+    -I$(MIXIM_PROJ)/src/inet_stub/base \
+    -I$(MIXIM_PROJ)/src/inet_stub/util \
+    -I$(MIXIM_PROJ)/src/inet_stub/linklayer/contract \
+    -I$(MIXIM_PROJ)/src/base/messages \
+    -I$(MIXIM_PROJ)/src/base/connectionManager \
+    -I$(MIXIM_PROJ)/src/inet_stub/mobility/models \
+    -I$(MIXIM_PROJ)/src/inet_stub/networklayer/common \
     -I. \
     -Iresults \
     -Isrc \
+    -Isrc/ExtendedMessage \
     -Isrc/SensorNode \
     -Isrc/SensorNode/Battery \
     -Isrc/SensorNode/Memory \
@@ -27,7 +41,10 @@ INCLUDE_PATH = \
     -Isrc/SensorNode/Sensor/SensingUnit \
     -Isrc/SensorNode/Sensor/SignalConditioner \
     -Isrc/SensorNode/Sensor/SignalConverter \
-    -Isrc/SensorNode/Sensor/Transducer
+    -Isrc/SensorNode/Sensor/Transducer \
+    -Isrc/StatisticsInterface \
+    -Isrc/WorldModel \
+    -Isrc/WorldModel/data
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -49,10 +66,14 @@ OBJS = \
     $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o \
     $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o \
     $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o \
-    $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o
+    $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o \
+    $O/src/StatisticsInterface/StatisticsInterface.o \
+    $O/src/WorldModel/CustomWorldUtility.o \
+    $O/src/ExtendedMessage/ExtendedMessage_m.o
 
 # Message files
-MSGFILES =
+MSGFILES = \
+    src/ExtendedMessage/ExtendedMessage.msg
 
 # Other makefile variables (-K)
 MIXIM_PROJ=/home/rutho/BA/mixim-2.3
@@ -131,6 +152,7 @@ clean:
 	$(Q)-rm -f ./*_m.cc ./*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
 	$(Q)-rm -f src/*_m.cc src/*_m.h
+	$(Q)-rm -f src/ExtendedMessage/*_m.cc src/ExtendedMessage/*_m.h
 	$(Q)-rm -f src/SensorNode/*_m.cc src/SensorNode/*_m.h
 	$(Q)-rm -f src/SensorNode/Battery/*_m.cc src/SensorNode/Battery/*_m.h
 	$(Q)-rm -f src/SensorNode/Memory/*_m.cc src/SensorNode/Memory/*_m.h
@@ -141,15 +163,20 @@ clean:
 	$(Q)-rm -f src/SensorNode/Sensor/SignalConditioner/*_m.cc src/SensorNode/Sensor/SignalConditioner/*_m.h
 	$(Q)-rm -f src/SensorNode/Sensor/SignalConverter/*_m.cc src/SensorNode/Sensor/SignalConverter/*_m.h
 	$(Q)-rm -f src/SensorNode/Sensor/Transducer/*_m.cc src/SensorNode/Sensor/Transducer/*_m.h
+	$(Q)-rm -f src/StatisticsInterface/*_m.cc src/StatisticsInterface/*_m.h
+	$(Q)-rm -f src/WorldModel/*_m.cc src/WorldModel/*_m.h
+	$(Q)-rm -f src/WorldModel/data/*_m.cc src/WorldModel/data/*_m.h
 
 cleanall: clean
 	$(Q)-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc src/SensorNode/*.cc src/SensorNode/Battery/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/RadioModule/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNode/*.cc src/SensorNode/Battery/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/RadioModule/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc src/WorldModel/data/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/src/ExtendedMessage/ExtendedMessage_m.o: src/ExtendedMessage/ExtendedMessage_m.cc \
+	src/ExtendedMessage/ExtendedMessage_m.h
 $O/src/SensorNode/AbstractSensorNode.o: src/SensorNode/AbstractSensorNode.cc \
 	src/SensorNode/AbstractSensorNode.h
 $O/src/SensorNode/Memory/AbstractMemory.o: src/SensorNode/Memory/AbstractMemory.cc \
@@ -157,11 +184,34 @@ $O/src/SensorNode/Memory/AbstractMemory.o: src/SensorNode/Memory/AbstractMemory.
 $O/src/SensorNode/Processor/AbstractProcessor.o: src/SensorNode/Processor/AbstractProcessor.cc \
 	src/SensorNode/Processor/AbstractProcessor.h
 $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.cc \
-	src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.h
+	$(MIXIM_PROJ)/src/base/modules/BaseWorldUtility.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	src/ExtendedMessage/ExtendedMessage_m.h \
+	src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.h \
+	src/StatisticsInterface/StatisticsInterface.h \
+	src/WorldModel/CustomWorldUtility.h
 $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o: src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.cc \
 	src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.h
 $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o: src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.cc \
 	src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.h
 $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o: src/SensorNode/Sensor/Transducer/AbstractTransducer.cc \
 	src/SensorNode/Sensor/Transducer/AbstractTransducer.h
+$O/src/StatisticsInterface/StatisticsInterface.o: src/StatisticsInterface/StatisticsInterface.cc \
+	src/ExtendedMessage/ExtendedMessage_m.h \
+	src/StatisticsInterface/StatisticsInterface.h
+$O/src/WorldModel/CustomWorldUtility.o: src/WorldModel/CustomWorldUtility.cc \
+	$(MIXIM_PROJ)/src/base/modules/BaseWorldUtility.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	src/ExtendedMessage/ExtendedMessage_m.h \
+	src/StatisticsInterface/StatisticsInterface.h \
+	src/WorldModel/CustomWorldUtility.h
 

@@ -32,8 +32,10 @@ module AbstractSensor like SensorInterface
 
         @display("i=block/join");
     gates:
-        output fromTransducerToNodeProcessor;
-        input toTransducerFromNodeProcessor;
+        //both gates get connected dynamically inside AbstractSensorNode, but after the 
+        //check for unconnected gates, so it is declared loose but never will be unconnected
+        output fromTransducerToNodeProcessor @loose;
+        input toTransducerFromNodeProcessor @loose;
 
     submodules:
         SensingUnit: <"SensingUnit"+type> like SensingUnitInterface {

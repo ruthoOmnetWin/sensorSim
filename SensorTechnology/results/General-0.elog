@@ -1,25 +1,209 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20150415-14:01:42-13837 b 1000
+SB v 1029 rid General-0-20150415-18:20:10-28735 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t sensortechnology.SensorTechnology n SensorTechnology cm 1
 MS id 1 d ""
 MC id 2 c AbstractSensorNode t sensortechnology.src.SensorNode.AbstractSensorNode pid 1 n AbstractSensorNode cm 1
-MS id 2 d bgb=245,450
-MC id 3 c AbstractMemory t sensortechnology.src.SensorNode.Memory.AbstractMemory pid 2 n Memory
-MS id 3 d p=200,51;i=block/buffer2
+MS id 2 d bgb=245,450;i=block/ifcard
+MC id 3 c cModule t sensortechnology.src.SensorNode.Sensor.TemperatureSensor pid 2 n TemperatureSensor cm 1
+GC m 3 g 1 n fromTransducerToNodeProcessor o 1
+GC m 3 g 2 n toTransducerFromNodeProcessor o 0
+MS id 3 d p=75,51;bgb=200,300;i=block/join
+MC id 4 c cModule t sensortechnology.src.SensorNode.Sensor.HumiditySensor pid 2 n HumiditySensor cm 1
+GC m 4 g 1 n fromTransducerToNodeProcessor o 1
+GC m 4 g 2 n toTransducerFromNodeProcessor o 0
+MS id 4 d p=75,120;i=block/join
+MC id 5 c cModule t sensortechnology.src.SensorNode.Sensor.PressureSensor pid 2 n PressureSensor cm 1
+GC m 5 g 1 n fromTransducerToNodeProcessor o 1
+GC m 5 g 2 n toTransducerFromNodeProcessor o 0
+MS id 5 d p=75,190;i=block/join
+MC id 6 c cModule t sensortechnology.src.SensorNode.Sensor.LightSensor pid 2 n LightSensor cm 1
+GC m 6 g 1 n fromTransducerToNodeProcessor o 1
+GC m 6 g 2 n toTransducerFromNodeProcessor o 0
+MS id 6 d p=75,260;i=block/join
+MC id 7 c AbstractMemory t sensortechnology.src.SensorNode.Memory.AbstractMemory pid 2 n Memory
+MS id 7 d p=200,51;i=block/buffer2
+MC id 8 c AbstractSensingUnit t sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitTemperature pid 3 n SensingUnit
+GC m 8 g 1 n toSignalConditioner o 1
+MS id 8 d p=100,50;i=block/filter
+MC id 9 c AbstractSignalConditioner t sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerTemperature pid 3 n SignalConditioner
+GC m 9 g 0 n fromSensingUnit o 0
+GC m 9 g 3 n toSignalConverter o 1
+MS id 9 d p=100,120;i=block/opticaldelay
+MC id 10 c AbstractSignalConverter t sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterTemperature pid 3 n SignalConverter
+GC m 10 g 0 n fromSignalConditioner o 0
+GC m 10 g 3 n toTransducer o 1
+MS id 10 d p=100,190;i=block/mac
+MC id 11 c AbstractTransducer t sensortechnology.src.SensorNode.Sensor.Transducer.TransducerTemperature pid 3 n Transducer
+GC m 11 g 0 n fromSignalConverter o 0
+GC m 11 g 3 n toNodeProcessor o 1
+GC m 11 g 4 n fromNodeProcessor o 0
+MS id 11 d p=100,260;i=old/xconn
+CC sm 8 sg 1 dm 9 dg 0
+CS sm 8 sg 1 d ""
+CC sm 9 sg 3 dm 10 dg 0
+CS sm 9 sg 3 d ""
+CC sm 10 sg 3 dm 11 dg 0
+CS sm 10 sg 3 d ""
+CC sm 11 sg 3 dm 3 dg 1
+CS sm 11 sg 3 d ""
+CC sm 3 sg 2 dm 11 dg 4
+CS sm 3 sg 2 d ""
+MC id 12 c AbstractSensingUnit t sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitHumidity pid 4 n SensingUnit
+GC m 12 g 1 n toSignalConditioner o 1
+MS id 12 d p=100,50;i=block/filter
+MC id 13 c AbstractSignalConditioner t sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerHumidity pid 4 n SignalConditioner
+GC m 13 g 0 n fromSensingUnit o 0
+GC m 13 g 3 n toSignalConverter o 1
+MS id 13 d p=100,120;i=block/opticaldelay
+MC id 14 c AbstractSignalConverter t sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterHumidity pid 4 n SignalConverter
+GC m 14 g 0 n fromSignalConditioner o 0
+GC m 14 g 3 n toTransducer o 1
+MS id 14 d p=100,190;i=block/mac
+MC id 15 c AbstractTransducer t sensortechnology.src.SensorNode.Sensor.Transducer.TransducerHumidity pid 4 n Transducer
+GC m 15 g 0 n fromSignalConverter o 0
+GC m 15 g 3 n toNodeProcessor o 1
+GC m 15 g 4 n fromNodeProcessor o 0
+MS id 15 d p=100,260;i=old/xconn
+CC sm 12 sg 1 dm 13 dg 0
+CS sm 12 sg 1 d ""
+CC sm 13 sg 3 dm 14 dg 0
+CS sm 13 sg 3 d ""
+CC sm 14 sg 3 dm 15 dg 0
+CS sm 14 sg 3 d ""
+CC sm 15 sg 3 dm 4 dg 1
+CS sm 15 sg 3 d ""
+CC sm 4 sg 2 dm 15 dg 4
+CS sm 4 sg 2 d ""
+MC id 16 c AbstractSensingUnit t sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitPressure pid 5 n SensingUnit
+GC m 16 g 1 n toSignalConditioner o 1
+MS id 16 d p=100,50;i=block/filter
+MC id 17 c AbstractSignalConditioner t sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerPressure pid 5 n SignalConditioner
+GC m 17 g 0 n fromSensingUnit o 0
+GC m 17 g 3 n toSignalConverter o 1
+MS id 17 d p=100,120;i=block/opticaldelay
+MC id 18 c AbstractSignalConverter t sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterPressure pid 5 n SignalConverter
+GC m 18 g 0 n fromSignalConditioner o 0
+GC m 18 g 3 n toTransducer o 1
+MS id 18 d p=100,190;i=block/mac
+MC id 19 c AbstractTransducer t sensortechnology.src.SensorNode.Sensor.Transducer.TransducerPressure pid 5 n Transducer
+GC m 19 g 0 n fromSignalConverter o 0
+GC m 19 g 3 n toNodeProcessor o 1
+GC m 19 g 4 n fromNodeProcessor o 0
+MS id 19 d p=100,260;i=old/xconn
+CC sm 16 sg 1 dm 17 dg 0
+CS sm 16 sg 1 d ""
+CC sm 17 sg 3 dm 18 dg 0
+CS sm 17 sg 3 d ""
+CC sm 18 sg 3 dm 19 dg 0
+CS sm 18 sg 3 d ""
+CC sm 19 sg 3 dm 5 dg 1
+CS sm 19 sg 3 d ""
+CC sm 5 sg 2 dm 19 dg 4
+CS sm 5 sg 2 d ""
+MC id 20 c AbstractSensingUnit t sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitLight pid 6 n SensingUnit
+GC m 20 g 1 n toSignalConditioner o 1
+MS id 20 d p=100,50;i=block/filter
+MC id 21 c AbstractSignalConditioner t sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerLight pid 6 n SignalConditioner
+GC m 21 g 0 n fromSensingUnit o 0
+GC m 21 g 3 n toSignalConverter o 1
+MS id 21 d p=100,120;i=block/opticaldelay
+MC id 22 c AbstractSignalConverter t sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterLight pid 6 n SignalConverter
+GC m 22 g 0 n fromSignalConditioner o 0
+GC m 22 g 3 n toTransducer o 1
+MS id 22 d p=100,190;i=block/mac
+MC id 23 c AbstractTransducer t sensortechnology.src.SensorNode.Sensor.Transducer.TransducerLight pid 6 n Transducer
+GC m 23 g 0 n fromSignalConverter o 0
+GC m 23 g 3 n toNodeProcessor o 1
+GC m 23 g 4 n fromNodeProcessor o 0
+MS id 23 d p=100,260;i=old/xconn
+CC sm 20 sg 1 dm 21 dg 0
+CS sm 20 sg 1 d ""
+CC sm 21 sg 3 dm 22 dg 0
+CS sm 21 sg 3 d ""
+CC sm 22 sg 3 dm 23 dg 0
+CS sm 22 sg 3 d ""
+CC sm 23 sg 3 dm 6 dg 1
+CS sm 23 sg 3 d ""
+CC sm 6 sg 2 dm 23 dg 4
+CS sm 6 sg 2 d ""
 MB sm 1 tm 2 m initialize(0)
-- Counted 0 Sensor(s) on the Node.
-- hi
-MC id 4 c AbstractProcessor t sensortechnology.src.SensorNode.Processor.AbstractProcessor pid 2 n Processor
-MS id 4 d p=200,159
-GC m 3 g 0 n connectToProcessor$i o 0
-GC m 3 g 1 n connectToProcessor$o o 1
-GC m 4 g 0 n connectToMemory$i o 0
-GC m 4 g 1 n connectToMemory$o o 1
-CC sm 3 sg 1 dm 4 dg 0
-CC sm 4 sg 1 dm 3 dg 0
+- Counted 4 Sensor(s) on the Node.
+MC id 24 c AbstractProcessor t sensortechnology.src.SensorNode.Processor.AbstractProcessor pid 2 n Processor
+MS id 24 d p=200,159;i=device/cpu
+GC m 24 g 0 n fromTemperatureSensor o 0
+GC m 24 g 3 n toTemperatureSensor o 1
+CC sm 3 sg 1 dm 24 dg 0
+CC sm 24 sg 3 dm 3 dg 2
+- Created connections from Temperature-sensor to the processor.
+GC m 24 g 4 n fromHumiditySensor o 0
+GC m 24 g 7 n toHumiditySensor o 1
+CC sm 4 sg 1 dm 24 dg 4
+CC sm 24 sg 7 dm 4 dg 2
+- Created connections from Humidity-sensor to the processor.
+GC m 24 g 8 n fromPressureSensor o 0
+GC m 24 g 11 n toPressureSensor o 1
+CC sm 5 sg 1 dm 24 dg 8
+CC sm 24 sg 11 dm 5 dg 2
+- Created connections from Pressure-sensor to the processor.
+GC m 24 g 12 n fromLightSensor o 0
+GC m 24 g 15 n toLightSensor o 1
+CC sm 6 sg 1 dm 24 dg 12
+CC sm 24 sg 15 dm 6 dg 2
+- Created connections from Light-sensor to the processor.
+GC m 7 g 0 n connectToProcessor$i o 0
+GC m 7 g 1 n connectToProcessor$o o 1
+GC m 24 g 16 n connectToMemory$i o 0
+GC m 24 g 17 n connectToMemory$o o 1
+CC sm 7 sg 1 dm 24 dg 16
+CC sm 24 sg 17 dm 7 dg 0
 ME
 MB sm 1 tm 3 m initialize(0)
 ME
+MB sm 1 tm 8 m initialize(0)
+- CustomWorldUtility found
+ME
+MB sm 1 tm 9 m initialize(0)
+ME
+MB sm 1 tm 10 m initialize(0)
+ME
+MB sm 1 tm 11 m initialize(0)
+ME
 MB sm 1 tm 4 m initialize(0)
 ME
+MB sm 1 tm 12 m initialize(0)
+- CustomWorldUtility found
+ME
+MB sm 1 tm 13 m initialize(0)
+ME
+MB sm 1 tm 14 m initialize(0)
+ME
+MB sm 1 tm 15 m initialize(0)
+ME
+MB sm 1 tm 5 m initialize(0)
+ME
+MB sm 1 tm 16 m initialize(0)
+- CustomWorldUtility found
+ME
+MB sm 1 tm 17 m initialize(0)
+ME
+MB sm 1 tm 18 m initialize(0)
+ME
+MB sm 1 tm 19 m initialize(0)
+ME
+MB sm 1 tm 6 m initialize(0)
+ME
+MB sm 1 tm 20 m initialize(0)
+- CustomWorldUtility found
+ME
+MB sm 1 tm 21 m initialize(0)
+ME
+MB sm 1 tm 22 m initialize(0)
+ME
+MB sm 1 tm 23 m initialize(0)
+ME
+MB sm 1 tm 7 m initialize(0)
+ME
+MB sm 1 tm 24 m initialize(0)
+ME
+SE e 0 c 13 m "No more events -- simulation ended at event #1, t=0."

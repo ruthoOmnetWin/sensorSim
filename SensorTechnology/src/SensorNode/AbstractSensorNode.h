@@ -27,6 +27,7 @@ protected:
     void setNumGates();
     void createProcessor();
     void connectProcessorAndMemory();
+    void createProcessorsGatesAndConnect(cModule&, std::string);
 };
 
 Define_Module(AbstractSensorNode);
