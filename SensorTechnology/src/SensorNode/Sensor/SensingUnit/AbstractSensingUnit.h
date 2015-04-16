@@ -18,10 +18,10 @@
 
 #include <omnetpp.h>
 #include <Coord.h>
-#include "MiximBatteryAccess.h"
+#include "AbstractBatteryAccess.h"
 #include "CustomWorldUtility.h"
 
-class AbstractSensingUnit : public MiximBatteryAccess {
+class AbstractSensingUnit : public AbstractBatteryAccess {
 protected:
     Coord *Position;
     CustomWorldUtility *world;

@@ -27,6 +27,8 @@ simple AbstractSensingUnit like SensingUnitInterface
         bool isActiveSensingUnit;
         int standByPowerConsumtion;
         int measurementPowerConsumption;
+        double currentConsumption;
+    	double energyConsumption;
        
 	gates:
 	    output toSignalConditioner;

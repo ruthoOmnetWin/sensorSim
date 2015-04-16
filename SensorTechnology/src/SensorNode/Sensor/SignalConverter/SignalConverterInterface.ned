@@ -22,6 +22,8 @@ moduleinterface SignalConverterInterface
 {
     parameters:
     	@display("i=block/mac");
+    	double currentConsumption;
+    	double energyConsumption;
     gates:
         input fromSignalConditioner;
         output toTransducer;

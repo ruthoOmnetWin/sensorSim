@@ -13,32 +13,29 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#include <AbstractSensingUnit.h>
-#include <CustomWorldUtility.h>
-#include <FindModule.h>
+#include <AbstractBatteryAccess.h>
 
-AbstractSensingUnit::AbstractSensingUnit() {
+AbstractBatteryAccess::AbstractBatteryAccess() {
     // TODO Auto-generated constructor stub
 
 }
 
-AbstractSensingUnit::~AbstractSensingUnit() {
+AbstractBatteryAccess::~AbstractBatteryAccess() {
     // TODO Auto-generated destructor stub
 }
 
-void AbstractSensingUnit::initialize(int stage) {
-    AbstractBatteryAccess::initialize(stage);
+void AbstractBatteryAccess::initialize(int stage) {
+    MiximBatteryAccess::initialize(stage);
     if (stage == 0) {
-        CustomWorldUtility *World = FindModule<CustomWorldUtility*>::findGlobalModule();
-        //save world and provide data inside world
-        this->world = World;
-        EV << "CustomWorldUtility found" << endl;
-    } else if (stage == 1) {
-
+        registerWithBattery("Transducer", 1);
+        EV << "Registered with Battery" << endl;
+        currentOverTime = par("currentConsumption").doubleValue();
+        energiePerOperation = par("energyConsumption").doubleValue();
+        drawCurrent(currentOverTime, 0);
+        //HostState::States state = battery->getState();
     }
 }
 
-float AbstractSensingUnit::readData() {
-    Coord *position = new Coord;
-    return world->getValueByPosition("Temperature", position);
+void AbstractBatteryAccess::draw() {
+    drawEnergy(energiePerOperation, 0);
 }

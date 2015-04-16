@@ -1,5 +1,5 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20150416-16:58:15-4843 b 1000
+SB v 1029 rid General-0-20150416-19:28:28-10567 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t sensortechnology.SensorTechnologyHost802154 n SensorTechnologyHost802154 cm 1
 MS id 1 d bgi=maps/germany,bgb,$playgroundSizeX,$playgroundSizeY,white;bgp=0,0;bgb=403,503
@@ -189,17 +189,25 @@ ME
 MB sm 1 tm 13 m initialize(0)
 ME
 MB sm 1 tm 17 m initialize(0)
+- Registered with Battery
+MB sm 17 tm 12 m ""
+ME
 - CustomWorldUtility found
 ME
 MB sm 1 tm 18 m initialize(0)
+- Registered with Battery
+MB sm 18 tm 12 m ""
+ME
 ME
 MB sm 1 tm 19 m initialize(0)
+- Registered with Battery
+MB sm 19 tm 12 m ""
+ME
 ME
 MB sm 1 tm 20 m initialize(0)
 - Registered with Battery
 MB sm 20 tm 12 m ""
 ME
-- Draw 100mWs from Battery
 ME
 MB sm 1 tm 14 m initialize(0)
 ME
@@ -252,9 +260,13 @@ MB sm 12 tm 10 m ""
 ME
 MB sm 12 tm 11 m ""
 ME
+MB sm 12 tm 17 m ""
+ME
 MB sm 12 tm 18 m ""
 ME
 MB sm 12 tm 19 m ""
+ME
+MB sm 12 tm 20 m ""
 ME
 MB sm 12 tm 14 m ""
 ME
@@ -1416,6 +1428,7 @@ ES t 7200
 E # 264 t 7200 m 12 ce 262 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 264
 ES t 7260
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 265 t 7200 m 12 ce 263 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 265
@@ -1424,6 +1437,7 @@ ES t 7260
 E # 266 t 7260 m 12 ce 264 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 266
 ES t 7320
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 267 t 7260 m 12 ce 265 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 267
@@ -1432,6 +1446,7 @@ ES t 7320
 E # 268 t 7320 m 12 ce 266 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 268
 ES t 7380
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 269 t 7320 m 12 ce 267 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 269
@@ -1440,6 +1455,7 @@ ES t 7380
 E # 270 t 7380 m 12 ce 268 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 270
 ES t 7440
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 271 t 7380 m 12 ce 269 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 271
@@ -1448,6 +1464,7 @@ ES t 7440
 E # 272 t 7440 m 12 ce 270 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 272
 ES t 7500
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 273 t 7440 m 12 ce 271 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 273
@@ -1456,6 +1473,7 @@ ES t 7500
 E # 274 t 7500 m 12 ce 272 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 274
 ES t 7560
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 275 t 7500 m 12 ce 273 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 275
@@ -1464,6 +1482,7 @@ ES t 7560
 E # 276 t 7560 m 12 ce 274 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 276
 ES t 7620
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 277 t 7560 m 12 ce 275 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 277
@@ -1472,6 +1491,7 @@ ES t 7620
 E # 278 t 7620 m 12 ce 276 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 278
 ES t 7680
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 279 t 7620 m 12 ce 277 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 279
@@ -1480,6 +1500,7 @@ ES t 7680
 E # 280 t 7680 m 12 ce 278 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 280
 ES t 7740
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 281 t 7680 m 12 ce 279 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 281
@@ -1488,6 +1509,7 @@ ES t 7740
 E # 282 t 7740 m 12 ce 280 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 282
 ES t 7800
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 283 t 7740 m 12 ce 281 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 283
@@ -1496,6 +1518,7 @@ ES t 7800
 E # 284 t 7800 m 12 ce 282 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 284
 ES t 7860
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 285 t 7800 m 12 ce 283 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 285
@@ -1504,6 +1527,7 @@ ES t 7860
 E # 286 t 7860 m 12 ce 284 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 286
 ES t 7920
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 287 t 7860 m 12 ce 285 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 287
@@ -1512,6 +1536,7 @@ ES t 7920
 E # 288 t 7920 m 12 ce 286 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 288
 ES t 7980
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 289 t 7920 m 12 ce 287 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 289
@@ -1520,6 +1545,7 @@ ES t 7980
 E # 290 t 7980 m 12 ce 288 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 290
 ES t 8040
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 291 t 7980 m 12 ce 289 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 291
@@ -1528,6 +1554,7 @@ ES t 8040
 E # 292 t 8040 m 12 ce 290 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 292
 ES t 8100
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 293 t 8040 m 12 ce 291 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 293
@@ -1536,6 +1563,7 @@ ES t 8100
 E # 294 t 8100 m 12 ce 292 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 294
 ES t 8160
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 295 t 8100 m 12 ce 293 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 295
@@ -1544,6 +1572,7 @@ ES t 8160
 E # 296 t 8160 m 12 ce 294 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 296
 ES t 8220
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 297 t 8160 m 12 ce 295 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 297
@@ -1552,6 +1581,7 @@ ES t 8220
 E # 298 t 8220 m 12 ce 296 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 298
 ES t 8280
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 299 t 8220 m 12 ce 297 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 299
@@ -1560,6 +1590,7 @@ ES t 8280
 E # 300 t 8280 m 12 ce 298 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 300
 ES t 8340
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 301 t 8280 m 12 ce 299 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 301
@@ -1568,6 +1599,7 @@ ES t 8340
 E # 302 t 8340 m 12 ce 300 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 302
 ES t 8400
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 303 t 8340 m 12 ce 301 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 303
@@ -1576,6 +1608,7 @@ ES t 8400
 E # 304 t 8400 m 12 ce 302 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 304
 ES t 8460
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 305 t 8400 m 12 ce 303 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 305
@@ -1584,6 +1617,7 @@ ES t 8460
 E # 306 t 8460 m 12 ce 304 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 306
 ES t 8520
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 307 t 8460 m 12 ce 305 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 307
@@ -1592,6 +1626,7 @@ ES t 8520
 E # 308 t 8520 m 12 ce 306 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 308
 ES t 8580
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 309 t 8520 m 12 ce 307 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 309
@@ -1600,6 +1635,7 @@ ES t 8580
 E # 310 t 8580 m 12 ce 308 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 310
 ES t 8640
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 311 t 8580 m 12 ce 309 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 311
@@ -1608,6 +1644,7 @@ ES t 8640
 E # 312 t 8640 m 12 ce 310 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 312
 ES t 8700
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 313 t 8640 m 12 ce 311 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 313
@@ -1616,6 +1653,7 @@ ES t 8700
 E # 314 t 8700 m 12 ce 312 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 314
 ES t 8760
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 315 t 8700 m 12 ce 313 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 315
@@ -1624,6 +1662,7 @@ ES t 8760
 E # 316 t 8760 m 12 ce 314 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 316
 ES t 8820
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 317 t 8760 m 12 ce 315 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 317
@@ -1632,6 +1671,7 @@ ES t 8820
 E # 318 t 8820 m 12 ce 316 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 318
 ES t 8880
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 319 t 8820 m 12 ce 317 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 319
@@ -1640,6 +1680,7 @@ ES t 8880
 E # 320 t 8880 m 12 ce 318 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 320
 ES t 8940
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 321 t 8880 m 12 ce 319 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 321
@@ -1648,6 +1689,7 @@ ES t 8940
 E # 322 t 8940 m 12 ce 320 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 322
 ES t 9000
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 323 t 8940 m 12 ce 321 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 323
@@ -1656,6 +1698,7 @@ ES t 9000
 E # 324 t 9000 m 12 ce 322 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 324
 ES t 9060
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 325 t 9000 m 12 ce 323 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 325
@@ -1664,6 +1707,7 @@ ES t 9060
 E # 326 t 9060 m 12 ce 324 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 326
 ES t 9120
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 327 t 9060 m 12 ce 325 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 327
@@ -1672,6 +1716,7 @@ ES t 9120
 E # 328 t 9120 m 12 ce 326 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 328
 ES t 9180
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 329 t 9120 m 12 ce 327 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 329
@@ -1680,6 +1725,7 @@ ES t 9180
 E # 330 t 9180 m 12 ce 328 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 330
 ES t 9240
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 331 t 9180 m 12 ce 329 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 331
@@ -1688,6 +1734,7 @@ ES t 9240
 E # 332 t 9240 m 12 ce 330 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 332
 ES t 9300
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 333 t 9240 m 12 ce 331 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 333
@@ -1696,6 +1743,7 @@ ES t 9300
 E # 334 t 9300 m 12 ce 332 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 334
 ES t 9360
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 335 t 9300 m 12 ce 333 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 335
@@ -1704,6 +1752,7 @@ ES t 9360
 E # 336 t 9360 m 12 ce 334 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 336
 ES t 9420
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 337 t 9360 m 12 ce 335 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 337
@@ -1712,6 +1761,7 @@ ES t 9420
 E # 338 t 9420 m 12 ce 336 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 338
 ES t 9480
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 339 t 9420 m 12 ce 337 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 339
@@ -1720,6 +1770,7 @@ ES t 9480
 E # 340 t 9480 m 12 ce 338 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 340
 ES t 9540
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 341 t 9480 m 12 ce 339 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 341
@@ -1728,6 +1779,7 @@ ES t 9540
 E # 342 t 9540 m 12 ce 340 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 342
 ES t 9600
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 343 t 9540 m 12 ce 341 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 343
@@ -1736,6 +1788,7 @@ ES t 9600
 E # 344 t 9600 m 12 ce 342 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 344
 ES t 9660
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 345 t 9600 m 12 ce 343 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 345
@@ -1744,6 +1797,7 @@ ES t 9660
 E # 346 t 9660 m 12 ce 344 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 346
 ES t 9720
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 347 t 9660 m 12 ce 345 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 347
@@ -1752,6 +1806,7 @@ ES t 9720
 E # 348 t 9720 m 12 ce 346 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 348
 ES t 9780
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 349 t 9720 m 12 ce 347 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 349
@@ -1760,6 +1815,7 @@ ES t 9780
 E # 350 t 9780 m 12 ce 348 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 350
 ES t 9840
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 351 t 9780 m 12 ce 349 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 351
@@ -1768,6 +1824,7 @@ ES t 9840
 E # 352 t 9840 m 12 ce 350 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 352
 ES t 9900
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 353 t 9840 m 12 ce 351 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 353
@@ -1776,6 +1833,7 @@ ES t 9900
 E # 354 t 9900 m 12 ce 352 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 354
 ES t 9960
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 355 t 9900 m 12 ce 353 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 355
@@ -1784,6 +1842,7 @@ ES t 9960
 E # 356 t 9960 m 12 ce 354 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 356
 ES t 10020
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 357 t 9960 m 12 ce 355 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 357
@@ -1792,6 +1851,7 @@ ES t 10020
 E # 358 t 10020 m 12 ce 356 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 358
 ES t 10080
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 359 t 10020 m 12 ce 357 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 359
@@ -1800,6 +1860,7 @@ ES t 10080
 E # 360 t 10080 m 12 ce 358 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 360
 ES t 10140
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 361 t 10080 m 12 ce 359 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 361
@@ -1808,6 +1869,7 @@ ES t 10140
 E # 362 t 10140 m 12 ce 360 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 362
 ES t 10200
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 363 t 10140 m 12 ce 361 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 363
@@ -1816,6 +1878,7 @@ ES t 10200
 E # 364 t 10200 m 12 ce 362 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 364
 ES t 10260
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 365 t 10200 m 12 ce 363 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 365
@@ -1824,6 +1887,7 @@ ES t 10260
 E # 366 t 10260 m 12 ce 364 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 366
 ES t 10320
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 367 t 10260 m 12 ce 365 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 367
@@ -1832,6 +1896,7 @@ ES t 10320
 E # 368 t 10320 m 12 ce 366 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 368
 ES t 10380
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 369 t 10320 m 12 ce 367 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 369
@@ -1840,6 +1905,7 @@ ES t 10380
 E # 370 t 10380 m 12 ce 368 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 370
 ES t 10440
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 371 t 10380 m 12 ce 369 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 371
@@ -1848,6 +1914,7 @@ ES t 10440
 E # 372 t 10440 m 12 ce 370 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 372
 ES t 10500
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 373 t 10440 m 12 ce 371 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 373
@@ -1856,6 +1923,7 @@ ES t 10500
 E # 374 t 10500 m 12 ce 372 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 374
 ES t 10560
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 375 t 10500 m 12 ce 373 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 375
@@ -1864,6 +1932,7 @@ ES t 10560
 E # 376 t 10560 m 12 ce 374 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 376
 ES t 10620
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 377 t 10560 m 12 ce 375 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 377
@@ -1872,6 +1941,7 @@ ES t 10620
 E # 378 t 10620 m 12 ce 376 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 378
 ES t 10680
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 379 t 10620 m 12 ce 377 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 379
@@ -1880,6 +1950,7 @@ ES t 10680
 E # 380 t 10680 m 12 ce 378 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 380
 ES t 10740
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 381 t 10680 m 12 ce 379 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 381
@@ -1888,6 +1959,7 @@ ES t 10740
 E # 382 t 10740 m 12 ce 380 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 382
 ES t 10800
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 383 t 10740 m 12 ce 381 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 383
@@ -1896,6 +1968,7 @@ ES t 10800
 E # 384 t 10800 m 12 ce 382 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 384
 ES t 10860
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 385 t 10800 m 12 ce 383 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 385
@@ -1904,6 +1977,7 @@ ES t 10860
 E # 386 t 10860 m 12 ce 384 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 386
 ES t 10920
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 387 t 10860 m 12 ce 385 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 387
@@ -1912,6 +1986,7 @@ ES t 10920
 E # 388 t 10920 m 12 ce 386 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 388
 ES t 10980
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 389 t 10920 m 12 ce 387 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 389
@@ -1920,6 +1995,7 @@ ES t 10980
 E # 390 t 10980 m 12 ce 388 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 390
 ES t 11040
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 391 t 10980 m 12 ce 389 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 391
@@ -1928,6 +2004,7 @@ ES t 11040
 E # 392 t 11040 m 12 ce 390 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 392
 ES t 11100
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 393 t 11040 m 12 ce 391 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 393
@@ -1936,6 +2013,7 @@ ES t 11100
 E # 394 t 11100 m 12 ce 392 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 394
 ES t 11160
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 395 t 11100 m 12 ce 393 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 395
@@ -1944,6 +2022,7 @@ ES t 11160
 E # 396 t 11160 m 12 ce 394 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 396
 ES t 11220
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 397 t 11160 m 12 ce 395 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 397
@@ -1952,6 +2031,7 @@ ES t 11220
 E # 398 t 11220 m 12 ce 396 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 398
 ES t 11280
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 399 t 11220 m 12 ce 397 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 399
@@ -1960,6 +2040,7 @@ ES t 11280
 E # 400 t 11280 m 12 ce 398 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 400
 ES t 11340
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 401 t 11280 m 12 ce 399 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 401
@@ -1968,6 +2049,7 @@ ES t 11340
 E # 402 t 11340 m 12 ce 400 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 402
 ES t 11400
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 403 t 11340 m 12 ce 401 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 403
@@ -1976,6 +2058,7 @@ ES t 11400
 E # 404 t 11400 m 12 ce 402 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 404
 ES t 11460
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 405 t 11400 m 12 ce 403 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 405
@@ -1984,6 +2067,7 @@ ES t 11460
 E # 406 t 11460 m 12 ce 404 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 406
 ES t 11520
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 407 t 11460 m 12 ce 405 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 407
@@ -1992,6 +2076,7 @@ ES t 11520
 E # 408 t 11520 m 12 ce 406 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 408
 ES t 11580
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 409 t 11520 m 12 ce 407 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 409
@@ -2000,6 +2085,7 @@ ES t 11580
 E # 410 t 11580 m 12 ce 408 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 410
 ES t 11640
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 411 t 11580 m 12 ce 409 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 411
@@ -2008,6 +2094,7 @@ ES t 11640
 E # 412 t 11640 m 12 ce 410 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 412
 ES t 11700
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 413 t 11640 m 12 ce 411 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 413
@@ -2016,6 +2103,7 @@ ES t 11700
 E # 414 t 11700 m 12 ce 412 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 414
 ES t 11760
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 415 t 11700 m 12 ce 413 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 415
@@ -2024,6 +2112,7 @@ ES t 11760
 E # 416 t 11760 m 12 ce 414 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 416
 ES t 11820
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 417 t 11760 m 12 ce 415 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 417
@@ -2032,6 +2121,7 @@ ES t 11820
 E # 418 t 11820 m 12 ce 416 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 418
 ES t 11880
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 419 t 11820 m 12 ce 417 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 419
@@ -2040,6 +2130,7 @@ ES t 11880
 E # 420 t 11880 m 12 ce 418 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 420
 ES t 11940
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 421 t 11880 m 12 ce 419 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 421
@@ -2048,6 +2139,7 @@ ES t 11940
 E # 422 t 11940 m 12 ce 420 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 422
 ES t 12000
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 423 t 11940 m 12 ce 421 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 423
@@ -2056,6 +2148,7 @@ ES t 12000
 E # 424 t 12000 m 12 ce 422 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 424
 ES t 12060
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 425 t 12000 m 12 ce 423 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 425
@@ -2064,6 +2157,7 @@ ES t 12060
 E # 426 t 12060 m 12 ce 424 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 426
 ES t 12120
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 427 t 12060 m 12 ce 425 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 427
@@ -2072,6 +2166,7 @@ ES t 12120
 E # 428 t 12120 m 12 ce 426 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 428
 ES t 12180
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 429 t 12120 m 12 ce 427 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 429
@@ -2080,6 +2175,7 @@ ES t 12180
 E # 430 t 12180 m 12 ce 428 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 430
 ES t 12240
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 431 t 12180 m 12 ce 429 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 431
@@ -2088,6 +2184,7 @@ ES t 12240
 E # 432 t 12240 m 12 ce 430 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 432
 ES t 12300
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 433 t 12240 m 12 ce 431 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 433
@@ -2096,6 +2193,7 @@ ES t 12300
 E # 434 t 12300 m 12 ce 432 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 434
 ES t 12360
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 435 t 12300 m 12 ce 433 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 435
@@ -2104,6 +2202,7 @@ ES t 12360
 E # 436 t 12360 m 12 ce 434 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 436
 ES t 12420
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 437 t 12360 m 12 ce 435 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 437
@@ -2112,6 +2211,7 @@ ES t 12420
 E # 438 t 12420 m 12 ce 436 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 438
 ES t 12480
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 439 t 12420 m 12 ce 437 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 439
@@ -2120,6 +2220,7 @@ ES t 12480
 E # 440 t 12480 m 12 ce 438 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 440
 ES t 12540
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 441 t 12480 m 12 ce 439 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 441
@@ -2128,6 +2229,7 @@ ES t 12540
 E # 442 t 12540 m 12 ce 440 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 442
 ES t 12600
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 443 t 12540 m 12 ce 441 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 443
@@ -2136,6 +2238,7 @@ ES t 12600
 E # 444 t 12600 m 12 ce 442 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 444
 ES t 12660
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 445 t 12600 m 12 ce 443 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 445
@@ -2144,6 +2247,7 @@ ES t 12660
 E # 446 t 12660 m 12 ce 444 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 446
 ES t 12720
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 447 t 12660 m 12 ce 445 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 447
@@ -2152,6 +2256,7 @@ ES t 12720
 E # 448 t 12720 m 12 ce 446 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 448
 ES t 12780
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 449 t 12720 m 12 ce 447 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 449
@@ -2160,6 +2265,7 @@ ES t 12780
 E # 450 t 12780 m 12 ce 448 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 450
 ES t 12840
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 451 t 12780 m 12 ce 449 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 451
@@ -2168,6 +2274,7 @@ ES t 12840
 E # 452 t 12840 m 12 ce 450 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 452
 ES t 12900
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 453 t 12840 m 12 ce 451 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 453
@@ -2176,6 +2283,7 @@ ES t 12900
 E # 454 t 12900 m 12 ce 452 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 454
 ES t 12960
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 455 t 12900 m 12 ce 453 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 455
@@ -2184,6 +2292,7 @@ ES t 12960
 E # 456 t 12960 m 12 ce 454 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 456
 ES t 13020
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 457 t 12960 m 12 ce 455 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 457
@@ -2192,6 +2301,7 @@ ES t 13020
 E # 458 t 13020 m 12 ce 456 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 458
 ES t 13080
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 459 t 13020 m 12 ce 457 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 459
@@ -2200,6 +2310,7 @@ ES t 13080
 E # 460 t 13080 m 12 ce 458 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 460
 ES t 13140
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 461 t 13080 m 12 ce 459 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 461
@@ -2208,6 +2319,7 @@ ES t 13140
 E # 462 t 13140 m 12 ce 460 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 462
 ES t 13200
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 463 t 13140 m 12 ce 461 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 463
@@ -2216,6 +2328,7 @@ ES t 13200
 E # 464 t 13200 m 12 ce 462 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 464
 ES t 13260
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 465 t 13200 m 12 ce 463 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 465
@@ -2224,6 +2337,7 @@ ES t 13260
 E # 466 t 13260 m 12 ce 464 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 466
 ES t 13320
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 467 t 13260 m 12 ce 465 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 467
@@ -2232,6 +2346,7 @@ ES t 13320
 E # 468 t 13320 m 12 ce 466 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 468
 ES t 13380
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 469 t 13320 m 12 ce 467 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 469
@@ -2240,6 +2355,7 @@ ES t 13380
 E # 470 t 13380 m 12 ce 468 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 470
 ES t 13440
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 471 t 13380 m 12 ce 469 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 471
@@ -2248,6 +2364,7 @@ ES t 13440
 E # 472 t 13440 m 12 ce 470 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 472
 ES t 13500
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 473 t 13440 m 12 ce 471 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 473
@@ -2256,6 +2373,7 @@ ES t 13500
 E # 474 t 13500 m 12 ce 472 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 474
 ES t 13560
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 475 t 13500 m 12 ce 473 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 475
@@ -2264,6 +2382,7 @@ ES t 13560
 E # 476 t 13560 m 12 ce 474 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 476
 ES t 13620
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 477 t 13560 m 12 ce 475 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 477
@@ -2272,6 +2391,7 @@ ES t 13620
 E # 478 t 13620 m 12 ce 476 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 478
 ES t 13680
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 479 t 13620 m 12 ce 477 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 479
@@ -2280,6 +2400,7 @@ ES t 13680
 E # 480 t 13680 m 12 ce 478 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 480
 ES t 13740
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 481 t 13680 m 12 ce 479 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 481
@@ -2288,6 +2409,7 @@ ES t 13740
 E # 482 t 13740 m 12 ce 480 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 482
 ES t 13800
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 483 t 13740 m 12 ce 481 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 483
@@ -2296,6 +2418,7 @@ ES t 13800
 E # 484 t 13800 m 12 ce 482 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 484
 ES t 13860
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 485 t 13800 m 12 ce 483 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 485
@@ -2304,6 +2427,7 @@ ES t 13860
 E # 486 t 13860 m 12 ce 484 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 486
 ES t 13920
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 487 t 13860 m 12 ce 485 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 487
@@ -2312,6 +2436,7 @@ ES t 13920
 E # 488 t 13920 m 12 ce 486 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 488
 ES t 13980
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 489 t 13920 m 12 ce 487 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 489
@@ -2320,6 +2445,7 @@ ES t 13980
 E # 490 t 13980 m 12 ce 488 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 490
 ES t 14040
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 491 t 13980 m 12 ce 489 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 491
@@ -2328,6 +2454,7 @@ ES t 14040
 E # 492 t 14040 m 12 ce 490 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 492
 ES t 14100
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 493 t 14040 m 12 ce 491 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 493
@@ -2336,6 +2463,7 @@ ES t 14100
 E # 494 t 14100 m 12 ce 492 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 494
 ES t 14160
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 495 t 14100 m 12 ce 493 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 495
@@ -2344,6 +2472,7 @@ ES t 14160
 E # 496 t 14160 m 12 ce 494 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 496
 ES t 14220
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 497 t 14160 m 12 ce 495 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 497
@@ -2352,6 +2481,7 @@ ES t 14220
 E # 498 t 14220 m 12 ce 496 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 498
 ES t 14280
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 499 t 14220 m 12 ce 497 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 499
@@ -2360,6 +2490,7 @@ ES t 14280
 E # 500 t 14280 m 12 ce 498 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 500
 ES t 14340
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 501 t 14280 m 12 ce 499 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 501
@@ -2368,6 +2499,7 @@ ES t 14340
 E # 502 t 14340 m 12 ce 500 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 502
 ES t 14400
+MS id 2 d p=300,51;i2=status/battery_80;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 503 t 14340 m 12 ce 501 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 503
@@ -2376,6 +2508,7 @@ ES t 14400
 E # 504 t 14400 m 12 ce 502 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 504
 ES t 14460
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 505 t 14400 m 12 ce 503 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 505
@@ -2384,6 +2517,7 @@ ES t 14460
 E # 506 t 14460 m 12 ce 504 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 506
 ES t 14520
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 507 t 14460 m 12 ce 505 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 507
@@ -2392,6 +2526,7 @@ ES t 14520
 E # 508 t 14520 m 12 ce 506 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 508
 ES t 14580
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 509 t 14520 m 12 ce 507 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 509
@@ -2400,6 +2535,7 @@ ES t 14580
 E # 510 t 14580 m 12 ce 508 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 510
 ES t 14640
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 511 t 14580 m 12 ce 509 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 511
@@ -2408,6 +2544,7 @@ ES t 14640
 E # 512 t 14640 m 12 ce 510 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 512
 ES t 14700
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 513 t 14640 m 12 ce 511 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 513
@@ -2416,6 +2553,7 @@ ES t 14700
 E # 514 t 14700 m 12 ce 512 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 514
 ES t 14760
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 515 t 14700 m 12 ce 513 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 515
@@ -2424,6 +2562,7 @@ ES t 14760
 E # 516 t 14760 m 12 ce 514 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 516
 ES t 14820
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 517 t 14760 m 12 ce 515 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 517
@@ -2432,6 +2571,7 @@ ES t 14820
 E # 518 t 14820 m 12 ce 516 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 518
 ES t 14880
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 519 t 14820 m 12 ce 517 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 519
@@ -2440,6 +2580,7 @@ ES t 14880
 E # 520 t 14880 m 12 ce 518 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 520
 ES t 14940
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 521 t 14880 m 12 ce 519 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 521
@@ -2448,6 +2589,7 @@ ES t 14940
 E # 522 t 14940 m 12 ce 520 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 522
 ES t 15000
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 523 t 14940 m 12 ce 521 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 523
@@ -2456,6 +2598,7 @@ ES t 15000
 E # 524 t 15000 m 12 ce 522 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 524
 ES t 15060
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 525 t 15000 m 12 ce 523 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 525
@@ -2464,6 +2607,7 @@ ES t 15060
 E # 526 t 15060 m 12 ce 524 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 526
 ES t 15120
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 527 t 15060 m 12 ce 525 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 527
@@ -2472,6 +2616,7 @@ ES t 15120
 E # 528 t 15120 m 12 ce 526 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 528
 ES t 15180
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 529 t 15120 m 12 ce 527 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 529
@@ -2480,6 +2625,7 @@ ES t 15180
 E # 530 t 15180 m 12 ce 528 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 530
 ES t 15240
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 531 t 15180 m 12 ce 529 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 531
@@ -2488,6 +2634,7 @@ ES t 15240
 E # 532 t 15240 m 12 ce 530 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 532
 ES t 15300
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 533 t 15240 m 12 ce 531 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 533
@@ -2496,6 +2643,7 @@ ES t 15300
 E # 534 t 15300 m 12 ce 532 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 534
 ES t 15360
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 535 t 15300 m 12 ce 533 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 535
@@ -2504,6 +2652,7 @@ ES t 15360
 E # 536 t 15360 m 12 ce 534 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 536
 ES t 15420
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 537 t 15360 m 12 ce 535 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 537
@@ -2512,6 +2661,7 @@ ES t 15420
 E # 538 t 15420 m 12 ce 536 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 538
 ES t 15480
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 539 t 15420 m 12 ce 537 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 539
@@ -2520,6 +2670,7 @@ ES t 15480
 E # 540 t 15480 m 12 ce 538 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 540
 ES t 15540
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 541 t 15480 m 12 ce 539 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 541
@@ -2528,6 +2679,7 @@ ES t 15540
 E # 542 t 15540 m 12 ce 540 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 542
 ES t 15600
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 543 t 15540 m 12 ce 541 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 543
@@ -2536,6 +2688,7 @@ ES t 15600
 E # 544 t 15600 m 12 ce 542 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 544
 ES t 15660
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 545 t 15600 m 12 ce 543 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 545
@@ -2544,6 +2697,7 @@ ES t 15660
 E # 546 t 15660 m 12 ce 544 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 546
 ES t 15720
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 547 t 15660 m 12 ce 545 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 547
@@ -2552,6 +2706,7 @@ ES t 15720
 E # 548 t 15720 m 12 ce 546 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 548
 ES t 15780
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 549 t 15720 m 12 ce 547 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 549
@@ -2560,6 +2715,7 @@ ES t 15780
 E # 550 t 15780 m 12 ce 548 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 550
 ES t 15840
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 551 t 15780 m 12 ce 549 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 551
@@ -2568,6 +2724,7 @@ ES t 15840
 E # 552 t 15840 m 12 ce 550 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 552
 ES t 15900
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 553 t 15840 m 12 ce 551 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 553
@@ -2576,6 +2733,7 @@ ES t 15900
 E # 554 t 15900 m 12 ce 552 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 554
 ES t 15960
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 555 t 15900 m 12 ce 553 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 555
@@ -2584,6 +2742,7 @@ ES t 15960
 E # 556 t 15960 m 12 ce 554 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 556
 ES t 16020
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 557 t 15960 m 12 ce 555 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 557
@@ -2592,6 +2751,7 @@ ES t 16020
 E # 558 t 16020 m 12 ce 556 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 558
 ES t 16080
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 559 t 16020 m 12 ce 557 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 559
@@ -2600,6 +2760,7 @@ ES t 16080
 E # 560 t 16080 m 12 ce 558 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 560
 ES t 16140
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 561 t 16080 m 12 ce 559 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 561
@@ -2608,6 +2769,7 @@ ES t 16140
 E # 562 t 16140 m 12 ce 560 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 562
 ES t 16200
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 563 t 16140 m 12 ce 561 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 563
@@ -2616,6 +2778,7 @@ ES t 16200
 E # 564 t 16200 m 12 ce 562 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 564
 ES t 16260
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 565 t 16200 m 12 ce 563 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 565
@@ -2624,6 +2787,7 @@ ES t 16260
 E # 566 t 16260 m 12 ce 564 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 566
 ES t 16320
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 567 t 16260 m 12 ce 565 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 567
@@ -2632,6 +2796,7 @@ ES t 16320
 E # 568 t 16320 m 12 ce 566 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 568
 ES t 16380
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 569 t 16320 m 12 ce 567 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 569
@@ -2640,6 +2805,7 @@ ES t 16380
 E # 570 t 16380 m 12 ce 568 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 570
 ES t 16440
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 571 t 16380 m 12 ce 569 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 571
@@ -2648,6 +2814,7 @@ ES t 16440
 E # 572 t 16440 m 12 ce 570 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 572
 ES t 16500
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 573 t 16440 m 12 ce 571 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 573
@@ -2656,6 +2823,7 @@ ES t 16500
 E # 574 t 16500 m 12 ce 572 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 574
 ES t 16560
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 575 t 16500 m 12 ce 573 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 575
@@ -2664,6 +2832,7 @@ ES t 16560
 E # 576 t 16560 m 12 ce 574 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 576
 ES t 16620
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 577 t 16560 m 12 ce 575 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 577
@@ -2672,6 +2841,7 @@ ES t 16620
 E # 578 t 16620 m 12 ce 576 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 578
 ES t 16680
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 579 t 16620 m 12 ce 577 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 579
@@ -2680,6 +2850,7 @@ ES t 16680
 E # 580 t 16680 m 12 ce 578 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 580
 ES t 16740
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 581 t 16680 m 12 ce 579 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 581
@@ -2688,6 +2859,7 @@ ES t 16740
 E # 582 t 16740 m 12 ce 580 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 582
 ES t 16800
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 583 t 16740 m 12 ce 581 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 583
@@ -2696,6 +2868,7 @@ ES t 16800
 E # 584 t 16800 m 12 ce 582 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 584
 ES t 16860
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 585 t 16800 m 12 ce 583 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 585
@@ -2704,6 +2877,7 @@ ES t 16860
 E # 586 t 16860 m 12 ce 584 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 586
 ES t 16920
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 587 t 16860 m 12 ce 585 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 587
@@ -2712,6 +2886,7 @@ ES t 16920
 E # 588 t 16920 m 12 ce 586 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 588
 ES t 16980
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 589 t 16920 m 12 ce 587 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 589
@@ -2720,6 +2895,7 @@ ES t 16980
 E # 590 t 16980 m 12 ce 588 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 590
 ES t 17040
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 591 t 16980 m 12 ce 589 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 591
@@ -2728,6 +2904,7 @@ ES t 17040
 E # 592 t 17040 m 12 ce 590 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 592
 ES t 17100
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 593 t 17040 m 12 ce 591 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 593
@@ -2736,6 +2913,7 @@ ES t 17100
 E # 594 t 17100 m 12 ce 592 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 594
 ES t 17160
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 595 t 17100 m 12 ce 593 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 595
@@ -2744,6 +2922,7 @@ ES t 17160
 E # 596 t 17160 m 12 ce 594 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 596
 ES t 17220
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 597 t 17160 m 12 ce 595 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 597
@@ -2752,6 +2931,7 @@ ES t 17220
 E # 598 t 17220 m 12 ce 596 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 598
 ES t 17280
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 599 t 17220 m 12 ce 597 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 599
@@ -2760,6 +2940,7 @@ ES t 17280
 E # 600 t 17280 m 12 ce 598 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 600
 ES t 17340
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 601 t 17280 m 12 ce 599 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 601
@@ -2768,6 +2949,7 @@ ES t 17340
 E # 602 t 17340 m 12 ce 600 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 602
 ES t 17400
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 603 t 17340 m 12 ce 601 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 603
@@ -2776,6 +2958,7 @@ ES t 17400
 E # 604 t 17400 m 12 ce 602 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 604
 ES t 17460
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 605 t 17400 m 12 ce 603 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 605
@@ -2784,6 +2967,7 @@ ES t 17460
 E # 606 t 17460 m 12 ce 604 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 606
 ES t 17520
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 607 t 17460 m 12 ce 605 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 607
@@ -2792,6 +2976,7 @@ ES t 17520
 E # 608 t 17520 m 12 ce 606 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 608
 ES t 17580
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 609 t 17520 m 12 ce 607 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 609
@@ -2800,6 +2985,7 @@ ES t 17580
 E # 610 t 17580 m 12 ce 608 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 610
 ES t 17640
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 611 t 17580 m 12 ce 609 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 611
@@ -2808,6 +2994,7 @@ ES t 17640
 E # 612 t 17640 m 12 ce 610 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 612
 ES t 17700
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 613 t 17640 m 12 ce 611 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 613
@@ -2816,6 +3003,7 @@ ES t 17700
 E # 614 t 17700 m 12 ce 612 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 614
 ES t 17760
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 615 t 17700 m 12 ce 613 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 615
@@ -2824,6 +3012,7 @@ ES t 17760
 E # 616 t 17760 m 12 ce 614 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 616
 ES t 17820
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 617 t 17760 m 12 ce 615 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 617
@@ -2832,6 +3021,7 @@ ES t 17820
 E # 618 t 17820 m 12 ce 616 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 618
 ES t 17880
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 619 t 17820 m 12 ce 617 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 619
@@ -2840,6 +3030,7 @@ ES t 17880
 E # 620 t 17880 m 12 ce 618 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 620
 ES t 17940
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 621 t 17880 m 12 ce 619 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 621
@@ -2848,6 +3039,7 @@ ES t 17940
 E # 622 t 17940 m 12 ce 620 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 622
 ES t 18000
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 623 t 17940 m 12 ce 621 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 623
@@ -2856,6 +3048,7 @@ ES t 18000
 E # 624 t 18000 m 12 ce 622 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 624
 ES t 18060
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 625 t 18000 m 12 ce 623 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 625
@@ -2864,6 +3057,7 @@ ES t 18060
 E # 626 t 18060 m 12 ce 624 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 626
 ES t 18120
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 627 t 18060 m 12 ce 625 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 627
@@ -2872,6 +3066,7 @@ ES t 18120
 E # 628 t 18120 m 12 ce 626 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 628
 ES t 18180
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 629 t 18120 m 12 ce 627 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 629
@@ -2880,6 +3075,7 @@ ES t 18180
 E # 630 t 18180 m 12 ce 628 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 630
 ES t 18240
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 631 t 18180 m 12 ce 629 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 631
@@ -2888,6 +3084,7 @@ ES t 18240
 E # 632 t 18240 m 12 ce 630 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 632
 ES t 18300
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 633 t 18240 m 12 ce 631 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 633
@@ -2896,6 +3093,7 @@ ES t 18300
 E # 634 t 18300 m 12 ce 632 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 634
 ES t 18360
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 635 t 18300 m 12 ce 633 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 635
@@ -2904,6 +3102,7 @@ ES t 18360
 E # 636 t 18360 m 12 ce 634 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 636
 ES t 18420
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 637 t 18360 m 12 ce 635 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 637
@@ -2912,6 +3111,7 @@ ES t 18420
 E # 638 t 18420 m 12 ce 636 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 638
 ES t 18480
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 639 t 18420 m 12 ce 637 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 639
@@ -2920,6 +3120,7 @@ ES t 18480
 E # 640 t 18480 m 12 ce 638 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 640
 ES t 18540
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 641 t 18480 m 12 ce 639 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 641
@@ -2928,6 +3129,7 @@ ES t 18540
 E # 642 t 18540 m 12 ce 640 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 642
 ES t 18600
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 643 t 18540 m 12 ce 641 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 643
@@ -2936,6 +3138,7 @@ ES t 18600
 E # 644 t 18600 m 12 ce 642 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 644
 ES t 18660
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 645 t 18600 m 12 ce 643 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 645
@@ -2944,6 +3147,7 @@ ES t 18660
 E # 646 t 18660 m 12 ce 644 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 646
 ES t 18720
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 647 t 18660 m 12 ce 645 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 647
@@ -2952,6 +3156,7 @@ ES t 18720
 E # 648 t 18720 m 12 ce 646 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 648
 ES t 18780
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 649 t 18720 m 12 ce 647 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 649
@@ -2960,6 +3165,7 @@ ES t 18780
 E # 650 t 18780 m 12 ce 648 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 650
 ES t 18840
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 651 t 18780 m 12 ce 649 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 651
@@ -2968,6 +3174,7 @@ ES t 18840
 E # 652 t 18840 m 12 ce 650 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 652
 ES t 18900
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 653 t 18840 m 12 ce 651 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 653
@@ -2976,6 +3183,7 @@ ES t 18900
 E # 654 t 18900 m 12 ce 652 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 654
 ES t 18960
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 655 t 18900 m 12 ce 653 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 655
@@ -2984,6 +3192,7 @@ ES t 18960
 E # 656 t 18960 m 12 ce 654 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 656
 ES t 19020
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 657 t 18960 m 12 ce 655 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 657
@@ -2992,6 +3201,7 @@ ES t 19020
 E # 658 t 19020 m 12 ce 656 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 658
 ES t 19080
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 659 t 19020 m 12 ce 657 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 659
@@ -3000,6 +3210,7 @@ ES t 19080
 E # 660 t 19080 m 12 ce 658 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 660
 ES t 19140
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 661 t 19080 m 12 ce 659 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 661
@@ -3008,6 +3219,7 @@ ES t 19140
 E # 662 t 19140 m 12 ce 660 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 662
 ES t 19200
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 663 t 19140 m 12 ce 661 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 663
@@ -3016,6 +3228,7 @@ ES t 19200
 E # 664 t 19200 m 12 ce 662 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 664
 ES t 19260
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 665 t 19200 m 12 ce 663 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 665
@@ -3024,6 +3237,7 @@ ES t 19260
 E # 666 t 19260 m 12 ce 664 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 666
 ES t 19320
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 667 t 19260 m 12 ce 665 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 667
@@ -3032,6 +3246,7 @@ ES t 19320
 E # 668 t 19320 m 12 ce 666 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 668
 ES t 19380
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 669 t 19320 m 12 ce 667 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 669
@@ -3040,6 +3255,7 @@ ES t 19380
 E # 670 t 19380 m 12 ce 668 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 670
 ES t 19440
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 671 t 19380 m 12 ce 669 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 671
@@ -3048,6 +3264,7 @@ ES t 19440
 E # 672 t 19440 m 12 ce 670 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 672
 ES t 19500
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 673 t 19440 m 12 ce 671 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 673
@@ -3056,6 +3273,7 @@ ES t 19500
 E # 674 t 19500 m 12 ce 672 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 674
 ES t 19560
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 675 t 19500 m 12 ce 673 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 675
@@ -3064,6 +3282,7 @@ ES t 19560
 E # 676 t 19560 m 12 ce 674 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 676
 ES t 19620
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 677 t 19560 m 12 ce 675 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 677
@@ -3072,6 +3291,7 @@ ES t 19620
 E # 678 t 19620 m 12 ce 676 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 678
 ES t 19680
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 679 t 19620 m 12 ce 677 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 679
@@ -3080,6 +3300,7 @@ ES t 19680
 E # 680 t 19680 m 12 ce 678 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 680
 ES t 19740
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 681 t 19680 m 12 ce 679 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 681
@@ -3088,6 +3309,7 @@ ES t 19740
 E # 682 t 19740 m 12 ce 680 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 682
 ES t 19800
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 683 t 19740 m 12 ce 681 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 683
@@ -3096,6 +3318,7 @@ ES t 19800
 E # 684 t 19800 m 12 ce 682 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 684
 ES t 19860
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 685 t 19800 m 12 ce 683 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 685
@@ -3104,6 +3327,7 @@ ES t 19860
 E # 686 t 19860 m 12 ce 684 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 686
 ES t 19920
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 687 t 19860 m 12 ce 685 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 687
@@ -3112,6 +3336,7 @@ ES t 19920
 E # 688 t 19920 m 12 ce 686 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 688
 ES t 19980
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 689 t 19920 m 12 ce 687 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 689
@@ -3120,6 +3345,7 @@ ES t 19980
 E # 690 t 19980 m 12 ce 688 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 690
 ES t 20040
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 691 t 19980 m 12 ce 689 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 691
@@ -3128,6 +3354,7 @@ ES t 20040
 E # 692 t 20040 m 12 ce 690 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 692
 ES t 20100
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 693 t 20040 m 12 ce 691 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 693
@@ -3136,6 +3363,7 @@ ES t 20100
 E # 694 t 20100 m 12 ce 692 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 694
 ES t 20160
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 695 t 20100 m 12 ce 693 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 695
@@ -3144,6 +3372,7 @@ ES t 20160
 E # 696 t 20160 m 12 ce 694 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 696
 ES t 20220
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 697 t 20160 m 12 ce 695 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 697
@@ -3152,6 +3381,7 @@ ES t 20220
 E # 698 t 20220 m 12 ce 696 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 698
 ES t 20280
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 699 t 20220 m 12 ce 697 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 699
@@ -3160,6 +3390,7 @@ ES t 20280
 E # 700 t 20280 m 12 ce 698 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 700
 ES t 20340
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 701 t 20280 m 12 ce 699 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 701
@@ -3168,6 +3399,7 @@ ES t 20340
 E # 702 t 20340 m 12 ce 700 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 702
 ES t 20400
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 703 t 20340 m 12 ce 701 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 703
@@ -3176,6 +3408,7 @@ ES t 20400
 E # 704 t 20400 m 12 ce 702 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 704
 ES t 20460
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 705 t 20400 m 12 ce 703 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 705
@@ -3184,6 +3417,7 @@ ES t 20460
 E # 706 t 20460 m 12 ce 704 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 706
 ES t 20520
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 707 t 20460 m 12 ce 705 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 707
@@ -3192,6 +3426,7 @@ ES t 20520
 E # 708 t 20520 m 12 ce 706 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 708
 ES t 20580
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 709 t 20520 m 12 ce 707 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 709
@@ -3200,6 +3435,7 @@ ES t 20580
 E # 710 t 20580 m 12 ce 708 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 710
 ES t 20640
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 711 t 20580 m 12 ce 709 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 711
@@ -3208,6 +3444,7 @@ ES t 20640
 E # 712 t 20640 m 12 ce 710 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 712
 ES t 20700
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 713 t 20640 m 12 ce 711 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 713
@@ -3216,6 +3453,7 @@ ES t 20700
 E # 714 t 20700 m 12 ce 712 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 714
 ES t 20760
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 715 t 20700 m 12 ce 713 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 715
@@ -3224,6 +3462,7 @@ ES t 20760
 E # 716 t 20760 m 12 ce 714 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 716
 ES t 20820
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 717 t 20760 m 12 ce 715 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 717
@@ -3232,6 +3471,7 @@ ES t 20820
 E # 718 t 20820 m 12 ce 716 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 718
 ES t 20880
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 719 t 20820 m 12 ce 717 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 719
@@ -3240,6 +3480,7 @@ ES t 20880
 E # 720 t 20880 m 12 ce 718 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 720
 ES t 20940
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 721 t 20880 m 12 ce 719 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 721
@@ -3248,6 +3489,7 @@ ES t 20940
 E # 722 t 20940 m 12 ce 720 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 722
 ES t 21000
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 723 t 20940 m 12 ce 721 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 723
@@ -3256,6 +3498,7 @@ ES t 21000
 E # 724 t 21000 m 12 ce 722 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 724
 ES t 21060
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 725 t 21000 m 12 ce 723 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 725
@@ -3264,6 +3507,7 @@ ES t 21060
 E # 726 t 21060 m 12 ce 724 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 726
 ES t 21120
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 727 t 21060 m 12 ce 725 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 727
@@ -3272,6 +3516,7 @@ ES t 21120
 E # 728 t 21120 m 12 ce 726 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 728
 ES t 21180
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 729 t 21120 m 12 ce 727 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 729
@@ -3280,6 +3525,7 @@ ES t 21180
 E # 730 t 21180 m 12 ce 728 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 730
 ES t 21240
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 731 t 21180 m 12 ce 729 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 731
@@ -3288,6 +3534,7 @@ ES t 21240
 E # 732 t 21240 m 12 ce 730 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 732
 ES t 21300
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 733 t 21240 m 12 ce 731 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 733
@@ -3296,6 +3543,7 @@ ES t 21300
 E # 734 t 21300 m 12 ce 732 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 734
 ES t 21360
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 735 t 21300 m 12 ce 733 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 735
@@ -3304,6 +3552,7 @@ ES t 21360
 E # 736 t 21360 m 12 ce 734 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 736
 ES t 21420
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 737 t 21360 m 12 ce 735 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 737
@@ -3312,6 +3561,7 @@ ES t 21420
 E # 738 t 21420 m 12 ce 736 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 738
 ES t 21480
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 739 t 21420 m 12 ce 737 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 739
@@ -3320,6 +3570,7 @@ ES t 21480
 E # 740 t 21480 m 12 ce 738 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 740
 ES t 21540
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 741 t 21480 m 12 ce 739 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 741
@@ -3328,6 +3579,7 @@ ES t 21540
 E # 742 t 21540 m 12 ce 740 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 742
 ES t 21600
+MS id 2 d p=300,51;i2=status/battery_60;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 743 t 21540 m 12 ce 741 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 743
@@ -3336,6 +3588,7 @@ ES t 21600
 E # 744 t 21600 m 12 ce 742 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 744
 ES t 21660
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 745 t 21600 m 12 ce 743 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 745
@@ -3344,6 +3597,7 @@ ES t 21660
 E # 746 t 21660 m 12 ce 744 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 746
 ES t 21720
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 747 t 21660 m 12 ce 745 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 747
@@ -3352,6 +3606,7 @@ ES t 21720
 E # 748 t 21720 m 12 ce 746 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 748
 ES t 21780
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 749 t 21720 m 12 ce 747 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 749
@@ -3360,6 +3615,7 @@ ES t 21780
 E # 750 t 21780 m 12 ce 748 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 750
 ES t 21840
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 751 t 21780 m 12 ce 749 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 751
@@ -3368,6 +3624,7 @@ ES t 21840
 E # 752 t 21840 m 12 ce 750 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 752
 ES t 21900
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 753 t 21840 m 12 ce 751 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 753
@@ -3376,6 +3633,7 @@ ES t 21900
 E # 754 t 21900 m 12 ce 752 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 754
 ES t 21960
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 755 t 21900 m 12 ce 753 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 755
@@ -3384,6 +3642,7 @@ ES t 21960
 E # 756 t 21960 m 12 ce 754 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 756
 ES t 22020
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 757 t 21960 m 12 ce 755 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 757
@@ -3392,6 +3651,7 @@ ES t 22020
 E # 758 t 22020 m 12 ce 756 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 758
 ES t 22080
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 759 t 22020 m 12 ce 757 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 759
@@ -3400,6 +3660,7 @@ ES t 22080
 E # 760 t 22080 m 12 ce 758 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 760
 ES t 22140
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 761 t 22080 m 12 ce 759 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 761
@@ -3408,6 +3669,7 @@ ES t 22140
 E # 762 t 22140 m 12 ce 760 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 762
 ES t 22200
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 763 t 22140 m 12 ce 761 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 763
@@ -3416,6 +3678,7 @@ ES t 22200
 E # 764 t 22200 m 12 ce 762 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 764
 ES t 22260
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 765 t 22200 m 12 ce 763 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 765
@@ -3424,6 +3687,7 @@ ES t 22260
 E # 766 t 22260 m 12 ce 764 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 766
 ES t 22320
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 767 t 22260 m 12 ce 765 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 767
@@ -3432,6 +3696,7 @@ ES t 22320
 E # 768 t 22320 m 12 ce 766 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 768
 ES t 22380
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 769 t 22320 m 12 ce 767 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 769
@@ -3440,6 +3705,7 @@ ES t 22380
 E # 770 t 22380 m 12 ce 768 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 770
 ES t 22440
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 771 t 22380 m 12 ce 769 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 771
@@ -3448,6 +3714,7 @@ ES t 22440
 E # 772 t 22440 m 12 ce 770 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 772
 ES t 22500
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 773 t 22440 m 12 ce 771 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 773
@@ -3456,6 +3723,7 @@ ES t 22500
 E # 774 t 22500 m 12 ce 772 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 774
 ES t 22560
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 775 t 22500 m 12 ce 773 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 775
@@ -3464,6 +3732,7 @@ ES t 22560
 E # 776 t 22560 m 12 ce 774 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 776
 ES t 22620
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 777 t 22560 m 12 ce 775 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 777
@@ -3472,6 +3741,7 @@ ES t 22620
 E # 778 t 22620 m 12 ce 776 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 778
 ES t 22680
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 779 t 22620 m 12 ce 777 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 779
@@ -3480,6 +3750,7 @@ ES t 22680
 E # 780 t 22680 m 12 ce 778 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 780
 ES t 22740
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 781 t 22680 m 12 ce 779 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 781
@@ -3488,6 +3759,7 @@ ES t 22740
 E # 782 t 22740 m 12 ce 780 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 782
 ES t 22800
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 783 t 22740 m 12 ce 781 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 783
@@ -3496,6 +3768,7 @@ ES t 22800
 E # 784 t 22800 m 12 ce 782 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 784
 ES t 22860
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 785 t 22800 m 12 ce 783 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 785
@@ -3504,6 +3777,7 @@ ES t 22860
 E # 786 t 22860 m 12 ce 784 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 786
 ES t 22920
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 787 t 22860 m 12 ce 785 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 787
@@ -3512,6 +3786,7 @@ ES t 22920
 E # 788 t 22920 m 12 ce 786 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 788
 ES t 22980
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 789 t 22920 m 12 ce 787 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 789
@@ -3520,6 +3795,7 @@ ES t 22980
 E # 790 t 22980 m 12 ce 788 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 790
 ES t 23040
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 791 t 22980 m 12 ce 789 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 791
@@ -3528,6 +3804,7 @@ ES t 23040
 E # 792 t 23040 m 12 ce 790 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 792
 ES t 23100
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 
 E # 793 t 23040 m 12 ce 791 msg 7
 BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 793
@@ -3536,516 +3813,9 @@ ES t 23100
 E # 794 t 23100 m 12 ce 792 msg 8
 BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 794
 ES t 23160
-
-E # 795 t 23100 m 12 ce 793 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 795
-ES t 23160
-
-E # 796 t 23160 m 12 ce 794 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 796
-ES t 23220
-
-E # 797 t 23160 m 12 ce 795 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 797
-ES t 23220
-
-E # 798 t 23220 m 12 ce 796 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 798
-ES t 23280
-
-E # 799 t 23220 m 12 ce 797 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 799
-ES t 23280
-
-E # 800 t 23280 m 12 ce 798 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 800
-ES t 23340
-
-E # 801 t 23280 m 12 ce 799 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 801
-ES t 23340
-
-E # 802 t 23340 m 12 ce 800 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 802
-ES t 23400
-
-E # 803 t 23340 m 12 ce 801 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 803
-ES t 23400
-
-E # 804 t 23400 m 12 ce 802 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 804
-ES t 23460
-
-E # 805 t 23400 m 12 ce 803 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 805
-ES t 23460
-
-E # 806 t 23460 m 12 ce 804 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 806
-ES t 23520
-
-E # 807 t 23460 m 12 ce 805 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 807
-ES t 23520
-
-E # 808 t 23520 m 12 ce 806 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 808
-ES t 23580
-
-E # 809 t 23520 m 12 ce 807 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 809
-ES t 23580
-
-E # 810 t 23580 m 12 ce 808 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 810
-ES t 23640
-
-E # 811 t 23580 m 12 ce 809 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 811
-ES t 23640
-
-E # 812 t 23640 m 12 ce 810 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 812
-ES t 23700
-
-E # 813 t 23640 m 12 ce 811 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 813
-ES t 23700
-
-E # 814 t 23700 m 12 ce 812 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 814
-ES t 23760
-
-E # 815 t 23700 m 12 ce 813 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 815
-ES t 23760
-
-E # 816 t 23760 m 12 ce 814 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 816
-ES t 23820
-
-E # 817 t 23760 m 12 ce 815 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 817
-ES t 23820
-
-E # 818 t 23820 m 12 ce 816 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 818
-ES t 23880
-
-E # 819 t 23820 m 12 ce 817 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 819
-ES t 23880
-
-E # 820 t 23880 m 12 ce 818 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 820
-ES t 23940
-
-E # 821 t 23880 m 12 ce 819 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 821
-ES t 23940
-
-E # 822 t 23940 m 12 ce 820 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 822
-ES t 24000
-
-E # 823 t 23940 m 12 ce 821 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 823
-ES t 24000
-
-E # 824 t 24000 m 12 ce 822 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 824
-ES t 24060
-
-E # 825 t 24000 m 12 ce 823 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 825
-ES t 24060
-
-E # 826 t 24060 m 12 ce 824 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 826
-ES t 24120
-
-E # 827 t 24060 m 12 ce 825 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 827
-ES t 24120
-
-E # 828 t 24120 m 12 ce 826 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 828
-ES t 24180
-
-E # 829 t 24120 m 12 ce 827 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 829
-ES t 24180
-
-E # 830 t 24180 m 12 ce 828 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 830
-ES t 24240
-
-E # 831 t 24180 m 12 ce 829 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 831
-ES t 24240
-
-E # 832 t 24240 m 12 ce 830 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 832
-ES t 24300
-
-E # 833 t 24240 m 12 ce 831 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 833
-ES t 24300
-
-E # 834 t 24300 m 12 ce 832 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 834
-ES t 24360
-
-E # 835 t 24300 m 12 ce 833 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 835
-ES t 24360
-
-E # 836 t 24360 m 12 ce 834 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 836
-ES t 24420
-
-E # 837 t 24360 m 12 ce 835 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 837
-ES t 24420
-
-E # 838 t 24420 m 12 ce 836 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 838
-ES t 24480
-
-E # 839 t 24420 m 12 ce 837 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 839
-ES t 24480
-
-E # 840 t 24480 m 12 ce 838 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 840
-ES t 24540
-
-E # 841 t 24480 m 12 ce 839 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 841
-ES t 24540
-
-E # 842 t 24540 m 12 ce 840 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 842
-ES t 24600
-
-E # 843 t 24540 m 12 ce 841 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 843
-ES t 24600
-
-E # 844 t 24600 m 12 ce 842 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 844
-ES t 24660
-
-E # 845 t 24600 m 12 ce 843 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 845
-ES t 24660
-
-E # 846 t 24660 m 12 ce 844 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 846
-ES t 24720
-
-E # 847 t 24660 m 12 ce 845 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 847
-ES t 24720
-
-E # 848 t 24720 m 12 ce 846 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 848
-ES t 24780
-
-E # 849 t 24720 m 12 ce 847 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 849
-ES t 24780
-
-E # 850 t 24780 m 12 ce 848 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 850
-ES t 24840
-
-E # 851 t 24780 m 12 ce 849 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 851
-ES t 24840
-
-E # 852 t 24840 m 12 ce 850 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 852
-ES t 24900
-
-E # 853 t 24840 m 12 ce 851 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 853
-ES t 24900
-
-E # 854 t 24900 m 12 ce 852 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 854
-ES t 24960
-
-E # 855 t 24900 m 12 ce 853 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 855
-ES t 24960
-
-E # 856 t 24960 m 12 ce 854 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 856
-ES t 25020
-
-E # 857 t 24960 m 12 ce 855 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 857
-ES t 25020
-
-E # 858 t 25020 m 12 ce 856 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 858
-ES t 25080
-
-E # 859 t 25020 m 12 ce 857 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 859
-ES t 25080
-
-E # 860 t 25080 m 12 ce 858 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 860
-ES t 25140
-
-E # 861 t 25080 m 12 ce 859 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 861
-ES t 25140
-
-E # 862 t 25140 m 12 ce 860 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 862
-ES t 25200
-
-E # 863 t 25140 m 12 ce 861 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 863
-ES t 25200
-
-E # 864 t 25200 m 12 ce 862 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 864
-ES t 25260
-
-E # 865 t 25200 m 12 ce 863 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 865
-ES t 25260
-
-E # 866 t 25260 m 12 ce 864 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 866
-ES t 25320
-
-E # 867 t 25260 m 12 ce 865 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 867
-ES t 25320
-
-E # 868 t 25320 m 12 ce 866 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 868
-ES t 25380
-
-E # 869 t 25320 m 12 ce 867 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 869
-ES t 25380
-
-E # 870 t 25380 m 12 ce 868 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 870
-ES t 25440
-
-E # 871 t 25380 m 12 ce 869 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 871
-ES t 25440
-
-E # 872 t 25440 m 12 ce 870 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 872
-ES t 25500
-
-E # 873 t 25440 m 12 ce 871 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 873
-ES t 25500
-
-E # 874 t 25500 m 12 ce 872 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 874
-ES t 25560
-
-E # 875 t 25500 m 12 ce 873 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 875
-ES t 25560
-
-E # 876 t 25560 m 12 ce 874 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 876
-ES t 25620
-
-E # 877 t 25560 m 12 ce 875 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 877
-ES t 25620
-
-E # 878 t 25620 m 12 ce 876 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 878
-ES t 25680
-
-E # 879 t 25620 m 12 ce 877 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 879
-ES t 25680
-
-E # 880 t 25680 m 12 ce 878 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 880
-ES t 25740
-
-E # 881 t 25680 m 12 ce 879 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 881
-ES t 25740
-
-E # 882 t 25740 m 12 ce 880 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 882
-ES t 25800
-
-E # 883 t 25740 m 12 ce 881 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 883
-ES t 25800
-
-E # 884 t 25800 m 12 ce 882 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 884
-ES t 25860
-
-E # 885 t 25800 m 12 ce 883 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 885
-ES t 25860
-
-E # 886 t 25860 m 12 ce 884 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 886
-ES t 25920
-
-E # 887 t 25860 m 12 ce 885 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 887
-ES t 25920
-
-E # 888 t 25920 m 12 ce 886 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 888
-ES t 25980
-
-E # 889 t 25920 m 12 ce 887 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 889
-ES t 25980
-
-E # 890 t 25980 m 12 ce 888 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 890
-ES t 26040
-
-E # 891 t 25980 m 12 ce 889 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 891
-ES t 26040
-
-E # 892 t 26040 m 12 ce 890 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 892
-ES t 26100
-
-E # 893 t 26040 m 12 ce 891 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 893
-ES t 26100
-
-E # 894 t 26100 m 12 ce 892 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 894
-ES t 26160
-
-E # 895 t 26100 m 12 ce 893 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 895
-ES t 26160
-
-E # 896 t 26160 m 12 ce 894 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 896
-ES t 26220
-
-E # 897 t 26160 m 12 ce 895 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 897
-ES t 26220
-
-E # 898 t 26220 m 12 ce 896 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 898
-ES t 26280
-
-E # 899 t 26220 m 12 ce 897 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 899
-ES t 26280
-
-E # 900 t 26280 m 12 ce 898 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 900
-ES t 26340
-
-E # 901 t 26280 m 12 ce 899 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 901
-ES t 26340
-
-E # 902 t 26340 m 12 ce 900 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 902
-ES t 26400
-
-E # 903 t 26340 m 12 ce 901 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 903
-ES t 26400
-
-E # 904 t 26400 m 12 ce 902 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 904
-ES t 26460
-
-E # 905 t 26400 m 12 ce 903 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 905
-ES t 26460
-
-E # 906 t 26460 m 12 ce 904 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 906
-ES t 26520
-
-E # 907 t 26460 m 12 ce 905 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 907
-ES t 26520
-
-E # 908 t 26520 m 12 ce 906 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 908
-ES t 26580
-
-E # 909 t 26520 m 12 ce 907 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 909
-ES t 26580
-
-E # 910 t 26580 m 12 ce 908 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 910
-ES t 26640
-
-E # 911 t 26580 m 12 ce 909 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 911
-ES t 26640
-
-E # 912 t 26640 m 12 ce 910 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 912
-ES t 26700
-
-E # 913 t 26640 m 12 ce 911 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 913
-ES t 26700
-
-E # 914 t 26700 m 12 ce 912 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 914
-ES t 26760
-
-E # 915 t 26700 m 12 ce 913 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 915
-ES t 26760
-
-E # 916 t 26760 m 12 ce 914 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 916
-ES t 26820
-
-E # 917 t 26760 m 12 ce 915 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 917
-ES t 26820
-
-E # 918 t 26820 m 12 ce 916 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 918
-ES t 26880
-
-E # 919 t 26820 m 12 ce 917 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 919
-ES t 26880
-
-E # 920 t 26880 m 12 ce 918 msg 8
-BS id 8 tid 8 eid 8 etid 8 c cMessage n auto-update p 500 pe 920
-ES t 26940
-
-E # 921 t 26880 m 12 ce 919 msg 7
-BS id 7 tid 7 eid 7 etid 7 c cMessage n publish k 1 p 2000 pe 921
-ES t 26940
-SE e 0 c 9 m "The user has finished the simulation at event #922, t=26880."
-- WARNING: device Transducer total time 0s != sim time 26880s (may not matter)
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
+SE e 0 c 9 m "The user has finished the simulation at event #795, t=23100."
+MS id 2 d p=300,51;i2=status/battery_40;bgb=445,450,white;i=device/palm;b=40,40,rect
 MB sm 12 tm 11 m ""
 ME
 MB sm 12 tm 11 m ""

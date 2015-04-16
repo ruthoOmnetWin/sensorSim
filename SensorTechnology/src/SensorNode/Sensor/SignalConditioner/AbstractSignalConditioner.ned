@@ -22,6 +22,8 @@ simple AbstractSignalConditioner like SignalConditionerInterface
 {
     parameters:
     	@display("i=block/opticaldelay");
+    	double currentConsumption;
+    	double energyConsumption;
     gates:
         input fromSensingUnit;
         output toSignalConverter;

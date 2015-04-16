@@ -13,18 +13,22 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.SensorNode.Sensor.Transducer;
+#ifndef ABSTRACTBATTERYACCESS_H_
+#define ABSTRACTBATTERYACCESS_H_
 
-//
-// TODO auto-generated type
-//
-moduleinterface TransducerInterface
-{
-    parameters:
-    	@display("i=old/xconn");
-    	double currentConsumption;
-    	double energyConsumption;
-    gates:
-        input fromSignalConverter;
-        output toNodeProcessor;
-}
+#include <omnetpp.h>
+#include <MiximBatteryAccess.h>
+
+class AbstractBatteryAccess : public MiximBatteryAccess {
+protected:
+    float currentOverTime;
+    float energiePerOperation;
+public:
+    AbstractBatteryAccess();
+    virtual ~AbstractBatteryAccess();
+    void initialize(int stage);
+    void draw();
+};
+
+#endif /* ABSTRACTBATTERYACCESS_H_ */
+

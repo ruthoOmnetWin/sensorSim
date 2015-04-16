@@ -1,14 +1,14 @@
 version 2
-run General-0-20150416-16:58:15-4843
+run General-0-20150416-19:28:28-10567
 attr configname General
-attr datetime 20150416-16:58:15
+attr datetime 20150416-19:28:28
 attr experiment General
 attr inifile sensorTechnologyHost802154.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network SensorTechnologyHost802154
-attr processid 4843
+attr processid 10567
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -35,11 +35,11 @@ scalar SensorTechnologyHost802154.SensorNode.tranl 	nbAggrPktReceived 	0
 scalar SensorTechnologyHost802154.SensorNode.tranl 	"nbAggrPktSentDown " 	0
 scalar SensorTechnologyHost802154.SensorNode.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar SensorTechnologyHost802154.SensorNode.batteryStats 	total 	100
+scalar SensorTechnologyHost802154.SensorNode.batteryStats 	total 	6930277.1619428
 attr unit  mW-s
 scalar SensorTechnologyHost802154.SensorNode.batteryStats 	lifetime 	-1
 attr unit  s
-scalar SensorTechnologyHost802154.SensorNode.batteryStats 	"Mean power consumption" 	0.0037202380952381
+scalar SensorTechnologyHost802154.SensorNode.batteryStats 	"Mean power consumption" 	300.0119983525
 attr unit  mW
 scalar SensorTechnologyHost802154.world 	#sent 	0
 scalar SensorTechnologyHost802154.world 	#received 	0

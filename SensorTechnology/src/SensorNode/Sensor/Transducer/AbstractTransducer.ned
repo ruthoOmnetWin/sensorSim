@@ -22,6 +22,8 @@ simple AbstractTransducer like TransducerInterface
 {
     parameters:
     	@display("i=old/xconn");
+    	double currentConsumption = default(0.001);
+    	double energyConsumption = default(100);
     gates:
         input fromSignalConverter;
         output toNodeProcessor;

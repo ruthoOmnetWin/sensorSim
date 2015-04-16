@@ -32,9 +32,6 @@ module Host802154_2400MHzSensorNode extends Host802154_2400MHz
         int numSensors = default(0);
         @class("AbstractSensorNode");
 
-        //these are used to draw the overview of the model
-        bool fakeProcessor = false;
-
         @display("bgb=445,450");
     submodules:
         TemperatureSensor: TemperatureSensor if hasTemperatureSensor {
@@ -54,13 +51,12 @@ module Host802154_2400MHzSensorNode extends Host802154_2400MHz
         }
         //Processor is created inside the C++-Class in order to create the gates to the
         //different sensors dynamically by the input
-        Processor: ExampleProcessor if fakeProcessor {
-
+        Processor: ExampleProcessor if false {
             @display("p=400,159");
         }
     connections:
         //these connections will never be created, they only exist to draw the model
-        if fakeProcessor {
+        if false {
             HumiditySensor.fromTransducerToNodeProcessor --> Processor.fromHumiditySensor;
             TemperatureSensor.fromTransducerToNodeProcessor --> Processor.fromTemperatureSensor;
             PressureSensor.fromTransducerToNodeProcessor --> Processor.fromPressureSensor;

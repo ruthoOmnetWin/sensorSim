@@ -17,9 +17,9 @@
 #define ABSTRACTSIGNALCONVERTER_H_
 
 #include <omnetpp.h>
-#include "MiximBatteryAccess.h"
+#include "AbstractBatteryAccess.h"
 
-class AbstractSignalConverter : public MiximBatteryAccess {
+class AbstractSignalConverter : public AbstractBatteryAccess {
 public:
     AbstractSignalConverter();
     virtual ~AbstractSignalConverter();

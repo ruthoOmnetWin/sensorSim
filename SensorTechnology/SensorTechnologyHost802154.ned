@@ -20,13 +20,13 @@ network SensorTechnologyHost802154
         **.mobility.constraintAreaMaxX = default(playgroundSizeX);
         **.mobility.constraintAreaMaxY = default(playgroundSizeY);
         **.mobility.constraintAreaMaxZ = default(playgroundSizeZ);
-        **.battery.numDevices = 1;
+        **.battery.numDevices = 4 * 1;
         @display("bgi=maps/germany,bgb,$playgroundSizeX,$playgroundSizeY,white;bgp=0,0;bgb=403,503");
-
 
     submodules:
         SensorNode: Host802154_2400MHzSensorNode {
             numHosts = 1;
+        	**.notAffectedByHostState= true;
             @display("p=300,51");
         }
         connectionManager: <cmType> like IConnectionManager {

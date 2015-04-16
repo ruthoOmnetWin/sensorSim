@@ -23,4 +23,3 @@ AbstractSignalConverter::AbstractSignalConverter() {
 AbstractSignalConverter::~AbstractSignalConverter() {
     // TODO Auto-generated destructor stub
 }
-

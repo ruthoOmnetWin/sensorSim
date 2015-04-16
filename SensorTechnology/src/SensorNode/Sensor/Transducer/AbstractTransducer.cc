@@ -23,12 +23,3 @@ AbstractTransducer::AbstractTransducer() {
 AbstractTransducer::~AbstractTransducer() {
     // TODO Auto-generated destructor stub
 }
-
-void AbstractTransducer::initialize(int stage) {
-    if (stage == 0) {
-        registerWithBattery("Transducer", 1);
-        EV << "Registered with Battery" << endl;
-        drawEnergy(100.0, 0);
-        EV << "Draw 100mWs from Battery" << endl;
-    }
-}
