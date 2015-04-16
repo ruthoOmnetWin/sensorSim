@@ -18,10 +18,14 @@
 
 #include <omnetpp.h>
 #include <Coord.h>
+#include "MiximBatteryAccess.h"
+#include "CustomWorldUtility.h"
 
-class AbstractSensingUnit : public cSimpleModule {
+class AbstractSensingUnit : public MiximBatteryAccess {
 protected:
     Coord *Position;
+    CustomWorldUtility *world;
+    std::string type;
 public:
     AbstractSensingUnit();
     virtual ~AbstractSensingUnit();

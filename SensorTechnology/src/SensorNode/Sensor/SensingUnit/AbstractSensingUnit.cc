@@ -27,11 +27,17 @@ AbstractSensingUnit::~AbstractSensingUnit() {
 }
 
 void AbstractSensingUnit::initialize(int stage) {
-    CustomWorldUtility *world = FindModule<CustomWorldUtility*>::findGlobalModule();
-    //save world and provide data inside world
-    EV << "CustomWorldUtility found" << endl;
+    if (stage == 0) {
+        CustomWorldUtility *World = FindModule<CustomWorldUtility*>::findGlobalModule();
+        //save world and provide data inside world
+        this->world = World;
+        EV << "CustomWorldUtility found" << endl;
+    } else if (stage == 1) {
+
+    }
 }
 
 float AbstractSensingUnit::readData() {
-
+    Coord *position = new Coord;
+    return world->getValueByPosition("Temperature", position);
 }

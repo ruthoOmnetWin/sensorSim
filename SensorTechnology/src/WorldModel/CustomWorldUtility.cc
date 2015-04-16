@@ -55,6 +55,7 @@ CustomWorldUtility::~CustomWorldUtility()
 void CustomWorldUtility::initialize(int stage)
 {
     BaseWorldUtility::initialize(stage);
+    if (stage == 0) {
     ev << "Initializing World Model" << endl;
 
     this->sizeX = par("playgroundSizeX");
@@ -103,6 +104,9 @@ void CustomWorldUtility::initialize(int stage)
     this->setPressure();
     this->setHumidity();
     this->setLight();
+    } else if (stage == 1) {
+
+    }
 }
 
 ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)
@@ -376,4 +380,10 @@ void CustomWorldUtility::destroySensorData()
         humidityArray[i] = NULL;
     }
     //delete[] humidityArray;
+}
+
+float CustomWorldUtility::getValueByPosition(std::string type, Coord *position)
+{
+    float data = 1.0;
+    return data;
 }

@@ -17,11 +17,13 @@
 #define ABSTRACTTRANSDUCER_H_
 
 #include <omnetpp.h>
+#include "MiximBatteryAccess.h"
 
-class AbstractTransducer : public cSimpleModule {
+class AbstractTransducer : public MiximBatteryAccess {
 public:
     AbstractTransducer();
     virtual ~AbstractTransducer();
+    void initialize(int stage);
 };
 
 Define_Module(AbstractTransducer);

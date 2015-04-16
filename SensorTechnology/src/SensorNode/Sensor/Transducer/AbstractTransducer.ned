@@ -25,5 +25,4 @@ simple AbstractTransducer like TransducerInterface
     gates:
         input fromSignalConverter;
         output toNodeProcessor;
-        input fromNodeProcessor;
 }

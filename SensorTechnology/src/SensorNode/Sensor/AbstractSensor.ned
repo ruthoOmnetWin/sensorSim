@@ -35,7 +35,7 @@ module AbstractSensor like SensorInterface
         //both gates get connected dynamically inside AbstractSensorNode, but after the 
         //check for unconnected gates, so it is declared loose but never will be unconnected
         output fromTransducerToNodeProcessor @loose;
-        input toTransducerFromNodeProcessor @loose;
+        input toSensingUnitFromNodeProcessor @loose;
 
     submodules:
         SensingUnit: <"SensingUnit"+type> like SensingUnitInterface {
@@ -58,6 +58,6 @@ module AbstractSensor like SensorInterface
         SignalConditioner.toSignalConverter --> ned.DelayChannel --> SignalConverter.fromSignalConditioner;
         SignalConverter.toTransducer --> ned.DelayChannel --> Transducer.fromSignalConverter;
         Transducer.toNodeProcessor --> ned.DelayChannel --> fromTransducerToNodeProcessor;
-        toTransducerFromNodeProcessor --> ned.DelayChannel --> Transducer.fromNodeProcessor;
+        toSensingUnitFromNodeProcessor --> ned.DelayChannel --> SensingUnit.fromNodeProcessor;
 
 }

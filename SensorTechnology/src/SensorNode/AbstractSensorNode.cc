@@ -23,12 +23,16 @@ AbstractSensorNode::~AbstractSensorNode() {
 }
 
 void AbstractSensorNode::initialize(int stage) {
-    //get the amount of sensors and gates needed
-    setNumGates();
-    //generate Processor dynamically
-    createProcessor();
-    //connect Memory with Processor
-    connectProcessorAndMemory();
+    if (stage == 0) {
+        //get the amount of sensors and gates needed
+        setNumGates();
+        //generate Processor dynamically
+        createProcessor();
+        //connect Memory with Processor
+        connectProcessorAndMemory();
+    } else if (stage == 1) {
+
+    }
 }
 
 /**
@@ -99,7 +103,7 @@ void AbstractSensorNode::createProcessorsGatesAndConnect(cModule &processor, std
     //find gates inside sensor
     cModule *Sensor = this->getSubmodule((SensorType + "Sensor").c_str());
     cGate *sensorOut = Sensor->gate("fromTransducerToNodeProcessor");
-    cGate *sensorIn = Sensor->gate("toTransducerFromNodeProcessor");
+    cGate *sensorIn = Sensor->gate("toSensingUnitFromNodeProcessor");
     //connect
     sensorOut->connectTo(fromSensor);
     toSensor->connectTo(sensorIn);

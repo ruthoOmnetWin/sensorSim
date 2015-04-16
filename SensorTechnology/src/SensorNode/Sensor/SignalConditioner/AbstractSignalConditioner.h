@@ -17,8 +17,9 @@
 #define ABSTRACTSIGNALCONDITIONER_H_
 
 #include <omnetpp.h>
+#include "MiximBatteryAccess.h"
 
-class AbstractSignalConditioner : public cSimpleModule {
+class AbstractSignalConditioner : public MiximBatteryAccess {
 public:
     AbstractSignalConditioner();
     virtual ~AbstractSignalConditioner();

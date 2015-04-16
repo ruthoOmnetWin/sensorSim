@@ -30,4 +30,5 @@ moduleinterface SensingUnitInterface
        
 	gates:
 	    output toSignalConditioner;
+        input fromNodeProcessor;
 }

@@ -21,7 +21,7 @@ import sensortechnology.src.SensorNode.Memory.*;
 //
 // TODO auto-generated type
 //
-module AbstractSensorNode
+module AbstractSensorNode like SensorNodeInterface
 {
     parameters:
         bool hasTemperatureSensor;
@@ -67,9 +67,9 @@ module AbstractSensorNode
             PressureSensor.fromTransducerToNodeProcessor --> Processor.fromPressureSensor;
             LightSensor.fromTransducerToNodeProcessor --> Processor.fromLightSensor;
 
-            HumiditySensor.toTransducerFromNodeProcessor <-- Processor.toHumiditySensor;
-            TemperatureSensor.toTransducerFromNodeProcessor <-- Processor.toTemperatureSensor;
-            PressureSensor.toTransducerFromNodeProcessor <-- Processor.toPressureSensor;
-            LightSensor.toTransducerFromNodeProcessor <-- Processor.toLightSensor;
+            HumiditySensor.toSensingUnitFromNodeProcessor <-- Processor.toHumiditySensor;
+            TemperatureSensor.toSensingUnitFromNodeProcessor <-- Processor.toTemperatureSensor;
+            PressureSensor.toSensingUnitFromNodeProcessor <-- Processor.toPressureSensor;
+            LightSensor.toSensingUnitFromNodeProcessor <-- Processor.toLightSensor;
         }
 }

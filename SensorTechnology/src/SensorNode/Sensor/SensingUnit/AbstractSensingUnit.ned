@@ -30,4 +30,5 @@ simple AbstractSensingUnit like SensingUnitInterface
        
 	gates:
 	    output toSignalConditioner;
+        input fromNodeProcessor;
 }

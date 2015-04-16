@@ -17,8 +17,9 @@
 #define ABSTRACTPROCESSOR_H_
 
 #include <omnetpp.h>
+#include "MiximBatteryAccess.h"
 
-class AbstractProcessor : public cSimpleModule {
+class AbstractProcessor : public MiximBatteryAccess {
 public:
     AbstractProcessor();
     virtual ~AbstractProcessor();

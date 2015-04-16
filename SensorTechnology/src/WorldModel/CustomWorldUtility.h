@@ -53,6 +53,10 @@ protected:
 public:
     explicit CustomWorldUtility();
     virtual ~CustomWorldUtility();
+
+    //"connection" to other modules
+public:
+    float getValueByPosition(std::string, Coord*);
 };
 
 Define_Module(CustomWorldUtility);

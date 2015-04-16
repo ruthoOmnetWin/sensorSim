@@ -13,18 +13,26 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef ABSTRACTMEMORY_H_
-#define ABSTRACTMEMORY_H_
+package sensortechnology.src.SensorNode;
+import sensortechnology.src.SensorNode.Sensor.*;
+import sensortechnology.src.SensorNode.Processor.*;
+import sensortechnology.src.SensorNode.Memory.*;
 
-#include <omnetpp.h>
-#include "MiximBatteryAccess.h"
+//
+// TODO auto-generated type
+//
+moduleinterface SensorNodeInterface
+{
+    parameters:
+        bool hasTemperatureSensor;
+        bool hasHumiditySensor;
+        bool hasPressureSensor;
+        bool hasLightSensor;
+        int numSensors;
+        @class("AbstractSensorNode");
 
-class AbstractMemory : public MiximBatteryAccess {
-public:
-    AbstractMemory();
-    virtual ~AbstractMemory();
-};
+        //these are used to draw the overview of the model
+        bool fakeProcessor;
 
-Define_Module(AbstractMemory);
-
-#endif /* ABSTRACTMEMORY_H_ */
+        @display("bgb=245,450;i=block/ifcard");
+}

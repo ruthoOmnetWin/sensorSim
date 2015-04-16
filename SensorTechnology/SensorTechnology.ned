@@ -5,5 +5,5 @@ import sensortechnology.src.SensorNode.*;
 network SensorTechnology
 {
     submodules: 
-        AbstractSensorNode: AbstractSensorNode;
+        SensorNode: AbstractSensorNode;
 }

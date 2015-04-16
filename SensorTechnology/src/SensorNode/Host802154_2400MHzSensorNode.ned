@@ -66,10 +66,10 @@ module Host802154_2400MHzSensorNode extends Host802154_2400MHz
             PressureSensor.fromTransducerToNodeProcessor --> Processor.fromPressureSensor;
             LightSensor.fromTransducerToNodeProcessor --> Processor.fromLightSensor;
 
-            HumiditySensor.toTransducerFromNodeProcessor <-- Processor.toHumiditySensor;
-            TemperatureSensor.toTransducerFromNodeProcessor <-- Processor.toTemperatureSensor;
-            PressureSensor.toTransducerFromNodeProcessor <-- Processor.toPressureSensor;
-            LightSensor.toTransducerFromNodeProcessor <-- Processor.toLightSensor;
+            HumiditySensor.toSensingUnitFromNodeProcessor <-- Processor.toHumiditySensor;
+            TemperatureSensor.toSensingUnitFromNodeProcessor <-- Processor.toTemperatureSensor;
+            PressureSensor.toSensingUnitFromNodeProcessor <-- Processor.toPressureSensor;
+            LightSensor.toSensingUnitFromNodeProcessor <-- Processor.toLightSensor;
         }
 
 }
