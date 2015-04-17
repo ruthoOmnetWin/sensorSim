@@ -17,54 +17,73 @@ package sensortechnology.src.SensorNode;
 import sensortechnology.src.SensorNode.Sensor.*;
 import sensortechnology.src.SensorNode.Processor.*;
 import sensortechnology.src.SensorNode.Memory.*;
+import org.mixim.modules.node.WirelessNodeBatteryPlusTran;
 
 //
 // TODO auto-generated type
 //
-module AbstractSensorNode like SensorNodeInterface
+module AbstractSensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
 {
     parameters:
-        bool hasTemperatureSensor;
-        bool hasHumiditySensor;
-        bool hasPressureSensor;
-        bool hasLightSensor;
+        //these parameters are generated automatically
+        bool hasTemperatureSensor = default(false);
+        bool hasHumiditySensor = default(false);
+        bool hasPressureSensor = default(false);
+        bool hasLightSensor = default(false);
         int numSensors = default(0);
         int numSensorModules = 4;
-        int numDevices = 
-        	(
+        //memory, processor
+        //calculate number of energie accounts from sensor 
+        int numDevices = (
         		 (hasTemperatureSensor ? 1 : 0) 
             	+(hasHumiditySensor ? 1 : 0)
             	+(hasPressureSensor ? 1 : 0)
             	+(hasLightSensor ? 1 : 0)
         	) * numSensorModules //calculate number of energie accounts from sensor 
         	+ 2; //memory, processor
-        	
+    	battery.numDevices = numDevices;
+        int numHosts;
         @class("AbstractSensorNode");
-
         //these are used to draw the overview of the model
         bool fakeProcessor = false;
+        @display("bgb=447,450;i=block/ifcard");
 
-        @display("bgb=245,450;i=block/ifcard");
+        //custom parameters
+        applicationType = default("SensorApplLayer");
+        transportType = default("Aggregation");
+        nicType = default("Nic802154_TI_CC2420");  //type of used nic
+        arpType = default("org.mixim.modules.netw.ArpHost");
+
+        batteryStats.detail = default(false);
+        batteryStats.timeSeries = default(false);
+
+        battery.nominal = default(1000 mAh);
+        battery.capacity = default(battery.nominal);
+        battery.voltage = default(3 V);
+        battery.resolution = default(60 s);
+        battery.publishDelta = default(1);
+        battery.publishTime = default(battery.resolution);
+
     submodules:
         TemperatureSensor: TemperatureSensor if hasTemperatureSensor {
-            @display("p=75,51");
+            @display("p=275,51");
         }
         HumiditySensor: HumiditySensor if hasHumiditySensor {
-            @display("p=75,120");
+            @display("p=275,120");
         }
         PressureSensor: PressureSensor if hasPressureSensor {
-            @display("p=75,190");
+            @display("p=275,190");
         }
         LightSensor: LightSensor if hasLightSensor {
-            @display("p=75,260");
+            @display("p=275,260");
         }
         Memory: AbstractMemory {
-            @display("p=200,51");
+            @display("p=400,51");
         }
         //Processor is created inside the C++-Class in order to create the gates to the
         //different sensors dynamically by the input
         Processor: ExampleProcessor if fakeProcessor {
-            @display("p=200,159");
+            @display("p=400,159");
         }
     connections:
         //these connections will never be created, they only exist to draw the model

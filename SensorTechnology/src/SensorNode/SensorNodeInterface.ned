@@ -28,9 +28,10 @@ moduleinterface SensorNodeInterface
         bool hasHumiditySensor;
         bool hasPressureSensor;
         bool hasLightSensor;
-        int numSensors;
-        int numSensorModules;
-        int numDevices;
+        int numSensors; //for the battery, amount of different sensor
+        int numSensorModules; //for the battery, amount of elements inside one sensor
+        int numDevices; //for the battery, = numSensors*numSensorModules
+        int numHosts;
         @class("AbstractSensorNode");
 
         //these are used to draw the overview of the model

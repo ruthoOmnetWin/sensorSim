@@ -22,11 +22,6 @@ simple AbstractSensingUnit like SensingUnitInterface
 {       
     parameters:
         @display("i=block/filter");
-        string serialNumber;
-        string measuringUnit;
-        bool isActiveSensingUnit;
-        int standByPowerConsumtion;
-        int measurementPowerConsumption;
         double currentConsumption;
     	double energyConsumption;
        
