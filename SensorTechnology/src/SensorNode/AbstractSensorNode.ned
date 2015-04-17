@@ -29,6 +29,16 @@ module AbstractSensorNode like SensorNodeInterface
         bool hasPressureSensor;
         bool hasLightSensor;
         int numSensors = default(0);
+        int numSensorModules = 4;
+        int numDevices = 
+        	(
+        		 (hasTemperatureSensor ? 1 : 0) 
+            	+(hasHumiditySensor ? 1 : 0)
+            	+(hasPressureSensor ? 1 : 0)
+            	+(hasLightSensor ? 1 : 0)
+        	) * numSensorModules //calculate number of energie accounts from sensor 
+        	+ 2; //memory, processor
+        	
         @class("AbstractSensorNode");
 
         //these are used to draw the overview of the model

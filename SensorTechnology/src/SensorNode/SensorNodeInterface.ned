@@ -29,6 +29,8 @@ moduleinterface SensorNodeInterface
         bool hasPressureSensor;
         bool hasLightSensor;
         int numSensors;
+        int numSensorModules;
+        int numDevices;
         @class("AbstractSensorNode");
 
         //these are used to draw the overview of the model

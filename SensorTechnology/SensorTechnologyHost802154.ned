@@ -20,7 +20,7 @@ network SensorTechnologyHost802154
         **.mobility.constraintAreaMaxX = default(playgroundSizeX);
         **.mobility.constraintAreaMaxY = default(playgroundSizeY);
         **.mobility.constraintAreaMaxZ = default(playgroundSizeZ);
-        **.battery.numDevices = 4 * 1;
+        **.battery.numDevices = SensorNode.numDevices;
         @display("bgi=maps/germany,bgb,$playgroundSizeX,$playgroundSizeY,white;bgp=0,0;bgb=403,503");
 
     submodules:
