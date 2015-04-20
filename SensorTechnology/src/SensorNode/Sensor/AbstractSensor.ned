@@ -39,23 +39,15 @@ module AbstractSensor like SensorInterface
 
     submodules:
         SensingUnit: <"SensingUnit"+type> like SensingUnitInterface {
-            currentConsumption = 0.001;
-    		energyConsumption = 100;
             @display("p=100,50");
         }
         SignalConditioner: <"SignalConditioner"+type> like SignalConditionerInterface {
-            currentConsumption = 0.001;
-    		energyConsumption = 100;
             @display("p=100,120");
         }
         SignalConverter: <"SignalConverter"+type> like SignalConverterInterface {
-            currentConsumption = 0.001;
-    		energyConsumption = 100;
             @display("p=100,190");
         }
         Transducer: <"Transducer"+type> like TransducerInterface {
-            currentConsumption = 0.001;
-    		energyConsumption = 100;
             @display("p=100,260");
         }
 

@@ -31,6 +31,7 @@ public:
     virtual ~AbstractSensingUnit();
     float readData();
     void initialize(int stage);
+    void handleHostState(const HostState &state);
 };
 
 Define_Module(AbstractSensingUnit);

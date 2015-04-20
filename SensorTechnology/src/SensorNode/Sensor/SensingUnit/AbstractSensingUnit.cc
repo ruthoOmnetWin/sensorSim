@@ -38,6 +38,11 @@ void AbstractSensingUnit::initialize(int stage) {
     }
 }
 
+void AbstractSensingUnit::handleHostState(const HostState &state)
+{
+    EV << "handling host state" << endl;
+}
+
 float AbstractSensingUnit::readData() {
     Coord *position = new Coord;
     return world->getValueByPosition("Temperature", position);
