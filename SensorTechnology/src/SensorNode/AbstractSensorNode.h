@@ -24,6 +24,7 @@ public:
     virtual ~AbstractSensorNode();
 protected:
     void initialize(int);
+    void handleMessage(cMessage *msg);
     void setNumGates();
     void createProcessor();
     void connectProcessorAndMemory();

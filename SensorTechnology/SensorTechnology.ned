@@ -7,18 +7,20 @@ import org.mixim.base.modules.BaseNetwork;
 network SensorTechnology extends BaseNetwork
 {
     parameters:
-        SensorNode[0].hasTemperatureSensor = true;
-        SensorNode[1].hasPressureSensor = true;
-        SensorNode[1].hasTemperatureSensor = true;
         int numHosts = 10;
-        world.createData = false;
+        world.createData = true;
+        int test = 0;
         
         cmType = default("org.mixim.base.connectionManager.ConnectionManager");
         wuType = default("CustomWorldUtility");
         
     submodules: 
-        SensorNode[numHosts]: AbstractSensorNode {
+        SensorNode[numHosts/2]: AbstractSensorNode {
             numHosts = numHosts;
+        }
+        TempNode[numHosts/2]: AbstractSensorNode {
+            numHosts = numHosts;
+            hasTemperatureSensor = true;
         }
         
     connections allowunconnected:

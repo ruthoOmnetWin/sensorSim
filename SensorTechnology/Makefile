@@ -29,7 +29,6 @@ INCLUDE_PATH = \
     -I$(MIXIM_PROJ)/src/inet_stub/mobility/models \
     -I$(MIXIM_PROJ)/src/inet_stub/networklayer/common \
     -I. \
-    -Iresults \
     -Isrc \
     -Isrc/ExtendedMessage \
     -Isrc/SensorNode \
@@ -151,7 +150,6 @@ clean:
 	$(Q)-rm -rf $O
 	$(Q)-rm -f SensorTechnology SensorTechnology.exe libSensorTechnology.so libSensorTechnology.a libSensorTechnology.dll libSensorTechnology.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
-	$(Q)-rm -f results/*_m.cc results/*_m.h
 	$(Q)-rm -f src/*_m.cc src/*_m.h
 	$(Q)-rm -f src/ExtendedMessage/*_m.cc src/ExtendedMessage/*_m.h
 	$(Q)-rm -f src/SensorNode/*_m.cc src/SensorNode/*_m.h
@@ -173,7 +171,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNode/*.cc src/SensorNode/Battery/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/RadioModule/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc src/WorldModel/data/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNode/*.cc src/SensorNode/Battery/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/RadioModule/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc src/WorldModel/data/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/src/ExtendedMessage/ExtendedMessage_m.o: src/ExtendedMessage/ExtendedMessage_m.cc \
@@ -187,7 +185,8 @@ $O/src/SensorNode/Memory/AbstractMemory.o: src/SensorNode/Memory/AbstractMemory.
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	src/SensorNode/Memory/AbstractMemory.h
+	src/SensorNode/Memory/AbstractMemory.h \
+	src/SensorNode/Sensor/AbstractBatteryAccess.h
 $O/src/SensorNode/Processor/AbstractProcessor.o: src/SensorNode/Processor/AbstractProcessor.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
@@ -195,7 +194,8 @@ $O/src/SensorNode/Processor/AbstractProcessor.o: src/SensorNode/Processor/Abstra
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	src/SensorNode/Processor/AbstractProcessor.h
+	src/SensorNode/Processor/AbstractProcessor.h \
+	src/SensorNode/Sensor/AbstractBatteryAccess.h
 $O/src/SensorNode/Sensor/AbstractBatteryAccess.o: src/SensorNode/Sensor/AbstractBatteryAccess.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \

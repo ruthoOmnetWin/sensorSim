@@ -23,6 +23,8 @@ simple AbstractMemory
     parameters:
         xml keyValueMemory = xml("<data></data>");
         @display("i=block/buffer2");
+        double currentConsumption;
+    	double energyConsumption;
     gates:
         //inout connectToProcessor;
 }

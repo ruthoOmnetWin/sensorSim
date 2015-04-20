@@ -17,9 +17,9 @@
 #define ABSTRACTMEMORY_H_
 
 #include <omnetpp.h>
-#include "MiximBatteryAccess.h"
+#include "AbstractBatteryAccess.h"
 
-class AbstractMemory : public MiximBatteryAccess {
+class AbstractMemory : public AbstractBatteryAccess {
 public:
     AbstractMemory();
     virtual ~AbstractMemory();

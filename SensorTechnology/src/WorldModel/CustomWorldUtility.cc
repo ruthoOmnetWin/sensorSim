@@ -63,7 +63,7 @@ void CustomWorldUtility::initialize(int stage)
 
     if (par("createData")) {
         EV << "Generating New Environment Data" << endl;
-        //this->generateEnvironmentData();
+        this->generateEnvironmentData();
     } else {
 
         //if any of the 4 xml files doesn't exists new environment data will be created
@@ -96,7 +96,7 @@ void CustomWorldUtility::initialize(int stage)
         }
         if (!filesExist) {
             EV << "Generating New Environment Data due to missing files" << endl;
-            //this->generateEnvironmentData();
+            this->generateEnvironmentData();
         }
     }
 
@@ -228,7 +228,7 @@ void CustomWorldUtility::generateEnvironmentData()
 
         ofstream myfile;
 
-        string filename = "WorldModel/data/";
+        string filename = par("basePath").stringValue();
         stringstream data;
         filename += filenames[files];
         filename += ".xml";

@@ -128,3 +128,7 @@ void AbstractSensorNode::connectProcessorAndMemory() {
     outMemoryToProcessor->connectTo(inProcessorFromMemory);
     outProcessorToMemory->connectTo(inMemoryFromProcessor);
 }
+
+void AbstractSensorNode::handleMessage(cMessage *msg) {
+    EV << "Received Message"<< endl;
+}

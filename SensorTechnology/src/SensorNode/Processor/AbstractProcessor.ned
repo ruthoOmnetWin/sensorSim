@@ -23,5 +23,7 @@ simple AbstractProcessor
     parameters:
         int numGates = default(0);
         @display("i=device/cpu");
-    gates:
+        double currentConsumption;
+    	double energyConsumption;    
+	gates:
 }

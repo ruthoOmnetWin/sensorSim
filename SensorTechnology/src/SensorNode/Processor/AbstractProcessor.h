@@ -17,12 +17,13 @@
 #define ABSTRACTPROCESSOR_H_
 
 #include <omnetpp.h>
-#include "MiximBatteryAccess.h"
+#include "AbstractBatteryAccess.h"
 
-class AbstractProcessor : public MiximBatteryAccess {
+class AbstractProcessor : public AbstractBatteryAccess {
 public:
     AbstractProcessor();
     virtual ~AbstractProcessor();
+    void handleMessage();
 };
 
 Define_Module(AbstractProcessor);
