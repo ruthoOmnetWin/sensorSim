@@ -15,14 +15,14 @@ network SensorTechnology extends BaseNetwork
         wuType = default("CustomWorldUtility");
         
     submodules: 
-        SensorNode[numHosts/2]: AbstractSensorNode {
+        SensorNode[numHosts/3]: AbstractSensorNode {
             numHosts = numHosts;
         }
-        TempNode[numHosts/2]: AbstractSensorNode {
+        TempNode[numHosts/3]: AbstractSensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
         }
-        AllNode[numHosts/2]: AbstractSensorNode {
+        AllNode[numHosts/3]: AbstractSensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
             hasPressureSensor = true;

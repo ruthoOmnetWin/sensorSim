@@ -17,6 +17,7 @@
 #define ABSTRACTSENSORNODE_H_
 
 #include <omnetpp.h>
+#include "AbstractProcessor.h"
 
 class AbstractSensorNode : public cModule {
 public:
@@ -24,6 +25,7 @@ public:
     virtual ~AbstractSensorNode();
 protected:
     void initialize(int);
+    void finish();
     void handleMessage(cMessage *msg);
     void setNumGates();
     void createProcessor();

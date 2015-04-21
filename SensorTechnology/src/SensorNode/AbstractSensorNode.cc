@@ -132,3 +132,15 @@ void AbstractSensorNode::connectProcessorAndMemory() {
 void AbstractSensorNode::handleMessage(cMessage *msg) {
     EV << "Received Message"<< endl;
 }
+
+void AbstractSensorNode::finish()
+{
+    AbstractProcessor *processor = (AbstractProcessor*) getSubmodule("Processor");
+    processor->getState();
+    simtime_t time = processor->getBatteryEmptiedTime();
+    if (time != 0) {
+        EV << "Battery emtpied at " << time.str() << endl;
+    } else {
+        EV << "Battery is not emtpy" << endl;
+    }
+}
