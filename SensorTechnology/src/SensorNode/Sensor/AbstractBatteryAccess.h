@@ -18,6 +18,7 @@
 
 #include <omnetpp.h>
 #include <MiximBatteryAccess.h>
+#include <string.h>
 
 class AbstractBatteryAccess : public MiximBatteryAccess {
 protected:
@@ -28,6 +29,7 @@ public:
     virtual ~AbstractBatteryAccess();
     void initialize(int stage);
     void draw();
+    virtual void handleHostState(const HostState &state);
 };
 
 #endif /* ABSTRACTBATTERYACCESS_H_ */

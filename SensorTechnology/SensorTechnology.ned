@@ -22,6 +22,13 @@ network SensorTechnology extends BaseNetwork
             numHosts = numHosts;
             hasTemperatureSensor = true;
         }
+        AllNode[numHosts/2]: AbstractSensorNode {
+            numHosts = numHosts;
+            hasTemperatureSensor = true;
+            hasPressureSensor = true;
+            hasHumiditySensor = true;
+            hasLightSensor = true;
+        }
         
     connections allowunconnected:
 }

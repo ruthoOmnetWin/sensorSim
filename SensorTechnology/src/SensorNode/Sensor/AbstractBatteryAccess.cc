@@ -27,13 +27,22 @@ AbstractBatteryAccess::~AbstractBatteryAccess() {
 void AbstractBatteryAccess::initialize(int stage) {
     MiximBatteryAccess::initialize(stage);
     if (stage == 0) {
-        registerWithBattery("Transducer", 1);
+        const char * name = this->getFullName();
+        std::string stringName = std::string(name);
+        registerWithBattery(stringName, 1);
         EV << "Registered with Battery" << endl;
         currentOverTime = par("currentConsumption").doubleValue();
         energiePerOperation = par("energyConsumption").doubleValue();
         drawCurrent(currentOverTime, 0);
         //HostState::States state = battery->getState();
     }
+}
+
+void AbstractBatteryAccess::handleHostState(const HostState &state)
+{
+    HostState::States hostState = state.get();
+
+    EV << "host state changed to:" << hostState << endl;
 }
 
 void AbstractBatteryAccess::draw() {
