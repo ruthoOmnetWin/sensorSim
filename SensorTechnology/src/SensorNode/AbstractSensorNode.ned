@@ -96,7 +96,7 @@ module AbstractSensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInt
             @display("p=400,159");
         }
     connections:
-        //these connections will never be created, they only exist to draw the model
+        //these connections will never be created, they only exist to draw the models design
         //
         //the real connections between processor and sensor are created dynamically because 
         //only the gates needed are created in order to avoid unused (not connected) gates

@@ -18,6 +18,8 @@
 
 #include <omnetpp.h>
 #include <Coord.h>
+#include <FindModule.h>
+#include <BasePhyLayer.h>
 #include "AbstractBatteryAccess.h"
 #include "CustomWorldUtility.h"
 
@@ -25,12 +27,14 @@ class AbstractSensingUnit : public AbstractBatteryAccess {
 protected:
     Coord *Position;
     CustomWorldUtility *world;
+    ChannelMobilityPtrType pMobType;
     std::string type;
 public:
     AbstractSensingUnit();
     virtual ~AbstractSensingUnit();
     float readData();
     void initialize(int stage);
+    Coord* getLocation();
 };
 
 Define_Module(AbstractSensingUnit);

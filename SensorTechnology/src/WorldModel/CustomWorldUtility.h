@@ -25,7 +25,8 @@
 class CustomWorldUtility : public BaseWorldUtility, public StatisticsInterface
 {
 protected:
-    int** readXML(int);
+    int*** readXML(int);
+    void setValue(int*** &parameter, int*** &data);
     void setTemperature();
     void setPressure();
     void setHumidity();
@@ -39,24 +40,25 @@ protected:
     int* generateLight(int size);
     void updateDisplay();
     void finish();
-    void destroySensorData();
+    void destroySensorData(int*** &);
 protected:
     int numNodes;
     //sensor (world) data
-    int** temperatureArray;
-    int** pressureArray;
-    int** humidityArray;
-    int** lightArray;
+    int*** temperatureArray;
+    int*** pressureArray;
+    int*** humidityArray;
+    int*** lightArray;
     //meta information about data
     int sizeX;
     int sizeY;
+    int sizeZ;
 public:
     explicit CustomWorldUtility();
     virtual ~CustomWorldUtility();
 
     //"connection" to other modules
 public:
-    float getValueByPosition(std::string, Coord*);
+    int getValueByPosition(std::string, Coord*);
 };
 
 Define_Module(CustomWorldUtility);

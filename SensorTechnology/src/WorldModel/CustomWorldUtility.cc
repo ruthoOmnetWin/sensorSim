@@ -32,6 +32,7 @@ CustomWorldUtility::CustomWorldUtility() : BaseWorldUtility()
 {
     this->sizeX = 0;
     this->sizeY = 0;
+    this->sizeZ = 0;
 
     this->temperatureArray = 0;
     this->pressureArray = 0;
@@ -49,7 +50,10 @@ CustomWorldUtility::CustomWorldUtility() : BaseWorldUtility()
 
 CustomWorldUtility::~CustomWorldUtility()
 {
-    this->destroySensorData();
+    this->destroySensorData(temperatureArray);
+    this->destroySensorData(pressureArray);
+    this->destroySensorData(lightArray);
+    this->destroySensorData(humidityArray);
 }
 
 void CustomWorldUtility::initialize(int stage)
@@ -58,8 +62,9 @@ void CustomWorldUtility::initialize(int stage)
     if (stage == 0) {
     ev << "Initializing World Model" << endl;
 
-    this->sizeX = par("playgroundSizeX");
-    this->sizeY = par("playgroundSizeY");
+    this->sizeX = (int)par("playgroundSizeX").longValue()/par("dataGranularity").longValue();
+    this->sizeY = (int)par("playgroundSizeY").longValue()/par("dataGranularity").longValue();
+    this->sizeZ = (int)par("playgroundSizeZ").longValue()/par("dataGranularity").longValue();
 
     if (par("createData")) {
         EV << "Generating New Environment Data" << endl;
@@ -68,27 +73,27 @@ void CustomWorldUtility::initialize(int stage)
 
         //if any of the 4 xml files doesn't exists new environment data will be created
         bool filesExist = true;
-        ifstream ifile("WorldModel/data/temperature.xml");
+        ifstream ifile("src/WorldModel/data/temperature.xml");
         if (!ifile) {
             filesExist = false;
         }
         ifile.close();
         if (filesExist) {
-            ifstream ifile("WorldModel/data/pressure.xml");
+            ifstream ifile("src/WorldModel/data/pressure.xml");
             if (!ifile) {
                 filesExist = false;
             }
             ifile.close();
         }
         if (filesExist) {
-            ifstream ifile("WorldModel/data/humidity.xml");
+            ifstream ifile("src/WorldModel/data/humidity.xml");
             if (!ifile) {
                 filesExist = false;
             }
             ifile.close();
         }
         if (filesExist) {
-            ifstream ifile("WorldModel/data/light.xml");
+            ifstream ifile("src/WorldModel/data/light.xml");
             if (!ifile) {
                 filesExist = false;
             }
@@ -126,59 +131,46 @@ ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)
     return msg;
 }
 
-void CustomWorldUtility::setTemperature()
+void CustomWorldUtility::setValue(int*** &parameter, int*** &data)
 {
-    int** data = readXML(xmlTemperature);
-    this->temperatureArray = new int*[this->sizeX];
+    parameter = new int**[this->sizeX];
     for (int i = 0; i < this->sizeX; i++) {
-        this->temperatureArray[i] = new int[this->sizeY];
+        parameter[i] = new int*[this->sizeY];
         for (int j = 0; j < this->sizeY; j++) {
-            this->temperatureArray[i][j] = data[i][j];
+            parameter[i][j] = new int[this->sizeZ];
+            for (int k = 0; k < this->sizeZ; k++) {
+                parameter[i][j][k] = data[i][j][k];
+            }
         }
     }
     delete[] data;
+}
+
+void CustomWorldUtility::setTemperature()
+{
+    int*** data = readXML(xmlTemperature);
+    setValue(this->temperatureArray, data);
 }
 
 void CustomWorldUtility::setPressure()
 {
-    int** data = readXML(xmlPressure);
-    this->pressureArray = new int*[this->sizeX];
-    for (int i = 0; i < this->sizeX; i++) {
-        this->pressureArray[i] = new int[this->sizeY];
-        for (int j = 0; j < this->sizeY; j++) {
-            this->pressureArray[i][j] = data[i][j];
-        }
-    }
-    delete[] data;
+    int*** data = readXML(xmlPressure);
+    setValue(this->pressureArray, data);
 }
 
 void CustomWorldUtility::setHumidity()
 {
-    int** data = readXML(xmlHumidity);
-    this->humidityArray= new int*[this->sizeX];
-    for (int i = 0; i < this->sizeX; i++) {
-        this->humidityArray[i] = new int[this->sizeY];
-        for (int j = 0; j < this->sizeY; j++) {
-            this->humidityArray[i][j] = data[i][j];
-        }
-    }
-    delete[] data;
+    int*** data = readXML(xmlHumidity);
+    setValue(this->humidityArray, data);
 }
 
 void CustomWorldUtility::setLight()
 {
-    int** data = readXML(xmlLight);
-    this->lightArray = new int*[this->sizeX];
-    for (int i = 0; i < this->sizeX; i++) {
-        this->lightArray[i] = new int[this->sizeY];
-        for (int j = 0; j < this->sizeY; j++) {
-            this->lightArray[i][j] = data[i][j];
-        }
-    }
-    delete[] data;
+    int*** data = readXML(xmlLight);
+    setValue(this->lightArray, data);
 }
 
-int** CustomWorldUtility::readXML(int fileName)
+int*** CustomWorldUtility::readXML(int fileName)
 {
     // get the xml from the parameter, return type cXMLElement
     cXMLElement *rootE;
@@ -198,16 +190,28 @@ int** CustomWorldUtility::readXML(int fileName)
     cXMLElementList nListRows = rootE->getChildren();
     int amountRows = nListRows.size();
 
-    int** data = new int*[amountRows];
+    int*** data = new int**[amountRows];
     for (int i = 0; i < amountRows; i++){
         //this is a row as cXMLElement
         cXMLElement* nListRowArray = nListRows[i];
         //this is a list of an entire row as cXMLElements
         cXMLElementList nLeafElementsList = nListRowArray->getChildren();
         int amountColumns = nLeafElementsList.size();
-        data[i] = new int[amountColumns];
+        data[i] = new int*[amountColumns];
         for (int j = 0; j < amountColumns; j++) {
-            data[i][j] = atoi(nLeafElementsList[i]->getNodeValue());
+
+            //this is a row as cXMLElement
+            cXMLElement* nListRowArrayZ = nLeafElementsList[i];
+            //this is a list of an entire row as cXMLElements
+            cXMLElementList nLeafElementsListZ = nListRowArrayZ->getChildren();
+            int amountColumnsZ = nLeafElementsListZ.size();
+            data[i][j] = new int[amountColumnsZ];
+
+            for (int k = 0; k < amountColumnsZ; k++) {
+
+                int val = atoi(nLeafElementsListZ[k]->getNodeValue());
+                data[i][j][k] = val;
+            }
         }
     }
 
@@ -216,9 +220,7 @@ int** CustomWorldUtility::readXML(int fileName)
 
 void CustomWorldUtility::generateEnvironmentData()
 {
-    int sizeA = this->sizeX;
-    int sizeB = this->sizeY;
-    int size = sizeA * sizeB;
+    int size = sizeX * sizeY * sizeZ;
     string filenames[4] = {"humidity", "pressure", "temperature", "light"};
 
     int numberOfFiles = sizeof(filenames)/sizeof(filenames[0]);
@@ -251,13 +253,21 @@ void CustomWorldUtility::generateEnvironmentData()
             newData = generateLight(size);
         }
 
-        for (int i = 0; i < sizeA; i++) {
-            data << "<pos" << i << ">";
-            for (int j = 0; j < sizeB; j++) {
-                data << "<pos" << j << ">" << newData[((i+1)*(j+1))-1] << "</pos" << j << ">";
+        int counter = 0;
+        for (int i = 0; i < sizeX; i++) {
+            data << "<posX" << i << ">";
+            for (int j = 0; j < sizeY; j++) {
+                data << "<posY" << j << ">";
+                for (int k = 0; k < sizeZ; k++) {
+                    data << "<posZ" << k << ">" << newData[counter] << "</posZ" << k << ">";
+                    counter++;
+                }
+                data << "</posY" << j << ">";
             }
-            data << "</pos" << i << ">" << endl;
+            data << "</posX" << i << ">" << endl;
         }
+
+
         delete[] newData;
 
         myfile.open (filenameChar);
@@ -268,7 +278,7 @@ void CustomWorldUtility::generateEnvironmentData()
 
     }
 
-    cout << "Done creating" << endl;
+    EV << "Done creating" << endl;
 
 }
 
@@ -355,35 +365,23 @@ void CustomWorldUtility::finish()
     hopCountStats.recordAs("hop count");
 }
 
-void CustomWorldUtility::destroySensorData()
+void CustomWorldUtility::destroySensorData(int*** &arr)
 {
     for (int i = 0; i < this->sizeX; i++) {
-        delete[] temperatureArray[i];
-        temperatureArray[i] = NULL;
+        for (int j = 0; j < this->sizeY; j++) {
+            delete[] arr[i][j];
+            arr[i][j] = NULL;
+        }
+        delete[] arr[i];
+        arr[i] = NULL;
     }
-    //delete[] temperatureArray;
-
-    for (int i = 0; i < this->sizeX; i++) {
-        delete[] pressureArray[i];
-        pressureArray[i] = NULL;
-    }
-    //delete[] pressureArray;
-
-    for (int i = 0; i < this->sizeX; i++) {
-        delete[] lightArray[i];
-        lightArray[i] = NULL;
-    }
-    //delete[] lightArray;
-
-    for (int i = 0; i < this->sizeX; i++) {
-        delete[] humidityArray[i];
-        humidityArray[i] = NULL;
-    }
-    //delete[] humidityArray;
+    delete[] arr;
+    arr = NULL;
 }
 
-float CustomWorldUtility::getValueByPosition(std::string type, Coord *position)
+int CustomWorldUtility::getValueByPosition(std::string type, Coord *position)
 {
-    float data = 1.0;
-    return data;
+    int*** data = readXML(xmlTemperature);
+    int dataAtPosition = data[(int)position->x][(int)position->y][(int)position->z];
+    return dataAtPosition;
 }

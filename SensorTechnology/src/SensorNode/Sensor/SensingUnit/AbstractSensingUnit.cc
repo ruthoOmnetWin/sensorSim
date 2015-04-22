@@ -14,8 +14,6 @@
 // 
 
 #include <AbstractSensingUnit.h>
-#include <CustomWorldUtility.h>
-#include <FindModule.h>
 
 AbstractSensingUnit::AbstractSensingUnit() {
     // TODO Auto-generated constructor stub
@@ -30,15 +28,31 @@ void AbstractSensingUnit::initialize(int stage) {
     AbstractBatteryAccess::initialize(stage);
     if (stage == 0) {
         CustomWorldUtility *World = FindModule<CustomWorldUtility*>::findGlobalModule();
+
+        BasePhyLayer* phy = FindModule<BasePhyLayer*>::findGlobalModule();
+        pMobType = phy->getMobilityModule();
         //save world and provide data inside world
         this->world = World;
         EV << "CustomWorldUtility found" << endl;
     } else if (stage == 1) {
-
+        //float value = readData();
+        //EV << "Read data " << value << endl;
     }
 }
 
+Coord* AbstractSensingUnit::getLocation()
+{
+    Coord* back;
+    if(pMobType != NULL){
+        back = new Coord(pMobType->getCurrentPosition());
+        return back;
+    }
+    return new Coord();
+}
+
 float AbstractSensingUnit::readData() {
-    Coord *position = new Coord;
+    draw();
+    Coord *position = getLocation();
+    //TODO check for the type
     return world->getValueByPosition("Temperature", position);
 }

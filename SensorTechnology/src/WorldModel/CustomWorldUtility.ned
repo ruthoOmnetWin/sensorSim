@@ -20,6 +20,7 @@ simple CustomWorldUtility extends BaseWorldUtility
 {
     parameters:
         bool createData;
+        int dataGranularity;
         string basePath = "src/WorldModel/data/";
         xml xmlTemperature = xmldoc("src/WorldModel/data/temperature.xml");
         xml xmlPressure = xmldoc("src/WorldModel/data/pressure.xml");

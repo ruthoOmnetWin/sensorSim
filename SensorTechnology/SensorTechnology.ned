@@ -7,7 +7,7 @@ import org.mixim.base.modules.BaseNetwork;
 network SensorTechnology extends BaseNetwork
 {
     parameters:
-        int numHosts = 10;
+        int numHosts = 9;
         world.createData = true;
         int test = 0;
         
