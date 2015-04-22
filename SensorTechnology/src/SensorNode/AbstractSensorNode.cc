@@ -77,16 +77,16 @@ void AbstractSensorNode::createProcessor() {
     //add gates
     //connect them to the sensors
     if (par("hasTemperatureSensor")) {
-        createProcessorsGatesAndConnect(*processor, "Temperature");
+        connectProcessorAndSensor(*processor, "Temperature");
     }
     if (par("hasHumiditySensor")) {
-        createProcessorsGatesAndConnect(*processor, "Humidity");
+        connectProcessorAndSensor(*processor, "Humidity");
     }
     if (par("hasPressureSensor")) {
-        createProcessorsGatesAndConnect(*processor, "Pressure");
+        connectProcessorAndSensor(*processor, "Pressure");
     }
     if (par("hasLightSensor")) {
-        createProcessorsGatesAndConnect(*processor, "Light");
+        connectProcessorAndSensor(*processor, "Light");
     }
 
     processor->buildInside();
@@ -96,7 +96,7 @@ void AbstractSensorNode::createProcessor() {
  * dynamically creates gates of the processor depending on the sensor type given (by name)
  * connects these gates to the gates of the given sensor type
  */
-void AbstractSensorNode::createProcessorsGatesAndConnect(cModule &processor, std::string SensorType) {
+void AbstractSensorNode::connectProcessorAndSensor(cModule &processor, std::string SensorType) {
     //new gates
     cGate *fromSensor = processor.addGate(("from" + SensorType + "Sensor").c_str(), cGate::INPUT);
     cGate *toSensor = processor.addGate(("to" + SensorType + "Sensor").c_str(), cGate::OUTPUT);
@@ -105,6 +105,9 @@ void AbstractSensorNode::createProcessorsGatesAndConnect(cModule &processor, std
     cGate *sensorOut = Sensor->gate("fromTransducerToNodeProcessor");
     cGate *sensorIn = Sensor->gate("toSensingUnitFromNodeProcessor");
     //connect
+    //no need to set channels here, since they are already defined inside AnstractSensors ned file and
+    //fromTransducerToNodeProcessor is just a forwarding port, so it just needs on channel
+    //Transducer.toNodeProcessor --> ned.DatarateChannel {datarate=dataBandwidth;} --> fromTransducerToNodeProcessor;
     sensorOut->connectTo(fromSensor);
     toSensor->connectTo(sensorIn);
     EV << "Created connections from " << SensorType << "-sensor to the processor." << endl;
@@ -125,8 +128,8 @@ void AbstractSensorNode::connectProcessorAndMemory() {
     cGate *inProcessorFromMemory = Processor->gate("connectToMemory$i");
     cGate *outProcessorToMemory = Processor->gate("connectToMemory$o");
     //connect
-    outMemoryToProcessor->connectTo(inProcessorFromMemory);
-    outProcessorToMemory->connectTo(inMemoryFromProcessor);
+    outMemoryToProcessor->connectTo(inProcessorFromMemory, getDataChannel());
+    outProcessorToMemory->connectTo(inMemoryFromProcessor, getDataChannel());
 }
 
 void AbstractSensorNode::handleMessage(cMessage *msg) {
@@ -136,11 +139,30 @@ void AbstractSensorNode::handleMessage(cMessage *msg) {
 void AbstractSensorNode::finish()
 {
     AbstractProcessor *processor = (AbstractProcessor*) getSubmodule("Processor");
-    processor->getState();
     simtime_t time = processor->getBatteryEmptiedTime();
     if (time != 0) {
         EV << "Battery emtpied at " << time.str() << endl;
     } else {
         EV << "Battery is not emtpy" << endl;
     }
+}
+
+/**
+ * creates a new channel with the datarate defined as dataBandwidth
+ */
+cDatarateChannel* AbstractSensorNode::getDataChannel()
+{
+    cDatarateChannel* DataChannel = cDatarateChannel::create("DataChannel");
+    DataChannel->setDatarate(par("dataBandwidth").doubleValue());
+    return DataChannel;
+}
+
+/**
+ * creates a new channel with the datarate defined as controlBandwidth
+ */
+cDatarateChannel* AbstractSensorNode::getControlChannel()
+{
+    cDatarateChannel* ControlChannel = cDatarateChannel::create("ControlChannel");
+    ControlChannel->setDatarate(par("controlBandwidth").doubleValue());
+    return ControlChannel;
 }

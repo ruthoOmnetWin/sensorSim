@@ -25,7 +25,9 @@ import org.mixim.modules.node.WirelessNodeBatteryPlusTran;
 module AbstractSensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
 {
     parameters:
-        //these parameters are generated automatically
+        //these parameters are generated automatically, from parent module, or via ini-file
+        double dataBandwidth = default(0bps) @unit(bps);
+        double controlBandwidth = default(0bps) @unit(bps);
         bool hasTemperatureSensor = default(false);
         bool hasHumiditySensor = default(false);
         bool hasPressureSensor = default(false);
@@ -67,15 +69,23 @@ module AbstractSensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInt
     submodules:
         TemperatureSensor: TemperatureSensor if hasTemperatureSensor {
             @display("p=275,51");
+            dataBandwidth = dataBandwidth;
+            controlBandwidth = controlBandwidth;
         }
         HumiditySensor: HumiditySensor if hasHumiditySensor {
             @display("p=275,120");
+            dataBandwidth = dataBandwidth;
+            controlBandwidth = controlBandwidth;
         }
         PressureSensor: PressureSensor if hasPressureSensor {
             @display("p=275,190");
+            dataBandwidth = dataBandwidth;
+            controlBandwidth = controlBandwidth;
         }
         LightSensor: LightSensor if hasLightSensor {
             @display("p=275,260");
+            dataBandwidth = dataBandwidth;
+            controlBandwidth = controlBandwidth;
         }
         Memory: AbstractMemory {
             @display("p=400,51");
@@ -91,14 +101,14 @@ module AbstractSensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInt
         //the real connections between processor and sensor are created dynamically because 
         //only the gates needed are created in order to avoid unused (not connected) gates
         if fakeProcessor {
-            HumiditySensor.fromTransducerToNodeProcessor --> Processor.fromHumiditySensor;
-            TemperatureSensor.fromTransducerToNodeProcessor --> Processor.fromTemperatureSensor;
-            PressureSensor.fromTransducerToNodeProcessor --> Processor.fromPressureSensor;
-            LightSensor.fromTransducerToNodeProcessor --> Processor.fromLightSensor;
+            HumiditySensor.fromTransducerToNodeProcessor --> ned.DatarateChannel --> Processor.fromHumiditySensor;
+            TemperatureSensor.fromTransducerToNodeProcessor --> ned.DatarateChannel --> Processor.fromTemperatureSensor;
+            PressureSensor.fromTransducerToNodeProcessor --> ned.DatarateChannel --> Processor.fromPressureSensor;
+            LightSensor.fromTransducerToNodeProcessor --> ned.DatarateChannel --> Processor.fromLightSensor;
 
-            HumiditySensor.toSensingUnitFromNodeProcessor <-- Processor.toHumiditySensor;
-            TemperatureSensor.toSensingUnitFromNodeProcessor <-- Processor.toTemperatureSensor;
-            PressureSensor.toSensingUnitFromNodeProcessor <-- Processor.toPressureSensor;
-            LightSensor.toSensingUnitFromNodeProcessor <-- Processor.toLightSensor;
+            HumiditySensor.toSensingUnitFromNodeProcessor <-- ned.DatarateChannel <-- Processor.toHumiditySensor;
+            TemperatureSensor.toSensingUnitFromNodeProcessor <-- ned.DatarateChannel <-- Processor.toTemperatureSensor;
+            PressureSensor.toSensingUnitFromNodeProcessor <-- ned.DatarateChannel <-- Processor.toPressureSensor;
+            LightSensor.toSensingUnitFromNodeProcessor <-- ned.DatarateChannel <-- Processor.toLightSensor;
         }
 }

@@ -17,12 +17,15 @@
 #define ABSTRACTSENSORNODE_H_
 
 #include <omnetpp.h>
+#include <FindModule.h>
 #include "AbstractProcessor.h"
 
 class AbstractSensorNode : public cModule {
 public:
     AbstractSensorNode();
     virtual ~AbstractSensorNode();
+    cDatarateChannel* getControlChannel();
+    cDatarateChannel* getDataChannel();
 protected:
     void initialize(int);
     void finish();
@@ -30,7 +33,7 @@ protected:
     void setNumGates();
     void createProcessor();
     void connectProcessorAndMemory();
-    void createProcessorsGatesAndConnect(cModule&, std::string);
+    void connectProcessorAndSensor(cModule&, std::string);
 };
 
 Define_Module(AbstractSensorNode);

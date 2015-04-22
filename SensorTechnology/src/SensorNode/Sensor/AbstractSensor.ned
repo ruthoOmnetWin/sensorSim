@@ -22,6 +22,7 @@ import sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInt
 import sensortechnology.src.SensorNode.Sensor.SignalConverter.AbstractSignalConverter;
 import sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface;
 import sensortechnology.src.SensorNode.Sensor.Transducer.AbstractTransducer;
+
 //
 // TODO auto-generated module
 //
@@ -29,6 +30,8 @@ module AbstractSensor like SensorInterface
 {
     parameters:
         string type;
+        double dataBandwidth = default(0bps) @unit(bps);
+        double controlBandwidth = default(0bps) @unit(bps);
 
         @display("i=block/join");
     gates:
@@ -52,10 +55,10 @@ module AbstractSensor like SensorInterface
         }
 
     connections:
-        SensingUnit.toSignalConditioner --> ned.DelayChannel --> SignalConditioner.fromSensingUnit;
-        SignalConditioner.toSignalConverter --> ned.DelayChannel --> SignalConverter.fromSignalConditioner;
-        SignalConverter.toTransducer --> ned.DelayChannel --> Transducer.fromSignalConverter;
-        Transducer.toNodeProcessor --> ned.DelayChannel --> fromTransducerToNodeProcessor;
-        toSensingUnitFromNodeProcessor --> ned.DelayChannel --> SensingUnit.fromNodeProcessor;
+        SensingUnit.toSignalConditioner --> ned.DatarateChannel {datarate=dataBandwidth;} --> SignalConditioner.fromSensingUnit;
+        SignalConditioner.toSignalConverter --> ned.DatarateChannel {datarate=dataBandwidth;} --> SignalConverter.fromSignalConditioner;
+        SignalConverter.toTransducer --> ned.DatarateChannel {datarate=dataBandwidth;} --> Transducer.fromSignalConverter;
+        Transducer.toNodeProcessor --> ned.DatarateChannel {datarate=dataBandwidth;} --> fromTransducerToNodeProcessor;
+        toSensingUnitFromNodeProcessor --> ned.DatarateChannel {datarate=dataBandwidth;} --> SensingUnit.fromNodeProcessor;
 
 }

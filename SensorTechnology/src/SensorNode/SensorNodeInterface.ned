@@ -24,10 +24,15 @@ import sensortechnology.src.SensorNode.Memory.*;
 moduleinterface SensorNodeInterface
 {
     parameters:
+        //channel options
+        double dataBandwidth;
+        double controlBandwidth;
+        //define sensors used
         bool hasTemperatureSensor;
         bool hasHumiditySensor;
         bool hasPressureSensor;
         bool hasLightSensor;
+        //other
         int numSensors; //for the battery, amount of different sensor
         int numSensorModules; //for the battery, amount of elements inside one sensor
         int numDevices; //for the battery, = numSensors*numSensorModules
