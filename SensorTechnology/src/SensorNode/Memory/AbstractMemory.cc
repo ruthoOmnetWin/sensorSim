@@ -40,13 +40,28 @@ void AbstractMemory::handleMessage(cMessage *msg)
     const char* name = msg->getName();
     SimpleSensorData* data = (SimpleSensorData*) msg->getParList().remove(name);
     int value = data->sensorData;
+    std::string nameString = name;
+
+    if (readEntry(nameString) == error) {
+        createEntry(nameString, value);
+    } else {
+        updateEntry(nameString, value);
+    }
     EV << "Got " << name << " value:" << value << endl;
     delete(msg);
+
+    EV << "Storage updated";
 }
 
 void AbstractMemory::createEntry(std::string type, int value)
 {
-    int emptyId = getIdByType(type);
+    int emptyId = -1;
+    for (int i = 0; i < amountSensors; i++) {
+        if (storageType[i] == "") {
+            emptyId = i;
+            break;
+        }
+    }
     if (emptyId == -1) {
         return;
     }
@@ -67,7 +82,7 @@ void AbstractMemory::updateEntry(std::string type, int value)
 {
     int id = getIdByType(type);
     if (id == -1) {
-        return;
+        return createEntry(type, value);
     }
     storageValue[id] = value;
 }
