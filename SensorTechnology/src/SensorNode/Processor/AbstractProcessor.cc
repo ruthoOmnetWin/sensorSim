@@ -24,17 +24,71 @@ AbstractProcessor::~AbstractProcessor() {
     // TODO Auto-generated destructor stub
 }
 
+void AbstractProcessor::initialize(int stage)
+{
+    if (stage == 0) {
+        sensingIntervall = getParentModule()->par("sensingIntervall").longValue();
+    } else if (stage == 1) {
+        schedulePeriodicSelfMessage();
+    }
+}
+
 void AbstractProcessor::handleMessage(cMessage *msg)
 {
     draw();
     std::string name = msg->getName();
-    if (
-        name == "Temperature" ||
-        name == "Pressure" ||
-        name == "Humidity" ||
-        name == "Light"
-    ) {
-        send(msg, "connectToMemory$o");
+    if (msg->isSelfMessage()) {
+        if (name == "startSensingUnit") {
+            schedulePeriodicSelfMessage(msg);
+            startSensingUnit();
+        }
+    } else {
+        if (
+            name == "Temperature" ||
+            name == "Pressure" ||
+            name == "Humidity" ||
+            name == "Light"
+        ) {
+            send(msg, "connectToMemory$o");
+        }
+        EV << "Got Message: " << msg->getName() << endl;
     }
-    EV << "Got Message: " << msg->getName() << endl;
+}
+
+void AbstractProcessor::schedulePeriodicSelfMessage(cMessage *msg)
+{
+    if (sensingIntervall) {
+        simtime_t scheduleTime = simTime() + sensingIntervall;
+        scheduleAt(scheduleTime , msg);
+    }
+}
+
+void AbstractProcessor::schedulePeriodicSelfMessage()
+{
+    if (sensingIntervall) {
+        cMessage *selfMessage = new cMessage("startSensingUnit");
+        simtime_t scheduleTime = simTime() + sensingIntervall;
+        scheduleAt(scheduleTime , selfMessage);
+    }
+}
+
+void AbstractProcessor::startSensingUnit()
+{
+    cModule* SensorNode = getParentModule();
+    if (SensorNode->par("hasTemperatureSensor")) {
+        cMessage* msg = new cMessage("startMeasuring");
+        send(msg, "toTemperatureSensor");
+    }
+    if (SensorNode->par("hasHumiditySensor")) {
+        cMessage* msg = new cMessage("startMeasuring");
+        send(msg, "toHumiditySensor");
+    }
+    if (SensorNode->par("hasPressureSensor")) {
+        cMessage* msg = new cMessage("startMeasuring");
+        send(msg, "toPressureSensor");
+    }
+    if (SensorNode->par("hasLightSensor")) {
+        cMessage* msg = new cMessage("startMeasuring");
+        send(msg, "toLightSensor");
+    }
 }

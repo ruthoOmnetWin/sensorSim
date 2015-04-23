@@ -42,15 +42,17 @@ void AbstractMemory::handleMessage(cMessage *msg)
     int value = data->sensorData;
     std::string nameString = name;
 
+    EV << "Got type: " << name << " with value:" << value << endl;
+
     if (readEntry(nameString) == error) {
         createEntry(nameString, value);
+        EV << "New storage entry created." << endl;
     } else {
         updateEntry(nameString, value);
+        EV << "Storage entry updated." << endl;
     }
-    EV << "Got " << name << " value:" << value << endl;
-    delete(msg);
 
-    EV << "Storage updated";
+    delete(msg);
 }
 
 void AbstractMemory::createEntry(std::string type, int value)

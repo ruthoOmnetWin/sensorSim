@@ -40,6 +40,7 @@ public:
     virtual ~AbstractSensingUnit();
     void initialize(int stage);
     void readAndForward();
+    void handleMessage(cMessage *msg);
 };
 
 Define_Module(AbstractSensingUnit);

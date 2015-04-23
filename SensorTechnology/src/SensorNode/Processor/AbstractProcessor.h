@@ -21,10 +21,16 @@
 #include "AbstractBatteryAccess.h"
 
 class AbstractProcessor : public AbstractBatteryAccess {
+protected:
+    int sensingIntervall;
 public:
     AbstractProcessor();
     virtual ~AbstractProcessor();
+    void initialize(int stage);
     void handleMessage(cMessage *msg);
+    void schedulePeriodicSelfMessage();
+    void schedulePeriodicSelfMessage(cMessage*);
+    void startSensingUnit();
 };
 
 Define_Module(AbstractProcessor);

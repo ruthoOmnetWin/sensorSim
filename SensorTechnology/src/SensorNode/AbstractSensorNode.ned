@@ -26,6 +26,7 @@ module AbstractSensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInt
 {
     parameters:
         //these parameters are generated automatically, from parent module, or via ini-file
+        int sensingIntervall = default(0s) @unit(s);
         double dataBandwidth = default(0bps) @unit(bps);
         double controlBandwidth = default(0bps) @unit(bps);
         bool hasTemperatureSensor = default(false);

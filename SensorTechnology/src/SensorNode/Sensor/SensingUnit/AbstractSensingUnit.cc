@@ -55,6 +55,8 @@ void AbstractSensingUnit::readAndForward()
 Coord* AbstractSensingUnit::getLocation()
 {
     Coord* back;
+    BasePhyLayer* phy = FindModule<BasePhyLayer*>::findSubModule(this->getParentModule()->getParentModule());
+    ChannelMobilityPtrType pMobType = phy->getMobilityModule();
     if(pMobType != NULL){
         back = new Coord(pMobType->getCurrentPosition());
         return back;
@@ -80,4 +82,14 @@ ExtendedMessage* AbstractSensingUnit::generateMessage(const char* msgname)
     msg->setSource(src);
     msg->setDestination(dest);
     return msg;
+}
+
+void AbstractSensingUnit::handleMessage(cMessage *msg)
+{
+    draw();
+    std::string name = msg->getName();
+    if (name == "startMeasuring") {
+        readAndForward();
+    }
+    delete(msg);
 }
