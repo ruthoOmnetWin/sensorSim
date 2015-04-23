@@ -15,13 +15,23 @@
 
 #include <AbstractMemory.h>
 
-AbstractMemory::AbstractMemory() {
-    // TODO Auto-generated constructor stub
+#define amountSensors 4
+#define error -9999
 
+AbstractMemory::AbstractMemory() {
+    storageType = new std::string[amountSensors];
+    storageValue = new int[amountSensors];
+    for (int i = 0; i < amountSensors; i++) {
+        storageType[i] = "";
+        storageValue[i] = error;
+    }
 }
 
 AbstractMemory::~AbstractMemory() {
-    // TODO Auto-generated destructor stub
+    delete[] storageType;
+    storageType = NULL;
+    delete[] storageValue;
+    storageValue = NULL;
 }
 
 void AbstractMemory::handleMessage(cMessage *msg)
@@ -32,4 +42,54 @@ void AbstractMemory::handleMessage(cMessage *msg)
     int value = data->sensorData;
     EV << "Got " << name << " value:" << value << endl;
     delete(msg);
+}
+
+void AbstractMemory::createEntry(std::string type, int value)
+{
+    int emptyId = getIdByType(type);
+    if (emptyId == -1) {
+        return;
+    }
+    storageType[emptyId] = type;
+    storageValue[emptyId] = value;
+}
+
+int AbstractMemory::readEntry(std::string type)
+{
+    int id = getIdByType(type);
+    if (id == -1) {
+        return error;
+    }
+    return storageValue[id];
+}
+
+void AbstractMemory::updateEntry(std::string type, int value)
+{
+    int id = getIdByType(type);
+    if (id == -1) {
+        return;
+    }
+    storageValue[id] = value;
+}
+
+void AbstractMemory::deleteEntry(std::string type)
+{
+    int id = getIdByType(type);
+    if (id == -1) {
+        return;
+    }
+    storageValue[id] = error;
+    storageType[id] = "";
+}
+
+int AbstractMemory::getIdByType(std::string type)
+{
+    int id = -1;
+    for (int i = 0; i < amountSensors; i++) {
+        if (storageType[i] == type) {
+            id = i;
+            break;
+        }
+    }
+    return id;
 }

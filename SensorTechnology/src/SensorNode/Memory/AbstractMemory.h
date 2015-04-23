@@ -17,14 +17,24 @@
 #define ABSTRACTMEMORY_H_
 
 #include <omnetpp.h>
+#include <string.h>
 #include "AbstractBatteryAccess.h"
 #include "SimpleSensorData.h"
 
 class AbstractMemory : public AbstractBatteryAccess {
+protected:
+    std::string* storageType;
+    int* storageValue;
 public:
     AbstractMemory();
     virtual ~AbstractMemory();
     void handleMessage(cMessage *msg);
+    //crud - to access the storage
+    void createEntry(std::string, int);
+    int readEntry(std::string);
+    void updateEntry(std::string, int);
+    void deleteEntry(std::string);
+    int getIdByType(std::string);
 };
 
 Define_Module(AbstractMemory);
