@@ -41,6 +41,7 @@ protected:
     void updateDisplay();
     void finish();
     void destroySensorData(int*** &);
+    int getEnumFromType(std::string type);
 protected:
     int numNodes;
     //sensor (world) data

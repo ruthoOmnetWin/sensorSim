@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgc 4.5 from ExtendedMessage/ExtendedMessage.msg.
+// Generated file, do not edit! Created by opp_msgc 4.5 from src/ExtendedMessage/ExtendedMessage.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:
@@ -69,9 +69,6 @@ ExtendedMessage::ExtendedMessage(const ExtendedMessage& other) : ::cMessage(othe
 
 ExtendedMessage::~ExtendedMessage()
 {
-    this->source_var = 0;
-    this->destination_var = 0;
-    this->hopCount_var = 0;
 }
 
 ExtendedMessage& ExtendedMessage::operator=(const ExtendedMessage& other)

@@ -35,9 +35,21 @@ void AbstractSensingUnit::initialize(int stage) {
         this->world = World;
         EV << "CustomWorldUtility found" << endl;
     } else if (stage == 1) {
-        //float value = readData();
-        //EV << "Read data " << value << endl;
+        readAndForward();
     }
+}
+
+void AbstractSensingUnit::readAndForward()
+{
+    int value = readData();
+    EV << "Read data " << value << endl;
+    cModule* Sensor = getParentModule();
+    std::string name = Sensor->par("type");
+    ExtendedMessage *newmsg = generateMessage(name.c_str());
+    SimpleSensorData* data = new SimpleSensorData(name.c_str(), value);
+    newmsg->getParList().add(data);
+    draw();
+    send(newmsg, "toSignalConditioner");
 }
 
 Coord* AbstractSensingUnit::getLocation()
@@ -50,9 +62,22 @@ Coord* AbstractSensingUnit::getLocation()
     return new Coord();
 }
 
-float AbstractSensingUnit::readData() {
+int AbstractSensingUnit::readData()
+{
     draw();
     Coord *position = getLocation();
     //TODO check for the type
-    return world->getValueByPosition("Temperature", position);
+    cModule* Sensor = getParentModule();
+    std::string type = Sensor->par("type");
+    return world->getValueByPosition(type, position);
+}
+
+ExtendedMessage* AbstractSensingUnit::generateMessage(const char* msgname)
+{
+    int src = getIndex();
+    int dest = getParentModule()->getSubmodule("SignalConditioner")->getIndex();
+    ExtendedMessage *msg = new ExtendedMessage(msgname);
+    msg->setSource(src);
+    msg->setDestination(dest);
+    return msg;
 }

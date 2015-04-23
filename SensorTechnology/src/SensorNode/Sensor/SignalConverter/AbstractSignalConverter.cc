@@ -23,3 +23,9 @@ AbstractSignalConverter::AbstractSignalConverter() {
 AbstractSignalConverter::~AbstractSignalConverter() {
     // TODO Auto-generated destructor stub
 }
+
+void AbstractSignalConverter::handleMessage(cMessage *msg)
+{
+    draw();
+    send(msg, "toTransducer");
+}

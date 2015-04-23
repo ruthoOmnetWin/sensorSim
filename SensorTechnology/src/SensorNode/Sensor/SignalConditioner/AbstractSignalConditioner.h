@@ -23,6 +23,7 @@ class AbstractSignalConditioner : public AbstractBatteryAccess {
 public:
     AbstractSignalConditioner();
     virtual ~AbstractSignalConditioner();
+    void handleMessage(cMessage *msg);
 };
 
 Define_Module(AbstractSignalConditioner);

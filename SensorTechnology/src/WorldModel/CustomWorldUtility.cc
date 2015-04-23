@@ -381,7 +381,20 @@ void CustomWorldUtility::destroySensorData(int*** &arr)
 
 int CustomWorldUtility::getValueByPosition(std::string type, Coord *position)
 {
-    int*** data = readXML(xmlTemperature);
-    int dataAtPosition = data[(int)position->x][(int)position->y][(int)position->z];
+    int*** data = readXML(getEnumFromType(type));
+    int dataAtPosition =
+            data
+                [(int)(position->x/par("dataGranularity").longValue())]
+                 [(int)(position->y/par("dataGranularity").longValue())]
+                  [(int)(position->z/par("dataGranularity").longValue())];
     return dataAtPosition;
+}
+
+int CustomWorldUtility::getEnumFromType(std::string type)
+{
+    if (type == "Humidity") return 0;
+    if (type == "Pressure") return 1;
+    if (type == "Temperature") return 2;
+    if (type == "Light") return 3;
+    throw new exception;
 }

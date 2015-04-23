@@ -26,4 +26,8 @@ simple AbstractProcessor
         double currentConsumption;
     	double energyConsumption;    
 	gates:
+	    //dynamically created gates:
+	    
+	    //inout connectToMemory;
+	    //in fromTransducerToNodeProcessor;
 }

@@ -20,8 +20,10 @@
 #include <Coord.h>
 #include <FindModule.h>
 #include <BasePhyLayer.h>
+#include <string.h>
 #include "AbstractBatteryAccess.h"
 #include "CustomWorldUtility.h"
+#include "SimpleSensorData.h"
 
 class AbstractSensingUnit : public AbstractBatteryAccess {
 protected:
@@ -29,12 +31,15 @@ protected:
     CustomWorldUtility *world;
     ChannelMobilityPtrType pMobType;
     std::string type;
+protected:
+    Coord* getLocation();
+    int readData();
+    ExtendedMessage* generateMessage(const char* msgname);
 public:
     AbstractSensingUnit();
     virtual ~AbstractSensingUnit();
-    float readData();
     void initialize(int stage);
-    Coord* getLocation();
+    void readAndForward();
 };
 
 Define_Module(AbstractSensingUnit);

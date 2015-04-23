@@ -24,3 +24,12 @@ AbstractMemory::~AbstractMemory() {
     // TODO Auto-generated destructor stub
 }
 
+void AbstractMemory::handleMessage(cMessage *msg)
+{
+    draw();
+    const char* name = msg->getName();
+    SimpleSensorData* data = (SimpleSensorData*) msg->getParList().remove(name);
+    int value = data->sensorData;
+    EV << "Got " << name << " value:" << value << endl;
+    delete(msg);
+}

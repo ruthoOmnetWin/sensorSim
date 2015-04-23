@@ -23,3 +23,9 @@ AbstractTransducer::AbstractTransducer() {
 AbstractTransducer::~AbstractTransducer() {
     // TODO Auto-generated destructor stub
 }
+
+void AbstractTransducer::handleMessage(cMessage *msg)
+{
+    draw();
+    send(msg, "toNodeProcessor");
+}

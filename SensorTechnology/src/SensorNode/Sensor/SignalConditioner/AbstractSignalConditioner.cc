@@ -24,3 +24,8 @@ AbstractSignalConditioner::~AbstractSignalConditioner() {
     // TODO Auto-generated destructor stub
 }
 
+void AbstractSignalConditioner::handleMessage(cMessage *msg)
+{
+    draw();
+    send(msg, "toSignalConverter");
+}

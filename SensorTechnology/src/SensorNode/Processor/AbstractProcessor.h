@@ -17,13 +17,14 @@
 #define ABSTRACTPROCESSOR_H_
 
 #include <omnetpp.h>
+#include <string.h>
 #include "AbstractBatteryAccess.h"
 
 class AbstractProcessor : public AbstractBatteryAccess {
 public:
     AbstractProcessor();
     virtual ~AbstractProcessor();
-    void handleMessage();
+    void handleMessage(cMessage *msg);
 };
 
 Define_Module(AbstractProcessor);

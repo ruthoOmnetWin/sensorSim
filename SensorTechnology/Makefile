@@ -42,6 +42,7 @@ INCLUDE_PATH = \
     -Isrc/SensorNode/Sensor/SignalConditioner \
     -Isrc/SensorNode/Sensor/SignalConverter \
     -Isrc/SensorNode/Sensor/Transducer \
+    -Isrc/SimpleSensorData \
     -Isrc/StatisticsInterface \
     -Isrc/WorldModel \
     -Isrc/WorldModel/data
@@ -68,6 +69,7 @@ OBJS = \
     $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o \
     $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o \
     $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o \
+    $O/src/SimpleSensorData/SimpleSensorData.o \
     $O/src/StatisticsInterface/StatisticsInterface.o \
     $O/src/WorldModel/CustomWorldUtility.o \
     $O/src/ExtendedMessage/ExtendedMessage_m.o
@@ -164,6 +166,7 @@ clean:
 	$(Q)-rm -f src/SensorNode/Sensor/SignalConditioner/*_m.cc src/SensorNode/Sensor/SignalConditioner/*_m.h
 	$(Q)-rm -f src/SensorNode/Sensor/SignalConverter/*_m.cc src/SensorNode/Sensor/SignalConverter/*_m.h
 	$(Q)-rm -f src/SensorNode/Sensor/Transducer/*_m.cc src/SensorNode/Sensor/Transducer/*_m.h
+	$(Q)-rm -f src/SimpleSensorData/*_m.cc src/SimpleSensorData/*_m.h
 	$(Q)-rm -f src/StatisticsInterface/*_m.cc src/StatisticsInterface/*_m.h
 	$(Q)-rm -f src/WorldModel/*_m.cc src/WorldModel/*_m.h
 	$(Q)-rm -f src/WorldModel/data/*_m.cc src/WorldModel/data/*_m.h
@@ -173,7 +176,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNode/*.cc src/SensorNode/Battery/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/RadioModule/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc src/WorldModel/data/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNode/*.cc src/SensorNode/Battery/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/RadioModule/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc src/WorldModel/data/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/src/ExtendedMessage/ExtendedMessage_m.o: src/ExtendedMessage/ExtendedMessage_m.cc \
@@ -205,7 +208,8 @@ $O/src/SensorNode/Memory/AbstractMemory.o: src/SensorNode/Memory/AbstractMemory.
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
 	src/SensorNode/AbstractBatteryAccess.h \
-	src/SensorNode/Memory/AbstractMemory.h
+	src/SensorNode/Memory/AbstractMemory.h \
+	src/SimpleSensorData/SimpleSensorData.h
 $O/src/SensorNode/Processor/AbstractProcessor.o: src/SensorNode/Processor/AbstractProcessor.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
@@ -248,6 +252,7 @@ $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Senso
 	src/ExtendedMessage/ExtendedMessage_m.h \
 	src/SensorNode/AbstractBatteryAccess.h \
 	src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.h \
+	src/SimpleSensorData/SimpleSensorData.h \
 	src/StatisticsInterface/StatisticsInterface.h \
 	src/WorldModel/CustomWorldUtility.h
 $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o: src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.cc \
@@ -277,6 +282,8 @@ $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o: src/SensorNode/Sensor/
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
 	src/SensorNode/AbstractBatteryAccess.h \
 	src/SensorNode/Sensor/Transducer/AbstractTransducer.h
+$O/src/SimpleSensorData/SimpleSensorData.o: src/SimpleSensorData/SimpleSensorData.cc \
+	src/SimpleSensorData/SimpleSensorData.h
 $O/src/StatisticsInterface/StatisticsInterface.o: src/StatisticsInterface/StatisticsInterface.cc \
 	src/ExtendedMessage/ExtendedMessage_m.h \
 	src/StatisticsInterface/StatisticsInterface.h

@@ -23,6 +23,7 @@ class AbstractSignalConverter : public AbstractBatteryAccess {
 public:
     AbstractSignalConverter();
     virtual ~AbstractSignalConverter();
+    void handleMessage(cMessage *msg);
 };
 
 Define_Module(AbstractSignalConverter)

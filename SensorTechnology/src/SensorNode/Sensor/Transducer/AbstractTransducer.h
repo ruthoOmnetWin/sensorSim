@@ -23,6 +23,7 @@ class AbstractTransducer : public AbstractBatteryAccess {
 public:
     AbstractTransducer();
     virtual ~AbstractTransducer();
+    void handleMessage(cMessage *msg);
 };
 
 Define_Module(AbstractTransducer);

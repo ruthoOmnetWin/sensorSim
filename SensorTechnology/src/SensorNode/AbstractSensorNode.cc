@@ -128,8 +128,12 @@ void AbstractSensorNode::connectProcessorAndMemory() {
     cGate *inProcessorFromMemory = Processor->gate("connectToMemory$i");
     cGate *outProcessorToMemory = Processor->gate("connectToMemory$o");
     //connect
-    outMemoryToProcessor->connectTo(inProcessorFromMemory, getDataChannel());
-    outProcessorToMemory->connectTo(inMemoryFromProcessor, getDataChannel());
+    cDatarateChannel* dc = getDataChannel();
+    outMemoryToProcessor->connectTo(inProcessorFromMemory, dc);
+    dc->callInitialize();
+    dc = getDataChannel();
+    outProcessorToMemory->connectTo(inMemoryFromProcessor, dc);
+    dc->callInitialize();
 }
 
 void AbstractSensorNode::handleMessage(cMessage *msg) {

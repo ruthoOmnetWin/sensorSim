@@ -24,4 +24,17 @@ AbstractProcessor::~AbstractProcessor() {
     // TODO Auto-generated destructor stub
 }
 
-
+void AbstractProcessor::handleMessage(cMessage *msg)
+{
+    draw();
+    std::string name = msg->getName();
+    if (
+        name == "Temperature" ||
+        name == "Pressure" ||
+        name == "Humidity" ||
+        name == "Light"
+    ) {
+        send(msg, "connectToMemory$o");
+    }
+    EV << "Got Message: " << msg->getName() << endl;
+}

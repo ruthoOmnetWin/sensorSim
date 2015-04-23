@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgc 4.5 from ExtendedMessage/ExtendedMessage.msg.
+// Generated file, do not edit! Created by opp_msgc 4.5 from src/ExtendedMessage/ExtendedMessage.msg.
 //
 
 #ifndef _EXTENDEDMESSAGE_M_H_
@@ -16,7 +16,7 @@
 
 
 /**
- * Class generated from <tt>ExtendedMessage/ExtendedMessage.msg</tt> by opp_msgc.
+ * Class generated from <tt>src/ExtendedMessage/ExtendedMessage.msg</tt> by opp_msgc.
  * <pre>
  * message ExtendedMessage extends cMessage
  * {

@@ -18,11 +18,13 @@
 
 #include <omnetpp.h>
 #include "AbstractBatteryAccess.h"
+#include "SimpleSensorData.h"
 
 class AbstractMemory : public AbstractBatteryAccess {
 public:
     AbstractMemory();
     virtual ~AbstractMemory();
+    void handleMessage(cMessage *msg);
 };
 
 Define_Module(AbstractMemory);

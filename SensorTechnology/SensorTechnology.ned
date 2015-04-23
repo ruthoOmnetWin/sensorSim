@@ -8,8 +8,7 @@ network SensorTechnology extends BaseNetwork
 {
     parameters:
         int numHosts = 9;
-        world.createData = true;
-        int test = 0;
+        world.createData = false;
         
         cmType = default("org.mixim.base.connectionManager.ConnectionManager");
         wuType = default("CustomWorldUtility");
