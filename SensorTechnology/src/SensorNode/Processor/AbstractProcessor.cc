@@ -27,6 +27,7 @@ AbstractProcessor::~AbstractProcessor() {
 void AbstractProcessor::initialize(int stage)
 {
     if (stage == 0) {
+        AbstractBatteryAccess::initialize(stage);
         sensingIntervall = getParentModule()->par("sensingIntervall").longValue();
     } else if (stage == 1) {
         schedulePeriodicSelfMessage();

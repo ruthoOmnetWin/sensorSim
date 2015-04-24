@@ -24,7 +24,6 @@ class AbstractBatteryAccess : public MiximBatteryAccess {
 protected:
     float currentOverTime;
     float energiePerOperation;
-    simtime_t batteryEmptied;
 public:
     AbstractBatteryAccess();
     virtual ~AbstractBatteryAccess();
@@ -32,7 +31,6 @@ public:
     void draw();
     void finish();
     virtual void handleHostState(const HostState &state);
-    simtime_t getBatteryEmptiedTime();
 };
 
 #endif /* ABSTRACTBATTERYACCESS_H_ */

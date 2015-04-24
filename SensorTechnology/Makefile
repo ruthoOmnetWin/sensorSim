@@ -185,10 +185,13 @@ $O/src/SensorNode/AbstractBatteryAccess.o: src/SensorNode/AbstractBatteryAccess.
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	src/SensorNode/AbstractBatteryAccess.h
+	src/SensorNode/AbstractBatteryAccess.h \
+	src/SensorNode/AbstractSensorNode.h \
+	src/SensorNode/Processor/AbstractProcessor.h
 $O/src/SensorNode/AbstractSensorNode.o: src/SensorNode/AbstractSensorNode.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \

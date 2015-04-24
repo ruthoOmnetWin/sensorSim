@@ -28,6 +28,7 @@ protected:
 public:
     AbstractMemory();
     virtual ~AbstractMemory();
+    void initialize(int stage);
     void handleMessage(cMessage *msg);
     //crud - to access the storage
     void createEntry(std::string, int);

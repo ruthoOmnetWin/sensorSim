@@ -34,6 +34,11 @@ AbstractMemory::~AbstractMemory() {
     storageValue = NULL;
 }
 
+void AbstractMemory::initialize(int stage)
+{
+    AbstractBatteryAccess::initialize(stage);
+}
+
 void AbstractMemory::handleMessage(cMessage *msg)
 {
     draw();

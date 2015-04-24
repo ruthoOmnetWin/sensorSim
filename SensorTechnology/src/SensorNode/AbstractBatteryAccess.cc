@@ -14,6 +14,7 @@
 // 
 
 #include <AbstractBatteryAccess.h>
+#include "AbstractSensorNode.h"
 
 AbstractBatteryAccess::AbstractBatteryAccess() {
     // TODO Auto-generated constructor stub
@@ -44,7 +45,13 @@ void AbstractBatteryAccess::handleHostState(const HostState &state)
 
     if (hostState == HostState::FAILED) {
         EV << "failed" << endl;
-        batteryEmptied = simTime();
+        cModule *parent = getParentModule();
+        std::string name = parent->getFullName();
+        if (name != "AbstractSensorNode") {
+            parent = parent->getParentModule();
+        }
+        AbstractSensorNode* sensorNode = (AbstractSensorNode*)parent;
+        sensorNode->batteryEmptied = simTime();
     } else if (hostState == HostState::BROKEN) {
         EV << "broken" << endl;
     } else if (hostState == HostState::SLEEP) {
@@ -60,9 +67,4 @@ void AbstractBatteryAccess::draw() {
 
 void AbstractBatteryAccess::finish() {
     //EV << "Battery emptied at " << batteryEmptied.str() << endl;
-}
-
-simtime_t AbstractBatteryAccess::getBatteryEmptiedTime()
-{
-    return batteryEmptied;
 }

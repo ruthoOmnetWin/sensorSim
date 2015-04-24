@@ -26,6 +26,7 @@ public:
     virtual ~AbstractSensorNode();
     cDatarateChannel* getControlChannel();
     cDatarateChannel* getDataChannel();
+    simtime_t batteryEmptied;
 protected:
     void initialize(int);
     void finish();
