@@ -12,6 +12,7 @@ network SensorTechnology extends BaseNetwork
         
         cmType = default("org.mixim.base.connectionManager.ConnectionManager");
         wuType = default("CustomWorldUtility");
+        @display("bgi=maps/germany");
         
     submodules: 
         SensorNode[numHosts/3]: AbstractSensorNode {

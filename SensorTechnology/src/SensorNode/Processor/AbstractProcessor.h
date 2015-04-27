@@ -23,6 +23,7 @@
 class AbstractProcessor : public AbstractBatteryAccess {
 protected:
     int sensingIntervall;
+    cMessage* selfMessage;
 public:
     AbstractProcessor();
     virtual ~AbstractProcessor();

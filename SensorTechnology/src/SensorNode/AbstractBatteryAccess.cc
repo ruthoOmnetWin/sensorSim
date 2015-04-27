@@ -17,7 +17,8 @@
 #include "AbstractSensorNode.h"
 
 AbstractBatteryAccess::AbstractBatteryAccess() {
-    // TODO Auto-generated constructor stub
+    currentOverTime = 0.0;
+    energiePerOperation = 0.0;
 
 }
 

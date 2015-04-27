@@ -16,12 +16,13 @@
 #include <AbstractProcessor.h>
 
 AbstractProcessor::AbstractProcessor() {
-    // TODO Auto-generated constructor stub
-
+    sensingIntervall = 0;
+    selfMessage = NULL;
 }
 
 AbstractProcessor::~AbstractProcessor() {
     // TODO Auto-generated destructor stub
+    cancelAndDelete(selfMessage);
 }
 
 void AbstractProcessor::initialize(int stage)
@@ -67,7 +68,7 @@ void AbstractProcessor::schedulePeriodicSelfMessage(cMessage *msg)
 void AbstractProcessor::schedulePeriodicSelfMessage()
 {
     if (sensingIntervall) {
-        cMessage *selfMessage = new cMessage("startSensingUnit");
+        selfMessage = new cMessage("startSensingUnit");
         simtime_t scheduleTime = simTime() + sensingIntervall;
         scheduleAt(scheduleTime , selfMessage);
     }
