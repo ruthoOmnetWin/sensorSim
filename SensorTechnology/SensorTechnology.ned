@@ -7,7 +7,7 @@ import org.mixim.base.modules.BaseNetwork;
 network SensorTechnology extends BaseNetwork
 {
     parameters:
-        int numHosts = 9;
+        int numHosts = 1;
         world.createData = false;
         
         cmType = default("org.mixim.base.connectionManager.ConnectionManager");
@@ -15,14 +15,14 @@ network SensorTechnology extends BaseNetwork
         @display("bgi=maps/germany");
         
     submodules: 
-        SensorNode[numHosts/3]: AbstractSensorNode {
+        SensorNode[0]: AbstractSensorNode {
             numHosts = numHosts;
         }
-        TempNode[numHosts/3]: AbstractSensorNode {
+        TempNode[0]: AbstractSensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
         }
-        AllNode[numHosts/3]: AbstractSensorNode {
+        AllNode[numHosts]: AbstractSensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
             hasPressureSensor = true;

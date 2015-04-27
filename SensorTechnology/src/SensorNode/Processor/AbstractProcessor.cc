@@ -22,7 +22,6 @@ AbstractProcessor::AbstractProcessor() {
 
 AbstractProcessor::~AbstractProcessor() {
     // TODO Auto-generated destructor stub
-    cancelAndDelete(selfMessage);
 }
 
 void AbstractProcessor::initialize(int stage)
@@ -30,6 +29,25 @@ void AbstractProcessor::initialize(int stage)
     if (stage == 0) {
         AbstractBatteryAccess::initialize(stage);
         sensingIntervall = getParentModule()->par("sensingIntervall").longValue();
+
+        voltage = battery->getVoltage();
+        voltageStats.setName("Voltage");
+        voltageStats.collect(voltage);
+        voltageVector.setName("Voltage");
+        voltageVector.record(voltage);
+
+        residualRelative = battery->estimateResidualRelative();
+        residualRelativeStats.setName("residualRelative");
+        residualRelativeStats.collect(residualRelative);
+        residualRelativeVector.setName("residualRelative");
+        residualRelativeVector.record(residualRelative);
+
+        residualAbs = battery->estimateResidualAbs();
+        residualAbsStats.setName("residualAbs");
+        residualAbsStats.collect(residualAbs);
+        residualAbsVector.setName("residualAbs");
+        residualAbsVector.record(residualAbs);
+
     } else if (stage == 1) {
         schedulePeriodicSelfMessage();
     }
@@ -92,5 +110,44 @@ void AbstractProcessor::startSensingUnit()
     if (SensorNode->par("hasLightSensor")) {
         cMessage* msg = new cMessage("startMeasuring");
         send(msg, "toLightSensor");
+    }
+}
+
+void AbstractProcessor::draw()
+{
+    voltage = battery->getVoltage();
+    voltageStats.collect(voltage);
+    voltageVector.record(voltage);
+
+    residualRelative = battery->estimateResidualRelative();
+    residualRelativeStats.collect(residualRelative);
+    residualRelativeVector.record(residualRelative);
+
+    residualAbs = battery->estimateResidualAbs();
+    residualAbsStats.collect(residualAbs);
+    residualAbsVector.record(residualAbs);
+    AbstractBatteryAccess::draw();
+}
+
+/**
+ * provides different modes (defined as enum)
+ * defines one account on the battery per mode with
+ * different power consumptions
+ */
+void AbstractProcessor::switchProcessorMode(int mode)
+{
+
+}
+
+void AbstractProcessor::finish()
+{
+}
+
+void AbstractProcessor::handleHostState(const HostState& state)
+{
+    AbstractBatteryAccess::handleHostState(state);
+    HostState::States hostState = state.get();
+    if (hostState == HostState::FAILED) {
+        cancelAndDelete(selfMessage);
     }
 }

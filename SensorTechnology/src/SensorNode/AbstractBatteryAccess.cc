@@ -15,11 +15,11 @@
 
 #include <AbstractBatteryAccess.h>
 #include "AbstractSensorNode.h"
+#include <SimpleBattery.h>
 
 AbstractBatteryAccess::AbstractBatteryAccess() {
     currentOverTime = 0.0;
     energiePerOperation = 0.0;
-
 }
 
 AbstractBatteryAccess::~AbstractBatteryAccess() {
@@ -46,13 +46,6 @@ void AbstractBatteryAccess::handleHostState(const HostState &state)
 
     if (hostState == HostState::FAILED) {
         EV << "failed" << endl;
-        cModule *parent = getParentModule();
-        std::string name = parent->getFullName();
-        if (name != "AbstractSensorNode") {
-            parent = parent->getParentModule();
-        }
-        AbstractSensorNode* sensorNode = (AbstractSensorNode*)parent;
-        sensorNode->batteryEmptied = simTime();
     } else if (hostState == HostState::BROKEN) {
         EV << "broken" << endl;
     } else if (hostState == HostState::SLEEP) {

@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for SensorTechnology
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I/home/rutho/BA/mixim-2.3/src/base/phyLayer -I/home/rutho/BA/mixim-2.3/src -I/home/rutho/BA/mixim-2.3/src/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility -I/home/rutho/BA/mixim-2.3/src/base/utils -I/home/rutho/BA/mixim-2.3/src/base/modules -I/home/rutho/BA/mixim-2.3/src/inet_stub/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/util -I/home/rutho/BA/mixim-2.3/src/inet_stub/linklayer/contract -I/home/rutho/BA/mixim-2.3/src/base/messages -I/home/rutho/BA/mixim-2.3/src/base/connectionManager -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility/models -I/home/rutho/BA/mixim-2.3/src/inet_stub/networklayer/common -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
+#  opp_makemake -f --deep -O out -I/home/rutho/BA/mixim-2.3/src/base/phyLayer -I/home/rutho/BA/mixim-2.3/src -I/home/rutho/BA/mixim-2.3/src/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility -I/home/rutho/BA/mixim-2.3/src/base/utils -I/home/rutho/BA/mixim-2.3/src/base/modules -I/home/rutho/BA/mixim-2.3/src/inet_stub/base -I/home/rutho/BA/mixim-2.3/src/modules/power/battery -I/home/rutho/BA/mixim-2.3/src/inet_stub/util -I/home/rutho/BA/mixim-2.3/src/inet_stub/linklayer/contract -I/home/rutho/BA/mixim-2.3/src/base/messages -I/home/rutho/BA/mixim-2.3/src/base/connectionManager -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility/models -I/home/rutho/BA/mixim-2.3/src/inet_stub/networklayer/common -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
 #
 
 # Name of target to be created (-o option)
@@ -22,6 +22,7 @@ INCLUDE_PATH = \
     -I$(MIXIM_PROJ)/src/base/utils \
     -I$(MIXIM_PROJ)/src/base/modules \
     -I$(MIXIM_PROJ)/src/inet_stub/base \
+    -I$(MIXIM_PROJ)/src/modules/power/battery \
     -I$(MIXIM_PROJ)/src/inet_stub/util \
     -I$(MIXIM_PROJ)/src/inet_stub/linklayer/contract \
     -I$(MIXIM_PROJ)/src/base/messages \
@@ -189,6 +190,9 @@ $O/src/SensorNode/AbstractBatteryAccess.o: src/SensorNode/AbstractBatteryAccess.
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
 	src/SensorNode/AbstractBatteryAccess.h \
 	src/SensorNode/AbstractSensorNode.h \
 	src/SensorNode/Processor/AbstractProcessor.h
@@ -200,6 +204,9 @@ $O/src/SensorNode/AbstractSensorNode.o: src/SensorNode/AbstractSensorNode.cc \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
 	src/SensorNode/AbstractBatteryAccess.h \
 	src/SensorNode/AbstractSensorNode.h \
 	src/SensorNode/Processor/AbstractProcessor.h

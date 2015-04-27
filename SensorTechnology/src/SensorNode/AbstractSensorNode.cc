@@ -14,6 +14,7 @@
 // 
 
 #include <AbstractSensorNode.h>
+#include <SimpleBattery.h>
 
 AbstractSensorNode::AbstractSensorNode() : cModule() {
 }
@@ -142,11 +143,9 @@ void AbstractSensorNode::handleMessage(cMessage *msg) {
 
 void AbstractSensorNode::finish()
 {
-    if (batteryEmptied != 0) {
-        EV << "Battery emtpied at " << batteryEmptied.str() << endl;
-    } else {
-        EV << "Battery is not emtpy" << endl;
-    }
+    //define this function
+    //stop the module here
+    //EV << "Finished Module" << this->getFullName() << endl;
 }
 
 /**

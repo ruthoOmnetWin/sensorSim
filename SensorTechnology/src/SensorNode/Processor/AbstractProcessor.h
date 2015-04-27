@@ -24,14 +24,29 @@ class AbstractProcessor : public AbstractBatteryAccess {
 protected:
     int sensingIntervall;
     cMessage* selfMessage;
+protected:
+    //statistics
+    double voltage;
+    double residualRelative;
+    double residualAbs;
+    cLongHistogram voltageStats;
+    cOutVector voltageVector;
+    cLongHistogram residualRelativeStats;
+    cOutVector residualRelativeVector;
+    cLongHistogram residualAbsStats;
+    cOutVector residualAbsVector;
 public:
     AbstractProcessor();
     virtual ~AbstractProcessor();
     void initialize(int stage);
     void handleMessage(cMessage *msg);
+    void finish();
     void schedulePeriodicSelfMessage();
     void schedulePeriodicSelfMessage(cMessage*);
     void startSensingUnit();
+    void draw();
+    void switchProcessorMode(int mode);
+    virtual void handleHostState(const HostState& state);
 };
 
 Define_Module(AbstractProcessor);

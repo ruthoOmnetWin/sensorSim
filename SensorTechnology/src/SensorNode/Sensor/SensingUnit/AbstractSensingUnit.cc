@@ -71,7 +71,9 @@ int AbstractSensingUnit::readData()
     //TODO check for the type
     cModule* Sensor = getParentModule();
     std::string type = Sensor->par("type");
-    return world->getValueByPosition(type, position);
+    int data = world->getValueByPosition(type, position);
+    delete position;
+    return data;
 }
 
 ExtendedMessage* AbstractSensingUnit::generateMessage(const char* msgname)
