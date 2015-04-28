@@ -24,6 +24,25 @@ class AbstractProcessor : public AbstractBatteryAccess {
 protected:
     int sensingIntervall;
     cMessage* selfMessage;
+
+    //consumption for the different modes
+    double currentOverTimeNormal;
+    double energiePerOperationNormal;
+
+    double currentOverTimePowerSaving;
+    double energiePerOperationPowerSaving;
+
+    double currentOverTimeHighPerformance;
+    double energiePerOperationHighPerformance;
+
+    enum MODES {
+        NORMAL = 0,
+        POWER_SAVING = 1,
+        HIGH_PERFORMANCE = 2
+    };
+
+    int activatedMode;
+
 protected:
     //statistics
     double voltage;
@@ -45,7 +64,7 @@ public:
     void schedulePeriodicSelfMessage(cMessage*);
     void startSensingUnit();
     void draw();
-    void switchProcessorMode(int mode);
+    void switchProcessorMode(MODES mode);
     virtual void handleHostState(const HostState& state);
 };
 

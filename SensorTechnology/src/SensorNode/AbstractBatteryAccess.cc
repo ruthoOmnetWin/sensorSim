@@ -23,7 +23,8 @@ AbstractBatteryAccess::AbstractBatteryAccess() {
 }
 
 AbstractBatteryAccess::~AbstractBatteryAccess() {
-    // TODO Auto-generated destructor stub
+    currentOverTime = 0.0;
+    energiePerOperation = 0.0;
 }
 
 void AbstractBatteryAccess::initialize(int stage) {

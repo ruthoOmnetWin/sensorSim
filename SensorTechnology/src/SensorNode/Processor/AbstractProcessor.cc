@@ -18,18 +18,46 @@
 AbstractProcessor::AbstractProcessor() {
     sensingIntervall = 0;
     selfMessage = NULL;
+    activatedMode = 0;
 }
 
 AbstractProcessor::~AbstractProcessor() {
-    // TODO Auto-generated destructor stub
+    sensingIntervall = 0;
+    selfMessage = NULL;
+    activatedMode = 0;
 }
 
 void AbstractProcessor::initialize(int stage)
 {
     if (stage == 0) {
-        AbstractBatteryAccess::initialize(stage);
+        MiximBatteryAccess::initialize(stage);
+
+        // -> register with the battery
+        const char * name = this->getFullName();
+        std::string stringName = std::string(name);
+
+        registerWithBattery(stringName, par("numModes").longValue());
+
+        //get the consumption values
+        currentOverTimeNormal = par("currentConsumptionNormal").doubleValue();
+        energiePerOperationNormal = par("energyConsumptionNormal").doubleValue();
+
+        currentOverTimePowerSaving = par("currentConsumptionPowerSaving").doubleValue();
+        energiePerOperationPowerSaving = par("energyConsumptionPowerSaving").doubleValue();
+
+        currentOverTimeHighPerformance = par("currentConsumptionHighPerformance").doubleValue();
+        energiePerOperationHighPerformance = par("energyConsumptionHighPerformance").doubleValue();
+
+        //the amount to draw over time
+        drawCurrent(currentOverTimeNormal, 0);
+        drawCurrent(currentOverTimePowerSaving, 1);
+        drawCurrent(currentOverTimeHighPerformance, 2);
+        // <- register with the battery
+
+        //set value for schedulePeriodicSelfMessage()
         sensingIntervall = getParentModule()->par("sensingIntervall").longValue();
 
+        //initialize statistics
         voltage = battery->getVoltage();
         voltageStats.setName("Voltage");
         voltageStats.collect(voltage);
@@ -126,17 +154,31 @@ void AbstractProcessor::draw()
     residualAbs = battery->estimateResidualAbs();
     residualAbsStats.collect(residualAbs);
     residualAbsVector.record(residualAbs);
-    AbstractBatteryAccess::draw();
+
+    if (activatedMode == POWER_SAVING) {
+        drawEnergy(energiePerOperationPowerSaving, 1);
+    } else if (activatedMode == NORMAL) {
+        drawEnergy(energiePerOperationNormal, 0);
+    } else if (activatedMode == HIGH_PERFORMANCE) {
+        drawEnergy(energiePerOperationHighPerformance, 2);
+    }
 }
 
 /**
- * provides different modes (defined as enum)
+ * provides different modes (defined as enum: MODES)
  * defines one account on the battery per mode with
- * different power consumptions
+ * different power consumptions each
  */
-void AbstractProcessor::switchProcessorMode(int mode)
+void AbstractProcessor::switchProcessorMode(MODES mode)
 {
+    //switch batteries power accounts
+    if (mode == POWER_SAVING) {
 
+    } else if (mode == NORMAL) {
+
+    } else if (mode == HIGH_PERFORMANCE) {
+
+    }
 }
 
 void AbstractProcessor::finish()

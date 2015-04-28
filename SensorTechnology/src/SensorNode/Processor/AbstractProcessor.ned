@@ -15,18 +15,30 @@
 
 package sensortechnology.src.SensorNode.Processor;
 
-//
-// TODO auto-generated type
-//
 simple AbstractProcessor
 {
     parameters:
         int numGates = default(0);
         @display("i=device/cpu");
-        double currentConsumption;
-    	double energyConsumption;    
+        
+        //to add new modes you must also make changes inside the class AbstractProcessor:
+    	//extend the enum 'MODES'
+    	//register the new account inside initialize(int)
+    	//extend switchProcessorMode(MODES)
+        
+        int numModes;
+        
+        //NORMAL mode
+        double currentConsumptionNormal;
+    	double energyConsumptionNormal;
+    	//POWER_SAVING mode
+        double currentConsumptionPowerSaving;
+    	double energyConsumptionPowerSaving;
+    	//HIGH_PERFORMANCE mode
+        double currentConsumptionHighPerformance;
+    	double energyConsumptionHighPerformance;
 	gates:
-	    //dynamically created gates:
+	    //dynamically created gates (once for every sensor on the node):
 	    
 	    //inout connectToMemory;
 	    //in fromTransducerToNodeProcessor;
