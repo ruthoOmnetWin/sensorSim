@@ -141,6 +141,7 @@ void AbstractProcessor::switchProcessorMode(int mode)
 
 void AbstractProcessor::finish()
 {
+
 }
 
 void AbstractProcessor::handleHostState(const HostState& state)
