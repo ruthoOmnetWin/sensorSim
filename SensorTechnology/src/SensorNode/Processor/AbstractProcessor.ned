@@ -26,7 +26,7 @@ simple AbstractProcessor
     	//register the new account inside initialize(int)
     	//extend switchProcessorMode(MODES)
         
-        int numModes;
+        int numModes = 3;
         
         //NORMAL mode
         double currentConsumptionNormal;
