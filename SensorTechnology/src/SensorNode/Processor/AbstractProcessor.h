@@ -20,10 +20,18 @@
 #include <string.h>
 #include "AbstractBatteryAccess.h"
 
+#define sensing 0
+#define shiftProcessorMode 1
+#define collectStatistics 2
+
 class AbstractProcessor : public AbstractBatteryAccess {
 protected:
     int sensingIntervall;
-    cMessage* selfMessage;
+    int shiftProcessorModeIntervall;
+    int collectStatisticsIntervall;
+    cMessage* selfMessageMeasure;
+    cMessage* selfMessageShiftMode;
+    cMessage* selfMessageStatistics;
 
     //consumption for the different modes
     double currentOverTimeNormal;
@@ -38,7 +46,8 @@ protected:
     enum MODES {
         NORMAL = 0,
         POWER_SAVING = 1,
-        HIGH_PERFORMANCE = 2
+        HIGH_PERFORMANCE = 2,
+        OFF
     };
 
     int activatedMode;
@@ -54,18 +63,30 @@ protected:
     cOutVector residualRelativeVector;
     cLongHistogram residualAbsStats;
     cOutVector residualAbsVector;
+
+public:
+    bool hasTemperatureSensor;
+    bool hasHumiditySensor;
+    bool hasPressureSensor;
+    bool hasLightSensor;
+
 public:
     AbstractProcessor();
     virtual ~AbstractProcessor();
     void initialize(int stage);
     void handleMessage(cMessage *msg);
     void finish();
-    void schedulePeriodicSelfMessage();
-    void schedulePeriodicSelfMessage(cMessage*);
+    void schedulePeriodicSelfMessage(int);
+    void schedulePeriodicSelfMessage(cMessage*, int);
     void startSensingUnit();
     void draw();
-    void switchProcessorMode(MODES mode);
+    void doCollectStatistics();
     virtual void handleHostState(const HostState& state);
+
+    void switchProcessorMode(MODES mode);
+    void switchProcessorMode(int mode);
+    void switchProcessorMode();
+    MODES getProcessorMode();
 };
 
 Define_Module(AbstractProcessor);

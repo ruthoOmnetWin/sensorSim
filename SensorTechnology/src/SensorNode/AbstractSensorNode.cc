@@ -25,12 +25,12 @@ AbstractSensorNode::~AbstractSensorNode() {
 
 void AbstractSensorNode::initialize(int stage) {
     if (stage == 0) {
-        //get the amount of sensors and gates needed
-        setNumGates();
         //generate Processor dynamically
         createProcessor();
         //connect Memory with Processor
         connectProcessorAndMemory();
+        //get the amount of sensors and gates needed
+        setNumGates();
     } else if (stage == 1) {
 
     }
@@ -42,17 +42,22 @@ void AbstractSensorNode::initialize(int stage) {
 void AbstractSensorNode::setNumGates() {
 
     int countGates = 0;
+    AbstractProcessor* Processor = (AbstractProcessor*) getSubmodule("Processor");
     if (par("hasTemperatureSensor")) {
         countGates++;
+        Processor->hasTemperatureSensor = true;
     }
     if (par("hasHumiditySensor")) {
         countGates++;
+        Processor->hasHumiditySensor = true;
     }
     if (par("hasPressureSensor")) {
         countGates++;
+        Processor->hasPressureSensor = true;
     }
     if (par("hasLightSensor")) {
         countGates++;
+        Processor->hasLightSensor = true;
     }
 
     cPar numGates = par("numSensors");
