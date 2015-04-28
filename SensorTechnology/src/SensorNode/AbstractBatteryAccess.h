@@ -24,6 +24,7 @@ class AbstractBatteryAccess : public MiximBatteryAccess {
 protected:
     float currentOverTime;
     float energiePerOperation;
+    //int deviceID;
 public:
     AbstractBatteryAccess();
     virtual ~AbstractBatteryAccess();
