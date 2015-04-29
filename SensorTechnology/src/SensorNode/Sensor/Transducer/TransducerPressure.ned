@@ -16,7 +16,7 @@
 package sensortechnology.src.SensorNode.Sensor.Transducer;
 
 //
-// TODO auto-generated type
+// Transducer Pressure
 //
 simple TransducerPressure extends AbstractTransducer
 {

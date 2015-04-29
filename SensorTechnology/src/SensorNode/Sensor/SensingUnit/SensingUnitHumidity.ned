@@ -16,7 +16,7 @@
 package sensortechnology.src.SensorNode.Sensor.SensingUnit;
 
 //
-// TODO auto-generated type
+// sensing unit which can get informations about the humidity at its position
 //
 simple SensingUnitHumidity extends AbstractSensingUnit
 {

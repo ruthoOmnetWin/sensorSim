@@ -21,10 +21,17 @@
 #include "AbstractBatteryAccess.h"
 #include "SimpleSensorData.h"
 
+/**
+ * this is a small implementation of a memory
+ *
+ * it has the 4 functions of the CRUD model and a simple key-value store with the
+ * size storageSize
+ */
 class AbstractMemory : public AbstractBatteryAccess {
 protected:
     std::string* storageType;
     int* storageValue;
+    const static int storageSize = 4;
 public:
     AbstractMemory();
     virtual ~AbstractMemory();

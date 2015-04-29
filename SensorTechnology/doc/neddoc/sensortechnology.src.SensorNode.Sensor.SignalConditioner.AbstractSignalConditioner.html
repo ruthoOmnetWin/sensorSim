@@ -1,0 +1,145 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>AbstractSignalConditioner</i></h2>
+<b>Package:</b> sensortechnology.src.SensorNode.Sensor.SignalConditioner<br/><b>File: <a href="src-SensorNode-Sensor-SignalConditioner-AbstractSignalConditioner.ned.html">src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.ned</a></b><br/><p><a href="../doxy/classAbstractSignalConditioner.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>Signal Conditioner</p>
+<h3 class="subtitle">Known subclasses:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerHumidity.html">SignalConditionerHumidity</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Signal Conditioner Humidity</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerLight.html">SignalConditionerLight</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Signal Conditioner Light</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerPressure.html">SignalConditionerPressure</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Signal Conditioner Pressure</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerTemperature.html">SignalConditionerTemperature</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Signal Conditioner Temperature</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=block/opticaldelay</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>fromSensingUnit</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td></td>
+</tr>
+<tr class="local">
+   <td>toSignalConverter</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Signal Conditioner
+//
+</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">AbstractSignalConditioner</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">SignalConditionerInterface</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=block/opticaldelay&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">currentConsumption</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">energyConsumption</span><span style="color: #000000; ">;
+    </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">input</span><span style="color: #000000; "> </span><span style="color: #000000; ">fromSensingUnit</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">output</span><span style="color: #000000; "> </span><span style="color: #000000; ">toSignalConverter</span><span style="color: #000000; ">;
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

@@ -19,6 +19,10 @@
 #include <omnetpp.h>
 #include "AbstractBatteryAccess.h"
 
+/**
+ * simple implementation of the transducer which just models
+ * the power consumption yet
+ */
 class AbstractTransducer : public AbstractBatteryAccess {
 public:
     AbstractTransducer();

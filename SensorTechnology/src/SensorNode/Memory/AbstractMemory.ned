@@ -16,7 +16,7 @@
 package sensortechnology.src.SensorNode.Memory;
 
 //
-// TODO auto-generated type
+// a simple memory module - can store data it received by key+value
 //
 simple AbstractMemory
 {

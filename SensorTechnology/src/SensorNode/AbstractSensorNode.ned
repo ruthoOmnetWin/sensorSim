@@ -20,7 +20,8 @@ import sensortechnology.src.SensorNode.Memory.*;
 import org.mixim.modules.node.WirelessNodeBatteryPlusTran;
 
 //
-// TODO auto-generated type
+// Sensor Node which can combine the different types of sensors (or have non of them) and
+// a battery, memory, processor and radio module 
 //
 module AbstractSensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
 {

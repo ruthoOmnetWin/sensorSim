@@ -1,0 +1,211 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Compound Module <i>LightSensor</i></h2>
+<b>Package:</b> sensortechnology.src.SensorNode.Sensor<br/><b>File: <a href="src-SensorNode-Sensor-LightSensor.ned.html">src/SensorNode/Sensor/LightSensor.ned</a></b><br/>
+<p>Sensor for Light that combines the simple modules SensingUnit, 
+SignalConverter, SignalConditioner and Transducer that belong to it</p>
+<h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="sensortechnology.src.SensorNode.Sensor.AbstractSensor.html">AbstractSensor</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Abstract Sensor</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Used in compound modules:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="sensortechnology.src.SensorNode.AbstractSensorNode.html">AbstractSensorNode</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Sensor Node which can combine the different types of sensors (or have non of them) and
+a battery, memory, processor and radio module </p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>type</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"Light"</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>dataBandwidth</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0bps</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>controlBandwidth</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0bps</td>
+   <td>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=block/join</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>fromTransducerToNodeProcessor</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>both gates get connected dynamically inside <a href="sensortechnology.src.SensorNode.AbstractSensorNode.html">AbstractSensorNode</a>, but after the 
+check for unconnected gates, so it is declared loose but never will be unconnected</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>toSensingUnitFromNodeProcessor</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Sensor for Light that combines the simple modules SensingUnit, 
+// SignalConverter, SignalConditioner and Transducer that belong to it
+//
+</span><span style="color: #800000; font-weight: bold; ">module</span><span style="color: #000000; "> </span><span style="color: #000000; ">LightSensor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">AbstractSensor</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">type</span><span style="color: #000000; "> = </span><span style="color: #008000; ">&quot;Light&quot;</span><span style="color: #000000; ">;
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

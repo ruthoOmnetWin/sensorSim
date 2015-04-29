@@ -1,0 +1,167 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>AbstractProcessor</i></h2>
+<b>Package:</b> sensortechnology.src.SensorNode.Processor<br/><b>File: <a href="src-SensorNode-Processor-AbstractProcessor.ned.html">src/SensorNode/Processor/AbstractProcessor.ned</a></b><br/><p><a href="../doxy/classAbstractProcessor.html" target="mainframe"><b>C++ definition</b></a></p>
+
+<p>implementation of an processor, it is able to switch between different power modes and controles the other
+modules inside the sensor node</p>
+<h3 class="subtitle">Known subclasses:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">ExampleProcessor</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>TODO auto-generated type</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>numGates</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>numModes</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>3</td>
+   <td>
+   </td>
+</tr>
+<tr class="local">
+   <td>currentConsumptionNormal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>NORMAL mode</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>energyConsumptionNormal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>currentConsumptionPowerSaving</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>POWER_SAVING mode</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>energyConsumptionPowerSaving</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>currentConsumptionHighPerformance</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>HIGH_PERFORMANCE mode</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>energyConsumptionHighPerformance</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>display</td>
+   <td><i>i=device/cpu</i></td>
+   <td>
+<p>to add new modes you must also make changes inside the class <a href="sensortechnology.src.SensorNode.Processor.AbstractProcessor.html">AbstractProcessor</a>:
+extend the enum 'MODES'
+register the new account inside initialize(int)
+extend switchProcessorMode(MODES)</p>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// implementation of an processor, it is able to switch between different power modes and controles the other
+// modules inside the sensor node
+//
+</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">AbstractProcessor</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numGates</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=device/cpu&quot;</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">//to add new modes you must also make changes inside the class AbstractProcessor:
+</span><span style="color: #000000; ">    	</span><span style="color: #808080; font-style: italic; ">//extend the enum 'MODES'
+</span><span style="color: #000000; ">    	</span><span style="color: #808080; font-style: italic; ">//register the new account inside initialize(int)
+</span><span style="color: #000000; ">    	</span><span style="color: #808080; font-style: italic; ">//extend switchProcessorMode(MODES)
+</span><span style="color: #000000; ">
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numModes</span><span style="color: #000000; "> = </span><span style="color: #008000; ">3</span><span style="color: #000000; ">;
+
+        </span><span style="color: #808080; font-style: italic; ">//NORMAL mode
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">currentConsumptionNormal</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">energyConsumptionNormal</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">//POWER_SAVING mode
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">currentConsumptionPowerSaving</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">energyConsumptionPowerSaving</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">//HIGH_PERFORMANCE mode
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">currentConsumptionHighPerformance</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">energyConsumptionHighPerformance</span><span style="color: #000000; ">;
+    </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+	    </span><span style="color: #808080; font-style: italic; ">//dynamically created gates (once for every sensor on the node):
+</span><span style="color: #000000; ">
+	    </span><span style="color: #808080; font-style: italic; ">//inout connectToMemory;
+</span><span style="color: #000000; ">	    </span><span style="color: #808080; font-style: italic; ">//in fromTransducerToNodeProcessor;
+</span><span style="color: #000000; ">}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

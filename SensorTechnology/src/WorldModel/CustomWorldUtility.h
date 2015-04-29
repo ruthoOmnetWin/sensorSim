@@ -22,6 +22,13 @@
 #include <StatisticsInterface.h>
 #include <ExtendedMessage_m.h>
 
+/**
+ * this class and it's module provide support for the environment data
+ * if generates the data for each of the types like temperature or pressure
+ *
+ * generating of the data can easily changed or improved within the functions
+ * like generateTemperature(int size)
+ */
 class CustomWorldUtility : public BaseWorldUtility, public StatisticsInterface
 {
 protected:

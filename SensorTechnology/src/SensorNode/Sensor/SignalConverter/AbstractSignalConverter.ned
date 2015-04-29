@@ -16,7 +16,7 @@
 package sensortechnology.src.SensorNode.Sensor.SignalConverter;
 
 //
-// TODO auto-generated type
+// Abstract Signal Converter
 //
 simple AbstractSignalConverter like SignalConverterInterface
 {

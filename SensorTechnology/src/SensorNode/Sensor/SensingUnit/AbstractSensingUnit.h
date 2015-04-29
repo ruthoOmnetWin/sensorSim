@@ -25,6 +25,13 @@
 #include "CustomWorldUtility.h"
 #include "SimpleSensorData.h"
 
+/**
+ * simple implementation of the sensing unit which models
+ * the power consumption and the sensing itself
+ *
+ * for the sensing it calls a function inside the world model and
+ * gets a value by its type and position
+ */
 class AbstractSensingUnit : public AbstractBatteryAccess {
 protected:
     Coord *Position;

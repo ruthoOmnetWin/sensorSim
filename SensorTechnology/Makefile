@@ -30,6 +30,10 @@ INCLUDE_PATH = \
     -I$(MIXIM_PROJ)/src/inet_stub/mobility/models \
     -I$(MIXIM_PROJ)/src/inet_stub/networklayer/common \
     -I. \
+    -Idoc \
+    -Idoc/doxy \
+    -Idoc/doxy/search \
+    -Idoc/neddoc \
     -Iresults \
     -Isrc \
     -Isrc/ExtendedMessage \
@@ -154,6 +158,10 @@ clean:
 	$(Q)-rm -rf $O
 	$(Q)-rm -f SensorTechnology SensorTechnology.exe libSensorTechnology.so libSensorTechnology.a libSensorTechnology.dll libSensorTechnology.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
+	$(Q)-rm -f doc/*_m.cc doc/*_m.h
+	$(Q)-rm -f doc/doxy/*_m.cc doc/doxy/*_m.h
+	$(Q)-rm -f doc/doxy/search/*_m.cc doc/doxy/search/*_m.h
+	$(Q)-rm -f doc/neddoc/*_m.cc doc/neddoc/*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
 	$(Q)-rm -f src/*_m.cc src/*_m.h
 	$(Q)-rm -f src/ExtendedMessage/*_m.cc src/ExtendedMessage/*_m.h
@@ -177,7 +185,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNode/*.cc src/SensorNode/Battery/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/RadioModule/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc src/WorldModel/data/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNode/*.cc src/SensorNode/Battery/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/RadioModule/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc src/WorldModel/data/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/src/ExtendedMessage/ExtendedMessage_m.o: src/ExtendedMessage/ExtendedMessage_m.cc \

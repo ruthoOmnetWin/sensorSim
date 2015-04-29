@@ -15,13 +15,12 @@
 
 #include <AbstractMemory.h>
 
-#define amountSensors 4
 #define error -9999
 
 AbstractMemory::AbstractMemory() {
-    storageType = new std::string[amountSensors];
-    storageValue = new int[amountSensors];
-    for (int i = 0; i < amountSensors; i++) {
+    storageType = new std::string[storageSize];
+    storageValue = new int[storageSize];
+    for (int i = 0; i < storageSize; i++) {
         storageType[i] = "";
         storageValue[i] = error;
     }
@@ -63,7 +62,7 @@ void AbstractMemory::handleMessage(cMessage *msg)
 void AbstractMemory::createEntry(std::string type, int value)
 {
     int emptyId = -1;
-    for (int i = 0; i < amountSensors; i++) {
+    for (int i = 0; i < storageSize; i++) {
         if (storageType[i] == "") {
             emptyId = i;
             break;
@@ -107,7 +106,7 @@ void AbstractMemory::deleteEntry(std::string type)
 int AbstractMemory::getIdByType(std::string type)
 {
     int id = -1;
-    for (int i = 0; i < amountSensors; i++) {
+    for (int i = 0; i < storageSize; i++) {
         if (storageType[i] == type) {
             id = i;
             break;

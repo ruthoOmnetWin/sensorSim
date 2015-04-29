@@ -1,0 +1,96 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">NED File <i>src/SensorNode/Sensor/AbstractSensor.ned</i></h2>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="sensortechnology.src.SensorNode.Sensor.AbstractSensor.html">AbstractSensor</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Abstract Sensor</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+</span><span style="color: #000000; ">
+</span><span style="color: #800000; font-weight: bold; ">package</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensingUnit</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensingUnitInterface</span><span style="color: #000000; ">;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensingUnit</span><span style="color: #000000; ">.</span><span style="color: #000000; ">AbstractSensingUnit</span><span style="color: #000000; ">;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SignalConditioner</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SignalConditionerInterface</span><span style="color: #000000; ">;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SignalConditioner</span><span style="color: #000000; ">.</span><span style="color: #000000; ">AbstractSignalConditioner</span><span style="color: #000000; ">;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SignalConverter</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SignalConverterInterface</span><span style="color: #000000; ">;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SignalConverter</span><span style="color: #000000; ">.</span><span style="color: #000000; ">AbstractSignalConverter</span><span style="color: #000000; ">;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Transducer</span><span style="color: #000000; ">.</span><span style="color: #000000; ">TransducerInterface</span><span style="color: #000000; ">;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Transducer</span><span style="color: #000000; ">.</span><span style="color: #000000; ">AbstractTransducer</span><span style="color: #000000; ">;
+
+</span><span style="color: #808080; font-style: italic; ">//
+// Abstract Sensor
+//
+</span><span style="color: #800000; font-weight: bold; ">module</span><span style="color: #000000; "> </span><span style="color: #000000; ">AbstractSensor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensorInterface</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">type</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">) </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">) </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=block/join&quot;</span><span style="color: #000000; ">);
+    </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+        </span><span style="color: #808080; font-style: italic; ">//both gates get connected dynamically inside AbstractSensorNode, but after the 
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//check for unconnected gates, so it is declared loose but never will be unconnected
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">output</span><span style="color: #000000; "> </span><span style="color: #000000; ">fromTransducerToNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@loose</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">input</span><span style="color: #000000; "> </span><span style="color: #000000; ">toSensingUnitFromNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@loose</span><span style="color: #000000; ">;
+
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">SensingUnit</span><span style="color: #000000; ">: &lt;</span><span style="color: #008000; ">&quot;SensingUnit&quot;</span><span style="color: #000000; ">+</span><span style="color: #000000; ">type</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensingUnitInterface</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=100,50&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">SignalConditioner</span><span style="color: #000000; ">: &lt;</span><span style="color: #008000; ">&quot;SignalConditioner&quot;</span><span style="color: #000000; ">+</span><span style="color: #000000; ">type</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">SignalConditionerInterface</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=100,120&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">SignalConverter</span><span style="color: #000000; ">: &lt;</span><span style="color: #008000; ">&quot;SignalConverter&quot;</span><span style="color: #000000; ">+</span><span style="color: #000000; ">type</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">SignalConverterInterface</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=100,190&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">Transducer</span><span style="color: #000000; ">: &lt;</span><span style="color: #008000; ">&quot;Transducer&quot;</span><span style="color: #000000; ">+</span><span style="color: #000000; ">type</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">TransducerInterface</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=100,260&quot;</span><span style="color: #000000; ">);
+        }
+
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">SensingUnit</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toSignalConditioner</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> {</span><span style="color: #000000; ">datarate</span><span style="color: #000000; ">=</span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;} </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">SignalConditioner</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromSensingUnit</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">SignalConditioner</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toSignalConverter</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> {</span><span style="color: #000000; ">datarate</span><span style="color: #000000; ">=</span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;} </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">SignalConverter</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromSignalConditioner</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">SignalConverter</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toTransducer</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> {</span><span style="color: #000000; ">datarate</span><span style="color: #000000; ">=</span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;} </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">Transducer</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromSignalConverter</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">Transducer</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> {</span><span style="color: #000000; ">datarate</span><span style="color: #000000; ">=</span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;} </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">fromTransducerToNodeProcessor</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">toSensingUnitFromNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> {</span><span style="color: #000000; ">datarate</span><span style="color: #000000; ">=</span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;} </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensingUnit</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromNodeProcessor</span><span style="color: #000000; ">;
+
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

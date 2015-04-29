@@ -16,7 +16,7 @@
 package sensortechnology.src.SensorNode.Sensor.SensingUnit;
 
 //
-// TODO auto-generated type
+// abstract model for the sensing unit of the sensor node
 //
 simple AbstractSensingUnit like SensingUnitInterface
 {       

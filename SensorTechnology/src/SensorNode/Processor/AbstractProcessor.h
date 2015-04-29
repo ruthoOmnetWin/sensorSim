@@ -24,6 +24,20 @@
 #define shiftProcessorMode 1
 #define collectStatistics 2
 
+/**
+ * the biggest module inside the sensor node with the most functionality
+ *
+ * the processor can define different parameters like some time intervalls
+ * for sensing, shifting its power mode and collecting statistics about the battery
+ *
+ * it has different power modes to improve the lifetime of the battery and save
+ * power at some times
+ *
+ * it also stores what types of sensors on the node exist
+ *
+ * the processor is used to control the sensor module, which means it can start
+ * it and then get the data and store it inside the memory until it is needed
+ */
 class AbstractProcessor : public AbstractBatteryAccess {
 protected:
     int sensingIntervall;

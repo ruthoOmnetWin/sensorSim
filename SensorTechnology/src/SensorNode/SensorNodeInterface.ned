@@ -19,7 +19,7 @@ import sensortechnology.src.SensorNode.Processor.*;
 import sensortechnology.src.SensorNode.Memory.*;
 
 //
-// TODO auto-generated type
+// Sensor Node Interface
 //
 moduleinterface SensorNodeInterface
 {

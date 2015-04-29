@@ -16,7 +16,7 @@
 package sensortechnology.src.SensorNode.Sensor.SensingUnit;
 
 //
-// TODO auto-generated type
+// sensing unit which can get informations about the pressure at its position
 //
 simple SensingUnitPressure extends AbstractSensingUnit
 {

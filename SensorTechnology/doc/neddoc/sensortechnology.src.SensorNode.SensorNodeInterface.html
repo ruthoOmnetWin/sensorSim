@@ -1,0 +1,168 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Module Interface <i>SensorNodeInterface</i></h2>
+<b>Package:</b> sensortechnology.src.SensorNode<br/><b>File: <a href="src-SensorNode-SensorNodeInterface.ned.html">src/SensorNode/SensorNodeInterface.ned</a></b><br/>
+<p>Sensor Node Interface</p>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>dataBandwidth</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>channel options</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>controlBandwidth</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>hasTemperatureSensor</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>define sensors used</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>hasHumiditySensor</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>hasPressureSensor</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>hasLightSensor</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>numSensors</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>other</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>numSensorModules</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>for the battery, amount of elements inside one sensor</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>numDevices</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>for the battery, = numSensors*numSensorModules</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>numHosts</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>fakeProcessor</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>these are used to draw the overview of the model</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>class</td>
+   <td><i>AbstractSensorNode</i></td>
+   <td>
+</td>
+</tr>
+<tr>
+   <td>display</td>
+   <td><i>bgb=245,450;i=block/ifcard</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// Sensor Node Interface
+//
+</span><span style="color: #800000; font-weight: bold; ">moduleinterface</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensorNodeInterface</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #808080; font-style: italic; ">//channel options
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">//define sensors used
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasHumiditySensor</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasPressureSensor</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasLightSensor</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">//other
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numSensors</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">//for the battery, amount of different sensor
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numSensorModules</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">//for the battery, amount of elements inside one sensor
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numDevices</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">//for the battery, = numSensors*numSensorModules
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; font-weight: bold; ">@class</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;AbstractSensorNode&quot;</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">//these are used to draw the overview of the model
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">fakeProcessor</span><span style="color: #000000; ">;
+
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bgb=245,450;i=block/ifcard&quot;</span><span style="color: #000000; ">);
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

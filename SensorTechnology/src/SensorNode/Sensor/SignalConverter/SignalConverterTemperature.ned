@@ -16,7 +16,7 @@
 package sensortechnology.src.SensorNode.Sensor.SignalConverter;
 
 //
-// TODO auto-generated type
+// Signal Converter Temperature
 //
 simple SignalConverterTemperature extends AbstractSignalConverter
 {

@@ -19,6 +19,10 @@
 #include <omnetpp.h>
 #include "AbstractBatteryAccess.h"
 
+/**
+ * simple implementation of the signal converter which just models
+ * the power consumption yet
+ */
 class AbstractSignalConverter : public AbstractBatteryAccess {
 public:
     AbstractSignalConverter();

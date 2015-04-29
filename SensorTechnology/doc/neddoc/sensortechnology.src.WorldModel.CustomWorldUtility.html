@@ -1,0 +1,171 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>CustomWorldUtility</i></h2>
+<b>Package:</b> sensortechnology.src.WorldModel<br/><b>File: <a href="src-WorldModel-CustomWorldUtility.ned.html">src/WorldModel/CustomWorldUtility.ned</a></b><br/><p><a href="../doxy/classCustomWorldUtility.html" target="mainframe"><b>C++ definition</b></a></p>
+<p>(no description)</p><h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.BaseWorldUtility.html">BaseWorldUtility</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Basic utility module for the whole network.
+Provides utility methods and information used by
+the whole network.</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>playgroundSizeX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>x size of the area the nodes are in (in meters)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>playgroundSizeY</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>y size of the area the nodes are in (in meters)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>playgroundSizeZ</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>z size of the area the nodes are in (in meters)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>useTorus</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>use the playground as torus?</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>createData</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>dataGranularity</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>basePath</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"src/WorldModel/data/"</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>xmlTemperature</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td>xmldoc("src/WorldModel/data/temperature.xml")</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>xmlPressure</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td>xmldoc("src/WorldModel/data/pressure.xml")</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>xmlHumidity</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td>xmldoc("src/WorldModel/data/humidity.xml")</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>xmlLight</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td>xmldoc("src/WorldModel/data/light.xml")</td>
+   <td>   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>class</td>
+   <td><i>CustomWorldUtility</i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>display</td>
+   <td><i>i=misc/globe</i></td>
+   <td></td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">CustomWorldUtility</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">BaseWorldUtility</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">createData</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">dataGranularity</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">basePath</span><span style="color: #000000; "> = </span><span style="color: #008000; ">&quot;src/WorldModel/data/&quot;</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">xml</span><span style="color: #000000; "> </span><span style="color: #000000; ">xmlTemperature</span><span style="color: #000000; "> = </span><span style="color: #800080; font-weight: bold; ">xmldoc</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;src/WorldModel/data/temperature.xml&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">xml</span><span style="color: #000000; "> </span><span style="color: #000000; ">xmlPressure</span><span style="color: #000000; "> = </span><span style="color: #800080; font-weight: bold; ">xmldoc</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;src/WorldModel/data/pressure.xml&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">xml</span><span style="color: #000000; "> </span><span style="color: #000000; ">xmlHumidity</span><span style="color: #000000; "> = </span><span style="color: #800080; font-weight: bold; ">xmldoc</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;src/WorldModel/data/humidity.xml&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">xml</span><span style="color: #000000; "> </span><span style="color: #000000; ">xmlLight</span><span style="color: #000000; "> = </span><span style="color: #800080; font-weight: bold; ">xmldoc</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;src/WorldModel/data/light.xml&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; font-weight: bold; ">@class</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;CustomWorldUtility&quot;</span><span style="color: #000000; ">);
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

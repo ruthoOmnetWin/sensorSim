@@ -19,6 +19,10 @@ import sensortechnology.src.SensorNode.Sensor.SignalConverter.*;
 import sensortechnology.src.SensorNode.Sensor.SignalConditioner.*;
 import sensortechnology.src.SensorNode.Sensor.Transducer.*;
 
+//
+// Sensor for Pressure that combines the simple modules SensingUnit, 
+// SignalConverter, SignalConditioner and Transducer that belong to it
+//
 module PressureSensor extends AbstractSensor
 {
     parameters:

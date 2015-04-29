@@ -20,6 +20,14 @@
 #include <MiximBatteryAccess.h>
 #include <string.h>
 
+/**
+ * this class gives access to the battery of the sensor node if you inherit from it
+ *
+ * extends the class MiximBatteryAccess by some useful functions like initialization
+ *
+ * it also stores values of consumption a module has and than can use this at any
+ * time to draw energie by the stored amount
+ */
 class AbstractBatteryAccess : public MiximBatteryAccess {
 protected:
     float currentOverTime;

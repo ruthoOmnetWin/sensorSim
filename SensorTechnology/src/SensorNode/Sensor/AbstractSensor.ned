@@ -24,7 +24,7 @@ import sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface;
 import sensortechnology.src.SensorNode.Sensor.Transducer.AbstractTransducer;
 
 //
-// TODO auto-generated module
+// Abstract Sensor
 //
 module AbstractSensor like SensorInterface
 {

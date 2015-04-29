@@ -15,6 +15,9 @@
 
 package sensortechnology.src.SensorNode.Sensor;
 
+//
+// Sensor Interface
+//
 moduleinterface SensorInterface
 {
     parameters:

@@ -19,6 +19,10 @@
 #include <omnetpp.h>
 #include "AbstractBatteryAccess.h"
 
+/**
+ * simple implementation of the signal conditioner which just models
+ * the power consumption yet
+ */
 class AbstractSignalConditioner : public AbstractBatteryAccess {
 public:
     AbstractSignalConditioner();

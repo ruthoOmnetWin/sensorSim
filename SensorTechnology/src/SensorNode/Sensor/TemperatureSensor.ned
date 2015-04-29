@@ -19,6 +19,10 @@ import sensortechnology.src.SensorNode.Sensor.SignalConverter.*;
 import sensortechnology.src.SensorNode.Sensor.SignalConditioner.*;
 import sensortechnology.src.SensorNode.Sensor.Transducer.*;
 
+//
+// Sensor for Temperature that combines the simple modules SensingUnit, 
+// SignalConverter, SignalConditioner and Transducer that belong to it
+//
 module TemperatureSensor extends AbstractSensor
 {
     parameters:

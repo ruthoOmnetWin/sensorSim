@@ -13,6 +13,9 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 //
 
+//
+//a message that is able to store statistical informations about itself
+//
 message ExtendedMessage extends cMessage
 {
 	int source;

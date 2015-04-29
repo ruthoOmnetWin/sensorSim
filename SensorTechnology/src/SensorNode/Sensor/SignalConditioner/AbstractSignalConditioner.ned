@@ -16,7 +16,7 @@
 package sensortechnology.src.SensorNode.Sensor.SignalConditioner;
 
 //
-// TODO auto-generated type
+// Signal Conditioner
 //
 simple AbstractSignalConditioner like SignalConditionerInterface
 {

@@ -16,7 +16,7 @@
 package sensortechnology.src.SensorNode.Sensor.SignalConditioner;
 
 //
-// TODO auto-generated type
+// Signal Conditioner Humidity
 //
 simple SignalConditionerHumidity extends AbstractSignalConditioner
 {

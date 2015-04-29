@@ -1,0 +1,44 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">NED File <i>package.ned</i></h2>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//</span><span style="color: #000080; ">@titlepage</span><span style="color: #808080; font-style: italic; "> 
+//</span><span style="color: #800000; ">&lt;h1&gt;</span><span style="color: #808080; font-style: italic; ">SensorForOmnet</span><span style="color: #800000; ">&lt;/h1&gt;</span><span style="color: #808080; font-style: italic; ">
+//
+//</span><span style="color: #800000; ">&lt;p&gt;</span><span style="color: #808080; font-style: italic; ">This project uses and extends Omnet++ and the MiXiM to get a sensor technology integration in the simulation.
+//It contains different modules to describe the different elements a sensor node needs:</span><span style="color: #800000; ">&lt;/p&gt;</span><span style="color: #808080; font-style: italic; ">
+//</span><span style="color: #800000; ">&lt;ul&gt;</span><span style="color: #808080; font-style: italic; ">
+//</span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">processor</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//</span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">different sensors</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//  </span><span style="color: #800000; ">&lt;ul&gt;</span><span style="color: #808080; font-style: italic; ">
+//   </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">temperature</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//   </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">light</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//   </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">humidity</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//   </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">pressure</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//  </span><span style="color: #800000; ">&lt;/ul&gt;</span><span style="color: #808080; font-style: italic; ">
+// </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">each sensor has the following modules</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//  </span><span style="color: #800000; ">&lt;ul&gt;</span><span style="color: #808080; font-style: italic; ">  
+//   </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">sensing unit</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//   </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">signal conditioner</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//   </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">signal converter</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//   </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">transducer</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//  </span><span style="color: #800000; ">&lt;/ul&gt;</span><span style="color: #808080; font-style: italic; ">
+// </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">memory</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+// </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">from MiXiM</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//  </span><span style="color: #800000; ">&lt;ul&gt;</span><span style="color: #808080; font-style: italic; ">
+//   </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">transceiver modules</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//   </span><span style="color: #800000; ">&lt;li&gt;</span><span style="color: #808080; font-style: italic; ">battery support</span><span style="color: #800000; ">&lt;/li&gt;</span><span style="color: #808080; font-style: italic; ">
+//  </span><span style="color: #800000; ">&lt;/ul&gt;</span><span style="color: #808080; font-style: italic; ">
+//</span><span style="color: #800000; ">&lt;/ul&gt;</span><span style="color: #808080; font-style: italic; ">
+//
+//Use the links in the left frame to navigate around.
+</span><span style="color: #000000; ">
+</span><span style="color: #800000; font-weight: bold; ">package</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">;
+</span><span style="color: #800000; font-weight: bold; ">package</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensor</span><span style="color: #000000; ">;</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

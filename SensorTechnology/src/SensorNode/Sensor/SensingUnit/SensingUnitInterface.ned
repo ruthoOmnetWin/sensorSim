@@ -16,7 +16,7 @@
 package sensortechnology.src.SensorNode.Sensor.SensingUnit;
 
 //
-// TODO auto-generated type
+// sensing unit interface
 //
 moduleinterface SensingUnitInterface
 {       

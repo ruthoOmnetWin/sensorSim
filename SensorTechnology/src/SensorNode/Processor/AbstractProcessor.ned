@@ -15,6 +15,10 @@
 
 package sensortechnology.src.SensorNode.Processor;
 
+//
+// implementation of an processor, it is able to switch between different power modes and controles the other
+// modules inside the sensor node
+//
 simple AbstractProcessor
 {
     parameters:

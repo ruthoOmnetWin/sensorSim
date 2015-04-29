@@ -20,6 +20,18 @@
 #include <FindModule.h>
 #include "AbstractProcessor.h"
 
+/**
+ * this module contains the generic part of the initialization of the
+ * sensor node
+ *
+ * for every existing sensor processor gates will be created, which can only
+ * be done before finalizing the object and therefore it must be generated here
+ *
+ * these will then be connected to to the sensor
+ *
+ * the connection between memory and processor is also created here but
+ * the gates, defined inside the ned code are used
+ */
 class AbstractSensorNode : public cModule {
 public:
     AbstractSensorNode();
