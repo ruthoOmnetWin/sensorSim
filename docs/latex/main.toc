@@ -58,25 +58,28 @@
 \contentsline {paragraph}{\nonumberline SignalConditioner}{33}{section*.32}
 \contentsline {paragraph}{\nonumberline SignalConverter}{33}{section*.33}
 \contentsline {paragraph}{\nonumberline Transducer}{33}{section*.34}
-\contentsline {subsubsection}{\numberline {4.2.1.4}Prozessor}{33}{subsubsection.4.2.1.4}
-\contentsline {subsubsection}{\numberline {4.2.1.5}Memory}{33}{subsubsection.4.2.1.5}
-\contentsline {subsubsection}{\numberline {4.2.1.6}BatteryAccess}{33}{subsubsection.4.2.1.6}
-\contentsline {subsubsection}{\numberline {4.2.1.7}SimpleSensorData}{33}{subsubsection.4.2.1.7}
-\contentsline {subsubsection}{\numberline {4.2.1.8}ExtendedMessage}{34}{subsubsection.4.2.1.8}
-\contentsline {subsubsection}{\numberline {4.2.1.9}StatisticsInterface}{35}{subsubsection.4.2.1.9}
-\contentsline {subsection}{\numberline {4.2.2}\IeC {\"U}bersicht NED-Module}{35}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Simple Module}{35}{subsubsection.4.2.2.1}
-\contentsline {paragraph}{\nonumberline CustomLinearMobility}{36}{section*.35}
-\contentsline {paragraph}{\nonumberline CustomWorldUtility}{36}{section*.36}
-\contentsline {paragraph}{\nonumberline Sensoren}{37}{section*.37}
-\contentsline {subsubsection}{\numberline {4.2.2.2}Compound Module}{37}{subsubsection.4.2.2.2}
-\contentsline {paragraph}{\nonumberline MyWirelessNode}{38}{section*.38}
-\contentsline {paragraph}{\nonumberline Sensorknoten}{38}{section*.39}
-\contentsline {subsubsection}{\numberline {4.2.2.3}Networks}{40}{subsubsection.4.2.2.3}
-\contentsline {paragraph}{\nonumberline MyNetwork}{40}{section*.40}
-\contentsline {subsubsection}{\numberline {4.2.2.4}Messages}{40}{subsubsection.4.2.2.4}
-\contentsline {paragraph}{\nonumberline ExtendedMessage}{41}{section*.41}
-\contentsline {subsubsection}{\numberline {4.2.2.5}omnetpp.ini}{41}{subsubsection.4.2.2.5}
-\contentsline {section}{\numberline {4.3}Funktionsweise mit Beispielanwendungen}{41}{section.4.3}
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{43}{chapter.5}
-\contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{45}{chapter*.43}
+\contentsline {subsubsection}{\numberline {4.2.1.4}Prozessor}{34}{subsubsection.4.2.1.4}
+\contentsline {paragraph}{\nonumberline Sensorsteuerung}{34}{section*.35}
+\contentsline {paragraph}{\nonumberline ProcessorMode}{34}{section*.36}
+\contentsline {paragraph}{\nonumberline Statistiken}{35}{section*.37}
+\contentsline {subsubsection}{\numberline {4.2.1.5}Memory}{35}{subsubsection.4.2.1.5}
+\contentsline {subsubsection}{\numberline {4.2.1.6}BatteryAccess}{35}{subsubsection.4.2.1.6}
+\contentsline {subsubsection}{\numberline {4.2.1.7}SimpleSensorData}{36}{subsubsection.4.2.1.7}
+\contentsline {subsubsection}{\numberline {4.2.1.8}ExtendedMessage}{36}{subsubsection.4.2.1.8}
+\contentsline {subsubsection}{\numberline {4.2.1.9}StatisticsInterface}{37}{subsubsection.4.2.1.9}
+\contentsline {subsection}{\numberline {4.2.2}\IeC {\"U}bersicht NED-Module}{37}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Simple Module}{38}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}CustomWorldUtility}{39}{subsubsection.4.2.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.3}Sensormodule}{39}{subsubsection.4.2.2.3}
+\contentsline {subsubsection}{\numberline {4.2.2.4}Prozessor}{40}{subsubsection.4.2.2.4}
+\contentsline {subsubsection}{\numberline {4.2.2.5}Memory}{40}{subsubsection.4.2.2.5}
+\contentsline {subsubsection}{\numberline {4.2.2.6}Compound Module}{40}{subsubsection.4.2.2.6}
+\contentsline {subsubsection}{\numberline {4.2.2.7}Sensoren}{41}{subsubsection.4.2.2.7}
+\contentsline {subsubsection}{\numberline {4.2.2.8}SensorNode}{42}{subsubsection.4.2.2.8}
+\contentsline {subsubsection}{\numberline {4.2.2.9}Messages und Channels}{42}{subsubsection.4.2.2.9}
+\contentsline {subsubsection}{\numberline {4.2.2.10}ExtendedMessage}{42}{subsubsection.4.2.2.10}
+\contentsline {subsubsection}{\numberline {4.2.2.11}DatarateChannel}{43}{subsubsection.4.2.2.11}
+\contentsline {subsubsection}{\numberline {4.2.2.12}omnetpp.ini}{43}{subsubsection.4.2.2.12}
+\contentsline {section}{\numberline {4.3}Funktionsweise mit Beispielanwendungen}{43}{section.4.3}
+\contentsline {chapter}{\numberline {5}Zusammenfassung}{45}{chapter.5}
+\contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{47}{chapter*.39}

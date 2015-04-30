@@ -91,16 +91,73 @@ Die Prozessorgates erhalten dann die Verbindungen zu den jeweils entsprechenden 
 
 \subsubsection{Sensormodule}
 
+Der Sensor in seiner Gesamtheit besitzt keine eigene C++-Klasse. Jedoch besitzt er 4 Module, die gemeinsam die Funktionalität des Sensor ausmachen, welche jeweils eine Klasse haben. Diese werden im folgenden Abschnitt beschrieben.
+
 \paragraph{SensingUnit}
+
+Die SensingUnit ist der wichtigste Teil des Sensors. Innerhalb der Definition von \textbf{handleMessage(cMessage*)} wartet das Modul auf ein Signal vom Prozessor. Sobald dieses kommt wird ein Messvorgang gestartet. Zunächst überprüft das Modul dabei die eigene Position. In Abhängigkeit von dieser wird anschließend ein dem Typ entsprechender Messwert aus dem Modul \textbf{CustomWorldUtility} ausgelesen, welcher hinterher an den SignalConditioner weitergegeben wird. Dazu wird eine Instanz der Klasse SimpleSensorData genutzt, welche an eine cMessage angehängt wird und dann über das entsprechende Gate gesendet wird.
+
 \paragraph{SignalConditioner}
+
+Der SignalConditioner wartet auf eingehende Daten von der SensingUnit. In der Praxis würde das Signal hier aufbereitet werden, jedoch ist die genaue Modellierung an dieser Stelle nicht relevant. Daher kann lediglich ein Energieverbrauch für die durchgeführten Operationen definiert werden, welcher dann bei jedem Aufruf verbraucht wird. Anschließend werden eingegangene Nachrichten weitergeleitet an den SignalConverter.
+
 \paragraph{SignalConverter}
+
+Für den SignalConverter gilt das selbe wie für den SignalConditioner. Die eingegangenen Nachrichten werden lediglich an den Transducer weitergeleitet, ohne das genaue Verhalt zu simulieren und auch dabei steht wieder nur die Modellierung des Energiehaushalts im Vordergrund.
+
 \paragraph{Transducer}
+
+Das letzte Bauteil der Messkette ist der Transducer. Dieser erhält seine Daten vom SignalConverter. Auch hier steht der Energieverbrauch im Vordergrund. Wie in der Realität auch, hat der Transducer am Ende den verwertbaren Messwert in einer festgelegten Einheit vorliegen. Dieser wird anschließend an den Prozessor gesendet, welcher sich dann um die Verwendung dessen kümmert.
 
 \subsubsection{Prozessor}
 
+Eine wichtige Funktion des Prozessors wurde eben schon indirekt beschrieben. Die Klasse \textbf{Processor} kümmert sich um die Steuerung des Sensors. Aber er erfüllt auch andere Funktionen, wie die Energieverwaltung des Sensorknotens und die Verwertung von statistischen Daten.
+
+\paragraph{Sensorsteuerung}
+
+Der jeweilige Prozessor kann über das entsprechende, ausgehende Gate zu seinen Sensoren einen Messvorgang auslösen. Anschließend bekommt er die Daten vom Transducer übermittelt. Diese Information kann nun unterschiedlich behandelt werden. Typischer Weise kann dieser Wert nun zunächst im Speicher hinterlegt werden. Dafür wird die eingegangene Message direkt an den Memory weitergeleitet. Wie das genau aussieht ist im folgenden Abschnitt des Memories beschrieben.\\
+Es ist auch möglich periodisch Messungen durchzuführen. Dazu muss lediglich im NED-Modul ein Wert für sensingIntervall gesetzt werden. Dieser legt fest, welche zeitlichen Abstände zwischen 2 Messungen vorliegen sollen. Es wird dann bei der Initialisierung ein Event gestartet welcher jeweils nach dem festgelegten Zeitintervall ausgelöst wird. In diesem Fall wird dann ein Messvorgang gestartet. Danach wird der nächste folgende Event initialisiert und zum gegebenen Zeitpunkt beginnt der Vorgang von neuem.
+
+\paragraph{ProcessorMode}
+
+Weiterhin hat der Prozessor die Möglichkeit zwischen verschiedenen Powermodi zu wechseln. Die existierenden Modi sind in einem enum (Listing \ref{lst:ModeEnum}) definiert.
+
+\begin{lstlisting}[language=C++, label=lst:ModeEnum]
+enum MODES { 
+	NORMAL = 0, 
+	POWER_SAVING = 1, 
+	HIGH_PERFORMANCE = 2, 
+	OFF 
+}
+\end{lstlisting}
+
+So können beispielsweise Tagesabläufe der Sensorknoten gesteuert werden. Da die Energiequelle von Sensorknoten oft sehr klein ist, ist es sinnvoll die Knoten in Zeiten, in denen keine Messwerte aufgenommen werden sollen in einen Stand-By Zustand zu versetzen. Dadurch kann viel Energie gespart werden.\\
+Diese Funktion wird durch die verschiedenen Powermodi bereitgestellt. Es ist möglich einen Zeitintervall zu definieren, in dem die verschiedenen Knoten gemeinsam zwischen den verschiedenen Modi wechseln. Da ein Knoten in Zeiten des Stand-By keine Kommunikation durchführen kann, ist am sinnvollsten alle Knoten im Netzwerk synchron schlafen zu lassen. Der entsprechende Zeitintervall kann durch die Variable shiftProcessorModeIntervall definiert werden.\\
+Dadurch werden nun wieder zeitlich periodische Wechsel zwischen den Modi durchgeführt, welche durch Events gesteuert werden.\\
+Für jeden einzelnen Zustand kann dann wiederum im ini-File definiert werden, wie der Energieverbrauch pro Zeiteinheit während welches Modus genau aussehen muss.
+
+\paragraph{Statistiken}
+
+Die dritte Funktion des Prozessors, welche ebenfalls über Events gesteuert wird, ist das Erfassen statistischer Daten. Auch hierfür kann, in Form von der Variable collectStatisticsIntervall, ein zeitlicher Intervall definiert werden, nach diesem jeweils ein Event eine Erhebung von statistischen Messwerten des Batteriezustands durchführt.
+
 \subsubsection{Memory}
 
+Der Speicher besitzt arrays für einen key-value-Speicher und implementiert zur Benutzung dieses Speichers die CRUD-Operationen, wie in Listing \ref{lst:CRUD} zu sehen ist.
+
+\begin{lstlisting}[language=C++, label=lst:ModeEnum]
+void createEntry (std::string key, int value);
+int readEntry (std::string key);
+void updateEntry (std::string key, int value);
+void deleteEntry (std::string key);
+\end{lstlisting}
+
+Wenn nun von außen eine Message mit einem Datensatz an den Speicher geschickt wird, so kann dieser je nach Bedarf Datensätze neu anlegen, löschen oder updaten, damit diese später, wenn die Daten benötigt werden, wieder abgerufen werden können.
+
 \subsubsection{BatteryAccess}
+
+Die Klasse BatteryAccess ermöglicht den Modules des Sensors auf die Batterie zugreifen zu können. Dafür ist zunächst eigentlich die Klasse MiximBatteryAccess zuständig. BatteryAccess erbt von dieser und erweitert sie um einige wichtige Funktionen.\\
+So können zum Beispiel direkt Werte für den Energieverbrauch des entsprechenden Moduls hinterlegt werden. Immer wenn nun eine Energieintensive Operation durchgeführt wird, verbraucht die Batterie Energie in Höhe dieses definierten Wertes.\\
+Die Klasse kümmert sich weiterhin um die Initialisierung und um den Fall, dass die Batterie den leeren Zustand erreicht.
 
 \subsubsection{SimpleSensorData}
 
@@ -140,7 +197,7 @@ Im Listing \ref{lst:ExtendedMessage} ist zu sehen welche Statistikparameter erho
 \begin{lstlisting}[language=NED, label=lst:ExtendedMessage]
 message ExtendedMessage extends cMessage
 {
-	int source;
+    int source;
     int destination;
     int hopCount = 0;    
 }
@@ -156,39 +213,66 @@ Dieses Interface enthält grundlegende Attribute für Statistiken. Klassen die d
 
 Im folgenden Abschnitt werden alle Simulationsobjekte erläutert, also all jene, die durch die Sprache NED beschrieben wurden:
 
-\begin{itemize}{\label{enum:Netzwerk}}
+\begin{minipage}{\textwidth}
+\begin{itemize}{\label{enum:NedModules}}
 \item Simple Module
 \begin{multicols}{2}
 \begin{itemize}
-\item CustomWorldUtility  
+\item AbstractSensingUnit
+\item AbstractSignalConditioner
+\item AbstractSignalConverter
+\item AbstractTransducer
+\item CustomWorldUtility
+\item ExampleProcessor
+\item Memory
+\item Processor
+\item SensingUnitHumidity
+\item SensingUnitLight
+\item SensingUnitPressure
+\item SensingUnitTemperature
+\item SignalConditionerHumidity
+\item SignalConditionerLight
+\item SignalConditionerPressure
+\item SignalConditionerTemperature
+\item SignalConverterHumidity
+\item SignalConverterLight
+\item SignalConverterPressure
+\item SignalConverterTemperature
+\item TransducerHumidity
+\item TransducerLight
+\item TransducerPressure
+\item TransducerTemperature 
 \end{itemize}
 \end{multicols}
 \item Compound Module
 \begin{multicols}{2}
 \begin{itemize}
-\item bla
+\item AbstractSensor
+\item SensorNode
+\item HumiditySensor
+\item LightSensor
+\item PressureSensor
+\item TemperatureSensor 
 \end{itemize}
 \end{multicols}
+\item Messages und Channel
 \begin{multicols}{2}
-\item Messages
 \begin{itemize}
 \item ExtendedMessage
+\item DatarateChannel
 \end{itemize}
 \end{multicols}
 \end{itemize}
+\end{minipage}
 
 \subsubsection{Simple Module}
 
-Simple Module sind Komponenten in einer Omnet++ Simulation, die die größte Auswirkung auf die Wirkungsweise des Netzwerkes haben. Das liegt daran, dass bei ihnen neben einer Beschreibung in NED auch eine Beschreibung in C++ vorliegt. Daher kann das Verhalten jener Module während der Simulation ausführlich definiert werden.
+Simple Module sind Komponenten in einer Omnet++ Simulation, die die größte Auswirkung auf die Wirkungsweise des Netzwerkes haben. Das liegt daran, dass bei ihnen neben einer Beschreibung in NED auch eine Beschreibung in C++ vorliegt. Daher kann das Verhalten jener Module während der Simulation ausführlich definiert werden. Simple Module werden oft in Gruppen zusammengefasst, also in Compound Modulen. Dadurch kann man komplexe Modellbeschreibungen erzeugen.\\
+Im folgenden Teil werden einige dieser Simple Module beschrieben.
 
-\paragraph{CustomLinearMobility}
+\subsubsection{CustomWorldUtility}
 
-Das Modul CustomLinearMobility ist eine Erweiterung der LinearMobility, welche MiXiM bereitstellt. Neben dem Verhalten welches in C++ beschrieben ist, ist das Modul lediglich um den Parameter maxSpeed erweitert, welcher in der omnetpp.ini definiert werden kann.
-
-\paragraph{CustomWorldUtility}
-
-Wie im Codebeispiel (\ref{lst:CustomWorldUtility}) zu sehen ist, ist das Modul CustomWorldUtility eine Erweiterung des Moduls BaseWorldUtility. Zusätzlich zu den darin definierten Eigenschaften hat es einige weitere Parameter. Zunächst eine bool'sche Variable, welche festlegt, ob zu Beginn der Simulation neue Umweltparameter generiert werden sollen. \newline Während numSensorNodes definiert, wieviele Sensorknoten im Netzwerk vorhanden sind und somit wieviele Gates zu Sensorknoten gehen, so definiert numGates die Anzahl der einzelnen Sensoren und somit auch die Anzahl der dahin gehenden notwendigen Gates. Da Sensorknoten auch mit mehr als einem Sensor bestückt sein können, ist der Wert beider Variablen mitunter durchaus verschieden.\newline
-Die restlichen Variablen speichern die Umweltparameter in Form einer xml-Datei.
+Wie im Codebeispiel (\ref{lst:CustomWorldUtility}) zu sehen ist, ist das Modul CustomWorldUtility eine Erweiterung des Moduls BaseWorldUtility. Zusätzlich zu den darin definierten Eigenschaften hat es einige weitere Parameter. Zum einen den integer-Wert dataGranularity, welcher festlegt, wie genau die Messwerte generiert werden sollen. Er legt fest, wie groß die Fläche, beziehungsweise  der Würfel sein soll, für die jeweils ein Messwert angelegt wird. Dabei definiert dataGranularity die Kantenlänge. Die restlichen Variablen speichern die Speicherorte für die Messwerte, welche als xml-Datei erstellt werden.
 
 \begin{minipage}{\textwidth}
 \begin{lstlisting}[language=ned,caption={CustomWorldUtility},label=lst:CustomWorldUtility]
@@ -197,120 +281,75 @@ import org.mixim.base.modules.BaseWorldUtility;
 
 simple CustomWorldUtility extends BaseWorldUtility
 {
-    parameters:
-        bool createData;
-        int numGates;
-        int numSensorNodes;
-        xml xmlTemperature = xmldoc("WorldModel/data/temperature.xml");
-        xml xmlPressure = xmldoc("WorldModel/data/pressure.xml");
-        xml xmlHumidity = xmldoc("WorldModel/data/humidity.xml");
-        xml xmlLight = xmldoc("WorldModel/data/light.xml");
-        
+    bool createData;
+        int dataGranularity;
+        string basePath = "src/WorldModel/data/";
+        xml xmlTemperature = xmldoc("src/WorldModel/data/temperature.xml");
+        xml xmlPressure = xmldoc("src/WorldModel/data/pressure.xml");
+        xml xmlHumidity = xmldoc("src/WorldModel/data/humidity.xml");
+        xml xmlLight = xmldoc("src/WorldModel/data/light.xml");
         @class("CustomWorldUtility");
-    gates:
-        inout worldDataGate[numGates];
-        inout toNode[numSensorNodes];
 }
 \end{lstlisting}
 \end{minipage}
 
-Neben den Parametern besitzt dieses Modul auch noch zusätzlich 2 verschiedene Arten von inout-Gates. Die Menge von worldDataGates verbindet die Welt mit jedem Sensor der auf einem Sensorknoten verbaut ist. Die Menge der toNode-Gates dient für die direkte Verbindung zwischen World und Nodes.
+\subsubsection{Sensormodule}
 
-\paragraph{Sensoren}
+Es gibt 4 verschiedene Module aus denen sich ein Sensor, unabhängig von seinem Typ, zusammen setzt:
 
-Es gibt 5 Module welche die Sensoren definieren. Zum einen den allgemeinen Sensor, der das Vatermodul für alle 4 Sensortypen bildet. Er enthält nicht viel, lediglich Gates für Verbindungen zur Welt, um die Umweltparameter abfragen zu können und zum jeweiligen Knoten, für die Kommunikation innerhalb des Bauteils. Weiterhin besitzt er noch einen Parameter, der im Kindmodul den Typ des Sensors beschreibt.
-
-\begin{multicols}{2}
 \begin{itemize}
-\item HumiditySensor
-\item LightSensor
-\item PressureSensor
-\item TemperatureSensor
+\item SensingUnit
+\item SignalConditioner
+\item SignalConverter
+\item Transducer
 \end{itemize}
-\end{multicols}
 
-Die 4 Sensortypen, welche vom allgemeinen Sensor erben, definieren jeweils nur den Typ des Sensors. Sie können auf den Knoten als Submodule verwendet werden. Jeder Sensorknoten kann 1 bis 4 Sensoren verschiedener Typen beinhalten und somit ergeben sich 15 verschiedene Arten von Sensorknoten.
+Für jeden dieser Typen gibt es ein abstraktes Modell, von welchem alle Sensortypen mit einer eigenen Implementierung erben. Weiterhin steht ein Interface zur Verfügung, welche diese implementieren müssen. Unterschiedliche Parameter besitzen die einzelnen Implementierungen nicht, jedoch bieten die verschiedenen Benennungen die Möglichkeit, den Energieverbrauch für jeden unterschiedlichen Sensortyp genau steuern zu können.\\
+Alle dieser Module haben jeweils Parameter für den Energieverbrauch, welcher in der dahinter liegenden Klasse ausgewertet wird und ein input und ein output Gate. Die Verbindungen zu denen die Gates führen unterscheiden sich jedoch.\\
+Während für die in der Messkette mittleren Module jeweils ein Gate zum vorherigen und eines zum nachfolgenden Modul führt, gilt das nicht für die SensingUnit und den Transducer. Die SensingUnit hat ein eingehendes Gate vom Prozessor, welcher ein Signal senden kann, um eine Messung in Gang zu setzen und der Transducer besitzt ein ausgehendes Gate zum Prozessor, um die fertig eingelesenen Daten an diesen zu übermitteln.
 
-\begin{minipage}{\textwidth}
-\begin{lstlisting}[language=ned,caption={Sensor},label=lst:Sensor]
-package mynetwork.Node.Sensor;
+\subsubsection{Prozessor}
 
-simple Sensor 
-{
-    parameters:
-        //type of the sensor
-        string type;
-	    @display("i=block/wrx");
-	    @class("Sensor");
-	gates: 
-	    inout toNode;
-	    inout worldDataGate;
-}
-\end{lstlisting}
-\end{minipage}
+Das NED-Modul des Prozessors bietet nicht besonders viele Einstellungsmöglichkeiten. Es existiert ein Parameter numGates, welcher definiert, wie viele Gates der Prozessor besitzt, wobei der Wert dafür innerhalb der Initialisierung der C++-Klasse gesetzt wird. Zusätzlich kann die Anzahl der Prozessor Modi geändert werden, wobei dann wiederum zusätzliche Anpassungen innerhalb der C++-Klasse notwendig sind, damit diese auch genutzt werden können. Weiterhin können für die bestehenden 3 Modi die Parameter für den Energieverbrauch jeweils definiert werden.
+
+\subsubsection{Memory}
+
+Das NED-Modul des Speichers bietet nicht viele Parameter. Lediglich der Energieverbrauch des Bauteils kann an dieser Stelle definiert werden.
 
 \subsubsection{Compound Module}
 
 Compound Module dienen dazu, andere Module zusammenzufassen, sollen jedoch keine eigene aktive Funktionalität definieren. Ihr Verhalten soll sich allein durch die Submodule ergeben. Es ist daher nicht sinnvoll eine C++-Klasse für diese Module zu definieren.\newline
-Alle Sensorknoten, die in dieser Simulation vorkommen sind solche Compound Module.
+Für den Sensorknoten wurde dennoch eine eigene Klasse definiert, welche allerdings keine Funktion während der Simulation übernimmt, sondern allein für die generische Initialisierung zuständig ist.
 
-\paragraph{MyWirelessNode}
+\subsubsection{Sensoren}
 
-Zum einen existiert das Modul MyWirelessNode, welches das Vatermodul für alle Sensorknoten bildet. Es erbt selbst von einem Modul, welches die kabellose Kommunikation unter den Knoten und Batteriestatistiken ermöglicht. Außerdem beinhalten die Knoten auch Funktionen der Mobility, genauer gesagt der CustomLinearMobility, welche auch mobile Knoten ermöglicht. \newline
-Es besitzt weiterhin ein inout Gate zur World.
+Es liegt ein abstraktes Modul und ein Modulinterface für die verschiedenen Sensoren vor und für jeden Sensortyp existiert ein Sensormodul, welches vom abstrakten Modul erbt und das Sensorinterface implementiert.\\
+Die Abstrakte Klasse besitzt wenige Parameter; zum einen type, in dem in der jeweiligen Sensorimplementierung der Typ des Sensors definiert werden muss und die beiden Parameter dataBandwidth und controlBandwidth, welche die Bandbreite für die 2 verschiedenen Arten von Channels definieren.\\
+Das wichtigste ist natürlich die Definition der Submodule (\ref{lst:AbstractSensor}), denn diese machen die Funktionalität eines Compound Moduls aus.
 
-\paragraph{Sensorknoten}
-
-Es gibt insgesamt 15 verschiedene Arten von Sensorknoten, welche am Anfang von Kapitel \ref{enum:Netzwerk} aufgelistet sind. Die Benennung ergibt sich wie folgt (jeweils aus dem Anfangsbuchstaben des englischen Begriffs):
-\begin{itemize}
-\item T - Temperatur
-\item H - Luftfeuchtigkeit
-\item L - Licht
-\item P - Druck
-\end{itemize}
-Hierzu ein Codebeispiel des NED-Modules des Knotens, der alle 4 Sensoren enthält: Listing \ref{lst:THLPNode}.
-
-\begin{lstlisting}[language=ned,caption={THLPNode},label=lst:THLPNode]
-package mynetwork.Node;
-import mynetwork.Node.Sensor.TemperatureSensor;
-import mynetwork.Node.Sensor.HumiditySensor;
-import mynetwork.Node.Sensor.LightSensor;
-import mynetwork.Node.Sensor.PressureSensor;
-
-module THLPNode extends MyWirelessNode
-{
-    @display("bgb=210,491");
-    gates:
-        inout toSensor[4];
-        inout worldGate[4];
-
-    submodules:
-        TemperatureSensor: TemperatureSensor {
-            @display("p=140,380");
+\begin{lstlisting}[language=ned,caption={AbstractSensor},label=lst:AbstractSensor]
+submodules:
+        SensingUnit: <"SensingUnit"+type> like SensingUnitInterface {
+            @display("p=100,50");
         }
-        HumiditySensor: HumiditySensor {
-            @display("p=140,310");
+        SignalConditioner: <"SignalConditioner"+type> like SignalConditionerInterface {
+            @display("p=100,120");
         }
-        LightSensor: LightSensor {
-            @display("p=140,450");
+        SignalConverter: <"SignalConverter"+type> like SignalConverterInterface {
+            @display("p=100,190");
         }
-        PressureSensor: PressureSensor {
-            @display("p=70,450");
+        Transducer: <"Transducer"+type> like TransducerInterface {
+            @display("p=100,260");
         }
+\end{lstlisting}
 
-    connections:
-        toSensor[0] <--> { delay = 0ms; } <--> TemperatureSensor.toNode;
-        worldGate[0] <--> { delay = measureTime; } <--> TemperatureSensor.worldDataGate;
+Anhand der Submoduldefinition ist auch ersichtlich, weshalb jedes Modul des Sensor jeweils ein Interface implementieren muss. Für das parametrische Anlegen von Submodulen, muss wenigstens ein Interface definiert werden, dem das Modul angehören muss, damit nicht jedes beliebige Modul an dieser Stelle eingesetzt werden kann.
 
-        toSensor[1] <--> { delay = 0ms; } <--> HumiditySensor.toNode;
-        worldGate[1] <--> { delay = measureTime; } <--> HumiditySensor.worldDataGate;
-        
-        toSensor[2] <--> { delay = 0ms; } <--> LightSensor.toNode;
-        worldGate[2] <--> { delay = measureTime; } <--> LightSensor.worldDataGate;
-        
-        toSensor[3] <--> { delay = 0ms; } <--> PressureSensor.toNode;
-        worldGate[3] <--> { delay = measureTime; } <--> PressureSensor.worldDataGate;
-}
+\subsubsection{SensorNode}
+
+Der SensorNode ist das komplexeste Compound Modul in der Simulation, denn es beinhaltet die bisher beschriebenen Module Sensor, Prozessor, Memory und die in MiXiM enthaltenen Module für die Funkkommunikation und eine Batterie.
+
+\begin{lstlisting}[language=ned,caption={THLPNode},label=lst:SensorNode]
 \end{lstlisting}
 
 Wie man sehen kann erbt der Sensorknoten von MyWirelessNode. Er übernimmt zunächst also alle Eigenschaften des vorher bereits erklärten Modules. Hinzu kommen pro Sensor jeweils 1 Gate zum Sensor und zur world, welches den Sensor mit der Welt verbindet. \newline
@@ -324,23 +363,11 @@ Entscheidend für das jeweilige Modul ist jedoch die Definition der Submodule. I
 Also für jeden Sensor das jeweilige Modul.\newline
 Zuletzt werden noch für die Gates die Verbindungen definiert.
 
-\subsubsection{Networks}
-
-Das Netzwerk ist das wichtigste Modul jeder Omnet++-Simulation, denn es fügt alle Elemente zusammen. Ein Netzwerk ist den Compound-Modulen daher nicht unähnlich. 
-
-\paragraph{MyNetwork}
-
-Für das Modul MyNetwork heißt das, dass es eine Instanz des CustomWorldUtility und variabel viele Sensorknoten zusammenfügt, indem es diese als Submodule definiert und deren Gates miteinandern verbindet. Die Definition ist dem MiXiM-Modul BaseNetwork ähnlich, aber hat deutlich mehr zusätzliche Submodule und Parameter. \newline
-So sind die Definitionen des Playgrounds, der Mobilität und des ConnectionManager analog, die Submodule der World und des Sensorknoten und die dazu benötigten Parameter, die zum Beispiel die Anzahl der jeweiligen Sensorknoten definieren und die Gateverbindungen jedoch kommen nur hier vor.
-
-
-Nicht auf den ersten Blick zu erkennen ist die Kommunikation zwischen den Knoten selbst. Die connections sind durch den Term allowunconnected so definiert, dass auch dynamisch Verbindungen aufgebaut werden können, die nicht strikt im Compound Module  definiert sind. Mit Hilfe der sendDirect()-Funktion können so dennoch Nachrichten zwischen Gates versendet werden.
-
-\subsubsection{Messages}
+\subsubsection{Messages und Channels}
 
 Nachrichten sind das essentielle Werkzeug, um in einem Netzwerk Kommunikation zu ermöglichen. Es gibt ein vordefiniertes Modul cMessage, welches dafür genutzt werden kann. Dieses beinhaltet notwendige Informationen wie zum Beispiel Sendermodul und -gate, Empängermodul und -gate, Sende-, Empfangs- und Erstellzeit und mehr.
 
-\paragraph{ExtendedMessage}
+\subsubsection{ExtendedMessage}
 
 Die ExtendedMessage erweitert diese Funktionalität um einige Informationen für die Statistik.
 
@@ -353,11 +380,11 @@ message ExtendedMessage extends cMessage
 }
 \end{lstlisting}
 
+\subsubsection{DatarateChannel}
+
 \subsubsection{omnetpp.ini}
 
 Die omnetpp.ini ist eine Datei, in der Eigenschaften der Simulation geändert werden können, ohne das man den Sourcecode bearbeiten und danach neu kompilieren muss. Es bietet sich daher an, alle Variablen und Konstanten, welche sich öfters ändern hier zu definieren.\newline
-
-
 
 Für die relevanten Parameter wurde in der ini-Datei eine spezielle Sektion eingeteilt. Hier können beispielsweise Werte für die playgroundSize vergeben oder festgelegt werden ob Mobilität der Knoten erlaubt sein soll.
 
