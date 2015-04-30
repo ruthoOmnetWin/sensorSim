@@ -2,98 +2,98 @@
 
 \bibitem{doxygen}
 {\em Doxygen}.
-\newblock Online unter \url{www.doxygen.org/}; zuletzt besucht am 18. November
-  2014.
+\newblock Online unter \url{www.doxygen.org/}; zuletzt besucht am 24. April
+  2015.
 
 \bibitem{eclipse}
 {\em Eclipse}.
-\newblock Online unter \url{https://www.eclipse.org/}; zuletzt besucht am 5.
-  August 2014.
+\newblock Online unter \url{https://www.eclipse.org/}; zuletzt besucht am 06.
+  Mai 2014.
 
 \bibitem{emacs}
 {\em Emacs}.
 \newblock Online unter \url{http://www.gnu.org/software/emacs/}; zuletzt
-  besucht am 25. November 2014.
+  besucht am 26. April 2015.
 
 \bibitem{git}
 {\em Git}.
-\newblock Online unter \url{http://git-scm.com/}; zuletzt besucht am 5. August
+\newblock Online unter \url{http://git-scm.com/}; zuletzt besucht am 06. Mai
   2014.
 
 \bibitem{github}
 {\em Github}.
-\newblock Online unter \url{https://github.com}; zuletzt besucht am 5. August
+\newblock Online unter \url{https://github.com}; zuletzt besucht am 06. Mai
   2014.
 
 \bibitem{miximapiref}
 {\em MiXiM API Reference}.
 \newblock Online unter \url{http://mixim.sourceforge.net/doc/MiXiM/doc/doxy/};
-  zuletzt besucht am 5. August 2014.
+  zuletzt besucht am 08. Mai 2014.
 
 \bibitem{mixim}
 {\em MiXiM Official Website}.
 \newblock Online unter \url{http://mixim.sourceforge.net/}; zuletzt besucht am
-  5. August 2014.
+  08. Mai 2014.
 
 \bibitem{ned}
 {\em NED Language Beschreibung auf ieee.org}.
 \newblock Online unter \url{http://www.ewh.ieee.org/soc/es/Nov1999/18/ned.htm};
-  zuletzt besucht am 5. August 2014.
+  zuletzt besucht am 06. Mai 2014.
 
 \bibitem{ns3-wiki}
 {\em NS-Simulator auf Wikipedia}.
 \newblock Online unter \url{http://en.wikipedia.org/wiki/Ns_%28simulator%28};
-  zuletzt besucht am 25. November 2014.
+  zuletzt besucht am 25. April 2015.
 
 \bibitem{omnetman}
 {\em Omnet++ Manual}.
 \newblock Online unter
   \url{http://www.omnetpp.org/doc/omnetpp/manual/usman.html}; zuletzt besucht
-  am 5. August 2014.
+  am 06. Mai 2014.
 
 \bibitem{omnet}
 {\em Omnet++ Official Website}.
-\newblock Online unter \url{http://www.omnetpp.org}; zuletzt besucht am 5.
-  August 2014.
+\newblock Online unter \url{http://www.omnetpp.org}; zuletzt besucht am 08. Mai
+  2014.
 
 \bibitem{wrowser}
 {\em OpenWNS Wrowser}.
 \newblock Online unter \url{https://launchpad.net/openwns-wrowser}; zuletzt
-  besucht am 25. November 2014.
+  besucht am 25. April 2015.
 
 \bibitem{TopGen}
 {\em Topology Generator des NS-Simulators}.
 \newblock Online unter \url{https://www.nsnam.org/wiki/Topology_Generator};
-  zuletzt besucht am 25. November 2014.
+  zuletzt besucht am 26. April 2015.
 
 \bibitem{sensornetzwiki}
 {\em Wikipediaeintrag Sensornetz}.
 \newblock Online unter \url{http://de.wikipedia.org/wiki/Sensornetz}; zuletzt
-  besucht am 5. August 2014.
+  besucht am 08. Mai 2014.
 
 \bibitem{openwns}
 {\sc Daniel~Bültmann, Maciej~Mühleisen, Sebastian Max (Chair of Communication
   Networks RWTH Aachen~University)}: {\em openWNS}.
-\newblock Online unter \url{http://openwns.org}; zuletzt besucht am 18.
-  November 2014.
+\newblock Online unter \url{http://openwns.org}; zuletzt besucht am 04. Mai
+  2014.
 
 \bibitem{ns3}
 {\sc George F.~Riley, Thomas R.~Henderson}: {\em The ns-3 Network Simulator}.
-\newblock Online unter \url{http://www.nsnam.org/}; zuletzt besucht am 18.
-  November 2014.
+\newblock Online unter \url{http://www.nsnam.org/}; zuletzt besucht am 26.
+  April 2015.
 
 \bibitem{hsc}
 {\sc Hardt, Prof. Dr.~Wolfram}: {\em Veranstaltungen zu Hard-/Software Codesign
   2}.
 \newblock Online unter
   \url{https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/4563599363};
-  zuletzt besucht am 18. August 2014.
+  zuletzt besucht am 04. Mai 2014.
 
 \bibitem{ikr}
 {\sc Jörg~Sommer, Joachim Scharf (Institute of Communication~Networks}
   \btxandlong{}\ {\sc Computer~Engineering der Universität~Stuttgart)}: {\em
   IKR Simulation Library (IKR SimLib)}.
 \newblock Online unter \url{http://www.ikr.uni-stuttgart.de/IKRSimLib/};
-  zuletzt besucht am 18. November 2014.
+  zuletzt besucht am 04. Mai 2014.
 
 \end{thebibliography}

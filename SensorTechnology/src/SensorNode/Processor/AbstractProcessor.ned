@@ -43,7 +43,7 @@ simple AbstractProcessor
     	double energyConsumptionHighPerformance;
 	gates:
 	    //dynamically created gates (once for every sensor on the node):
-	    
+
 	    //inout connectToMemory;
 	    //in fromTransducerToNodeProcessor;
 }
