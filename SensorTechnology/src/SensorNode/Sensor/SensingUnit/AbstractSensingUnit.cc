@@ -25,7 +25,7 @@ AbstractSensingUnit::~AbstractSensingUnit() {
 }
 
 void AbstractSensingUnit::initialize(int stage) {
-    AbstractBatteryAccess::initialize(stage);
+    BatteryAccess::initialize(stage);
     if (stage == 0) {
         CustomWorldUtility *World = FindModule<CustomWorldUtility*>::findGlobalModule();
 

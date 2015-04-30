@@ -37,7 +37,7 @@ moduleinterface SensorNodeInterface
         int numSensorModules; //for the battery, amount of elements inside one sensor
         int numDevices; //for the battery, = numSensors*numSensorModules
         int numHosts;
-        @class("AbstractSensorNode");
+        @class("SensorNode");
 
         //these are used to draw the overview of the model
         bool fakeProcessor;

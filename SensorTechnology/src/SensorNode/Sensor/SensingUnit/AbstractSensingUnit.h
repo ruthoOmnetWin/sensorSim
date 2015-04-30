@@ -21,7 +21,7 @@
 #include <FindModule.h>
 #include <BasePhyLayer.h>
 #include <string.h>
-#include "AbstractBatteryAccess.h"
+#include "BatteryAccess.h"
 #include "CustomWorldUtility.h"
 #include "SimpleSensorData.h"
 
@@ -32,7 +32,7 @@
  * for the sensing it calls a function inside the world model and
  * gets a value by its type and position
  */
-class AbstractSensingUnit : public AbstractBatteryAccess {
+class AbstractSensingUnit : public BatteryAccess {
 protected:
     Coord *Position;
     CustomWorldUtility *world;

@@ -13,11 +13,11 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#include <AbstractMemory.h>
+#include <Memory.h>
 
 #define error -9999
 
-AbstractMemory::AbstractMemory() {
+Memory::Memory() {
     storageType = new std::string[storageSize];
     storageValue = new int[storageSize];
     for (int i = 0; i < storageSize; i++) {
@@ -26,19 +26,19 @@ AbstractMemory::AbstractMemory() {
     }
 }
 
-AbstractMemory::~AbstractMemory() {
+Memory::~Memory() {
     delete[] storageType;
     storageType = NULL;
     delete[] storageValue;
     storageValue = NULL;
 }
 
-void AbstractMemory::initialize(int stage)
+void Memory::initialize(int stage)
 {
-    AbstractBatteryAccess::initialize(stage);
+    BatteryAccess::initialize(stage);
 }
 
-void AbstractMemory::handleMessage(cMessage *msg)
+void Memory::handleMessage(cMessage *msg)
 {
     draw();
     const char* name = msg->getName();
@@ -59,7 +59,7 @@ void AbstractMemory::handleMessage(cMessage *msg)
     delete(msg);
 }
 
-void AbstractMemory::createEntry(std::string type, int value)
+void Memory::createEntry(std::string type, int value)
 {
     int emptyId = -1;
     for (int i = 0; i < storageSize; i++) {
@@ -75,7 +75,7 @@ void AbstractMemory::createEntry(std::string type, int value)
     storageValue[emptyId] = value;
 }
 
-int AbstractMemory::readEntry(std::string type)
+int Memory::readEntry(std::string type)
 {
     int id = getIdByType(type);
     if (id == -1) {
@@ -84,7 +84,7 @@ int AbstractMemory::readEntry(std::string type)
     return storageValue[id];
 }
 
-void AbstractMemory::updateEntry(std::string type, int value)
+void Memory::updateEntry(std::string type, int value)
 {
     int id = getIdByType(type);
     if (id == -1) {
@@ -93,7 +93,7 @@ void AbstractMemory::updateEntry(std::string type, int value)
     storageValue[id] = value;
 }
 
-void AbstractMemory::deleteEntry(std::string type)
+void Memory::deleteEntry(std::string type)
 {
     int id = getIdByType(type);
     if (id == -1) {
@@ -103,7 +103,7 @@ void AbstractMemory::deleteEntry(std::string type)
     storageType[id] = "";
 }
 
-int AbstractMemory::getIdByType(std::string type)
+int Memory::getIdByType(std::string type)
 {
     int id = -1;
     for (int i = 0; i < storageSize; i++) {

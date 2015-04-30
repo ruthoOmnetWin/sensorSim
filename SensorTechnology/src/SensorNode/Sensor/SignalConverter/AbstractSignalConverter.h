@@ -17,13 +17,13 @@
 #define ABSTRACTSIGNALCONVERTER_H_
 
 #include <omnetpp.h>
-#include "AbstractBatteryAccess.h"
+#include "BatteryAccess.h"
 
 /**
  * simple implementation of the signal converter which just models
  * the power consumption yet
  */
-class AbstractSignalConverter : public AbstractBatteryAccess {
+class AbstractSignalConverter : public BatteryAccess {
 public:
     AbstractSignalConverter();
     virtual ~AbstractSignalConverter();

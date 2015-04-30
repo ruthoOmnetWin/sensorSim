@@ -17,13 +17,13 @@
 #define ABSTRACTTRANSDUCER_H_
 
 #include <omnetpp.h>
-#include "AbstractBatteryAccess.h"
+#include "BatteryAccess.h"
 
 /**
  * simple implementation of the transducer which just models
  * the power consumption yet
  */
-class AbstractTransducer : public AbstractBatteryAccess {
+class AbstractTransducer : public BatteryAccess {
 public:
     AbstractTransducer();
     virtual ~AbstractTransducer();

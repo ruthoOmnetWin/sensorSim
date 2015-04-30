@@ -18,7 +18,7 @@
 
 #include <omnetpp.h>
 #include <string.h>
-#include "AbstractBatteryAccess.h"
+#include "BatteryAccess.h"
 #include "SimpleSensorData.h"
 
 /**
@@ -27,14 +27,14 @@
  * it has the 4 functions of the CRUD model and a simple key-value store with the
  * size storageSize
  */
-class AbstractMemory : public AbstractBatteryAccess {
+class Memory : public BatteryAccess {
 protected:
     std::string* storageType;
     int* storageValue;
     const static int storageSize = 4;
 public:
-    AbstractMemory();
-    virtual ~AbstractMemory();
+    Memory();
+    virtual ~Memory();
     void initialize(int stage);
     void handleMessage(cMessage *msg);
     //crud - to access the storage
@@ -45,6 +45,6 @@ public:
     int getIdByType(std::string);
 };
 
-Define_Module(AbstractMemory);
+Define_Module(Memory);
 
 #endif /* ABSTRACTMEMORY_H_ */

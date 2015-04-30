@@ -13,21 +13,21 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#include <AbstractBatteryAccess.h>
-#include "AbstractSensorNode.h"
+#include <BatteryAccess.h>
+#include "SensorNode.h"
 #include <SimpleBattery.h>
 
-AbstractBatteryAccess::AbstractBatteryAccess() {
+BatteryAccess::BatteryAccess() {
     currentOverTime = 0.0;
     energiePerOperation = 0.0;
 }
 
-AbstractBatteryAccess::~AbstractBatteryAccess() {
+BatteryAccess::~BatteryAccess() {
     currentOverTime = 0.0;
     energiePerOperation = 0.0;
 }
 
-void AbstractBatteryAccess::initialize(int stage) {
+void BatteryAccess::initialize(int stage) {
     MiximBatteryAccess::initialize(stage);
     if (stage == 0) {
         const char * name = this->getFullName();
@@ -41,7 +41,7 @@ void AbstractBatteryAccess::initialize(int stage) {
     }
 }
 
-void AbstractBatteryAccess::handleHostState(const HostState &state)
+void BatteryAccess::handleHostState(const HostState &state)
 {
     HostState::States hostState = state.get();
 
@@ -56,10 +56,10 @@ void AbstractBatteryAccess::handleHostState(const HostState &state)
     }
 }
 
-void AbstractBatteryAccess::draw() {
+void BatteryAccess::draw() {
     drawEnergy(energiePerOperation, 0);
 }
 
-void AbstractBatteryAccess::finish() {
+void BatteryAccess::finish() {
     //EV << "Battery emptied at " << batteryEmptied.str() << endl;
 }

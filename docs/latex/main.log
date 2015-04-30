@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.22)  29 APR 2015 11:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.22)  30 APR 2015 10:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1396,7 +1396,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--34
 
  []
 
-<img/SensorModel.png, id=269, 245.75395pt x 389.39508pt>
+<img/SensorModel.png, id=265, 245.75395pt x 389.39508pt>
 File: img/SensorModel.png Graphic file (type png)
 
 <use img/SensorModel.png>
@@ -1408,14 +1408,14 @@ been already used, duplicate ignored
                    \relax 
 l.44 
       [4] [5 <./img/SensorModel.png>]
-<img/temperatur.png, id=283, 843.15pt x 993.7125pt>
+<img/temperatur.png, id=279, 843.15pt x 993.7125pt>
 File: img/temperatur.png Graphic file (type png)
  <use img/temperatur.png>
 Package pdftex.def Info: img/temperatur.png used on input line 58.
 (pdftex.def)             Requested size: 431.05931pt x 508.04518pt.
 
 [6] [7 <./img/temperatur.png (PNG copy)>]
-<img/feuchtigkeit.png, id=295, 717.68124pt x 702.625pt>
+<img/feuchtigkeit.png, id=291, 717.68124pt x 702.625pt>
 File: img/feuchtigkeit.png Graphic file (type png)
 
 <use img/feuchtigkeit.png>
@@ -1429,7 +1429,7 @@ LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
 
 [8] [9 <./img/feuchtigkeit.png (PNG copy)>]
-<img/SensorNode.png, id=308, 598.11514pt x 334.74313pt>
+<img/SensorNode.png, id=304, 598.11514pt x 334.74313pt>
 File: img/SensorNode.png Graphic file (type png)
 
 <use img/SensorNode.png>
@@ -1482,7 +1482,7 @@ Overfull \hbox (6.7693pt too wide) in alignment at lines 61--61
 [][][][][] 
  []
 
-[15] <img/SimulationUI.pdf, id=359, 1096.89806pt x 616.70403pt>
+[15] <img/SimulationUI.pdf, id=355, 1096.89806pt x 616.70403pt>
 File: img/SimulationUI.pdf Graphic file (type pdf)
 
 <use img/SimulationUI.pdf>
@@ -1498,7 +1498,7 @@ Overfull \hbox (2.87025pt too wide) in alignment at lines 185--185
 [][][] 
  []
 
-<img/omnetEclipse.pdf, id=397, 1096.89806pt x 616.70403pt>
+<img/omnetEclipse.pdf, id=393, 1096.89806pt x 616.70403pt>
 File: img/omnetEclipse.pdf Graphic file (type pdf)
 
 <use img/omnetEclipse.pdf>
@@ -1518,7 +1518,7 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 ) [22] [23]
-<img/messageEvent.pdf, id=486, 707.11676pt x 302.15384pt>
+<img/messageEvent.pdf, id=482, 707.11676pt x 302.15384pt>
 File: img/messageEvent.pdf Graphic file (type pdf)
 
 <use img/messageEvent.pdf>
@@ -1544,48 +1544,34 @@ Overfull \hbox (17.79706pt too wide) in alignment at lines 35--35
 [][] 
  []
 
-[29] <img/CustomWorldUtility3.png, id=568, 718.18312pt x 138.81862pt>
-File: img/CustomWorldUtility3.png Graphic file (type png)
-
-<use img/CustomWorldUtility3.png>
-Package pdftex.def Info: img/CustomWorldUtility3.png used on input line 48.
-(pdftex.def)             Requested size: 431.05931pt x 83.32146pt.
- [30] [31 <./img/CustomWorldUtility3.png>]
-<img/SimpleClasses.png, id=588, 103.587pt x 117.43875pt>
+[29] [30] [31] [32] <img/SimpleClasses.png, id=592, 103.587pt x 117.43875pt>
 File: img/SimpleClasses.png Graphic file (type png)
 
 <use img/SimpleClasses.png>
-Package pdftex.def Info: img/SimpleClasses.png used on input line 96.
+Package pdftex.def Info: img/SimpleClasses.png used on input line 110.
 (pdftex.def)             Requested size: 103.58675pt x 117.43845pt.
- [32 <./img/SimpleClasses.png>]
-Overfull \hbox (8.12608pt too wide) in paragraph at lines 115--116
+ [33 <./img/SimpleClasses.png>]
+Overfull \hbox (8.12608pt too wide) in paragraph at lines 129--130
 \T1/aer/m/n/12 ExtendedMessage erbt di-rekt von der Klas-se cMes-sa-ge, der Sta
 ndard-Nachrichtenklasse
  []
 
-<img/ExtendedMessage.png, id=608, 110.21175pt x 215.3646pt>
+<img/ExtendedMessage.png, id=612, 110.21175pt x 215.3646pt>
 File: img/ExtendedMessage.png Graphic file (type png)
 
 <use img/ExtendedMessage.png>
-Package pdftex.def Info: img/ExtendedMessage.png used on input line 120.
+Package pdftex.def Info: img/ExtendedMessage.png used on input line 134.
 (pdftex.def)             Requested size: 110.21147pt x 215.36406pt.
- [33 <./img/ExtendedMessage.png>] [34] [35]
-[36] [37] [38] [39] [40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 422--423
+ [34 <./img/ExtendedMessage.png>] [35] [36]
+[37] [38] [39] [40]
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
-[42] <img/Nachrichtenverlauf.pdf, id=859, 597.50786pt x 845.04686pt>
-File: img/Nachrichtenverlauf.pdf Graphic file (type pdf)
-
-<use img/Nachrichtenverlauf.pdf>
-Package pdftex.def Info: img/Nachrichtenverlauf.pdf used on input line 469.
-(pdftex.def)             Requested size: 431.05931pt x 609.64536pt.
+) (./chapters/zusammenfassung.tex [41] [42
 
 
-LaTeX Warning: Float too large for page by 28.64534pt on input line 470.
-
-) (./chapters/zusammenfassung.tex [43] [44 <./img/Nachrichtenverlauf.pdf>]
+]
 Kapitel 5.
 
 Overfull \hbox (28.56389pt too wide) in paragraph at lines 5--5
@@ -1608,14 +1594,11 @@ Overfull \hbox (28.56389pt too wide) in paragraph at lines 5--5
  []
 
 ) (./formalLayout/glossar.tex) (./formalLayout/literaturverzeichnis.tex
-(./main.bbl [45
-
-
-
+(./main.bbl [43
 \pgfsyspdfmark {pgfid21}{4630621}{39252534}
 \pgfsyspdfmark {pgfid24}{36059787}{39269640}
 \pgfsyspdfmark {pgfid25}{38397561}{38998914}
-] [46
+] [44
 
 
 ]
@@ -1633,7 +1616,7 @@ Class scrreprt Warning: Usage of deprecated font command `\sc'!
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\sc'
 (scrreprt)              by `\normalfont \scshape ' on input line 75.
 
-[47]
+[45]
 
 Class scrreprt Warning: Usage of deprecated font command `\sc'!
 (scrreprt)              You should note, that in 1994 font command `\sc' has
@@ -1696,13 +1679,13 @@ Underfull \hbox (badness 1122) in paragraph at lines 93--98
 li-ne un-ter [][]$\T1/aett/m/n/12 http : / / www . ikr .
  []
 
-) [48]) (./formalLayout/selbststaendigkeitserklaerung.tex
+) [46]) (./formalLayout/selbststaendigkeitserklaerung.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--10
 
  []
 
 \us=\skip57
-) [49
+) [47
 
 
 
@@ -1714,7 +1697,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FB10EEA4F4D302ADF251EB19E49871F9;1796.
+(rerunfilecheck)             Checksum: C67751D7B4763C93305F727F8AC9BB89;1820.
 
 
 LaTeX Warning: There were undefined references.
@@ -1725,13 +1708,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
  ) 
 Here is how much of TeX's memory you used:
- 22830 strings out of 493109
- 403487 string characters out of 6140856
- 939070 words of memory out of 5000000
- 25269 multiletter control sequences out of 15000+600000
+ 22338 strings out of 493109
+ 396576 string characters out of 6140856
+ 909070 words of memory out of 5000000
+ 24888 multiletter control sequences out of 15000+600000
  50983 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,18n,99p,825b,1927s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 77i,18n,99p,825b,1923s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -1745,10 +1728,10 @@ fonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 re/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/ur
 w/zapfding/uzdr.pfb>
-Output written on main.pdf (61 pages, 1296563 bytes).
+Output written on main.pdf (59 pages, 1252804 bytes).
 PDF statistics:
- 1105 PDF objects out of 1200 (max. 8388607)
- 992 compressed objects within 10 object streams
- 487 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 952 PDF objects out of 1000 (max. 8388607)
+ 847 compressed objects within 9 object streams
+ 378 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 

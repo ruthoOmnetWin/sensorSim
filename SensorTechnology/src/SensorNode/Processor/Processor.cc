@@ -13,10 +13,10 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#include <AbstractProcessor.h>
-#include "AbstractSensorNode.h"
+#include <Processor.h>
+#include "SensorNode.h"
 
-AbstractProcessor::AbstractProcessor() {
+Processor::Processor() {
     sensingIntervall = 0;
     selfMessageMeasure = NULL;
     selfMessageShiftMode = NULL;
@@ -28,7 +28,7 @@ AbstractProcessor::AbstractProcessor() {
     hasLightSensor = false;
 }
 
-AbstractProcessor::~AbstractProcessor() {
+Processor::~Processor() {
     sensingIntervall = 0;
     selfMessageMeasure = NULL;
     selfMessageShiftMode = NULL;
@@ -43,7 +43,7 @@ AbstractProcessor::~AbstractProcessor() {
 /**
  * initialize the relevant parameters and settings of the processor
  */
-void AbstractProcessor::initialize(int stage)
+void Processor::initialize(int stage)
 {
     if (stage == 0) {
         MiximBatteryAccess::initialize(stage);
@@ -93,7 +93,7 @@ void AbstractProcessor::initialize(int stage)
 
     } else if (stage == 1) {
 
-        AbstractSensorNode* node = (AbstractSensorNode*) getParentModule();
+        SensorNode* node = (SensorNode*) getParentModule();
         if (node->par("numSensors").longValue()) {
             schedulePeriodicSelfMessage(sensing);
         } else {
@@ -107,7 +107,7 @@ void AbstractProcessor::initialize(int stage)
 /**
  * proceed incoming messages
  */
-void AbstractProcessor::handleMessage(cMessage *msg)
+void Processor::handleMessage(cMessage *msg)
 {
     draw();
     std::string name = msg->getName();
@@ -141,7 +141,7 @@ void AbstractProcessor::handleMessage(cMessage *msg)
 /**
  * initiate event for sensing or switching Processor mode
  */
-void AbstractProcessor::schedulePeriodicSelfMessage(cMessage *msg, int intervallType)
+void Processor::schedulePeriodicSelfMessage(cMessage *msg, int intervallType)
 {
     if (intervallType == sensing && sensingIntervall) {
         simtime_t scheduleTime = simTime() + sensingIntervall;
@@ -160,7 +160,7 @@ void AbstractProcessor::schedulePeriodicSelfMessage(cMessage *msg, int intervall
 /**
  * initiate event for sensing or switching Processor mode
  */
-void AbstractProcessor::schedulePeriodicSelfMessage(int intervallType)
+void Processor::schedulePeriodicSelfMessage(int intervallType)
 {
     if (intervallType == sensing && sensingIntervall) {
         selfMessageMeasure = new cMessage("startSensingUnit");
@@ -182,7 +182,7 @@ void AbstractProcessor::schedulePeriodicSelfMessage(int intervallType)
 /**
  * send signal to start sensing
  */
-void AbstractProcessor::startSensingUnit()
+void Processor::startSensingUnit()
 {
     cModule* SensorNode = getParentModule();
     if (SensorNode->par("hasTemperatureSensor")) {
@@ -206,7 +206,7 @@ void AbstractProcessor::startSensingUnit()
 /**
  * draws energie from the battery and saves statistic informations
  */
-void AbstractProcessor::draw()
+void Processor::draw()
 {
     doCollectStatistics();
     if (activatedMode == POWER_SAVING) {
@@ -222,7 +222,7 @@ void AbstractProcessor::draw()
 /**
  * collect statistical informations about the battery
  */
-void AbstractProcessor::doCollectStatistics()
+void Processor::doCollectStatistics()
 {
     voltage = battery->getVoltage();
     voltageStats.collect(voltage);
@@ -240,7 +240,7 @@ void AbstractProcessor::doCollectStatistics()
 /**
  * switch the processors mode by giving the modes enum value
  */
-void AbstractProcessor::switchProcessorMode(MODES mode)
+void Processor::switchProcessorMode(MODES mode)
 {
     //switch batteries power accounts
     if (mode == POWER_SAVING) {
@@ -255,7 +255,7 @@ void AbstractProcessor::switchProcessorMode(MODES mode)
 /**
  * switch the processor mode by a given integer
  */
-void AbstractProcessor::switchProcessorMode(int mode)
+void Processor::switchProcessorMode(int mode)
 {
     //switch batteries power accounts
     if (mode == 1) {
@@ -271,7 +271,7 @@ void AbstractProcessor::switchProcessorMode(int mode)
  * switches the processor to the battery mode defined by the variable
  * activatedMode
  */
-void AbstractProcessor::switchProcessorMode()
+void Processor::switchProcessorMode()
 {
     //switch batteries power accounts
     if (getProcessorMode() == POWER_SAVING) {
@@ -289,7 +289,7 @@ void AbstractProcessor::switchProcessorMode()
 /**
  * returns the processors activatedMode as enum-value MODES
  */
-AbstractProcessor::MODES AbstractProcessor::getProcessorMode()
+Processor::MODES Processor::getProcessorMode()
 {
     if (activatedMode == NORMAL) {
         return NORMAL;
@@ -301,14 +301,14 @@ AbstractProcessor::MODES AbstractProcessor::getProcessorMode()
     return OFF;
 }
 
-void AbstractProcessor::finish()
+void Processor::finish()
 {
 
 }
 
-void AbstractProcessor::handleHostState(const HostState& state)
+void Processor::handleHostState(const HostState& state)
 {
-    AbstractBatteryAccess::handleHostState(state);
+    BatteryAccess::handleHostState(state);
     HostState::States hostState = state.get();
     if (hostState == HostState::FAILED) {
         cancelAndDelete(selfMessageMeasure);

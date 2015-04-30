@@ -18,7 +18,7 @@
 
 #include <omnetpp.h>
 #include <string.h>
-#include "AbstractBatteryAccess.h"
+#include "BatteryAccess.h"
 
 #define sensing 0
 #define shiftProcessorMode 1
@@ -38,7 +38,7 @@
  * the processor is used to control the sensor module, which means it can start
  * it and then get the data and store it inside the memory until it is needed
  */
-class AbstractProcessor : public AbstractBatteryAccess {
+class Processor : public BatteryAccess {
 protected:
     int sensingIntervall;
     int shiftProcessorModeIntervall;
@@ -85,8 +85,8 @@ public:
     bool hasLightSensor;
 
 public:
-    AbstractProcessor();
-    virtual ~AbstractProcessor();
+    Processor();
+    virtual ~Processor();
     void initialize(int stage);
     void handleMessage(cMessage *msg);
     void finish();
@@ -103,6 +103,6 @@ public:
     MODES getProcessorMode();
 };
 
-Define_Module(AbstractProcessor);
+Define_Module(Processor);
 
 #endif /* ABSTRACTPROCESSOR_H_ */

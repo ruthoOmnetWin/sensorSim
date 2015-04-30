@@ -66,10 +66,10 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
 OBJS = \
-    $O/src/SensorNode/AbstractBatteryAccess.o \
-    $O/src/SensorNode/AbstractSensorNode.o \
-    $O/src/SensorNode/Memory/AbstractMemory.o \
-    $O/src/SensorNode/Processor/AbstractProcessor.o \
+    $O/src/SensorNode/BatteryAccess.o \
+    $O/src/SensorNode/SensorNode.o \
+    $O/src/SensorNode/Memory/Memory.o \
+    $O/src/SensorNode/Processor/Processor.o \
     $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o \
     $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o \
     $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o \
@@ -190,7 +190,7 @@ depend:
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/src/ExtendedMessage/ExtendedMessage_m.o: src/ExtendedMessage/ExtendedMessage_m.cc \
 	src/ExtendedMessage/ExtendedMessage_m.h
-$O/src/SensorNode/AbstractBatteryAccess.o: src/SensorNode/AbstractBatteryAccess.cc \
+$O/src/SensorNode/BatteryAccess.o: src/SensorNode/BatteryAccess.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
@@ -201,10 +201,9 @@ $O/src/SensorNode/AbstractBatteryAccess.o: src/SensorNode/AbstractBatteryAccess.
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
-	src/SensorNode/AbstractBatteryAccess.h \
-	src/SensorNode/AbstractSensorNode.h \
-	src/SensorNode/Processor/AbstractProcessor.h
-$O/src/SensorNode/AbstractSensorNode.o: src/SensorNode/AbstractSensorNode.cc \
+	src/SensorNode/BatteryAccess.h \
+	src/SensorNode/SensorNode.h
+$O/src/SensorNode/SensorNode.o: src/SensorNode/SensorNode.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
@@ -215,20 +214,20 @@ $O/src/SensorNode/AbstractSensorNode.o: src/SensorNode/AbstractSensorNode.cc \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
-	src/SensorNode/AbstractBatteryAccess.h \
-	src/SensorNode/AbstractSensorNode.h \
-	src/SensorNode/Processor/AbstractProcessor.h
-$O/src/SensorNode/Memory/AbstractMemory.o: src/SensorNode/Memory/AbstractMemory.cc \
+	src/SensorNode/BatteryAccess.h \
+	src/SensorNode/Processor/Processor.h \
+	src/SensorNode/SensorNode.h
+$O/src/SensorNode/Memory/Memory.o: src/SensorNode/Memory/Memory.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	src/SensorNode/AbstractBatteryAccess.h \
-	src/SensorNode/Memory/AbstractMemory.h \
+	src/SensorNode/BatteryAccess.h \
+	src/SensorNode/Memory/Memory.h \
 	src/SimpleSensorData/SimpleSensorData.h
-$O/src/SensorNode/Processor/AbstractProcessor.o: src/SensorNode/Processor/AbstractProcessor.cc \
+$O/src/SensorNode/Processor/Processor.o: src/SensorNode/Processor/Processor.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
@@ -236,9 +235,9 @@ $O/src/SensorNode/Processor/AbstractProcessor.o: src/SensorNode/Processor/Abstra
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	src/SensorNode/AbstractBatteryAccess.h \
-	src/SensorNode/AbstractSensorNode.h \
-	src/SensorNode/Processor/AbstractProcessor.h
+	src/SensorNode/BatteryAccess.h \
+	src/SensorNode/Processor/Processor.h \
+	src/SensorNode/SensorNode.h
 $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
@@ -270,7 +269,7 @@ $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Senso
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	src/ExtendedMessage/ExtendedMessage_m.h \
-	src/SensorNode/AbstractBatteryAccess.h \
+	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.h \
 	src/SimpleSensorData/SimpleSensorData.h \
 	src/StatisticsInterface/StatisticsInterface.h \
@@ -282,7 +281,7 @@ $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o: src/Sens
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	src/SensorNode/AbstractBatteryAccess.h \
+	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.h
 $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o: src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
@@ -291,7 +290,7 @@ $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o: src/SensorNo
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	src/SensorNode/AbstractBatteryAccess.h \
+	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.h
 $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o: src/SensorNode/Sensor/Transducer/AbstractTransducer.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
@@ -300,7 +299,7 @@ $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o: src/SensorNode/Sensor/
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	src/SensorNode/AbstractBatteryAccess.h \
+	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/Sensor/Transducer/AbstractTransducer.h
 $O/src/SimpleSensorData/SimpleSensorData.o: src/SimpleSensorData/SimpleSensorData.cc \
 	src/SimpleSensorData/SimpleSensorData.h

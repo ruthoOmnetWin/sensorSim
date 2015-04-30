@@ -28,14 +28,14 @@
  * it also stores values of consumption a module has and than can use this at any
  * time to draw energie by the stored amount
  */
-class AbstractBatteryAccess : public MiximBatteryAccess {
+class BatteryAccess : public MiximBatteryAccess {
 protected:
     float currentOverTime;
     float energiePerOperation;
     //int deviceID;
 public:
-    AbstractBatteryAccess();
-    virtual ~AbstractBatteryAccess();
+    BatteryAccess();
+    virtual ~BatteryAccess();
     void initialize(int stage);
     void draw();
     void finish();

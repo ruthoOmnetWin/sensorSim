@@ -13,17 +13,18 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#include <AbstractSensorNode.h>
+#include <SensorNode.h>
 #include <SimpleBattery.h>
+#include "Processor.h"
 
-AbstractSensorNode::AbstractSensorNode() : cModule() {
+SensorNode::SensorNode() : cModule() {
 }
 
-AbstractSensorNode::~AbstractSensorNode() {
+SensorNode::~SensorNode() {
     // TODO Auto-generated destructor stub
 }
 
-void AbstractSensorNode::initialize(int stage) {
+void SensorNode::initialize(int stage) {
     if (stage == 0) {
         //generate Processor dynamically
         createProcessor();
@@ -39,25 +40,25 @@ void AbstractSensorNode::initialize(int stage) {
 /**
  * counts how many sensors exist on the node
  */
-void AbstractSensorNode::setNumGates() {
+void SensorNode::setNumGates() {
 
     int countGates = 0;
-    AbstractProcessor* Processor = (AbstractProcessor*) getSubmodule("Processor");
+    Processor* processor = (Processor*) getSubmodule("Processor");
     if (par("hasTemperatureSensor")) {
         countGates++;
-        Processor->hasTemperatureSensor = true;
+        processor->hasTemperatureSensor = true;
     }
     if (par("hasHumiditySensor")) {
         countGates++;
-        Processor->hasHumiditySensor = true;
+        processor->hasHumiditySensor = true;
     }
     if (par("hasPressureSensor")) {
         countGates++;
-        Processor->hasPressureSensor = true;
+        processor->hasPressureSensor = true;
     }
     if (par("hasLightSensor")) {
         countGates++;
-        Processor->hasLightSensor = true;
+        processor->hasLightSensor = true;
     }
 
     cPar numGates = par("numSensors");
@@ -72,9 +73,9 @@ void AbstractSensorNode::setNumGates() {
  * by these parameters the sensors are created or not
  * if created, they get connected to the newly created processor gates
  */
-void AbstractSensorNode::createProcessor() {
+void SensorNode::createProcessor() {
     //find the factory
-    cModuleType *moduleType = cModuleType::get("sensortechnology.src.SensorNode.Processor.AbstractProcessor");
+    cModuleType *moduleType = cModuleType::get("sensortechnology.src.SensorNode.Processor.Processor");
 
     //create module
     cModule *processor = moduleType->create("Processor", this);
@@ -102,7 +103,7 @@ void AbstractSensorNode::createProcessor() {
  * dynamically creates gates of the processor depending on the sensor type given (by name)
  * connects these gates to the gates of the given sensor type
  */
-void AbstractSensorNode::connectProcessorAndSensor(cModule &processor, std::string SensorType) {
+void SensorNode::connectProcessorAndSensor(cModule &processor, std::string SensorType) {
     //new gates
     cGate *fromSensor = processor.addGate(("from" + SensorType + "Sensor").c_str(), cGate::INPUT);
     cGate *toSensor = processor.addGate(("to" + SensorType + "Sensor").c_str(), cGate::OUTPUT);
@@ -122,7 +123,7 @@ void AbstractSensorNode::connectProcessorAndSensor(cModule &processor, std::stri
 /**
  * connects gates of the processor with gates of the memory module
  */
-void AbstractSensorNode::connectProcessorAndMemory() {
+void SensorNode::connectProcessorAndMemory() {
     //get memory gates
     cModule *Memory = this->getSubmodule("Memory");
     Memory->addGate("connectToProcessor", cGate::INOUT);
@@ -142,11 +143,11 @@ void AbstractSensorNode::connectProcessorAndMemory() {
     dc->callInitialize();
 }
 
-void AbstractSensorNode::handleMessage(cMessage *msg) {
+void SensorNode::handleMessage(cMessage *msg) {
     EV << "Received Message"<< endl;
 }
 
-void AbstractSensorNode::finish()
+void SensorNode::finish()
 {
     //define this function
     //stop the module here
@@ -156,7 +157,7 @@ void AbstractSensorNode::finish()
 /**
  * creates a new channel with the datarate defined as dataBandwidth
  */
-cDatarateChannel* AbstractSensorNode::getDataChannel()
+cDatarateChannel* SensorNode::getDataChannel()
 {
     cDatarateChannel* DataChannel = cDatarateChannel::create("DataChannel");
     DataChannel->setDatarate(par("dataBandwidth").doubleValue());
@@ -166,7 +167,7 @@ cDatarateChannel* AbstractSensorNode::getDataChannel()
 /**
  * creates a new channel with the datarate defined as controlBandwidth
  */
-cDatarateChannel* AbstractSensorNode::getControlChannel()
+cDatarateChannel* SensorNode::getControlChannel()
 {
     cDatarateChannel* ControlChannel = cDatarateChannel::create("ControlChannel");
     ControlChannel->setDatarate(par("controlBandwidth").doubleValue());

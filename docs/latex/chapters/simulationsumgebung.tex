@@ -226,7 +226,7 @@ Es können im Regelfall natürlich viele verschiedene Arten von Nachrichten in e
 
 \paragraph{activity()}
 
-Diese Methode ist eine eher unwichtige Funktion. Wenn \textbf{handleMessage()} korrekt verwendet wird, sollte man auf die Benutzung von \textbf{activity()} am besten komplett verzichten. Es verhält sich oberflächlich betrachtet wie \textbf{handleMessage()}, allerdings wird diese Methode nicht einfach aufgerufen, sollte eine Nachricht ankommen, sondern läuft in einer Endllosschleife und wartet permanet aktiv auf Nachrichten. Daher ist sie wesentlich Speicherintensiver als das Gegenstück \textbf{handleMessage()}.
+Diese Methode ist eine eher unwichtige Funktion. Wenn \textbf{handleMessage()} korrekt verwendet wird, sollte man auf die Benutzung von \textbf{activity()} am besten komplett verzichten. Es verhält sich oberflächlich betrachtet wie \textbf{handleMessage()}, allerdings wird diese Methode nicht einfach aufgerufen, sollte eine Nachricht ankommen, sondern läuft in einer Endllosschleife und wartet permanet aktiv auf Nachrichten. Daher ist sie wesentlich rechenintensiver als das Gegenstück \textbf{handleMessage()}.
 
 \paragraph{finish()}
 

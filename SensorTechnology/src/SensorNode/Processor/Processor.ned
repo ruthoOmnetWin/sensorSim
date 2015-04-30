@@ -19,13 +19,13 @@ package sensortechnology.src.SensorNode.Processor;
 // implementation of an processor, it is able to switch between different power modes and controles the other
 // modules inside the sensor node
 //
-simple AbstractProcessor
+simple Processor
 {
     parameters:
         int numGates = default(0);
         @display("i=device/cpu");
         
-        //to add new modes you must also make changes inside the class AbstractProcessor:
+        //to add new modes you must also make changes inside the class Processor:
     	//extend the enum 'MODES'
     	//register the new account inside initialize(int)
     	//extend switchProcessorMode(MODES)

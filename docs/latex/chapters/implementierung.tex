@@ -76,11 +76,31 @@ Um eben diese Daten wieder lesen zu können dient die Funktion \textbf{readXML()
 Die bis jetzt beschriebenen Funktionen dienen alle zur Initialisierung der Simulationsdaten. Es ist natürlich auch möglich diese in einem späteren Verlauf der Simulation erneut aufzurufen und damit neue Werte zu generieren. \\
 Für den späteren Verlauf der Simulation ist nun noch die Funktion \textbf{getValueByPosition(std::string, Coord*)} von großer Bedeutung. Diese Funktion ermöglich den Sensoreinheiten auf die gespeicherten Daten zuzugreifen.
 
-\subsubsection{AbstractSensorNode}
+\subsubsection{SensorNode}
 
-Die Klasse AbstractSensorNode selbst enthält eher weniger Funktionalität. Es setzt lediglich ein Paar Werte innerhalb der Klasse, wie zum Beispiel die Anzahl der existierenden Sensoren und für das Submodul Prozessor wird zusätzlich genau hinterlegt, welche Sensoren genau existieren und welche nicht.
+Die Klasse AbstractSensorNode selbst enthält eher weniger Funktionalität. Sie dient hauptsächlich zum initialisieren der gesamten Knotens. Das funktioniert in Omnet++ natürlich zum größten Teil automatisch, allerdings liegt für die Sensoren eine parameterabhängige, generische Initialisierung vor. So können innerhalb den NED-Moduls die folgenden boolschen Parameters gesetzt werden:
+\begin{itemize}
+\item hasTemperatureSensor
+\item hasHumiditySensor
+\item hasPressureSensor
+\item hasLightSensor
+\end{itemize}
+Je nachdem ob der jeweilige Parameter gesetzt wird oder nicht wird das entsprechende Sensormodul auf dem Sensorknoten erstellt. Die Gates und Connections eines Moduls lassen sich in der NED-Definition leider nicht so schön generisch erstellen.\\
+Daher wird die Initialisierung des Prozessors zusammen mit seinen Gates, Connections und den entsprechenden Channels in der C++-Klasse übernommen. Nach dem Erstellen des Prozessors selbst werden für jeden existierenden Sensor ein eingehendes und ein ausgehendes Gate erstellt. Zusätzlich wird noch ein beidseitiges Gate für die Verbindung zum Memory-Modul angelegt.\\
+Die Prozessorgates erhalten dann die Verbindungen zu den jeweils entsprechenden Gates, zum Sensor verläuft ein Gate zur SensingUnit, das vom Sensor eingehende kommt von der Transducer. Beide Verbindungen haben unterschiedliche Funktionen, einmal lediglich zum Senden eines Signals um innerhalb der SensingUnit einen Messvorgang gestartet und ein anderes mal um die gemessenen Werte an den Prozessor zu übermitteln. Es wird daher in 2 verschiedene Channels zum senden unterschieden, welche entsprechend eine höhere oder niedrigere Datenrate aufweisen können, jenachdem wie diese innerhalb des ini-Files definiert sind.
 
-\subsubsection{SensorType}
+\subsubsection{Sensormodule}
+
+\paragraph{SensingUnit}
+\paragraph{SignalConditioner}
+\paragraph{SignalConverter}
+\paragraph{Transducer}
+
+\subsubsection{Prozessor}
+
+\subsubsection{Memory}
+
+\subsubsection{BatteryAccess}
 
 \subsubsection{SimpleSensorData}
 

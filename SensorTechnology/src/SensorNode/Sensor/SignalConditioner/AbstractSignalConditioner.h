@@ -17,13 +17,13 @@
 #define ABSTRACTSIGNALCONDITIONER_H_
 
 #include <omnetpp.h>
-#include "AbstractBatteryAccess.h"
+#include "BatteryAccess.h"
 
 /**
  * simple implementation of the signal conditioner which just models
  * the power consumption yet
  */
-class AbstractSignalConditioner : public AbstractBatteryAccess {
+class AbstractSignalConditioner : public BatteryAccess {
 public:
     AbstractSignalConditioner();
     virtual ~AbstractSignalConditioner();

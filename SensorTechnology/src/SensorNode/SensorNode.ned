@@ -23,7 +23,7 @@ import org.mixim.modules.node.WirelessNodeBatteryPlusTran;
 // Sensor Node which can combine the different types of sensors (or have non of them) and
 // a battery, memory, processor and radio module 
 //
-module AbstractSensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
+module SensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
 {
     parameters:
         //these parameters are generated automatically, from parent module, or via ini-file
@@ -50,7 +50,7 @@ module AbstractSensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInt
         	+ 2; //memory, processor
     	battery.numDevices = numDevices;
         int numHosts;
-        @class("AbstractSensorNode");
+        @class("SensorNode");
         //these are used to draw the overview of the model
         bool fakeProcessor = false;
         @display("bgb=447,450;i=block/ifcard");
@@ -92,7 +92,7 @@ module AbstractSensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInt
             dataBandwidth = dataBandwidth;
             controlBandwidth = controlBandwidth;
         }
-        Memory: AbstractMemory {
+        Memory: Memory {
             @display("p=400,51");
         }
         //Processor is created inside the C++-Class in order to create the gates to the

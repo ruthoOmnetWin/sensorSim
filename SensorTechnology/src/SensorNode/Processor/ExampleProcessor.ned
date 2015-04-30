@@ -18,7 +18,7 @@ package sensortechnology.src.SensorNode.Processor;
 //
 // TODO auto-generated type
 //
-simple ExampleProcessor extends AbstractProcessor
+simple ExampleProcessor extends Processor
 {
     parameters:
     gates:

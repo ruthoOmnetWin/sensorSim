@@ -18,7 +18,6 @@
 
 #include <omnetpp.h>
 #include <FindModule.h>
-#include "AbstractProcessor.h"
 
 /**
  * this module contains the generic part of the initialization of the
@@ -32,10 +31,10 @@
  * the connection between memory and processor is also created here but
  * the gates, defined inside the ned code are used
  */
-class AbstractSensorNode : public cModule {
+class SensorNode : public cModule {
 public:
-    AbstractSensorNode();
-    virtual ~AbstractSensorNode();
+    SensorNode();
+    virtual ~SensorNode();
     cDatarateChannel* getControlChannel();
     cDatarateChannel* getDataChannel();
 protected:
@@ -48,6 +47,6 @@ protected:
     void connectProcessorAndSensor(cModule&, std::string);
 };
 
-Define_Module(AbstractSensorNode);
+Define_Module(SensorNode);
 
 #endif /* ABSTRACTSENSORNODE_H_ */

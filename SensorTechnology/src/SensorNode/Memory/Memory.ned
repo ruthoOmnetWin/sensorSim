@@ -18,7 +18,7 @@ package sensortechnology.src.SensorNode.Memory;
 //
 // a simple memory module - can store data it received by key+value
 //
-simple AbstractMemory
+simple Memory
 {
     parameters:
         xml keyValueMemory = xml("<data></data>");
