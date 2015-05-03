@@ -1,15 +1,15 @@
 var annotated =
 [
-    [ "AbstractBatteryAccess", "classAbstractBatteryAccess.html", "classAbstractBatteryAccess" ],
-    [ "AbstractMemory", "classAbstractMemory.html", "classAbstractMemory" ],
-    [ "AbstractProcessor", "classAbstractProcessor.html", "classAbstractProcessor" ],
     [ "AbstractSensingUnit", "classAbstractSensingUnit.html", "classAbstractSensingUnit" ],
-    [ "AbstractSensorNode", "classAbstractSensorNode.html", "classAbstractSensorNode" ],
     [ "AbstractSignalConditioner", "classAbstractSignalConditioner.html", "classAbstractSignalConditioner" ],
     [ "AbstractSignalConverter", "classAbstractSignalConverter.html", "classAbstractSignalConverter" ],
     [ "AbstractTransducer", "classAbstractTransducer.html", "classAbstractTransducer" ],
+    [ "BatteryAccess", "classBatteryAccess.html", "classBatteryAccess" ],
     [ "CustomWorldUtility", "classCustomWorldUtility.html", "classCustomWorldUtility" ],
     [ "ExtendedMessage", "classExtendedMessage.html", "classExtendedMessage" ],
+    [ "Memory", "classMemory.html", "classMemory" ],
+    [ "Processor", "classProcessor.html", "classProcessor" ],
+    [ "SensorNode", "classSensorNode.html", "classSensorNode" ],
     [ "SimpleSensorData", "classSimpleSensorData.html", "classSimpleSensorData" ],
     [ "StatisticsInterface", "classStatisticsInterface.html", "classStatisticsInterface" ]
 ];

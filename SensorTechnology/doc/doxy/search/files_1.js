@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['customworldutility_2ecc',['CustomWorldUtility.cc',['../CustomWorldUtility_8cc.html',1,'']]],
-  ['customworldutility_2eh',['CustomWorldUtility.h',['../CustomWorldUtility_8h.html',1,'']]]
+  ['batteryaccess_2ecc',['BatteryAccess.cc',['../BatteryAccess_8cc.html',1,'']]],
+  ['batteryaccess_2eh',['BatteryAccess.h',['../BatteryAccess_8h.html',1,'']]]
 ];

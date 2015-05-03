@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['gateiterator',['GateIterator',['/home/rutho/BA/omnetpp-4.5//doc/api/classcModule_1_1GateIterator.html',1,'cModule']]],
-  ['grid',['Grid',['/home/rutho/BA/omnetpp-4.5//doc/api/structcKSplit_1_1Grid.html',1,'cKSplit']]]
+  ['functor',['Functor',['/home/rutho/BA/omnetpp-4.5//doc/api/classcDynamicExpression_1_1Functor.html',1,'cDynamicExpression']]]
 ];

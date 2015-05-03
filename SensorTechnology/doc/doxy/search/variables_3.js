@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['energieperoperation',['energiePerOperation',['../classAbstractBatteryAccess.html#a2341d7f11852675a751b13cdbb4ace28',1,'AbstractBatteryAccess']]],
-  ['energieperoperationhighperformance',['energiePerOperationHighPerformance',['../classAbstractProcessor.html#a0d7f640ffa8a4a7c19085e018f4dcc80',1,'AbstractProcessor']]],
-  ['energieperoperationnormal',['energiePerOperationNormal',['../classAbstractProcessor.html#a8d4b8c4dd88ecf713a8bddb71b34258e',1,'AbstractProcessor']]],
-  ['energieperoperationpowersaving',['energiePerOperationPowerSaving',['../classAbstractProcessor.html#a93c218e36b50ad4249ecb0f5d6e2c437',1,'AbstractProcessor']]]
+  ['energieperoperation',['energiePerOperation',['../classBatteryAccess.html#a8d08f33bb3ed5e89669b55293becc17e',1,'BatteryAccess']]],
+  ['energieperoperationhighperformance',['energiePerOperationHighPerformance',['../classProcessor.html#aa260c8b94bd163165df1d31e8f94782f',1,'Processor']]],
+  ['energieperoperationnormal',['energiePerOperationNormal',['../classProcessor.html#a70970f0f016c6f7f6f950002a5ca4c95',1,'Processor']]],
+  ['energieperoperationpowersaving',['energiePerOperationPowerSaving',['../classProcessor.html#aa6281a6edcbd510764632a22292f7ad8',1,'Processor']]]
 ];

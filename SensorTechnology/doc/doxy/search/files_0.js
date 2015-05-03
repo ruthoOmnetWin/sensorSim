@@ -1,15 +1,7 @@
 var searchData=
 [
-  ['abstractbatteryaccess_2ecc',['AbstractBatteryAccess.cc',['../AbstractBatteryAccess_8cc.html',1,'']]],
-  ['abstractbatteryaccess_2eh',['AbstractBatteryAccess.h',['../AbstractBatteryAccess_8h.html',1,'']]],
-  ['abstractmemory_2ecc',['AbstractMemory.cc',['../AbstractMemory_8cc.html',1,'']]],
-  ['abstractmemory_2eh',['AbstractMemory.h',['../AbstractMemory_8h.html',1,'']]],
-  ['abstractprocessor_2ecc',['AbstractProcessor.cc',['../AbstractProcessor_8cc.html',1,'']]],
-  ['abstractprocessor_2eh',['AbstractProcessor.h',['../AbstractProcessor_8h.html',1,'']]],
   ['abstractsensingunit_2ecc',['AbstractSensingUnit.cc',['../AbstractSensingUnit_8cc.html',1,'']]],
   ['abstractsensingunit_2eh',['AbstractSensingUnit.h',['../AbstractSensingUnit_8h.html',1,'']]],
-  ['abstractsensornode_2ecc',['AbstractSensorNode.cc',['../AbstractSensorNode_8cc.html',1,'']]],
-  ['abstractsensornode_2eh',['AbstractSensorNode.h',['../AbstractSensorNode_8h.html',1,'']]],
   ['abstractsignalconditioner_2ecc',['AbstractSignalConditioner.cc',['../AbstractSignalConditioner_8cc.html',1,'']]],
   ['abstractsignalconditioner_2eh',['AbstractSignalConditioner.h',['../AbstractSignalConditioner_8h.html',1,'']]],
   ['abstractsignalconverter_2ecc',['AbstractSignalConverter.cc',['../AbstractSignalConverter_8cc.html',1,'']]],

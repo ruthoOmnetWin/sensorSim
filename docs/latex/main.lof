@@ -1,14 +1,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces allgemeines Modell eines Sensors}}{5}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Deutschlandkarte der mittleren Temperatur zwischen 1961 und 1990}}{7}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Deutschlandkarte: Beispielverteilung der Luftfeuchtigkeit}}{9}{figure.2.3}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Sensorknoten}}{10}{figure.2.4}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Deutschlandkarte der mittleren Temperatur zwischen 1961 und 1990}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Deutschlandkarte: Beispielverteilung der Luftfeuchtigkeit}}{8}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Sensorknoten}}{9}{figure.2.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces GUI bei der Ausf\IeC {\"u}hrung einer Simulation }}{16}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Oberfl\IeC {\"a}che der Entwicklungsumgebung mit Bespiel f\IeC {\"u}r die NED-Integration}}{20}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Beispiel cMessage als Event}}{24}{figure.3.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces GUI bei der Ausf\IeC {\"u}hrung einer Simulation }}{14}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Oberfl\IeC {\"a}che der Entwicklungsumgebung mit Bespiel f\IeC {\"u}r die NED-Integration}}{18}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Beispiel cMessage als Event}}{22}{figure.3.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces SimpleClasses: Member}}{36}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces ExtendedMessage: Vererbung}}{37}{figure.4.2}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces SimpleClasses: Member}}{38}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces ExtendedMessage: Vererbung}}{39}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces allgemeines Modell eines Sensors}}{43}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Aufbau des Compoundmoduls SensorNode}}{45}{figure.4.4}
 \addvspace {10\p@ }

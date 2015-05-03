@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['high_5fperformance',['HIGH_PERFORMANCE',['../classAbstractProcessor.html#a57b598cf993cb8031010d1a492ed28a1adf2b35eedc48a1df03bd76e407291794',1,'AbstractProcessor']]]
+  ['high_5fperformance',['HIGH_PERFORMANCE',['../classProcessor.html#a6d296ef30a05b4f8aa186fb5d4aa99c8a2d3a9556eb8a882fe69b71233854d36d',1,'Processor']]]
 ];

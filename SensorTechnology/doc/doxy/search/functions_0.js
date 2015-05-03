@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['abstractbatteryaccess',['AbstractBatteryAccess',['../classAbstractBatteryAccess.html#a3dc867e0deb88dfefea0b6c3a64af4c7',1,'AbstractBatteryAccess']]],
-  ['abstractmemory',['AbstractMemory',['../classAbstractMemory.html#a51760f70111353a8f33de0668d7e13fa',1,'AbstractMemory']]],
-  ['abstractprocessor',['AbstractProcessor',['../classAbstractProcessor.html#af91e0e798ab22e889eeedc842fdc4e8b',1,'AbstractProcessor']]],
   ['abstractsensingunit',['AbstractSensingUnit',['../classAbstractSensingUnit.html#a9fbd2ca0416165328ad81928c2fe46ba',1,'AbstractSensingUnit']]],
-  ['abstractsensornode',['AbstractSensorNode',['../classAbstractSensorNode.html#aa887f2cf2be48160d7b0265b7b96cf76',1,'AbstractSensorNode']]],
   ['abstractsignalconditioner',['AbstractSignalConditioner',['../classAbstractSignalConditioner.html#afaae205f6bb08295724898f7c72a366f',1,'AbstractSignalConditioner']]],
   ['abstractsignalconverter',['AbstractSignalConverter',['../classAbstractSignalConverter.html#a57fa4ab6d4852e79c8a9b774fb7b9326',1,'AbstractSignalConverter']]],
   ['abstracttransducer',['AbstractTransducer',['../classAbstractTransducer.html#a550d7a9ea2ff02fd671a577127a66fcf',1,'AbstractTransducer']]],

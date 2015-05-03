@@ -26,7 +26,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"AbstractBatteryAccess_8cc.html"
+"AbstractSensingUnit_8cc.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

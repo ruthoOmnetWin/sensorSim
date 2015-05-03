@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['power_5fsaving',['POWER_SAVING',['../classAbstractProcessor.html#a57b598cf993cb8031010d1a492ed28a1a9da8964db21f5e3bfef3caaa7bd713a0',1,'AbstractProcessor']]]
+  ['power_5fsaving',['POWER_SAVING',['../classProcessor.html#a6d296ef30a05b4f8aa186fb5d4aa99c8ae26e6058a0c4231116ede380d82bed8e',1,'Processor']]]
 ];

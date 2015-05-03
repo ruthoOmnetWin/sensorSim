@@ -4,8 +4,8 @@
       <link rel="stylesheet" type="text/css" href="style.css" />
    </head>
    <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
-<h2 class="comptitle">Compound Module <i>AbstractSensorNode</i></h2>
-<b>Package:</b> sensortechnology.src.SensorNode<br/><b>File: <a href="src-SensorNode-AbstractSensorNode.ned.html">src/SensorNode/AbstractSensorNode.ned</a></b><br/>
+<h2 class="comptitle">Compound Module <i>SensorNode</i></h2>
+<b>Package:</b> sensortechnology.src.SensorNode<br/><b>File: <a href="src-SensorNode-SensorNode.ned.html">src/SensorNode/SensorNode.ned</a></b><br/>
 <p>Sensor Node which can combine the different types of sensors (or have non of them) and
 a battery, memory, processor and radio module </p>
 <h3 class="subtitle">Extends:</h3>
@@ -280,7 +280,7 @@ calculate number of energie accounts from sensor</p>
 </tr>
 <tr>
    <td>class</td>
-   <td><i>AbstractSensorNode</i></td>
+   <td><i>SensorNode</i></td>
    <td></td>
 </tr>
 </table>
@@ -777,7 +777,7 @@ battery</p>
    <td>   </td>
 </tr>
 <tr>
-   <td><a href="sensortechnology.src.SensorNode.Memory.AbstractMemory.html">Memory</a>.currentConsumption</td>
+   <td><a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.currentConsumption</td>
    <td>
       <i>double</i>
    </td>
@@ -785,7 +785,7 @@ battery</p>
    <td>   </td>
 </tr>
 <tr>
-   <td><a href="sensortechnology.src.SensorNode.Memory.AbstractMemory.html">Memory</a>.energyConsumption</td>
+   <td><a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.energyConsumption</td>
    <td>
       <i>double</i>
    </td>
@@ -860,7 +860,7 @@ battery</p>
 // Sensor Node which can combine the different types of sensors (or have non of them) and
 // a battery, memory, processor and radio module 
 //
-</span><span style="color: #800000; font-weight: bold; ">module</span><span style="color: #000000; "> </span><span style="color: #000000; ">AbstractSensorNode</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">WirelessNodeBatteryPlusTran</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensorNodeInterface</span><span style="color: #000000; ">
+</span><span style="color: #800000; font-weight: bold; ">module</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">WirelessNodeBatteryPlusTran</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensorNodeInterface</span><span style="color: #000000; ">
 {
     </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
         </span><span style="color: #808080; font-style: italic; ">//these parameters are generated automatically, from parent module, or via ini-file
@@ -889,7 +889,7 @@ battery</p>
 </span><span style="color: #000000; ">        	+ </span><span style="color: #008000; ">2</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">//memory, processor
 </span><span style="color: #000000; ">        </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">numDevices</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numDevices</span><span style="color: #000000; ">;
         </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
-        </span><span style="color: #000000; font-weight: bold; ">@class</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;AbstractSensorNode&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; font-weight: bold; ">@class</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;SensorNode&quot;</span><span style="color: #000000; ">);
         </span><span style="color: #808080; font-style: italic; ">//these are used to draw the overview of the model
 </span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">fakeProcessor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">false</span><span style="color: #000000; ">;
         </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bgb=447,450;i=block/ifcard&quot;</span><span style="color: #000000; ">);
@@ -931,7 +931,7 @@ battery</p>
             </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; "> = </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;
             </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; "> = </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; ">;
         }
-        </span><span style="color: #000000; ">Memory</span><span style="color: #000000; ">: </span><span style="color: #000000; ">AbstractMemory</span><span style="color: #000000; "> {
+        </span><span style="color: #000000; ">Memory</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Memory</span><span style="color: #000000; "> {
             </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=400,51&quot;</span><span style="color: #000000; ">);
         }
         </span><span style="color: #808080; font-style: italic; ">//Processor is created inside the C++-Class in order to create the gates to the

@@ -13,7 +13,7 @@ var hierarchy =
             [ "cDefaultList", "/home/rutho/BA/omnetpp-4.5//doc/api/classcDefaultList.html", [
               [ "cComponent", "/home/rutho/BA/omnetpp-4.5//doc/api/classcComponent.html", [
                 [ "cModule", "/home/rutho/BA/omnetpp-4.5//doc/api/classcModule.html", [
-                  [ "AbstractSensorNode", "classAbstractSensorNode.html", null ]
+                  [ "SensorNode", "classSensorNode.html", null ]
                 ] ]
               ] ]
             ] ]
@@ -23,13 +23,13 @@ var hierarchy =
       ] ]
     ] ],
     [ "MiximBatteryAccess", null, [
-      [ "AbstractBatteryAccess", "classAbstractBatteryAccess.html", [
-        [ "AbstractMemory", "classAbstractMemory.html", null ],
-        [ "AbstractProcessor", "classAbstractProcessor.html", null ],
+      [ "BatteryAccess", "classBatteryAccess.html", [
         [ "AbstractSensingUnit", "classAbstractSensingUnit.html", null ],
         [ "AbstractSignalConditioner", "classAbstractSignalConditioner.html", null ],
         [ "AbstractSignalConverter", "classAbstractSignalConverter.html", null ],
-        [ "AbstractTransducer", "classAbstractTransducer.html", null ]
+        [ "AbstractTransducer", "classAbstractTransducer.html", null ],
+        [ "Memory", "classMemory.html", null ],
+        [ "Processor", "classProcessor.html", null ]
       ] ]
     ] ],
     [ "noncopyable", "/home/rutho/BA/omnetpp-4.5//doc/api/classnoncopyable.html", [

@@ -1,89 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <tagfile>
   <compound kind="file">
-    <name>AbstractBatteryAccess.cc</name>
-    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
-    <filename>AbstractBatteryAccess_8cc</filename>
-    <includes id="AbstractBatteryAccess_8h" name="AbstractBatteryAccess.h" local="no" imported="no">AbstractBatteryAccess.h</includes>
-    <includes id="AbstractSensorNode_8h" name="AbstractSensorNode.h" local="yes" imported="no">AbstractSensorNode.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>AbstractBatteryAccess.h</name>
-    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
-    <filename>AbstractBatteryAccess_8h</filename>
-    <class kind="class">AbstractBatteryAccess</class>
-  </compound>
-  <compound kind="file">
-    <name>AbstractMemory.cc</name>
-    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Memory/</path>
-    <filename>AbstractMemory_8cc</filename>
-    <includes id="AbstractMemory_8h" name="AbstractMemory.h" local="no" imported="no">AbstractMemory.h</includes>
-    <member kind="define">
-      <type>#define</type>
-      <name>error</name>
-      <anchorfile>AbstractMemory_8cc.html</anchorfile>
-      <anchor>a0c5e59a7caaa02f887d077eaa467f209</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>AbstractMemory.h</name>
-    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Memory/</path>
-    <filename>AbstractMemory_8h</filename>
-    <includes id="AbstractBatteryAccess_8h" name="AbstractBatteryAccess.h" local="yes" imported="no">AbstractBatteryAccess.h</includes>
-    <includes id="SimpleSensorData_8h" name="SimpleSensorData.h" local="yes" imported="no">SimpleSensorData.h</includes>
-    <class kind="class">AbstractMemory</class>
-    <member kind="function">
-      <type></type>
-      <name>Define_Module</name>
-      <anchorfile>AbstractMemory_8h.html</anchorfile>
-      <anchor>ae03480eb242d1012426a876247640aa9</anchor>
-      <arglist>(AbstractMemory)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>AbstractProcessor.cc</name>
-    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Processor/</path>
-    <filename>AbstractProcessor_8cc</filename>
-    <includes id="AbstractProcessor_8h" name="AbstractProcessor.h" local="no" imported="no">AbstractProcessor.h</includes>
-    <includes id="AbstractSensorNode_8h" name="AbstractSensorNode.h" local="yes" imported="no">AbstractSensorNode.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>AbstractProcessor.h</name>
-    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Processor/</path>
-    <filename>AbstractProcessor_8h</filename>
-    <includes id="AbstractBatteryAccess_8h" name="AbstractBatteryAccess.h" local="yes" imported="no">AbstractBatteryAccess.h</includes>
-    <class kind="class">AbstractProcessor</class>
-    <member kind="define">
-      <type>#define</type>
-      <name>sensing</name>
-      <anchorfile>AbstractProcessor_8h.html</anchorfile>
-      <anchor>aeddc79ad91f80b50610bd1132d5efe2f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>shiftProcessorMode</name>
-      <anchorfile>AbstractProcessor_8h.html</anchorfile>
-      <anchor>a3e7e3a3a0577a2a8e68b8cec0b548651</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>collectStatistics</name>
-      <anchorfile>AbstractProcessor_8h.html</anchorfile>
-      <anchor>a9cec121eaa1087339a084d8db0ba6266</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Define_Module</name>
-      <anchorfile>AbstractProcessor_8h.html</anchorfile>
-      <anchor>a186f89f24646d8807a574646cf3f6552</anchor>
-      <arglist>(AbstractProcessor)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>AbstractSensingUnit.cc</name>
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Sensor/SensingUnit/</path>
     <filename>AbstractSensingUnit_8cc</filename>
@@ -93,7 +10,7 @@
     <name>AbstractSensingUnit.h</name>
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Sensor/SensingUnit/</path>
     <filename>AbstractSensingUnit_8h</filename>
-    <includes id="AbstractBatteryAccess_8h" name="AbstractBatteryAccess.h" local="yes" imported="no">AbstractBatteryAccess.h</includes>
+    <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="yes" imported="no">BatteryAccess.h</includes>
     <includes id="CustomWorldUtility_8h" name="CustomWorldUtility.h" local="yes" imported="no">CustomWorldUtility.h</includes>
     <includes id="SimpleSensorData_8h" name="SimpleSensorData.h" local="yes" imported="no">SimpleSensorData.h</includes>
     <class kind="class">AbstractSensingUnit</class>
@@ -106,26 +23,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>AbstractSensorNode.cc</name>
-    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
-    <filename>AbstractSensorNode_8cc</filename>
-    <includes id="AbstractSensorNode_8h" name="AbstractSensorNode.h" local="no" imported="no">AbstractSensorNode.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>AbstractSensorNode.h</name>
-    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
-    <filename>AbstractSensorNode_8h</filename>
-    <includes id="AbstractProcessor_8h" name="AbstractProcessor.h" local="yes" imported="no">AbstractProcessor.h</includes>
-    <class kind="class">AbstractSensorNode</class>
-    <member kind="function">
-      <type></type>
-      <name>Define_Module</name>
-      <anchorfile>AbstractSensorNode_8h.html</anchorfile>
-      <anchor>aace52d4e73302ea486d821f3dc55805f</anchor>
-      <arglist>(AbstractSensorNode)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>AbstractSignalConditioner.cc</name>
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Sensor/SignalConditioner/</path>
     <filename>AbstractSignalConditioner_8cc</filename>
@@ -135,7 +32,7 @@
     <name>AbstractSignalConditioner.h</name>
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Sensor/SignalConditioner/</path>
     <filename>AbstractSignalConditioner_8h</filename>
-    <includes id="AbstractBatteryAccess_8h" name="AbstractBatteryAccess.h" local="yes" imported="no">AbstractBatteryAccess.h</includes>
+    <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="yes" imported="no">BatteryAccess.h</includes>
     <class kind="class">AbstractSignalConditioner</class>
     <member kind="function">
       <type></type>
@@ -155,7 +52,7 @@
     <name>AbstractSignalConverter.h</name>
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Sensor/SignalConverter/</path>
     <filename>AbstractSignalConverter_8h</filename>
-    <includes id="AbstractBatteryAccess_8h" name="AbstractBatteryAccess.h" local="yes" imported="no">AbstractBatteryAccess.h</includes>
+    <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="yes" imported="no">BatteryAccess.h</includes>
     <class kind="class">AbstractSignalConverter</class>
   </compound>
   <compound kind="file">
@@ -168,7 +65,7 @@
     <name>AbstractTransducer.h</name>
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Sensor/Transducer/</path>
     <filename>AbstractTransducer_8h</filename>
-    <includes id="AbstractBatteryAccess_8h" name="AbstractBatteryAccess.h" local="yes" imported="no">AbstractBatteryAccess.h</includes>
+    <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="yes" imported="no">BatteryAccess.h</includes>
     <class kind="class">AbstractTransducer</class>
     <member kind="function">
       <type></type>
@@ -177,6 +74,19 @@
       <anchor>a2dd66141dad8a627e3e94ccde9f8b056</anchor>
       <arglist>(AbstractTransducer)</arglist>
     </member>
+  </compound>
+  <compound kind="file">
+    <name>BatteryAccess.cc</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
+    <filename>BatteryAccess_8cc</filename>
+    <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="no" imported="no">BatteryAccess.h</includes>
+    <includes id="SensorNode_8h" name="SensorNode.h" local="yes" imported="no">SensorNode.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>BatteryAccess.h</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
+    <filename>BatteryAccess_8h</filename>
+    <class kind="class">BatteryAccess</class>
   </compound>
   <compound kind="file">
     <name>CustomWorldUtility.cc</name>
@@ -255,6 +165,96 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>Memory.cc</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Memory/</path>
+    <filename>Memory_8cc</filename>
+    <includes id="Memory_8h" name="Memory.h" local="no" imported="no">Memory.h</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>error</name>
+      <anchorfile>Memory_8cc.html</anchorfile>
+      <anchor>a0c5e59a7caaa02f887d077eaa467f209</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Memory.h</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Memory/</path>
+    <filename>Memory_8h</filename>
+    <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="yes" imported="no">BatteryAccess.h</includes>
+    <includes id="SimpleSensorData_8h" name="SimpleSensorData.h" local="yes" imported="no">SimpleSensorData.h</includes>
+    <class kind="class">Memory</class>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>Memory_8h.html</anchorfile>
+      <anchor>a06b94a67104406a0aaa0b5ab7a5ebc6d</anchor>
+      <arglist>(Memory)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Processor.cc</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Processor/</path>
+    <filename>Processor_8cc</filename>
+    <includes id="Processor_8h" name="Processor.h" local="no" imported="no">Processor.h</includes>
+    <includes id="SensorNode_8h" name="SensorNode.h" local="yes" imported="no">SensorNode.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Processor.h</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Processor/</path>
+    <filename>Processor_8h</filename>
+    <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="yes" imported="no">BatteryAccess.h</includes>
+    <class kind="class">Processor</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>sensing</name>
+      <anchorfile>Processor_8h.html</anchorfile>
+      <anchor>aeddc79ad91f80b50610bd1132d5efe2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>shiftProcessorMode</name>
+      <anchorfile>Processor_8h.html</anchorfile>
+      <anchor>a3e7e3a3a0577a2a8e68b8cec0b548651</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>collectStatistics</name>
+      <anchorfile>Processor_8h.html</anchorfile>
+      <anchor>a9cec121eaa1087339a084d8db0ba6266</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>Processor_8h.html</anchorfile>
+      <anchor>a659cfe9d79ce5b7878e6804a4aad8d8e</anchor>
+      <arglist>(Processor)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>SensorNode.cc</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
+    <filename>SensorNode_8cc</filename>
+    <includes id="SensorNode_8h" name="SensorNode.h" local="no" imported="no">SensorNode.h</includes>
+    <includes id="Processor_8h" name="Processor.h" local="yes" imported="no">Processor.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>SensorNode.h</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
+    <filename>SensorNode_8h</filename>
+    <class kind="class">SensorNode</class>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>SensorNode_8h.html</anchorfile>
+      <anchor>af011cbec37a8e03751f1ba7138d5e3e5</anchor>
+      <arglist>(SensorNode)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>SimpleSensorData.cc</name>
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SimpleSensorData/</path>
     <filename>SimpleSensorData_8cc</filename>
@@ -280,481 +280,9 @@
     <class kind="class">StatisticsInterface</class>
   </compound>
   <compound kind="class">
-    <name>AbstractBatteryAccess</name>
-    <filename>classAbstractBatteryAccess.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>AbstractBatteryAccess</name>
-      <anchorfile>classAbstractBatteryAccess.html</anchorfile>
-      <anchor>a3dc867e0deb88dfefea0b6c3a64af4c7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~AbstractBatteryAccess</name>
-      <anchorfile>classAbstractBatteryAccess.html</anchorfile>
-      <anchor>a71509b619885839c360167485f765b4b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>initialize</name>
-      <anchorfile>classAbstractBatteryAccess.html</anchorfile>
-      <anchor>a63b66f7b632bfa6be6484176193ee357</anchor>
-      <arglist>(int stage)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>draw</name>
-      <anchorfile>classAbstractBatteryAccess.html</anchorfile>
-      <anchor>ac3494456ad3aa8c345d66ec0c5330f68</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classAbstractBatteryAccess.html</anchorfile>
-      <anchor>a2abcaf9ac5f983d281224595ec25aa80</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>handleHostState</name>
-      <anchorfile>classAbstractBatteryAccess.html</anchorfile>
-      <anchor>afa26020ebfc390500a3f27f911c04cdf</anchor>
-      <arglist>(const HostState &amp;state)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>float</type>
-      <name>currentOverTime</name>
-      <anchorfile>classAbstractBatteryAccess.html</anchorfile>
-      <anchor>a6158567a14fd3051d4a8e9a550a42ee6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>float</type>
-      <name>energiePerOperation</name>
-      <anchorfile>classAbstractBatteryAccess.html</anchorfile>
-      <anchor>a2341d7f11852675a751b13cdbb4ace28</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>AbstractMemory</name>
-    <filename>classAbstractMemory.html</filename>
-    <base>AbstractBatteryAccess</base>
-    <member kind="function">
-      <type></type>
-      <name>AbstractMemory</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>a51760f70111353a8f33de0668d7e13fa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~AbstractMemory</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>a3dc7ffb71058cf3dbd1552adeede6da9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>initialize</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>a34f6dd0dbc2e52a362f5f19c507612b7</anchor>
-      <arglist>(int stage)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleMessage</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>a60fadeda5aa3c36b75bfbaf0320d2109</anchor>
-      <arglist>(cMessage *msg)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>createEntry</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>a544807ca04e16314851866317bfe26d8</anchor>
-      <arglist>(std::string, int)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>readEntry</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>ac9d24ffcb4a1ce5776abe28b596ce343</anchor>
-      <arglist>(std::string)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>updateEntry</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>a9c9c9a5f02ce26ca5ef8c8633a113797</anchor>
-      <arglist>(std::string, int)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>deleteEntry</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>a04e8a3b68d5c1b2139d7d8c2ccc7cb71</anchor>
-      <arglist>(std::string)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>getIdByType</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>a7d10cf1d83c6f91311c6006e9ca81e84</anchor>
-      <arglist>(std::string)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>std::string *</type>
-      <name>storageType</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>afc065acb8f00a16c8b37bc92338a0d02</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int *</type>
-      <name>storageValue</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>af37e77e515f88d71abea686fce300a1e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static const int</type>
-      <name>storageSize</name>
-      <anchorfile>classAbstractMemory.html</anchorfile>
-      <anchor>a3ca94ba2d84274eda1580f4fc6037915</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>AbstractProcessor</name>
-    <filename>classAbstractProcessor.html</filename>
-    <base>AbstractBatteryAccess</base>
-    <member kind="function">
-      <type></type>
-      <name>AbstractProcessor</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>af91e0e798ab22e889eeedc842fdc4e8b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~AbstractProcessor</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>ad73ecdc550665e07d762d41b5bb17578</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>initialize</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a36c23edfa2b06b8f4a3c6256a1c4dffc</anchor>
-      <arglist>(int stage)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleMessage</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a6664703f2812f13ccbedd5ece8a51e7a</anchor>
-      <arglist>(cMessage *msg)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a4b869a5b219531e4197de889a6f2b1f1</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>schedulePeriodicSelfMessage</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>af65b1e4a0c0bccd400a3671d899c3e32</anchor>
-      <arglist>(int)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>schedulePeriodicSelfMessage</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a28cb44e4c0bcc589a2b0430cb66753bc</anchor>
-      <arglist>(cMessage *, int)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>startSensingUnit</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>af04358bbc40555ff356d538981e1de08</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>draw</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a24ac35c999591d83e38e9eda22d23279</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>doCollectStatistics</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a39b7afdc28b4b94e1ccb7b89b298a4cc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>handleHostState</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a5214aea4cddf8cfe08719a1e06b02822</anchor>
-      <arglist>(const HostState &amp;state)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>switchProcessorMode</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a6dc64be62603fc957de94dfeae87cd23</anchor>
-      <arglist>(MODES mode)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>switchProcessorMode</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a7c509729853e92c7aaf15b6535cc57e9</anchor>
-      <arglist>(int mode)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>switchProcessorMode</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a0f87c975fb08e2ef6850d4e642a362ce</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>MODES</type>
-      <name>getProcessorMode</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a53e0114e53cdb0b58e424417af514b98</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>bool</type>
-      <name>hasTemperatureSensor</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>ad7fe348ec154f85d199ea9365d25a4b5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>bool</type>
-      <name>hasHumiditySensor</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>ae4d1bdae4fc06bb6bd4892e7e7dcd8bb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>bool</type>
-      <name>hasPressureSensor</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>aba49db119dd32e7604fac0037e4a58c8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>bool</type>
-      <name>hasLightSensor</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a5c0e83c3a078def36b6c687f18ff665f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration" protection="protected">
-      <type></type>
-      <name>MODES</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a57b598cf993cb8031010d1a492ed28a1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <name>NORMAL</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a57b598cf993cb8031010d1a492ed28a1a29b5f78b5bc81440f65a1d8d476e6339</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <name>POWER_SAVING</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a57b598cf993cb8031010d1a492ed28a1a9da8964db21f5e3bfef3caaa7bd713a0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <name>HIGH_PERFORMANCE</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a57b598cf993cb8031010d1a492ed28a1adf2b35eedc48a1df03bd76e407291794</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <name>OFF</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a57b598cf993cb8031010d1a492ed28a1a9878ced48f8b2f002dd36d9b8718daba</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>sensingIntervall</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a37c7a74bb8ccc60468baff982a07cd3e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>shiftProcessorModeIntervall</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>ab5e5105cb3e02bab0349b491cf57743a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>collectStatisticsIntervall</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a2602916413177217de719fa6d57fce28</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>cMessage *</type>
-      <name>selfMessageMeasure</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>ad3901e6d0889871b56c69932ccc5076c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>cMessage *</type>
-      <name>selfMessageShiftMode</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a1ed456cd8ec7fdeea4f16c779476af1f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>cMessage *</type>
-      <name>selfMessageStatistics</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a79f1d948b5709145f57843d2745cc274</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>currentOverTimeNormal</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a5edd19c99e936873d900e0b27951f038</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>energiePerOperationNormal</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a8d4b8c4dd88ecf713a8bddb71b34258e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>currentOverTimePowerSaving</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a647c7e1664c15787bed7374897de013f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>energiePerOperationPowerSaving</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a93c218e36b50ad4249ecb0f5d6e2c437</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>currentOverTimeHighPerformance</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a69de6775ebdf4e761fcf7ee1bcdbcc91</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>energiePerOperationHighPerformance</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a0d7f640ffa8a4a7c19085e018f4dcc80</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>int</type>
-      <name>activatedMode</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a4f12acc200a7a52d8490a45d79af4b97</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>voltage</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a5d59fca74032cdd3f7b38800f9e9dc5f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>residualRelative</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a7db710f925e93b6e522be15da50687e9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>residualAbs</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>accad5e71945c43f7ab4c83d6eb851d6e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>cLongHistogram</type>
-      <name>voltageStats</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>ac9c1276348e4fe80e1c7e620d7271f17</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>cOutVector</type>
-      <name>voltageVector</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>ada5fce6f8fc00b16ecca1a6b039ea656</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>cLongHistogram</type>
-      <name>residualRelativeStats</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a642eea20e7d94fca369fbb8ea8683df0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>cOutVector</type>
-      <name>residualRelativeVector</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>aa81689146415e6f8e7e101b6227194d2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>cLongHistogram</type>
-      <name>residualAbsStats</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a28b12abe5834b02f18194da36140c277</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>cOutVector</type>
-      <name>residualAbsVector</name>
-      <anchorfile>classAbstractProcessor.html</anchorfile>
-      <anchor>a4721e17d6950189d542c34c0e0e9b354</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>AbstractSensingUnit</name>
     <filename>classAbstractSensingUnit.html</filename>
-    <base>AbstractBatteryAccess</base>
+    <base>BatteryAccess</base>
     <member kind="function">
       <type></type>
       <name>AbstractSensingUnit</name>
@@ -841,91 +369,9 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>AbstractSensorNode</name>
-    <filename>classAbstractSensorNode.html</filename>
-    <base>cModule</base>
-    <member kind="function">
-      <type></type>
-      <name>AbstractSensorNode</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>aa887f2cf2be48160d7b0265b7b96cf76</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~AbstractSensorNode</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>ad78a7c5a82101ba21abba970066cab84</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>cDatarateChannel *</type>
-      <name>getControlChannel</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>a86868d1adf9d9c1e3caea8ce5d199b15</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>cDatarateChannel *</type>
-      <name>getDataChannel</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>a814dae80e9690ed87d550aeff2afb2b0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>initialize</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>a832ad55b3ef5bca6c69cb7068199166b</anchor>
-      <arglist>(int)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>ac58bf654220942d0892cd66b0205184a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>handleMessage</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>af4615ce4d488b860317998484d6c1e72</anchor>
-      <arglist>(cMessage *msg)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>setNumGates</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>ad4f13e0b312d0b874de793b35051bbfa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createProcessor</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>a82728356ada1f20e01616bd1fc5d70ad</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>connectProcessorAndMemory</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>a7b7b14e869bdffcf3568634b0d999a48</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>connectProcessorAndSensor</name>
-      <anchorfile>classAbstractSensorNode.html</anchorfile>
-      <anchor>ad445e39986d51e1124744eab87ce3b36</anchor>
-      <arglist>(cModule &amp;, std::string)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>AbstractSignalConditioner</name>
     <filename>classAbstractSignalConditioner.html</filename>
-    <base>AbstractBatteryAccess</base>
+    <base>BatteryAccess</base>
     <member kind="function">
       <type></type>
       <name>AbstractSignalConditioner</name>
@@ -951,7 +397,7 @@
   <compound kind="class">
     <name>AbstractSignalConverter</name>
     <filename>classAbstractSignalConverter.html</filename>
-    <base>AbstractBatteryAccess</base>
+    <base>BatteryAccess</base>
     <member kind="function">
       <type></type>
       <name>AbstractSignalConverter</name>
@@ -977,7 +423,7 @@
   <compound kind="class">
     <name>AbstractTransducer</name>
     <filename>classAbstractTransducer.html</filename>
-    <base>AbstractBatteryAccess</base>
+    <base>BatteryAccess</base>
     <member kind="function">
       <type></type>
       <name>AbstractTransducer</name>
@@ -998,6 +444,66 @@
       <anchorfile>classAbstractTransducer.html</anchorfile>
       <anchor>a17bac38b973f48d168e56b12b7268f91</anchor>
       <arglist>(cMessage *msg)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>BatteryAccess</name>
+    <filename>classBatteryAccess.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>BatteryAccess</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>a91a34707835f0938bc9c1a1c470ad5fb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~BatteryAccess</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>a144bc00c077326f959c340effd8f61af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>a6f553d183d76b1364049a95f7a941aad</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>draw</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>a9fd058cc0c61299cb19628bb384cc939</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>a93326bcfe4d6899cf6561a4418bcda8b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>handleHostState</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>ac8bf6a0bb656ed2006bbee3387151ab7</anchor>
+      <arglist>(const HostState &amp;state)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>float</type>
+      <name>currentOverTime</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>a9449bfc9a1c5633de1177d5c610af2b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>float</type>
+      <name>energiePerOperation</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>a8d08f33bb3ed5e89669b55293becc17e</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -1330,6 +836,500 @@
       <anchorfile>classExtendedMessage.html</anchorfile>
       <anchor>ab07ff9eccc340341355a0a341bb971fb</anchor>
       <arglist>(const ExtendedMessage &amp;other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Memory</name>
+    <filename>classMemory.html</filename>
+    <base>BatteryAccess</base>
+    <member kind="function">
+      <type></type>
+      <name>Memory</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a585d7bb6fc6f2237bcebf94a86b7dd99</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Memory</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a0ffa9759ebbf103f11132a505b93bdc0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a21d29b6ea87f17ae2c1f13d434324f3b</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a64b0afa7f3209a583e8cb2bfc47d4c97</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>createEntry</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a1b9038676e3d179aa23b6753fe1dd08c</anchor>
+      <arglist>(std::string, int)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>readEntry</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a7ddd91ffcbdd37145317430081eea8c2</anchor>
+      <arglist>(std::string)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>updateEntry</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a300741202bc10a8ebc257dde773bc0a2</anchor>
+      <arglist>(std::string, int)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>deleteEntry</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a8dc7068874f26b5d78d16b770cb0a6e8</anchor>
+      <arglist>(std::string)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getIdByType</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>aeb0696eaa8821ad6efba76d97a7c27e8</anchor>
+      <arglist>(std::string)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string *</type>
+      <name>storageType</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>afcc6aaacdbdf3f2fd94d93a01bef8717</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int *</type>
+      <name>storageValue</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a95d0790fcf3b88960f00d71c8f4bb113</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const int</type>
+      <name>storageSize</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>afb1145e05946a6fa9964a1e54fed339a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Processor</name>
+    <filename>classProcessor.html</filename>
+    <base>BatteryAccess</base>
+    <member kind="function">
+      <type></type>
+      <name>Processor</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a50c89dbf76a073f4fb491628258cf292</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Processor</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>acf37952c5b420d4e903a512571678692</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>ac2928d91d0398e64f0ad2126c37d82a0</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a75882f9b6fc4d00ca3bda5f70f4d4a72</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a97e13432381e72302a9f264f0100fce1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>schedulePeriodicSelfMessage</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>afba8d5740071310d4a0d67ec886cddb3</anchor>
+      <arglist>(int)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>schedulePeriodicSelfMessage</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a0c4c27feddc90e7f1ff66c21db0df3d1</anchor>
+      <arglist>(cMessage *, int)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>startSensingUnit</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>abdfb49594bfdbeee4d99808a9a353b02</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>draw</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>aa1ec91e80afe2c4a19378fc3a0fec6d1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>doCollectStatistics</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>ad2a4c0f1519fd1bdd72a849e5255e558</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>handleHostState</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a16664ccbeeb692610e5e1120fa280d11</anchor>
+      <arglist>(const HostState &amp;state)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>switchProcessorMode</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>acf1aa15766f93c170c224bd674ea07d2</anchor>
+      <arglist>(MODES mode)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>switchProcessorMode</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a19f1b8ebd362ad55ff58f76fcd5be9ec</anchor>
+      <arglist>(int mode)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>switchProcessorMode</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a16e50c796e3b5b914b1335d788a26bc1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>MODES</type>
+      <name>getProcessorMode</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a342dfbbd158dadecbb96f25a5a2fb8a8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>hasTemperatureSensor</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a19d5ac99ee7f1cf78baf4dddf39a3280</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>hasHumiditySensor</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a7136767dde75c13ed9fb44e0af7085c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>hasPressureSensor</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a5c587f9e2f931a3214186a436287a18f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>hasLightSensor</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>abfddc8e73fec07bd2a25427d8c86084a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>MODES</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a6d296ef30a05b4f8aa186fb5d4aa99c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>NORMAL</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a6d296ef30a05b4f8aa186fb5d4aa99c8a506076304109f7926fb1ba61b686ba83</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>POWER_SAVING</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a6d296ef30a05b4f8aa186fb5d4aa99c8ae26e6058a0c4231116ede380d82bed8e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>HIGH_PERFORMANCE</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a6d296ef30a05b4f8aa186fb5d4aa99c8a2d3a9556eb8a882fe69b71233854d36d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>OFF</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a6d296ef30a05b4f8aa186fb5d4aa99c8ab6ac32f850413f94d915246276cfdf0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>sensingIntervall</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a4a778aabdbdffd8e03232bdc56ab1d51</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>shiftProcessorModeIntervall</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a5b291d3d645cedf5346bbf986f642ddc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>collectStatisticsIntervall</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>ad24512d4ed45fd65b024958185dbb121</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cMessage *</type>
+      <name>selfMessageMeasure</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a87b1b113bf93bdd802b81810b201af6c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cMessage *</type>
+      <name>selfMessageShiftMode</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a9037775765b103debb5666e41d82e249</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cMessage *</type>
+      <name>selfMessageStatistics</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>ad2af6cf93286343b28729fb96576fc80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>currentOverTimeNormal</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>af103843a57de0680db24c2245988581a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>energiePerOperationNormal</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a70970f0f016c6f7f6f950002a5ca4c95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>currentOverTimePowerSaving</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>ab9d245c2702673e5fff1300c9105e6dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>energiePerOperationPowerSaving</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>aa6281a6edcbd510764632a22292f7ad8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>currentOverTimeHighPerformance</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a5b5471bc2b6b4b1e51bf6dbd74927dfe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>energiePerOperationHighPerformance</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>aa260c8b94bd163165df1d31e8f94782f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>activatedMode</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a6715b8857ced0f672f6149591ffe01d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>voltage</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a1d95c0f1ff30ee2741d040d04c1bc631</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>residualRelative</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a2f2b495bb209182095cd2abfbac721b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>residualAbs</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a1d65cab1b6fc3997c99a523a4d46c1f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cLongHistogram</type>
+      <name>voltageStats</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>adf2e7d93d29bd445561889ac50822fb6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cOutVector</type>
+      <name>voltageVector</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a2cf05fb34f2e567470187b495e20a08d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cLongHistogram</type>
+      <name>residualRelativeStats</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>aa9f95f84b7d476e4f13b527bc2a35a2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cOutVector</type>
+      <name>residualRelativeVector</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a601db9019d92563b9cf53e70fee53198</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cLongHistogram</type>
+      <name>residualAbsStats</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>aebc51f0b1eb45d6f427441ffb1c7d791</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cOutVector</type>
+      <name>residualAbsVector</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a02f133a81d3f0c2fa499c6864ea55016</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>SensorNode</name>
+    <filename>classSensorNode.html</filename>
+    <base>cModule</base>
+    <member kind="function">
+      <type></type>
+      <name>SensorNode</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>a95a6344f724de6bf5decb1409afc232f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SensorNode</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>abb48184568647a2bea118ba367068917</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>cDatarateChannel *</type>
+      <name>getControlChannel</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>a63fe5fd71f2cfe90f96abe2033a19201</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>cDatarateChannel *</type>
+      <name>getDataChannel</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>a4cc02aefaf99391552eb2563fca71230</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>a4f58c5be7251b244f624d2d12b157f3d</anchor>
+      <arglist>(int)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>a8765ce53c4c5213709dec7ade8245f08</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>a97e7dfcef1fd425b2cdc2fd4541b3624</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setNumGates</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>afdd7d7c7fad12dbb8c2041f4c14cce26</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>createProcessor</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>ad82337c913b9165fc3be42fe17aef2e8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>connectProcessorAndMemory</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>a18c3b639f5ec430f4345a5e5a480add4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>connectProcessorAndSensor</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>ab1eda959efc98312d4e4e39c47b649d1</anchor>
+      <arglist>(cModule &amp;, std::string)</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['back',['back',['/home/rutho/BA/omnetpp-4.5//doc/api/classcPacketQueue.html#af126a4bf65a45c148d5b97b00ad25e8c',1,'cPacketQueue::back()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcQueue.html#ad7c47b11e0a1af8c86fcecb75b30caba',1,'cQueue::back()']]],
+  ['batteryaccess',['BatteryAccess',['../classBatteryAccess.html#a91a34707835f0938bc9c1a1c470ad5fb',1,'BatteryAccess']]],
   ['beforechange',['beforeChange',['/home/rutho/BA/omnetpp-4.5//doc/api/classcMsgPar.html#a22eb9d066ed07e0c5f716cda36e97ff6',1,'cMsgPar']]],
   ['beginsend',['beginSend',['/home/rutho/BA/omnetpp-4.5//doc/api/classcEnvir.html#ae51dd633f9b11395f035ceadfa688a32',1,'cEnvir::beginSend()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcNullEnvir.html#ae9eebe743b054d294427ee693a6a3a38',1,'cNullEnvir::beginSend()']]],
   ['bernoulli',['bernoulli',['/home/rutho/BA/omnetpp-4.5//doc/api/group__RandomNumbersDiscr.html#gadc74bbd9ad42c4ae6c66759c9eb38e4e',1,]]],

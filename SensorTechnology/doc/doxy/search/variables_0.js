@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['activatedmode',['activatedMode',['../classAbstractProcessor.html#a4f12acc200a7a52d8490a45d79af4b97',1,'AbstractProcessor']]]
+  ['activatedmode',['activatedMode',['../classProcessor.html#a6715b8857ced0f672f6149591ffe01d3',1,'Processor']]]
 ];

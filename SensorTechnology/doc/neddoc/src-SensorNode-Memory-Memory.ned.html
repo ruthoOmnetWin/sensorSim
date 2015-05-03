@@ -4,11 +4,7 @@
       <link rel="stylesheet" type="text/css" href="style.css" />
    </head>
    <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
-<h2 class="comptitle">Simple Module <i>AbstractMemory</i></h2>
-<b>Package:</b> sensortechnology.src.SensorNode.Memory<br/><b>File: <a href="src-SensorNode-Memory-AbstractMemory.ned.html">src/SensorNode/Memory/AbstractMemory.ned</a></b><br/><p><a href="../doxy/classAbstractMemory.html" target="mainframe"><b>C++ definition</b></a></p>
-
-<p>a simple memory module - can store data it received by key+value</p>
-<h3 class="subtitle">Used in compound modules:</h3>
+<h2 class="comptitle">NED File <i>src/SensorNode/Memory/Memory.ned</i></h2>
 <table class="typestable">
    <tr>
       <th class="name">Name</th>
@@ -17,76 +13,46 @@
    </tr>
 <tr>
    <td>
-<a href="sensortechnology.src.SensorNode.AbstractSensorNode.html">AbstractSensorNode</a>
+<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>
    </td>
    <td>
-<i>compound&nbsp;module</i>
+<i>simple&nbsp;module</i>
    </td>
    <td>
 
-<p>Sensor Node which can combine the different types of sensors (or have non of them) and
-a battery, memory, processor and radio module </p>
+<p>a simple memory module - can store data it received by key+value</p>
 
    </td>
-</tr>
-</table>
-<h3 class="subtitle">Parameters:</h3>
-<table class="paramstable">
-   <tr>
-      <th class="name">Name</th>
-      <th class="type">Type</th>
-      <th class="defaultvalue">Default value</th>
-      <th class="description">Description</th>
-   </tr>
-<tr class="local">
-   <td>keyValueMemory</td>
-   <td>
-      <i>xml</i>
-   </td>
-   <td>xml("<data></data>")</td>
-   <td>   </td>
-</tr>
-<tr class="local">
-   <td>currentConsumption</td>
-   <td>
-      <i>double</i>
-   </td>
-   <td></td>
-   <td>   </td>
-</tr>
-<tr class="local">
-   <td>energyConsumption</td>
-   <td>
-      <i>double</i>
-   </td>
-   <td></td>
-   <td>   </td>
-</tr>
-</table>
-<h3 class="subtitle">Properties:</h3>
-<table class="propertiestable">
-   <tr>
-      <th class="name">Name</th>
-      <th class="value">Value</th>
-      <th class="description">Description</th>
-   </tr>
-<tr>
-   <td>display</td>
-   <td><i>i=block/buffer2</i></td>
-   <td></td>
 </tr>
 </table>
 <h3 class="subtitle">Source code:</h3>
 <pre class="src"><span style="color: #808080; font-style: italic; ">//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+</span><span style="color: #000000; ">
+</span><span style="color: #800000; font-weight: bold; ">package</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Memory</span><span style="color: #000000; ">;
+
+</span><span style="color: #808080; font-style: italic; ">//
 // a simple memory module - can store data it received by key+value
 //
-</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">AbstractMemory</span><span style="color: #000000; ">
+</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">Memory</span><span style="color: #000000; ">
 {
     </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
         </span><span style="color: #000080; font-weight: bold; ">xml</span><span style="color: #000000; "> </span><span style="color: #000000; ">keyValueMemory</span><span style="color: #000000; "> = </span><span style="color: #000080; font-weight: bold; ">xml</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;&lt;data&gt;&lt;/data&gt;&quot;</span><span style="color: #000000; ">);
         </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=block/buffer2&quot;</span><span style="color: #000000; ">);
         </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">currentConsumption</span><span style="color: #000000; ">;
-        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">energyConsumption</span><span style="color: #000000; ">;
+    	</span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">energyConsumption</span><span style="color: #000000; ">;
     </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
         </span><span style="color: #808080; font-style: italic; ">//inout connectToProcessor;
 </span><span style="color: #000000; ">}

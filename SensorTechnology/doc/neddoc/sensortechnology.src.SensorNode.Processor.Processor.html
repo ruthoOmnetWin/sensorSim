@@ -4,8 +4,8 @@
       <link rel="stylesheet" type="text/css" href="style.css" />
    </head>
    <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
-<h2 class="comptitle">Simple Module <i>AbstractProcessor</i></h2>
-<b>Package:</b> sensortechnology.src.SensorNode.Processor<br/><b>File: <a href="src-SensorNode-Processor-AbstractProcessor.ned.html">src/SensorNode/Processor/AbstractProcessor.ned</a></b><br/><p><a href="../doxy/classAbstractProcessor.html" target="mainframe"><b>C++ definition</b></a></p>
+<h2 class="comptitle">Simple Module <i>Processor</i></h2>
+<b>Package:</b> sensortechnology.src.SensorNode.Processor<br/><b>File: <a href="src-SensorNode-Processor-Processor.ned.html">src/SensorNode/Processor/Processor.ned</a></b><br/><p><a href="../doxy/classProcessor.html" target="mainframe"><b>C++ definition</b></a></p>
 
 <p>implementation of an processor, it is able to switch between different power modes and controles the other
 modules inside the sensor node</p>
@@ -121,7 +121,7 @@ modules inside the sensor node</p>
    <td>display</td>
    <td><i>i=device/cpu</i></td>
    <td>
-<p>to add new modes you must also make changes inside the class <a href="sensortechnology.src.SensorNode.Processor.AbstractProcessor.html">AbstractProcessor</a>:
+<p>to add new modes you must also make changes inside the class <a href="sensortechnology.src.SensorNode.Processor.Processor.html">Processor</a>:
 extend the enum 'MODES'
 register the new account inside initialize(int)
 extend switchProcessorMode(MODES)</p>
@@ -133,13 +133,13 @@ extend switchProcessorMode(MODES)</p>
 // implementation of an processor, it is able to switch between different power modes and controles the other
 // modules inside the sensor node
 //
-</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">AbstractProcessor</span><span style="color: #000000; ">
+</span><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">Processor</span><span style="color: #000000; ">
 {
     </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
         </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numGates</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">);
         </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;i=device/cpu&quot;</span><span style="color: #000000; ">);
 
-        </span><span style="color: #808080; font-style: italic; ">//to add new modes you must also make changes inside the class AbstractProcessor:
+        </span><span style="color: #808080; font-style: italic; ">//to add new modes you must also make changes inside the class Processor:
 </span><span style="color: #000000; ">    	</span><span style="color: #808080; font-style: italic; ">//extend the enum 'MODES'
 </span><span style="color: #000000; ">    	</span><span style="color: #808080; font-style: italic; ">//register the new account inside initialize(int)
 </span><span style="color: #000000; ">    	</span><span style="color: #808080; font-style: italic; ">//extend switchProcessorMode(MODES)

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['modes',['MODES',['../classAbstractProcessor.html#a57b598cf993cb8031010d1a492ed28a1',1,'AbstractProcessor']]]
+  ['modes',['MODES',['../classProcessor.html#a6d296ef30a05b4f8aa186fb5d4aa99c8',1,'Processor']]]
 ];

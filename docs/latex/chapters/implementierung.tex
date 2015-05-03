@@ -9,7 +9,7 @@ Die Daten der Simulation sollten visualisiert und ausgewertet werden können, be
 
 \subsection{Klassenübersicht}
 
-Die Klassenübersichten wurden teilweise mit Hilfe von doxygen\cite{doxygen} erstellt. 
+Die Klassenübersichten wurden teilweise mit Hilfe von doxygen\cite{doxygen} erstellt. Die Tabelle \ref{Klassenübersicht} zeigt einen Überblick über die definierten Module.
 
 \begin{table}[!ht]
   \centering
@@ -19,11 +19,11 @@ Die Klassenübersichten wurden teilweise mit Hilfe von doxygen\cite{doxygen} ers
 	\toprule
 	Klasse & Beschreibung \\
 	\midrule\midrule
-	AbstractBatteryAccess &	\specialcell{gibt einer Klasse, welche von dieser erbt Zugriff auf \\die Batterie} \\\midrule
-AbstractMemory & \specialcell{eine einfache Implementierung eines \\key-value-Speichers mit CRUD-Operationen}\\\midrule
-AbstractProcessor	& \specialcell{Repräsentiert ein paar Grundfunktionen eines \\ Prozessor übernimmt die Steuerung der Sensoreinheit, \\ hat Zugriff auf den Speicher und  kann \\außerdem zwischen verschiedenen power-Modi wechseln }\\\midrule
+	BatteryAccess &	\specialcell{gibt einer Klasse, welche von dieser erbt Zugriff auf \\die Batterie} \\\midrule
+Memory & \specialcell{eine einfache Implementierung eines \\key-value-Speichers mit CRUD-Operationen}\\\midrule
+Processor	& \specialcell{Repräsentiert ein paar Grundfunktionen eines \\ Prozessor übernimmt die Steuerung der Sensoreinheit, \\ hat Zugriff auf den Speicher und  kann \\außerdem zwischen verschiedenen power-Modi wechseln }\\\midrule
 AbstractSensingUnit & \specialcell{einfache Implementierung einer SensingUnit \\ diese kann Werte der Umgebung messen und \\verbraucht dabei Energie}\\\midrule
-AbstractSensorNode	& \specialcell{ist hauptsächlich für die Initialisierung zuständig}\\\midrule
+SensorNode	& \specialcell{ist hauptsächlich für die Initialisierung zuständig}\\\midrule
 AbstractSignalConditioner	& modelliert den Energieverbrauch vom SignalConditioner \\\midrule
 AbstractSignalConverter	& modelliert den Energieverbrauch vom SignalConverter\\\midrule
 AbstractTransducer	& modelliert den Energieverbrauch vom Transducer\\\midrule
@@ -60,7 +60,7 @@ Wie im vorigen Abschnitt beschrieben übernimmt die Funktion generateEnvironment
 
 Diese Funktionen generieren je ein 2- oder 3-dimensionales Array in der Größe des Playgrounds mit Werten, die die jeweils oben angegebenen Einheiten besitzen. In Listing \ref{lst:generateTemp} ist die generateTemperature()-Funktion als ein Beispiel aufgeführt. Im Falle dieser Funktion werden Zufällige integer-Werte generiert, welche sich im Bereich 10 bis 30 bewegen. Dieser erste Entwurf ermöglicht es erst einmal, dass einfach und halbwegs realitätsnahe Werte für den jeweiligen Umweltparameter vorliegen. Später kann an dieser Stelle dann auch ein Zugriff auf eine externe Datenbank erfolgen, in der Messwerte gespeichert sind, die in einem realen Gebiet gemessen wurden.
 
-\begin{lstlisting}[language=C++, label=lst:generateTemp]
+\begin{lstlisting}[language=C++, label=lst:generateTemp, caption=generateTemperature()]
 int* CustomWorldUtility::generateTemperature(int size)
 {
     int* data = new int[size];
@@ -72,9 +72,30 @@ int* CustomWorldUtility::generateTemperature(int size)
 }
 \end{lstlisting}
 
-Um eben diese Daten wieder lesen zu können dient die Funktion \textbf{readXML()}. Sie verwendet die cXMLElement-Funktionen aus dem Omnet++-Framework. Diese ist sehr hilfreich beim Verarbeiten von XML-Dateien. Da in dieser Simulation die Umweltparameter in Form von XML gespeichert sind, ist dies eine sehr nützliche Funktionalität.\\
+\begin{lstlisting}[language=C++, label=lst:readXML, caption=Kurzbeschreibung readXML()]
+cXMLElementList nListRows = rootE->getChildren();
+int count = nListRows.size();
+for (int i = 0; i < count; i++){
+    val[i] = atoi(nListRows[i]->getNodeValue());
+}
+\end{lstlisting}
+
+Um eben diese Daten wieder lesen zu können dient die Funktion \textbf{readXML()}. Sie verwendet die cXMLElement-Funktionen aus dem Omnet++-Framework. Diese sind sehr hilfreich beim Verarbeiten von XML-Dateien. Ein Bespiel für die Verwendung bei einem XML-File mit einer Verschachtelungstiefe von 1 ist im Listing \ref{lst:readXML} zu sehen. Da in dieser Simulation die Umweltparameter in Form von XML gespeichert sind, ist dies eine sehr nützliche Funktionalität.\\
 Die bis jetzt beschriebenen Funktionen dienen alle zur Initialisierung der Simulationsdaten. Es ist natürlich auch möglich diese in einem späteren Verlauf der Simulation erneut aufzurufen und damit neue Werte zu generieren. \\
-Für den späteren Verlauf der Simulation ist nun noch die Funktion \textbf{getValueByPosition(std::string, Coord*)} von großer Bedeutung. Diese Funktion ermöglich den Sensoreinheiten auf die gespeicherten Daten zuzugreifen.
+Für den späteren Verlauf der Simulation ist nun noch die Funktion \textbf{getValueByPosition(std::string, Coord*)} (\ref{lst:getValueByPosition}) von großer Bedeutung. Diese Funktion ermöglich den Sensoreinheiten auf die gespeicherten Daten zuzugreifen.
+
+\begin{lstlisting}[language=C++, label=lst:getValueByPosition, caption=getValueByPosition()]
+int CustomWorldUtility::getValueByPosition(std::string type, Coord *position)
+{
+    int*** data = readXML(getEnumFromType(type));
+    int dataAtPosition =
+            data
+                [(int)(position->x/par("dataGranularity").longValue())]
+                 [(int)(position->y/par("dataGranularity").longValue())]
+                  [(int)(position->z/par("dataGranularity").longValue())];
+    return dataAtPosition;
+}
+\end{lstlisting}
 
 \subsubsection{SensorNode}
 
@@ -87,7 +108,26 @@ Die Klasse AbstractSensorNode selbst enthält eher weniger Funktionalität. Sie 
 \end{itemize}
 Je nachdem ob der jeweilige Parameter gesetzt wird oder nicht wird das entsprechende Sensormodul auf dem Sensorknoten erstellt. Die Gates und Connections eines Moduls lassen sich in der NED-Definition leider nicht so schön generisch erstellen.\\
 Daher wird die Initialisierung des Prozessors zusammen mit seinen Gates, Connections und den entsprechenden Channels in der C++-Klasse übernommen. Nach dem Erstellen des Prozessors selbst werden für jeden existierenden Sensor ein eingehendes und ein ausgehendes Gate erstellt. Zusätzlich wird noch ein beidseitiges Gate für die Verbindung zum Memory-Modul angelegt.\\
-Die Prozessorgates erhalten dann die Verbindungen zu den jeweils entsprechenden Gates, zum Sensor verläuft ein Gate zur SensingUnit, das vom Sensor eingehende kommt von der Transducer. Beide Verbindungen haben unterschiedliche Funktionen, einmal lediglich zum Senden eines Signals um innerhalb der SensingUnit einen Messvorgang gestartet und ein anderes mal um die gemessenen Werte an den Prozessor zu übermitteln. Es wird daher in 2 verschiedene Channels zum senden unterschieden, welche entsprechend eine höhere oder niedrigere Datenrate aufweisen können, jenachdem wie diese innerhalb des ini-Files definiert sind.
+Die Prozessorgates erhalten dann die Verbindungen zu den jeweils entsprechenden Gates, zum Sensor verläuft ein Gate zur SensingUnit, das vom Sensor eingehende kommt von der Transducer. Beide Verbindungen haben unterschiedliche Funktionen, einmal lediglich zum Senden eines Signals um innerhalb der SensingUnit einen Messvorgang gestartet und ein anderes mal um die gemessenen Werte an den Prozessor zu übermitteln. Es wird daher in 2 verschiedene Channels zum senden unterschieden, welche entsprechend eine höhere oder niedrigere Datenrate aufweisen können, jenachdem wie diese innerhalb des ini-Files definiert sind.\\
+Wie genau der Prozessor Schritt für Schritt angelegt wird ist im Listing \ref{lst:initProc} zu sehen. Für das Beispiel wurde jedoch nur ein Paar von Gates verbunden, da das Verbindung für alle anderen Gates analog aussieht.
+
+\begin{lstlisting}[language=C++, label=lst:initProc, caption=teilweise Initialisierung des Prozessors]
+//get processor module type
+cModuleType *moduleType = cModuleType::get("sensortechnology.src.SensorNode.Processor.Processor");
+//create module
+cModule *processor = moduleType->create("Processor", this);
+processor->finalizeParameters();
+//create gate
+cGate *fromSensor = processor.addGate(("from" + SensorType + "Sensor").c_str(), cGate::INPUT);
+//get sensor
+cModule *Sensor = this->getSubmodule((SensorType + "Sensor").c_str());
+//get sensor gate
+cGate *sensorOut = Sensor->gate("fromTransducerToNodeProcessor");    
+//connect the gates
+sensorOut->connectTo(fromSensor);    
+//finish the process
+processor->buildInside();
+\end{lstlisting}
 
 \subsubsection{Sensormodule}
 
@@ -115,14 +155,37 @@ Eine wichtige Funktion des Prozessors wurde eben schon indirekt beschrieben. Die
 
 \paragraph{Sensorsteuerung}
 
-Der jeweilige Prozessor kann über das entsprechende, ausgehende Gate zu seinen Sensoren einen Messvorgang auslösen. Anschließend bekommt er die Daten vom Transducer übermittelt. Diese Information kann nun unterschiedlich behandelt werden. Typischer Weise kann dieser Wert nun zunächst im Speicher hinterlegt werden. Dafür wird die eingegangene Message direkt an den Memory weitergeleitet. Wie das genau aussieht ist im folgenden Abschnitt des Memories beschrieben.\\
+Der jeweilige Prozessor kann über das entsprechende, ausgehende Gate zu seinen Sensoren einen Messvorgang auslösen, indem die Funktion startSensingUnit() (Listing \ref{lst:startSensingUnit}) aufgerufen wird. Anschließend bekommt er die Daten vom Transducer übermittelt. Diese Information kann nun unterschiedlich behandelt werden. Typischer Weise kann dieser Wert nun zunächst im Speicher hinterlegt werden. Dafür wird die eingegangene Message direkt an den Memory weitergeleitet. Wie das genau aussieht ist im folgenden Abschnitt des Memories beschrieben.\\
 Es ist auch möglich periodisch Messungen durchzuführen. Dazu muss lediglich im NED-Modul ein Wert für sensingIntervall gesetzt werden. Dieser legt fest, welche zeitlichen Abstände zwischen 2 Messungen vorliegen sollen. Es wird dann bei der Initialisierung ein Event gestartet welcher jeweils nach dem festgelegten Zeitintervall ausgelöst wird. In diesem Fall wird dann ein Messvorgang gestartet. Danach wird der nächste folgende Event initialisiert und zum gegebenen Zeitpunkt beginnt der Vorgang von neuem.
+
+\begin{lstlisting}[language=C++, label=lst:startSensingUnit, caption=startSensingUnit()]
+void Processor::startSensingUnit()
+{
+    cModule* SensorNode = getParentModule();
+    if (SensorNode->par("hasTemperatureSensor")) {
+        cMessage* msg = new cMessage("startMeasuring");
+        send(msg, "toTemperatureSensor");
+    }
+    if (SensorNode->par("hasHumiditySensor")) {
+        cMessage* msg = new cMessage("startMeasuring");
+        send(msg, "toHumiditySensor");
+    }
+    if (SensorNode->par("hasPressureSensor")) {
+        cMessage* msg = new cMessage("startMeasuring");
+        send(msg, "toPressureSensor");
+    }
+    if (SensorNode->par("hasLightSensor")) {
+        cMessage* msg = new cMessage("startMeasuring");
+        send(msg, "toLightSensor");
+    }
+}
+\end{lstlisting}
 
 \paragraph{ProcessorMode}
 
-Weiterhin hat der Prozessor die Möglichkeit zwischen verschiedenen Powermodi zu wechseln. Die existierenden Modi sind in einem enum (Listing \ref{lst:ModeEnum}) definiert.
+Weiterhin hat der Prozessor die Möglichkeit zwischen verschiedenen Powermodi zu wechseln. Die existierenden Modi sind in einem enum (Listing \ref{lst:ModeEnum}) definiert und können per Funktion switchProcessorMode gewechselt werden (Listing \ref{lst:switchProcessorMode}).
 
-\begin{lstlisting}[language=C++, label=lst:ModeEnum]
+\begin{lstlisting}[language=C++, label=lst:ModeEnum, caption=enum MODES]
 enum MODES { 
 	NORMAL = 0, 
 	POWER_SAVING = 1, 
@@ -131,24 +194,96 @@ enum MODES {
 }
 \end{lstlisting}
 
+\begin{lstlisting}[language=C++, label=lst:switchProcessorMode, caption=switchProcessorMode()]
+void Processor::switchProcessorMode(MODES mode)
+{
+    //switch batteries power accounts
+    if (mode == POWER_SAVING) {
+        drawCurrent(currentOverTimePowerSaving, 1);
+    } else if (mode == NORMAL) {
+        drawCurrent(currentOverTimeNormal, 0);
+    } else if (mode == HIGH_PERFORMANCE) {
+        drawCurrent(currentOverTimeHighPerformance, 2);
+    }
+}
+\end{lstlisting}
+
 So können beispielsweise Tagesabläufe der Sensorknoten gesteuert werden. Da die Energiequelle von Sensorknoten oft sehr klein ist, ist es sinnvoll die Knoten in Zeiten, in denen keine Messwerte aufgenommen werden sollen in einen Stand-By Zustand zu versetzen. Dadurch kann viel Energie gespart werden.\\
 Diese Funktion wird durch die verschiedenen Powermodi bereitgestellt. Es ist möglich einen Zeitintervall zu definieren, in dem die verschiedenen Knoten gemeinsam zwischen den verschiedenen Modi wechseln. Da ein Knoten in Zeiten des Stand-By keine Kommunikation durchführen kann, ist am sinnvollsten alle Knoten im Netzwerk synchron schlafen zu lassen. Der entsprechende Zeitintervall kann durch die Variable shiftProcessorModeIntervall definiert werden.\\
-Dadurch werden nun wieder zeitlich periodische Wechsel zwischen den Modi durchgeführt, welche durch Events gesteuert werden.\\
+Dadurch werden nun wieder zeitlich periodische Wechsel zwischen den Modi durchgeführt, welche durch Events gesteuert werden, indem die Funktion switchProcessorMode() (\ref{lst:switchProcessorMode}) aufgerufen wird. Diese Funktion ist überladen und kann auf 3 verschiedene Arten aufgerufen werden: mit dem Modus in die gewechselt werden soll, mit dem int-Wert der diesen Modus repräsentiert oder ohne Parameter, in dem Fall wird der nächste Modus anhand der Integerwerte bestimmt, wie bei einem Modulozähler.\\
 Für jeden einzelnen Zustand kann dann wiederum im ini-File definiert werden, wie der Energieverbrauch pro Zeiteinheit während welches Modus genau aussehen muss.
 
 \paragraph{Statistiken}
 
-Die dritte Funktion des Prozessors, welche ebenfalls über Events gesteuert wird, ist das Erfassen statistischer Daten. Auch hierfür kann, in Form von der Variable collectStatisticsIntervall, ein zeitlicher Intervall definiert werden, nach diesem jeweils ein Event eine Erhebung von statistischen Messwerten des Batteriezustands durchführt.
+Die dritte Funktion des Prozessors, welche ebenfalls über Events gesteuert wird, ist das Erfassen statistischer Daten. Auch hierfür kann, in Form von der Variable collectStatisticsIntervall, ein zeitlicher Intervall definiert werden, nach diesem jeweils ein Event eine Erhebung von statistischen Messwerten des Batteriezustands durchführt. Die dazu gehörige Funktion ist in Listing \ref{lst:doCollectStatistics} zu sehen.
 
+\begin{lstlisting}[language=C++, label=lst:doCollectStatistics, caption=doCollectStatistics()]
+void Processor::doCollectStatistics()
+{
+    voltage = battery->getVoltage();
+    voltageStats.collect(voltage);
+    voltageVector.record(voltage);
+
+    residualRelative = battery->estimateResidualRelative();
+    residualRelativeStats.collect(residualRelative);
+    residualRelativeVector.record(residualRelative);
+
+    residualAbs = battery->estimateResidualAbs();
+    residualAbsStats.collect(residualAbs);
+    residualAbsVector.record(residualAbs);
+}
+\end{lstlisting}
 \subsubsection{Memory}
 
 Der Speicher besitzt arrays für einen key-value-Speicher und implementiert zur Benutzung dieses Speichers die CRUD-Operationen, wie in Listing \ref{lst:CRUD} zu sehen ist.
 
-\begin{lstlisting}[language=C++, label=lst:ModeEnum]
-void createEntry (std::string key, int value);
-int readEntry (std::string key);
-void updateEntry (std::string key, int value);
-void deleteEntry (std::string key);
+\begin{lstlisting}[language=C++, label=lst:CRUD]
+#define error -9999
+const static int storageSize = 4;
+
+void Memory::createEntry(std::string type, int value)
+{
+    int emptyId = -1;
+    for (int i = 0; i < storageSize; i++) {
+        if (storageType[i] == "") {
+            emptyId = i;
+            break;
+        }
+    }
+    if (emptyId == -1) {
+        return;
+    }
+    storageType[emptyId] = type;
+    storageValue[emptyId] = value;
+}
+
+int Memory::readEntry(std::string type)
+{
+    int id = getIdByType(type);
+    if (id == -1) {
+        return error;
+    }
+    return storageValue[id];
+}
+
+void Memory::updateEntry(std::string type, int value)
+{
+    int id = getIdByType(type);
+    if (id == -1) {
+        return createEntry(type, value);
+    }
+    storageValue[id] = value;
+}
+
+void Memory::deleteEntry(std::string type)
+{
+    int id = getIdByType(type);
+    if (id == -1) {
+        return;
+    }
+    storageValue[id] = error;
+    storageType[id] = "";
+}
 \end{lstlisting}
 
 Wenn nun von außen eine Message mit einem Datensatz an den Speicher geschickt wird, so kann dieser je nach Bedarf Datensätze neu anlegen, löschen oder updaten, damit diese später, wenn die Daten benötigt werden, wieder abgerufen werden können.
@@ -156,8 +291,24 @@ Wenn nun von außen eine Message mit einem Datensatz an den Speicher geschickt w
 \subsubsection{BatteryAccess}
 
 Die Klasse BatteryAccess ermöglicht den Modules des Sensors auf die Batterie zugreifen zu können. Dafür ist zunächst eigentlich die Klasse MiximBatteryAccess zuständig. BatteryAccess erbt von dieser und erweitert sie um einige wichtige Funktionen.\\
-So können zum Beispiel direkt Werte für den Energieverbrauch des entsprechenden Moduls hinterlegt werden. Immer wenn nun eine Energieintensive Operation durchgeführt wird, verbraucht die Batterie Energie in Höhe dieses definierten Wertes.\\
-Die Klasse kümmert sich weiterhin um die Initialisierung und um den Fall, dass die Batterie den leeren Zustand erreicht.
+So können zum Beispiel direkt Werte für den Energieverbrauch des entsprechenden Moduls hinterlegt werden. Immer wenn nun eine Energieintensive Operation durchgeführt wird, verbraucht die Batterie Energie in Höhe dieses definierten Wertes, indem die Funktion draw() aufgerufen wird. Diese ruft anschließend die Funktion drawEnergie(float) mit dem gespeicherten Wert \textbf{float energiePerOperation} auf.\\
+Die Klasse kümmert sich weiterhin um die Initialisierung und um den Fall, dass die Batterie den leeren Zustand erreicht (handleHostState()).
+
+\begin{lstlisting}[language=C++, label=lst:BatteryAccess]
+class BatteryAccess : public MiximBatteryAccess {
+protected:
+    float currentOverTime;
+    float energiePerOperation;
+    //int deviceID; - defined inside MiximBatteryAccess
+public:
+    BatteryAccess();
+    virtual ~BatteryAccess();
+    void initialize(int stage);
+    void draw();
+    void finish();
+    virtual void handleHostState(const HostState &state);
+};
+\end{lstlisting}
 
 \subsubsection{SimpleSensorData}
 
@@ -207,7 +358,6 @@ message ExtendedMessage extends cMessage
 \subsubsection{StatisticsInterface}
 
 Dieses Interface enthält grundlegende Attribute für Statistiken. Klassen die dieses implementieren speichern somit zum Beispiel wie viele Nachrichten sie empfangen oder gesendet haben.
-
 
 \subsection{Übersicht NED-Module}
 
@@ -323,9 +473,16 @@ Für den Sensorknoten wurde dennoch eine eigene Klasse definiert, welche allerdi
 
 \subsubsection{Sensoren}
 
+\begin{figure}[htbp]
+\centering
+\caption{allgemeines Modell eines Sensors}
+\label{fig:SensorModel}
+\includegraphics[]{SensorModel}
+\end{figure}
+
 Es liegt ein abstraktes Modul und ein Modulinterface für die verschiedenen Sensoren vor und für jeden Sensortyp existiert ein Sensormodul, welches vom abstrakten Modul erbt und das Sensorinterface implementiert.\\
 Die Abstrakte Klasse besitzt wenige Parameter; zum einen type, in dem in der jeweiligen Sensorimplementierung der Typ des Sensors definiert werden muss und die beiden Parameter dataBandwidth und controlBandwidth, welche die Bandbreite für die 2 verschiedenen Arten von Channels definieren.\\
-Das wichtigste ist natürlich die Definition der Submodule (\ref{lst:AbstractSensor}), denn diese machen die Funktionalität eines Compound Moduls aus.
+Das wichtigste ist natürlich die Definition der Submodule (\ref{lst:AbstractSensor}), denn diese machen die Funktionalität eines Compound Moduls aus. Die Abbildung \ref{fig:SensorModel} zeigt diesen Aufbau in bildlicher Form.
 
 \begin{lstlisting}[language=ned,caption={AbstractSensor},label=lst:AbstractSensor]
 submodules:
@@ -347,21 +504,66 @@ Anhand der Submoduldefinition ist auch ersichtlich, weshalb jedes Modul des Sens
 
 \subsubsection{SensorNode}
 
-Der SensorNode ist das komplexeste Compound Modul in der Simulation, denn es beinhaltet die bisher beschriebenen Module Sensor, Prozessor, Memory und die in MiXiM enthaltenen Module für die Funkkommunikation und eine Batterie.
+\begin{figure}[htbp]
+\centering
+\caption{Aufbau des Compoundmoduls SensorNode}
+\label{fig:Sensornode}
+\includegraphics[width=\textwidth]{Sensornode}
+\end{figure}
 
-\begin{lstlisting}[language=ned,caption={THLPNode},label=lst:SensorNode]
+Der SensorNode ist das komplexeste Compound Modul in der Simulation, denn es beinhaltet die bisher beschriebenen Module Sensor, Prozessor, Memory und die in MiXiM enthaltenen Module für die Funkkommunikation und eine Batterie.\\
+Die MiXiM-Module werden dem Sensorknoten durch das erben von dem Modul \textbf{WirelessNodeBatteryPlusTran} aus dem MiXiM-Framework zugewiesen, da dieses die benötigte Batterie und die Funkkommunikation bereitstellt. Alle anderen Module werden wie im Beispiel \ref{lst:SensorNode} definiert. Dieses ist dabei auf die Definition der Submodule reduziert.
+
+\begin{lstlisting}[language=ned,caption={SensorNode mit den neu definierten Modulen},label=lst:SensorNode]
+module SensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
+{
+    parameters:
+    
+        //[...]
+
+    submodules:
+        TemperatureSensor: TemperatureSensor if hasTemperatureSensor {
+            @display("p=275,51");
+            dataBandwidth = dataBandwidth;
+            controlBandwidth = controlBandwidth;
+        }
+        HumiditySensor: HumiditySensor if hasHumiditySensor {
+            @display("p=275,120");
+            dataBandwidth = dataBandwidth;
+            controlBandwidth = controlBandwidth;
+        }
+        PressureSensor: PressureSensor if hasPressureSensor {
+            @display("p=275,190");
+            dataBandwidth = dataBandwidth;
+            controlBandwidth = controlBandwidth;
+        }
+        LightSensor: LightSensor if hasLightSensor {
+            @display("p=275,260");
+            dataBandwidth = dataBandwidth;
+            controlBandwidth = controlBandwidth;
+        }
+        Memory: Memory {
+            @display("p=400,51");
+        }
+        Processor: Processor {
+            @display("p=400,159");
+        }
+        
+    connections:
+    
+        //[...]
+        
+}        
 \end{lstlisting}
 
-Wie man sehen kann erbt der Sensorknoten von MyWirelessNode. Er übernimmt zunächst also alle Eigenschaften des vorher bereits erklärten Modules. Hinzu kommen pro Sensor jeweils 1 Gate zum Sensor und zur world, welches den Sensor mit der Welt verbindet. \newline
-Entscheidend für das jeweilige Modul ist jedoch die Definition der Submodule. Im Falle des THLPNode werden genau 4 Submodule definiert:
+Durch das Setzen von hasTemperatureSensor und den analogen boolschen Variablen für die anderen Sensortypen kann für jeden Sensorknoten festgelegt werden, über welche Sensoren er verfügt. Das kann beispielsweise innerhalb der Definition des Netzwerkes geschehen.
+
 \begin{itemize}
 \item TemperatureSensor
 \item HumiditySensor
 \item LightSensor
 \item PressureSensor
 \end{itemize}
-Also für jeden Sensor das jeweilige Modul.\newline
-Zuletzt werden noch für die Gates die Verbindungen definiert.
 
 \subsubsection{Messages und Channels}
 
@@ -382,11 +584,40 @@ message ExtendedMessage extends cMessage
 
 \subsubsection{DatarateChannel}
 
+DatarateChannel ist ein von Omnet++ definiertes Modul. Es kann mit verschiedenen Parametern versehen werden, um dem jeweiligen Umständen angepasst zu werden. Der wichtigste ist dabei der double datarate, welcher in bps angegeben wird und festlegt, mit welcher Rate Daten durch den Channel gesendet werden können. Weiterhin kann auch ein delay und eine bit- beziehungsweise packet-error-rate festgelegt werden.\\
+In der Simulation wurde dieses Modul genutzt, um die verschiedenen Kanäle für den Datenverkehr und die Steuerungskanäle zu trennen.
+
 \subsubsection{omnetpp.ini}
 
-Die omnetpp.ini ist eine Datei, in der Eigenschaften der Simulation geändert werden können, ohne das man den Sourcecode bearbeiten und danach neu kompilieren muss. Es bietet sich daher an, alle Variablen und Konstanten, welche sich öfters ändern hier zu definieren.\newline
+Die omnetpp.ini ist eine Datei, in der Eigenschaften der Simulation geändert werden können, ohne das man den Sourcecode bearbeiten und danach neu kompilieren muss. Es bietet sich daher an, alle Variablen und Konstanten, welche sich öfters ändern hier zu definieren. Die wichtigsten Parameter sind im Beispiel \ref{lst:omnetini} aufgeführt.
 
-Für die relevanten Parameter wurde in der ini-Datei eine spezielle Sektion eingeteilt. Hier können beispielsweise Werte für die playgroundSize vergeben oder festgelegt werden ob Mobilität der Knoten erlaubt sein soll.
+\begin{lstlisting}[language=ned,caption={wichtige Parameter für das ini-File},label=lst:omnetini]
+#Energieverbrauch
+**.Memory.currentConsumption = 3
+**.Memory.energyConsumption = 100
+
+**.currentConsumption = 5
+**.energyConsumption = 150
+
+#capacity = nominal
+**.battery.nominal = 1000mAh
+
+#Playground
+**.playgroundSizeX = 400m
+**.playgroundSizeY = 550m
+**.playgroundSizeZ = 100m
+
+#defines how big the edge size of the cube is, a single value will represent
+**.dataGranularity = 10
+
+#zero is treated specially: no periodic behavior
+#defines the time between two measurings of a sensor
+**.sensingIntervall = 10000s
+#time between mode shifts
+**.shiftProcessorModeIntervall = 5000s
+#time between information collections
+**.collectStatisticsIntervall = 1000s
+\end{lstlisting}
 
 \section{Funktionsweise mit Beispielanwendungen}
 

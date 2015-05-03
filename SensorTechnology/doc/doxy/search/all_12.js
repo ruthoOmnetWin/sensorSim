@@ -12,7 +12,7 @@ var searchData=
   ['unsubscribedfrom',['unsubscribedFrom',['/home/rutho/BA/omnetpp-4.5//doc/api/classcIListener.html#aed6bcb832fdd406626fe05f8e4462a30',1,'cIListener::unsubscribedFrom()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcResultListener.html#affae4d47fe5f4cfabf829cd4018f6666',1,'cResultListener::unsubscribedFrom()']]],
   ['unsupportedtype',['unsupportedType',['/home/rutho/BA/omnetpp-4.5//doc/api/classcListener.html#aca76bf4645ed9403d878c636b3fb1fc2',1,'cListener']]],
   ['updatedisplay',['updateDisplay',['../classStatisticsInterface.html#a72197f87748af10d75ac70caddb2712e',1,'StatisticsInterface::updateDisplay()'],['../classCustomWorldUtility.html#a709aaca388e19d04a3fb4f165d0ceceb',1,'CustomWorldUtility::updateDisplay()']]],
-  ['updateentry',['updateEntry',['../classAbstractMemory.html#a9c9c9a5f02ce26ca5ef8c8633a113797',1,'AbstractMemory']]],
+  ['updateentry',['updateEntry',['../classMemory.html#a300741202bc10a8ebc257dde773bc0a2',1,'Memory']]],
   ['updatewith',['updateWith',['/home/rutho/BA/omnetpp-4.5//doc/api/classcDisplayString.html#aab21a409db377deb6bd1ddc631aaac98',1,'cDisplayString::updateWith(const cDisplayString &amp;ds)'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcDisplayString.html#a3052bd34b6fe1682b909d11b37aecc0d',1,'cDisplayString::updateWith(const char *s)']]],
   ['usesactivity',['usesActivity',['/home/rutho/BA/omnetpp-4.5//doc/api/classcSimpleModule.html#acd1545693d0f3bdd452e2aa5cbe6ebcb',1,'cSimpleModule']]]
 ];
