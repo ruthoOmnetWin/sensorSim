@@ -4,15 +4,14 @@ Im folgenden werden die verwendeten Technologien betrachtet. Als Versionsverwalt
 
 \section{Evaluation von Systemen}
 
-Im Entwicklungsprozess eines jeden Systems müssen neue Teile oder Module evaluiert werden. Für das Testen gibt es verschiedene Möglichkeiten, die einem zur Verfügung stehen. Im frühen Stadium der Entwicklung bietet das Abschätzen ohne Implementierung und daher ohne zu messen eine kostengünstige Variante zum Bestimmen von Designparametern. Allerdings sind diese Ergebnisse oftmals sehr grob und es lässt sich auch nicht jeder Wert so einfach bestimmen. \newline
-Es ist daher notwendig genauere Tests durchzuführen. Wenn man ein komplett implementiertes und produziertes System anschließend testen möchte kann das sehr teuer werden, sollten viele Fehler auftreten oder wenn man merkt, dass die Implementierung wohl doch nicht die Optimale für ein gewünschtes Ziel ist. \newline
+Im Entwicklungsprozess eines jeden Systems müssen neue Teile oder Module evaluiert werden. Für das Testen gibt es verschiedene Möglichkeiten, die einem zur Verfügung stehen. Im frühen Stadium der Entwicklung bietet das Abschätzen von gewissen Parametern eine kostengünstige Variante zum Bestimmen von Designparametern. Das kann noch vor einer ersten Implementierung und daher auch ohne Messungen durchgeführt werden. Allerdings sind diese Ergebnisse oftmals sehr grob und es lässt sich auch nicht jeder Wert so einfach bestimmen. \newline
+Es ist daher notwendig genauere Tests durchzuführen. Wenn man ein komplett implementiertes und produziertes System anschließend testen möchte kann das sehr teuer werden, sollten viele Fehler auftreten oder schlimmer, wenn man zum Beispiel merkt, dass das gewählt Modell das gewünschte Ziel nicht befriedigend erfüllen kann und daher viel bisherige Arbeit verworfen werden müsste. \newline
 Man kann diesen Problemen zuvor kommen, indem man noch vor der ersten Implementierung eines Systems Simulationen und Emulationen erstellt und Prototypen anfertigt. Das senkt die Kosten mitunter erheblich und es lassen sich beinahe alle Parameter des zukünftigen Produkts überprüfen, auch wenn es das Testen des fertigen Produkts nicht komplett ersetzen kann.
-
-\todo{überarbeiten}
 
 \paragraph{Simulation}
 
-Eine Simulation ist ein Modell eines Systems, welches dieses passend abbildet. Mit diesem Modell kann herausgefunden werden, was im realen System später umsetzbar ist. Der Zustand eines solchen Modells ändert sich im Laufe der (Simulations-)Zeit. Daher führt das Modell Zustandsübergange durch, welche als Events bezeichnet werden. Man kann Systeme nach den Zeitpunkten an denen Zustandswechsel möglich sind, in analoge und diskrete unterteilen. Wie der Name vermuten lässt können im analogen Fall zu jeder Zeit Zustandsübergänge stattfinden, im diskreten dagegen nur zu bestimmten Zeitpunkten.
+Eine Simulation ist ein Modell eines Systems, welches dieses passend abbildet. Mit diesem Modell kann herausgefunden werden, was im realen System später umsetzbar ist. Der Zustand eines solchen Modells ändert sich im Laufe der (Simulations-)Zeit. Daher führt das Modell Zustandsübergange durch, welche als Events bezeichnet werden. Man kann Systeme nach den Zeitpunkten an denen Zustandswechsel möglich sind, in analoge und diskrete unterteilen. Wie der Name vermuten lässt können im analogen Fall zu jeder Zeit Zustandsübergänge stattfinden, im diskreten dagegen nur zu bestimmten Zeitpunkten.\\
+Eine Simulation eignet sich zu jedem Zeitpunkt des Produktentwurfs sehr gut. Große Vorteile sind, dass auf diese Weise schon sehr früh getestet werden kann und sich Simulationen sehr kostengünstig erstellen lassen, da keine besondere Hardware notwendig ist.
 
 \paragraph{Emulationen}
 
@@ -20,23 +19,26 @@ Eine Emulation ist die Implementierung eines Systems, welche den kompletten Funk
 
 \paragraph{(Rapid) Prototyping}
 
-Ein Prototyp ist ebenfalls eine Implementierung eines Systems, die den kompletten Funktionsumfang des Entwurfs abdeckt, allerdings geringere Anforderungen and Timing, Größe und Kosten stellt. Prototypen zum Beispiel oftmals wesentlich größer als das Endprodukt. Wenn er alle sonstigen Anforderungen zur Genüge erfüllt, so kann er in das finale Design umgewandelt werden und verliert bei diesem Prozess alle Grenzen des Prototyps. Im Gegensatz zur Emulation kommt eine heterogene Hardwareplattform zum Einsatz. So können etwa fertige Prozessoren, Speicher, weiterhin FPGAs oder spezielle Chips wie ein ASIC zum Einsatz kommen.
+Ein Prototyp ist ebenfalls eine Implementierung eines Systems, die den kompletten Funktionsumfang des Entwurfs abdeckt, allerdings geringere Anforderungen and Timing, Größe und Kosten stellt. Prototypen sind zum Beispiel oftmals wesentlich größer als das Endprodukt. Wenn er alle sonstigen Anforderungen zur Genüge erfüllt, so kann er in das finale Design umgewandelt werden und verliert bei diesem Prozess alle Grenzen des Prototyps. Im Gegensatz zur Emulation kommt eine heterogene Hardwareplattform zum Einsatz. So können etwa fertige Prozessoren, Speicher, weiterhin FPGAs oder spezielle Chips wie ein ASIC zum Einsatz kommen.
 
 \endgraf
 
-Für die Arbeit ist die Entscheidung auf eine Simulation gefallen. Man kann sich dabei auf die wesentlichen Funktionen konzentrieren und grundsätzliche Überlegungen über die genaue Umsetzung von gewissen Bauteilen zunächst außer Acht lassen. Ein Modell muss stets nur so genau spezifiziert werden wie nötig und so gut wie nie mit der Komplexität der Realität übereinstimmen. \newline
-Der Fokus der Arbeit liegt daher auch auf dem Verwalten von Umweltparametern, der Erfassung dieser durch Sensoren auf vielen verschiedenen Sensorknoten und nicht darauf, wie die einzelnen Bauteile technisch aufgebaut sein könnten oder sollten. 
+Für die Arbeit ist die Entscheidung auf eine Simulation gefallen. Man kann sich dabei auf die wesentlichen Funktionen konzentrieren und grundsätzliche Überlegungen über die genaue Umsetzung von gewissen Bauteilen zunächst außer Acht lassen. So ist die genaue Implementierung der einzelnen Komponenten des Sensors für diese Arbeit beispielsweise nicht so relevant, da eher das gesamte Verhalten der Sensorknoten und deren Energiemanagement von Bedeutung sind. Ein Modell muss stets nur so genau spezifiziert werden wie nötig und so gut wie nie mit der Komplexität der Realität übereinstimmen. \newline
+Der Fokus der Arbeit liegt daher auch auf dem Verwalten von Umweltparametern, der Erfassung dieser durch Sensoren auf vielen verschiedenen Sensorknoten. Wie genau die einzelnen Bauteile technisch aufgebaut sind ist für die theoretische Betrachtung natürlich von Bedeutung, soll jedoch nicht bis ins kleinste Detail simuliert werden.
 
 \section{Sensoren}
 
 Den Hauptgegenstand in der Simulation bilden Sensoren, welche auf Sensorknoten angebracht sind. Ein solcher Knoten kann dann wiederum ein oder mehrere Sensoren besitzen.\newline
 Sensoren sind das technische Gegenstück zu den menschlichen Sinnen, denn sie können physikalische oder chemische Eigenschaften wahrnehmen. Dabei arbeiten Sensoren allerdings noch wesentlich genauer, denn es lassen sich Messgrößen quantitativ exakt bestimmen.\newline
 
-\todo{allgemeines Modell Sensor}
+\begin{figure}[htbp]
+\centering
+\caption{Abstraktes Sensor Modell}
+\label{fig:AbstraktesSensorModell}
+\includegraphics[height=0.7\textheight]{AbstraktesSensorModell}
+\end{figure}
 
-
-
-Allgemein ist ein Sensor wie in Abbildung \ref{fig:fff} aufgebaut. Die SensingUnit, zu deutsch Aufnehmer, ist dabei das Herzstück, denn es ist das Bauteil, in dem der gesuchte Wert aus der Umgebung aufgenommen wird. Je nach Sensor ist dieser Wert jedoch nicht direkt interpretierbar. Das Signal wird daher zunächst aufbereitet. Zum einen kann das bedeuten, falls der Messimpuls nur sehr kurz war, diesen zu verlängern, sodass folgende Bauteile verwertbare Eingaben bekommen können. Zum anderen kann es nötig sein, dass ein analoges in ein digitales Signal umgewandelt werden muss. Diese Aufgaben werden durch Signalformer und Signalwandler übernommen.\newline
+Allgemein ist ein Sensor wie in Abbildung \ref{fig:AbstraktesSensorModell} aufgebaut. Die SensingUnit, zu deutsch Aufnehmer, ist dabei das Herzstück, denn es ist das Bauteil, in dem der gesuchte Wert aus der Umgebung aufgenommen wird. Je nach Sensor ist dieser Wert jedoch nicht direkt interpretierbar. Das Signal wird daher zunächst aufbereitet. Zum einen kann das bedeuten, falls der Messimpuls nur sehr kurz war, diesen zu verlängern, sodass folgende Bauteile verwertbare Eingaben bekommen können. Zum anderen kann es nötig sein, dass ein analoges in ein digitales Signal umgewandelt werden muss. Diese Aufgaben werden durch Signalformer und Signalwandler übernommen.\newline
 Zuletzt muss das Signal noch durch einen Messumformer aus einem bloßen digitalen Wert ohne direkte Bedeutung in einen Messwert in der benötigten Messeinheit umgewandelt werden. Dieser Wert kann dann über eine Schnittstelle nach außen gegeben werden und von anderen Teilen auf einem Sensorknoten verarbeitet werden.
 
 \subsection{Beispiele für Sensoren}
@@ -89,9 +91,9 @@ Um aber mit den Messwerten etwas anfangen zu können, sind auch andere Bauteile 
 
 \begin{figure}[htbp]
 \centering
-\caption{Sensorknoten}
+\caption{Abstraktes Sensornoten Modell}
 \label{fig:sensornode}
-\includegraphics[width=\textwidth]{SensorNode}
+\includegraphics[width=\textwidth]{AbstraktesSensorknotenModell}
 \end{figure}
 
 \section{Sensornetzwerke}

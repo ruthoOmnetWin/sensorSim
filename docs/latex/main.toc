@@ -3,83 +3,83 @@
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Vorbetrachtungen}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Evaluation von Systemen}{3}{section.2.1}
-\contentsline {paragraph}{\nonumberline Simulation}{3}{section*.6}
-\contentsline {paragraph}{\nonumberline Emulationen}{4}{section*.7}
-\contentsline {paragraph}{\nonumberline (Rapid) Prototyping}{4}{section*.8}
+\contentsline {paragraph}{\nonumberline Simulation}{3}{section*.5}
+\contentsline {paragraph}{\nonumberline Emulationen}{4}{section*.6}
+\contentsline {paragraph}{\nonumberline (Rapid) Prototyping}{4}{section*.7}
 \contentsline {section}{\numberline {2.2}Sensoren}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Beispiele f\IeC {\"u}r Sensoren}{5}{subsection.2.2.1}
-\contentsline {paragraph}{\nonumberline Temperatur}{5}{section*.10}
-\contentsline {paragraph}{\nonumberline Helligkeit}{5}{section*.11}
-\contentsline {paragraph}{\nonumberline Luftdruck}{7}{section*.12}
-\contentsline {paragraph}{\nonumberline Luftfeuchtigkeit}{7}{section*.13}
-\contentsline {section}{\numberline {2.3}Sensorknoten}{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}Sensornetzwerke}{9}{section.2.4}
-\contentsline {chapter}{\numberline {3}Simulationsumgebung}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}wichtige Simulationsumgebungen}{11}{section.3.1}
-\contentsline {paragraph}{\nonumberline Simulation Library (IKR SimLib)\cite {ikr}}{11}{section*.14}
-\contentsline {paragraph}{\nonumberline openWNS\cite {openwns}}{12}{section*.15}
-\contentsline {paragraph}{\nonumberline NS-3\cite {ns3}}{12}{section*.16}
-\contentsline {paragraph}{\nonumberline Simanet\cite {simanet}}{12}{section*.18}
-\contentsline {paragraph}{\nonumberline Omnet++\cite {omnet}}{12}{section*.20}
-\contentsline {paragraph}{\nonumberline weitere}{13}{section*.21}
-\contentsline {section}{\numberline {3.2}Vergleich}{13}{section.3.2}
-\contentsline {section}{\numberline {3.3}Omnet++}{14}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Einleitung}{14}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}NED language}{15}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Einige Techniken, Funktionen und wichtige Module}{16}{subsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.3.1}Nodes and Messages}{18}{subsubsection.3.3.3.1}
-\contentsline {paragraph}{\nonumberline initialize()}{19}{section*.22}
-\contentsline {paragraph}{\nonumberline handleMessage(cMessage *msg)}{19}{section*.23}
-\contentsline {paragraph}{\nonumberline activity()}{19}{section*.24}
-\contentsline {paragraph}{\nonumberline finish()}{19}{section*.25}
-\contentsline {subsubsection}{\numberline {3.3.3.2}cMessage}{20}{subsubsection.3.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3.3}XML Support}{20}{subsubsection.3.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.3.4}weitere Beispiele}{21}{subsubsection.3.3.3.4}
-\contentsline {paragraph}{\nonumberline cClassDescriptor}{21}{section*.26}
-\contentsline {paragraph}{\nonumberline Simulationszeit und Events}{21}{section*.27}
-\contentsline {paragraph}{\nonumberline cArray}{22}{section*.28}
-\contentsline {section}{\numberline {3.4}MiXiM-Framework als Omnet++-Erweiterung}{23}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Einleitung}{23}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Einige wichtige Module}{23}{subsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.2.1}FindModule}{23}{subsubsection.3.4.2.1}
-\contentsline {subsubsection}{\numberline {3.4.2.2}Coord}{24}{subsubsection.3.4.2.2}
-\contentsline {subsubsection}{\numberline {3.4.2.3}Mobility}{24}{subsubsection.3.4.2.3}
-\contentsline {subsubsection}{\numberline {3.4.2.4}Wireless}{25}{subsubsection.3.4.2.4}
-\contentsline {paragraph}{\nonumberline Host80211}{25}{section*.29}
-\contentsline {chapter}{\numberline {4}Implementierung}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}Einleitung}{27}{section.4.1}
-\contentsline {section}{\numberline {4.2}Aufbau und Struktur}{27}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Klassen\IeC {\"u}bersicht}{27}{subsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.1.1}CustomWorldUtility}{27}{subsubsection.4.2.1.1}
-\contentsline {paragraph}{\nonumberline Einblick in einige Funktionen}{29}{section*.31}
-\contentsline {subsubsection}{\numberline {4.2.1.2}SensorNode}{30}{subsubsection.4.2.1.2}
-\contentsline {subsubsection}{\numberline {4.2.1.3}Sensormodule}{32}{subsubsection.4.2.1.3}
-\contentsline {paragraph}{\nonumberline SensingUnit}{32}{section*.32}
-\contentsline {paragraph}{\nonumberline SignalConditioner}{32}{section*.33}
-\contentsline {paragraph}{\nonumberline SignalConverter}{32}{section*.34}
-\contentsline {paragraph}{\nonumberline Transducer}{32}{section*.35}
-\contentsline {subsubsection}{\numberline {4.2.1.4}Prozessor}{33}{subsubsection.4.2.1.4}
-\contentsline {paragraph}{\nonumberline Sensorsteuerung}{33}{section*.36}
-\contentsline {paragraph}{\nonumberline ProcessorMode}{34}{section*.37}
-\contentsline {paragraph}{\nonumberline Statistiken}{35}{section*.38}
-\contentsline {subsubsection}{\numberline {4.2.1.5}Memory}{35}{subsubsection.4.2.1.5}
-\contentsline {subsubsection}{\numberline {4.2.1.6}BatteryAccess}{37}{subsubsection.4.2.1.6}
-\contentsline {subsubsection}{\numberline {4.2.1.7}SimpleSensorData}{37}{subsubsection.4.2.1.7}
-\contentsline {subsubsection}{\numberline {4.2.1.8}ExtendedMessage}{38}{subsubsection.4.2.1.8}
-\contentsline {subsubsection}{\numberline {4.2.1.9}StatisticsInterface}{38}{subsubsection.4.2.1.9}
-\contentsline {subsection}{\numberline {4.2.2}\IeC {\"U}bersicht NED-Module}{39}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Simple Module}{40}{subsubsection.4.2.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2.2}CustomWorldUtility}{41}{subsubsection.4.2.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.3}Sensormodule}{41}{subsubsection.4.2.2.3}
-\contentsline {subsubsection}{\numberline {4.2.2.4}Prozessor}{42}{subsubsection.4.2.2.4}
-\contentsline {subsubsection}{\numberline {4.2.2.5}Memory}{42}{subsubsection.4.2.2.5}
-\contentsline {subsubsection}{\numberline {4.2.2.6}Compound Module}{42}{subsubsection.4.2.2.6}
-\contentsline {subsubsection}{\numberline {4.2.2.7}Sensoren}{43}{subsubsection.4.2.2.7}
-\contentsline {subsubsection}{\numberline {4.2.2.8}SensorNode}{44}{subsubsection.4.2.2.8}
-\contentsline {subsubsection}{\numberline {4.2.2.9}Messages und Channels}{47}{subsubsection.4.2.2.9}
-\contentsline {subsubsection}{\numberline {4.2.2.10}ExtendedMessage}{47}{subsubsection.4.2.2.10}
-\contentsline {subsubsection}{\numberline {4.2.2.11}DatarateChannel}{47}{subsubsection.4.2.2.11}
-\contentsline {subsubsection}{\numberline {4.2.2.12}omnetpp.ini}{48}{subsubsection.4.2.2.12}
-\contentsline {section}{\numberline {4.3}Funktionsweise mit Beispielanwendungen}{49}{section.4.3}
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{51}{chapter.5}
-\contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{53}{chapter*.40}
+\contentsline {subsection}{\numberline {2.2.1}Beispiele f\IeC {\"u}r Sensoren}{6}{subsection.2.2.1}
+\contentsline {paragraph}{\nonumberline Temperatur}{6}{section*.8}
+\contentsline {paragraph}{\nonumberline Helligkeit}{6}{section*.9}
+\contentsline {paragraph}{\nonumberline Luftdruck}{8}{section*.10}
+\contentsline {paragraph}{\nonumberline Luftfeuchtigkeit}{8}{section*.11}
+\contentsline {section}{\numberline {2.3}Sensorknoten}{8}{section.2.3}
+\contentsline {section}{\numberline {2.4}Sensornetzwerke}{10}{section.2.4}
+\contentsline {chapter}{\numberline {3}Simulationsumgebung}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}wichtige Simulationsumgebungen}{13}{section.3.1}
+\contentsline {paragraph}{\nonumberline Simulation Library (IKR SimLib)\cite {ikr}}{13}{section*.12}
+\contentsline {paragraph}{\nonumberline openWNS\cite {openwns}}{14}{section*.13}
+\contentsline {paragraph}{\nonumberline NS-3\cite {ns3}}{14}{section*.14}
+\contentsline {paragraph}{\nonumberline Simanet\cite {simanet}}{14}{section*.15}
+\contentsline {paragraph}{\nonumberline Omnet++\cite {omnet}}{15}{section*.16}
+\contentsline {paragraph}{\nonumberline weitere}{15}{section*.17}
+\contentsline {section}{\numberline {3.2}Vergleich}{15}{section.3.2}
+\contentsline {section}{\numberline {3.3}Omnet++}{16}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Einleitung}{16}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}NED language}{17}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Einige Techniken, Funktionen und wichtige Module}{20}{subsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.1}Nodes and Messages}{21}{subsubsection.3.3.3.1}
+\contentsline {paragraph}{\nonumberline initialize()}{21}{section*.18}
+\contentsline {paragraph}{\nonumberline handleMessage(cMessage *msg)}{21}{section*.19}
+\contentsline {paragraph}{\nonumberline activity()}{22}{section*.20}
+\contentsline {paragraph}{\nonumberline finish()}{22}{section*.21}
+\contentsline {subsubsection}{\numberline {3.3.3.2}cMessage}{22}{subsubsection.3.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3.3}XML Support}{23}{subsubsection.3.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.4}weitere Beispiele}{24}{subsubsection.3.3.3.4}
+\contentsline {paragraph}{\nonumberline cClassDescriptor}{24}{section*.22}
+\contentsline {paragraph}{\nonumberline Simulationszeit und Events}{24}{section*.23}
+\contentsline {paragraph}{\nonumberline cArray}{25}{section*.24}
+\contentsline {section}{\numberline {3.4}MiXiM-Framework als Omnet++-Erweiterung}{26}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Einleitung}{26}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Einige wichtige Module}{26}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}FindModule}{26}{subsubsection.3.4.2.1}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Coord}{27}{subsubsection.3.4.2.2}
+\contentsline {subsubsection}{\numberline {3.4.2.3}Mobility}{27}{subsubsection.3.4.2.3}
+\contentsline {subsubsection}{\numberline {3.4.2.4}Wireless}{28}{subsubsection.3.4.2.4}
+\contentsline {paragraph}{\nonumberline Host80211}{28}{section*.25}
+\contentsline {chapter}{\numberline {4}Implementierung}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Einleitung}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}Aufbau und Struktur}{29}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Klassen\IeC {\"u}bersicht}{29}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1.1}CustomWorldUtility}{29}{subsubsection.4.2.1.1}
+\contentsline {paragraph}{\nonumberline Einblick in einige Funktionen}{31}{section*.27}
+\contentsline {subsubsection}{\numberline {4.2.1.2}SensorNode}{32}{subsubsection.4.2.1.2}
+\contentsline {subsubsection}{\numberline {4.2.1.3}Sensormodule}{34}{subsubsection.4.2.1.3}
+\contentsline {paragraph}{\nonumberline SensingUnit}{34}{section*.28}
+\contentsline {paragraph}{\nonumberline SignalConditioner}{34}{section*.29}
+\contentsline {paragraph}{\nonumberline SignalConverter}{34}{section*.30}
+\contentsline {paragraph}{\nonumberline Transducer}{34}{section*.31}
+\contentsline {subsubsection}{\numberline {4.2.1.4}Prozessor}{35}{subsubsection.4.2.1.4}
+\contentsline {paragraph}{\nonumberline Sensorsteuerung}{35}{section*.32}
+\contentsline {paragraph}{\nonumberline ProcessorMode}{36}{section*.33}
+\contentsline {paragraph}{\nonumberline Statistiken}{37}{section*.34}
+\contentsline {subsubsection}{\numberline {4.2.1.5}Memory}{38}{subsubsection.4.2.1.5}
+\contentsline {subsubsection}{\numberline {4.2.1.6}BatteryAccess}{39}{subsubsection.4.2.1.6}
+\contentsline {subsubsection}{\numberline {4.2.1.7}SimpleSensorData}{40}{subsubsection.4.2.1.7}
+\contentsline {subsubsection}{\numberline {4.2.1.8}ExtendedMessage}{41}{subsubsection.4.2.1.8}
+\contentsline {subsubsection}{\numberline {4.2.1.9}StatisticsInterface}{42}{subsubsection.4.2.1.9}
+\contentsline {subsection}{\numberline {4.2.2}\IeC {\"U}bersicht NED-Module}{42}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Simple Module}{43}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}CustomWorldUtility}{43}{subsubsection.4.2.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.3}Sensormodule}{44}{subsubsection.4.2.2.3}
+\contentsline {subsubsection}{\numberline {4.2.2.4}Prozessor}{44}{subsubsection.4.2.2.4}
+\contentsline {subsubsection}{\numberline {4.2.2.5}Memory}{45}{subsubsection.4.2.2.5}
+\contentsline {subsubsection}{\numberline {4.2.2.6}Compound Module}{45}{subsubsection.4.2.2.6}
+\contentsline {subsubsection}{\numberline {4.2.2.7}Sensoren}{45}{subsubsection.4.2.2.7}
+\contentsline {subsubsection}{\numberline {4.2.2.8}SensorNode}{47}{subsubsection.4.2.2.8}
+\contentsline {subsubsection}{\numberline {4.2.2.9}Messages und Channels}{49}{subsubsection.4.2.2.9}
+\contentsline {subsubsection}{\numberline {4.2.2.10}ExtendedMessage}{50}{subsubsection.4.2.2.10}
+\contentsline {subsubsection}{\numberline {4.2.2.11}DatarateChannel}{50}{subsubsection.4.2.2.11}
+\contentsline {subsubsection}{\numberline {4.2.2.12}omnetpp.ini}{50}{subsubsection.4.2.2.12}
+\contentsline {section}{\numberline {4.3}Funktionsweise mit Beispielanwendungen}{51}{section.4.3}
+\contentsline {chapter}{\numberline {5}Zusammenfassung}{53}{chapter.5}
+\contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{55}{chapter*.36}

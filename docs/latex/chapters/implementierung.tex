@@ -233,6 +233,16 @@ void Processor::doCollectStatistics()
     residualAbsVector.record(residualAbs);
 }
 \end{lstlisting}
+
+Mit Abbildung \ref{fig:switchingModes5000} ist ein Beispiel gegeben, bei dem alle 3 Events in Verwendung waren. Dabei ist natürlich von der Sensorsteuerung nicht viel zu sehen. Alle 5000 Sekunden wurde hierbei der Modus gewechselt, beginnend bei dem normalen Modus, danach einem Energie sparenden Modus und zuletzt einem Modus mit sehr hohem Energieverbrauch. Danach wieder beginnend von vorn. Dabei wurde alle 1000 Sekunden der Ladezustand abgefragt. Diese Operationen wurden auf 3 verschiedenen Sensorknoten parallel durchgeführt. Man kann sehr gut sehen, dass der blaue Verlauf besonders schnell nach unten geht. Das liegt daran, dass dort ein Knoten mit 4 Sensoren genutzt wurde. Der Grüne dagegen konnte deutlich länger am Leben bleiben, weil dieser Knoten keinen Sensor besaß. Der Energieverbrauch aller Bauteile war bei allen 3 Sensorknoten analog.
+
+\begin{figure}[htbp]
+\centering
+\caption{Beispielstatisik Relativer Batterieladezustand}
+\label{fig:switchingModes5000}
+\includegraphics[width=\textwidth]{switchingModes5000}
+\end{figure}
+
 \subsubsection{Memory}
 
 Der Speicher besitzt arrays für einen key-value-Speicher und implementiert zur Benutzung dieses Speichers die CRUD-Operationen, wie in Listing \ref{lst:CRUD} zu sehen ist.

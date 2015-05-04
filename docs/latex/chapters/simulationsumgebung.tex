@@ -28,11 +28,16 @@ Ein weiterer großer Nachteil ist, dass es keine Oberfläche während der Ausfü
 
 \paragraph{Simanet\cite{simanet}}
 
-\todo{simanet beschreiben}
+Simanet ist ein Projekt, welches an der TU Chemnitz enstanden ist. Es eignet sich sehr gut für das Simulieren von Funkkommunikation und daher zum Testen von Routingverfahren.\\
+Im Vergleich zu anderen Simulatoren wie Omnet++ oder ns-3 ist Simanet sehr leichtgewichtig und eignet sich daher hervorragend für sehr große Simulationen.\\
+Es gibt zahlreiche vorhandenen Module, die wichtige Funkstandards wie WLAN oder ZigBee, Energiemodelle, Lokalisierung und auch Visualisierung und Auswertung abdecken.
 
 \paragraph{Omnet++\cite{omnet}}
 
-\todo{omnet kurzbeschreibung(mixim)}
+Omnet++ ist ein Framework für die Simulation von Netzwerken, welches unter der ACADEMIC PUBLIC LICENSE steht. Die Nutzung ist daher kostenfrei und der Quellcode ist offen und darf verändert werden.\\
+Es bietet eine angepasste IDE, welche die Besonderheiten der NED-Sprache und auch den C++-Code interpretieren kann.\\Die Simulation selbst bietet ein grafisches Interface und auch für die Auswertung von statistischen Daten stehen grafische Hilfsmittel innerhalb der IDE bereit.\\
+Der größte Vorteil von Omnet++ ist die Möglichkeit, Code auf dem Application Layer der Sensorknoten ausführen zu können, was bei vielen andern Simulatoren nicht möglich ist.\\
+Funkkommunikation ist standardmäßig in Omnet++ zwar nicht möglich, aber durch das MiXiM-Framework wird diese implementiert.
 
 \paragraph{weitere}
 
@@ -278,6 +283,10 @@ for (int i = 0; i < amountRows; i++){
 \end{lstlisting}
 \end{minipage}
 
+\subsubsection{Statistiken}
+
+\todo{statistiken beispiel}
+
 \subsubsection{weitere Beispiele}
 
 \paragraph{cClassDescriptor} Eine Klasse die dabei behilflich ist die Felder eines Objektes zu finden. Dazu muss eine Klasse lediglich von cClassDescriptor erben. Die Verwendung funktioniert wie im Listing \ref{lst:cclassdescriptor} beschrieben.
@@ -393,11 +402,6 @@ IEEE 802.11
 Norm für Funknetzwerke
 
 \todo{Ergänzen}
-
-
-
-
-
 
 
 

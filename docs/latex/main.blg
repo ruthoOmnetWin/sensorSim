@@ -4,7 +4,6 @@ The top-level auxiliary file: main.aux
 A level-1 auxiliary file: meta/metadaten.aux
 The style file: gerplain.bst
 Database file #1: bib/literatur.bib
-Warning--I didn't find a database entry for "simanet"
 Warning--to sort, need author or key in omnet
 Warning--to sort, need author or key in git
 Warning--to sort, need author or key in github
@@ -69,45 +68,45 @@ Warning--empty booktitle in hsc
 Warning--empty year in hsc
 Warning--empty booktitle in ikr
 Warning--empty year in ikr
-You've used 18 entries,
+You've used 19 entries,
             2343 wiz_defined-function locations,
-            604 strings with 6983 characters,
-and the built_in function-call counts, 4036 in all, are:
-= -- 333
-> -- 48
+            611 strings with 7120 characters,
+and the built_in function-call counts, 4326 in all, are:
+= -- 364
+> -- 55
 < -- 0
-+ -- 29
-- -- 10
-* -- 296
-:= -- 497
-add.period$ -- 36
-call.type$ -- 18
-change.case$ -- 41
++ -- 32
+- -- 12
+* -- 318
+:= -- 544
+add.period$ -- 38
+call.type$ -- 19
+change.case$ -- 44
 chr.to.int$ -- 0
-cite$ -- 82
-duplicate$ -- 257
-empty$ -- 524
-format.name$ -- 10
-if$ -- 941
+cite$ -- 83
+duplicate$ -- 269
+empty$ -- 551
+format.name$ -- 12
+if$ -- 1007
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 18
-newline$ -- 75
-num.names$ -- 8
-pop$ -- 181
+int.to.str$ -- 19
+missing$ -- 20
+newline$ -- 79
+num.names$ -- 10
+pop$ -- 183
 preamble$ -- 1
-purify$ -- 41
+purify$ -- 44
 quote$ -- 0
-skip$ -- 144
+skip$ -- 154
 stack$ -- 0
-substring$ -- 91
-swap$ -- 41
+substring$ -- 111
+swap$ -- 43
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 76
 warning$ -- 64
-while$ -- 8
-width$ -- 20
-write$ -- 132
-(There were 65 warnings)
+while$ -- 11
+width$ -- 21
+write$ -- 142
+(There were 64 warnings)

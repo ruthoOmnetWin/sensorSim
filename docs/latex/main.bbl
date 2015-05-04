@@ -96,4 +96,9 @@
 \newblock Online unter \url{http://www.ikr.uni-stuttgart.de/IKRSimLib/};
   zuletzt besucht am 04. Mai 2014.
 
+\bibitem{simanet}
+{\sc Vodel, Matthias}: {\em SimANet - A Large Scalable, Distributed Simulation
+  Framework for Ambient Networks}.
+\newblock JOURNAL OF COMMUNICATIONS, 3(7):11--19, 2008.
+
 \end{thebibliography}
