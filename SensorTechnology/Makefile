@@ -69,7 +69,6 @@ OBJS = \
     $O/src/SensorNode/BatteryAccess.o \
     $O/src/SensorNode/SensorNode.o \
     $O/src/SensorNode/Memory/Memory.o \
-    $O/src/SensorNode/Processor/ProcessorAccess.o \
     $O/src/SensorNode/Processor/Processor.o \
     $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o \
     $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o \
@@ -239,17 +238,6 @@ $O/src/SensorNode/Processor/Processor.o: src/SensorNode/Processor/Processor.cc \
 	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/Processor/Processor.h \
 	src/SensorNode/SensorNode.h
-$O/src/SensorNode/Processor/ProcessorAccess.o: src/SensorNode/Processor/ProcessorAccess.cc \
-	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
-	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
-	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
-	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
-	$(MIXIM_PROJ)/src/base/utils/HostState.h \
-	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
-	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	src/SensorNode/BatteryAccess.h \
-	src/SensorNode/Processor/Processor.h \
-	src/SensorNode/Processor/ProcessorAccess.h
 $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
