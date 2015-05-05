@@ -15,14 +15,15 @@ network SensorTechnology extends BaseNetwork
         @display("bgi=maps/germany");
         
     submodules: 
-        SensorNode[numHosts/3]: SensorNode {
+        SensorNode[1]: SensorNode {
             numHosts = numHosts;
         }
-        TempNode[numHosts/3]: SensorNode {
+        TempNode[2]: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
         }
-        AllNode[numHosts/3]: SensorNode {
+        
+        AllNode[0]: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
             hasPressureSensor = true;

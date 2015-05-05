@@ -19,6 +19,7 @@
 #include <omnetpp.h>
 #include <string.h>
 #include "BatteryAccess.h"
+#include <vector>
 
 #define sensing 0
 #define shiftProcessorMode 1
@@ -50,12 +51,19 @@ protected:
     //consumption for the different modes
     double currentOverTimeNormal;
     double energiePerOperationNormal;
+    double peripheryNormalRatio;
 
     double currentOverTimePowerSaving;
     double energiePerOperationPowerSaving;
+    double peripheryPowerSavingRatio;
 
     double currentOverTimeHighPerformance;
     double energiePerOperationHighPerformance;
+    double peripheryHighPerformanceRatio;
+
+    int numDevices;
+    std::vector<cModule*> periphery;
+    void setPeriphery();
 
     enum MODES {
         NORMAL = 0,

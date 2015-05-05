@@ -57,7 +57,17 @@ void BatteryAccess::handleHostState(const HostState &state)
 }
 
 void BatteryAccess::draw() {
-    drawEnergy(energiePerOperation, 0);
+    this->drawEnergy(energiePerOperation, 0);
+}
+
+void BatteryAccess::changeDrawCurrent(double cur, int acc)
+{
+    this->drawCurrent(cur, acc);
+}
+
+void BatteryAccess::changeEnergyConsumption(float energy)
+{
+    energiePerOperation = energy;
 }
 
 void BatteryAccess::finish() {

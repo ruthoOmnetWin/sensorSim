@@ -38,6 +38,8 @@ public:
     virtual ~BatteryAccess();
     void initialize(int stage);
     void draw();
+    void changeDrawCurrent(double cur, int acc);
+    void changeEnergyConsumption(float);
     void finish();
     virtual void handleHostState(const HostState &state);
 };

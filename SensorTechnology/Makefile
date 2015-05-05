@@ -70,6 +70,7 @@ OBJS = \
     $O/src/SensorNode/SensorNode.o \
     $O/src/SensorNode/Memory/Memory.o \
     $O/src/SensorNode/Processor/Processor.o \
+    $O/src/SensorNode/Sensor/AbstractSensor.o \
     $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o \
     $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o \
     $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o \
@@ -238,6 +239,8 @@ $O/src/SensorNode/Processor/Processor.o: src/SensorNode/Processor/Processor.cc \
 	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/Processor/Processor.h \
 	src/SensorNode/SensorNode.h
+$O/src/SensorNode/Sensor/AbstractSensor.o: src/SensorNode/Sensor/AbstractSensor.cc \
+	src/SensorNode/Sensor/AbstractSensor.h
 $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \

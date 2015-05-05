@@ -14,7 +14,10 @@
 // 
 
 #include <Processor.h>
+#include <FindModule.h>
+
 #include "SensorNode.h"
+#include "BatteryAccess.h"
 
 Processor::Processor() {
     sensingIntervall = 0;
@@ -63,6 +66,10 @@ void Processor::initialize(int stage)
 
         currentOverTimeHighPerformance = par("currentConsumptionHighPerformance").doubleValue();
         energiePerOperationHighPerformance = par("energyConsumptionHighPerformance").doubleValue();
+
+        peripheryNormalRatio  = getParentModule()->par("normalRatio").doubleValue();
+        peripheryPowerSavingRatio = getParentModule()->par("powerSavingRatio").doubleValue();
+        peripheryHighPerformanceRatio = getParentModule()->par("highPerformanceRatio").doubleValue();
 
         switchProcessorMode();
         // <- register with the battery
@@ -119,6 +126,7 @@ void Processor::handleMessage(cMessage *msg)
         if (name == "shiftMode") {
             schedulePeriodicSelfMessage(msg, shiftProcessorMode);
             activatedMode++;
+            setPeriphery();
             switchProcessorMode();
         }
         if (name == "collectStatistics") {
@@ -244,12 +252,13 @@ void Processor::switchProcessorMode(MODES mode)
 {
     //switch batteries power accounts
     if (mode == POWER_SAVING) {
-        drawCurrent(currentOverTimePowerSaving, 1);
+        activatedMode = 1;
     } else if (mode == NORMAL) {
-        drawCurrent(currentOverTimeNormal, 0);
+        activatedMode = 0;
     } else if (mode == HIGH_PERFORMANCE) {
-        drawCurrent(currentOverTimeHighPerformance, 2);
+        activatedMode = 2;
     }
+    switchProcessorMode();
 }
 
 /**
@@ -257,14 +266,8 @@ void Processor::switchProcessorMode(MODES mode)
  */
 void Processor::switchProcessorMode(int mode)
 {
-    //switch batteries power accounts
-    if (mode == 1) {
-        drawCurrent(currentOverTimePowerSaving, 1);
-    } else if (mode == 0) {
-        drawCurrent(currentOverTimeNormal, 0);
-    } else if (mode == 2) {
-        drawCurrent(currentOverTimeHighPerformance, 2);
-    }
+    activatedMode = mode;
+    switchProcessorMode();
 }
 
 /**
@@ -314,5 +317,33 @@ void Processor::handleHostState(const HostState& state)
         cancelAndDelete(selfMessageMeasure);
         cancelAndDelete(selfMessageShiftMode);
         cancelAndDelete(selfMessageStatistics);
+    }
+}
+
+void Processor::setPeriphery()
+{
+    cModule* sensorNode = getParentModule();
+    numDevices = sensorNode->par("numDevices");
+    cModule* memory = sensorNode->getSubmodule("Memory");
+    periphery.push_back(memory);
+    if (hasTemperatureSensor) {
+        cModule* tSensor = sensorNode->getSubmodule("TemperatureSensor");
+        BatteryAccess* tSensingUnit = (BatteryAccess*) tSensor->getSubmodule("SensingUnit");
+        periphery.push_back(tSensingUnit);
+        BatteryAccess* tSignalConditioner = (BatteryAccess* )tSensor->getSubmodule("SignalConditioner");
+        periphery.push_back(tSignalConditioner);
+        BatteryAccess* tSignalConverter = (BatteryAccess*) tSensor->getSubmodule("SignalConverter");
+        periphery.push_back(tSignalConverter);
+        BatteryAccess* tTransducer = (BatteryAccess*) tSensor->getSubmodule("Transducer");
+        periphery.push_back(tTransducer);
+    }
+    if (hasHumiditySensor) {
+        cModule* hSensor = sensorNode->getSubmodule("HumiditySensor");
+    }
+    if (hasPressureSensor) {
+        cModule* pSensor = sensorNode->getSubmodule("PressureSensor");
+    }
+    if (hasLightSensor) {
+        cModule* lSensor = sensorNode->getSubmodule("LightSensor");
     }
 }
