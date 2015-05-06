@@ -247,7 +247,7 @@ Mit Abbildung \ref{fig:switchingModes5000} ist ein Beispiel gegeben, bei dem all
 
 Der Speicher besitzt arrays für einen key-value-Speicher und implementiert zur Benutzung dieses Speichers die CRUD-Operationen, wie in Listing \ref{lst:CRUD} zu sehen ist.
 
-\begin{lstlisting}[language=C++, label=lst:CRUD]
+\begin{lstlisting}[language=C++, label=lst:CRUD, caption=CRUD-Operationen vom Memory]
 #define error -9999
 const static int storageSize = 4;
 
@@ -304,7 +304,7 @@ Die Klasse BatteryAccess ermöglicht den Modules des Sensors auf die Batterie zu
 So können zum Beispiel direkt Werte für den Energieverbrauch des entsprechenden Moduls hinterlegt werden. Immer wenn nun eine Energieintensive Operation durchgeführt wird, verbraucht die Batterie Energie in Höhe dieses definierten Wertes, indem die Funktion draw() aufgerufen wird. Diese ruft anschließend die Funktion drawEnergie(float) mit dem gespeicherten Wert \textbf{float energiePerOperation} auf.\\
 Die Klasse kümmert sich weiterhin um die Initialisierung und um den Fall, dass die Batterie den leeren Zustand erreicht (handleHostState()).
 
-\begin{lstlisting}[language=C++, label=lst:BatteryAccess]
+\begin{lstlisting}[language=C++, label=lst:BatteryAccess, caption=BatteryAccess]
 class BatteryAccess : public MiximBatteryAccess {
 protected:
     float currentOverTime;
@@ -322,13 +322,17 @@ public:
 
 \subsubsection{SimpleSensorData}
 
+Die Klasse SimpleSensorData dient dazu, die Übertragung von Sensordaten zu ermöglichen. In Omnet++ ist es möglich eine Parameterliste an Nachrichten anzuhängen. Die möglichen Parameter sind dabei eingeschränkt. Um nach dem Einfügen auch wieder auf die Parameter zugreifen zu können, wird cNamedObject als Parameter benötigt. Das ermöglicht beim späteren auslesen des Parameters den Zugriff per string.\\
+Es ist also nicht möglich, die C++-build-in-types direkt anzuhängen. Darum wird die Klasse SimpleSensorData genutzt, um die Integerwerte von Messungen per Nachricht zu übertragen.
+
 \begin{figure}[htbp]
 \centering
 \caption{SimpleClasses: Member}
 \includegraphics{SimpleClasses}
 \end{figure}
 
-\begin{lstlisting}[language=C++, label=lst:SimpleExample]
+\begin{minipage}{\textwidth}
+\begin{lstlisting}[language=C++, label=lst:SimpleExample, caption=Beispiel für Senden und Empfangen mit Parameterliste]
 //im Sender:
 cMessage *msg = new cMessage(msgname);
 SimpleSensorData *data = new SimpleSensorData("Temperature", temp);
@@ -341,7 +345,7 @@ msg->getParList().add(coord);
 //im Empfaenger:  
 SimpleSensorData *data = (SimpleSensorData*) msg->getParList().remove("Temperature");
 \end{lstlisting}
-
+\end{minipage}
 \subsubsection{ExtendedMessage}
 
 ExtendedMessage erbt direkt von der Klasse cMessage, der Standard-Nachrichtenklasse in Omnet++. Im Grunde stellt cMessage alle benötigten Funktionen bereit. ExtendedMessage ist nur aus dem Grund vorhanden, um zusätzliche Statistiken über Nachrichten erstellen zu können, zum Beispiel wie oft eine einzelne Nachricht weitergesendet wurde.
@@ -355,7 +359,7 @@ ExtendedMessage erbt direkt von der Klasse cMessage, der Standard-Nachrichtenkla
 Im Listing \ref{lst:ExtendedMessage} ist zu sehen welche Statistikparameter erhoben werden.
 
 \begin{minipage}{\textwidth}
-\begin{lstlisting}[language=NED, label=lst:ExtendedMessage]
+\begin{lstlisting}[language=NED, label=lst:ExtendedMessage, caption=ExtendedMessage]
 message ExtendedMessage extends cMessage
 {
     int source;
@@ -583,15 +587,6 @@ Nachrichten sind das essentielle Werkzeug, um in einem Netzwerk Kommunikation zu
 
 Die ExtendedMessage erweitert diese Funktionalität um einige Informationen für die Statistik.
 
-\begin{lstlisting}[language=ned,caption={ExtendedMessage},label=lst:ExtendedMessage]
-message ExtendedMessage extends cMessage
-{
-    int source;
-    int destination;
-    int hopCount = 0;    
-}
-\end{lstlisting}
-
 \subsubsection{DatarateChannel}
 
 DatarateChannel ist ein von Omnet++ definiertes Modul. Es kann mit verschiedenen Parametern versehen werden, um dem jeweiligen Umständen angepasst zu werden. Der wichtigste ist dabei der double datarate, welcher in bps angegeben wird und festlegt, mit welcher Rate Daten durch den Channel gesendet werden können. Weiterhin kann auch ein delay und eine bit- beziehungsweise packet-error-rate festgelegt werden.\\
@@ -632,3 +627,5 @@ Die omnetpp.ini ist eine Datei, in der Eigenschaften der Simulation geändert we
 \section{Funktionsweise mit Beispielanwendungen}
 
 All die in diesem Kapitel beschriebenen Module wirken für die Simulation zusammen, um ein Netzwerk aus Sensorknoten zu schaffen, in dem die Knoten miteinander und mit ihrer Umgebung gemeinsam agieren können. Dazu werden nach dem Start der Simulation Umweltparameter bereitgestellt und eine festgelegte Anzahl von verschiedenen Sensorknoten erzeugt. Diese können sich anschließend bewegen oder ihr Position beibehalten. Sie können mit ihren Sensoren Werte der Umgebung erfassen und diese über Funk an andere Sensorknoten übertragen, sollte diese in der näheren Umgebung zur Verfügung stehen.
+
+\todo{beispiele implementieren und beschreiben}
