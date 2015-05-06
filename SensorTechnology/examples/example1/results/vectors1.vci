@@ -1,0 +1,90 @@
+file 160482 1430897227                                          
+version 2
+run General-0-20150506-09:27:03-12156
+attr configname General
+attr datetime 20150506-09:27:03
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network example1
+attr processid 12156
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 3  example1.SensorNode[0].Processor  Voltage  ETV
+vector 4  example1.SensorNode[0].Processor  residualRelative  ETV
+vector 5  example1.SensorNode[0].Processor  residualAbs  ETV
+vector 9  example1.SensorNode[1].Processor  Voltage  ETV
+vector 10  example1.SensorNode[1].Processor  residualRelative  ETV
+vector 11  example1.SensorNode[1].Processor  residualAbs  ETV
+vector 15  example1.SensorNode[2].Processor  Voltage  ETV
+vector 16  example1.SensorNode[2].Processor  residualRelative  ETV
+vector 17  example1.SensorNode[2].Processor  residualAbs  ETV
+vector 21  example1.SensorNode[3].Processor  Voltage  ETV
+vector 22  example1.SensorNode[3].Processor  residualRelative  ETV
+vector 23  example1.SensorNode[3].Processor  residualAbs  ETV
+vector 27  example1.TempNode[0].Processor  Voltage  ETV
+vector 28  example1.TempNode[0].Processor  residualRelative  ETV
+vector 29  example1.TempNode[0].Processor  residualAbs  ETV
+vector 33  example1.TempNode[1].Processor  Voltage  ETV
+vector 34  example1.TempNode[1].Processor  residualRelative  ETV
+vector 35  example1.TempNode[1].Processor  residualAbs  ETV
+vector 39  example1.TempNode[2].Processor  Voltage  ETV
+vector 40  example1.TempNode[2].Processor  residualRelative  ETV
+vector 41  example1.TempNode[2].Processor  residualAbs  ETV
+vector 45  example1.TempNode[3].Processor  Voltage  ETV
+vector 46  example1.TempNode[3].Processor  residualRelative  ETV
+vector 47  example1.TempNode[3].Processor  residualAbs  ETV
+vector 51  example1.AllNode[0].Processor  Voltage  ETV
+vector 52  example1.AllNode[0].Processor  residualRelative  ETV
+vector 53  example1.AllNode[0].Processor  residualAbs  ETV
+vector 57  example1.AllNode[1].Processor  Voltage  ETV
+vector 58  example1.AllNode[1].Processor  residualRelative  ETV
+vector 59  example1.AllNode[1].Processor  residualAbs  ETV
+vector 63  example1.AllNode[2].Processor  Voltage  ETV
+vector 64  example1.AllNode[2].Processor  residualRelative  ETV
+vector 65  example1.AllNode[2].Processor  residualAbs  ETV
+vector 69  example1.AllNode[3].Processor  Voltage  ETV
+vector 70  example1.AllNode[3].Processor  residualRelative  ETV
+vector 71  example1.AllNode[3].Processor  residualAbs  ETV
+3	2546 2058 0 50105 0 120000 129 3 3 387 1161
+4	4604 3932 0 50105 0 120000 129 0.67796759259259 1 108.04509518519 91.585032404648
+5	8536 2860 0 50105 0 120000 129 7322050 10800000 1166887028 1.0682478179678e+16
+9	11396 2058 0 50106 0 120000 129 3 3 387 1161
+10	13454 4061 0 50106 0 120000 129 0.67796759259259 1 108.04509518519 91.585032404648
+11	17515 2989 0 50106 0 120000 129 7322050 10800000 1166887028 1.0682478179678e+16
+15	20504 2187 0 50107 0 120000 129 3 3 387 1161
+16	22691 4061 0 50107 0 120000 129 0.67796759259259 1 108.04509518519 91.585032404648
+17	26752 2989 0 50107 0 120000 129 7322050 10800000 1166887028 1.0682478179678e+16
+21	29741 2187 0 50108 0 120000 129 3 3 387 1161
+22	31928 4061 0 50108 0 120000 129 0.67796759259259 1 108.04509518519 91.585032404648
+23	35989 2989 0 50108 0 120000 129 7322050 10800000 1166887028 1.0682478179678e+16
+27	38978 2991 0 50109 0 120000 177 3 3 531 1593
+28	41969 5581 0 50109 0 120000 177 0.54834259259259 1 136.86747685185 108.75239490567
+29	47550 4077 0 50109 0 120000 177 5922100 10800000 1478168750 1.2684879341798e+16
+33	51627 2991 0 50110 0 120000 177 3 3 531 1593
+34	54618 5581 0 50110 0 120000 177 0.54834259259259 1 136.86747685185 108.75239490567
+35	60199 4077 0 50110 0 120000 177 5922100 10800000 1478168750 1.2684879341798e+16
+39	64276 2991 0 50111 0 120000 177 3 3 531 1593
+40	67267 5581 0 50111 0 120000 177 0.54834259259259 1 136.86747685185 108.75239490567
+41	72848 4077 0 50111 0 120000 177 5922100 10800000 1478168750 1.2684879341798e+16
+45	76925 2991 0 50112 0 120000 177 3 3 531 1593
+46	79916 5581 0 50112 0 120000 177 0.54834259259259 1 136.86747685185 108.75239490567
+47	85497 4077 0 50112 0 120000 177 5922100 10800000 1478168750 1.2684879341798e+16
+51	89574 4173 0 50113 0 120000 249 3 3 747 2241
+52	93747 7858 0 50113 0 120000 249 0.15999537037037 1 146.58984407407 100.34661201243
+53	101605 5696 0 50113 0 120000 249 1727950 10800000 1583170316 1.1704428825129e+16
+57	107301 4173 0 50114 0 120000 249 3 3 747 2241
+58	111474 7858 0 50114 0 120000 249 0.15999537037037 1 146.58984407407 100.34661201243
+59	119332 5696 0 50114 0 120000 249 1727950 10800000 1583170316 1.1704428825129e+16
+63	125028 4173 0 50115 0 120000 249 3 3 747 2241
+64	129201 7858 0 50115 0 120000 249 0.15999537037037 1 146.58984407407 100.34661201243
+65	137059 5696 0 50115 0 120000 249 1727950 10800000 1583170316 1.1704428825129e+16
+69	142755 4173 0 50116 0 120000 249 3 3 747 2241
+70	146928 7858 0 50116 0 120000 249 0.15999537037037 1 146.58984407407 100.34661201243
+71	154786 5696 0 50116 0 120000 249 1727950 10800000 1583170316 1.1704428825129e+16

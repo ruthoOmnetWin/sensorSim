@@ -117,11 +117,13 @@ void Processor::initialize(int stage)
 
 /**
  * proceed incoming messages
+ *
+ * communication is not allowed when the power saving mode is active (except for events)
  */
 void Processor::handleMessage(cMessage *msg)
 {
-    draw();
     std::string name = msg->getName();
+    draw();
     if (msg->isSelfMessage()) {
         if (name == "startSensingUnit") {
             schedulePeriodicSelfMessage(msg, sensing);

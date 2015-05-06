@@ -1,0 +1,35 @@
+package sensortechnology.examples.BasicExample; 
+import sensortechnology.src.SensorNode.Sensor.*;
+import sensortechnology.src.SensorNode.*;
+
+import org.mixim.base.modules.BaseNetwork;
+
+network SensorTechnology extends BaseNetwork
+{
+    parameters:
+        int numHosts = 4 * 3;
+        world.createData = false;
+        
+        cmType = default("org.mixim.base.connectionManager.ConnectionManager");
+        wuType = default("CustomWorldUtility");
+        @display("bgi=maps/germany");
+        
+    submodules: 
+        SensorNode[numHosts/3]: SensorNode {
+            numHosts = numHosts;
+        }
+        TempNode[numHosts/3]: SensorNode {
+            numHosts = numHosts;
+            hasTemperatureSensor = true;
+        }
+        
+        AllNode[numHosts/3]: SensorNode {
+            numHosts = numHosts;
+            hasTemperatureSensor = true;
+            hasPressureSensor = true;
+            hasHumiditySensor = true;
+            hasLightSensor = true;
+        }
+        
+    connections allowunconnected:
+}
