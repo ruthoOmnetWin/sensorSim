@@ -16,11 +16,11 @@
 #include <AbstractSensor.h>
 
 AbstractSensor::AbstractSensor() {
-    // TODO Auto-generated constructor stub
+
 
 }
 
 AbstractSensor::~AbstractSensor() {
-    // TODO Auto-generated destructor stub
+
 }
 

@@ -2,6 +2,8 @@ var classBatteryAccess =
 [
     [ "BatteryAccess", "classBatteryAccess.html#a91a34707835f0938bc9c1a1c470ad5fb", null ],
     [ "~BatteryAccess", "classBatteryAccess.html#a144bc00c077326f959c340effd8f61af", null ],
+    [ "changeDrawCurrent", "classBatteryAccess.html#a1220de1fd5dd08aae48cbb3803bd275c", null ],
+    [ "changeEnergyConsumption", "classBatteryAccess.html#ab6c24df49a295ffe794ae896c78bb66f", null ],
     [ "draw", "classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939", null ],
     [ "finish", "classBatteryAccess.html#a93326bcfe4d6899cf6561a4418bcda8b", null ],
     [ "handleHostState", "classBatteryAccess.html#ac8bf6a0bb656ed2006bbee3387151ab7", null ],

@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "AbstractSensor", "classAbstractSensor.html", null ],
     [ "BaseWorldUtility", null, [
       [ "CustomWorldUtility", "classCustomWorldUtility.html", null ]
     ] ],

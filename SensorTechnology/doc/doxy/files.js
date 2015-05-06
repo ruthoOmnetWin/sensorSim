@@ -2,6 +2,10 @@ var files =
 [
     [ "AbstractSensingUnit.cc", "AbstractSensingUnit_8cc.html", null ],
     [ "AbstractSensingUnit.h", "AbstractSensingUnit_8h.html", "AbstractSensingUnit_8h" ],
+    [ "AbstractSensor.cc", "AbstractSensor_8cc.html", null ],
+    [ "AbstractSensor.h", "AbstractSensor_8h.html", [
+      [ "AbstractSensor", "classAbstractSensor.html", "classAbstractSensor" ]
+    ] ],
     [ "AbstractSignalConditioner.cc", "AbstractSignalConditioner_8cc.html", null ],
     [ "AbstractSignalConditioner.h", "AbstractSignalConditioner_8h.html", "AbstractSignalConditioner_8h" ],
     [ "AbstractSignalConverter.cc", "AbstractSignalConverter_8cc.html", null ],

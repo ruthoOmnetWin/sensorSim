@@ -1,6 +1,7 @@
 var searchData=
 [
   ['abstractsensingunit',['AbstractSensingUnit',['../classAbstractSensingUnit.html#a9fbd2ca0416165328ad81928c2fe46ba',1,'AbstractSensingUnit']]],
+  ['abstractsensor',['AbstractSensor',['../classAbstractSensor.html#a0800f84c76f69695407d42d0428197ad',1,'AbstractSensor']]],
   ['abstractsignalconditioner',['AbstractSignalConditioner',['../classAbstractSignalConditioner.html#afaae205f6bb08295724898f7c72a366f',1,'AbstractSignalConditioner']]],
   ['abstractsignalconverter',['AbstractSignalConverter',['../classAbstractSignalConverter.html#a57fa4ab6d4852e79c8a9b774fb7b9326',1,'AbstractSignalConverter']]],
   ['abstracttransducer',['AbstractTransducer',['../classAbstractTransducer.html#a550d7a9ea2ff02fd671a577127a66fcf',1,'AbstractTransducer']]],
@@ -19,6 +20,7 @@ var searchData=
   ['addparametersandgatesto',['addParametersAndGatesTo',['/home/rutho/BA/omnetpp-4.5//doc/api/classcModuleType.html#adaf74edb4890fea9563740ac62dae78b',1,'cModuleType']]],
   ['addparametersto',['addParametersTo',['/home/rutho/BA/omnetpp-4.5//doc/api/classcChannelType.html#abc3420bf3a8bce15fb5a70c2312184f9',1,'cChannelType']]],
   ['addresultrecorders',['addResultRecorders',['/home/rutho/BA/omnetpp-4.5//doc/api/classcEnvir.html#af2121cf752e8d9635025ff33b96e1fed',1,'cEnvir::addResultRecorders()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcNullEnvir.html#a5b11c9efb295f29e543ae67994e402f0',1,'cNullEnvir::addResultRecorders()']]],
+  ['addsensormodules',['addSensorModules',['../classProcessor.html#a989e1d92d4694b8b7a0bffa5319b728c',1,'Processor']]],
   ['addtransientdetection',['addTransientDetection',['/home/rutho/BA/omnetpp-4.5//doc/api/classcStatistic.html#aeec5219f3bd69cd1c7a12e4ff90eca3a',1,'cStatistic']]],
   ['adjustpath',['adjustPath',['/home/rutho/BA/omnetpp-4.5//doc/api/classcConfiguration.html#aa9895f330121939599222d527d05be41',1,'cConfiguration']]],
   ['afterchange',['afterChange',['/home/rutho/BA/omnetpp-4.5//doc/api/classcMsgPar.html#a8d5f41e4cd653fda17720eb4c5c2cf37',1,'cMsgPar']]],

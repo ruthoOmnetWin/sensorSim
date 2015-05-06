@@ -1,6 +1,7 @@
 var searchData=
 [
   ['_7eabstractsensingunit',['~AbstractSensingUnit',['../classAbstractSensingUnit.html#a0df5b81c64722f5840cb2557b3820646',1,'AbstractSensingUnit']]],
+  ['_7eabstractsensor',['~AbstractSensor',['../classAbstractSensor.html#a1d631bb265952074d5460208ae2a60f6',1,'AbstractSensor']]],
   ['_7eabstractsignalconditioner',['~AbstractSignalConditioner',['../classAbstractSignalConditioner.html#aab81002aafa4317ff87d98f8bed87a67',1,'AbstractSignalConditioner']]],
   ['_7eabstractsignalconverter',['~AbstractSignalConverter',['../classAbstractSignalConverter.html#adaefdb4ecd7ab4b6597b5a2630c0d435',1,'AbstractSignalConverter']]],
   ['_7eabstracttransducer',['~AbstractTransducer',['../classAbstractTransducer.html#ac543d76e6cdd277ef1731175dc3a27ae',1,'AbstractTransducer']]],

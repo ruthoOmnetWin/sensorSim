@@ -16,12 +16,12 @@
 #include <AbstractSignalConverter.h>
 
 AbstractSignalConverter::AbstractSignalConverter() {
-    // TODO Auto-generated constructor stub
+
 
 }
 
 AbstractSignalConverter::~AbstractSignalConverter() {
-    // TODO Auto-generated destructor stub
+
 }
 
 void AbstractSignalConverter::handleMessage(cMessage *msg)

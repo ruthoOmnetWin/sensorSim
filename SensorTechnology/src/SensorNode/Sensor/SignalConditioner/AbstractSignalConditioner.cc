@@ -16,12 +16,12 @@
 #include <AbstractSignalConditioner.h>
 
 AbstractSignalConditioner::AbstractSignalConditioner() {
-    // TODO Auto-generated constructor stub
+
 
 }
 
 AbstractSignalConditioner::~AbstractSignalConditioner() {
-    // TODO Auto-generated destructor stub
+
 }
 
 void AbstractSignalConditioner::handleMessage(cMessage *msg)

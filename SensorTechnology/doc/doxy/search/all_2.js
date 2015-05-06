@@ -54,6 +54,8 @@ var searchData=
   ['cglobalregistrationlist',['cGlobalRegistrationList',['/home/rutho/BA/omnetpp-4.5//doc/api/classcGlobalRegistrationList.html',1,'']]],
   ['cgroupfigure',['cGroupFigure',['/home/rutho/BA/omnetpp-4.5//doc/api/classcGroupFigure.html',1,'']]],
   ['changedgate',['changedGate',['/home/rutho/BA/omnetpp-4.5//doc/api/classcPathChangeNotification.html#a6e0251ef7555d58a5cc33766ba613a8c',1,'cPathChangeNotification']]],
+  ['changedrawcurrent',['changeDrawCurrent',['../classBatteryAccess.html#a1220de1fd5dd08aae48cbb3803bd275c',1,'BatteryAccess']]],
+  ['changeenergyconsumption',['changeEnergyConsumption',['../classBatteryAccess.html#ab6c24df49a295ffe794ae896c78bb66f',1,'BatteryAccess']]],
   ['changeparentto',['changeParentTo',['/home/rutho/BA/omnetpp-4.5//doc/api/classcModule.html#af9e5fae012b14606d5e58cab261c91af',1,'cModule']]],
   ['channel',['channel',['/home/rutho/BA/omnetpp-4.5//doc/api/classcPostGateDisconnectNotification.html#a35a23c595ab989dc0e384caa46af9673',1,'cPostGateDisconnectNotification::channel()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcPreGateConnectNotification.html#ae8115c08b36940dbf4fc282a630f5815',1,'cPreGateConnectNotification::channel()']]],
   ['channeliterator',['ChannelIterator',['/home/rutho/BA/omnetpp-4.5//doc/api/classcModule_1_1ChannelIterator.html',1,'cModule']]],

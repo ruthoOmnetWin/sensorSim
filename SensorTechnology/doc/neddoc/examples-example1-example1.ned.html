@@ -1,0 +1,71 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">NED File <i>examples/example1/example1.ned</i></h2>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="sensortechnology.examples.example1.example1.html">example1</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #800000; font-weight: bold; ">package</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">examples</span><span style="color: #000000; ">.</span><span style="color: #000000; ">example1</span><span style="color: #000000; ">; 
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.</span><span style="color: #000000; ">Sensor</span><span style="color: #000000; ">.*;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">.*;
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensortechnology</span><span style="color: #000000; ">.</span><span style="color: #000000; ">src</span><span style="color: #000000; ">.</span><span style="color: #000000; ">WorldModel</span><span style="color: #000000; ">.*;
+
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">org</span><span style="color: #000000; ">.</span><span style="color: #000000; ">mixim</span><span style="color: #000000; ">.</span><span style="color: #000000; ">base</span><span style="color: #000000; ">.</span><span style="color: #000000; ">modules</span><span style="color: #000000; ">.</span><span style="color: #000000; ">BaseNetwork</span><span style="color: #000000; ">;
+
+</span><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">example1</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">BaseNetwork</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #008000; ">4</span><span style="color: #000000; "> * </span><span style="color: #008000; ">3</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">world</span><span style="color: #000000; ">.</span><span style="color: #000000; ">createData</span><span style="color: #000000; "> = </span><span style="color: #008000; ">false</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">world</span><span style="color: #000000; ">.</span><span style="color: #000000; ">basePath</span><span style="color: #000000; "> = </span><span style="color: #008000; ">&quot;data/&quot;</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">world</span><span style="color: #000000; ">.</span><span style="color: #000000; ">xmlTemperature</span><span style="color: #000000; "> = </span><span style="color: #800080; font-weight: bold; ">xmldoc</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;data/temperature.xml&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">world</span><span style="color: #000000; ">.</span><span style="color: #000000; ">xmlPressure</span><span style="color: #000000; "> = </span><span style="color: #800080; font-weight: bold; ">xmldoc</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;data/pressure.xml&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">world</span><span style="color: #000000; ">.</span><span style="color: #000000; ">xmlHumidity</span><span style="color: #000000; "> = </span><span style="color: #800080; font-weight: bold; ">xmldoc</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;data/humidity.xml&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">world</span><span style="color: #000000; ">.</span><span style="color: #000000; ">xmlLight</span><span style="color: #000000; "> = </span><span style="color: #800080; font-weight: bold; ">xmldoc</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;data/light.xml&quot;</span><span style="color: #000000; ">);
+        
+        </span><span style="color: #000000; ">cmType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;org.mixim.base.connectionManager.ConnectionManager&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">wuType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;CustomWorldUtility&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bgi=maps/germany&quot;</span><span style="color: #000000; ">);
+        
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">: 
+        </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">/</span><span style="color: #008000; ">3</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #000000; ">TempNode</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">/</span><span style="color: #008000; ">3</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+        }
+        
+        </span><span style="color: #000000; ">AllNode</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">/</span><span style="color: #008000; ">3</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">hasPressureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">hasHumiditySensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">hasLightSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+        }
+        
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">allowunconnected</span><span style="color: #000000; ">:
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

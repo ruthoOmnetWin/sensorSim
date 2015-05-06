@@ -148,10 +148,6 @@ C/C++ Header
     extension hpp
     3rd_gen_scale 1.00
     end_of_line_continuation \\$
-CCS
-    filter call_regexp_common C
-    extension ccs
-    3rd_gen_scale 5.33
 CMake
     filter remove_matches ^\s*#
     filter remove_inline #.*$
@@ -321,12 +317,6 @@ HLSL
     extension cginc
     extension shader
     3rd_gen_scale 2.00
-HTML
-    filter remove_html_comments
-    filter call_regexp_common HTML
-    extension htm
-    extension html
-    3rd_gen_scale 1.90
 Haml
     filter remove_haml_block
     filter remove_html_comments
@@ -401,13 +391,6 @@ JavaServer Faces
     extension jsf
     extension xhtml
     3rd_gen_scale 1.50
-Javascript
-    filter remove_matches ^\s*//
-    filter call_regexp_common C
-    filter remove_inline //.*$
-    extension js
-    3rd_gen_scale 1.48
-    end_of_line_continuation \\$
 Kermit
     filter remove_matches ^\s*#
     filter remove_matches ^\s*;

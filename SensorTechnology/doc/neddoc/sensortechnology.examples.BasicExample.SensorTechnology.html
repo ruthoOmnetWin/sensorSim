@@ -5,7 +5,7 @@
    </head>
    <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
 <h2 class="comptitle">Network <i>SensorTechnology</i></h2>
-<b>Package:</b> sensortechnology<br/><b>File: <a href="SensorTechnology.ned.html">SensorTechnology.ned</a></b><br/><p>(no description)</p><h3 class="subtitle">Extends:</h3>
+<b>Package:</b> sensortechnology.examples.BasicExample<br/><b>File: <a href="examples-BasicExample-SensorTechnology.ned.html">examples/BasicExample/SensorTechnology.ned</a></b><br/><p>(no description)</p><h3 class="subtitle">Extends:</h3>
 <table class="typestable">
    <tr>
       <th class="name">Name</th>
@@ -87,7 +87,7 @@
    <td>
       <i>int</i>
    </td>
-   <td>3</td>
+   <td>4 * 3</td>
    <td>   </td>
 </tr>
 </table>
@@ -1831,7 +1831,7 @@ battery</p>
 <pre class="src"><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensorTechnology</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">BaseNetwork</span><span style="color: #000000; ">
 {
     </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
-        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #008000; ">3</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #008000; ">4</span><span style="color: #000000; "> * </span><span style="color: #008000; ">3</span><span style="color: #000000; ">;
         </span><span style="color: #000000; ">world</span><span style="color: #000000; ">.</span><span style="color: #000000; ">createData</span><span style="color: #000000; "> = </span><span style="color: #008000; ">false</span><span style="color: #000000; ">;
 
         </span><span style="color: #000000; ">cmType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;org.mixim.base.connectionManager.ConnectionManager&quot;</span><span style="color: #000000; ">);
@@ -1846,6 +1846,7 @@ battery</p>
             </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
             </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
         }
+
         </span><span style="color: #000000; ">AllNode</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">/</span><span style="color: #008000; ">3</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
             </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
             </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;

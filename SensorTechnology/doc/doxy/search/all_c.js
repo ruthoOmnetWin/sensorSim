@@ -9,6 +9,7 @@ var searchData=
   ['node',['Node',['/home/rutho/BA/omnetpp-4.5//doc/api/classcTopology_1_1Node.html',1,'cTopology']]],
   ['noncopyable',['noncopyable',['/home/rutho/BA/omnetpp-4.5//doc/api/classnoncopyable.html',1,'']]],
   ['normal',['NORMAL',['../classProcessor.html#a6d296ef30a05b4f8aa186fb5d4aa99c8a506076304109f7926fb1ba61b686ba83',1,'Processor::NORMAL()'],['/home/rutho/BA/omnetpp-4.5//doc/api/group__RandomNumbersCont.html#ga339847dfd140ff80d07a5f81aae9dcef',1,'normal(double mean, double stddev, int rng=0)(Global Namespace)'],['/home/rutho/BA/omnetpp-4.5//doc/api/group__RandomNumbersCont.html#ga4df419af4a3525abb0dbf12c80189dd4',1,'normal(SimTime mean, SimTime stddev, int rng=0)(Global Namespace)']]],
+  ['numdevices',['numDevices',['../classProcessor.html#af37cf136320d422855c3029158f2b67c',1,'Processor']]],
   ['numinitstages',['numInitStages',['/home/rutho/BA/omnetpp-4.5//doc/api/classcComponent.html#a2d9bf75f1f04462929e85e10f5f4a24d',1,'cComponent']]],
   ['numnodes',['numNodes',['../classCustomWorldUtility.html#a32f28e6a1a08c7c677d1163979956117',1,'CustomWorldUtility']]],
   ['numreceived',['numReceived',['../classStatisticsInterface.html#ab8903c2fc5b9b6e93172a89f37b3f620',1,'StatisticsInterface']]],

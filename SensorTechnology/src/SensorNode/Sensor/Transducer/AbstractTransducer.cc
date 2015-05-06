@@ -16,12 +16,12 @@
 #include <AbstractTransducer.h>
 
 AbstractTransducer::AbstractTransducer() {
-    // TODO Auto-generated constructor stub
+
 
 }
 
 AbstractTransducer::~AbstractTransducer() {
-    // TODO Auto-generated destructor stub
+
 }
 
 void AbstractTransducer::handleMessage(cMessage *msg)

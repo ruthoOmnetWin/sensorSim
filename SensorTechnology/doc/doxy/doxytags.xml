@@ -23,6 +23,18 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>AbstractSensor.cc</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Sensor/</path>
+    <filename>AbstractSensor_8cc</filename>
+    <includes id="AbstractSensor_8h" name="AbstractSensor.h" local="no" imported="no">AbstractSensor.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>AbstractSensor.h</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Sensor/</path>
+    <filename>AbstractSensor_8h</filename>
+    <class kind="class">AbstractSensor</class>
+  </compound>
+  <compound kind="file">
     <name>AbstractSignalConditioner.cc</name>
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Sensor/SignalConditioner/</path>
     <filename>AbstractSignalConditioner_8cc</filename>
@@ -198,6 +210,7 @@
     <filename>Processor_8cc</filename>
     <includes id="Processor_8h" name="Processor.h" local="no" imported="no">Processor.h</includes>
     <includes id="SensorNode_8h" name="SensorNode.h" local="yes" imported="no">SensorNode.h</includes>
+    <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="yes" imported="no">BatteryAccess.h</includes>
   </compound>
   <compound kind="file">
     <name>Processor.h</name>
@@ -369,6 +382,24 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>AbstractSensor</name>
+    <filename>classAbstractSensor.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>AbstractSensor</name>
+      <anchorfile>classAbstractSensor.html</anchorfile>
+      <anchor>a0800f84c76f69695407d42d0428197ad</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~AbstractSensor</name>
+      <anchorfile>classAbstractSensor.html</anchorfile>
+      <anchor>a1d631bb265952074d5460208ae2a60f6</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>AbstractSignalConditioner</name>
     <filename>classAbstractSignalConditioner.html</filename>
     <base>BatteryAccess</base>
@@ -479,6 +510,20 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>changeDrawCurrent</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>a1220de1fd5dd08aae48cbb3803bd275c</anchor>
+      <arglist>(double cur, int acc)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>changeEnergyConsumption</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>ab6c24df49a295ffe794ae896c78bb66f</anchor>
+      <arglist>(float)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>finish</name>
       <anchorfile>classBatteryAccess.html</anchorfile>
       <anchor>a93326bcfe4d6899cf6561a4418bcda8b</anchor>
@@ -491,14 +536,14 @@
       <anchor>ac8bf6a0bb656ed2006bbee3387151ab7</anchor>
       <arglist>(const HostState &amp;state)</arglist>
     </member>
-    <member kind="variable" protection="protected">
+    <member kind="variable">
       <type>float</type>
       <name>currentOverTime</name>
       <anchorfile>classBatteryAccess.html</anchorfile>
       <anchor>a9449bfc9a1c5633de1177d5c610af2b5</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable" protection="protected">
+    <member kind="variable">
       <type>float</type>
       <name>energiePerOperation</name>
       <anchorfile>classBatteryAccess.html</anchorfile>
@@ -1095,6 +1140,27 @@
       <anchor>a6d296ef30a05b4f8aa186fb5d4aa99c8ab6ac32f850413f94d915246276cfdf0c</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>setPeriphery</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>ae9ec7e019f442d973b7ffa090272be7e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>addSensorModules</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a989e1d92d4694b8b7a0bffa5319b728c</anchor>
+      <arglist>(cModule *)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>switchPeripheryEnergyConsumption</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a01cc0b37f62777976db4eaaf18254f2e</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>int</type>
       <name>sensingIntervall</name>
@@ -1104,9 +1170,23 @@
     </member>
     <member kind="variable" protection="protected">
       <type>int</type>
-      <name>shiftProcessorModeIntervall</name>
+      <name>shiftProcessorModeNormalIntervall</name>
       <anchorfile>classProcessor.html</anchorfile>
-      <anchor>a5b291d3d645cedf5346bbf986f642ddc</anchor>
+      <anchor>a5efad714a750aaae525a0750144d5673</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>shiftProcessorModeHighPerformanceIntervall</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a4d85c1653f2d5a155a59b20d68161d31</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>shiftProcessorModePowerSavingIntervall</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a041899097ab5e257f5729f23c97c3170</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -1153,6 +1233,13 @@
     </member>
     <member kind="variable" protection="protected">
       <type>double</type>
+      <name>peripheryNormalRatio</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>ad74b0c6de296d00da6e75028e4aa1bc4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
       <name>currentOverTimePowerSaving</name>
       <anchorfile>classProcessor.html</anchorfile>
       <anchor>ab9d245c2702673e5fff1300c9105e6dc</anchor>
@@ -1167,6 +1254,13 @@
     </member>
     <member kind="variable" protection="protected">
       <type>double</type>
+      <name>peripheryPowerSavingRatio</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a81002064ba9de42c9aaa5e31d6fa231b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
       <name>currentOverTimeHighPerformance</name>
       <anchorfile>classProcessor.html</anchorfile>
       <anchor>a5b5471bc2b6b4b1e51bf6dbd74927dfe</anchor>
@@ -1177,6 +1271,27 @@
       <name>energiePerOperationHighPerformance</name>
       <anchorfile>classProcessor.html</anchorfile>
       <anchor>aa260c8b94bd163165df1d31e8f94782f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>peripheryHighPerformanceRatio</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a5ac076b7ab942a302c3670d4cf3dce3e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>numDevices</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>af37cf136320d422855c3029158f2b67c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; cModule * &gt;</type>
+      <name>periphery</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>ae9428673d6c3b7e57a22d7ebe823dfa7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">

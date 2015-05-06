@@ -16,12 +16,12 @@
 #include <AbstractSensingUnit.h>
 
 AbstractSensingUnit::AbstractSensingUnit() {
-    // TODO Auto-generated constructor stub
+
 
 }
 
 AbstractSensingUnit::~AbstractSensingUnit() {
-    // TODO Auto-generated destructor stub
+
 }
 
 void AbstractSensingUnit::initialize(int stage) {
@@ -68,7 +68,6 @@ int AbstractSensingUnit::readData()
 {
     draw();
     Coord *position = getLocation();
-    //TODO check for the type
     cModule* Sensor = getParentModule();
     std::string type = Sensor->par("type");
     int data = world->getValueByPosition(type, position);

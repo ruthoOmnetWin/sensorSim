@@ -1,6 +1,7 @@
 var annotated =
 [
     [ "AbstractSensingUnit", "classAbstractSensingUnit.html", "classAbstractSensingUnit" ],
+    [ "AbstractSensor", "classAbstractSensor.html", "classAbstractSensor" ],
     [ "AbstractSignalConditioner", "classAbstractSignalConditioner.html", "classAbstractSignalConditioner" ],
     [ "AbstractSignalConverter", "classAbstractSignalConverter.html", "classAbstractSignalConverter" ],
     [ "AbstractTransducer", "classAbstractTransducer.html", "classAbstractTransducer" ],

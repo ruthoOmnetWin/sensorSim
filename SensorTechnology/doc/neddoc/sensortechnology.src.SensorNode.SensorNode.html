@@ -36,7 +36,18 @@ a battery, memory, processor and radio module </p>
    </tr>
 <tr>
    <td>
-<a href="sensortechnology.SensorTechnology.html">SensorTechnology</a>
+<a href="sensortechnology.examples.example1.example1.html">example1</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="sensortechnology.examples.BasicExample.SensorTechnology.html">SensorTechnology</a>
    </td>
    <td>
 <i>network</i>
@@ -143,7 +154,24 @@ a battery, memory, processor and radio module </p>
    </td>
 </tr>
 <tr class="local">
-   <td>shiftProcessorModeIntervall</td>
+   <td>shiftProcessorModeNormalIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0s</td>
+   <td>
+   </td>
+</tr>
+<tr class="local">
+   <td>shiftProcessorModePowerSavingIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0s</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>shiftProcessorModeHighPerformanceIntervall</td>
    <td>
       <i>int</i>
    </td>
@@ -256,6 +284,31 @@ calculate number of energie accounts from sensor</p>
    <td>false</td>
    <td>
 <p>these are used to draw the overview of the model</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>normalRatio</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>powerSavingRatio</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>highPerformanceRatio</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
    </td>
 </tr>
 </table>
@@ -865,7 +918,9 @@ battery</p>
     </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
         </span><span style="color: #808080; font-style: italic; ">//these parameters are generated automatically, from parent module, or via ini-file
 </span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensingIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
-        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">shiftProcessorModeIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">shiftProcessorModeNormalIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">shiftProcessorModePowerSavingIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">shiftProcessorModeHighPerformanceIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
         </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">collectStatisticsIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
 
         </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">);
@@ -909,6 +964,10 @@ battery</p>
         </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">resolution</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">60</span><span style="color: #000000; "> </span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
         </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">publishDelta</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1</span><span style="color: #000000; ">);
         </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">publishTime</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">resolution</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">normalRatio</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">powerSavingRatio</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">highPerformanceRatio</span><span style="color: #000000; ">;
 
     </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
         </span><span style="color: #000000; ">TemperatureSensor</span><span style="color: #000000; ">: </span><span style="color: #000000; ">TemperatureSensor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> {

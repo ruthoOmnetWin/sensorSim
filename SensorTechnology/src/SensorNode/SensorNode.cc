@@ -21,7 +21,7 @@ SensorNode::SensorNode() : cModule() {
 }
 
 SensorNode::~SensorNode() {
-    // TODO Auto-generated destructor stub
+
 }
 
 void SensorNode::initialize(int stage) {

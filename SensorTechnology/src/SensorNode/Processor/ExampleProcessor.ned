@@ -15,9 +15,6 @@
 
 package sensortechnology.src.SensorNode.Processor;
 
-//
-// TODO auto-generated type
-//
 simple ExampleProcessor extends Processor
 {
     parameters:
