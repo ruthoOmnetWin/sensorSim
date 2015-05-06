@@ -28,7 +28,9 @@ module SensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
     parameters:
         //these parameters are generated automatically, from parent module, or via ini-file
         int sensingIntervall = default(0s) @unit(s);
-        int shiftProcessorModeIntervall = default(0s) @unit(s);
+        int shiftProcessorModeNormalIntervall = default(0s) @unit(s); 
+		int shiftProcessorModePowerSavingIntervall = default(0s) @unit(s);
+		int shiftProcessorModeHighPerformanceIntervall = default(0s) @unit(s);
         int collectStatisticsIntervall = default(0s) @unit(s);
         
         double dataBandwidth = default(0bps) @unit(bps);

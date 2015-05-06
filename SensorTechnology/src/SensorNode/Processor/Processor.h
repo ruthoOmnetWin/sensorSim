@@ -42,7 +42,9 @@
 class Processor : public BatteryAccess {
 protected:
     int sensingIntervall;
-    int shiftProcessorModeIntervall;
+    int shiftProcessorModeNormalIntervall;
+    int shiftProcessorModeHighPerformanceIntervall;
+    int shiftProcessorModePowerSavingIntervall;
     int collectStatisticsIntervall;
     cMessage* selfMessageMeasure;
     cMessage* selfMessageShiftMode;
@@ -64,6 +66,8 @@ protected:
     int numDevices;
     std::vector<cModule*> periphery;
     void setPeriphery();
+    void addSensorModules(cModule*);
+    void switchPeripheryEnergyConsumption();
 
     enum MODES {
         NORMAL = 0,

@@ -30,10 +30,10 @@
  */
 class BatteryAccess : public MiximBatteryAccess {
 protected:
-    float currentOverTime;
-    float energiePerOperation;
     //int deviceID;
 public:
+    float currentOverTime;
+    float energiePerOperation;
     BatteryAccess();
     virtual ~BatteryAccess();
     void initialize(int stage);

@@ -76,7 +76,9 @@ void Processor::initialize(int stage)
 
         //set values for schedulePeriodicSelfMessage()
         sensingIntervall = getParentModule()->par("sensingIntervall").longValue();
-        shiftProcessorModeIntervall = getParentModule()->par("shiftProcessorModeIntervall").longValue();
+        shiftProcessorModeNormalIntervall = getParentModule()->par("shiftProcessorModeNormalIntervall").longValue();
+        shiftProcessorModeHighPerformanceIntervall = getParentModule()->par("shiftProcessorModeHighPerformanceIntervall").longValue();
+        shiftProcessorModePowerSavingIntervall = getParentModule()->par("shiftProcessorModePowerSavingIntervall").longValue();
         collectStatisticsIntervall = getParentModule()->par("collectStatisticsIntervall").longValue();
 
         //initialize statistics
@@ -108,6 +110,8 @@ void Processor::initialize(int stage)
         }
         schedulePeriodicSelfMessage(shiftProcessorMode);
         schedulePeriodicSelfMessage(collectStatistics);
+
+        setPeriphery();
     }
 }
 
@@ -124,10 +128,10 @@ void Processor::handleMessage(cMessage *msg)
             startSensingUnit();
         }
         if (name == "shiftMode") {
-            schedulePeriodicSelfMessage(msg, shiftProcessorMode);
             activatedMode++;
-            setPeriphery();
             switchProcessorMode();
+            switchPeripheryEnergyConsumption();
+            schedulePeriodicSelfMessage(msg, shiftProcessorMode);
         }
         if (name == "collectStatistics") {
             schedulePeriodicSelfMessage(msg, collectStatistics);
@@ -155,8 +159,16 @@ void Processor::schedulePeriodicSelfMessage(cMessage *msg, int intervallType)
         simtime_t scheduleTime = simTime() + sensingIntervall;
         scheduleAt(scheduleTime , msg);
     }
-    if (intervallType == shiftProcessorMode && shiftProcessorModeIntervall) {
-        simtime_t scheduleTime = simTime() + shiftProcessorModeIntervall;
+    if (intervallType == shiftProcessorMode) {
+        int addedTime = 0;
+        if (getProcessorMode() == NORMAL) {
+            addedTime = shiftProcessorModeNormalIntervall;
+        } else if (getProcessorMode() == HIGH_PERFORMANCE) {
+            addedTime = shiftProcessorModeHighPerformanceIntervall;
+        } else if (getProcessorMode() == POWER_SAVING) {
+            addedTime = shiftProcessorModePowerSavingIntervall;
+        }
+        simtime_t scheduleTime = simTime() + addedTime;
         scheduleAt(scheduleTime , msg);
     }
     if (intervallType == collectStatistics && collectStatisticsIntervall) {
@@ -172,18 +184,15 @@ void Processor::schedulePeriodicSelfMessage(int intervallType)
 {
     if (intervallType == sensing && sensingIntervall) {
         selfMessageMeasure = new cMessage("startSensingUnit");
-        simtime_t scheduleTime = simTime() + sensingIntervall;
-        scheduleAt(scheduleTime , selfMessageMeasure);
+        schedulePeriodicSelfMessage(selfMessageMeasure, intervallType);
     }
-    if (intervallType == shiftProcessorMode && shiftProcessorModeIntervall) {
+    if (intervallType == shiftProcessorMode) {
         selfMessageShiftMode = new cMessage("shiftMode");
-        simtime_t scheduleTime = simTime() + shiftProcessorModeIntervall;
-        scheduleAt(scheduleTime , selfMessageShiftMode);
+        schedulePeriodicSelfMessage(selfMessageShiftMode, intervallType);
     }
     if (intervallType == collectStatistics && collectStatisticsIntervall) {
         selfMessageStatistics = new cMessage("collectStatistics");
-        simtime_t scheduleTime = simTime() + collectStatisticsIntervall;
-        scheduleAt(scheduleTime , selfMessageStatistics);
+        schedulePeriodicSelfMessage(selfMessageStatistics, intervallType);
     }
 }
 
@@ -304,6 +313,22 @@ Processor::MODES Processor::getProcessorMode()
     return OFF;
 }
 
+void Processor::switchPeripheryEnergyConsumption()
+{
+    for(std::vector<cModule*>::size_type i = 0; i != periphery.size(); i++) {
+        BatteryAccess* module = (BatteryAccess*) periphery[i];
+        double curr = 0.0;
+        if (getProcessorMode() == NORMAL) {
+            curr = module->currentOverTime*peripheryNormalRatio;
+        } else if (getProcessorMode() == HIGH_PERFORMANCE) {
+            curr = module->currentOverTime*peripheryHighPerformanceRatio;
+        } else if (getProcessorMode() == POWER_SAVING) {
+            curr = module->currentOverTime*peripheryPowerSavingRatio;
+        }
+        module->changeDrawCurrent(curr, 0);
+    }
+}
+
 void Processor::finish()
 {
 
@@ -328,22 +353,31 @@ void Processor::setPeriphery()
     periphery.push_back(memory);
     if (hasTemperatureSensor) {
         cModule* tSensor = sensorNode->getSubmodule("TemperatureSensor");
-        BatteryAccess* tSensingUnit = (BatteryAccess*) tSensor->getSubmodule("SensingUnit");
-        periphery.push_back(tSensingUnit);
-        BatteryAccess* tSignalConditioner = (BatteryAccess* )tSensor->getSubmodule("SignalConditioner");
-        periphery.push_back(tSignalConditioner);
-        BatteryAccess* tSignalConverter = (BatteryAccess*) tSensor->getSubmodule("SignalConverter");
-        periphery.push_back(tSignalConverter);
-        BatteryAccess* tTransducer = (BatteryAccess*) tSensor->getSubmodule("Transducer");
-        periphery.push_back(tTransducer);
+        addSensorModules(tSensor);
     }
     if (hasHumiditySensor) {
         cModule* hSensor = sensorNode->getSubmodule("HumiditySensor");
+        addSensorModules(hSensor);
     }
     if (hasPressureSensor) {
         cModule* pSensor = sensorNode->getSubmodule("PressureSensor");
+        addSensorModules(pSensor);
     }
     if (hasLightSensor) {
         cModule* lSensor = sensorNode->getSubmodule("LightSensor");
+        addSensorModules(lSensor);
     }
+    EV << "Collected all Modules" << endl;
+}
+
+void Processor::addSensorModules(cModule* Sensor)
+{
+    BatteryAccess* SensingUnit = (BatteryAccess*) Sensor->getSubmodule("SensingUnit");
+    periphery.push_back(SensingUnit);
+    BatteryAccess* SignalConditioner = (BatteryAccess* )Sensor->getSubmodule("SignalConditioner");
+    periphery.push_back(SignalConditioner);
+    BatteryAccess* SignalConverter = (BatteryAccess*) Sensor->getSubmodule("SignalConverter");
+    periphery.push_back(SignalConverter);
+    BatteryAccess* Transducer = (BatteryAccess*) Sensor->getSubmodule("Transducer");
+    periphery.push_back(Transducer);
 }
