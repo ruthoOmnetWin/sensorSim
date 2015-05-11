@@ -9,7 +9,7 @@ network BasicExample extends BasicWSN like SensorNetworkInterface
 {
     parameters:
         
-		numHosts = 1;
+		numHosts = 30;
 
     submodules:
         SensorNode[0]: SensorNode {

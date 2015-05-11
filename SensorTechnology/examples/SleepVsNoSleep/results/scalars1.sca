@@ -1,14 +1,14 @@
 version 2
-run General-0-20150511-12:42:36-10849
+run General-0-20150511-13:59:23-17345
 attr configname General
-attr datetime 20150511-12:42:36
+attr datetime 20150511-13:59:23
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network SleepVsNoSleep
-attr processid 10849
+attr processid 17345
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -70,7 +70,7 @@ scalar SleepVsNoSleep.SleepNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar SleepVsNoSleep.SleepNode[0].batteryStats 	lifetime 	144780
 attr unit  s
-scalar SleepVsNoSleep.SleepNode[0].batteryStats 	"Mean power consumption" 	2.2979994638001
+scalar SleepVsNoSleep.SleepNode[0].batteryStats 	"Mean power consumption" 	3.7066781985544
 attr unit  mW
 scalar SleepVsNoSleep.NoSleepNode[0].nic.mac 	nbTxFrames 	0
 scalar SleepVsNoSleep.NoSleepNode[0].nic.mac 	nbRxFrames 	0
@@ -112,5 +112,5 @@ scalar SleepVsNoSleep.NoSleepNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar SleepVsNoSleep.NoSleepNode[0].batteryStats 	lifetime 	42720
 attr unit  s
-scalar SleepVsNoSleep.NoSleepNode[0].batteryStats 	"Mean power consumption" 	2.2979994638001
+scalar SleepVsNoSleep.NoSleepNode[0].batteryStats 	"Mean power consumption" 	3.7066781985544
 attr unit  mW

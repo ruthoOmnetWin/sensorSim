@@ -31,10 +31,11 @@
  * the connection between memory and processor is also created here but
  * the gates, defined inside the ned code are used
  */
-class SensorNode : public cModule {
+
+#include <ConnectionManagerAccess.h>
+
+class SensorNode : public ConnectionManagerAccess {
 public:
-    SensorNode();
-    virtual ~SensorNode();
     cDatarateChannel* getControlChannel();
     cDatarateChannel* getDataChannel();
 protected:

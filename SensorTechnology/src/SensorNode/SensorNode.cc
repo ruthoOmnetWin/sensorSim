@@ -16,13 +16,9 @@
 #include <SensorNode.h>
 #include <SimpleBattery.h>
 #include "Processor.h"
+#include "ExtendedMessage_m.h"
 
-SensorNode::SensorNode() : cModule() {
-}
 
-SensorNode::~SensorNode() {
-
-}
 
 void SensorNode::initialize(int stage) {
     if (stage == 0) {
@@ -33,7 +29,8 @@ void SensorNode::initialize(int stage) {
         //get the amount of sensors and gates needed
         setNumGates();
     } else if (stage == 1) {
-
+        //cMessage *msg = new cMessage("sendInit");
+        //scheduleAt(simTime() + 1000, msg);
     }
 }
 
@@ -144,7 +141,12 @@ void SensorNode::connectProcessorAndMemory() {
 }
 
 void SensorNode::handleMessage(cMessage *msg) {
-    EV << "Received Message"<< endl;
+    std::string msgName = msg->getName();
+    if (msgName == "sendInit") {
+        cPacket *pack = new cPacket("hop");
+        sendToChannel(pack);
+    }
+
 }
 
 void SensorNode::finish()

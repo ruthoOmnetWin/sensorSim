@@ -206,6 +206,7 @@ depend:
 $O/src/ExtendedMessage/ExtendedMessage_m.o: src/ExtendedMessage/ExtendedMessage_m.cc \
 	src/ExtendedMessage/ExtendedMessage_m.h
 $O/src/SensorNode/BatteryAccess.o: src/SensorNode/BatteryAccess.cc \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
@@ -213,12 +214,19 @@ $O/src/SensorNode/BatteryAccess.o: src/SensorNode/BatteryAccess.cc \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
 	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/SensorNode.h
 $O/src/SensorNode/SensorNode.o: src/SensorNode/SensorNode.cc \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
@@ -226,9 +234,16 @@ $O/src/SensorNode/SensorNode.o: src/SensorNode/SensorNode.cc \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
+	src/ExtendedMessage/ExtendedMessage_m.h \
 	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/Processor/Processor.h \
 	src/SensorNode/SensorNode.h
@@ -243,6 +258,7 @@ $O/src/SensorNode/Memory/Memory.o: src/SensorNode/Memory/Memory.cc \
 	src/SensorNode/Memory/Memory.h \
 	src/SimpleSensorData/SimpleSensorData.h
 $O/src/SensorNode/Processor/Processor.o: src/SensorNode/Processor/Processor.cc \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
@@ -250,6 +266,12 @@ $O/src/SensorNode/Processor/Processor.o: src/SensorNode/Processor/Processor.cc \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/Processor/Processor.h \
 	src/SensorNode/SensorNode.h

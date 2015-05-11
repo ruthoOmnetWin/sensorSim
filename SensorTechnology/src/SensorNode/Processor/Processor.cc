@@ -112,7 +112,27 @@ void Processor::initialize(int stage)
         schedulePeriodicSelfMessage(collectStatistics);
 
         setPeriphery();
+
+        WATCH(activatedMode);
+        if (ev.isGUI()) {
+            updateDisplay();
+        }
     }
+}
+
+void Processor::updateDisplay()
+{
+    char buf[40];
+    if (activatedMode == NORMAL) {
+        sprintf(buf, "mode: normal");
+    } else if (activatedMode == POWER_SAVING) {
+        sprintf(buf, "mode: power saving");
+    } else if (activatedMode == HIGH_PERFORMANCE) {
+        sprintf(buf, "mode: high performance");
+    } else {
+        return;
+    }
+    getParentModule()->getDisplayString().setTagArg("t",0,buf);
 }
 
 /**
@@ -159,13 +179,7 @@ void Processor::schedulePeriodicSelfMessage(cMessage *msg, int intervallType)
 {
     if (intervallType == sensing && sensingIntervall) {
         simtime_t scheduleTime = simTime() + sensingIntervall;
-        //delete msg;
-        hasTemperatureSensor;
-        hasHumiditySensor;
-        hasPressureSensor;
-        hasLightSensor;
         scheduleAt(scheduleTime , selfMessageMeasure);
-
     } else if (intervallType == shiftProcessorMode) {
         int addedTime = 0;
         if (getProcessorMode() == NORMAL) {
@@ -301,6 +315,9 @@ void Processor::switchProcessorMode()
     } else {
         activatedMode=0;
         switchProcessorMode();
+    }
+    if (ev.isGUI()) {
+        updateDisplay();
     }
 }
 

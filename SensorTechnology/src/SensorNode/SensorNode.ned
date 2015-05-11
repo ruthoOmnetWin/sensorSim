@@ -58,7 +58,6 @@ module SensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
         @display("bgb=447,450;i=block/ifcard");
 
         //custom parameters
-        applicationType = "org.mixim.modules.application.SensorApplLayer";
         transportType = default("Aggregation");
         nicType = default("Nic802154_TI_CC2420");  //type of used nic
         arpType = default("org.mixim.modules.netw.ArpHost");

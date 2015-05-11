@@ -41,6 +41,8 @@
  */
 class Processor : public BatteryAccess {
 protected:
+    void updateDisplay();
+
     int sensingIntervall;
     int shiftProcessorModeNormalIntervall;
     int shiftProcessorModeHighPerformanceIntervall;
