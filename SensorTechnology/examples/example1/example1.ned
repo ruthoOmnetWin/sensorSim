@@ -8,13 +8,14 @@ import org.mixim.base.modules.BaseNetwork;
 network example1 extends BaseNetwork
 {
     parameters:
-        int numHosts = 4 * 3;
-        world.createData = false;
+        int numHosts = 4 * 3;        
+        
+		world.createData = false;
         world.basePath = "data/";
         world.xmlTemperature = xmldoc("data/temperature.xml");
         world.xmlPressure = xmldoc("data/pressure.xml");
         world.xmlHumidity = xmldoc("data/humidity.xml");
-        world.xmlLight = xmldoc("data/light.xml");
+		world.xmlLight = xmldoc("data/light.xml");
         
         cmType = default("org.mixim.base.connectionManager.ConnectionManager");
         wuType = default("CustomWorldUtility");

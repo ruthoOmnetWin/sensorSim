@@ -1,14 +1,14 @@
 version 2
-run General-0-20150506-09:27:03-12156
+run General-0-20150511-11:28:19-3875
 attr configname General
-attr datetime 20150506-09:27:03
+attr datetime 20150511-11:28:19
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network example1
-attr processid 12156
+attr processid 3875
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -66,11 +66,11 @@ field min 0
 field max 0
 scalar example1.SensorNode[0].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.SensorNode[0].batteryStats 	total 	3477950
+scalar example1.SensorNode[0].batteryStats 	total 	0
 attr unit  mW-s
 scalar example1.SensorNode[0].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.SensorNode[0].batteryStats 	"Mean power consumption" 	28.982916666667
+scalar example1.SensorNode[0].batteryStats 	"Mean power consumption" 	-nan
 attr unit  mW
 scalar example1.SensorNode[1].nic.mac 	nbTxFrames 	0
 scalar example1.SensorNode[1].nic.mac 	nbRxFrames 	0
@@ -108,11 +108,11 @@ field min 0
 field max 0
 scalar example1.SensorNode[1].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.SensorNode[1].batteryStats 	total 	3477950
+scalar example1.SensorNode[1].batteryStats 	total 	0
 attr unit  mW-s
 scalar example1.SensorNode[1].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.SensorNode[1].batteryStats 	"Mean power consumption" 	28.982916666667
+scalar example1.SensorNode[1].batteryStats 	"Mean power consumption" 	-nan
 attr unit  mW
 scalar example1.SensorNode[2].nic.mac 	nbTxFrames 	0
 scalar example1.SensorNode[2].nic.mac 	nbRxFrames 	0
@@ -150,11 +150,11 @@ field min 0
 field max 0
 scalar example1.SensorNode[2].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.SensorNode[2].batteryStats 	total 	3477950
+scalar example1.SensorNode[2].batteryStats 	total 	0
 attr unit  mW-s
 scalar example1.SensorNode[2].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.SensorNode[2].batteryStats 	"Mean power consumption" 	28.982916666667
+scalar example1.SensorNode[2].batteryStats 	"Mean power consumption" 	-nan
 attr unit  mW
 scalar example1.SensorNode[3].nic.mac 	nbTxFrames 	0
 scalar example1.SensorNode[3].nic.mac 	nbRxFrames 	0
@@ -192,11 +192,11 @@ field min 0
 field max 0
 scalar example1.SensorNode[3].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.SensorNode[3].batteryStats 	total 	3477950
+scalar example1.SensorNode[3].batteryStats 	total 	0
 attr unit  mW-s
 scalar example1.SensorNode[3].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.SensorNode[3].batteryStats 	"Mean power consumption" 	28.982916666667
+scalar example1.SensorNode[3].batteryStats 	"Mean power consumption" 	-nan
 attr unit  mW
 scalar example1.TempNode[0].nic.mac 	nbTxFrames 	0
 scalar example1.TempNode[0].nic.mac 	nbRxFrames 	0
@@ -234,11 +234,11 @@ field min 0
 field max 0
 scalar example1.TempNode[0].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.TempNode[0].batteryStats 	total 	4878200
+scalar example1.TempNode[0].batteryStats 	total 	800
 attr unit  mW-s
 scalar example1.TempNode[0].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.TempNode[0].batteryStats 	"Mean power consumption" 	40.651666666667
+scalar example1.TempNode[0].batteryStats 	"Mean power consumption" 	inf
 attr unit  mW
 scalar example1.TempNode[1].nic.mac 	nbTxFrames 	0
 scalar example1.TempNode[1].nic.mac 	nbRxFrames 	0
@@ -276,11 +276,11 @@ field min 0
 field max 0
 scalar example1.TempNode[1].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.TempNode[1].batteryStats 	total 	4878200
+scalar example1.TempNode[1].batteryStats 	total 	800
 attr unit  mW-s
 scalar example1.TempNode[1].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.TempNode[1].batteryStats 	"Mean power consumption" 	40.651666666667
+scalar example1.TempNode[1].batteryStats 	"Mean power consumption" 	inf
 attr unit  mW
 scalar example1.TempNode[2].nic.mac 	nbTxFrames 	0
 scalar example1.TempNode[2].nic.mac 	nbRxFrames 	0
@@ -318,11 +318,11 @@ field min 0
 field max 0
 scalar example1.TempNode[2].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.TempNode[2].batteryStats 	total 	4878200
+scalar example1.TempNode[2].batteryStats 	total 	800
 attr unit  mW-s
 scalar example1.TempNode[2].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.TempNode[2].batteryStats 	"Mean power consumption" 	40.651666666667
+scalar example1.TempNode[2].batteryStats 	"Mean power consumption" 	inf
 attr unit  mW
 scalar example1.TempNode[3].nic.mac 	nbTxFrames 	0
 scalar example1.TempNode[3].nic.mac 	nbRxFrames 	0
@@ -360,11 +360,11 @@ field min 0
 field max 0
 scalar example1.TempNode[3].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.TempNode[3].batteryStats 	total 	4878200
+scalar example1.TempNode[3].batteryStats 	total 	800
 attr unit  mW-s
 scalar example1.TempNode[3].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.TempNode[3].batteryStats 	"Mean power consumption" 	40.651666666667
+scalar example1.TempNode[3].batteryStats 	"Mean power consumption" 	inf
 attr unit  mW
 scalar example1.AllNode[0].nic.mac 	nbTxFrames 	0
 scalar example1.AllNode[0].nic.mac 	nbRxFrames 	0
@@ -402,11 +402,11 @@ field min 0
 field max 0
 scalar example1.AllNode[0].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.AllNode[0].batteryStats 	total 	9073250
+scalar example1.AllNode[0].batteryStats 	total 	3200
 attr unit  mW-s
 scalar example1.AllNode[0].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.AllNode[0].batteryStats 	"Mean power consumption" 	75.610416666667
+scalar example1.AllNode[0].batteryStats 	"Mean power consumption" 	inf
 attr unit  mW
 scalar example1.AllNode[1].nic.mac 	nbTxFrames 	0
 scalar example1.AllNode[1].nic.mac 	nbRxFrames 	0
@@ -444,11 +444,11 @@ field min 0
 field max 0
 scalar example1.AllNode[1].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.AllNode[1].batteryStats 	total 	9072950
+scalar example1.AllNode[1].batteryStats 	total 	3200
 attr unit  mW-s
 scalar example1.AllNode[1].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.AllNode[1].batteryStats 	"Mean power consumption" 	75.607916666667
+scalar example1.AllNode[1].batteryStats 	"Mean power consumption" 	inf
 attr unit  mW
 scalar example1.AllNode[2].nic.mac 	nbTxFrames 	0
 scalar example1.AllNode[2].nic.mac 	nbRxFrames 	0
@@ -486,11 +486,11 @@ field min 0
 field max 0
 scalar example1.AllNode[2].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.AllNode[2].batteryStats 	total 	9072050
+scalar example1.AllNode[2].batteryStats 	total 	3200
 attr unit  mW-s
 scalar example1.AllNode[2].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.AllNode[2].batteryStats 	"Mean power consumption" 	75.600416666667
+scalar example1.AllNode[2].batteryStats 	"Mean power consumption" 	inf
 attr unit  mW
 scalar example1.AllNode[3].nic.mac 	nbTxFrames 	0
 scalar example1.AllNode[3].nic.mac 	nbRxFrames 	0
@@ -528,9 +528,9 @@ field min 0
 field max 0
 scalar example1.AllNode[3].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar example1.AllNode[3].batteryStats 	total 	9072050
+scalar example1.AllNode[3].batteryStats 	total 	2800
 attr unit  mW-s
 scalar example1.AllNode[3].batteryStats 	lifetime 	-1
 attr unit  s
-scalar example1.AllNode[3].batteryStats 	"Mean power consumption" 	75.600416666667
+scalar example1.AllNode[3].batteryStats 	"Mean power consumption" 	inf
 attr unit  mW
