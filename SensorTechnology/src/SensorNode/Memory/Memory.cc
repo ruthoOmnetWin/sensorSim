@@ -40,7 +40,6 @@ void Memory::initialize(int stage)
 
 void Memory::handleMessage(cMessage *msg)
 {
-    draw();
     const char* name = msg->getName();
     SimpleSensorData* data = (SimpleSensorData*) msg->getParList().remove(name);
     int value = data->sensorData;
@@ -57,6 +56,7 @@ void Memory::handleMessage(cMessage *msg)
     }
 
     delete(msg);
+    draw();
 }
 
 void Memory::createEntry(std::string type, int value)

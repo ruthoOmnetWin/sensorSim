@@ -66,12 +66,13 @@ Coord* AbstractSensingUnit::getLocation()
 
 int AbstractSensingUnit::readData()
 {
-    draw();
+
     Coord *position = getLocation();
     cModule* Sensor = getParentModule();
     std::string type = Sensor->par("type");
     int data = world->getValueByPosition(type, position);
     delete position;
+    draw();
     return data;
 }
 
