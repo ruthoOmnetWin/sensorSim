@@ -41,6 +41,9 @@ INCLUDE_PATH = \
     -Iexamples/BasicExample \
     -Iexamples/BasicExample/data \
     -Iexamples/BasicExample/results \
+    -Iexamples/SleepVsNoSleep \
+    -Iexamples/SleepVsNoSleep/data \
+    -Iexamples/SleepVsNoSleep/results \
     -Isrc \
     -Isrc/ExtendedMessage \
     -Isrc/SensorNetworkInterface \
@@ -174,6 +177,9 @@ clean:
 	$(Q)-rm -f examples/BasicExample/*_m.cc examples/BasicExample/*_m.h
 	$(Q)-rm -f examples/BasicExample/data/*_m.cc examples/BasicExample/data/*_m.h
 	$(Q)-rm -f examples/BasicExample/results/*_m.cc examples/BasicExample/results/*_m.h
+	$(Q)-rm -f examples/SleepVsNoSleep/*_m.cc examples/SleepVsNoSleep/*_m.h
+	$(Q)-rm -f examples/SleepVsNoSleep/data/*_m.cc examples/SleepVsNoSleep/data/*_m.h
+	$(Q)-rm -f examples/SleepVsNoSleep/results/*_m.cc examples/SleepVsNoSleep/results/*_m.h
 	$(Q)-rm -f src/*_m.cc src/*_m.h
 	$(Q)-rm -f src/ExtendedMessage/*_m.cc src/ExtendedMessage/*_m.h
 	$(Q)-rm -f src/SensorNetworkInterface/*_m.cc src/SensorNetworkInterface/*_m.h
@@ -194,7 +200,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc examples/*.cc examples/AllNodes/*.cc examples/AllNodes/data/*.cc examples/AllNodes/results/*.cc examples/BasicExample/*.cc examples/BasicExample/data/*.cc examples/BasicExample/results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNetworkInterface/*.cc src/SensorNode/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc examples/*.cc examples/AllNodes/*.cc examples/AllNodes/data/*.cc examples/AllNodes/results/*.cc examples/BasicExample/*.cc examples/BasicExample/data/*.cc examples/BasicExample/results/*.cc examples/SleepVsNoSleep/*.cc examples/SleepVsNoSleep/data/*.cc examples/SleepVsNoSleep/results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNetworkInterface/*.cc src/SensorNode/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/src/ExtendedMessage/ExtendedMessage_m.o: src/ExtendedMessage/ExtendedMessage_m.cc \

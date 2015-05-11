@@ -1,0 +1,30 @@
+file 30710 1431340967                                           
+version 2
+run General-0-20150511-12:42:36-10849
+attr configname General
+attr datetime 20150511-12:42:36
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network SleepVsNoSleep
+attr processid 10849
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 3  SleepVsNoSleep.SleepNode[0].Processor  Voltage  ETV
+vector 4  SleepVsNoSleep.SleepNode[0].Processor  residualRelative  ETV
+vector 5  SleepVsNoSleep.SleepNode[0].Processor  residualAbs  ETV
+vector 9  SleepVsNoSleep.NoSleepNode[0].Processor  Voltage  ETV
+vector 10  SleepVsNoSleep.NoSleepNode[0].Processor  residualRelative  ETV
+vector 11  SleepVsNoSleep.NoSleepNode[0].Processor  residualAbs  ETV
+3	778 4502 0 8462 0 143000 299 3 3 897 2691
+4	5280 8839 0 8462 0 143000 299 0.034546296296296 1 151.73982074074 100.94646496108
+5	14119 6303 0 8462 0 143000 299 373100 10800000 1638790064 1.1774395673061e+16
+9	20422 2239 0 3104 0 42000 157 3 3 471 1413
+10	22661 4717 0 3104 0 42000 157 0.013467592592593 1 77.872978703704 52.481276691446
+11	27378 3332 0 3104 0 42000 157 145450 10800000 841028170 6.1214161132903e+15
