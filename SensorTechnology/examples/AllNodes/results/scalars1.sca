@@ -1,0 +1,704 @@
+version 2
+run General-0-20150511-12:33:38-10248
+attr configname General
+attr datetime 20150511-12:33:38
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network AllNodes
+attr processid 10248
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar AllNodes.world 	#sent 	0
+scalar AllNodes.world 	#received 	0
+statistic AllNodes.world 	"hop count"
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr type  int
+bin	-INF	0
+bin	-1	0
+bin	0	0
+bin	1	0
+scalar AllNodes.SensorNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.SensorNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.SensorNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.SensorNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.SensorNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.SensorNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.SensorNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.SensorNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.SensorNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.SensorNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.SensorNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.SensorNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.SensorNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.SensorNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.SensorNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.SensorNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.SensorNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.SensorNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.SensorNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.SensorNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.SensorNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.SensorNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.SensorNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.SensorNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.SensorNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.SensorNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.SensorNode[0].batteryStats 	lifetime 	379320
+attr unit  s
+scalar AllNodes.SensorNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.TNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.TNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.TNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.TNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.TNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.TNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.TNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.TNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.TNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.TNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.TNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.TNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.TNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.TNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.TNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.TNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.TNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.TNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.TNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.TNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.TNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.TNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.TNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.TNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.TNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.TNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.TNode[0].batteryStats 	lifetime 	273420
+attr unit  s
+scalar AllNodes.TNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.PNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.PNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.PNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.PNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.PNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.PNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.PNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.PNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.PNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.PNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.PNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.PNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.PNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.PNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.PNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.PNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.PNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.PNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.PNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.PNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.PNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.PNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.PNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.PNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.PNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.PNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.PNode[0].batteryStats 	lifetime 	273420
+attr unit  s
+scalar AllNodes.PNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.HNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.HNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.HNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.HNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.HNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.HNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.HNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.HNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.HNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.HNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.HNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.HNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.HNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.HNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.HNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.HNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.HNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.HNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.HNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.HNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.HNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.HNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.HNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.HNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.HNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.HNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.HNode[0].batteryStats 	lifetime 	273420
+attr unit  s
+scalar AllNodes.HNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.LNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.LNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.LNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.LNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.LNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.LNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.LNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.LNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.LNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.LNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.LNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.LNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.LNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.LNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.LNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.LNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.LNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.LNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.LNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.LNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.LNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.LNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.LNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.LNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.LNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.LNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.LNode[0].batteryStats 	lifetime 	273420
+attr unit  s
+scalar AllNodes.LNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.TPNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.TPNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.TPNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.TPNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.TPNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.TPNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.TPNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.TPNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.TPNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.TPNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.TPNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.TPNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.TPNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.TPNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.TPNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.TPNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.TPNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.TPNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.TPNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.TPNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.TPNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.TPNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.TPNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.TPNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.TPNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.TPNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.TPNode[0].batteryStats 	lifetime 	210000
+attr unit  s
+scalar AllNodes.TPNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.THNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.THNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.THNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.THNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.THNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.THNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.THNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.THNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.THNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.THNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.THNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.THNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.THNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.THNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.THNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.THNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.THNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.THNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.THNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.THNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.THNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.THNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.THNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.THNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.THNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.THNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.THNode[0].batteryStats 	lifetime 	210000
+attr unit  s
+scalar AllNodes.THNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.TLNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.TLNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.TLNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.TLNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.TLNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.TLNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.TLNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.TLNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.TLNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.TLNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.TLNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.TLNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.TLNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.TLNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.TLNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.TLNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.TLNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.TLNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.TLNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.TLNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.TLNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.TLNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.TLNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.TLNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.TLNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.TLNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.TLNode[0].batteryStats 	lifetime 	210000
+attr unit  s
+scalar AllNodes.TLNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.PHNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.PHNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.PHNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.PHNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.PHNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.PHNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.PHNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.PHNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.PHNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.PHNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.PHNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.PHNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.PHNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.PHNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.PHNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.PHNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.PHNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.PHNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.PHNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.PHNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.PHNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.PHNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.PHNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.PHNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.PHNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.PHNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.PHNode[0].batteryStats 	lifetime 	210000
+attr unit  s
+scalar AllNodes.PHNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.PLNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.PLNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.PLNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.PLNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.PLNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.PLNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.PLNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.PLNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.PLNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.PLNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.PLNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.PLNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.PLNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.PLNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.PLNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.PLNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.PLNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.PLNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.PLNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.PLNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.PLNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.PLNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.PLNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.PLNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.PLNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.PLNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.PLNode[0].batteryStats 	lifetime 	210000
+attr unit  s
+scalar AllNodes.PLNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.HLNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.HLNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.HLNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.HLNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.HLNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.HLNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.HLNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.HLNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.HLNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.HLNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.HLNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.HLNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.HLNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.HLNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.HLNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.HLNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.HLNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.HLNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.HLNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.HLNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.HLNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.HLNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.HLNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.HLNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.HLNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.HLNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.HLNode[0].batteryStats 	lifetime 	210000
+attr unit  s
+scalar AllNodes.HLNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.PHLNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.PHLNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.PHLNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.PHLNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.PHLNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.PHLNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.PHLNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.PHLNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.PHLNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.PHLNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.PHLNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.PHLNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.PHLNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.PHLNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.PHLNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.PHLNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.PHLNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.PHLNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.PHLNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.PHLNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.PHLNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.PHLNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.PHLNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.PHLNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.PHLNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.PHLNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.PHLNode[0].batteryStats 	lifetime 	171060
+attr unit  s
+scalar AllNodes.PHLNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.THLNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.THLNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.THLNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.THLNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.THLNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.THLNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.THLNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.THLNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.THLNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.THLNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.THLNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.THLNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.THLNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.THLNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.THLNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.THLNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.THLNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.THLNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.THLNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.THLNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.THLNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.THLNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.THLNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.THLNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.THLNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.THLNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.THLNode[0].batteryStats 	lifetime 	171060
+attr unit  s
+scalar AllNodes.THLNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.TPLNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.TPLNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.TPLNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.TPLNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.TPLNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.TPLNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.TPLNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.TPLNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.TPLNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.TPLNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.TPLNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.TPLNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.TPLNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.TPLNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.TPLNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.TPLNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.TPLNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.TPLNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.TPLNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.TPLNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.TPLNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.TPLNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.TPLNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.TPLNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.TPLNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.TPLNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.TPLNode[0].batteryStats 	lifetime 	171060
+attr unit  s
+scalar AllNodes.TPLNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.TPHNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.TPHNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.TPHNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.TPHNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.TPHNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.TPHNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.TPHNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.TPHNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.TPHNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.TPHNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.TPHNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.TPHNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.TPHNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.TPHNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.TPHNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.TPHNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.TPHNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.TPHNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.TPHNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.TPHNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.TPHNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.TPHNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.TPHNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.TPHNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.TPHNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.TPHNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.TPHNode[0].batteryStats 	lifetime 	171060
+attr unit  s
+scalar AllNodes.TPHNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW
+scalar AllNodes.TPHLNode[0].nic.mac 	nbTxFrames 	0
+scalar AllNodes.TPHLNode[0].nic.mac 	nbRxFrames 	0
+scalar AllNodes.TPHLNode[0].nic.mac 	nbDroppedFrames 	0
+scalar AllNodes.TPHLNode[0].nic.mac 	nbMissedAcks 	0
+scalar AllNodes.TPHLNode[0].nic.mac 	nbRecvdAcks 	0
+scalar AllNodes.TPHLNode[0].nic.mac 	nbTxAcks 	0
+scalar AllNodes.TPHLNode[0].nic.mac 	nbDuplicates 	0
+scalar AllNodes.TPHLNode[0].nic.mac 	meanBackoff 	0
+scalar AllNodes.TPHLNode[0].nic.mac 	nbBackoffs 	0
+scalar AllNodes.TPHLNode[0].nic.mac 	backoffDurations 	0
+scalar AllNodes.TPHLNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar AllNodes.TPHLNode[0].nic.phy 	nbFramesWithoutInterference 	0
+scalar AllNodes.TPHLNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar AllNodes.TPHLNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar AllNodes.TPHLNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar AllNodes.TPHLNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar AllNodes.TPHLNode[0].tranl 	nbAggrPktReceived 	0
+scalar AllNodes.TPHLNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar AllNodes.TPHLNode[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar AllNodes.TPHLNode[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar AllNodes.TPHLNode[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar AllNodes.TPHLNode[0].appl 	nbPacketsSent 	0
+scalar AllNodes.TPHLNode[0].appl 	nbPacketsReceived 	0
+statistic AllNodes.TPHLNode[0].appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar AllNodes.TPHLNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar AllNodes.TPHLNode[0].batteryStats 	total 	10800000
+attr unit  mW-s
+scalar AllNodes.TPHLNode[0].batteryStats 	lifetime 	144780
+attr unit  s
+scalar AllNodes.TPHLNode[0].batteryStats 	"Mean power consumption" 	16.534999081389
+attr unit  mW

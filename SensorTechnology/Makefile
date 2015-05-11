@@ -35,11 +35,12 @@ INCLUDE_PATH = \
     -Idoc/doxy/search \
     -Idoc/neddoc \
     -Iexamples \
+    -Iexamples/AllNodes \
+    -Iexamples/AllNodes/data \
+    -Iexamples/AllNodes/results \
     -Iexamples/BasicExample \
     -Iexamples/BasicExample/data \
-    -Iexamples/example1 \
-    -Iexamples/example1/data \
-    -Iexamples/example1/results \
+    -Iexamples/BasicExample/results \
     -Isrc \
     -Isrc/ExtendedMessage \
     -Isrc/SensorNetworkInterface \
@@ -167,11 +168,12 @@ clean:
 	$(Q)-rm -f doc/doxy/search/*_m.cc doc/doxy/search/*_m.h
 	$(Q)-rm -f doc/neddoc/*_m.cc doc/neddoc/*_m.h
 	$(Q)-rm -f examples/*_m.cc examples/*_m.h
+	$(Q)-rm -f examples/AllNodes/*_m.cc examples/AllNodes/*_m.h
+	$(Q)-rm -f examples/AllNodes/data/*_m.cc examples/AllNodes/data/*_m.h
+	$(Q)-rm -f examples/AllNodes/results/*_m.cc examples/AllNodes/results/*_m.h
 	$(Q)-rm -f examples/BasicExample/*_m.cc examples/BasicExample/*_m.h
 	$(Q)-rm -f examples/BasicExample/data/*_m.cc examples/BasicExample/data/*_m.h
-	$(Q)-rm -f examples/example1/*_m.cc examples/example1/*_m.h
-	$(Q)-rm -f examples/example1/data/*_m.cc examples/example1/data/*_m.h
-	$(Q)-rm -f examples/example1/results/*_m.cc examples/example1/results/*_m.h
+	$(Q)-rm -f examples/BasicExample/results/*_m.cc examples/BasicExample/results/*_m.h
 	$(Q)-rm -f src/*_m.cc src/*_m.h
 	$(Q)-rm -f src/ExtendedMessage/*_m.cc src/ExtendedMessage/*_m.h
 	$(Q)-rm -f src/SensorNetworkInterface/*_m.cc src/SensorNetworkInterface/*_m.h
@@ -192,7 +194,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc examples/*.cc examples/BasicExample/*.cc examples/BasicExample/data/*.cc examples/example1/*.cc examples/example1/data/*.cc examples/example1/results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNetworkInterface/*.cc src/SensorNode/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc examples/*.cc examples/AllNodes/*.cc examples/AllNodes/data/*.cc examples/AllNodes/results/*.cc examples/BasicExample/*.cc examples/BasicExample/data/*.cc examples/BasicExample/results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNetworkInterface/*.cc src/SensorNode/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/src/ExtendedMessage/ExtendedMessage_m.o: src/ExtendedMessage/ExtendedMessage_m.cc \

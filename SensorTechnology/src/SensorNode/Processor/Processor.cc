@@ -123,7 +123,6 @@ void Processor::initialize(int stage)
 void Processor::handleMessage(cMessage *msg)
 {
     std::string name = msg->getName();
-    draw();
     if (msg->isSelfMessage()) {
         if (name == "startSensingUnit") {
             schedulePeriodicSelfMessage(msg, sensing);
@@ -150,6 +149,7 @@ void Processor::handleMessage(cMessage *msg)
         }
         EV << "Got Message: " << msg->getName() << endl;
     }
+    draw();
 }
 
 /**
@@ -159,9 +159,14 @@ void Processor::schedulePeriodicSelfMessage(cMessage *msg, int intervallType)
 {
     if (intervallType == sensing && sensingIntervall) {
         simtime_t scheduleTime = simTime() + sensingIntervall;
-        scheduleAt(scheduleTime , msg);
-    }
-    if (intervallType == shiftProcessorMode) {
+        //delete msg;
+        hasTemperatureSensor;
+        hasHumiditySensor;
+        hasPressureSensor;
+        hasLightSensor;
+        scheduleAt(scheduleTime , selfMessageMeasure);
+
+    } else if (intervallType == shiftProcessorMode) {
         int addedTime = 0;
         if (getProcessorMode() == NORMAL) {
             addedTime = shiftProcessorModeNormalIntervall;
@@ -172,8 +177,7 @@ void Processor::schedulePeriodicSelfMessage(cMessage *msg, int intervallType)
         }
         simtime_t scheduleTime = simTime() + addedTime;
         scheduleAt(scheduleTime , msg);
-    }
-    if (intervallType == collectStatistics && collectStatisticsIntervall) {
+    } else if (intervallType == collectStatistics && collectStatisticsIntervall) {
         simtime_t scheduleTime = simTime() + collectStatisticsIntervall;
         scheduleAt(scheduleTime , msg);
     }
