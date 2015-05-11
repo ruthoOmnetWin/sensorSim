@@ -1,14 +1,14 @@
 version 2
-run General-0-20150511-13:58:24-17122
+run General-0-20150511-14:05:46-18070
 attr configname General
-attr datetime 20150511-13:58:24
+attr datetime 20150511-14:05:46
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network BasicExample
-attr processid 17122
+attr processid 18070
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -30,18 +30,288 @@ bin	-INF	0
 bin	-1	0
 bin	0	0
 bin	1	0
+scalar BasicExample.SensorNode[0].nic.mac 	nbTxFrames 	4
+scalar BasicExample.SensorNode[0].nic.mac 	nbRxFrames 	5
+scalar BasicExample.SensorNode[0].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.SensorNode[0].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.SensorNode[0].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.SensorNode[0].nic.mac 	nbTxAcks 	0
+scalar BasicExample.SensorNode[0].nic.mac 	nbDuplicates 	0
+scalar BasicExample.SensorNode[0].nic.mac 	meanBackoff 	0.59
+scalar BasicExample.SensorNode[0].nic.mac 	nbBackoffs 	4
+scalar BasicExample.SensorNode[0].nic.mac 	backoffDurations 	2.36
+scalar BasicExample.SensorNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.SensorNode[0].nic.phy 	nbFramesWithoutInterference 	5
+scalar BasicExample.SensorNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.SensorNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.SensorNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.SensorNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.SensorNode[0].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.SensorNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.SensorNode[0].appl 	dropped 	0
+scalar BasicExample.SensorNode[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar BasicExample.SensorNode[0].batteryStats 	total 	4550700
+attr unit  mW-s
+scalar BasicExample.SensorNode[0].batteryStats 	lifetime 	-1
+attr unit  s
+scalar BasicExample.SensorNode[0].batteryStats 	"Mean power consumption" 	91.014
+attr unit  mW
+scalar BasicExample.SensorNode[1].nic.mac 	nbTxFrames 	3
+scalar BasicExample.SensorNode[1].nic.mac 	nbRxFrames 	42
+scalar BasicExample.SensorNode[1].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.SensorNode[1].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.SensorNode[1].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.SensorNode[1].nic.mac 	nbTxAcks 	0
+scalar BasicExample.SensorNode[1].nic.mac 	nbDuplicates 	0
+scalar BasicExample.SensorNode[1].nic.mac 	meanBackoff 	0.61333333333333
+scalar BasicExample.SensorNode[1].nic.mac 	nbBackoffs 	3
+scalar BasicExample.SensorNode[1].nic.mac 	backoffDurations 	1.84
+scalar BasicExample.SensorNode[1].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.SensorNode[1].nic.phy 	nbFramesWithoutInterference 	42
+scalar BasicExample.SensorNode[1].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.SensorNode[1].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.SensorNode[1].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.SensorNode[1].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.SensorNode[1].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.SensorNode[1].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.SensorNode[1].appl 	dropped 	0
+scalar BasicExample.SensorNode[1].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar BasicExample.SensorNode[1].batteryStats 	total 	4550450
+attr unit  mW-s
+scalar BasicExample.SensorNode[1].batteryStats 	lifetime 	-1
+attr unit  s
+scalar BasicExample.SensorNode[1].batteryStats 	"Mean power consumption" 	91.009
+attr unit  mW
+scalar BasicExample.SensorNode[2].nic.mac 	nbTxFrames 	5
+scalar BasicExample.SensorNode[2].nic.mac 	nbRxFrames 	28
+scalar BasicExample.SensorNode[2].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.SensorNode[2].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.SensorNode[2].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.SensorNode[2].nic.mac 	nbTxAcks 	0
+scalar BasicExample.SensorNode[2].nic.mac 	nbDuplicates 	0
+scalar BasicExample.SensorNode[2].nic.mac 	meanBackoff 	0.408
+scalar BasicExample.SensorNode[2].nic.mac 	nbBackoffs 	5
+scalar BasicExample.SensorNode[2].nic.mac 	backoffDurations 	2.04
+scalar BasicExample.SensorNode[2].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.SensorNode[2].nic.phy 	nbFramesWithoutInterference 	28
+scalar BasicExample.SensorNode[2].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.SensorNode[2].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.SensorNode[2].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.SensorNode[2].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.SensorNode[2].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.SensorNode[2].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.SensorNode[2].appl 	dropped 	0
+scalar BasicExample.SensorNode[2].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar BasicExample.SensorNode[2].batteryStats 	total 	4550450
+attr unit  mW-s
+scalar BasicExample.SensorNode[2].batteryStats 	lifetime 	-1
+attr unit  s
+scalar BasicExample.SensorNode[2].batteryStats 	"Mean power consumption" 	91.009
+attr unit  mW
+scalar BasicExample.SensorNode[3].nic.mac 	nbTxFrames 	4
+scalar BasicExample.SensorNode[3].nic.mac 	nbRxFrames 	35
+scalar BasicExample.SensorNode[3].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.SensorNode[3].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.SensorNode[3].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.SensorNode[3].nic.mac 	nbTxAcks 	0
+scalar BasicExample.SensorNode[3].nic.mac 	nbDuplicates 	0
+scalar BasicExample.SensorNode[3].nic.mac 	meanBackoff 	0.57
+scalar BasicExample.SensorNode[3].nic.mac 	nbBackoffs 	4
+scalar BasicExample.SensorNode[3].nic.mac 	backoffDurations 	2.28
+scalar BasicExample.SensorNode[3].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.SensorNode[3].nic.phy 	nbFramesWithoutInterference 	35
+scalar BasicExample.SensorNode[3].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.SensorNode[3].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.SensorNode[3].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.SensorNode[3].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.SensorNode[3].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.SensorNode[3].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.SensorNode[3].appl 	dropped 	0
+scalar BasicExample.SensorNode[3].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar BasicExample.SensorNode[3].batteryStats 	total 	4550450
+attr unit  mW-s
+scalar BasicExample.SensorNode[3].batteryStats 	lifetime 	-1
+attr unit  s
+scalar BasicExample.SensorNode[3].batteryStats 	"Mean power consumption" 	91.009
+attr unit  mW
+scalar BasicExample.SensorNode[4].nic.mac 	nbTxFrames 	6
+scalar BasicExample.SensorNode[4].nic.mac 	nbRxFrames 	42
+scalar BasicExample.SensorNode[4].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.SensorNode[4].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.SensorNode[4].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.SensorNode[4].nic.mac 	nbTxAcks 	0
+scalar BasicExample.SensorNode[4].nic.mac 	nbDuplicates 	0
+scalar BasicExample.SensorNode[4].nic.mac 	meanBackoff 	0.46
+scalar BasicExample.SensorNode[4].nic.mac 	nbBackoffs 	6
+scalar BasicExample.SensorNode[4].nic.mac 	backoffDurations 	2.76
+scalar BasicExample.SensorNode[4].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.SensorNode[4].nic.phy 	nbFramesWithoutInterference 	42
+scalar BasicExample.SensorNode[4].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.SensorNode[4].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.SensorNode[4].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.SensorNode[4].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.SensorNode[4].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.SensorNode[4].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.SensorNode[4].appl 	dropped 	0
+scalar BasicExample.SensorNode[4].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar BasicExample.SensorNode[4].batteryStats 	total 	4550450
+attr unit  mW-s
+scalar BasicExample.SensorNode[4].batteryStats 	lifetime 	-1
+attr unit  s
+scalar BasicExample.SensorNode[4].batteryStats 	"Mean power consumption" 	91.009
+attr unit  mW
+scalar BasicExample.SensorNode[5].nic.mac 	nbTxFrames 	4
+scalar BasicExample.SensorNode[5].nic.mac 	nbRxFrames 	20
+scalar BasicExample.SensorNode[5].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.SensorNode[5].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.SensorNode[5].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.SensorNode[5].nic.mac 	nbTxAcks 	0
+scalar BasicExample.SensorNode[5].nic.mac 	nbDuplicates 	0
+scalar BasicExample.SensorNode[5].nic.mac 	meanBackoff 	0.45
+scalar BasicExample.SensorNode[5].nic.mac 	nbBackoffs 	4
+scalar BasicExample.SensorNode[5].nic.mac 	backoffDurations 	1.8
+scalar BasicExample.SensorNode[5].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.SensorNode[5].nic.phy 	nbFramesWithoutInterference 	20
+scalar BasicExample.SensorNode[5].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.SensorNode[5].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.SensorNode[5].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.SensorNode[5].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.SensorNode[5].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.SensorNode[5].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.SensorNode[5].appl 	dropped 	0
+scalar BasicExample.SensorNode[5].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar BasicExample.SensorNode[5].batteryStats 	total 	4550450
+attr unit  mW-s
+scalar BasicExample.SensorNode[5].batteryStats 	lifetime 	-1
+attr unit  s
+scalar BasicExample.SensorNode[5].batteryStats 	"Mean power consumption" 	91.009
+attr unit  mW
+scalar BasicExample.SensorNode[6].nic.mac 	nbTxFrames 	4
+scalar BasicExample.SensorNode[6].nic.mac 	nbRxFrames 	32
+scalar BasicExample.SensorNode[6].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.SensorNode[6].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.SensorNode[6].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.SensorNode[6].nic.mac 	nbTxAcks 	0
+scalar BasicExample.SensorNode[6].nic.mac 	nbDuplicates 	0
+scalar BasicExample.SensorNode[6].nic.mac 	meanBackoff 	0.41
+scalar BasicExample.SensorNode[6].nic.mac 	nbBackoffs 	4
+scalar BasicExample.SensorNode[6].nic.mac 	backoffDurations 	1.64
+scalar BasicExample.SensorNode[6].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.SensorNode[6].nic.phy 	nbFramesWithoutInterference 	32
+scalar BasicExample.SensorNode[6].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.SensorNode[6].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.SensorNode[6].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.SensorNode[6].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.SensorNode[6].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.SensorNode[6].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.SensorNode[6].appl 	dropped 	0
+scalar BasicExample.SensorNode[6].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar BasicExample.SensorNode[6].batteryStats 	total 	4550450
+attr unit  mW-s
+scalar BasicExample.SensorNode[6].batteryStats 	lifetime 	-1
+attr unit  s
+scalar BasicExample.SensorNode[6].batteryStats 	"Mean power consumption" 	91.009
+attr unit  mW
+scalar BasicExample.SensorNode[7].nic.mac 	nbTxFrames 	4
+scalar BasicExample.SensorNode[7].nic.mac 	nbRxFrames 	57
+scalar BasicExample.SensorNode[7].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.SensorNode[7].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.SensorNode[7].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.SensorNode[7].nic.mac 	nbTxAcks 	0
+scalar BasicExample.SensorNode[7].nic.mac 	nbDuplicates 	0
+scalar BasicExample.SensorNode[7].nic.mac 	meanBackoff 	0.54
+scalar BasicExample.SensorNode[7].nic.mac 	nbBackoffs 	4
+scalar BasicExample.SensorNode[7].nic.mac 	backoffDurations 	2.16
+scalar BasicExample.SensorNode[7].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.SensorNode[7].nic.phy 	nbFramesWithoutInterference 	57
+scalar BasicExample.SensorNode[7].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.SensorNode[7].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.SensorNode[7].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.SensorNode[7].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.SensorNode[7].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.SensorNode[7].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.SensorNode[7].appl 	dropped 	0
+scalar BasicExample.SensorNode[7].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar BasicExample.SensorNode[7].batteryStats 	total 	4550450
+attr unit  mW-s
+scalar BasicExample.SensorNode[7].batteryStats 	lifetime 	-1
+attr unit  s
+scalar BasicExample.SensorNode[7].batteryStats 	"Mean power consumption" 	91.009
+attr unit  mW
+scalar BasicExample.SensorNode[8].nic.mac 	nbTxFrames 	5
+scalar BasicExample.SensorNode[8].nic.mac 	nbRxFrames 	39
+scalar BasicExample.SensorNode[8].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.SensorNode[8].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.SensorNode[8].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.SensorNode[8].nic.mac 	nbTxAcks 	0
+scalar BasicExample.SensorNode[8].nic.mac 	nbDuplicates 	0
+scalar BasicExample.SensorNode[8].nic.mac 	meanBackoff 	0.384
+scalar BasicExample.SensorNode[8].nic.mac 	nbBackoffs 	5
+scalar BasicExample.SensorNode[8].nic.mac 	backoffDurations 	1.92
+scalar BasicExample.SensorNode[8].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.SensorNode[8].nic.phy 	nbFramesWithoutInterference 	39
+scalar BasicExample.SensorNode[8].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.SensorNode[8].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.SensorNode[8].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.SensorNode[8].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.SensorNode[8].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.SensorNode[8].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.SensorNode[8].appl 	dropped 	0
+scalar BasicExample.SensorNode[8].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar BasicExample.SensorNode[8].batteryStats 	total 	4550450
+attr unit  mW-s
+scalar BasicExample.SensorNode[8].batteryStats 	lifetime 	-1
+attr unit  s
+scalar BasicExample.SensorNode[8].batteryStats 	"Mean power consumption" 	91.009
+attr unit  mW
+scalar BasicExample.SensorNode[9].nic.mac 	nbTxFrames 	4
+scalar BasicExample.SensorNode[9].nic.mac 	nbRxFrames 	50
+scalar BasicExample.SensorNode[9].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.SensorNode[9].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.SensorNode[9].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.SensorNode[9].nic.mac 	nbTxAcks 	0
+scalar BasicExample.SensorNode[9].nic.mac 	nbDuplicates 	0
+scalar BasicExample.SensorNode[9].nic.mac 	meanBackoff 	0.4
+scalar BasicExample.SensorNode[9].nic.mac 	nbBackoffs 	4
+scalar BasicExample.SensorNode[9].nic.mac 	backoffDurations 	1.6
+scalar BasicExample.SensorNode[9].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.SensorNode[9].nic.phy 	nbFramesWithoutInterference 	50
+scalar BasicExample.SensorNode[9].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.SensorNode[9].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.SensorNode[9].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.SensorNode[9].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.SensorNode[9].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.SensorNode[9].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.SensorNode[9].appl 	dropped 	0
+scalar BasicExample.SensorNode[9].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar BasicExample.SensorNode[9].batteryStats 	total 	4550450
+attr unit  mW-s
+scalar BasicExample.SensorNode[9].batteryStats 	lifetime 	-1
+attr unit  s
+scalar BasicExample.SensorNode[9].batteryStats 	"Mean power consumption" 	91.009
+attr unit  mW
 scalar BasicExample.TempNode[0].nic.mac 	nbTxFrames 	6
-scalar BasicExample.TempNode[0].nic.mac 	nbRxFrames 	6
+scalar BasicExample.TempNode[0].nic.mac 	nbRxFrames 	47
 scalar BasicExample.TempNode[0].nic.mac 	nbDroppedFrames 	0
 scalar BasicExample.TempNode[0].nic.mac 	nbMissedAcks 	0
 scalar BasicExample.TempNode[0].nic.mac 	nbRecvdAcks 	0
 scalar BasicExample.TempNode[0].nic.mac 	nbTxAcks 	0
 scalar BasicExample.TempNode[0].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[0].nic.mac 	meanBackoff 	0.58
+scalar BasicExample.TempNode[0].nic.mac 	meanBackoff 	0.34666666666667
 scalar BasicExample.TempNode[0].nic.mac 	nbBackoffs 	6
-scalar BasicExample.TempNode[0].nic.mac 	backoffDurations 	3.48
+scalar BasicExample.TempNode[0].nic.mac 	backoffDurations 	2.08
 scalar BasicExample.TempNode[0].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[0].nic.phy 	nbFramesWithoutInterference 	6
+scalar BasicExample.TempNode[0].nic.phy 	nbFramesWithoutInterference 	47
 scalar BasicExample.TempNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar BasicExample.TempNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar BasicExample.TempNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -51,24 +321,24 @@ scalar BasicExample.TempNode[0].tranl 	"nbAggrPktSentDown " 	0
 scalar BasicExample.TempNode[0].appl 	dropped 	0
 scalar BasicExample.TempNode[0].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[0].batteryStats 	total 	10678000
+scalar BasicExample.TempNode[0].batteryStats 	total 	6863950
 attr unit  mW-s
 scalar BasicExample.TempNode[0].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[0].batteryStats 	"Mean power consumption" 	177.96666666667
+scalar BasicExample.TempNode[0].batteryStats 	"Mean power consumption" 	137.279
 attr unit  mW
-scalar BasicExample.TempNode[1].nic.mac 	nbTxFrames 	5
-scalar BasicExample.TempNode[1].nic.mac 	nbRxFrames 	51
+scalar BasicExample.TempNode[1].nic.mac 	nbTxFrames 	4
+scalar BasicExample.TempNode[1].nic.mac 	nbRxFrames 	49
 scalar BasicExample.TempNode[1].nic.mac 	nbDroppedFrames 	0
 scalar BasicExample.TempNode[1].nic.mac 	nbMissedAcks 	0
 scalar BasicExample.TempNode[1].nic.mac 	nbRecvdAcks 	0
 scalar BasicExample.TempNode[1].nic.mac 	nbTxAcks 	0
 scalar BasicExample.TempNode[1].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[1].nic.mac 	meanBackoff 	0.456
-scalar BasicExample.TempNode[1].nic.mac 	nbBackoffs 	5
-scalar BasicExample.TempNode[1].nic.mac 	backoffDurations 	2.28
+scalar BasicExample.TempNode[1].nic.mac 	meanBackoff 	0.36
+scalar BasicExample.TempNode[1].nic.mac 	nbBackoffs 	4
+scalar BasicExample.TempNode[1].nic.mac 	backoffDurations 	1.44
 scalar BasicExample.TempNode[1].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[1].nic.phy 	nbFramesWithoutInterference 	51
+scalar BasicExample.TempNode[1].nic.phy 	nbFramesWithoutInterference 	49
 scalar BasicExample.TempNode[1].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar BasicExample.TempNode[1].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar BasicExample.TempNode[1].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -78,24 +348,24 @@ scalar BasicExample.TempNode[1].tranl 	"nbAggrPktSentDown " 	0
 scalar BasicExample.TempNode[1].appl 	dropped 	0
 scalar BasicExample.TempNode[1].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[1].batteryStats 	total 	10678000
+scalar BasicExample.TempNode[1].batteryStats 	total 	6863950
 attr unit  mW-s
 scalar BasicExample.TempNode[1].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[1].batteryStats 	"Mean power consumption" 	177.96666666667
+scalar BasicExample.TempNode[1].batteryStats 	"Mean power consumption" 	137.279
 attr unit  mW
-scalar BasicExample.TempNode[2].nic.mac 	nbTxFrames 	7
-scalar BasicExample.TempNode[2].nic.mac 	nbRxFrames 	32
+scalar BasicExample.TempNode[2].nic.mac 	nbTxFrames 	5
+scalar BasicExample.TempNode[2].nic.mac 	nbRxFrames 	13
 scalar BasicExample.TempNode[2].nic.mac 	nbDroppedFrames 	0
 scalar BasicExample.TempNode[2].nic.mac 	nbMissedAcks 	0
 scalar BasicExample.TempNode[2].nic.mac 	nbRecvdAcks 	0
 scalar BasicExample.TempNode[2].nic.mac 	nbTxAcks 	0
 scalar BasicExample.TempNode[2].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[2].nic.mac 	meanBackoff 	0.36571428571429
-scalar BasicExample.TempNode[2].nic.mac 	nbBackoffs 	7
-scalar BasicExample.TempNode[2].nic.mac 	backoffDurations 	2.56
+scalar BasicExample.TempNode[2].nic.mac 	meanBackoff 	0.296
+scalar BasicExample.TempNode[2].nic.mac 	nbBackoffs 	5
+scalar BasicExample.TempNode[2].nic.mac 	backoffDurations 	1.48
 scalar BasicExample.TempNode[2].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[2].nic.phy 	nbFramesWithoutInterference 	32
+scalar BasicExample.TempNode[2].nic.phy 	nbFramesWithoutInterference 	13
 scalar BasicExample.TempNode[2].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar BasicExample.TempNode[2].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar BasicExample.TempNode[2].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -105,24 +375,24 @@ scalar BasicExample.TempNode[2].tranl 	"nbAggrPktSentDown " 	0
 scalar BasicExample.TempNode[2].appl 	dropped 	0
 scalar BasicExample.TempNode[2].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[2].batteryStats 	total 	10678000
+scalar BasicExample.TempNode[2].batteryStats 	total 	6863950
 attr unit  mW-s
 scalar BasicExample.TempNode[2].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[2].batteryStats 	"Mean power consumption" 	177.96666666667
+scalar BasicExample.TempNode[2].batteryStats 	"Mean power consumption" 	137.279
 attr unit  mW
 scalar BasicExample.TempNode[3].nic.mac 	nbTxFrames 	5
-scalar BasicExample.TempNode[3].nic.mac 	nbRxFrames 	44
+scalar BasicExample.TempNode[3].nic.mac 	nbRxFrames 	34
 scalar BasicExample.TempNode[3].nic.mac 	nbDroppedFrames 	0
 scalar BasicExample.TempNode[3].nic.mac 	nbMissedAcks 	0
 scalar BasicExample.TempNode[3].nic.mac 	nbRecvdAcks 	0
 scalar BasicExample.TempNode[3].nic.mac 	nbTxAcks 	0
 scalar BasicExample.TempNode[3].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[3].nic.mac 	meanBackoff 	0.536
+scalar BasicExample.TempNode[3].nic.mac 	meanBackoff 	0.384
 scalar BasicExample.TempNode[3].nic.mac 	nbBackoffs 	5
-scalar BasicExample.TempNode[3].nic.mac 	backoffDurations 	2.68
+scalar BasicExample.TempNode[3].nic.mac 	backoffDurations 	1.92
 scalar BasicExample.TempNode[3].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[3].nic.phy 	nbFramesWithoutInterference 	44
+scalar BasicExample.TempNode[3].nic.phy 	nbFramesWithoutInterference 	34
 scalar BasicExample.TempNode[3].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar BasicExample.TempNode[3].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar BasicExample.TempNode[3].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -132,24 +402,24 @@ scalar BasicExample.TempNode[3].tranl 	"nbAggrPktSentDown " 	0
 scalar BasicExample.TempNode[3].appl 	dropped 	0
 scalar BasicExample.TempNode[3].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[3].batteryStats 	total 	10678000
+scalar BasicExample.TempNode[3].batteryStats 	total 	6863950
 attr unit  mW-s
 scalar BasicExample.TempNode[3].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[3].batteryStats 	"Mean power consumption" 	177.96666666667
+scalar BasicExample.TempNode[3].batteryStats 	"Mean power consumption" 	137.279
 attr unit  mW
-scalar BasicExample.TempNode[4].nic.mac 	nbTxFrames 	6
-scalar BasicExample.TempNode[4].nic.mac 	nbRxFrames 	54
+scalar BasicExample.TempNode[4].nic.mac 	nbTxFrames 	5
+scalar BasicExample.TempNode[4].nic.mac 	nbRxFrames 	20
 scalar BasicExample.TempNode[4].nic.mac 	nbDroppedFrames 	0
 scalar BasicExample.TempNode[4].nic.mac 	nbMissedAcks 	0
 scalar BasicExample.TempNode[4].nic.mac 	nbRecvdAcks 	0
 scalar BasicExample.TempNode[4].nic.mac 	nbTxAcks 	0
 scalar BasicExample.TempNode[4].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[4].nic.mac 	meanBackoff 	0.46
-scalar BasicExample.TempNode[4].nic.mac 	nbBackoffs 	6
-scalar BasicExample.TempNode[4].nic.mac 	backoffDurations 	2.76
+scalar BasicExample.TempNode[4].nic.mac 	meanBackoff 	0.432
+scalar BasicExample.TempNode[4].nic.mac 	nbBackoffs 	5
+scalar BasicExample.TempNode[4].nic.mac 	backoffDurations 	2.16
 scalar BasicExample.TempNode[4].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[4].nic.phy 	nbFramesWithoutInterference 	54
+scalar BasicExample.TempNode[4].nic.phy 	nbFramesWithoutInterference 	20
 scalar BasicExample.TempNode[4].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar BasicExample.TempNode[4].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar BasicExample.TempNode[4].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -159,24 +429,24 @@ scalar BasicExample.TempNode[4].tranl 	"nbAggrPktSentDown " 	0
 scalar BasicExample.TempNode[4].appl 	dropped 	0
 scalar BasicExample.TempNode[4].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[4].batteryStats 	total 	10678000
+scalar BasicExample.TempNode[4].batteryStats 	total 	6863950
 attr unit  mW-s
 scalar BasicExample.TempNode[4].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[4].batteryStats 	"Mean power consumption" 	177.96666666667
+scalar BasicExample.TempNode[4].batteryStats 	"Mean power consumption" 	137.279
 attr unit  mW
-scalar BasicExample.TempNode[5].nic.mac 	nbTxFrames 	5
-scalar BasicExample.TempNode[5].nic.mac 	nbRxFrames 	22
+scalar BasicExample.TempNode[5].nic.mac 	nbTxFrames 	4
+scalar BasicExample.TempNode[5].nic.mac 	nbRxFrames 	32
 scalar BasicExample.TempNode[5].nic.mac 	nbDroppedFrames 	0
 scalar BasicExample.TempNode[5].nic.mac 	nbMissedAcks 	0
 scalar BasicExample.TempNode[5].nic.mac 	nbRecvdAcks 	0
 scalar BasicExample.TempNode[5].nic.mac 	nbTxAcks 	0
 scalar BasicExample.TempNode[5].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[5].nic.mac 	meanBackoff 	0.408
-scalar BasicExample.TempNode[5].nic.mac 	nbBackoffs 	5
-scalar BasicExample.TempNode[5].nic.mac 	backoffDurations 	2.04
+scalar BasicExample.TempNode[5].nic.mac 	meanBackoff 	0.44
+scalar BasicExample.TempNode[5].nic.mac 	nbBackoffs 	4
+scalar BasicExample.TempNode[5].nic.mac 	backoffDurations 	1.76
 scalar BasicExample.TempNode[5].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[5].nic.phy 	nbFramesWithoutInterference 	22
+scalar BasicExample.TempNode[5].nic.phy 	nbFramesWithoutInterference 	32
 scalar BasicExample.TempNode[5].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar BasicExample.TempNode[5].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar BasicExample.TempNode[5].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -186,24 +456,24 @@ scalar BasicExample.TempNode[5].tranl 	"nbAggrPktSentDown " 	0
 scalar BasicExample.TempNode[5].appl 	dropped 	0
 scalar BasicExample.TempNode[5].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[5].batteryStats 	total 	10678000
+scalar BasicExample.TempNode[5].batteryStats 	total 	6863950
 attr unit  mW-s
 scalar BasicExample.TempNode[5].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[5].batteryStats 	"Mean power consumption" 	177.96666666667
+scalar BasicExample.TempNode[5].batteryStats 	"Mean power consumption" 	137.279
 attr unit  mW
-scalar BasicExample.TempNode[6].nic.mac 	nbTxFrames 	4
-scalar BasicExample.TempNode[6].nic.mac 	nbRxFrames 	39
+scalar BasicExample.TempNode[6].nic.mac 	nbTxFrames 	5
+scalar BasicExample.TempNode[6].nic.mac 	nbRxFrames 	33
 scalar BasicExample.TempNode[6].nic.mac 	nbDroppedFrames 	0
 scalar BasicExample.TempNode[6].nic.mac 	nbMissedAcks 	0
 scalar BasicExample.TempNode[6].nic.mac 	nbRecvdAcks 	0
 scalar BasicExample.TempNode[6].nic.mac 	nbTxAcks 	0
 scalar BasicExample.TempNode[6].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[6].nic.mac 	meanBackoff 	0.41
-scalar BasicExample.TempNode[6].nic.mac 	nbBackoffs 	4
-scalar BasicExample.TempNode[6].nic.mac 	backoffDurations 	1.64
+scalar BasicExample.TempNode[6].nic.mac 	meanBackoff 	0.32
+scalar BasicExample.TempNode[6].nic.mac 	nbBackoffs 	5
+scalar BasicExample.TempNode[6].nic.mac 	backoffDurations 	1.6
 scalar BasicExample.TempNode[6].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[6].nic.phy 	nbFramesWithoutInterference 	39
+scalar BasicExample.TempNode[6].nic.phy 	nbFramesWithoutInterference 	33
 scalar BasicExample.TempNode[6].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar BasicExample.TempNode[6].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar BasicExample.TempNode[6].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -213,24 +483,24 @@ scalar BasicExample.TempNode[6].tranl 	"nbAggrPktSentDown " 	0
 scalar BasicExample.TempNode[6].appl 	dropped 	0
 scalar BasicExample.TempNode[6].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[6].batteryStats 	total 	10678000
+scalar BasicExample.TempNode[6].batteryStats 	total 	6863950
 attr unit  mW-s
 scalar BasicExample.TempNode[6].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[6].batteryStats 	"Mean power consumption" 	177.96666666667
+scalar BasicExample.TempNode[6].batteryStats 	"Mean power consumption" 	137.279
 attr unit  mW
-scalar BasicExample.TempNode[7].nic.mac 	nbTxFrames 	6
-scalar BasicExample.TempNode[7].nic.mac 	nbRxFrames 	69
+scalar BasicExample.TempNode[7].nic.mac 	nbTxFrames 	3
+scalar BasicExample.TempNode[7].nic.mac 	nbRxFrames 	46
 scalar BasicExample.TempNode[7].nic.mac 	nbDroppedFrames 	0
 scalar BasicExample.TempNode[7].nic.mac 	nbMissedAcks 	0
 scalar BasicExample.TempNode[7].nic.mac 	nbRecvdAcks 	0
 scalar BasicExample.TempNode[7].nic.mac 	nbTxAcks 	0
 scalar BasicExample.TempNode[7].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[7].nic.mac 	meanBackoff 	0.52666666666667
-scalar BasicExample.TempNode[7].nic.mac 	nbBackoffs 	6
-scalar BasicExample.TempNode[7].nic.mac 	backoffDurations 	3.16
+scalar BasicExample.TempNode[7].nic.mac 	meanBackoff 	0.38666666666667
+scalar BasicExample.TempNode[7].nic.mac 	nbBackoffs 	3
+scalar BasicExample.TempNode[7].nic.mac 	backoffDurations 	1.16
 scalar BasicExample.TempNode[7].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[7].nic.phy 	nbFramesWithoutInterference 	69
+scalar BasicExample.TempNode[7].nic.phy 	nbFramesWithoutInterference 	46
 scalar BasicExample.TempNode[7].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar BasicExample.TempNode[7].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar BasicExample.TempNode[7].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -240,24 +510,24 @@ scalar BasicExample.TempNode[7].tranl 	"nbAggrPktSentDown " 	0
 scalar BasicExample.TempNode[7].appl 	dropped 	0
 scalar BasicExample.TempNode[7].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[7].batteryStats 	total 	10677700
+scalar BasicExample.TempNode[7].batteryStats 	total 	6863950
 attr unit  mW-s
 scalar BasicExample.TempNode[7].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[7].batteryStats 	"Mean power consumption" 	177.96166666667
+scalar BasicExample.TempNode[7].batteryStats 	"Mean power consumption" 	137.279
 attr unit  mW
 scalar BasicExample.TempNode[8].nic.mac 	nbTxFrames 	6
-scalar BasicExample.TempNode[8].nic.mac 	nbRxFrames 	49
+scalar BasicExample.TempNode[8].nic.mac 	nbRxFrames 	15
 scalar BasicExample.TempNode[8].nic.mac 	nbDroppedFrames 	0
 scalar BasicExample.TempNode[8].nic.mac 	nbMissedAcks 	0
 scalar BasicExample.TempNode[8].nic.mac 	nbRecvdAcks 	0
 scalar BasicExample.TempNode[8].nic.mac 	nbTxAcks 	0
 scalar BasicExample.TempNode[8].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[8].nic.mac 	meanBackoff 	0.39333333333333
+scalar BasicExample.TempNode[8].nic.mac 	meanBackoff 	0.35333333333333
 scalar BasicExample.TempNode[8].nic.mac 	nbBackoffs 	6
-scalar BasicExample.TempNode[8].nic.mac 	backoffDurations 	2.36
+scalar BasicExample.TempNode[8].nic.mac 	backoffDurations 	2.12
 scalar BasicExample.TempNode[8].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[8].nic.phy 	nbFramesWithoutInterference 	49
+scalar BasicExample.TempNode[8].nic.phy 	nbFramesWithoutInterference 	15
 scalar BasicExample.TempNode[8].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar BasicExample.TempNode[8].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar BasicExample.TempNode[8].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -267,24 +537,24 @@ scalar BasicExample.TempNode[8].tranl 	"nbAggrPktSentDown " 	0
 scalar BasicExample.TempNode[8].appl 	dropped 	0
 scalar BasicExample.TempNode[8].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[8].batteryStats 	total 	10677400
+scalar BasicExample.TempNode[8].batteryStats 	total 	6863950
 attr unit  mW-s
 scalar BasicExample.TempNode[8].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[8].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.TempNode[8].batteryStats 	"Mean power consumption" 	137.279
 attr unit  mW
-scalar BasicExample.TempNode[9].nic.mac 	nbTxFrames 	4
-scalar BasicExample.TempNode[9].nic.mac 	nbRxFrames 	63
+scalar BasicExample.TempNode[9].nic.mac 	nbTxFrames 	6
+scalar BasicExample.TempNode[9].nic.mac 	nbRxFrames 	19
 scalar BasicExample.TempNode[9].nic.mac 	nbDroppedFrames 	0
 scalar BasicExample.TempNode[9].nic.mac 	nbMissedAcks 	0
 scalar BasicExample.TempNode[9].nic.mac 	nbRecvdAcks 	0
 scalar BasicExample.TempNode[9].nic.mac 	nbTxAcks 	0
 scalar BasicExample.TempNode[9].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[9].nic.mac 	meanBackoff 	0.4
-scalar BasicExample.TempNode[9].nic.mac 	nbBackoffs 	4
-scalar BasicExample.TempNode[9].nic.mac 	backoffDurations 	1.6
+scalar BasicExample.TempNode[9].nic.mac 	meanBackoff 	0.52666666666667
+scalar BasicExample.TempNode[9].nic.mac 	nbBackoffs 	6
+scalar BasicExample.TempNode[9].nic.mac 	backoffDurations 	3.16
 scalar BasicExample.TempNode[9].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[9].nic.phy 	nbFramesWithoutInterference 	63
+scalar BasicExample.TempNode[9].nic.phy 	nbFramesWithoutInterference 	19
 scalar BasicExample.TempNode[9].nic.phy 	nbFramesWithInterferencePartial 	0
 scalar BasicExample.TempNode[9].nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar BasicExample.TempNode[9].nic.phy 	nbFramesWithInterferenceDropped 	0
@@ -294,549 +564,279 @@ scalar BasicExample.TempNode[9].tranl 	"nbAggrPktSentDown " 	0
 scalar BasicExample.TempNode[9].appl 	dropped 	0
 scalar BasicExample.TempNode[9].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[9].batteryStats 	total 	10677400
+scalar BasicExample.TempNode[9].batteryStats 	total 	6863950
 attr unit  mW-s
 scalar BasicExample.TempNode[9].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[9].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.TempNode[9].batteryStats 	"Mean power consumption" 	137.279
 attr unit  mW
-scalar BasicExample.TempNode[10].nic.mac 	nbTxFrames 	7
-scalar BasicExample.TempNode[10].nic.mac 	nbRxFrames 	59
-scalar BasicExample.TempNode[10].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[10].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[10].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[10].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[10].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[10].nic.mac 	meanBackoff 	0.34857142857143
-scalar BasicExample.TempNode[10].nic.mac 	nbBackoffs 	7
-scalar BasicExample.TempNode[10].nic.mac 	backoffDurations 	2.44
-scalar BasicExample.TempNode[10].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[10].nic.phy 	nbFramesWithoutInterference 	59
-scalar BasicExample.TempNode[10].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[10].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[10].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[10].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[10].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[10].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[10].appl 	dropped 	0
-scalar BasicExample.TempNode[10].batteryStats 	nominal 	10800000
+scalar BasicExample.AllNode[0].nic.mac 	nbTxFrames 	4
+scalar BasicExample.AllNode[0].nic.mac 	nbRxFrames 	65
+scalar BasicExample.AllNode[0].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.AllNode[0].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.AllNode[0].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.AllNode[0].nic.mac 	nbTxAcks 	0
+scalar BasicExample.AllNode[0].nic.mac 	nbDuplicates 	0
+scalar BasicExample.AllNode[0].nic.mac 	meanBackoff 	0.51
+scalar BasicExample.AllNode[0].nic.mac 	nbBackoffs 	4
+scalar BasicExample.AllNode[0].nic.mac 	backoffDurations 	2.04
+scalar BasicExample.AllNode[0].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.AllNode[0].nic.phy 	nbFramesWithoutInterference 	65
+scalar BasicExample.AllNode[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.AllNode[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.AllNode[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.AllNode[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.AllNode[0].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.AllNode[0].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.AllNode[0].appl 	dropped 	0
+scalar BasicExample.AllNode[0].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[10].batteryStats 	total 	10677400
+scalar BasicExample.AllNode[0].batteryStats 	total 	9176650
 attr unit  mW-s
-scalar BasicExample.TempNode[10].batteryStats 	lifetime 	-1
+scalar BasicExample.AllNode[0].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[10].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.AllNode[0].batteryStats 	"Mean power consumption" 	183.533
 attr unit  mW
-scalar BasicExample.TempNode[11].nic.mac 	nbTxFrames 	5
-scalar BasicExample.TempNode[11].nic.mac 	nbRxFrames 	61
-scalar BasicExample.TempNode[11].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[11].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[11].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[11].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[11].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[11].nic.mac 	meanBackoff 	0.368
-scalar BasicExample.TempNode[11].nic.mac 	nbBackoffs 	5
-scalar BasicExample.TempNode[11].nic.mac 	backoffDurations 	1.84
-scalar BasicExample.TempNode[11].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[11].nic.phy 	nbFramesWithoutInterference 	61
-scalar BasicExample.TempNode[11].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[11].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[11].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[11].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[11].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[11].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[11].appl 	dropped 	0
-scalar BasicExample.TempNode[11].batteryStats 	nominal 	10800000
+scalar BasicExample.AllNode[1].nic.mac 	nbTxFrames 	5
+scalar BasicExample.AllNode[1].nic.mac 	nbRxFrames 	19
+scalar BasicExample.AllNode[1].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.AllNode[1].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.AllNode[1].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.AllNode[1].nic.mac 	nbTxAcks 	0
+scalar BasicExample.AllNode[1].nic.mac 	nbDuplicates 	0
+scalar BasicExample.AllNode[1].nic.mac 	meanBackoff 	0.576
+scalar BasicExample.AllNode[1].nic.mac 	nbBackoffs 	5
+scalar BasicExample.AllNode[1].nic.mac 	backoffDurations 	2.88
+scalar BasicExample.AllNode[1].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.AllNode[1].nic.phy 	nbFramesWithoutInterference 	19
+scalar BasicExample.AllNode[1].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.AllNode[1].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.AllNode[1].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.AllNode[1].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.AllNode[1].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.AllNode[1].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.AllNode[1].appl 	dropped 	0
+scalar BasicExample.AllNode[1].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[11].batteryStats 	total 	10677400
+scalar BasicExample.AllNode[1].batteryStats 	total 	9176650
 attr unit  mW-s
-scalar BasicExample.TempNode[11].batteryStats 	lifetime 	-1
+scalar BasicExample.AllNode[1].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[11].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.AllNode[1].batteryStats 	"Mean power consumption" 	183.533
 attr unit  mW
-scalar BasicExample.TempNode[12].nic.mac 	nbTxFrames 	6
-scalar BasicExample.TempNode[12].nic.mac 	nbRxFrames 	14
-scalar BasicExample.TempNode[12].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[12].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[12].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[12].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[12].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[12].nic.mac 	meanBackoff 	0.25333333333333
-scalar BasicExample.TempNode[12].nic.mac 	nbBackoffs 	6
-scalar BasicExample.TempNode[12].nic.mac 	backoffDurations 	1.52
-scalar BasicExample.TempNode[12].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[12].nic.phy 	nbFramesWithoutInterference 	14
-scalar BasicExample.TempNode[12].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[12].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[12].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[12].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[12].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[12].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[12].appl 	dropped 	0
-scalar BasicExample.TempNode[12].batteryStats 	nominal 	10800000
+scalar BasicExample.AllNode[2].nic.mac 	nbTxFrames 	5
+scalar BasicExample.AllNode[2].nic.mac 	nbRxFrames 	9
+scalar BasicExample.AllNode[2].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.AllNode[2].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.AllNode[2].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.AllNode[2].nic.mac 	nbTxAcks 	0
+scalar BasicExample.AllNode[2].nic.mac 	nbDuplicates 	0
+scalar BasicExample.AllNode[2].nic.mac 	meanBackoff 	0.208
+scalar BasicExample.AllNode[2].nic.mac 	nbBackoffs 	5
+scalar BasicExample.AllNode[2].nic.mac 	backoffDurations 	1.04
+scalar BasicExample.AllNode[2].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.AllNode[2].nic.phy 	nbFramesWithoutInterference 	9
+scalar BasicExample.AllNode[2].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.AllNode[2].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.AllNode[2].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.AllNode[2].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.AllNode[2].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.AllNode[2].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.AllNode[2].appl 	dropped 	0
+scalar BasicExample.AllNode[2].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[12].batteryStats 	total 	10677400
+scalar BasicExample.AllNode[2].batteryStats 	total 	9176650
 attr unit  mW-s
-scalar BasicExample.TempNode[12].batteryStats 	lifetime 	-1
+scalar BasicExample.AllNode[2].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[12].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.AllNode[2].batteryStats 	"Mean power consumption" 	183.533
 attr unit  mW
-scalar BasicExample.TempNode[13].nic.mac 	nbTxFrames 	6
-scalar BasicExample.TempNode[13].nic.mac 	nbRxFrames 	41
-scalar BasicExample.TempNode[13].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[13].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[13].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[13].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[13].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[13].nic.mac 	meanBackoff 	0.35333333333333
-scalar BasicExample.TempNode[13].nic.mac 	nbBackoffs 	6
-scalar BasicExample.TempNode[13].nic.mac 	backoffDurations 	2.12
-scalar BasicExample.TempNode[13].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[13].nic.phy 	nbFramesWithoutInterference 	41
-scalar BasicExample.TempNode[13].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[13].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[13].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[13].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[13].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[13].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[13].appl 	dropped 	0
-scalar BasicExample.TempNode[13].batteryStats 	nominal 	10800000
+scalar BasicExample.AllNode[3].nic.mac 	nbTxFrames 	5
+scalar BasicExample.AllNode[3].nic.mac 	nbRxFrames 	12
+scalar BasicExample.AllNode[3].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.AllNode[3].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.AllNode[3].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.AllNode[3].nic.mac 	nbTxAcks 	0
+scalar BasicExample.AllNode[3].nic.mac 	nbDuplicates 	0
+scalar BasicExample.AllNode[3].nic.mac 	meanBackoff 	0.312
+scalar BasicExample.AllNode[3].nic.mac 	nbBackoffs 	5
+scalar BasicExample.AllNode[3].nic.mac 	backoffDurations 	1.56
+scalar BasicExample.AllNode[3].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.AllNode[3].nic.phy 	nbFramesWithoutInterference 	12
+scalar BasicExample.AllNode[3].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.AllNode[3].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.AllNode[3].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.AllNode[3].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.AllNode[3].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.AllNode[3].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.AllNode[3].appl 	dropped 	0
+scalar BasicExample.AllNode[3].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[13].batteryStats 	total 	10677400
+scalar BasicExample.AllNode[3].batteryStats 	total 	9176650
 attr unit  mW-s
-scalar BasicExample.TempNode[13].batteryStats 	lifetime 	-1
+scalar BasicExample.AllNode[3].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[13].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.AllNode[3].batteryStats 	"Mean power consumption" 	183.533
 attr unit  mW
-scalar BasicExample.TempNode[14].nic.mac 	nbTxFrames 	7
-scalar BasicExample.TempNode[14].nic.mac 	nbRxFrames 	25
-scalar BasicExample.TempNode[14].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[14].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[14].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[14].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[14].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[14].nic.mac 	meanBackoff 	0.34285714285714
-scalar BasicExample.TempNode[14].nic.mac 	nbBackoffs 	7
-scalar BasicExample.TempNode[14].nic.mac 	backoffDurations 	2.4
-scalar BasicExample.TempNode[14].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[14].nic.phy 	nbFramesWithoutInterference 	25
-scalar BasicExample.TempNode[14].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[14].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[14].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[14].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[14].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[14].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[14].appl 	dropped 	0
-scalar BasicExample.TempNode[14].batteryStats 	nominal 	10800000
+scalar BasicExample.AllNode[4].nic.mac 	nbTxFrames 	6
+scalar BasicExample.AllNode[4].nic.mac 	nbRxFrames 	11
+scalar BasicExample.AllNode[4].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.AllNode[4].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.AllNode[4].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.AllNode[4].nic.mac 	nbTxAcks 	0
+scalar BasicExample.AllNode[4].nic.mac 	nbDuplicates 	0
+scalar BasicExample.AllNode[4].nic.mac 	meanBackoff 	0.48666666666667
+scalar BasicExample.AllNode[4].nic.mac 	nbBackoffs 	6
+scalar BasicExample.AllNode[4].nic.mac 	backoffDurations 	2.92
+scalar BasicExample.AllNode[4].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.AllNode[4].nic.phy 	nbFramesWithoutInterference 	11
+scalar BasicExample.AllNode[4].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.AllNode[4].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.AllNode[4].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.AllNode[4].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.AllNode[4].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.AllNode[4].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.AllNode[4].appl 	dropped 	0
+scalar BasicExample.AllNode[4].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[14].batteryStats 	total 	10677400
+scalar BasicExample.AllNode[4].batteryStats 	total 	9176650
 attr unit  mW-s
-scalar BasicExample.TempNode[14].batteryStats 	lifetime 	-1
+scalar BasicExample.AllNode[4].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[14].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.AllNode[4].batteryStats 	"Mean power consumption" 	183.533
 attr unit  mW
-scalar BasicExample.TempNode[15].nic.mac 	nbTxFrames 	5
-scalar BasicExample.TempNode[15].nic.mac 	nbRxFrames 	36
-scalar BasicExample.TempNode[15].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[15].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[15].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[15].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[15].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[15].nic.mac 	meanBackoff 	0.408
-scalar BasicExample.TempNode[15].nic.mac 	nbBackoffs 	5
-scalar BasicExample.TempNode[15].nic.mac 	backoffDurations 	2.04
-scalar BasicExample.TempNode[15].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[15].nic.phy 	nbFramesWithoutInterference 	36
-scalar BasicExample.TempNode[15].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[15].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[15].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[15].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[15].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[15].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[15].appl 	dropped 	0
-scalar BasicExample.TempNode[15].batteryStats 	nominal 	10800000
+scalar BasicExample.AllNode[5].nic.mac 	nbTxFrames 	5
+scalar BasicExample.AllNode[5].nic.mac 	nbRxFrames 	30
+scalar BasicExample.AllNode[5].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.AllNode[5].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.AllNode[5].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.AllNode[5].nic.mac 	nbTxAcks 	0
+scalar BasicExample.AllNode[5].nic.mac 	nbDuplicates 	0
+scalar BasicExample.AllNode[5].nic.mac 	meanBackoff 	0.296
+scalar BasicExample.AllNode[5].nic.mac 	nbBackoffs 	5
+scalar BasicExample.AllNode[5].nic.mac 	backoffDurations 	1.48
+scalar BasicExample.AllNode[5].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.AllNode[5].nic.phy 	nbFramesWithoutInterference 	30
+scalar BasicExample.AllNode[5].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.AllNode[5].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.AllNode[5].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.AllNode[5].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.AllNode[5].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.AllNode[5].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.AllNode[5].appl 	dropped 	0
+scalar BasicExample.AllNode[5].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[15].batteryStats 	total 	10677400
+scalar BasicExample.AllNode[5].batteryStats 	total 	9176650
 attr unit  mW-s
-scalar BasicExample.TempNode[15].batteryStats 	lifetime 	-1
+scalar BasicExample.AllNode[5].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[15].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.AllNode[5].batteryStats 	"Mean power consumption" 	183.533
 attr unit  mW
-scalar BasicExample.TempNode[16].nic.mac 	nbTxFrames 	5
-scalar BasicExample.TempNode[16].nic.mac 	nbRxFrames 	38
-scalar BasicExample.TempNode[16].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[16].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[16].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[16].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[16].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[16].nic.mac 	meanBackoff 	0.32
-scalar BasicExample.TempNode[16].nic.mac 	nbBackoffs 	5
-scalar BasicExample.TempNode[16].nic.mac 	backoffDurations 	1.6
-scalar BasicExample.TempNode[16].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[16].nic.phy 	nbFramesWithoutInterference 	38
-scalar BasicExample.TempNode[16].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[16].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[16].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[16].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[16].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[16].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[16].appl 	dropped 	0
-scalar BasicExample.TempNode[16].batteryStats 	nominal 	10800000
+scalar BasicExample.AllNode[6].nic.mac 	nbTxFrames 	6
+scalar BasicExample.AllNode[6].nic.mac 	nbRxFrames 	10
+scalar BasicExample.AllNode[6].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.AllNode[6].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.AllNode[6].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.AllNode[6].nic.mac 	nbTxAcks 	0
+scalar BasicExample.AllNode[6].nic.mac 	nbDuplicates 	0
+scalar BasicExample.AllNode[6].nic.mac 	meanBackoff 	0.28
+scalar BasicExample.AllNode[6].nic.mac 	nbBackoffs 	6
+scalar BasicExample.AllNode[6].nic.mac 	backoffDurations 	1.68
+scalar BasicExample.AllNode[6].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.AllNode[6].nic.phy 	nbFramesWithoutInterference 	10
+scalar BasicExample.AllNode[6].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.AllNode[6].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.AllNode[6].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.AllNode[6].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.AllNode[6].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.AllNode[6].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.AllNode[6].appl 	dropped 	0
+scalar BasicExample.AllNode[6].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[16].batteryStats 	total 	10677400
+scalar BasicExample.AllNode[6].batteryStats 	total 	9176650
 attr unit  mW-s
-scalar BasicExample.TempNode[16].batteryStats 	lifetime 	-1
+scalar BasicExample.AllNode[6].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[16].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.AllNode[6].batteryStats 	"Mean power consumption" 	183.533
 attr unit  mW
-scalar BasicExample.TempNode[17].nic.mac 	nbTxFrames 	5
-scalar BasicExample.TempNode[17].nic.mac 	nbRxFrames 	55
-scalar BasicExample.TempNode[17].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[17].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[17].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[17].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[17].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[17].nic.mac 	meanBackoff 	0.432
-scalar BasicExample.TempNode[17].nic.mac 	nbBackoffs 	5
-scalar BasicExample.TempNode[17].nic.mac 	backoffDurations 	2.16
-scalar BasicExample.TempNode[17].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[17].nic.phy 	nbFramesWithoutInterference 	55
-scalar BasicExample.TempNode[17].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[17].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[17].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[17].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[17].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[17].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[17].appl 	dropped 	0
-scalar BasicExample.TempNode[17].batteryStats 	nominal 	10800000
+scalar BasicExample.AllNode[7].nic.mac 	nbTxFrames 	5
+scalar BasicExample.AllNode[7].nic.mac 	nbRxFrames 	11
+scalar BasicExample.AllNode[7].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.AllNode[7].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.AllNode[7].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.AllNode[7].nic.mac 	nbTxAcks 	0
+scalar BasicExample.AllNode[7].nic.mac 	nbDuplicates 	0
+scalar BasicExample.AllNode[7].nic.mac 	meanBackoff 	0.448
+scalar BasicExample.AllNode[7].nic.mac 	nbBackoffs 	5
+scalar BasicExample.AllNode[7].nic.mac 	backoffDurations 	2.24
+scalar BasicExample.AllNode[7].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.AllNode[7].nic.phy 	nbFramesWithoutInterference 	11
+scalar BasicExample.AllNode[7].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.AllNode[7].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.AllNode[7].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.AllNode[7].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.AllNode[7].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.AllNode[7].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.AllNode[7].appl 	dropped 	0
+scalar BasicExample.AllNode[7].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[17].batteryStats 	total 	10677400
+scalar BasicExample.AllNode[7].batteryStats 	total 	9176650
 attr unit  mW-s
-scalar BasicExample.TempNode[17].batteryStats 	lifetime 	-1
+scalar BasicExample.AllNode[7].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[17].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.AllNode[7].batteryStats 	"Mean power consumption" 	183.533
 attr unit  mW
-scalar BasicExample.TempNode[18].nic.mac 	nbTxFrames 	7
-scalar BasicExample.TempNode[18].nic.mac 	nbRxFrames 	16
-scalar BasicExample.TempNode[18].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[18].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[18].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[18].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[18].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[18].nic.mac 	meanBackoff 	0.31428571428571
-scalar BasicExample.TempNode[18].nic.mac 	nbBackoffs 	7
-scalar BasicExample.TempNode[18].nic.mac 	backoffDurations 	2.2
-scalar BasicExample.TempNode[18].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[18].nic.phy 	nbFramesWithoutInterference 	16
-scalar BasicExample.TempNode[18].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[18].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[18].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[18].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[18].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[18].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[18].appl 	dropped 	0
-scalar BasicExample.TempNode[18].batteryStats 	nominal 	10800000
+scalar BasicExample.AllNode[8].nic.mac 	nbTxFrames 	5
+scalar BasicExample.AllNode[8].nic.mac 	nbRxFrames 	43
+scalar BasicExample.AllNode[8].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.AllNode[8].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.AllNode[8].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.AllNode[8].nic.mac 	nbTxAcks 	0
+scalar BasicExample.AllNode[8].nic.mac 	nbDuplicates 	0
+scalar BasicExample.AllNode[8].nic.mac 	meanBackoff 	0.512
+scalar BasicExample.AllNode[8].nic.mac 	nbBackoffs 	5
+scalar BasicExample.AllNode[8].nic.mac 	backoffDurations 	2.56
+scalar BasicExample.AllNode[8].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.AllNode[8].nic.phy 	nbFramesWithoutInterference 	43
+scalar BasicExample.AllNode[8].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.AllNode[8].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.AllNode[8].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.AllNode[8].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.AllNode[8].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.AllNode[8].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.AllNode[8].appl 	dropped 	0
+scalar BasicExample.AllNode[8].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[18].batteryStats 	total 	10677400
+scalar BasicExample.AllNode[8].batteryStats 	total 	9176650
 attr unit  mW-s
-scalar BasicExample.TempNode[18].batteryStats 	lifetime 	-1
+scalar BasicExample.AllNode[8].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[18].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.AllNode[8].batteryStats 	"Mean power consumption" 	183.533
 attr unit  mW
-scalar BasicExample.TempNode[19].nic.mac 	nbTxFrames 	7
-scalar BasicExample.TempNode[19].nic.mac 	nbRxFrames 	25
-scalar BasicExample.TempNode[19].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[19].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[19].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[19].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[19].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[19].nic.mac 	meanBackoff 	0.53142857142857
-scalar BasicExample.TempNode[19].nic.mac 	nbBackoffs 	7
-scalar BasicExample.TempNode[19].nic.mac 	backoffDurations 	3.72
-scalar BasicExample.TempNode[19].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[19].nic.phy 	nbFramesWithoutInterference 	25
-scalar BasicExample.TempNode[19].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[19].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[19].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[19].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[19].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[19].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[19].appl 	dropped 	0
-scalar BasicExample.TempNode[19].batteryStats 	nominal 	10800000
+scalar BasicExample.AllNode[9].nic.mac 	nbTxFrames 	5
+scalar BasicExample.AllNode[9].nic.mac 	nbRxFrames 	11
+scalar BasicExample.AllNode[9].nic.mac 	nbDroppedFrames 	0
+scalar BasicExample.AllNode[9].nic.mac 	nbMissedAcks 	0
+scalar BasicExample.AllNode[9].nic.mac 	nbRecvdAcks 	0
+scalar BasicExample.AllNode[9].nic.mac 	nbTxAcks 	0
+scalar BasicExample.AllNode[9].nic.mac 	nbDuplicates 	0
+scalar BasicExample.AllNode[9].nic.mac 	meanBackoff 	0.488
+scalar BasicExample.AllNode[9].nic.mac 	nbBackoffs 	5
+scalar BasicExample.AllNode[9].nic.mac 	backoffDurations 	2.44
+scalar BasicExample.AllNode[9].nic.phy 	nbFramesWithInterference 	0
+scalar BasicExample.AllNode[9].nic.phy 	nbFramesWithoutInterference 	11
+scalar BasicExample.AllNode[9].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar BasicExample.AllNode[9].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar BasicExample.AllNode[9].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar BasicExample.AllNode[9].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar BasicExample.AllNode[9].tranl 	nbAggrPktReceived 	0
+scalar BasicExample.AllNode[9].tranl 	"nbAggrPktSentDown " 	0
+scalar BasicExample.AllNode[9].appl 	dropped 	0
+scalar BasicExample.AllNode[9].batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar BasicExample.TempNode[19].batteryStats 	total 	10677400
+scalar BasicExample.AllNode[9].batteryStats 	total 	9176650
 attr unit  mW-s
-scalar BasicExample.TempNode[19].batteryStats 	lifetime 	-1
+scalar BasicExample.AllNode[9].batteryStats 	lifetime 	-1
 attr unit  s
-scalar BasicExample.TempNode[19].batteryStats 	"Mean power consumption" 	177.95666666667
-attr unit  mW
-scalar BasicExample.TempNode[20].nic.mac 	nbTxFrames 	4
-scalar BasicExample.TempNode[20].nic.mac 	nbRxFrames 	80
-scalar BasicExample.TempNode[20].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[20].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[20].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[20].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[20].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[20].nic.mac 	meanBackoff 	0.51
-scalar BasicExample.TempNode[20].nic.mac 	nbBackoffs 	4
-scalar BasicExample.TempNode[20].nic.mac 	backoffDurations 	2.04
-scalar BasicExample.TempNode[20].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[20].nic.phy 	nbFramesWithoutInterference 	80
-scalar BasicExample.TempNode[20].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[20].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[20].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[20].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[20].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[20].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[20].appl 	dropped 	0
-scalar BasicExample.TempNode[20].batteryStats 	nominal 	10800000
-attr unit  mW-s
-scalar BasicExample.TempNode[20].batteryStats 	total 	10677400
-attr unit  mW-s
-scalar BasicExample.TempNode[20].batteryStats 	lifetime 	-1
-attr unit  s
-scalar BasicExample.TempNode[20].batteryStats 	"Mean power consumption" 	177.95666666667
-attr unit  mW
-scalar BasicExample.TempNode[21].nic.mac 	nbTxFrames 	5
-scalar BasicExample.TempNode[21].nic.mac 	nbRxFrames 	25
-scalar BasicExample.TempNode[21].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[21].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[21].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[21].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[21].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[21].nic.mac 	meanBackoff 	0.576
-scalar BasicExample.TempNode[21].nic.mac 	nbBackoffs 	5
-scalar BasicExample.TempNode[21].nic.mac 	backoffDurations 	2.88
-scalar BasicExample.TempNode[21].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[21].nic.phy 	nbFramesWithoutInterference 	25
-scalar BasicExample.TempNode[21].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[21].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[21].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[21].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[21].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[21].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[21].appl 	dropped 	0
-scalar BasicExample.TempNode[21].batteryStats 	nominal 	10800000
-attr unit  mW-s
-scalar BasicExample.TempNode[21].batteryStats 	total 	10677400
-attr unit  mW-s
-scalar BasicExample.TempNode[21].batteryStats 	lifetime 	-1
-attr unit  s
-scalar BasicExample.TempNode[21].batteryStats 	"Mean power consumption" 	177.95666666667
-attr unit  mW
-scalar BasicExample.TempNode[22].nic.mac 	nbTxFrames 	6
-scalar BasicExample.TempNode[22].nic.mac 	nbRxFrames 	13
-scalar BasicExample.TempNode[22].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[22].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[22].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[22].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[22].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[22].nic.mac 	meanBackoff 	0.22666666666667
-scalar BasicExample.TempNode[22].nic.mac 	nbBackoffs 	6
-scalar BasicExample.TempNode[22].nic.mac 	backoffDurations 	1.36
-scalar BasicExample.TempNode[22].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[22].nic.phy 	nbFramesWithoutInterference 	13
-scalar BasicExample.TempNode[22].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[22].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[22].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[22].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[22].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[22].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[22].appl 	dropped 	0
-scalar BasicExample.TempNode[22].batteryStats 	nominal 	10800000
-attr unit  mW-s
-scalar BasicExample.TempNode[22].batteryStats 	total 	10677400
-attr unit  mW-s
-scalar BasicExample.TempNode[22].batteryStats 	lifetime 	-1
-attr unit  s
-scalar BasicExample.TempNode[22].batteryStats 	"Mean power consumption" 	177.95666666667
-attr unit  mW
-scalar BasicExample.TempNode[23].nic.mac 	nbTxFrames 	5
-scalar BasicExample.TempNode[23].nic.mac 	nbRxFrames 	13
-scalar BasicExample.TempNode[23].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[23].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[23].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[23].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[23].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[23].nic.mac 	meanBackoff 	0.312
-scalar BasicExample.TempNode[23].nic.mac 	nbBackoffs 	5
-scalar BasicExample.TempNode[23].nic.mac 	backoffDurations 	1.56
-scalar BasicExample.TempNode[23].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[23].nic.phy 	nbFramesWithoutInterference 	13
-scalar BasicExample.TempNode[23].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[23].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[23].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[23].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[23].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[23].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[23].appl 	dropped 	0
-scalar BasicExample.TempNode[23].batteryStats 	nominal 	10800000
-attr unit  mW-s
-scalar BasicExample.TempNode[23].batteryStats 	total 	10677400
-attr unit  mW-s
-scalar BasicExample.TempNode[23].batteryStats 	lifetime 	-1
-attr unit  s
-scalar BasicExample.TempNode[23].batteryStats 	"Mean power consumption" 	177.95666666667
-attr unit  mW
-scalar BasicExample.TempNode[24].nic.mac 	nbTxFrames 	6
-scalar BasicExample.TempNode[24].nic.mac 	nbRxFrames 	12
-scalar BasicExample.TempNode[24].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[24].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[24].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[24].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[24].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[24].nic.mac 	meanBackoff 	0.48666666666667
-scalar BasicExample.TempNode[24].nic.mac 	nbBackoffs 	6
-scalar BasicExample.TempNode[24].nic.mac 	backoffDurations 	2.92
-scalar BasicExample.TempNode[24].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[24].nic.phy 	nbFramesWithoutInterference 	12
-scalar BasicExample.TempNode[24].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[24].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[24].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[24].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[24].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[24].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[24].appl 	dropped 	0
-scalar BasicExample.TempNode[24].batteryStats 	nominal 	10800000
-attr unit  mW-s
-scalar BasicExample.TempNode[24].batteryStats 	total 	10677400
-attr unit  mW-s
-scalar BasicExample.TempNode[24].batteryStats 	lifetime 	-1
-attr unit  s
-scalar BasicExample.TempNode[24].batteryStats 	"Mean power consumption" 	177.95666666667
-attr unit  mW
-scalar BasicExample.TempNode[25].nic.mac 	nbTxFrames 	6
-scalar BasicExample.TempNode[25].nic.mac 	nbRxFrames 	36
-scalar BasicExample.TempNode[25].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[25].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[25].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[25].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[25].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[25].nic.mac 	meanBackoff 	0.27333333333333
-scalar BasicExample.TempNode[25].nic.mac 	nbBackoffs 	6
-scalar BasicExample.TempNode[25].nic.mac 	backoffDurations 	1.64
-scalar BasicExample.TempNode[25].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[25].nic.phy 	nbFramesWithoutInterference 	36
-scalar BasicExample.TempNode[25].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[25].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[25].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[25].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[25].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[25].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[25].appl 	dropped 	0
-scalar BasicExample.TempNode[25].batteryStats 	nominal 	10800000
-attr unit  mW-s
-scalar BasicExample.TempNode[25].batteryStats 	total 	10677400
-attr unit  mW-s
-scalar BasicExample.TempNode[25].batteryStats 	lifetime 	-1
-attr unit  s
-scalar BasicExample.TempNode[25].batteryStats 	"Mean power consumption" 	177.95666666667
-attr unit  mW
-scalar BasicExample.TempNode[26].nic.mac 	nbTxFrames 	7
-scalar BasicExample.TempNode[26].nic.mac 	nbRxFrames 	10
-scalar BasicExample.TempNode[26].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[26].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[26].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[26].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[26].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[26].nic.mac 	meanBackoff 	0.24571428571429
-scalar BasicExample.TempNode[26].nic.mac 	nbBackoffs 	7
-scalar BasicExample.TempNode[26].nic.mac 	backoffDurations 	1.72
-scalar BasicExample.TempNode[26].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[26].nic.phy 	nbFramesWithoutInterference 	10
-scalar BasicExample.TempNode[26].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[26].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[26].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[26].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[26].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[26].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[26].appl 	dropped 	0
-scalar BasicExample.TempNode[26].batteryStats 	nominal 	10800000
-attr unit  mW-s
-scalar BasicExample.TempNode[26].batteryStats 	total 	10677400
-attr unit  mW-s
-scalar BasicExample.TempNode[26].batteryStats 	lifetime 	-1
-attr unit  s
-scalar BasicExample.TempNode[26].batteryStats 	"Mean power consumption" 	177.95666666667
-attr unit  mW
-scalar BasicExample.TempNode[27].nic.mac 	nbTxFrames 	5
-scalar BasicExample.TempNode[27].nic.mac 	nbRxFrames 	12
-scalar BasicExample.TempNode[27].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[27].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[27].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[27].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[27].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[27].nic.mac 	meanBackoff 	0.448
-scalar BasicExample.TempNode[27].nic.mac 	nbBackoffs 	5
-scalar BasicExample.TempNode[27].nic.mac 	backoffDurations 	2.24
-scalar BasicExample.TempNode[27].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[27].nic.phy 	nbFramesWithoutInterference 	12
-scalar BasicExample.TempNode[27].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[27].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[27].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[27].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[27].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[27].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[27].appl 	dropped 	0
-scalar BasicExample.TempNode[27].batteryStats 	nominal 	10800000
-attr unit  mW-s
-scalar BasicExample.TempNode[27].batteryStats 	total 	10677400
-attr unit  mW-s
-scalar BasicExample.TempNode[27].batteryStats 	lifetime 	-1
-attr unit  s
-scalar BasicExample.TempNode[27].batteryStats 	"Mean power consumption" 	177.95666666667
-attr unit  mW
-scalar BasicExample.TempNode[28].nic.mac 	nbTxFrames 	7
-scalar BasicExample.TempNode[28].nic.mac 	nbRxFrames 	53
-scalar BasicExample.TempNode[28].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[28].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[28].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[28].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[28].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[28].nic.mac 	meanBackoff 	0.44571428571429
-scalar BasicExample.TempNode[28].nic.mac 	nbBackoffs 	7
-scalar BasicExample.TempNode[28].nic.mac 	backoffDurations 	3.12
-scalar BasicExample.TempNode[28].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[28].nic.phy 	nbFramesWithoutInterference 	53
-scalar BasicExample.TempNode[28].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[28].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[28].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[28].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[28].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[28].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[28].appl 	dropped 	0
-scalar BasicExample.TempNode[28].batteryStats 	nominal 	10800000
-attr unit  mW-s
-scalar BasicExample.TempNode[28].batteryStats 	total 	10677400
-attr unit  mW-s
-scalar BasicExample.TempNode[28].batteryStats 	lifetime 	-1
-attr unit  s
-scalar BasicExample.TempNode[28].batteryStats 	"Mean power consumption" 	177.95666666667
-attr unit  mW
-scalar BasicExample.TempNode[29].nic.mac 	nbTxFrames 	7
-scalar BasicExample.TempNode[29].nic.mac 	nbRxFrames 	13
-scalar BasicExample.TempNode[29].nic.mac 	nbDroppedFrames 	0
-scalar BasicExample.TempNode[29].nic.mac 	nbMissedAcks 	0
-scalar BasicExample.TempNode[29].nic.mac 	nbRecvdAcks 	0
-scalar BasicExample.TempNode[29].nic.mac 	nbTxAcks 	0
-scalar BasicExample.TempNode[29].nic.mac 	nbDuplicates 	0
-scalar BasicExample.TempNode[29].nic.mac 	meanBackoff 	0.43428571428571
-scalar BasicExample.TempNode[29].nic.mac 	nbBackoffs 	7
-scalar BasicExample.TempNode[29].nic.mac 	backoffDurations 	3.04
-scalar BasicExample.TempNode[29].nic.phy 	nbFramesWithInterference 	0
-scalar BasicExample.TempNode[29].nic.phy 	nbFramesWithoutInterference 	13
-scalar BasicExample.TempNode[29].nic.phy 	nbFramesWithInterferencePartial 	0
-scalar BasicExample.TempNode[29].nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar BasicExample.TempNode[29].nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar BasicExample.TempNode[29].nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar BasicExample.TempNode[29].tranl 	nbAggrPktReceived 	0
-scalar BasicExample.TempNode[29].tranl 	"nbAggrPktSentDown " 	0
-scalar BasicExample.TempNode[29].appl 	dropped 	0
-scalar BasicExample.TempNode[29].batteryStats 	nominal 	10800000
-attr unit  mW-s
-scalar BasicExample.TempNode[29].batteryStats 	total 	10677400
-attr unit  mW-s
-scalar BasicExample.TempNode[29].batteryStats 	lifetime 	-1
-attr unit  s
-scalar BasicExample.TempNode[29].batteryStats 	"Mean power consumption" 	177.95666666667
+scalar BasicExample.AllNode[9].batteryStats 	"Mean power consumption" 	183.533
 attr unit  mW

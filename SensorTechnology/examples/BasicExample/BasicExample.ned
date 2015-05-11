@@ -12,16 +12,16 @@ network BasicExample extends BasicWSN like SensorNetworkInterface
 		numHosts = 30;
 
     submodules:
-        SensorNode[0]: SensorNode {
+        SensorNode[numHosts/3]: SensorNode {
             numHosts = numHosts;
         }
-        TempNode[numHosts]: SensorNode {
+        TempNode[numHosts/3]: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
             hasLightSensor = true;
         }
 
-        AllNode[0]: SensorNode {
+        AllNode[numHosts/3]: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
             hasPressureSensor = true;

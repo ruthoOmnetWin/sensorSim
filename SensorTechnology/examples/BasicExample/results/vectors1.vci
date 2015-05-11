@@ -1,198 +1,198 @@
-file 188862 1431345513                                          
+file 138155 1431345954                                          
 version 2
-run General-0-20150511-13:58:24-17122
+run General-0-20150511-14:05:46-18070
 attr configname General
-attr datetime 20150511-13:58:24
+attr datetime 20150511-14:05:46
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network BasicExample
-attr processid 17122
+attr processid 18070
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-vector 3  BasicExample.TempNode[0].Processor  Voltage  ETV
-vector 4  BasicExample.TempNode[0].Processor  residualRelative  ETV
-vector 5  BasicExample.TempNode[0].Processor  residualAbs  ETV
-vector 9  BasicExample.TempNode[1].Processor  Voltage  ETV
-vector 10  BasicExample.TempNode[1].Processor  residualRelative  ETV
-vector 11  BasicExample.TempNode[1].Processor  residualAbs  ETV
-vector 15  BasicExample.TempNode[2].Processor  Voltage  ETV
-vector 16  BasicExample.TempNode[2].Processor  residualRelative  ETV
-vector 17  BasicExample.TempNode[2].Processor  residualAbs  ETV
-vector 21  BasicExample.TempNode[3].Processor  Voltage  ETV
-vector 22  BasicExample.TempNode[3].Processor  residualRelative  ETV
-vector 23  BasicExample.TempNode[3].Processor  residualAbs  ETV
-vector 27  BasicExample.TempNode[4].Processor  Voltage  ETV
-vector 28  BasicExample.TempNode[4].Processor  residualRelative  ETV
-vector 29  BasicExample.TempNode[4].Processor  residualAbs  ETV
-vector 33  BasicExample.TempNode[5].Processor  Voltage  ETV
-vector 34  BasicExample.TempNode[5].Processor  residualRelative  ETV
-vector 35  BasicExample.TempNode[5].Processor  residualAbs  ETV
-vector 39  BasicExample.TempNode[6].Processor  Voltage  ETV
-vector 40  BasicExample.TempNode[6].Processor  residualRelative  ETV
-vector 41  BasicExample.TempNode[6].Processor  residualAbs  ETV
-vector 45  BasicExample.TempNode[7].Processor  Voltage  ETV
-vector 46  BasicExample.TempNode[7].Processor  residualRelative  ETV
-vector 47  BasicExample.TempNode[7].Processor  residualAbs  ETV
-vector 51  BasicExample.TempNode[8].Processor  Voltage  ETV
-vector 52  BasicExample.TempNode[8].Processor  residualRelative  ETV
-vector 53  BasicExample.TempNode[8].Processor  residualAbs  ETV
-vector 57  BasicExample.TempNode[9].Processor  Voltage  ETV
-vector 58  BasicExample.TempNode[9].Processor  residualRelative  ETV
-vector 59  BasicExample.TempNode[9].Processor  residualAbs  ETV
-vector 63  BasicExample.TempNode[10].Processor  Voltage  ETV
-vector 64  BasicExample.TempNode[10].Processor  residualRelative  ETV
-vector 65  BasicExample.TempNode[10].Processor  residualAbs  ETV
-vector 69  BasicExample.TempNode[11].Processor  Voltage  ETV
-vector 70  BasicExample.TempNode[11].Processor  residualRelative  ETV
-vector 71  BasicExample.TempNode[11].Processor  residualAbs  ETV
-vector 75  BasicExample.TempNode[12].Processor  Voltage  ETV
-vector 76  BasicExample.TempNode[12].Processor  residualRelative  ETV
-vector 77  BasicExample.TempNode[12].Processor  residualAbs  ETV
-vector 81  BasicExample.TempNode[13].Processor  Voltage  ETV
-vector 82  BasicExample.TempNode[13].Processor  residualRelative  ETV
-vector 83  BasicExample.TempNode[13].Processor  residualAbs  ETV
-vector 87  BasicExample.TempNode[14].Processor  Voltage  ETV
-vector 88  BasicExample.TempNode[14].Processor  residualRelative  ETV
-vector 89  BasicExample.TempNode[14].Processor  residualAbs  ETV
-vector 93  BasicExample.TempNode[15].Processor  Voltage  ETV
-vector 94  BasicExample.TempNode[15].Processor  residualRelative  ETV
-vector 95  BasicExample.TempNode[15].Processor  residualAbs  ETV
-vector 99  BasicExample.TempNode[16].Processor  Voltage  ETV
-vector 100  BasicExample.TempNode[16].Processor  residualRelative  ETV
-vector 101  BasicExample.TempNode[16].Processor  residualAbs  ETV
-vector 105  BasicExample.TempNode[17].Processor  Voltage  ETV
-vector 106  BasicExample.TempNode[17].Processor  residualRelative  ETV
-vector 107  BasicExample.TempNode[17].Processor  residualAbs  ETV
-vector 111  BasicExample.TempNode[18].Processor  Voltage  ETV
-vector 112  BasicExample.TempNode[18].Processor  residualRelative  ETV
-vector 113  BasicExample.TempNode[18].Processor  residualAbs  ETV
-vector 117  BasicExample.TempNode[19].Processor  Voltage  ETV
-vector 118  BasicExample.TempNode[19].Processor  residualRelative  ETV
-vector 119  BasicExample.TempNode[19].Processor  residualAbs  ETV
-vector 123  BasicExample.TempNode[20].Processor  Voltage  ETV
-vector 124  BasicExample.TempNode[20].Processor  residualRelative  ETV
-vector 125  BasicExample.TempNode[20].Processor  residualAbs  ETV
-vector 129  BasicExample.TempNode[21].Processor  Voltage  ETV
-vector 130  BasicExample.TempNode[21].Processor  residualRelative  ETV
-vector 131  BasicExample.TempNode[21].Processor  residualAbs  ETV
-vector 135  BasicExample.TempNode[22].Processor  Voltage  ETV
-vector 136  BasicExample.TempNode[22].Processor  residualRelative  ETV
-vector 137  BasicExample.TempNode[22].Processor  residualAbs  ETV
-vector 141  BasicExample.TempNode[23].Processor  Voltage  ETV
-vector 142  BasicExample.TempNode[23].Processor  residualRelative  ETV
-vector 143  BasicExample.TempNode[23].Processor  residualAbs  ETV
-vector 147  BasicExample.TempNode[24].Processor  Voltage  ETV
-vector 148  BasicExample.TempNode[24].Processor  residualRelative  ETV
-vector 149  BasicExample.TempNode[24].Processor  residualAbs  ETV
-vector 153  BasicExample.TempNode[25].Processor  Voltage  ETV
-vector 154  BasicExample.TempNode[25].Processor  residualRelative  ETV
-vector 155  BasicExample.TempNode[25].Processor  residualAbs  ETV
-vector 159  BasicExample.TempNode[26].Processor  Voltage  ETV
-vector 160  BasicExample.TempNode[26].Processor  residualRelative  ETV
-vector 161  BasicExample.TempNode[26].Processor  residualAbs  ETV
-vector 165  BasicExample.TempNode[27].Processor  Voltage  ETV
-vector 166  BasicExample.TempNode[27].Processor  residualRelative  ETV
-vector 167  BasicExample.TempNode[27].Processor  residualAbs  ETV
-vector 171  BasicExample.TempNode[28].Processor  Voltage  ETV
-vector 172  BasicExample.TempNode[28].Processor  residualRelative  ETV
-vector 173  BasicExample.TempNode[28].Processor  residualAbs  ETV
-vector 177  BasicExample.TempNode[29].Processor  Voltage  ETV
-vector 178  BasicExample.TempNode[29].Processor  residualRelative  ETV
-vector 179  BasicExample.TempNode[29].Processor  residualAbs  ETV
-3	6257 1322 0 70675 0 60000 85 3 3 255 765
-4	7579 2572 0 70675 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-5	10151 1833 0 70675 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-9	11984 1322 0 70676 0 60000 85 3 3 255 765
-10	13306 2657 0 70676 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-11	15963 1918 0 70676 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-15	17881 1407 0 70677 0 60000 85 3 3 255 765
-16	19288 2657 0 70677 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-17	21945 1918 0 70677 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-21	23863 1407 0 70678 0 60000 85 3 3 255 765
-22	25270 2657 0 70678 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-23	27927 1918 0 70678 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-27	29845 1407 0 70679 0 60000 85 3 3 255 765
-28	31252 2657 0 70679 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-29	33909 1918 0 70679 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-33	35827 1407 0 70680 0 60000 85 3 3 255 765
-34	37234 2657 0 70680 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-35	39891 1918 0 70680 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-39	41809 1407 0 70681 0 60000 85 3 3 255 765
-40	43216 2657 0 70681 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-41	45873 1918 0 70681 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-45	47791 1407 0 70682 0 60000 85 3 3 255 765
-46	49198 2657 0 70682 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-47	51855 1918 0 70682 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-51	53773 1407 0 70683 0 60000 85 3 3 255 765
-52	55180 2657 0 70683 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-53	57837 1918 0 70683 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-57	59755 1407 0 70684 0 60000 85 3 3 255 765
-58	61162 2657 0 70684 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-59	63819 1918 0 70684 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-63	65737 1407 0 70685 0 60000 85 3 3 255 765
-64	67144 2657 0 70685 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-65	69801 1918 0 70685 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-69	71719 1407 0 70686 0 60000 85 3 3 255 765
-70	73126 2657 0 70686 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-71	75783 1918 0 70686 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-75	77701 1407 0 70687 0 60000 85 3 3 255 765
-76	79108 2657 0 70687 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-77	81765 1918 0 70687 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-81	83683 1407 0 70688 0 60000 85 3 3 255 765
-82	85090 2657 0 70688 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-83	87747 1918 0 70688 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-87	89665 1407 0 70689 0 60000 85 3 3 255 765
-88	91072 2657 0 70689 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-89	93729 1918 0 70689 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-93	95647 1407 0 70690 0 60000 85 3 3 255 765
-94	97054 2657 0 70690 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-95	99711 1918 0 70690 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-99	101629 1407 0 70691 0 60000 85 3 3 255 765
-100	103036 2742 0 70691 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-101	105778 2003 0 70691 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-105	107781 1492 0 70692 0 60000 85 3 3 255 765
-106	109273 2742 0 70692 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-107	112015 2003 0 70692 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-111	114018 1492 0 70693 0 60000 85 3 3 255 765
-112	115510 2742 0 70693 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-113	118252 2003 0 70693 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-117	120255 1492 0 70694 0 60000 85 3 3 255 765
-118	121747 2742 0 70694 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-119	124489 2003 0 70694 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-123	126492 1492 0 70695 0 60000 85 3 3 255 765
-124	127984 2742 0 70695 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-125	130726 2003 0 70695 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-129	132729 1492 0 70696 0 60000 85 3 3 255 765
-130	134221 2742 0 70696 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-131	136963 2003 0 70696 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-135	138966 1492 0 70697 0 60000 85 3 3 255 765
-136	140458 2742 0 70697 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-137	143200 2003 0 70697 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-141	145203 1492 0 70698 0 60000 85 3 3 255 765
-142	146695 2742 0 70698 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-143	149437 2003 0 70698 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-147	151440 1492 0 70699 0 60000 85 3 3 255 765
-148	152932 2742 0 70699 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-149	155674 2003 0 70699 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-153	157677 1492 0 70700 0 60000 85 3 3 255 765
-154	159169 2742 0 70700 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-155	161911 2003 0 70700 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-159	163914 1492 0 70701 0 60000 85 3 3 255 765
-160	165406 2742 0 70701 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-161	168148 2003 0 70701 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-165	170151 1492 0 70702 0 60000 85 3 3 255 765
-166	171643 2742 0 70702 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-167	174385 2003 0 70702 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-171	176388 1492 0 70703 0 60000 85 3 3 255 765
-172	177880 2742 0 70703 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-173	180622 2003 0 70703 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
-177	182625 1492 0 70704 0 60000 85 3 3 255 765
-178	184117 2742 0 70704 0 60000 85 0.011351851851852 1 48.226865555556 34.602789513491
-179	186859 2003 0 70704 0 60000 85 122600 10800000 520850148 4.0360693688536e+15
+vector 3  BasicExample.SensorNode[0].Processor  Voltage  ETV
+vector 4  BasicExample.SensorNode[0].Processor  residualRelative  ETV
+vector 5  BasicExample.SensorNode[0].Processor  residualAbs  ETV
+vector 9  BasicExample.SensorNode[1].Processor  Voltage  ETV
+vector 10  BasicExample.SensorNode[1].Processor  residualRelative  ETV
+vector 11  BasicExample.SensorNode[1].Processor  residualAbs  ETV
+vector 15  BasicExample.SensorNode[2].Processor  Voltage  ETV
+vector 16  BasicExample.SensorNode[2].Processor  residualRelative  ETV
+vector 17  BasicExample.SensorNode[2].Processor  residualAbs  ETV
+vector 21  BasicExample.SensorNode[3].Processor  Voltage  ETV
+vector 22  BasicExample.SensorNode[3].Processor  residualRelative  ETV
+vector 23  BasicExample.SensorNode[3].Processor  residualAbs  ETV
+vector 27  BasicExample.SensorNode[4].Processor  Voltage  ETV
+vector 28  BasicExample.SensorNode[4].Processor  residualRelative  ETV
+vector 29  BasicExample.SensorNode[4].Processor  residualAbs  ETV
+vector 33  BasicExample.SensorNode[5].Processor  Voltage  ETV
+vector 34  BasicExample.SensorNode[5].Processor  residualRelative  ETV
+vector 35  BasicExample.SensorNode[5].Processor  residualAbs  ETV
+vector 39  BasicExample.SensorNode[6].Processor  Voltage  ETV
+vector 40  BasicExample.SensorNode[6].Processor  residualRelative  ETV
+vector 41  BasicExample.SensorNode[6].Processor  residualAbs  ETV
+vector 45  BasicExample.SensorNode[7].Processor  Voltage  ETV
+vector 46  BasicExample.SensorNode[7].Processor  residualRelative  ETV
+vector 47  BasicExample.SensorNode[7].Processor  residualAbs  ETV
+vector 51  BasicExample.SensorNode[8].Processor  Voltage  ETV
+vector 52  BasicExample.SensorNode[8].Processor  residualRelative  ETV
+vector 53  BasicExample.SensorNode[8].Processor  residualAbs  ETV
+vector 57  BasicExample.SensorNode[9].Processor  Voltage  ETV
+vector 58  BasicExample.SensorNode[9].Processor  residualRelative  ETV
+vector 59  BasicExample.SensorNode[9].Processor  residualAbs  ETV
+vector 63  BasicExample.TempNode[0].Processor  Voltage  ETV
+vector 64  BasicExample.TempNode[0].Processor  residualRelative  ETV
+vector 65  BasicExample.TempNode[0].Processor  residualAbs  ETV
+vector 69  BasicExample.TempNode[1].Processor  Voltage  ETV
+vector 70  BasicExample.TempNode[1].Processor  residualRelative  ETV
+vector 71  BasicExample.TempNode[1].Processor  residualAbs  ETV
+vector 75  BasicExample.TempNode[2].Processor  Voltage  ETV
+vector 76  BasicExample.TempNode[2].Processor  residualRelative  ETV
+vector 77  BasicExample.TempNode[2].Processor  residualAbs  ETV
+vector 81  BasicExample.TempNode[3].Processor  Voltage  ETV
+vector 82  BasicExample.TempNode[3].Processor  residualRelative  ETV
+vector 83  BasicExample.TempNode[3].Processor  residualAbs  ETV
+vector 87  BasicExample.TempNode[4].Processor  Voltage  ETV
+vector 88  BasicExample.TempNode[4].Processor  residualRelative  ETV
+vector 89  BasicExample.TempNode[4].Processor  residualAbs  ETV
+vector 93  BasicExample.TempNode[5].Processor  Voltage  ETV
+vector 94  BasicExample.TempNode[5].Processor  residualRelative  ETV
+vector 95  BasicExample.TempNode[5].Processor  residualAbs  ETV
+vector 99  BasicExample.TempNode[6].Processor  Voltage  ETV
+vector 100  BasicExample.TempNode[6].Processor  residualRelative  ETV
+vector 101  BasicExample.TempNode[6].Processor  residualAbs  ETV
+vector 105  BasicExample.TempNode[7].Processor  Voltage  ETV
+vector 106  BasicExample.TempNode[7].Processor  residualRelative  ETV
+vector 107  BasicExample.TempNode[7].Processor  residualAbs  ETV
+vector 111  BasicExample.TempNode[8].Processor  Voltage  ETV
+vector 112  BasicExample.TempNode[8].Processor  residualRelative  ETV
+vector 113  BasicExample.TempNode[8].Processor  residualAbs  ETV
+vector 117  BasicExample.TempNode[9].Processor  Voltage  ETV
+vector 118  BasicExample.TempNode[9].Processor  residualRelative  ETV
+vector 119  BasicExample.TempNode[9].Processor  residualAbs  ETV
+vector 123  BasicExample.AllNode[0].Processor  Voltage  ETV
+vector 124  BasicExample.AllNode[0].Processor  residualRelative  ETV
+vector 125  BasicExample.AllNode[0].Processor  residualAbs  ETV
+vector 129  BasicExample.AllNode[1].Processor  Voltage  ETV
+vector 130  BasicExample.AllNode[1].Processor  residualRelative  ETV
+vector 131  BasicExample.AllNode[1].Processor  residualAbs  ETV
+vector 135  BasicExample.AllNode[2].Processor  Voltage  ETV
+vector 136  BasicExample.AllNode[2].Processor  residualRelative  ETV
+vector 137  BasicExample.AllNode[2].Processor  residualAbs  ETV
+vector 141  BasicExample.AllNode[3].Processor  Voltage  ETV
+vector 142  BasicExample.AllNode[3].Processor  residualRelative  ETV
+vector 143  BasicExample.AllNode[3].Processor  residualAbs  ETV
+vector 147  BasicExample.AllNode[4].Processor  Voltage  ETV
+vector 148  BasicExample.AllNode[4].Processor  residualRelative  ETV
+vector 149  BasicExample.AllNode[4].Processor  residualAbs  ETV
+vector 153  BasicExample.AllNode[5].Processor  Voltage  ETV
+vector 154  BasicExample.AllNode[5].Processor  residualRelative  ETV
+vector 155  BasicExample.AllNode[5].Processor  residualAbs  ETV
+vector 159  BasicExample.AllNode[6].Processor  Voltage  ETV
+vector 160  BasicExample.AllNode[6].Processor  residualRelative  ETV
+vector 161  BasicExample.AllNode[6].Processor  residualAbs  ETV
+vector 165  BasicExample.AllNode[7].Processor  Voltage  ETV
+vector 166  BasicExample.AllNode[7].Processor  residualRelative  ETV
+vector 167  BasicExample.AllNode[7].Processor  residualAbs  ETV
+vector 171  BasicExample.AllNode[8].Processor  Voltage  ETV
+vector 172  BasicExample.AllNode[8].Processor  residualRelative  ETV
+vector 173  BasicExample.AllNode[8].Processor  residualAbs  ETV
+vector 177  BasicExample.AllNode[9].Processor  Voltage  ETV
+vector 178  BasicExample.AllNode[9].Processor  residualRelative  ETV
+vector 179  BasicExample.AllNode[9].Processor  residualAbs  ETV
+3	6227 594 0 58752 0 50000 38 3 3 114 342
+4	6821 1146 0 58752 0 50000 38 0.57863888888889 1 29.304520925926 23.627786679934
+5	7967 839 0 58752 0 50000 38 6249300 10800000 316488826 2.7559450383475e+15
+9	8806 562 0 53197 0 45000 36 3 3 108 324
+10	9368 1120 0 53197 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+11	10488 831 0 53197 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+15	11319 598 0 53198 0 45000 36 3 3 108 324
+16	11917 1120 0 53198 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+17	13037 831 0 53198 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+21	13868 598 0 53199 0 45000 36 3 3 108 324
+22	14466 1120 0 53199 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+23	15586 831 0 53199 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+27	16417 598 0 53200 0 45000 36 3 3 108 324
+28	17015 1120 0 53200 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+29	18135 831 0 53200 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+33	18966 598 0 53201 0 45000 36 3 3 108 324
+34	19564 1120 0 53201 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+35	20684 831 0 53201 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+39	21515 598 0 53202 0 45000 36 3 3 108 324
+40	22113 1120 0 53202 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+41	23233 831 0 53202 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+45	24064 598 0 53203 0 45000 36 3 3 108 324
+46	24662 1120 0 53203 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+47	25782 831 0 53203 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+51	26613 598 0 53204 0 45000 36 3 3 108 324
+52	27211 1120 0 53204 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+53	28331 831 0 53204 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+57	29162 598 0 53205 0 45000 36 3 3 108 324
+58	29760 1120 0 53205 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+59	30880 831 0 53205 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+63	31711 1050 0 53206 0 45000 64 3 3 192 576
+64	32761 1981 0 53206 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+65	34742 1442 0 53206 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+69	36184 1050 0 53207 0 45000 64 3 3 192 576
+70	37234 1981 0 53207 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+71	39215 1442 0 53207 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+75	40657 1050 0 53208 0 45000 64 3 3 192 576
+76	41707 1981 0 53208 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+77	43688 1442 0 53208 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+81	45130 1050 0 53209 0 45000 64 3 3 192 576
+82	46180 1981 0 53209 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+83	48161 1442 0 53209 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+87	49603 1050 0 53210 0 45000 64 3 3 192 576
+88	50653 1981 0 53210 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+89	52634 1442 0 53210 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+93	54076 1050 0 53211 0 45000 64 3 3 192 576
+94	55126 1981 0 53211 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+95	57107 1442 0 53211 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+99	58549 1050 0 53212 0 45000 64 3 3 192 576
+100	59599 2045 0 53212 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+101	61644 1506 0 53212 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+105	63150 1114 0 53213 0 45000 64 3 3 192 576
+106	64264 2045 0 53213 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+107	66309 1506 0 53213 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+111	67815 1114 0 53214 0 45000 64 3 3 192 576
+112	68929 2045 0 53214 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+113	70974 1506 0 53214 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+117	72480 1114 0 53215 0 45000 64 3 3 192 576
+118	73594 2045 0 53215 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+119	75639 1506 0 53215 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+123	77145 1450 0 53216 0 45000 84 3 3 252 756
+124	78595 2688 0 53216 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+125	81283 1963 0 53216 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+129	83246 1450 0 53217 0 45000 84 3 3 252 756
+130	84696 2688 0 53217 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+131	87384 1963 0 53217 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+135	89347 1450 0 53218 0 45000 84 3 3 252 756
+136	90797 2688 0 53218 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+137	93485 1963 0 53218 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+141	95448 1450 0 53219 0 45000 84 3 3 252 756
+142	96898 2688 0 53219 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+143	99586 1963 0 53219 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+147	101549 1450 0 53220 0 45000 84 3 3 252 756
+148	102999 2688 0 53220 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+149	105687 1963 0 53220 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+153	107650 1450 0 53221 0 45000 84 3 3 252 756
+154	109100 2688 0 53221 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+155	111788 1963 0 53221 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+159	113751 1450 0 53222 0 45000 84 3 3 252 756
+160	115201 2688 0 53222 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+161	117889 1963 0 53222 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+165	119852 1450 0 53223 0 45000 84 3 3 252 756
+166	121302 2688 0 53223 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+167	123990 1963 0 53223 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+171	125953 1450 0 53224 0 45000 84 3 3 252 756
+172	127403 2688 0 53224 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+173	130091 1963 0 53224 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+177	132054 1450 0 53225 0 45000 84 3 3 252 756
+178	133504 2688 0 53225 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+179	136192 1963 0 53225 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
