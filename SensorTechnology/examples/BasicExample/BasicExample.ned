@@ -5,23 +5,42 @@ import org.mixim.base.modules.BaseNetwork;
 import sensortechnology.src.SensorNetworkInterface.BasicWSN;
 import sensortechnology.src.SensorNetworkInterface.SensorNetworkInterface;
 
+
+//
+//a network with every kind of node that can be created with the different sensor types
+//
 network BasicExample extends BasicWSN like SensorNetworkInterface
 {
     parameters:
         
-		numHosts = 30;
+        int numEach;
+		numHosts = numEach * 5;
 
     submodules:
-        SensorNode[numHosts/3]: SensorNode {
+        //no sensor
+        SensorNode[numEach]: SensorNode {
             numHosts = numHosts;
         }
-        TempNode[numHosts/3]: SensorNode {
+        //one sensor
+        TNode[numEach]: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
+        }
+        //two sensors
+        TPNode[numEach]: SensorNode {
+            numHosts = numHosts;
+            hasTemperatureSensor = true;
+            hasPressureSensor = true;
+        }
+        //three sensors
+        PHLNode[numEach]: SensorNode {
+            numHosts = numHosts;
+            hasPressureSensor = true;
+            hasHumiditySensor = true;
             hasLightSensor = true;
         }
-
-        AllNode[numHosts/3]: SensorNode {
+        //four sensors
+        TPHLNode[numEach]: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
             hasPressureSensor = true;

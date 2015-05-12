@@ -91,6 +91,7 @@ protected:
     cOutVector residualRelativeVector;
     cLongHistogram residualAbsStats;
     cOutVector residualAbsVector;
+    cOutVector activatedModeVector;
 
 public:
     bool hasTemperatureSensor;

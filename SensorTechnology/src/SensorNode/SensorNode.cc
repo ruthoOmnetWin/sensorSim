@@ -18,8 +18,6 @@
 #include "Processor.h"
 #include "ExtendedMessage_m.h"
 
-
-
 void SensorNode::initialize(int stage) {
     if (stage == 0) {
         //generate Processor dynamically

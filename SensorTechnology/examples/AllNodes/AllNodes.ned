@@ -5,6 +5,10 @@ import org.mixim.base.modules.BaseNetwork;
 import sensortechnology.src.SensorNetworkInterface.BasicWSN;
 import sensortechnology.src.SensorNetworkInterface.SensorNetworkInterface;
 
+
+//
+//a network with every kind of node that can be created with the different sensor types
+//
 network AllNodes extends BasicWSN like SensorNetworkInterface
 {
     parameters:

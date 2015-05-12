@@ -4,9 +4,9 @@ The top-level auxiliary file: main.aux
 A level-1 auxiliary file: meta/metadaten.aux
 The style file: gerplain.bst
 Database file #1: bib/literatur.bib
-Warning--to sort, need author or key in omnet
 Warning--to sort, need author or key in git
 Warning--to sort, need author or key in github
+Warning--to sort, need author or key in omnet
 Warning--to sort, need author or key in mixim
 Warning--to sort, need author or key in wrowser
 Warning--to sort, need author or key in emacs

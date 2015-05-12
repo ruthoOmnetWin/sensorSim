@@ -41,9 +41,15 @@ INCLUDE_PATH = \
     -Iexamples/BasicExample \
     -Iexamples/BasicExample/data \
     -Iexamples/BasicExample/results \
+    -Iexamples/SleepOutOfSync \
+    -Iexamples/SleepOutOfSync/data \
+    -Iexamples/SleepOutOfSync/results \
     -Iexamples/SleepVsNoSleep \
     -Iexamples/SleepVsNoSleep/data \
     -Iexamples/SleepVsNoSleep/results \
+    -Iexamples/TrafficGenExample \
+    -Iexamples/TrafficGenExample/data \
+    -Iexamples/TrafficGenExample/results \
     -Isrc \
     -Isrc/ExtendedMessage \
     -Isrc/SensorNetworkInterface \
@@ -177,9 +183,15 @@ clean:
 	$(Q)-rm -f examples/BasicExample/*_m.cc examples/BasicExample/*_m.h
 	$(Q)-rm -f examples/BasicExample/data/*_m.cc examples/BasicExample/data/*_m.h
 	$(Q)-rm -f examples/BasicExample/results/*_m.cc examples/BasicExample/results/*_m.h
+	$(Q)-rm -f examples/SleepOutOfSync/*_m.cc examples/SleepOutOfSync/*_m.h
+	$(Q)-rm -f examples/SleepOutOfSync/data/*_m.cc examples/SleepOutOfSync/data/*_m.h
+	$(Q)-rm -f examples/SleepOutOfSync/results/*_m.cc examples/SleepOutOfSync/results/*_m.h
 	$(Q)-rm -f examples/SleepVsNoSleep/*_m.cc examples/SleepVsNoSleep/*_m.h
 	$(Q)-rm -f examples/SleepVsNoSleep/data/*_m.cc examples/SleepVsNoSleep/data/*_m.h
 	$(Q)-rm -f examples/SleepVsNoSleep/results/*_m.cc examples/SleepVsNoSleep/results/*_m.h
+	$(Q)-rm -f examples/TrafficGenExample/*_m.cc examples/TrafficGenExample/*_m.h
+	$(Q)-rm -f examples/TrafficGenExample/data/*_m.cc examples/TrafficGenExample/data/*_m.h
+	$(Q)-rm -f examples/TrafficGenExample/results/*_m.cc examples/TrafficGenExample/results/*_m.h
 	$(Q)-rm -f src/*_m.cc src/*_m.h
 	$(Q)-rm -f src/ExtendedMessage/*_m.cc src/ExtendedMessage/*_m.h
 	$(Q)-rm -f src/SensorNetworkInterface/*_m.cc src/SensorNetworkInterface/*_m.h
@@ -200,7 +212,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc examples/*.cc examples/AllNodes/*.cc examples/AllNodes/data/*.cc examples/AllNodes/results/*.cc examples/BasicExample/*.cc examples/BasicExample/data/*.cc examples/BasicExample/results/*.cc examples/SleepVsNoSleep/*.cc examples/SleepVsNoSleep/data/*.cc examples/SleepVsNoSleep/results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNetworkInterface/*.cc src/SensorNode/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc examples/*.cc examples/AllNodes/*.cc examples/AllNodes/data/*.cc examples/AllNodes/results/*.cc examples/BasicExample/*.cc examples/BasicExample/data/*.cc examples/BasicExample/results/*.cc examples/SleepOutOfSync/*.cc examples/SleepOutOfSync/data/*.cc examples/SleepOutOfSync/results/*.cc examples/SleepVsNoSleep/*.cc examples/SleepVsNoSleep/data/*.cc examples/SleepVsNoSleep/results/*.cc examples/TrafficGenExample/*.cc examples/TrafficGenExample/data/*.cc examples/TrafficGenExample/results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNetworkInterface/*.cc src/SensorNode/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/src/ExtendedMessage/ExtendedMessage_m.o: src/ExtendedMessage/ExtendedMessage_m.cc \
@@ -259,9 +271,23 @@ $O/src/SensorNode/Memory/Memory.o: src/SensorNode/Memory/Memory.cc \
 	src/SimpleSensorData/SimpleSensorData.h
 $O/src/SensorNode/Processor/Processor.o: src/SensorNode/Processor/Processor.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
 	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \

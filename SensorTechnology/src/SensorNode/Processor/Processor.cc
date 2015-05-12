@@ -15,7 +15,7 @@
 
 #include <Processor.h>
 #include <FindModule.h>
-
+#include <BasePhyLayer.h>
 #include "SensorNode.h"
 #include "BatteryAccess.h"
 
@@ -70,6 +70,9 @@ void Processor::initialize(int stage)
         peripheryNormalRatio  = getParentModule()->par("normalRatio").doubleValue();
         peripheryPowerSavingRatio = getParentModule()->par("powerSavingRatio").doubleValue();
         peripheryHighPerformanceRatio = getParentModule()->par("highPerformanceRatio").doubleValue();
+
+        activatedModeVector.setName("power mode");
+        activatedModeVector.record(activatedMode);
 
         switchProcessorMode();
         // <- register with the battery
@@ -319,6 +322,7 @@ void Processor::switchProcessorMode()
     if (ev.isGUI()) {
         updateDisplay();
     }
+    activatedModeVector.record(activatedMode);
 }
 
 /**

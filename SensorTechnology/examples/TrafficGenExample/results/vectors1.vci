@@ -1,0 +1,72 @@
+file 39860 1431437201                                           
+version 2
+run General-0-20150512-15:26:37-13646
+attr configname General
+attr datetime 20150512-15:26:37
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network TrafficGenExample
+attr processid 13646
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 3  TrafficGenExample.SensorNode[0].Processor  Voltage  ETV
+vector 4  TrafficGenExample.SensorNode[0].Processor  residualRelative  ETV
+vector 5  TrafficGenExample.SensorNode[0].Processor  residualAbs  ETV
+vector 9  TrafficGenExample.SensorNode[1].Processor  Voltage  ETV
+vector 10  TrafficGenExample.SensorNode[1].Processor  residualRelative  ETV
+vector 11  TrafficGenExample.SensorNode[1].Processor  residualAbs  ETV
+vector 15  TrafficGenExample.SensorNode[2].Processor  Voltage  ETV
+vector 16  TrafficGenExample.SensorNode[2].Processor  residualRelative  ETV
+vector 17  TrafficGenExample.SensorNode[2].Processor  residualAbs  ETV
+vector 21  TrafficGenExample.TempNode[0].Processor  Voltage  ETV
+vector 22  TrafficGenExample.TempNode[0].Processor  residualRelative  ETV
+vector 23  TrafficGenExample.TempNode[0].Processor  residualAbs  ETV
+vector 27  TrafficGenExample.TempNode[1].Processor  Voltage  ETV
+vector 28  TrafficGenExample.TempNode[1].Processor  residualRelative  ETV
+vector 29  TrafficGenExample.TempNode[1].Processor  residualAbs  ETV
+vector 33  TrafficGenExample.TempNode[2].Processor  Voltage  ETV
+vector 34  TrafficGenExample.TempNode[2].Processor  residualRelative  ETV
+vector 35  TrafficGenExample.TempNode[2].Processor  residualAbs  ETV
+vector 39  TrafficGenExample.AllNode[0].Processor  Voltage  ETV
+vector 40  TrafficGenExample.AllNode[0].Processor  residualRelative  ETV
+vector 41  TrafficGenExample.AllNode[0].Processor  residualAbs  ETV
+vector 45  TrafficGenExample.AllNode[1].Processor  Voltage  ETV
+vector 46  TrafficGenExample.AllNode[1].Processor  residualRelative  ETV
+vector 47  TrafficGenExample.AllNode[1].Processor  residualAbs  ETV
+vector 51  TrafficGenExample.AllNode[2].Processor  Voltage  ETV
+vector 52  TrafficGenExample.AllNode[2].Processor  residualRelative  ETV
+vector 53  TrafficGenExample.AllNode[2].Processor  residualAbs  ETV
+3	2252 573 0 16675 0 50000 38 3 3 114 342
+4	2825 1125 0 16675 0 50000 38 0.57863888888889 1 29.304520925926 23.627786679934
+5	3950 818 0 16675 0 50000 38 6249300 10800000 316488826 2.7559450383475e+15
+9	4768 541 0 15026 0 45000 36 3 3 108 324
+10	5309 1099 0 15026 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+11	6408 810 0 15026 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+15	7218 577 0 15027 0 45000 36 3 3 108 324
+16	7795 1099 0 15027 0 45000 36 0.58046759259259 1 28.14722 22.958113963092
+17	8894 810 0 15027 0 45000 36 6269050 10800000 303989976 2.677834412655e+15
+21	9704 1011 0 15028 0 45000 64 3 3 192 576
+22	10715 1942 0 15028 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+23	12657 1403 0 15028 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+27	14060 1011 0 15029 0 45000 64 3 3 192 576
+28	15071 1942 0 15029 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+29	17013 1403 0 15029 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+33	18416 1011 0 15030 0 45000 64 3 3 192 576
+34	19427 1942 0 15030 0 45000 64 0.36958796296296 1 43.570841296296 33.034583733396
+35	21369 1403 0 15030 0 45000 64 3991550 10800000 470565086 3.8531538466633e+15
+39	22772 1315 0 15031 0 45000 84 3 3 252 756
+40	24087 2553 0 15031 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+41	26640 1828 0 15031 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+45	28468 1315 0 15032 0 45000 84 3 3 252 756
+46	29783 2553 0 15032 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+47	32336 1828 0 15032 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
+51	34164 1315 0 15033 0 45000 84 3 3 252 756
+52	35479 2553 0 15033 0 45000 84 0.15878240740741 1 48.888746111111 35.928852332946
+53	38032 1828 0 15033 0 45000 84 1714850 10800000 527998458 4.1907413361148e+15
