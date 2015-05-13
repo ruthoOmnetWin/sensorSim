@@ -139,12 +139,6 @@ void SensorNode::connectProcessorAndMemory() {
 }
 
 void SensorNode::handleMessage(cMessage *msg) {
-    std::string msgName = msg->getName();
-    if (msgName == "sendInit") {
-        cPacket *pack = new cPacket("hop");
-        sendToChannel(pack);
-    }
-
 }
 
 void SensorNode::finish()

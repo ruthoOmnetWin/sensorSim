@@ -62,45 +62,45 @@ Warning--empty booktitle in sensornetzwiki
 Warning--empty year in sensornetzwiki
 Warning--empty booktitle in openwns
 Warning--empty year in openwns
-Warning--empty booktitle in ns3
-Warning--empty year in ns3
 Warning--empty booktitle in hsc
 Warning--empty year in hsc
+Warning--empty booktitle in ns3
+Warning--empty year in ns3
 Warning--empty booktitle in ikr
 Warning--empty year in ikr
 You've used 19 entries,
             2343 wiz_defined-function locations,
-            611 strings with 7120 characters,
-and the built_in function-call counts, 4326 in all, are:
-= -- 364
-> -- 55
+            611 strings with 7191 characters,
+and the built_in function-call counts, 4664 in all, are:
+= -- 389
+> -- 98
 < -- 0
-+ -- 32
-- -- 12
-* -- 318
-:= -- 544
++ -- 48
+- -- 28
+* -- 366
+:= -- 598
 add.period$ -- 38
 call.type$ -- 19
-change.case$ -- 44
+change.case$ -- 52
 chr.to.int$ -- 0
 cite$ -- 83
-duplicate$ -- 269
-empty$ -- 551
-format.name$ -- 12
-if$ -- 1007
+duplicate$ -- 277
+empty$ -- 559
+format.name$ -- 28
+if$ -- 1073
 int.to.chr$ -- 0
 int.to.str$ -- 19
 missing$ -- 20
 newline$ -- 79
 num.names$ -- 10
-pop$ -- 183
+pop$ -- 191
 preamble$ -- 1
-purify$ -- 44
+purify$ -- 52
 quote$ -- 0
-skip$ -- 154
+skip$ -- 160
 stack$ -- 0
 substring$ -- 111
-swap$ -- 43
+swap$ -- 51
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0

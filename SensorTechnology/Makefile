@@ -41,6 +41,9 @@ INCLUDE_PATH = \
     -Iexamples/BasicExample \
     -Iexamples/BasicExample/data \
     -Iexamples/BasicExample/results \
+    -Iexamples/SensorExample \
+    -Iexamples/SensorExample/data \
+    -Iexamples/SensorExample/results \
     -Iexamples/SleepOutOfSync \
     -Iexamples/SleepOutOfSync/data \
     -Iexamples/SleepOutOfSync/results \
@@ -183,6 +186,9 @@ clean:
 	$(Q)-rm -f examples/BasicExample/*_m.cc examples/BasicExample/*_m.h
 	$(Q)-rm -f examples/BasicExample/data/*_m.cc examples/BasicExample/data/*_m.h
 	$(Q)-rm -f examples/BasicExample/results/*_m.cc examples/BasicExample/results/*_m.h
+	$(Q)-rm -f examples/SensorExample/*_m.cc examples/SensorExample/*_m.h
+	$(Q)-rm -f examples/SensorExample/data/*_m.cc examples/SensorExample/data/*_m.h
+	$(Q)-rm -f examples/SensorExample/results/*_m.cc examples/SensorExample/results/*_m.h
 	$(Q)-rm -f examples/SleepOutOfSync/*_m.cc examples/SleepOutOfSync/*_m.h
 	$(Q)-rm -f examples/SleepOutOfSync/data/*_m.cc examples/SleepOutOfSync/data/*_m.h
 	$(Q)-rm -f examples/SleepOutOfSync/results/*_m.cc examples/SleepOutOfSync/results/*_m.h
@@ -212,13 +218,12 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc examples/*.cc examples/AllNodes/*.cc examples/AllNodes/data/*.cc examples/AllNodes/results/*.cc examples/BasicExample/*.cc examples/BasicExample/data/*.cc examples/BasicExample/results/*.cc examples/SleepOutOfSync/*.cc examples/SleepOutOfSync/data/*.cc examples/SleepOutOfSync/results/*.cc examples/SleepVsNoSleep/*.cc examples/SleepVsNoSleep/data/*.cc examples/SleepVsNoSleep/results/*.cc examples/TrafficGenExample/*.cc examples/TrafficGenExample/data/*.cc examples/TrafficGenExample/results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNetworkInterface/*.cc src/SensorNode/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc doc/*.cc doc/doxy/*.cc doc/doxy/search/*.cc doc/neddoc/*.cc examples/*.cc examples/AllNodes/*.cc examples/AllNodes/data/*.cc examples/AllNodes/results/*.cc examples/BasicExample/*.cc examples/BasicExample/data/*.cc examples/BasicExample/results/*.cc examples/SensorExample/*.cc examples/SensorExample/data/*.cc examples/SensorExample/results/*.cc examples/SleepOutOfSync/*.cc examples/SleepOutOfSync/data/*.cc examples/SleepOutOfSync/results/*.cc examples/SleepVsNoSleep/*.cc examples/SleepVsNoSleep/data/*.cc examples/SleepVsNoSleep/results/*.cc examples/TrafficGenExample/*.cc examples/TrafficGenExample/data/*.cc examples/TrafficGenExample/results/*.cc src/*.cc src/ExtendedMessage/*.cc src/SensorNetworkInterface/*.cc src/SensorNode/*.cc src/SensorNode/Memory/*.cc src/SensorNode/Processor/*.cc src/SensorNode/Sensor/*.cc src/SensorNode/Sensor/SensingUnit/*.cc src/SensorNode/Sensor/SignalConditioner/*.cc src/SensorNode/Sensor/SignalConverter/*.cc src/SensorNode/Sensor/Transducer/*.cc src/SimpleSensorData/*.cc src/StatisticsInterface/*.cc src/WorldModel/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/src/ExtendedMessage/ExtendedMessage_m.o: src/ExtendedMessage/ExtendedMessage_m.cc \
 	src/ExtendedMessage/ExtendedMessage_m.h
 $O/src/SensorNode/BatteryAccess.o: src/SensorNode/BatteryAccess.cc \
-	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
@@ -226,19 +231,12 @@ $O/src/SensorNode/BatteryAccess.o: src/SensorNode/BatteryAccess.cc \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
-	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
-	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
-	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
 	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/SensorNode.h
 $O/src/SensorNode/SensorNode.o: src/SensorNode/SensorNode.cc \
-	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
@@ -246,12 +244,6 @@ $O/src/SensorNode/SensorNode.o: src/SensorNode/SensorNode.cc \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
-	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
-	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
-	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \

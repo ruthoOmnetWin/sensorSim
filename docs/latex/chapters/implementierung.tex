@@ -234,7 +234,7 @@ void Processor::doCollectStatistics()
 }
 \end{lstlisting}
 
-Mit Abbildung \ref{fig:switchingModes5000} ist ein Beispiel gegeben, bei dem alle 3 Events in Verwendung waren. Dabei ist natürlich von der Sensorsteuerung nicht viel zu sehen. Alle 5000 Sekunden wurde hierbei der Modus gewechselt, beginnend bei dem normalen Modus, danach einem Energie sparenden Modus und zuletzt einem Modus mit sehr hohem Energieverbrauch. Danach wieder beginnend von vorn. Dabei wurde alle 1000 Sekunden der Ladezustand abgefragt. Diese Operationen wurden auf 3 verschiedenen Sensorknoten parallel durchgeführt. Man kann sehr gut sehen, dass der blaue Verlauf besonders schnell nach unten geht. Das liegt daran, dass dort ein Knoten mit 4 Sensoren genutzt wurde. Der Grüne dagegen konnte deutlich länger am Leben bleiben, weil dieser Knoten keinen Sensor besaß. Der Energieverbrauch aller Bauteile war bei allen 3 Sensorknoten analog.
+Mit Abbildung \ref{fig:switchingModes5000} ist ein Beispiel gegeben, bei dem alle 3 Events in Verwendung waren. Dabei ist natürlich von der Sensorsteuerung nicht viel zu sehen. Alle 5000 Sekunden wurde hierbei der Modus gewechselt, beginnend bei dem normalen Modus, danach einem Energie sparenden Modus und zuletzt einem Modus mit sehr hohem Energieverbrauch. Danach wieder beginnend von vorn. Dabei wurde alle 1000 Sekunden der Ladezustand abgefragt. Diese Operationen wurden auf 4 verschiedenen Sensorknoten parallel durchgeführt. Man kann sehr gut sehen, dass der gelbe Verlauf besonders schnell nach unten geht. Das liegt daran, dass dort ein Knoten mit 4 Sensoren genutzt wurde. Der Rote dagegen konnte deutlich länger am Leben bleiben, weil dieser Knoten lediglich einen Temperatursensor besaß. Der Energieverbrauch für die jeweils analogen Bauteile war bei allen 3 Sensorknoten gleich.
 
 \begin{figure}[htbp]
 \centering
@@ -377,6 +377,8 @@ Dieses Interface enthält grundlegende Attribute für Statistiken. Klassen die d
 
 Im folgenden Abschnitt werden alle Simulationsobjekte erläutert, also all jene, die durch die Sprache NED beschrieben wurden:
 
+\todo{BasicWSN}
+
 \begin{minipage}{\textwidth}
 \begin{itemize}{\label{enum:NedModules}}
 \item Simple Module
@@ -491,7 +493,7 @@ Für den Sensorknoten wurde dennoch eine eigene Klasse definiert, welche allerdi
 \centering
 \caption{allgemeines Modell eines Sensors}
 \label{fig:SensorModel}
-\includegraphics[]{SensorModel}
+\includegraphics[width=0.3\textwidth]{SensorModel}
 \end{figure}
 
 Es liegt ein abstraktes Modul und ein Modulinterface für die verschiedenen Sensoren vor und für jeden Sensortyp existiert ein Sensormodul, welches vom abstrakten Modul erbt und das Sensorinterface implementiert.\\
@@ -522,7 +524,7 @@ Anhand der Submoduldefinition ist auch ersichtlich, weshalb jedes Modul des Sens
 \centering
 \caption{Aufbau des Compoundmoduls SensorNode}
 \label{fig:Sensornode}
-\includegraphics[width=\textwidth]{Sensornode}
+\includegraphics[width=0.7\textwidth]{Sensornode}
 \end{figure}
 
 Der SensorNode ist das komplexeste Compound Modul in der Simulation, denn es beinhaltet die bisher beschriebenen Module Sensor, Prozessor, Memory und die in MiXiM enthaltenen Module für die Funkkommunikation und eine Batterie.\\
@@ -624,7 +626,7 @@ Die omnetpp.ini ist eine Datei, in der Eigenschaften der Simulation geändert we
 **.collectStatisticsIntervall = 1000s
 \end{lstlisting}
 
-\subsection*{Simulationsparameter}
+\subsection{Simulationsparameter}
 
 \section{Funktionsweise mit Beispielanwendungen}
 
@@ -632,6 +634,58 @@ All die in diesem Kapitel beschriebenen Module wirken für die Simulation zusamm
 
 \subsection*{allgemeine Beispiele}
 
+Die allgemeinen Beispiele zeigen auf, wie einfache Anwendungen unter Nutzung der Sensorknoten aussehen könnten. Dabei werden einfache Netzwerke mit unterschiedlichen Knoten gezeigt und wie diese erzeugt werden können.
+
+\paragraph{BasicExample}
+
+Das Netzwerk BasicExample beinhaltet einige verschiedene Typen von Sensorknoten. Zur Verwendung von der Sensorik sollte das Netzwerk vom Modul BasicWSN erben, welches schon viele Parameter initialisiert, die für das korrekte Funktionieren notwendig sind. Alle weiteren Parameter, welche in der omnet.ini definiert sind, dienen dazu, die Simulation entsprechend des gewünschten Verhaltens anzupassen, wie zum Beispiel Batteriekapazität, Energieverbrauch einzelner Module und so weiter.
+
+\paragraph{AllNodes}
+
+AllNodes ist ein Beispielnetzwerk, in dem alle möglichen Kombinationen von Sensorknoten vorgeführt werden. Aus den 4 verschiedenen Sensortypen können 15 verschiedene Arten von Sensorknoten erzeugt werden, wenn man den Knoten ohne jeglichen Sensor nicht mitzählt, welcher in diesem Netzwerk aber ebenfalls vorhanden ist. Das Beispiel dient zum Testen aller verschiedener Kombinationsmöglichkeiten, da diese jeweils verschiedenes internes Verhalten aufweisen.
+
+\paragraph{TrafficGenExample}
+
+Das Netzwerk TrafficGenExample unterscheidet nur wenig vom BasicExample. Der entscheidende Unterschied ist, dass hierbei ein anderes Modul aus dem ApplicatioLayer von MiXiM genutzt wurde, nämlich TrafficGen. Dieses kann sehr viele Nachrichten generieren und so den Kommunikationsverkehr sehr gut testen.
+
+\paragraph{SensorExample}
+
+\todo{beispiel für die sensorik}
+
 \subsection*{spezielles Verhalten}
 
-\todo{beispiele implementieren und beschreiben}
+Im folgenden Abschnitt werden einige speziellere Netzwerke, als die bisherigen beschrieben. Diese führen nicht nur stupide Kommunikationen durch, sondern testen außerdem die verschiedenen Prozessormodi und zeigen, wie diese die Lebenszeit eines Knotens beeinflussen können.
+
+\paragraph{SleepVsNoSleep}
+
+\begin{figure}[htbp]
+\centering
+\caption{Powermodi im Beispiel SleepVsNoSleep}
+\label{fig:sleepVsNoSleepPowerModes}
+\includegraphics[width=\textwidth]{sleepVsNoSleepPowerModes}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\caption{Ladezustand im Beispiel SleepVsNoSleep}
+\label{fig:sleepVsNoSleepResRel}
+\includegraphics[width=\textwidth]{sleepVsNoSleepResRel}
+\end{figure}
+
+Im Netzwerk SleepVsNoSleep befinden sich 2 beinahe identische Knoten. Die Bauteile auf beiden sind die selben, der einzige Unterschied besteht darin, dass einer der beiden Knoten nur einen Energiemodus benutzt, in dem ganz normal Energie im Stand-By-Modus verbraucht wird. Im Gegensatz dazu kann der andere Knoten zwischen 3 verschiedenen Modi zyklisch wechseln, wobei er in jedem dritten Intervall in einen schlafenden Zustand übergeht, bei dem deutlich Energie gespart werden kann.\\
+Die Abbildung \ref{fig:sleepVsNoSleepPowerModes} zeigt die verschiedenen Powermodi. Dabei ist entscheidend, dass der Energiesparmodus durch den Wert 1 repräsentiert wird. Der rote Knoten wechselt in diesem Beispiel niemals in den Energiesparmodus, sondern bleibt während der gesamten Zeit in einem Modus. Der andere Knoten wechselt jeweils für 5000 Sekunden in den Energiesparmodus. Nur dazwischen wechselt er immer für kurze Zeit in einen aktiven Modus.\\
+Das Resultat ist in Abbildung \ref{fig:sleepVsNoSleepResRel} sofort ersichtlich. Der rote Knoten, welcher nie in den schlafenden Modus wechselt hat eine erheblich kleinere Lebenszeit. Das Verhältnis der Lebenszeit ist natürlich davon abhängig, wie viel Energie durch den Energiesparmodus gespart werden kann.
+
+\paragraph{SleepOutOfSync}
+
+\begin{figure}[htbp]
+\centering
+\caption{Powermodi im Beispiel SleepOutOfSync}
+\label{fig:sleepOutOfSyncModes}
+\includegraphics[width=\textwidth]{outOfSync}
+\end{figure}
+
+Das Beispiel namens SleepOutOfSync zeigt ebenso wie SleepVsNoSleep die Verwendung der Prozessor-Energie-Modi. Allerdings wird bei diesem Beispiel gezeigt, warum der Tagesablauf von den verschiedenen Knoten, welche sich in einem Sensornetzwerk befinden zeitlich aufeinander abgestimmt werden muss.\\
+Dazu ist lediglich ein kleines Netzwerk von 2 Knoten vorhanden, welche genau zeitversetzt zwischen dem Energiesparmodus, in dem nichts gesendet oder empfangen werden kann und einem normal Modus wechseln. In dieser extremen Variante würde das Netzwerk gar nicht erst vorhanden sein, da beide Knoten niemals von der Existenz des jeweils anderen erfahren würden.\\
+Das zeigt, weshalb verschiedene Knoten eines Netzwerkes in der Praxis einen synchronen Tagesablauf besitzen müssen, damit keine unnötige Kommunikation stattfindet, an der nicht alle Knoten beteiligt sind.\\
+In Abbildung \ref{fig:sleepOutOfSyncModes} ist dieser Ablauf visualisiert. Dabei kann im Modus mit dem Wert 1 keine Kommunikation stattfinden. Wie man sehen kann, wechseln sich die beiden Knoten genau zwischen aktiven und inaktiven Modi ab. Es kann dadurch zu keiner Kommunikation kommen.

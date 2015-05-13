@@ -1,0 +1,26 @@
+file 23150 1431514142                                           
+version 2
+run General-0-20150513-12:48:58-8152
+attr configname General
+attr datetime 20150513-12:48:58
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network SensorExample
+attr processid 8152
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 3  SensorExample.TNode.Processor  "power mode"  ETV
+vector 4  SensorExample.TNode.Processor  Voltage  ETV
+vector 5  SensorExample.TNode.Processor  residualRelative  ETV
+vector 6  SensorExample.TNode.Processor  residualAbs  ETV
+3	603 16 0 0 0 0 2 0 0 0 0
+4	619 5105 0 3600 0 102000 349 3 3 1047 3141
+5	5724 10237 0 3600 0 102000 349 0.0053518518518519 1 173.95553703704 115.86952637003
+6	15961 7189 0 3600 0 102000 349 57800 10800000 1878719800 1.35150215558e+16

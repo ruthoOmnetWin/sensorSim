@@ -32,9 +32,7 @@
  * the gates, defined inside the ned code are used
  */
 
-#include <ConnectionManagerAccess.h>
-
-class SensorNode : public ConnectionManagerAccess {
+class SensorNode : public cModule {
 public:
     cDatarateChannel* getControlChannel();
     cDatarateChannel* getDataChannel();
