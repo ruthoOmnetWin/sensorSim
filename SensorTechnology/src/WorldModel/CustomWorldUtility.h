@@ -63,6 +63,7 @@ protected:
     int sizeY;
     int sizeZ;
     bool noisy;
+    bool breakAfterInit;
 public:
     explicit CustomWorldUtility();
     virtual ~CustomWorldUtility();

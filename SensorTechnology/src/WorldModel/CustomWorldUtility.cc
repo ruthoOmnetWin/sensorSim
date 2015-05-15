@@ -28,7 +28,6 @@ using namespace std;
 #define xmlTemperature 2
 #define xmlLight 3
 
-#define folderPath "data/"
 #define humidityPath "data/humidity.xml"
 #define pressurePath "data/pressure.xml"
 #define temperaturePath "data/temperature.xml"
@@ -57,11 +56,14 @@ CustomWorldUtility::CustomWorldUtility() : BaseWorldUtility()
 
 void CustomWorldUtility::createFiles()
 {
+    breakAfterInit = false;
+
     ifstream ifile(humidityPath);
     if (!ifile.good()) {
         std::ofstream outfile (humidityPath);
         outfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?><humidiy></humidiy>" << std::endl;
         outfile.close();
+        breakAfterInit = true;
     } else {
     }
     ifile.close();
@@ -71,6 +73,7 @@ void CustomWorldUtility::createFiles()
         std::ofstream outfile (temperaturePath);
         outfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?><temperature></temperature>" << std::endl;
         outfile.close();
+        breakAfterInit = true;
     } else {
     }
     ifile2.close();
@@ -80,6 +83,7 @@ void CustomWorldUtility::createFiles()
         std::ofstream outfile (lightPath);
         outfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?><light></light>" << std::endl;
         outfile.close();
+        breakAfterInit = true;
     } else {
     }
     ifile3.close();
@@ -89,6 +93,7 @@ void CustomWorldUtility::createFiles()
         std::ofstream outfile (pressurePath);
         outfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?><pressure></pressure>" << std::endl;
         outfile.close();
+        breakAfterInit = true;
     } else {
     }
     ifile4.close();
@@ -156,8 +161,12 @@ void CustomWorldUtility::initialize(int stage)
         this->setPressure();
         this->setHumidity();
         this->setLight();
-    } else if (stage == 1) {
 
+        if (breakAfterInit) {
+            error("Not all needed xml-files existed on startup. These files have been created now and you can start the Simulation again.");
+        }
+
+    } else if (stage == 1) {
     }
 }
 
@@ -180,13 +189,15 @@ ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)
 
 void CustomWorldUtility::setValue(int*** &parameter, int*** &data)
 {
+    int tmp;
     parameter = new int**[this->sizeX];
     for (int i = 0; i < this->sizeX; i++) {
         parameter[i] = new int*[this->sizeY];
         for (int j = 0; j < this->sizeY; j++) {
             parameter[i][j] = new int[this->sizeZ];
             for (int k = 0; k < this->sizeZ; k++) {
-                parameter[i][j][k] = data[i][j][k];
+                tmp = data[i][j][k];
+                parameter[i][j][k] = tmp;
             }
         }
     }
