@@ -27,7 +27,8 @@ network BasicWSN
     parameters:
         int numHosts;        
         
-        world.createData = false;
+        bool createData = default(false);
+        bool noisyWorld = default(false);
         world.basePath = "data/";
         world.xmlTemperature = xmldoc("data/temperature.xml");
         world.xmlPressure = xmldoc("data/pressure.xml");
@@ -59,6 +60,8 @@ network BasicWSN
                 playgroundSizeY = playgroundSizeY;
                 playgroundSizeZ = playgroundSizeZ;
                 @display("p=280,0;i=misc/globe;is=s");
+                noisy = noisyWorld;
+                createData = createData;
         }
     connections allowunconnected:
 }

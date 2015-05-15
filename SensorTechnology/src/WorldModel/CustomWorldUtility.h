@@ -49,6 +49,8 @@ protected:
     void finish();
     void destroySensorData(int*** &);
     int getEnumFromType(std::string type);
+    void say(const char * say);
+    void createFiles();
 protected:
     int numNodes;
     //sensor (world) data
@@ -60,6 +62,7 @@ protected:
     int sizeX;
     int sizeY;
     int sizeZ;
+    bool noisy;
 public:
     explicit CustomWorldUtility();
     virtual ~CustomWorldUtility();

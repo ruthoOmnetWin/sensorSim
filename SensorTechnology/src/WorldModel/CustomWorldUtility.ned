@@ -20,6 +20,7 @@ simple CustomWorldUtility extends BaseWorldUtility
 {
     parameters:
         bool createData;
+        bool noisy;
         int dataGranularity;
         string basePath;
         xml xmlTemperature;

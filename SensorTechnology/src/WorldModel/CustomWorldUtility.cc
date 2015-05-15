@@ -28,8 +28,15 @@ using namespace std;
 #define xmlTemperature 2
 #define xmlLight 3
 
+#define folderPath "data/"
+#define humidityPath "data/humidity.xml"
+#define pressurePath "data/pressure.xml"
+#define temperaturePath "data/temperature.xml"
+#define lightPath "data/light.xml"
+
 CustomWorldUtility::CustomWorldUtility() : BaseWorldUtility()
 {
+    createFiles();
     this->sizeX = 0;
     this->sizeY = 0;
     this->sizeZ = 0;
@@ -48,6 +55,45 @@ CustomWorldUtility::CustomWorldUtility() : BaseWorldUtility()
     c->z = 3;
 }
 
+void CustomWorldUtility::createFiles()
+{
+    ifstream ifile(humidityPath);
+    if (!ifile.good()) {
+        std::ofstream outfile (humidityPath);
+        outfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?><humidiy></humidiy>" << std::endl;
+        outfile.close();
+    } else {
+    }
+    ifile.close();
+
+    ifstream ifile2(temperaturePath);
+    if (!ifile2.good()) {
+        std::ofstream outfile (temperaturePath);
+        outfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?><temperature></temperature>" << std::endl;
+        outfile.close();
+    } else {
+    }
+    ifile2.close();
+
+    ifstream ifile3(lightPath);
+    if (!ifile3.good()) {
+        std::ofstream outfile (lightPath);
+        outfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?><light></light>" << std::endl;
+        outfile.close();
+    } else {
+    }
+    ifile3.close();
+
+    ifstream ifile4(pressurePath);
+    if (!ifile4.good()) {
+        std::ofstream outfile (pressurePath);
+        outfile << "<?xml version=\"1.0\" encoding=\"UTF-8\"?><pressure></pressure>" << std::endl;
+        outfile.close();
+    } else {
+    }
+    ifile4.close();
+}
+
 CustomWorldUtility::~CustomWorldUtility()
 {
     this->destroySensorData(temperatureArray);
@@ -60,55 +106,56 @@ void CustomWorldUtility::initialize(int stage)
 {
     BaseWorldUtility::initialize(stage);
     if (stage == 0) {
-    ev << "Initializing World Model" << endl;
+        noisy = par("noisy");
+        ev << "Initializing World Model" << endl;
 
-    this->sizeX = (int)par("playgroundSizeX").longValue()/par("dataGranularity").longValue();
-    this->sizeY = (int)par("playgroundSizeY").longValue()/par("dataGranularity").longValue();
-    this->sizeZ = (int)par("playgroundSizeZ").longValue()/par("dataGranularity").longValue();
+        this->sizeX = (int)par("playgroundSizeX").longValue()/par("dataGranularity").longValue();
+        this->sizeY = (int)par("playgroundSizeY").longValue()/par("dataGranularity").longValue();
+        this->sizeZ = (int)par("playgroundSizeZ").longValue()/par("dataGranularity").longValue();
 
-    if (par("createData")) {
-        EV << "Generating New Environment Data" << endl;
-        this->generateEnvironmentData();
-    } else {
-
-        //if any of the 4 xml files doesn't exists new environment data will be created
-        bool filesExist = true;
-        ifstream ifile("src/WorldModel/data/temperature.xml");
-        if (!ifile) {
-            filesExist = false;
-        }
-        ifile.close();
-        if (filesExist) {
-            ifstream ifile("src/WorldModel/data/pressure.xml");
-            if (!ifile) {
-                filesExist = false;
-            }
-            ifile.close();
-        }
-        if (filesExist) {
-            ifstream ifile("src/WorldModel/data/humidity.xml");
-            if (!ifile) {
-                filesExist = false;
-            }
-            ifile.close();
-        }
-        if (filesExist) {
-            ifstream ifile("src/WorldModel/data/light.xml");
-            if (!ifile) {
-                filesExist = false;
-            }
-            ifile.close();
-        }
-        if (!filesExist) {
-            EV << "Generating New Environment Data due to missing files" << endl;
+        if (par("createData")) {
+            EV << "Generating New Environment Data" << endl;
             this->generateEnvironmentData();
-        }
-    }
+        } else {
 
-    this->setTemperature();
-    this->setPressure();
-    this->setHumidity();
-    this->setLight();
+            //if any of the 4 xml files doesn't exists new environment data will be created
+            bool filesExist = true;
+            ifstream ifile(par("xmlTemperature"));
+            if (!ifile) {
+                filesExist = false;
+            }
+            ifile.close();
+            if (filesExist) {
+                ifstream ifile(par("xmlPressure"));
+                if (!ifile) {
+                    filesExist = false;
+                }
+                ifile.close();
+            }
+            if (filesExist) {
+                ifstream ifile(par("xmlHumidity"));
+                if (!ifile) {
+                    filesExist = false;
+                }
+                ifile.close();
+            }
+            if (filesExist) {
+                ifstream ifile(par("xmlLight"));
+                if (!ifile) {
+                    filesExist = false;
+                }
+                ifile.close();
+            }
+            if (!filesExist) {
+                EV << "Generating New Environment Data due to missing files" << endl;
+                this->generateEnvironmentData();
+            }
+        }
+
+        this->setTemperature();
+        this->setPressure();
+        this->setHumidity();
+        this->setLight();
     } else if (stage == 1) {
 
     }
@@ -290,11 +337,24 @@ void CustomWorldUtility::generateEnvironmentData()
 int* CustomWorldUtility::generateTemperature(int size)
 {
     int* data = new int[size];
+    say("Creating Data Temperature:");
+    std::stringstream ss;
     for (int i = 0; i < size; i++) {
         //10 - 30
-        data[i] = (int)((rand() % 100)/5) + 10;
+        int temp = (int)((rand() % 100)/5) + 10;
+        data[i] = temp;
+        ss << " " << temp;
     }
+    say(ss.str().c_str());
     return data;
+}
+
+void CustomWorldUtility::say(const char * say)
+{
+    if (noisy) {
+        ev.bubble(this, say);
+    }
+    EV << say << endl;
 }
 
 /**
