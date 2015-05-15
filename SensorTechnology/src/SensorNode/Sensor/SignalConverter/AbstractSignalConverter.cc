@@ -26,6 +26,7 @@ AbstractSignalConverter::~AbstractSignalConverter() {
 
 void AbstractSignalConverter::handleMessage(cMessage *msg)
 {
+    say("SConv: Received Message... Processing and Forwarding.");
     draw();
     send(msg, "toTransducer");
 }

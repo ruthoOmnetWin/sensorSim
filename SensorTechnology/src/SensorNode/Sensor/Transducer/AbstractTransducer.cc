@@ -26,6 +26,7 @@ AbstractTransducer::~AbstractTransducer() {
 
 void AbstractTransducer::handleMessage(cMessage *msg)
 {
+    say("Trans: Received Message... Processing and Forwarding.");
     draw();
     send(msg, "toNodeProcessor");
 }

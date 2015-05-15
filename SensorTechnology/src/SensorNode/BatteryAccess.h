@@ -30,11 +30,14 @@
  */
 
 #include "SensorNode.h"
+#include <string>
 
 class BatteryAccess : public MiximBatteryAccess {
 protected:
     //int deviceID;
     SensorNode* getSensorNode();
+    cOutVector consumption;
+    cOutVector overTime;
 public:
     float currentOverTime;
     float energiePerOperation;
@@ -42,6 +45,7 @@ public:
     virtual ~BatteryAccess();
     void initialize(int stage);
     void say(const char *);
+    void say(std::string);
     void draw();
     void changeDrawCurrent(double cur, int acc);
     void changeEnergyConsumption(float);

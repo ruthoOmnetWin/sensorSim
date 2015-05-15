@@ -45,7 +45,8 @@ void Memory::handleMessage(cMessage *msg)
     int value = data->sensorData;
     std::string nameString = name;
 
-    EV << "Got type: " << name << " with value:" << value << endl;
+    std::stringstream ss; ss << "Got type: " << name << " with value:" << value << endl;
+    say(ss.str());
 
     if (readEntry(nameString) == error) {
         createEntry(nameString, value);

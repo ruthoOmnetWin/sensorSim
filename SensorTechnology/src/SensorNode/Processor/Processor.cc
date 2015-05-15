@@ -75,6 +75,9 @@ void Processor::initialize(int stage)
         activatedModeVector.setName("power mode");
         activatedModeVector.record(activatedMode);
 
+        sensorUnitsActive.setName("Sensor Modules Status");
+        sensorUnitsActive.record(0);
+
         switchProcessorMode();
         // <- register with the battery
 
@@ -149,16 +152,20 @@ void Processor::handleMessage(cMessage *msg)
     std::string name = msg->getName();
     if (msg->isSelfMessage()) {
         if (name == "startSensingUnit") {
+            say("Processor: scheduling startSensingUnit");
             schedulePeriodicSelfMessage(msg, sensing);
             startSensingUnit();
+            sensorUnitsActive.record(1);
         }
         if (name == "shiftMode") {
+            say("Processor: scheduling shiftMode");
             activatedMode++;
             switchProcessorMode();
             switchPeripheryEnergyConsumption();
             schedulePeriodicSelfMessage(msg, shiftProcessorMode);
         }
         if (name == "collectStatistics") {
+            say("Processor: scheduling collect Statistics");
             schedulePeriodicSelfMessage(msg, collectStatistics);
             doCollectStatistics();
         }
@@ -169,6 +176,8 @@ void Processor::handleMessage(cMessage *msg)
             name == "Humidity" ||
             name == "Light"
         ) {
+            sensorUnitsActive.record(0);
+            say("Processor: Got measure data, saving to memory.");
             send(msg, "connectToMemory$o");
         }
         EV << "Got Message: " << msg->getName() << endl;
@@ -225,6 +234,7 @@ void Processor::schedulePeriodicSelfMessage(int intervallType)
  */
 void Processor::startSensingUnit()
 {
+    say("Initiating measuring");
     cModule* SensorNode = getParentModule();
     if (SensorNode->par("hasTemperatureSensor")) {
         cMessage* msg = new cMessage("startMeasuring");
@@ -369,6 +379,7 @@ void Processor::handleHostState(const HostState& state)
     BatteryAccess::handleHostState(state);
     HostState::States hostState = state.get();
     if (hostState == HostState::FAILED) {
+        say("Battery emptied");
         cancelAndDelete(selfMessageMeasure);
         cancelAndDelete(selfMessageShiftMode);
         cancelAndDelete(selfMessageStatistics);

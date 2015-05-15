@@ -26,6 +26,7 @@ AbstractSignalConditioner::~AbstractSignalConditioner() {
 
 void AbstractSignalConditioner::handleMessage(cMessage *msg)
 {
+    say("SCond: Received Message... Processing and Forwarding.");
     draw();
     send(msg, "toSignalConverter");
 }

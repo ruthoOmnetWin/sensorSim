@@ -61,6 +61,8 @@ Coord* AbstractSensingUnit::getLocation()
     ChannelMobilityPtrType pMobType = phy->getMobilityModule();
     if(pMobType != NULL){
         back = new Coord(pMobType->getCurrentPosition());
+        std::stringstream ssay; ssay << "My Location: " << "(" << back->x << "," << back->y << "," << back->z << ")";
+        say(ssay.str());
         return back;
     }
     return new Coord();
@@ -74,9 +76,8 @@ int AbstractSensingUnit::readData()
     int data = world->getValueByPosition(type, position);
     delete position;
     std::stringstream ss;
-    ss << "At position (" << position->x << "," << position->y << "," << position->z << "); Got value " << data << " for type " << type;
-    std::string s = ss.str();
-    say(s.c_str());
+    ss << "SU: At position (" << position->x << "," << position->y << "," << position->z << "); Got value " << data << " for type " << type;
+    say(ss.str());
     draw();
     return data;
 }

@@ -11,6 +11,7 @@ network SensorExample extends BasicWSN like SensorNetworkInterface
     parameters:
         
         numHosts = 1;
+        world.createData = true;
 
     submodules:
         TNode: SensorNode {

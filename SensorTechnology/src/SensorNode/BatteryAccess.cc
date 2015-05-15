@@ -37,6 +37,11 @@ void BatteryAccess::initialize(int stage) {
         energiePerOperation = par("energyConsumption").doubleValue();
         drawCurrent(currentOverTime, 0);
         //HostState::States state = battery->getState();
+    } else {
+        consumption.setName("Energy Consumptions");
+        consumption.record(energiePerOperation);
+        overTime.setName("Current use over time");
+        overTime.record(currentOverTime);
     }
 }
 
@@ -74,12 +79,20 @@ void BatteryAccess::say(const char * say)
     getSensorNode()->say(say);
 }
 
-void BatteryAccess::draw() {
+void BatteryAccess::say(std::string s)
+{
+    say(s.c_str());
+}
+
+void BatteryAccess::draw()
+{
+    consumption.record(energiePerOperation);
     this->drawEnergy(energiePerOperation, 0);
 }
 
 void BatteryAccess::changeDrawCurrent(double cur, int acc)
 {
+    overTime.record(cur);
     this->drawCurrent(cur, acc);
 }
 
