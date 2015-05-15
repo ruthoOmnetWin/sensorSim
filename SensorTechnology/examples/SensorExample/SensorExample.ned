@@ -16,6 +16,7 @@ network SensorExample extends BasicWSN like SensorNetworkInterface
         TNode: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
+            noisy = true;
         }
 
     connections allowunconnected:

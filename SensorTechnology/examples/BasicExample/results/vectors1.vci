@@ -1,4 +1,4 @@
-file 88587 1431511076                                           
+file 88587 1431514266                                           
 version 2
 run General-0-20150513-11:57:49-6359
 attr configname General
@@ -15,44 +15,43 @@ attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-
 vector 3  BasicExample.SensorNode[0].Processor  "power mode"  ETV
-vector 4  BasicExample.SensorNode[0].Processor  Voltage  ETV
-vector 5  BasicExample.SensorNode[0].Processor  residualRelative  ETV
-vector 6  BasicExample.SensorNode[0].Processor  residualAbs  ETV
-vector 10  BasicExample.TNode[0].Processor  "power mode"  ETV
-vector 11  BasicExample.TNode[0].Processor  Voltage  ETV
-vector 12  BasicExample.TNode[0].Processor  residualRelative  ETV
-vector 13  BasicExample.TNode[0].Processor  residualAbs  ETV
-vector 17  BasicExample.TPNode[0].Processor  "power mode"  ETV
-vector 18  BasicExample.TPNode[0].Processor  Voltage  ETV
-vector 19  BasicExample.TPNode[0].Processor  residualRelative  ETV
-vector 20  BasicExample.TPNode[0].Processor  residualAbs  ETV
-vector 24  BasicExample.PHLNode[0].Processor  "power mode"  ETV
-vector 25  BasicExample.PHLNode[0].Processor  Voltage  ETV
-vector 26  BasicExample.PHLNode[0].Processor  residualRelative  ETV
-vector 27  BasicExample.PHLNode[0].Processor  residualAbs  ETV
-vector 31  BasicExample.TPHLNode[0].Processor  "power mode"  ETV
-vector 32  BasicExample.TPHLNode[0].Processor  Voltage  ETV
-vector 33  BasicExample.TPHLNode[0].Processor  residualRelative  ETV
-vector 34  BasicExample.TPHLNode[0].Processor  residualAbs  ETV
 3	1638 354 0 13584 0 85000 24 0 2 18 30
+vector 4  BasicExample.SensorNode[0].Processor  Voltage  ETV
 4	1992 4508 0 13785 0 87000 296 3 3 888 2664
+vector 5  BasicExample.SensorNode[0].Processor  residualRelative  ETV
 5	6500 8857 0 13785 0 87000 296 0.023083333333333 1 153.56278648148 105.4883045054
+vector 6  BasicExample.SensorNode[0].Processor  residualAbs  ETV
 6	15357 6291 0 13785 0 87000 296 249300 10800000 1658478094 1.2304155837509e+16
+vector 10  BasicExample.TNode[0].Processor  "power mode"  ETV
 10	21648 310 0 12004 0 70000 20 0 2 15 25
+vector 11  BasicExample.TNode[0].Processor  Voltage  ETV
 11	21958 4464 0 12368 0 73000 278 3 3 834 2502
-12	26422 8548 0 12368 0 73000 278 0.0024675925925926 1 143.31259722222 98.42293778573
+vector 12  BasicExample.TNode[0].Processor  residualRelative  ETV
+12	26422 8548 0 12368 0 73000 278 0.0024675925925926 1 143.31259722222 98.422937785729
+vector 13  BasicExample.TNode[0].Processor  residualAbs  ETV
 13	34970 6161 0 12368 0 73000 278 26650 10800000 1547776050 1.1480051463328e+16
+vector 17  BasicExample.TPNode[0].Processor  "power mode"  ETV
 17	41131 276 0 10776 0 60000 18 0 2 12 20
+vector 18  BasicExample.TPNode[0].Processor  Voltage  ETV
 18	41407 3879 0 10794 0 60000 245 3 3 735 2205
+vector 19  BasicExample.TPNode[0].Processor  residualRelative  ETV
 19	45286 7401 0 10794 0 60000 245 0.010203703703704 1 129.74326222222 89.877430869044
+vector 20  BasicExample.TPNode[0].Processor  residualAbs  ETV
 20	52687 5377 0 10794 0 60000 245 110200 10800000 1401227232 1.0483303536565e+16
+vector 24  BasicExample.PHLNode[0].Processor  "power mode"  ETV
 24	58064 242 0 10062 0 55000 16 0 2 12 20
+vector 25  BasicExample.PHLNode[0].Processor  Voltage  ETV
 25	58306 3719 0 10223 0 56000 237 3 3 711 2133
+vector 26  BasicExample.PHLNode[0].Processor  residualRelative  ETV
 26	62025 7242 0 10223 0 56000 237 0.024435185185185 1 120.79997351852 83.713332060497
+vector 27  BasicExample.PHLNode[0].Processor  residualAbs  ETV
 27	69267 5124 0 10223 0 56000 237 263900 10800000 1304639714 9.7643230515364e+15
+vector 31  BasicExample.TPHLNode[0].Processor  "power mode"  ETV
 31	74391 209 0 8428 0 45000 14 0 2 9 15
+vector 32  BasicExample.TPHLNode[0].Processor  Voltage  ETV
 32	74600 3235 0 8783 0 47000 208 3 3 624 1872
+vector 33  BasicExample.TPHLNode[0].Processor  residualRelative  ETV
 33	77835 6268 0 8783 0 47000 208 0.0073842592592593 1 113.4990812963 79.274329100208
+vector 34  BasicExample.TPHLNode[0].Processor  residualAbs  ETV
 34	84103 4484 0 8783 0 47000 208 79750 10800000 1225790078 9.2465577462483e+15

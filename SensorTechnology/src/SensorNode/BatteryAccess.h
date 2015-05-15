@@ -28,15 +28,20 @@
  * it also stores values of consumption a module has and than can use this at any
  * time to draw energie by the stored amount
  */
+
+#include "SensorNode.h"
+
 class BatteryAccess : public MiximBatteryAccess {
 protected:
     //int deviceID;
+    SensorNode* getSensorNode();
 public:
     float currentOverTime;
     float energiePerOperation;
     BatteryAccess();
     virtual ~BatteryAccess();
     void initialize(int stage);
+    void say(const char *);
     void draw();
     void changeDrawCurrent(double cur, int acc);
     void changeEnergyConsumption(float);

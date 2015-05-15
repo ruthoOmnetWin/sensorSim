@@ -14,6 +14,8 @@
 // 
 
 #include <AbstractSensingUnit.h>
+#include "SensorNode.h"
+#include <sstream>
 
 AbstractSensingUnit::AbstractSensingUnit() {
 
@@ -34,6 +36,7 @@ void AbstractSensingUnit::initialize(int stage) {
         //save world and provide data inside world
         this->world = World;
         EV << "CustomWorldUtility found" << endl;
+
     } else if (stage == 1) {
         readAndForward();
     }
@@ -42,7 +45,6 @@ void AbstractSensingUnit::initialize(int stage) {
 void AbstractSensingUnit::readAndForward()
 {
     int value = readData();
-    EV << "Read data " << value << endl;
     cModule* Sensor = getParentModule();
     std::string name = Sensor->par("type");
     ExtendedMessage *newmsg = generateMessage(name.c_str());
@@ -66,12 +68,15 @@ Coord* AbstractSensingUnit::getLocation()
 
 int AbstractSensingUnit::readData()
 {
-
     Coord *position = getLocation();
     cModule* Sensor = getParentModule();
     std::string type = Sensor->par("type");
     int data = world->getValueByPosition(type, position);
     delete position;
+    std::stringstream ss;
+    ss << "At position (" << position->x << "," << position->y << "," << position->z << "); Got value " << data << " for type " << type;
+    std::string s = ss.str();
+    say(s.c_str());
     draw();
     return data;
 }

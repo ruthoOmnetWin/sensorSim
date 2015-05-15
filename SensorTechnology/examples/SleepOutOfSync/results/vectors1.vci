@@ -1,4 +1,4 @@
-file 49383 1431511597                                           
+file 49383 1431514266                                           
 version 2
 run General-0-20150513-12:06:30-6670
 attr configname General
@@ -15,20 +15,19 @@ attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-
 vector 3  SleepOutOfSync.TPNode1[0].Processor  "power mode"  ETV
-vector 4  SleepOutOfSync.TPNode1[0].Processor  Voltage  ETV
-vector 5  SleepOutOfSync.TPNode1[0].Processor  residualRelative  ETV
-vector 6  SleepOutOfSync.TPNode1[0].Processor  residualAbs  ETV
-vector 10  SleepOutOfSync.TPNode2[0].Processor  "power mode"  ETV
-vector 11  SleepOutOfSync.TPNode2[0].Processor  Voltage  ETV
-vector 12  SleepOutOfSync.TPNode2[0].Processor  residualRelative  ETV
-vector 13  SleepOutOfSync.TPNode2[0].Processor  residualAbs  ETV
 3	890 870 0 9892 0 140000 58 0 2 42 70
+vector 4  SleepOutOfSync.TPNode1[0].Processor  Voltage  ETV
 4	1760 5155 0 9907 0 140000 341 3 3 1023 3069
+vector 5  SleepOutOfSync.TPNode1[0].Processor  residualRelative  ETV
 5	6915 10143 0 9907 0 140000 341 0.0098888888888889 1 164.89034722222 108.43832604575
+vector 6  SleepOutOfSync.TPNode1[0].Processor  residualAbs  ETV
 6	17058 7185 0 9907 0 140000 341 106800 10800000 1780815750 1.2648246349976e+16
+vector 10  SleepOutOfSync.TPNode2[0].Processor  "power mode"  ETV
 10	24243 955 0 10177 0 145000 60 0 2 45 75
+vector 11  SleepOutOfSync.TPNode2[0].Processor  Voltage  ETV
 11	25198 5658 0 10178 0 145000 351 3 3 1053 3159
+vector 12  SleepOutOfSync.TPNode2[0].Processor  residualRelative  ETV
 12	30856 10782 0 10178 0 145000 351 0.0046759259259259 1 173.67503888889 117.24455547026
+vector 13  SleepOutOfSync.TPNode2[0].Processor  residualAbs  ETV
 13	41638 7745 0 10178 0 145000 351 50500 10800000 1875690420 1.3675404950051e+16

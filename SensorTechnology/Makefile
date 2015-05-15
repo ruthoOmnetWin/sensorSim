@@ -255,11 +255,13 @@ $O/src/SensorNode/Memory/Memory.o: src/SensorNode/Memory/Memory.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
 	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/Memory/Memory.h \
+	src/SensorNode/SensorNode.h \
 	src/SimpleSensorData/SimpleSensorData.h
 $O/src/SensorNode/Processor/Processor.o: src/SensorNode/Processor/Processor.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
@@ -328,6 +330,7 @@ $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Senso
 	src/ExtendedMessage/ExtendedMessage_m.h \
 	src/SensorNode/BatteryAccess.h \
 	src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.h \
+	src/SensorNode/SensorNode.h \
 	src/SimpleSensorData/SimpleSensorData.h \
 	src/StatisticsInterface/StatisticsInterface.h \
 	src/WorldModel/CustomWorldUtility.h
@@ -335,29 +338,35 @@ $O/src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.o: src/Sens
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
 	src/SensorNode/BatteryAccess.h \
-	src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.h
+	src/SensorNode/Sensor/SignalConditioner/AbstractSignalConditioner.h \
+	src/SensorNode/SensorNode.h
 $O/src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.o: src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
 	src/SensorNode/BatteryAccess.h \
-	src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.h
+	src/SensorNode/Sensor/SignalConverter/AbstractSignalConverter.h \
+	src/SensorNode/SensorNode.h
 $O/src/SensorNode/Sensor/Transducer/AbstractTransducer.o: src/SensorNode/Sensor/Transducer/AbstractTransducer.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
 	src/SensorNode/BatteryAccess.h \
-	src/SensorNode/Sensor/Transducer/AbstractTransducer.h
+	src/SensorNode/Sensor/Transducer/AbstractTransducer.h \
+	src/SensorNode/SensorNode.h
 $O/src/SimpleSensorData/SimpleSensorData.o: src/SimpleSensorData/SimpleSensorData.cc \
 	src/SimpleSensorData/SimpleSensorData.h
 $O/src/StatisticsInterface/StatisticsInterface.o: src/StatisticsInterface/StatisticsInterface.cc \

@@ -1,4 +1,4 @@
-file 35261 1431512391                                           
+file 35261 1431514266                                           
 version 2
 run General-0-20150513-12:19:47-7252
 attr configname General
@@ -15,20 +15,19 @@ attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-
 vector 3  SleepVsNoSleep.SleepNode[0].Processor  "power mode"  ETV
-vector 4  SleepVsNoSleep.SleepNode[0].Processor  Voltage  ETV
-vector 5  SleepVsNoSleep.SleepNode[0].Processor  residualRelative  ETV
-vector 6  SleepVsNoSleep.SleepNode[0].Processor  residualAbs  ETV
-vector 10  SleepVsNoSleep.NoSleepNode[0].Processor  "power mode"  ETV
-vector 11  SleepVsNoSleep.NoSleepNode[0].Processor  Voltage  ETV
-vector 12  SleepVsNoSleep.NoSleepNode[0].Processor  residualRelative  ETV
-vector 13  SleepVsNoSleep.NoSleepNode[0].Processor  residualAbs  ETV
 3	914 1180 0 6868 0 119000 80 0 2 60 100
+vector 4  SleepVsNoSleep.SleepNode[0].Processor  Voltage  ETV
 4	2094 4536 0 6868 0 119000 306 3 3 918 2754
+vector 5  SleepVsNoSleep.SleepNode[0].Processor  residualRelative  ETV
 5	6630 9007 0 6868 0 119000 306 0.02825 1 159.93009722222 108.87774539068
+vector 6  SleepVsNoSleep.SleepNode[0].Processor  residualAbs  ETV
 6	15637 6379 0 6868 0 119000 306 305100 10800000 1727245050 1.2699500222369e+16
+vector 10  SleepVsNoSleep.NoSleepNode[0].Processor  "power mode"  ETV
 10	22016 1426 0 1762 0 23000 96 0 2 72 120
+vector 11  SleepVsNoSleep.NoSleepNode[0].Processor  Voltage  ETV
 11	23442 2704 0 1762 0 23000 183 3 3 549 1647
+vector 12  SleepVsNoSleep.NoSleepNode[0].Processor  residualRelative  ETV
 12	26146 5306 0 1762 0 23000 183 0.032805555555556 1 94.443255555556 64.571067183248
+vector 13  SleepVsNoSleep.NoSleepNode[0].Processor  residualAbs  ETV
 13	31452 3809 0 1762 0 23000 183 354300 10800000 1019987160 7.531569276254e+15

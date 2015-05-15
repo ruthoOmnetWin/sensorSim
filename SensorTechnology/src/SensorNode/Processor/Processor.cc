@@ -49,6 +49,7 @@ Processor::~Processor() {
 void Processor::initialize(int stage)
 {
     if (stage == 0) {
+
         MiximBatteryAccess::initialize(stage);
 
         // -> register with the battery
@@ -323,6 +324,8 @@ void Processor::switchProcessorMode()
         updateDisplay();
     }
     activatedModeVector.record(activatedMode);
+    SensorNode *node = (SensorNode*) getParentModule();
+    node->say("switched power mode");
 }
 
 /**

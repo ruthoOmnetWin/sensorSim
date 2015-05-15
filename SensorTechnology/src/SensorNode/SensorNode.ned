@@ -32,6 +32,7 @@ module SensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
 		int shiftProcessorModePowerSavingIntervall = default(0s) @unit(s);
 		int shiftProcessorModeHighPerformanceIntervall = default(0s) @unit(s);
         int collectStatisticsIntervall = default(0s) @unit(s);
+        bool noisy = default(false);
         
         double dataBandwidth = default(0bps) @unit(bps);
         double controlBandwidth = default(0bps) @unit(bps);

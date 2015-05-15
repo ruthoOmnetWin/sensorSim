@@ -18,18 +18,37 @@
 #include "Processor.h"
 #include "ExtendedMessage_m.h"
 
+
+
+
 void SensorNode::initialize(int stage) {
     if (stage == 0) {
+
+        setName("SensorNode");
+
         //generate Processor dynamically
         createProcessor();
         //connect Memory with Processor
         connectProcessorAndMemory();
         //get the amount of sensors and gates needed
         setNumGates();
+
+        noisy = ( par("noisy").boolValue() && ev.isGUI() );
+        say("Initialised");
+
     } else if (stage == 1) {
         //cMessage *msg = new cMessage("sendInit");
         //scheduleAt(simTime() + 1000, msg);
+
     }
+}
+
+void SensorNode::say(const char * say)
+{
+    if (noisy) {
+        ev.bubble(this, say);
+    }
+    EV << say << endl;
 }
 
 /**

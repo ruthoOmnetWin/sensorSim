@@ -14,7 +14,6 @@
 // 
 
 #include <BatteryAccess.h>
-#include "SensorNode.h"
 #include <SimpleBattery.h>
 
 BatteryAccess::BatteryAccess() {
@@ -54,6 +53,25 @@ void BatteryAccess::handleHostState(const HostState &state)
     } else if (hostState == HostState::OFF) {
         EV << "off" << endl;
     }
+}
+
+SensorNode* BatteryAccess::getSensorNode()
+{
+    std::string fullname = getParentModule()->getFullName();
+    if (
+        fullname == "TemperatureSensor" ||
+        fullname == "HumiditySensor" ||
+        fullname == "PressureSensor" ||
+        fullname == "LightSensor"
+    ) {
+        return (SensorNode*) getParentModule()->getParentModule();
+    }
+    return (SensorNode*) getParentModule();
+}
+
+void BatteryAccess::say(const char * say)
+{
+    getSensorNode()->say(say);
 }
 
 void BatteryAccess::draw() {

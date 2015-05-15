@@ -34,8 +34,11 @@
 
 class SensorNode : public cModule {
 public:
+    bool noisy;
+public:
     cDatarateChannel* getControlChannel();
     cDatarateChannel* getDataChannel();
+    void say(const char *);
 protected:
     void initialize(int);
     void finish();
