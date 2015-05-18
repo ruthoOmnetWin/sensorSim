@@ -21,6 +21,12 @@
 #include "BatteryAccess.h"
 #include "SimpleSensorData.h"
 
+typedef struct storage {
+    std::string type;
+    int value;
+    simtime_t timeCreated;
+} storage;
+
 /**
  * this is a small implementation of a memory
  *
@@ -29,9 +35,10 @@
  */
 class Memory : public BatteryAccess {
 protected:
-    std::string* storageType;
-    int* storageValue;
-    const static int storageSize = 4;
+    const storage empty; //for resetting the store
+    storage* keyValueStore;
+    int storageSize;
+    int storageDataSets;
 public:
     Memory();
     virtual ~Memory();
@@ -43,6 +50,8 @@ public:
     void updateEntry(std::string, int);
     void deleteEntry(std::string);
     int getIdByType(std::string);
+
+    void printStorage();
 };
 
 Define_Module(Memory);

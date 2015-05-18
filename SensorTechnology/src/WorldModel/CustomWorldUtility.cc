@@ -21,6 +21,7 @@
 #include <string>
 #include <cstring>
 #include <Coord.h>
+#include <cenvir.h>
 using namespace std;
 
 #define xmlHumidity 0
@@ -120,7 +121,7 @@ void CustomWorldUtility::initialize(int stage)
 
         if (par("createData")) {
             EV << "Generating New Environment Data" << endl;
-            this->generateEnvironmentData();
+            this->generateEnvironmentData(false);
         } else {
 
             //if any of the 4 xml files doesn't exists new environment data will be created
@@ -153,7 +154,7 @@ void CustomWorldUtility::initialize(int stage)
             }
             if (!filesExist) {
                 EV << "Generating New Environment Data due to missing files" << endl;
-                this->generateEnvironmentData();
+                this->generateEnvironmentData(false);
             }
         }
 
@@ -166,7 +167,21 @@ void CustomWorldUtility::initialize(int stage)
             error("Not all needed xml-files existed on startup. These files have been created now and you can start the Simulation again.");
         }
 
+        simtime_t scheduleTime = simTime() + 12000;
+        cMessage* selfMessageMeasure = new cMessage("updateData");
+        scheduleAt(scheduleTime , selfMessageMeasure);
     } else if (stage == 1) {
+
+    }
+}
+
+void CustomWorldUtility::handleMessage(cMessage* msg)
+{
+    std::string name = msg->getName();
+    if (msg->isSelfMessage() && name == "updateData") {
+        EV << "olddata " << temperatureArray[0][0][0] << endl;
+        generateEnvironmentData(true);
+        EV << "newdata" << temperatureArray[0][0][0] << endl;
     }
 }
 
@@ -276,7 +291,7 @@ int*** CustomWorldUtility::readXML(int fileName)
     return data;
 }
 
-void CustomWorldUtility::generateEnvironmentData()
+void CustomWorldUtility::generateEnvironmentData(bool writeToArray)
 {
     int size = sizeX * sizeY * sizeZ;
     string filenames[4] = {"humidity", "pressure", "temperature", "light"};
@@ -285,7 +300,6 @@ void CustomWorldUtility::generateEnvironmentData()
     EV << "Starting to create files" << endl;
 
     for (int files = 0; files < numberOfFiles; files++) {
-
         ofstream myfile;
 
         string filename = par("basePath").stringValue();
@@ -318,13 +332,23 @@ void CustomWorldUtility::generateEnvironmentData()
                 data << "<posY" << j << ">";
                 for (int k = 0; k < sizeZ; k++) {
                     data << "<posZ" << k << ">" << newData[counter] << "</posZ" << k << ">";
+                    if (writeToArray) {
+                        if (files == xmlHumidity) {
+                            humidityArray[i][j][k] = newData[counter];
+                        } else if (files == xmlPressure) {
+                            pressureArray[i][j][k] = newData[counter];
+                        } else if (files == xmlTemperature) {
+                            temperatureArray[i][j][k] = newData[counter];
+                        } else if (files == xmlLight) {
+                            lightArray[i][j][k] = newData[counter];
+                        }
+                    }
                     counter++;
                 }
                 data << "</posY" << j << ">";
             }
             data << "</posX" << i << ">" << endl;
         }
-
 
         delete[] newData;
 
@@ -452,7 +476,11 @@ void CustomWorldUtility::destroySensorData(int*** &arr)
 
 int CustomWorldUtility::getValueByPosition(std::string type, Coord *position)
 {
-    int*** data = readXML(getEnumFromType(type));
+    int*** data;
+    if (type == "Humidity") data = humidityArray;
+    if (type == "Pressure") data = pressureArray;
+    if (type == "Temperature") data = temperatureArray;
+    if (type == "Light") data = lightArray;
     int dataAtPosition =
             data
                 [(int)(position->x/par("dataGranularity").longValue())]

@@ -21,7 +21,7 @@ package sensortechnology.src.SensorNode.Memory;
 simple Memory
 {
     parameters:
-        xml keyValueMemory = xml("<data></data>");
+        int storageSize = default(4);
         @display("i=block/buffer2");
         double currentConsumption;
     	double energyConsumption;

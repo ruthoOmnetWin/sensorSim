@@ -32,25 +32,35 @@
 class CustomWorldUtility : public BaseWorldUtility, public StatisticsInterface
 {
 protected:
+    //read data
     int*** readXML(int);
     void setValue(int*** &parameter, int*** &data);
     void setTemperature();
     void setPressure();
     void setHumidity();
     void setLight();
+
+    //omnet++ functions
     void initialize(int stage);
+    void handleMessage(cMessage*);
+    void finish();
+
+    //init helper
+    void createFiles();
+
+    //data generation
     ExtendedMessage* generateMessage(const char* msgname);
-    void generateEnvironmentData();
+    void generateEnvironmentData(bool);
     int* generateTemperature(int size);
     int* generatePressure(int size);
     int* generateHumidity(int size);
     int* generateLight(int size);
-    void updateDisplay();
-    void finish();
     void destroySensorData(int*** &);
     int getEnumFromType(std::string type);
+
+    //display
     void say(const char * say);
-    void createFiles();
+    void updateDisplay();
 protected:
     int numNodes;
     //sensor (world) data

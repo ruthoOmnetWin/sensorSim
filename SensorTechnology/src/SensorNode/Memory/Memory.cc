@@ -16,26 +16,29 @@
 #include <Memory.h>
 
 #define error -9999
+#define emptyTime -1
 
-Memory::Memory() {
-    storageType = new std::string[storageSize];
-    storageValue = new int[storageSize];
-    for (int i = 0; i < storageSize; i++) {
-        storageType[i] = "";
-        storageValue[i] = error;
-    }
+Memory::Memory() : empty({"", error, emptyTime}) {
+    const storage emptyStorage = {"", error, emptyTime};
+    //empty = emptyStorage;
 }
 
 Memory::~Memory() {
-    delete[] storageType;
-    storageType = NULL;
-    delete[] storageValue;
-    storageValue = NULL;
+    delete[] keyValueStore;
+    keyValueStore = NULL;
 }
 
 void Memory::initialize(int stage)
 {
     BatteryAccess::initialize(stage);
+
+    storageSize = par("storageSize");
+
+    const storage emptyStorage = {"", error, emptyTime};
+    keyValueStore = new storage[storageSize];
+    for (int i = 0; i < storageSize; i++) {
+        keyValueStore[i] = empty;
+    }
 }
 
 void Memory::handleMessage(cMessage *msg)
@@ -51,10 +54,15 @@ void Memory::handleMessage(cMessage *msg)
     if (readEntry(nameString) == error) {
         createEntry(nameString, value);
         EV << "New storage entry created." << endl;
+    } else if (storageDataSets < storageSize) {
+        createEntry(nameString, value);
+        EV << "New storage entry created." << endl;
     } else {
         updateEntry(nameString, value);
         EV << "Storage entry updated." << endl;
     }
+
+    printStorage();
 
     delete(msg);
     draw();
@@ -64,7 +72,7 @@ void Memory::createEntry(std::string type, int value)
 {
     int emptyId = -1;
     for (int i = 0; i < storageSize; i++) {
-        if (storageType[i] == "") {
+        if (keyValueStore[i].type == "") {
             emptyId = i;
             break;
         }
@@ -72,8 +80,11 @@ void Memory::createEntry(std::string type, int value)
     if (emptyId == -1) {
         return;
     }
-    storageType[emptyId] = type;
-    storageValue[emptyId] = value;
+    keyValueStore[emptyId].type = type;
+    keyValueStore[emptyId].value = value;
+    keyValueStore[emptyId].timeCreated = simTime();
+
+    storageDataSets++;
 }
 
 int Memory::readEntry(std::string type)
@@ -82,7 +93,7 @@ int Memory::readEntry(std::string type)
     if (id == -1) {
         return error;
     }
-    return storageValue[id];
+    return keyValueStore[id].value;
 }
 
 void Memory::updateEntry(std::string type, int value)
@@ -91,7 +102,8 @@ void Memory::updateEntry(std::string type, int value)
     if (id == -1) {
         return createEntry(type, value);
     }
-    storageValue[id] = value;
+    keyValueStore[id].value = value;
+    keyValueStore[id].timeCreated = simTime();
 }
 
 void Memory::deleteEntry(std::string type)
@@ -100,18 +112,30 @@ void Memory::deleteEntry(std::string type)
     if (id == -1) {
         return;
     }
-    storageValue[id] = error;
-    storageType[id] = "";
+    keyValueStore[id] = {"", error, emptyTime};
+
+    storageDataSets--;
 }
 
 int Memory::getIdByType(std::string type)
 {
     int id = -1;
     for (int i = 0; i < storageSize; i++) {
-        if (storageType[i] == type) {
+        if (keyValueStore[i].type == type) {
             id = i;
             break;
         }
     }
     return id;
+}
+
+void Memory::printStorage()
+{
+    for (int i = 0; i < storageSize; i++)
+    {
+        EV << i << ": " << keyValueStore[i].type
+                << ", " << keyValueStore[i].value
+                << ", " << keyValueStore[i].timeCreated.str()
+                << endl;
+    }
 }
