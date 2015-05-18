@@ -18,11 +18,13 @@
 #include <BasePhyLayer.h>
 #include "SensorNode.h"
 #include "BatteryAccess.h"
+#include "Memory.h"
 
 Processor::Processor() {
     sensingIntervall = 0;
     selfMessageMeasure = NULL;
     selfMessageShiftMode = NULL;
+    selfMessageReadAndClear = NULL;
     activatedMode = 0;
 
     hasTemperatureSensor = false;
@@ -35,6 +37,7 @@ Processor::~Processor() {
     sensingIntervall = 0;
     selfMessageMeasure = NULL;
     selfMessageShiftMode = NULL;
+    selfMessageReadAndClear = NULL;
     activatedMode = 0;
 
     hasTemperatureSensor = false;
@@ -87,6 +90,7 @@ void Processor::initialize(int stage)
         shiftProcessorModeHighPerformanceIntervall = getParentModule()->par("shiftProcessorModeHighPerformanceIntervall").longValue();
         shiftProcessorModePowerSavingIntervall = getParentModule()->par("shiftProcessorModePowerSavingIntervall").longValue();
         collectStatisticsIntervall = getParentModule()->par("collectStatisticsIntervall").longValue();
+        readAndClearStorageIntervall = getParentModule()->par("readAndClearStorageIntervall").longValue();
 
         //initialize statistics
         voltage = battery->getVoltage();
@@ -117,6 +121,7 @@ void Processor::initialize(int stage)
         }
         schedulePeriodicSelfMessage(shiftProcessorMode);
         schedulePeriodicSelfMessage(collectStatistics);
+        schedulePeriodicSelfMessage(readAndClearStorage);
 
         setPeriphery();
 
@@ -156,18 +161,20 @@ void Processor::handleMessage(cMessage *msg)
             schedulePeriodicSelfMessage(msg, sensing);
             startSensingUnit();
             sensorUnitsActive.record(1);
-        }
-        if (name == "shiftMode") {
+        } else if (name == "shiftMode") {
             say("Processor: scheduling shiftMode");
             activatedMode++;
             switchProcessorMode();
             switchPeripheryEnergyConsumption();
             schedulePeriodicSelfMessage(msg, shiftProcessorMode);
-        }
-        if (name == "collectStatistics") {
+        } else if (name == "collectStatistics") {
             say("Processor: scheduling collect Statistics");
             schedulePeriodicSelfMessage(msg, collectStatistics);
             doCollectStatistics();
+        } else if (name == "readAllAndClear") {
+            say("Processor: scheduling readAndClearStorage");
+            schedulePeriodicSelfMessage(readAndClearStorage);
+            send(msg, "connectToMemory$o");
         }
     } else {
         if (
@@ -179,8 +186,25 @@ void Processor::handleMessage(cMessage *msg)
             sensorUnitsActive.record(0);
             say("Processor: Got measure data, saving to memory.");
             send(msg, "connectToMemory$o");
+        } else if (name == "storageContent") {
+            EV << "Got data";
+            const storage empty = {"", -9999, -1};
+            storage dataArray[5];
+            for (int i = 0; i < 5; i++) {
+                dataArray[i] = empty;
+            }
+            SimpleSensorData* data;
+            cArray arr = msg->getParList();
+            int k = arr.size();
+            for (int i = 0; i < k; i++) {
+                data = (SimpleSensorData*) msg->getParList().remove(i);
+                EV << "names:" << data->getName() << data->getFullName() << data->getNamePooling() << endl;
+                dataArray[i].value = data->sensorData;
+                dataArray[i].timeCreated = data->timestamp;
+                dataArray[i].type = "";
+            }
         }
-        EV << "Got Message: " << msg->getName() << endl;
+        EV << "Got Message: " << name << endl;
     }
     draw();
 }
@@ -207,6 +231,9 @@ void Processor::schedulePeriodicSelfMessage(cMessage *msg, int intervallType)
     } else if (intervallType == collectStatistics && collectStatisticsIntervall) {
         simtime_t scheduleTime = simTime() + collectStatisticsIntervall;
         scheduleAt(scheduleTime , msg);
+    } else if (intervallType == readAndClearStorage && readAndClearStorageIntervall) {
+        simtime_t scheduleTime = simTime() + readAndClearStorageIntervall;
+        scheduleAt(scheduleTime , msg);
     }
 }
 
@@ -218,15 +245,17 @@ void Processor::schedulePeriodicSelfMessage(int intervallType)
     if (intervallType == sensing && sensingIntervall) {
         selfMessageMeasure = new cMessage("startSensingUnit");
         schedulePeriodicSelfMessage(selfMessageMeasure, intervallType);
-    }
-    if (intervallType == shiftProcessorMode) {
+    } else if (intervallType == shiftProcessorMode) {
         selfMessageShiftMode = new cMessage("shiftMode");
         schedulePeriodicSelfMessage(selfMessageShiftMode, intervallType);
-    }
-    if (intervallType == collectStatistics && collectStatisticsIntervall) {
+    } else if (intervallType == collectStatistics && collectStatisticsIntervall) {
         selfMessageStatistics = new cMessage("collectStatistics");
         schedulePeriodicSelfMessage(selfMessageStatistics, intervallType);
+    } else if (intervallType == readAndClearStorage && readAndClearStorageIntervall) {
+        selfMessageReadAndClear = new cMessage("readAllAndClear");
+        schedulePeriodicSelfMessage(selfMessageReadAndClear, intervallType);
     }
+
 }
 
 /**
@@ -371,7 +400,6 @@ void Processor::switchPeripheryEnergyConsumption()
 
 void Processor::finish()
 {
-
 }
 
 void Processor::handleHostState(const HostState& state)

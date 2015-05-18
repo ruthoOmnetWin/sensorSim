@@ -20,12 +20,13 @@
 
 Memory::Memory() : empty({"", error, emptyTime}) {
     const storage emptyStorage = {"", error, emptyTime};
+    storageDataSets = 0;
     //empty = emptyStorage;
 }
 
 Memory::~Memory() {
-    delete[] keyValueStore;
-    keyValueStore = NULL;
+    delete[] measureDataStorage;
+    measureDataStorage = NULL;
 }
 
 void Memory::initialize(int stage)
@@ -35,44 +36,74 @@ void Memory::initialize(int stage)
     storageSize = par("storageSize");
 
     const storage emptyStorage = {"", error, emptyTime};
-    keyValueStore = new storage[storageSize];
+    measureDataStorage = new storage[storageSize];
     for (int i = 0; i < storageSize; i++) {
-        keyValueStore[i] = empty;
+        measureDataStorage[i] = empty;
     }
 }
 
 void Memory::handleMessage(cMessage *msg)
 {
     const char* name = msg->getName();
-    SimpleSensorData* data = (SimpleSensorData*) msg->getParList().remove(name);
-    int value = data->sensorData;
     std::string nameString = name;
+    if (nameString == "readAllAndClear") {
 
-    std::stringstream ss; ss << "Got type: " << name << " with value:" << value << endl;
-    say(ss.str());
+        cMessage* returnMessage = new cMessage("storageContent");
+        int count = storageDataSets;
+        storage* returnData = readAllAndClear();
+        for (int i = 0; i < count; i++) {
+            SimpleSensorData* data = new SimpleSensorData(
+                    returnData[i].type.c_str(),
+                    returnData[i].value,
+                    returnData[i].timeCreated
+                    );
+            returnMessage->getParList().add(data);
+        }
+        send(returnMessage, "connectToProcessor$o");
 
-    if (readEntry(nameString) == error) {
-        createEntry(nameString, value);
-        EV << "New storage entry created." << endl;
-    } else if (storageDataSets < storageSize) {
-        createEntry(nameString, value);
-        EV << "New storage entry created." << endl;
     } else {
-        updateEntry(nameString, value);
-        EV << "Storage entry updated." << endl;
+
+        SimpleSensorData* data = (SimpleSensorData*) msg->getParList().remove(name);
+        int value = data->sensorData;
+
+        std::stringstream ss; ss << "Got type: " << name << " with value:" << value << endl;
+        say(ss.str());
+        if (readEntry(nameString).value == error) {
+            createEntry(nameString, value);
+            EV << "New storage entry created." << endl;
+        } else if (storageDataSets < storageSize) {
+            createEntry(nameString, value);
+            EV << "New storage entry created." << endl;
+        } else {
+            updateEntry(nameString, value);
+            EV << "Storage entry updated." << endl;
+        }
     }
-
     printStorage();
-
     delete(msg);
     draw();
+}
+
+storage* Memory::readAllAndClear()
+{
+    storage *returnDataSet = new storage[storageDataSets];
+    int counter = 0;
+    int pos = 0;
+    for (int i = 0; (i < storageSize && storageDataSets > 0); i++) {
+        if (measureDataStorage[i].value != error) {
+            returnDataSet[counter] = measureDataStorage[i];
+            counter++;
+            deleteEntry(i);
+        }
+    }
+    return returnDataSet;
 }
 
 void Memory::createEntry(std::string type, int value)
 {
     int emptyId = -1;
     for (int i = 0; i < storageSize; i++) {
-        if (keyValueStore[i].type == "") {
+        if (measureDataStorage[i].type == "") {
             emptyId = i;
             break;
         }
@@ -80,20 +111,25 @@ void Memory::createEntry(std::string type, int value)
     if (emptyId == -1) {
         return;
     }
-    keyValueStore[emptyId].type = type;
-    keyValueStore[emptyId].value = value;
-    keyValueStore[emptyId].timeCreated = simTime();
+    measureDataStorage[emptyId].type = type;
+    measureDataStorage[emptyId].value = value;
+    measureDataStorage[emptyId].timeCreated = simTime();
 
     storageDataSets++;
 }
 
-int Memory::readEntry(std::string type)
+storage Memory::readEntry(std::string type)
 {
     int id = getIdByType(type);
     if (id == -1) {
-        return error;
+        return empty;
     }
-    return keyValueStore[id].value;
+    return measureDataStorage[id];
+}
+
+storage Memory::readEntry(int id)
+{
+    return measureDataStorage[id];
 }
 
 void Memory::updateEntry(std::string type, int value)
@@ -102,26 +138,32 @@ void Memory::updateEntry(std::string type, int value)
     if (id == -1) {
         return createEntry(type, value);
     }
-    keyValueStore[id].value = value;
-    keyValueStore[id].timeCreated = simTime();
+    measureDataStorage[id].value = value;
+    measureDataStorage[id].timeCreated = simTime();
 }
 
 void Memory::deleteEntry(std::string type)
 {
     int id = getIdByType(type);
-    if (id == -1) {
-        return;
+    if (id < storageSize && id >= 0) {
+        measureDataStorage[id] = {"", error, emptyTime};
+        storageDataSets--;
     }
-    keyValueStore[id] = {"", error, emptyTime};
+}
 
-    storageDataSets--;
+void Memory::deleteEntry(int id)
+{
+    if (id < storageSize && id >= 0) {
+        measureDataStorage[id] = {"", error, emptyTime};
+        storageDataSets--;
+    }
 }
 
 int Memory::getIdByType(std::string type)
 {
     int id = -1;
     for (int i = 0; i < storageSize; i++) {
-        if (keyValueStore[i].type == type) {
+        if (measureDataStorage[i].type == type) {
             id = i;
             break;
         }
@@ -133,9 +175,9 @@ void Memory::printStorage()
 {
     for (int i = 0; i < storageSize; i++)
     {
-        EV << i << ": " << keyValueStore[i].type
-                << ", " << keyValueStore[i].value
-                << ", " << keyValueStore[i].timeCreated.str()
+        EV << i << ": " << measureDataStorage[i].type
+                << ", " << measureDataStorage[i].value
+                << ", " << measureDataStorage[i].timeCreated.str()
                 << endl;
     }
 }

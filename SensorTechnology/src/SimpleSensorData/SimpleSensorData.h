@@ -23,8 +23,10 @@ public:
     virtual SimpleSensorData *dup() const {return new SimpleSensorData(*this);}
 public:
     int sensorData;
+    simtime_t timestamp;
     SimpleSensorData();
     virtual ~SimpleSensorData();
+    explicit SimpleSensorData(const char *name, int sensorData, simtime_t timestamp, bool namepooling=true);
     explicit SimpleSensorData(const char *name, int sensorData, bool namepooling=true);
 };
 

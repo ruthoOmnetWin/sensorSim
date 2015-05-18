@@ -24,6 +24,7 @@
 #define sensing 0
 #define shiftProcessorMode 1
 #define collectStatistics 2
+#define readAndClearStorage 3
 
 /**
  * the biggest module inside the sensor node with the most functionality
@@ -48,9 +49,11 @@ protected:
     int shiftProcessorModeHighPerformanceIntervall;
     int shiftProcessorModePowerSavingIntervall;
     int collectStatisticsIntervall;
+    int readAndClearStorageIntervall;
     cMessage* selfMessageMeasure;
     cMessage* selfMessageShiftMode;
     cMessage* selfMessageStatistics;
+    cMessage* selfMessageReadAndClear;
 
     //consumption for the different modes
     double currentOverTimeNormal;

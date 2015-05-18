@@ -16,8 +16,13 @@ SimpleSensorData::~SimpleSensorData()
 }
 
 
+SimpleSensorData::SimpleSensorData(const char *name, int sensorData, simtime_t timestamp, bool namepooling) : cNamedObject(name, namepooling)
+{
+    this->sensorData = sensorData;
+    this->timestamp = timestamp;
+}
+
 SimpleSensorData::SimpleSensorData(const char *name, int sensorData, bool namepooling) : cNamedObject(name, namepooling)
 {
     this->sensorData = sensorData;
 }
-

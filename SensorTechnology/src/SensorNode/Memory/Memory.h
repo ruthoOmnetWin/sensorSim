@@ -36,7 +36,7 @@ typedef struct storage {
 class Memory : public BatteryAccess {
 protected:
     const storage empty; //for resetting the store
-    storage* keyValueStore;
+    storage* measureDataStorage;
     int storageSize;
     int storageDataSets;
 public:
@@ -46,10 +46,14 @@ public:
     void handleMessage(cMessage *msg);
     //crud - to access the storage
     void createEntry(std::string, int);
-    int readEntry(std::string);
+    storage readEntry(std::string);
+    storage readEntry(int);
     void updateEntry(std::string, int);
     void deleteEntry(std::string);
+    void deleteEntry(int);
+
     int getIdByType(std::string);
+    storage* readAllAndClear();
 
     void printStorage();
 };

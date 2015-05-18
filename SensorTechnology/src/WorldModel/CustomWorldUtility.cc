@@ -179,9 +179,7 @@ void CustomWorldUtility::handleMessage(cMessage* msg)
 {
     std::string name = msg->getName();
     if (msg->isSelfMessage() && name == "updateData") {
-        EV << "olddata " << temperatureArray[0][0][0] << endl;
         generateEnvironmentData(true);
-        EV << "newdata" << temperatureArray[0][0][0] << endl;
     }
 }
 

@@ -293,8 +293,10 @@ $O/src/SensorNode/Processor/Processor.o: src/SensorNode/Processor/Processor.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	src/SensorNode/BatteryAccess.h \
+	src/SensorNode/Memory/Memory.h \
 	src/SensorNode/Processor/Processor.h \
-	src/SensorNode/SensorNode.h
+	src/SensorNode/SensorNode.h \
+	src/SimpleSensorData/SimpleSensorData.h
 $O/src/SensorNode/Sensor/AbstractSensor.o: src/SensorNode/Sensor/AbstractSensor.cc \
 	src/SensorNode/Sensor/AbstractSensor.h
 $O/src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.o: src/SensorNode/Sensor/SensingUnit/AbstractSensingUnit.cc \
