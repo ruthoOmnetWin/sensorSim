@@ -189,13 +189,15 @@ void Processor::handleMessage(cMessage *msg)
         } else if (name == "storageContent") {
             EV << "Got data";
             const storage empty = {"", -9999, -1};
-            storage dataArray[5];
-            for (int i = 0; i < 5; i++) {
-                dataArray[i] = empty;
-            }
             SimpleSensorData* data;
             cArray arr = msg->getParList();
             int k = arr.size();
+
+            storage dataArray[k];
+            for (int i = 0; i < k; i++) {
+                dataArray[i] = empty;
+            }
+
             for (int i = 0; i < k; i++) {
                 data = (SimpleSensorData*) msg->getParList().remove(i);
                 EV << "names:" << data->getName() << data->getFullName() << data->getNamePooling() << endl;
@@ -203,8 +205,10 @@ void Processor::handleMessage(cMessage *msg)
                 dataArray[i].timeCreated = data->timestamp;
                 dataArray[i].type = "";
             }
+            delete msg;
         }
         EV << "Got Message: " << name << endl;
+
     }
     draw();
 }

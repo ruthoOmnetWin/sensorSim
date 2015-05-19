@@ -181,6 +181,7 @@ void CustomWorldUtility::handleMessage(cMessage* msg)
     if (msg->isSelfMessage() && name == "updateData") {
         generateEnvironmentData(true);
     }
+    delete msg;
 }
 
 ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)

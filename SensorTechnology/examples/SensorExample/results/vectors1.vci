@@ -1,0 +1,48 @@
+file 27127 1432022520                                           
+version 2
+run General-0-20150519-10:01:51-5141
+attr configname General
+attr datetime 20150519-10:01:51
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network SensorExample
+attr processid 5141
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 3  SensorExample.SensorNode.Processor  "power mode"  ETV
+vector 4  SensorExample.SensorNode.Processor  "Sensor Modules Status"  ETV
+vector 5  SensorExample.SensorNode.Processor  Voltage  ETV
+vector 6  SensorExample.SensorNode.Processor  residualRelative  ETV
+vector 7  SensorExample.SensorNode.Processor  residualAbs  ETV
+vector 8  SensorExample.SensorNode.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 9  SensorExample.SensorNode.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 10  SensorExample.SensorNode.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 11  SensorExample.SensorNode.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 12  SensorExample.SensorNode.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 13  SensorExample.SensorNode.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 14  SensorExample.SensorNode.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 15  SensorExample.SensorNode.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 16  SensorExample.SensorNode.Memory  "Energy Consumptions"  ETV
+vector 17  SensorExample.SensorNode.Memory  "Current use over time"  ETV
+3	1618 683 0 2513 0 70000 48 0 2 36 60
+4	2301 222 0 2519 0 70000 16 0 1 7 7
+5	2523 4715 0 3384 0 120000 326 3 3 978 2934
+6	7238 9413 0 3384 0 120000 326 0 1 160.56507407407 107.78846242584
+7	16651 6617 0 3384 0 120000 326 0 10800000 1734102800 1.257244625735e+16
+8	23268 381 0 2515 0 70000 24 100 100 2400 240000
+9	23649 539 0 2513 0 70000 36 0.3 3 75.6 217.08
+10	24188 146 0 2516 0 70000 9 100 100 900 90000
+11	24334 575 0 2513 0 70000 36 0.3 3 75.6 217.08
+12	24909 146 0 2517 0 70000 9 100 100 900 90000
+13	25055 575 0 2513 0 70000 36 0.3 3 75.6 217.08
+14	25630 146 0 2518 0 70000 9 100 100 900 90000
+15	25776 575 0 2513 0 70000 36 0.3 3 75.6 217.08
+16	26351 201 0 3383 0 120000 12 100 100 1200 120000
+17	26552 575 0 2513 0 70000 36 0.3 3 75.6 217.08
