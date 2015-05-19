@@ -650,9 +650,27 @@ Das Netzwerk TrafficGenExample unterscheidet nur wenig vom BasicExample. Der ent
 
 \paragraph{SensorExample}
 
-Im Beispiel SensorExample wird die Funktionsweise von den Bauelementen der Simulierten Sensorik und der Umgebung aufgezeigt. Dafür wurden verschiedene Parameter in der omnet.ini und in den Modulen so gewählt, damit dies gut abgelesen werden kann.
+Im Beispiel SensorExample wird die Funktionsweise von den Bauelementen der Simulierten Sensorik und der Umgebung aufgezeigt. Dafür wurden verschiedene Parameter in der omnet.ini und in den Modulen so gewählt, damit dies gut abgelesen werden kann (Listing \ref{lst:sePar}).\\
 
+\begin{lstlisting}[language=ned,caption={Parameter für das Beispiel SensorExample},label=lst:sePar]
+**.sensingIntervall = 10000s
+**.shiftProcessorModeNormalIntervall = 2000s
+**.shiftProcessorModePowerSavingIntervall = 2000s
+**.shiftProcessorModeHighPerformanceIntervall = 2000s
+**.collectStatisticsIntervall = 1000s
+**.readAndClearStorageIntervall = 40000s
+**.dataRecreationIntervall = 12000s
+**.noisyWorld = true;
+**.noisy = true; 
+\end{lstlisting}
 
+Die beiden Parameter noisy und noisyWorld dienen dazu, dass während der Simulation an den entscheidenden Stellen der Simulation Ausgaben gemacht werden. Diese geben Informationen darüber, welche Aktionen ausgeführt werden und wie der Zustand von einigen Modulen ist, so zum Beispiel wird bei Änderung der Speicherinhalt vom Memory ausgegeben und stets der aktuelle Prozessormodus angegeben.\\
+Im Beispiel wird alle 10000 Sekunden von den Sensoren ein Messwert abgegriffen. Außerdem werden die vorliegenden Werte alle 12000 Sekunden geändert. Die verschiedenen Werte werden dann nacheinander im Memory abgelegt.
+\todo{memoryZustand Bild}
+\todo{evtl ablaufdiagramm}
+Da der Speicher im Beispiel nur Platz für 4 Datensätze bietet und ein einziges Sensor genutzt wird ist er nach 4 Messungen voll. Daher wird alle 40000 Sekunden, also nach jeweils 4 Messungen, der Speicher geleert. Die bis dahin gespeicherten Werte werden dann an den Prozessor gesendet.\\
+In der Realität ist dies ein realistisches Vorgehen. Während sich die Knoten in einem Ruhemodus befinden, um Strom zu sparen kann dennoch regelmäßig eine Messung durchgeführt werden und gespeichert werden. Wenn nun ein Zeitfenster erreicht wird, in dem Kommunikation im Netzwerk stattfindet, so werden gleich mehrere Messwerte auf einmal versendet.
+\todo{ausformulieren}
 
 \subsection*{spezielles Verhalten}
 
