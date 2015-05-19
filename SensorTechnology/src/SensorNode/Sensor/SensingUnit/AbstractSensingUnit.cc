@@ -61,7 +61,7 @@ Coord* AbstractSensingUnit::getLocation()
     ChannelMobilityPtrType pMobType = phy->getMobilityModule();
     if(pMobType != NULL){
         back = new Coord(pMobType->getCurrentPosition());
-        std::stringstream ssay; ssay << "My Location: " << "(" << back->x << "," << back->y << "," << back->z << ")";
+        std::stringstream ssay; ssay << "SU: My Location: " << "(" << back->x << "," << back->y << "," << back->z << ")";
         say(ssay.str());
         return back;
     }

@@ -112,6 +112,7 @@ void CustomWorldUtility::initialize(int stage)
 {
     BaseWorldUtility::initialize(stage);
     if (stage == 0) {
+        dataRecreationIntervall = par("dataRecreationIntervall");
         noisy = par("noisy");
         ev << "Initializing World Model" << endl;
 
@@ -167,9 +168,10 @@ void CustomWorldUtility::initialize(int stage)
             error("Not all needed xml-files existed on startup. These files have been created now and you can start the Simulation again.");
         }
 
-        simtime_t scheduleTime = simTime() + 12000;
-        cMessage* selfMessageMeasure = new cMessage("updateData");
+        simtime_t scheduleTime = dataRecreationIntervall;
+        selfMessageMeasure = new cMessage("updateData");
         scheduleAt(scheduleTime , selfMessageMeasure);
+
     } else if (stage == 1) {
 
     }
@@ -177,11 +179,16 @@ void CustomWorldUtility::initialize(int stage)
 
 void CustomWorldUtility::handleMessage(cMessage* msg)
 {
+    say("<world>");
     std::string name = msg->getName();
     if (msg->isSelfMessage() && name == "updateData") {
         generateEnvironmentData(true);
+        simtime_t scheduleTime = simTime() + dataRecreationIntervall;
+        scheduleAt(scheduleTime , selfMessageMeasure);
+    } else {
+        delete msg;
     }
-    delete msg;
+    say("</world>");
 }
 
 ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)

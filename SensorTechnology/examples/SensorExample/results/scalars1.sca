@@ -1,14 +1,14 @@
 version 2
-run General-0-20150519-10:01:51-5141
+run General-0-20150519-10:21:04-7006
 attr configname General
-attr datetime 20150519-10:01:51
+attr datetime 20150519-10:21:04
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network SensorExample
-attr processid 5141
+attr processid 7006
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -50,9 +50,9 @@ scalar SensorExample.SensorNode.tranl 	nbAggrPktReceived 	0
 scalar SensorExample.SensorNode.tranl 	"nbAggrPktSentDown " 	0
 scalar SensorExample.SensorNode.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar SensorExample.SensorNode.batteryStats 	total 	10800000
+scalar SensorExample.SensorNode.batteryStats 	total 	2005800
 attr unit  mW-s
-scalar SensorExample.SensorNode.batteryStats 	lifetime 	71400
+scalar SensorExample.SensorNode.batteryStats 	lifetime 	-1
 attr unit  s
-scalar SensorExample.SensorNode.batteryStats 	"Mean power consumption" 	86.289549376798
+scalar SensorExample.SensorNode.batteryStats 	"Mean power consumption" 	147.26872246696
 attr unit  mW

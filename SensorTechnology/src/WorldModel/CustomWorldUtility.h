@@ -74,6 +74,9 @@ protected:
     int sizeZ;
     bool noisy;
     bool breakAfterInit;
+    int dataRecreationIntervall;
+
+    cMessage* selfMessageMeasure;
 public:
     explicit CustomWorldUtility();
     virtual ~CustomWorldUtility();

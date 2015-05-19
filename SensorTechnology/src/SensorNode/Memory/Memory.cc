@@ -44,6 +44,7 @@ void Memory::initialize(int stage)
 
 void Memory::handleMessage(cMessage *msg)
 {
+    EV << "<Memory>" << endl;
     const char* name = msg->getName();
     std::string nameString = name;
     if (nameString == "readAllAndClear") {
@@ -82,6 +83,7 @@ void Memory::handleMessage(cMessage *msg)
     printStorage();
     delete(msg);
     draw();
+    EV << "</Memory>" << endl;
 }
 
 storage* Memory::readAllAndClear()

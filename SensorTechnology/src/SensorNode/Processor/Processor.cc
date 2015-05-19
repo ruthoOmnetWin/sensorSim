@@ -177,6 +177,7 @@ void Processor::handleMessage(cMessage *msg)
             send(msg, "connectToMemory$o");
         }
     } else {
+        EV << "Processor: Got Message: " << name << endl;
         if (
             name == "Temperature" ||
             name == "Pressure" ||
@@ -207,8 +208,6 @@ void Processor::handleMessage(cMessage *msg)
             }
             delete msg;
         }
-        EV << "Got Message: " << name << endl;
-
     }
     draw();
 }
@@ -267,7 +266,7 @@ void Processor::schedulePeriodicSelfMessage(int intervallType)
  */
 void Processor::startSensingUnit()
 {
-    say("Initiating measuring");
+    say("Processor: Initiating measuring");
     cModule* SensorNode = getParentModule();
     if (SensorNode->par("hasTemperatureSensor")) {
         cMessage* msg = new cMessage("startMeasuring");
@@ -368,7 +367,7 @@ void Processor::switchProcessorMode()
     }
     activatedModeVector.record(activatedMode);
     SensorNode *node = (SensorNode*) getParentModule();
-    node->say("switched power mode");
+    node->say("Processor: switched power mode");
 }
 
 /**

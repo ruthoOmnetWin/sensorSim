@@ -19,6 +19,7 @@ import org.mixim.base.modules.BaseWorldUtility;
 simple CustomWorldUtility extends BaseWorldUtility
 {
     parameters:
+        int dataRecreationIntervall = default(0) @unit(s);
         bool createData;
         bool noisy;
         int dataGranularity;
