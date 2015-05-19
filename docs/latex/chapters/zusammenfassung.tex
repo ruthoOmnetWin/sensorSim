@@ -1,5 +1,7 @@
 \chapter{Zusammenfassung}
 
-wurde das ziel der BA erreicht? alles umgesetzt was verlangt war?
-
-\todo{zusammenfassung schreiben}
+In der Arbeit wurde die Implementierung von einer Sensorik für die Simulationsumgebung Omnet++ umgesetzt. Dafür wurden Module für 4 verschiedene Arten von Sensoren geschaffen: Temperatur, Luftdruck, Helligkeit und Luftfeuchtigkeit. Deren Sensorik wurde in wiederum 4 verschiedene Module geteilt: Sensing Unit, Signal Conditioner, Signal Converter und Transducer. Diese 4 Module bilden die eigentliche Sensorik ab und dienen dazu Messwerte aus der Umgebung auszulesen und diese verwertbar zurückzugeben.\\
+Für die Steuerung dieser Sensorik wurde ein Prozessormodul implementiert. Dieses kann Messungen in Gang setzen und hinterher die gemessenen Daten in einem Memorymodul ablegen, bis diese gebraucht werden. Außerdem ist der Prozessor in der Lage zwischen verschiedenen Energiemodi zu wechseln und somit Energie zu sparen.\\
+Neben diesen selbst definierten Modulen beinhaltet ein Sensorknoten noch ein Funkmodul und eine Batterie, welche jeweils aus dem MiXiM-Framework für Omnet++ übernommen wurden. Alle implementierten Bauteile haben dabei verschiedene Parameter die den eigenen Stromverbrauch regeln und Zugang zur Batterie des Knotens, um den Energieverbrauch realistisch abbilden zu können.\\
+Der Prozessor enthält weiterhin viele Parameter für die statistische Auswertung von Simulationen. Diese stellen beispielsweise Informationen über die Prozessormodi, den Ladezustand der Batterie oder auch den Energieverbrauch von einzelnen Modulen bereit. Diese Informationen können wiederum grafisch ausgewertet werden, um einen möglichst hohen Informationsgehalt aus den Daten der Simulationen erhalten zu können.\\
+Alle implementierten Funktionen wurden bestmöglich in Form von Beispielnetzwerken umgesetzt. Diese zeigen die Verwendung der verschiedenen Module mit unterschiedlichen Einstellungen und wie diese in Netzwerken interagieren können.

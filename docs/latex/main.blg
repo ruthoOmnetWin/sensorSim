@@ -4,6 +4,7 @@ The top-level auxiliary file: main.aux
 A level-1 auxiliary file: meta/metadaten.aux
 The style file: gerplain.bst
 Database file #1: bib/literatur.bib
+Warning--I didn't find a database entry for "gnuplot"
 Warning--to sort, need author or key in git
 Warning--to sort, need author or key in github
 Warning--to sort, need author or key in omnet
@@ -70,7 +71,7 @@ Warning--empty booktitle in ikr
 Warning--empty year in ikr
 You've used 19 entries,
             2343 wiz_defined-function locations,
-            611 strings with 7191 characters,
+            612 strings with 7198 characters,
 and the built_in function-call counts, 4664 in all, are:
 = -- 389
 > -- 98
@@ -109,4 +110,4 @@ warning$ -- 64
 while$ -- 11
 width$ -- 21
 write$ -- 142
-(There were 64 warnings)
+(There were 65 warnings)

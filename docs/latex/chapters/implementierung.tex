@@ -377,8 +377,6 @@ Dieses Interface enthält grundlegende Attribute für Statistiken. Klassen die d
 
 Im folgenden Abschnitt werden alle Simulationsobjekte erläutert, also all jene, die durch die Sprache NED beschrieben wurden:
 
-\todo{BasicWSN}
-
 \begin{minipage}{\textwidth}
 \begin{itemize}{\label{enum:NedModules}}
 \item Simple Module
@@ -426,6 +424,12 @@ Im folgenden Abschnitt werden alle Simulationsobjekte erläutert, also all jene,
 \begin{itemize}
 \item ExtendedMessage
 \item DatarateChannel
+\end{itemize}
+\end{multicols}
+\item Network
+\begin{multicols}{2}
+\begin{itemize}
+\item BasicWSN
 \end{itemize}
 \end{multicols}
 \end{itemize}
@@ -594,6 +598,11 @@ Die ExtendedMessage erweitert diese Funktionalität um einige Informationen für
 DatarateChannel ist ein von Omnet++ definiertes Modul. Es kann mit verschiedenen Parametern versehen werden, um dem jeweiligen Umständen angepasst zu werden. Der wichtigste ist dabei der double datarate, welcher in bps angegeben wird und festlegt, mit welcher Rate Daten durch den Channel gesendet werden können. Weiterhin kann auch ein delay und eine bit- beziehungsweise packet-error-rate festgelegt werden.\\
 In der Simulation wurde dieses Modul genutzt, um die verschiedenen Kanäle für den Datenverkehr und die Steuerungskanäle zu trennen.
 
+\subsubsection{BasicWSN}
+
+Das Netzwerk BasicWSN dient als abstraktes Modul für alle Netzwerke, welche die Sensorikimplementierungen verwenden sollen. Es beinhaltet viele Grundlegende Initialisierungen. So wird hier zum Beispiel die Umgebung definiert, welche durch die Klasse CustomWorldUtility beschrieben wird. Für diese werden Werte wie die Playground-Größe gesetzt, sowie einige Standartwerte definiert. So zum Beispiel der Speicherort für die Umgebungswerte.\\
+Neu definierte Netzwerke mit Sensorknoten sollten stets von diesem Netzwerk erben. Alle Beispiele dieses Projekts tun dies ebenfalls.
+
 \subsubsection{omnetpp.ini}
 
 Die omnetpp.ini ist eine Datei, in der Eigenschaften der Simulation geändert werden können, ohne das man den Sourcecode bearbeiten und danach neu kompilieren muss. Es bietet sich daher an, alle Variablen und Konstanten, welche sich öfters ändern hier zu definieren. Die wichtigsten Parameter sind im Beispiel \ref{lst:omnetini} aufgeführt.
@@ -675,22 +684,24 @@ Processor: Temperature: 27 (t=30000s)
 \end{lstlisting}
 Da der Speicher im Beispiel nur Platz für 4 Datensätze bietet und ein einziges Sensor genutzt wird ist er nach 4 Messungen voll. Daher wird alle 34000 Sekunden, also nach jeweils 4 Messungen, der Speicher geleert. Die bis dahin gespeicherten Werte werden dann an den Prozessor gesendet. Eine Beispielausgabe des Prozessors aus einem Testlauf in dem in dem nur ein einziger Knoten mit einem Temperatursensor genutzt wurde sind in Listing \ref{lst:seProzessorOut} zu sehen. Diese Ausgabe wurde zum Zeitpunkt t=34000s getätigt, ausgelöst durch den Event readAndClearStorage. Es wurde also gleichzeitig auch der Memory gelöscht. Direkt danach wurde der Speicher wieder mit neuen Datensätzen gefüllt.\\
 In der Realität ist dies ein realistisches Szenario. Während sich die Knoten in einem Ruhemodus befinden, um Strom zu sparen kann dennoch regelmäßig eine Messung durchgeführt und gespeichert werden. Wenn nun ein Zeitfenster erreicht wird, in dem Kommunikation im Netzwerk stattfindet, so werden gleich mehrere Messwerte auf einmal versendet.
+
 \begin{figure}[htbp]
 \centering
 \caption{Die verschiedenen Events im Beispiel SensorExample}
 \label{fig:seEvents}
 \includegraphics[width=\textwidth]{sensorExampleEvents}
 \end{figure}
+
 \begin{figure}[htbp]
 \centering
 \caption{Beispiel für den Nachrichtenverlauf beim Einlesen von Sensordaten}
 \label{fig:seStartMeasuring}
 \includegraphics[width=\textwidth]{startMeasuring}
 \end{figure}
+
 Im Bild \ref{fig:seEvents} sind die verschiedenen Events zu sehen, die im Sensor- und Worldmodul auftauchen. In der CustomWorldUtility wird nur einer der Events ausgelöst, welcher zum erneuten Erstellen von Sensordaten dient: updateData mit dem Intervall dataRecreationIntervall.\\
 Die anderen Events finden im Prozessor statt. Sie dienen dazu bestimmte Arbeitsabläufe anzustoßen. Der wichtigste Event ist wohl startSensingUnit, dessen Zeitintervall durch sensingIntervall festgelegt wird. Er dient dazu einen Messvorgang in Gang zu setzen. Am Ende werden die gemessenen Werte stets im Memory gespeichert.
 
-\begin{minipage}{\textwidth}
 \begin{itemize}
 \item startSensingUnit
 \begin{itemize}
@@ -715,7 +726,6 @@ Die anderen Events finden im Prozessor statt. Sie dienen dazu bestimmte Arbeitsa
 \item dataRecreationIntervall
 \end{itemize}
 \end{itemize}
-\end{minipage}
 
 In Bild \ref{fig:seStartMeasuring} ist der Nachrichtenverlauf zu sehen, welcher durch den Event startMeasuring ausgelöst wird. Der Event wird innerhalb des Prozessormoduls gestartet. Dort wird anschließend eine Nachricht an die SensingUnits der zugehörigen Sensoren geschickt. Innerhalb der SensingUnit wird dann eine Messung durchgeführt. Diese Messdaten werden dann wiederum durch die verschiedenen Module des Sensor geleitet. Zuerst zum SignalConditioner, zum SignalConverter und zuletzt zum Transducer. Nachdem diese Stationen durchlaufen wurden wird der fertige Messwert zurück zum Prozessor gesendet. Dieser speichert dann zunächst den Wert im Memory ab.
 

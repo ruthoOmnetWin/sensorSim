@@ -8,7 +8,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces GUI bei der Ausf\IeC {\"u}hrung einer Simulation }}{17}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Oberfl\IeC {\"a}che der Entwicklungsumgebung mit Bespiel f\IeC {\"u}r die NED-Integration}}{19}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Beispiel cMessage als Event}}{25}{figure.4.3}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Zustandswechsel Automat falsch}}{24}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Zustandswechsel Automat richtig}}{24}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Beispiel cMessage als Event}}{26}{figure.4.5}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Beispielstatisik Relativer Batterieladezustand}}{38}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces SimpleClasses: Member}}{40}{figure.5.2}
@@ -16,7 +18,7 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces allgemeines Modell eines Sensors}}{46}{figure.5.4}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Aufbau des Compoundmoduls SensorNode}}{48}{figure.5.5}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Die verschiedenen Events im Beispiel SensorExample}}{54}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Beispiel f\IeC {\"u}r den Nachrichtenverlauf beim Einlesen von Sensordaten}}{54}{figure.5.7}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Beispiel f\IeC {\"u}r den Nachrichtenverlauf beim Einlesen von Sensordaten}}{55}{figure.5.7}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Powermodi im Beispiel SleepVsNoSleep}}{56}{figure.5.8}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Ladezustand im Beispiel SleepVsNoSleep}}{56}{figure.5.9}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Powermodi im Beispiel SleepOutOfSync}}{57}{figure.5.10}

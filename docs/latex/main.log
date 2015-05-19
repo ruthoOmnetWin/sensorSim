@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.22)  19 MAY 2015 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.22)  19 MAY 2015 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1382,21 +1382,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
-[6] <img/AbstraktesSensorModell.png, id=297, 300.322pt x 660.869pt>
+[6] <img/AbstraktesSensorModell.png, id=293, 300.322pt x 660.869pt>
 File: img/AbstraktesSensorModell.png Graphic file (type png)
 
 <use img/AbstraktesSensorModell.png>
 Package pdftex.def Info: img/AbstraktesSensorModell.png used on input line 38.
 (pdftex.def)             Requested size: 137.81068pt x 303.25pt.
  [7 <./img/AbstraktesSensorModell.png>]
-<img/temperatur.png, id=304, 843.15pt x 993.7125pt>
+<img/temperatur.png, id=300, 843.15pt x 993.7125pt>
 File: img/temperatur.png Graphic file (type png)
  <use img/temperatur.png>
 Package pdftex.def Info: img/temperatur.png used on input line 57.
 (pdftex.def)             Requested size: 387.95074pt x 457.2346pt.
 
 [8] [9 <./img/temperatur.png (PNG copy)>]
-<img/feuchtigkeit.png, id=317, 717.68124pt x 702.625pt>
+<img/feuchtigkeit.png, id=313, 717.68124pt x 702.625pt>
 File: img/feuchtigkeit.png Graphic file (type png)
 
 <use img/feuchtigkeit.png>
@@ -1411,7 +1411,7 @@ File: omsaer.fd 1999/12/27
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
 
-<img/AbstraktesSensorknotenModell.png, id=325, 592.614pt x 419.166pt>
+<img/AbstraktesSensorknotenModell.png, id=321, 592.614pt x 419.166pt>
 File: img/AbstraktesSensorknotenModell.png Graphic file (type png)
 
 <use img/AbstraktesSensorknotenModell.png>
@@ -1434,7 +1434,7 @@ Overfull \hbox (6.7693pt too wide) in alignment at lines 66--66
 [][][][][] 
  []
 
-[15] <img/SimulationUI.pdf, id=372, 1096.89806pt x 616.70403pt>
+[15] <img/SimulationUI.pdf, id=368, 1096.89806pt x 616.70403pt>
 File: img/SimulationUI.pdf Graphic file (type pdf)
 
 <use img/SimulationUI.pdf>
@@ -1451,7 +1451,7 @@ Overfull \hbox (2.87025pt too wide) in alignment at lines 190--190
 [][][] 
  []
 
-<img/omnetEclipse.pdf, id=428, 1096.89806pt x 616.70403pt>
+<img/omnetEclipse.pdf, id=424, 1096.89806pt x 616.70403pt>
 File: img/omnetEclipse.pdf Graphic file (type pdf)
 
 <use img/omnetEclipse.pdf>
@@ -1471,30 +1471,35 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 )
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 288.
- [23]
-<img/messageEvent.pdf, id=484, 707.11676pt x 302.15384pt>
+
+LaTeX Warning: Citation `gnuplot' on page 23 undefined on input line 289.
+
+[23] <img/statWrong.png, id=481, 800.591pt x 422.378pt>
+File: img/statWrong.png Graphic file (type png)
+
+<use img/statWrong.png>
+Package pdftex.def Info: img/statWrong.png used on input line 295.
+(pdftex.def)             Requested size: 215.52965pt x 113.70844pt.
+ <img/statRight.png, id=483, 800.591pt x 422.378pt>
+File: img/statRight.png Graphic file (type png)
+
+<use img/statRight.png>
+Package pdftex.def Info: img/statRight.png used on input line 302.
+(pdftex.def)             Requested size: 215.52965pt x 113.70844pt.
+ [24 <./img/statWrong.png> <./img/statRight.png>]
+<img/messageEvent.pdf, id=493, 707.11676pt x 302.15384pt>
 File: img/messageEvent.pdf Graphic file (type pdf)
 
 <use img/messageEvent.pdf>
-Package pdftex.def Info: img/messageEvent.pdf used on input line 319.
+Package pdftex.def Info: img/messageEvent.pdf used on input line 334.
 (pdftex.def)             Requested size: 344.84875pt x 147.35587pt.
- [24
-\pgfsyspdfmark {pgfid1}{6277756}{45484471}
-\pgfsyspdfmark {pgfid2}{3065724}{45501577}
-\pgfsyspdfmark {pgfid3}{5403498}{45230851}
-] [25 <./img/messageEvent.pdf>] [26]
-Overfull \hbox (4.62202pt too wide) in paragraph at lines 381--382
+ [25] [26 <./img/messageEvent.pdf>] [27]
+Overfull \hbox (4.62202pt too wide) in paragraph at lines 396--397
 \T1/aer/m/n/12 Coord ist ei-ne ein-fa-che Klas-se zur Re-prä-sen-ta-ti-on von K
 o-or-di-na-ten im 3-dimensionalen
  []
 
-[27]) (./chapters/implementierung.tex [28
-\pgfsyspdfmark {pgfid6}{6277756}{41129056}
-\pgfsyspdfmark {pgfid7}{3065724}{41146162}
-\pgfsyspdfmark {pgfid8}{5403498}{40875436}
-]
+) (./chapters/implementierung.tex [28]
 Kapitel 5.
 
 Overfull \hbox (17.79706pt too wide) in alignment at lines 35--35
@@ -1505,14 +1510,14 @@ Overfull \hbox (17.79706pt too wide) in alignment at lines 35--35
 
 
 ] [30] [31] [32] [33] [34] [35] [36]
-<img/switchingModes5000.png, id=719, 738.76pt x 296.307pt>
+<img/switchingModes5000.png, id=721, 738.76pt x 296.307pt>
 File: img/switchingModes5000.png Graphic file (type png)
 
 <use img/switchingModes5000.png>
 Package pdftex.def Info: img/switchingModes5000.png used on input line 243.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
  [37] [38 <./img/switchingModes5000.png>]
-[39] <img/SimpleClasses.png, id=802, 103.587pt x 117.43875pt>
+[39] <img/SimpleClasses.png, id=803, 103.587pt x 117.43875pt>
 File: img/SimpleClasses.png Graphic file (type png)
 
 <use img/SimpleClasses.png>
@@ -1524,111 +1529,84 @@ Overfull \hbox (8.12608pt too wide) in paragraph at lines 351--352
 ndard-Nachrichtenklasse
  []
 
-<img/ExtendedMessage.png, id=823, 110.21175pt x 215.3646pt>
+<img/ExtendedMessage.png, id=824, 110.21175pt x 215.3646pt>
 File: img/ExtendedMessage.png Graphic file (type png)
 
 <use img/ExtendedMessage.png>
 Package pdftex.def Info: img/ExtendedMessage.png used on input line 356.
 (pdftex.def)             Requested size: 110.21147pt x 215.36406pt.
- [41 <./img/ExtendedMessage.png>] [42
-\pgfsyspdfmark {pgfid11}{6277756}{25315383}
-\pgfsyspdfmark {pgfid12}{3065724}{25332489}
-\pgfsyspdfmark {pgfid13}{5403498}{25061763}
-] [43] [44] [45] <img/SensorModel.png, id=891, 245.75395pt x 389.39508pt>
+ [41 <./img/ExtendedMessage.png>] [42] [43]
+[44] [45] <img/SensorModel.png, id=891, 245.75395pt x 389.39508pt>
 File: img/SensorModel.png Graphic file (type png)
 
 <use img/SensorModel.png>
-Package pdftex.def Info: img/SensorModel.png used on input line 496.
+Package pdftex.def Info: img/SensorModel.png used on input line 500.
 (pdftex.def)             Requested size: 129.3191pt x 204.90486pt.
  [46 <./img/SensorModel.png>]
-<img/Sensornode.png, id=905, 364.76575pt x 410.96822pt>
+<img/Sensornode.png, id=902, 364.76575pt x 410.96822pt>
 File: img/Sensornode.png Graphic file (type png)
 
 <use img/Sensornode.png>
-Package pdftex.def Info: img/Sensornode.png used on input line 527.
+Package pdftex.def Info: img/Sensornode.png used on input line 531.
 (pdftex.def)             Requested size: 301.74019pt x 339.96849pt.
  [47] [48 <./img/Sensornode.png>] [49] [50] [51]
-Overfull \hbox (1.14394pt too wide) in paragraph at lines 649--650
+Overfull \hbox (1.14394pt too wide) in paragraph at lines 658--659
 [] []\T1/aess/bx/n/12 TrafficGenExample[][] \T1/aer/m/n/12 Das Netz-werk Traf-f
 ic-GenExam-ple un-ter-schei-det nur we-nig vom
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--654
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 667--669
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 676--678
 
  []
 
-[52] <img/sensorExampleEvents.png, id=1032, 1048.63411pt x 485.03596pt>
+<img/sensorExampleEvents.png, id=1024, 1048.63411pt x 485.03596pt>
 File: img/sensorExampleEvents.png Graphic file (type png)
 
 <use img/sensorExampleEvents.png>
-Package pdftex.def Info: img/sensorExampleEvents.png used on input line 682.
+Package pdftex.def Info: img/sensorExampleEvents.png used on input line 692.
 (pdftex.def)             Requested size: 431.05931pt x 199.3767pt.
-
-<img/startMeasuring.png, id=1033, 816.90268pt x 382.02425pt>
+ [53]
+<img/startMeasuring.png, id=1045, 816.90268pt x 382.02425pt>
 File: img/startMeasuring.png Graphic file (type png)
 
 <use img/startMeasuring.png>
-Package pdftex.def Info: img/startMeasuring.png used on input line 688.
+Package pdftex.def Info: img/startMeasuring.png used on input line 699.
 (pdftex.def)             Requested size: 431.05931pt x 201.58585pt.
- [53] [54 <./img/sensorExampleEvents.png> <./img/startMeasuring.png>]
-<img/sleepVsNoSleepPowerModes.png, id=1052, 738.76pt x 296.307pt>
+ [54 <./img/sensorExampleEvents.png>]
+<img/sleepVsNoSleepPowerModes.png, id=1053, 738.76pt x 296.307pt>
 File: img/sleepVsNoSleepPowerModes.png Graphic file (type png)
 
 <use img/sleepVsNoSleepPowerModes.png>
-Package pdftex.def Info: img/sleepVsNoSleepPowerModes.png used on input line 73
+Package pdftex.def Info: img/sleepVsNoSleepPowerModes.png used on input line 74
 2.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
 
-<img/sleepVsNoSleepResRel.png, id=1053, 738.76pt x 296.307pt>
+<img/sleepVsNoSleepResRel.png, id=1054, 738.76pt x 296.307pt>
 File: img/sleepVsNoSleepResRel.png Graphic file (type png)
 
 <use img/sleepVsNoSleepResRel.png>
-Package pdftex.def Info: img/sleepVsNoSleepResRel.png used on input line 739.
+Package pdftex.def Info: img/sleepVsNoSleepResRel.png used on input line 749.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
- [55] [56 <./img/sleepVsNoSleepPowerModes.png> <./img/sleepVsNoSleepResRel.png>
-]
-<img/outOfSync.png, id=1069, 738.76pt x 296.307pt>
+ [55 <./img/startMeasuring.png>] [56 <./img/sleepVsNoSleepPowerModes.png> <./im
+g/sleepVsNoSleepResRel.png>]
+<img/outOfSync.png, id=1070, 738.76pt x 296.307pt>
 File: img/outOfSync.png Graphic file (type png)
  <use img/outOfSync.png>
-Package pdftex.def Info: img/outOfSync.png used on input line 752.
+Package pdftex.def Info: img/outOfSync.png used on input line 762.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
 )
 (./chapters/zusammenfassung.tex [57 <./img/outOfSync.png>] [58]
 Kapitel 6.
-
-Overfull \hbox (28.56389pt too wide) in paragraph at lines 5--5
-[][][][]\T1/aer/m/n/12 zusammenfassung 
- []
-
-
-Overfull \hbox (28.56389pt too wide) in paragraph at lines 5--5
-[][][][]\T1/aer/m/n/12 zusammenfassung 
- []
-
-
-Overfull \hbox (28.56389pt too wide) in paragraph at lines 5--5
-[][][][]\T1/aer/m/n/12 zusammenfassung 
- []
-
-
-Overfull \hbox (28.56389pt too wide) in paragraph at lines 5--5
-[][][][]\T1/aer/m/n/12 zusammenfassung 
- []
-
 ) (./formalLayout/glossar.tex) (./formalLayout/literaturverzeichnis.tex
 (./main.bbl [59
 
 
-
-\pgfsyspdfmark {pgfid16}{4630621}{39252534}
-\pgfsyspdfmark {pgfid19}{36059787}{39269640}
-\pgfsyspdfmark {pgfid20}{38397561}{38998914}
 ] [60
 
 
@@ -1854,7 +1832,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4709F36A5F991E5515BBC09308D1CF7C;1861.
+(rerunfilecheck)             Checksum: FCE6D972F03D3D9AA60F64BDF2B103E3;1861.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1862,10 +1843,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
  ) 
 Here is how much of TeX's memory you used:
- 23031 strings out of 493109
- 408452 string characters out of 6140856
- 886070 words of memory out of 5000000
- 25357 multiletter control sequences out of 15000+600000
+ 22961 strings out of 493109
+ 406729 string characters out of 6140856
+ 883070 words of memory out of 5000000
+ 25288 multiletter control sequences out of 15000+600000
  50983 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,18n,99p,967b,1939s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1882,10 +1863,10 @@ fonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 re/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/ur
 w/zapfding/uzdr.pfb>
-Output written on main.pdf (75 pages, 5871745 bytes).
+Output written on main.pdf (75 pages, 5911432 bytes).
 PDF statistics:
- 1311 PDF objects out of 1440 (max. 8388607)
- 1173 compressed objects within 12 object streams
- 594 named destinations out of 1000 (max. 500000)
- 335 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1313 PDF objects out of 1440 (max. 8388607)
+ 1171 compressed objects within 12 object streams
+ 591 named destinations out of 1000 (max. 500000)
+ 345 words of extra memory for PDF output out of 10000 (max. 10000000)
 

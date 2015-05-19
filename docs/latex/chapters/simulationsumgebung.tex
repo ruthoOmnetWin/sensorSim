@@ -285,7 +285,22 @@ for (int i = 0; i < amountRows; i++){
 
 \subsubsection{Statistiken}
 
-\todo{statistiken beispiel}
+Um die durchgeführten Simulationen ordentlich auswerten zu können, stellt Omnet++ verschiedene Werkzeuge bereit. Neben dem Eventlog ist es möglich, während der Simulation Skalar- sowie Vektorwerte zu definieren. Die Skalarwerte besitzen dabei einen fixen Wert, wogegen Vektoren die Veränderung von bestimmten Variablen im Laufe der Simulationszeit speichern können. Die dazugehörigen Klassen heißen cLongHistogram und cOutVector.\\
+Diese beiden Werte können nach dem erfolgreichen Abschließen einer Simulation auch grafisch ausgewertet werden. Dazu kann nach dem Exportieren der Werte in der Simulationsumgebung ausgewählt werden, welche Daten zusammen in einem Diagramm dargestellt werden sollen. Zum erstellen der Graphen wird Gnuplot\cite{gnuplot} genutzt. Anschließend können noch verschiedene Einstellungen getroffen werden, damit die Daten möglichst gut visualisiert werden können. Beispielsweise kann der Typ des Kurvenverlaufs gewählt werden. In den Bildern \ref{fig:statRight} und \ref{fig:statWrong} ist ein Beispiel dafür. Es liegt ein Automat vor, welcher zwischen 3 Zuständen wechselt. Dabei zeigt\ref{fig:statRight} die wesentlich besser Variante des Graphen.
+
+\begin{figure}[htbp]
+\centering
+\caption{Zustandswechsel Automat falsch}
+\label{fig:statWrong}
+\includegraphics[width=0.5\textwidth]{statWrong}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\caption{Zustandswechsel Automat richtig}
+\label{fig:statRight}
+\includegraphics[width=0.5\textwidth]{statRight}
+\end{figure}
 
 \subsubsection{weitere Beispiele}
 
@@ -390,19 +405,3 @@ Wie im vorherigen Abschnitt schon erwähnt ist die Mobilität eine der wichtigst
 \item LineSegmentMobilityBase
 \end{itemize}
 Während die ersten 3 Arten sich von selbst erklären, ist dass bei der LineSegmentMobilityBase nicht der Fall. Es ist eine weitere Basisklasse für Bewegungsarten welche aus einer Sequenz verschiedener linearer Bewegungen bestehen. Ein Beispiel ist die sogenannte TurtleMobility. Bei dieser kann ein Skript als XML-File hinterlegt werden, welches die Sequenz beschreibt.
-
-\subsubsection{Wireless}
-
-BaseArp
-src/modules/node/Host80211.ned
-
-\paragraph{Host80211}
-
-IEEE 802.11
-Norm für Funknetzwerke
-
-\todo{Ergänzen}
-
-
-
-
