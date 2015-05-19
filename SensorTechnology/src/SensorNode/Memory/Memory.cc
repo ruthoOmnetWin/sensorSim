@@ -49,6 +49,9 @@ void Memory::handleMessage(cMessage *msg)
     std::string nameString = name;
     if (nameString == "readAllAndClear") {
 
+        say("Clearing Storage");
+        EV << "storage before cleaning:" << endl;
+        printStorage();
         cMessage* returnMessage = new cMessage("storageContent");
         int count = storageDataSets;
         storage* returnData = readAllAndClear();
@@ -62,12 +65,16 @@ void Memory::handleMessage(cMessage *msg)
         }
         send(returnMessage, "connectToProcessor$o");
 
+        say("Cleaning done");
+        EV << "storage after cleaning:" << endl;
+        printStorage();
+
     } else {
 
         SimpleSensorData* data = (SimpleSensorData*) msg->getParList().remove(name);
         int value = data->sensorData;
 
-        std::stringstream ss; ss << "Got type: " << name << " with value:" << value << endl;
+        std::stringstream ss; ss << "Memory: Got type: " << name << " with value:" << value << endl;
         say(ss.str());
         if (readEntry(nameString).value == error) {
             createEntry(nameString, value);
@@ -79,8 +86,8 @@ void Memory::handleMessage(cMessage *msg)
             updateEntry(nameString, value);
             EV << "Storage entry updated." << endl;
         }
+        printStorage();
     }
-    printStorage();
     delete(msg);
     draw();
     EV << "</Memory>" << endl;

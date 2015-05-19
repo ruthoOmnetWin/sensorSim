@@ -45,10 +45,10 @@ void SensorNode::initialize(int stage) {
 
 void SensorNode::say(const char * say)
 {
-    if (noisy) {
+    if (noisy && ev.isGUI()) {
         ev.bubble(this, say);
+        EV << say << endl;
     }
-    EV << say << endl;
 }
 
 /**

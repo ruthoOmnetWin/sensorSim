@@ -19,6 +19,7 @@
 #include "SensorNode.h"
 #include "BatteryAccess.h"
 #include "Memory.h"
+//#include <sstream>
 
 Processor::Processor() {
     sensingIntervall = 0;
@@ -188,7 +189,7 @@ void Processor::handleMessage(cMessage *msg)
             say("Processor: Got measure data, saving to memory.");
             send(msg, "connectToMemory$o");
         } else if (name == "storageContent") {
-            EV << "Got data";
+            say("Processor: Got data");
             const storage empty = {"", -9999, -1};
             SimpleSensorData* data;
             cArray arr = msg->getParList();
@@ -199,12 +200,15 @@ void Processor::handleMessage(cMessage *msg)
                 dataArray[i] = empty;
             }
 
+            say("Processor: received data:");
             for (int i = 0; i < k; i++) {
                 data = (SimpleSensorData*) msg->getParList().remove(i);
-                EV << "names:" << data->getName() << data->getFullName() << data->getNamePooling() << endl;
                 dataArray[i].value = data->sensorData;
                 dataArray[i].timeCreated = data->timestamp;
                 dataArray[i].type = "";
+
+                //std::stringstream ss;
+                //ss << dataArray[i].type << ": "<< dataArray[i].value << " (" << dataArray[i].timeCreated << ")";
             }
             delete msg;
         }
