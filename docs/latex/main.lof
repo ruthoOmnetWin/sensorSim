@@ -15,7 +15,9 @@
 \contentsline {figure}{\numberline {5.3}{\ignorespaces ExtendedMessage: Vererbung}}{41}{figure.5.3}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces allgemeines Modell eines Sensors}}{46}{figure.5.4}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Aufbau des Compoundmoduls SensorNode}}{48}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Powermodi im Beispiel SleepVsNoSleep}}{53}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Ladezustand im Beispiel SleepVsNoSleep}}{53}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Powermodi im Beispiel SleepOutOfSync}}{54}{figure.5.8}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Die verschiedenen Events im Beispiel SensorExample}}{54}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Beispiel f\IeC {\"u}r den Nachrichtenverlauf beim Einlesen von Sensordaten}}{54}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Powermodi im Beispiel SleepVsNoSleep}}{56}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Ladezustand im Beispiel SleepVsNoSleep}}{56}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Powermodi im Beispiel SleepOutOfSync}}{57}{figure.5.10}
 \addvspace {10\p@ }

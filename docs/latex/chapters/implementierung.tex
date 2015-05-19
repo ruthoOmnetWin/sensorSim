@@ -654,23 +654,70 @@ Im Beispiel SensorExample wird die Funktionsweise von den Bauelementen der Simul
 
 \begin{lstlisting}[language=ned,caption={Parameter für das Beispiel SensorExample},label=lst:sePar]
 **.sensingIntervall = 10000s
-**.shiftProcessorModeNormalIntervall = 2000s
-**.shiftProcessorModePowerSavingIntervall = 2000s
-**.shiftProcessorModeHighPerformanceIntervall = 2000s
-**.collectStatisticsIntervall = 1000s
-**.readAndClearStorageIntervall = 40000s
-**.dataRecreationIntervall = 12000s
+**.shiftProcessorModeNormalIntervall = 3000s
+**.shiftProcessorModePowerSavingIntervall = 3000s
+**.shiftProcessorModeHighPerformanceIntervall = 3000s
+**.collectStatisticsIntervall = 1700s
+**.readAndClearStorageIntervall = 34000s
+**.dataRecreationIntervall = 13000s
 **.noisyWorld = true;
 **.noisy = true; 
 \end{lstlisting}
 
 Die beiden Parameter noisy und noisyWorld dienen dazu, dass während der Simulation an den entscheidenden Stellen der Simulation Ausgaben gemacht werden. Diese geben Informationen darüber, welche Aktionen ausgeführt werden und wie der Zustand von einigen Modulen ist, so zum Beispiel wird bei Änderung der Speicherinhalt vom Memory ausgegeben und stets der aktuelle Prozessormodus angegeben.\\
-Im Beispiel wird alle 10000 Sekunden von den Sensoren ein Messwert abgegriffen. Außerdem werden die vorliegenden Werte alle 12000 Sekunden geändert. Die verschiedenen Werte werden dann nacheinander im Memory abgelegt.
-\todo{memoryZustand Bild}
-\todo{evtl ablaufdiagramm}
-Da der Speicher im Beispiel nur Platz für 4 Datensätze bietet und ein einziges Sensor genutzt wird ist er nach 4 Messungen voll. Daher wird alle 40000 Sekunden, also nach jeweils 4 Messungen, der Speicher geleert. Die bis dahin gespeicherten Werte werden dann an den Prozessor gesendet.\\
-In der Realität ist dies ein realistisches Vorgehen. Während sich die Knoten in einem Ruhemodus befinden, um Strom zu sparen kann dennoch regelmäßig eine Messung durchgeführt werden und gespeichert werden. Wenn nun ein Zeitfenster erreicht wird, in dem Kommunikation im Netzwerk stattfindet, so werden gleich mehrere Messwerte auf einmal versendet.
-\todo{ausformulieren}
+Im Beispiel wird alle 10000 Sekunden von den Sensoren ein Messwert abgegriffen. Außerdem werden die vorliegenden Werte alle 13000 Sekunden geändert. Die verschiedenen Werte werden dann nacheinander im Memory abgelegt.\\
+\begin{lstlisting}[language=ned,caption={Ausgabe vom Prozessor bei t=40000s},label=lst:seProzessorOut]
+Processor: received data:
+Processor: Temperature: 10 (t=0s)
+Processor: Temperature: 10 (t=10000s)
+Processor: Temperature: 11 (t=20000s)
+Processor: Temperature: 27 (t=30000s)
+\end{lstlisting}
+Da der Speicher im Beispiel nur Platz für 4 Datensätze bietet und ein einziges Sensor genutzt wird ist er nach 4 Messungen voll. Daher wird alle 34000 Sekunden, also nach jeweils 4 Messungen, der Speicher geleert. Die bis dahin gespeicherten Werte werden dann an den Prozessor gesendet. Eine Beispielausgabe des Prozessors aus einem Testlauf in dem in dem nur ein einziger Knoten mit einem Temperatursensor genutzt wurde sind in Listing \ref{lst:seProzessorOut} zu sehen. Diese Ausgabe wurde zum Zeitpunkt t=34000s getätigt, ausgelöst durch den Event readAndClearStorage. Es wurde also gleichzeitig auch der Memory gelöscht. Direkt danach wurde der Speicher wieder mit neuen Datensätzen gefüllt.\\
+In der Realität ist dies ein realistisches Szenario. Während sich die Knoten in einem Ruhemodus befinden, um Strom zu sparen kann dennoch regelmäßig eine Messung durchgeführt und gespeichert werden. Wenn nun ein Zeitfenster erreicht wird, in dem Kommunikation im Netzwerk stattfindet, so werden gleich mehrere Messwerte auf einmal versendet.
+\begin{figure}[htbp]
+\centering
+\caption{Die verschiedenen Events im Beispiel SensorExample}
+\label{fig:seEvents}
+\includegraphics[width=\textwidth]{sensorExampleEvents}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\caption{Beispiel für den Nachrichtenverlauf beim Einlesen von Sensordaten}
+\label{fig:seStartMeasuring}
+\includegraphics[width=\textwidth]{startMeasuring}
+\end{figure}
+Im Bild \ref{fig:seEvents} sind die verschiedenen Events zu sehen, die im Sensor- und Worldmodul auftauchen. In der CustomWorldUtility wird nur einer der Events ausgelöst, welcher zum erneuten Erstellen von Sensordaten dient: updateData mit dem Intervall dataRecreationIntervall.\\
+Die anderen Events finden im Prozessor statt. Sie dienen dazu bestimmte Arbeitsabläufe anzustoßen. Der wichtigste Event ist wohl startSensingUnit, dessen Zeitintervall durch sensingIntervall festgelegt wird. Er dient dazu einen Messvorgang in Gang zu setzen. Am Ende werden die gemessenen Werte stets im Memory gespeichert.
+
+\begin{minipage}{\textwidth}
+\begin{itemize}
+\item startSensingUnit
+\begin{itemize}
+\item sensingIntervall
+\end{itemize}
+\item shiftMode
+\begin{itemize}
+\item shiftProcessorModeNormalIntervall
+\item shiftProcessorModePowerSavingIntervall
+\item shiftProcessorModeHighPerformanceIntervall
+\end{itemize}
+\item collectStatistics
+\begin{itemize}
+\item collectStatisticsIntervall
+\end{itemize}
+\item readAllAndClear
+\begin{itemize}
+\item readAndClearStorageIntervall
+\end{itemize}
+\item updateData
+\begin{itemize}
+\item dataRecreationIntervall
+\end{itemize}
+\end{itemize}
+\end{minipage}
+
+In Bild \ref{fig:seStartMeasuring} ist der Nachrichtenverlauf zu sehen, welcher durch den Event startMeasuring ausgelöst wird. Der Event wird innerhalb des Prozessormoduls gestartet. Dort wird anschließend eine Nachricht an die SensingUnits der zugehörigen Sensoren geschickt. Innerhalb der SensingUnit wird dann eine Messung durchgeführt. Diese Messdaten werden dann wiederum durch die verschiedenen Module des Sensor geleitet. Zuerst zum SignalConditioner, zum SignalConverter und zuletzt zum Transducer. Nachdem diese Stationen durchlaufen wurden wird der fertige Messwert zurück zum Prozessor gesendet. Dieser speichert dann zunächst den Wert im Memory ab.
 
 \subsection*{spezielles Verhalten}
 

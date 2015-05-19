@@ -380,14 +380,11 @@ int* CustomWorldUtility::generateTemperature(int size)
 {
     int* data = new int[size];
     say("Creating Data Temperature:");
-    std::stringstream ss;
     for (int i = 0; i < size; i++) {
         //10 - 30
         int temp = (int)((rand() % 100)/5) + 10;
         data[i] = temp;
-        ss << " " << temp;
     }
-    say(ss.str().c_str());
     return data;
 }
 
