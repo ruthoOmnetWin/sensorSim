@@ -19,7 +19,7 @@
 #include "SensorNode.h"
 #include "BatteryAccess.h"
 #include "Memory.h"
-//#include <sstream>
+#include <sstream>
 
 Processor::Processor() {
     sensingIntervall = 0;
@@ -178,7 +178,8 @@ void Processor::handleMessage(cMessage *msg)
             send(msg, "connectToMemory$o");
         }
     } else {
-        EV << "Processor: Got Message: " << name << endl;
+        std::stringstream ss; ss << "Processor: Got Message: " << name << endl;
+        say(ss.str());
         if (
             name == "Temperature" ||
             name == "Pressure" ||
@@ -189,7 +190,6 @@ void Processor::handleMessage(cMessage *msg)
             say("Processor: Got measure data, saving to memory.");
             send(msg, "connectToMemory$o");
         } else if (name == "storageContent") {
-            say("Processor: Got data");
             const storage empty = {"", -9999, -1};
             SimpleSensorData* data;
             cArray arr = msg->getParList();
@@ -205,10 +205,11 @@ void Processor::handleMessage(cMessage *msg)
                 data = (SimpleSensorData*) msg->getParList().remove(i);
                 dataArray[i].value = data->sensorData;
                 dataArray[i].timeCreated = data->timestamp;
-                dataArray[i].type = "";
+                dataArray[i].type = data->getName();
 
-                //std::stringstream ss;
-                //ss << dataArray[i].type << ": "<< dataArray[i].value << " (" << dataArray[i].timeCreated << ")";
+                std::stringstream ss;
+                ss << "Processor: " << dataArray[i].type << ": "<< dataArray[i].value << " (t=" << dataArray[i].timeCreated << "s)";
+                say(ss.str());
             }
             delete msg;
         }
@@ -443,7 +444,7 @@ void Processor::setPeriphery()
         cModule* lSensor = sensorNode->getSubmodule("LightSensor");
         addSensorModules(lSensor);
     }
-    EV << "Collected all Modules" << endl;
+    say("Collected all Modules");
 }
 
 void Processor::addSensorModules(cModule* Sensor)

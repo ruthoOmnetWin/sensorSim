@@ -44,13 +44,13 @@ void Memory::initialize(int stage)
 
 void Memory::handleMessage(cMessage *msg)
 {
-    EV << "<Memory>" << endl;
+    say("<Memory>");
     const char* name = msg->getName();
     std::string nameString = name;
     if (nameString == "readAllAndClear") {
 
         say("Clearing Storage");
-        EV << "storage before cleaning:" << endl;
+        say("storage before clearing:");
         printStorage();
         cMessage* returnMessage = new cMessage("storageContent");
         int count = storageDataSets;
@@ -66,7 +66,7 @@ void Memory::handleMessage(cMessage *msg)
         send(returnMessage, "connectToProcessor$o");
 
         say("Cleaning done");
-        EV << "storage after cleaning:" << endl;
+        say("storage after clearing:");
         printStorage();
 
     } else {
@@ -78,19 +78,19 @@ void Memory::handleMessage(cMessage *msg)
         say(ss.str());
         if (readEntry(nameString).value == error) {
             createEntry(nameString, value);
-            EV << "New storage entry created." << endl;
+            say("New storage entry created.");
         } else if (storageDataSets < storageSize) {
             createEntry(nameString, value);
-            EV << "New storage entry created." << endl;
+            say("New storage entry created.");
         } else {
             updateEntry(nameString, value);
-            EV << "Storage entry updated." << endl;
+            say("Storage entry updated.");
         }
         printStorage();
     }
     delete(msg);
     draw();
-    EV << "</Memory>" << endl;
+    say("</Memory>");
 }
 
 storage* Memory::readAllAndClear()
@@ -184,9 +184,9 @@ void Memory::printStorage()
 {
     for (int i = 0; i < storageSize; i++)
     {
-        EV << i << ": " << measureDataStorage[i].type
+        std::stringstream ss; ss << i << ": " << measureDataStorage[i].type
                 << ", " << measureDataStorage[i].value
-                << ", " << measureDataStorage[i].timeCreated.str()
-                << endl;
+                << ", " << measureDataStorage[i].timeCreated.str();
+        say(ss.str().c_str());
     }
 }

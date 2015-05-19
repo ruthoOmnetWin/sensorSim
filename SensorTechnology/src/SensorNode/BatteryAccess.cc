@@ -32,7 +32,7 @@ void BatteryAccess::initialize(int stage) {
         const char * name = this->getFullName();
         std::string stringName = std::string(name);
         registerWithBattery(stringName, 1);
-        EV << "Registered with Battery" << endl;
+        say("Registered with Battery");
         currentOverTime = par("currentConsumption").doubleValue();
         energiePerOperation = par("energyConsumption").doubleValue();
         drawCurrent(currentOverTime, 0);
@@ -50,13 +50,13 @@ void BatteryAccess::handleHostState(const HostState &state)
     HostState::States hostState = state.get();
 
     if (hostState == HostState::FAILED) {
-        EV << "failed" << endl;
+        say("failed");
     } else if (hostState == HostState::BROKEN) {
-        EV << "broken" << endl;
+        say("broken");
     } else if (hostState == HostState::SLEEP) {
-        EV << "sleep" << endl;
+        say("sleep");
     } else if (hostState == HostState::OFF) {
-        EV << "off" << endl;
+        say("off");
     }
 }
 

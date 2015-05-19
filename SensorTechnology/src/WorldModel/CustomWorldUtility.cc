@@ -114,14 +114,14 @@ void CustomWorldUtility::initialize(int stage)
     if (stage == 0) {
         dataRecreationIntervall = par("dataRecreationIntervall");
         noisy = par("noisy");
-        ev << "Initializing World Model" << endl;
+        say("Initializing World Model");
 
         this->sizeX = (int)par("playgroundSizeX").longValue()/par("dataGranularity").longValue();
         this->sizeY = (int)par("playgroundSizeY").longValue()/par("dataGranularity").longValue();
         this->sizeZ = (int)par("playgroundSizeZ").longValue()/par("dataGranularity").longValue();
 
         if (par("createData")) {
-            EV << "Generating New Environment Data" << endl;
+            say("Generating New Environment Data");
             this->generateEnvironmentData(false);
         } else {
 
@@ -154,7 +154,7 @@ void CustomWorldUtility::initialize(int stage)
                 ifile.close();
             }
             if (!filesExist) {
-                EV << "Generating New Environment Data due to missing files" << endl;
+                say("Generating New Environment Data due to missing files");
                 this->generateEnvironmentData(false);
             }
         }
@@ -303,7 +303,7 @@ void CustomWorldUtility::generateEnvironmentData(bool writeToArray)
     string filenames[4] = {"humidity", "pressure", "temperature", "light"};
 
     int numberOfFiles = sizeof(filenames)/sizeof(filenames[0]);
-    EV << "Starting to create files" << endl;
+    say("Starting to create files");
 
     for (int files = 0; files < numberOfFiles; files++) {
         ofstream myfile;
@@ -315,7 +315,8 @@ void CustomWorldUtility::generateEnvironmentData(bool writeToArray)
         char * filenameChar = new char[filename.length()];
         strcpy(filenameChar,filename.c_str());
 
-        EV << "Creating " << filenameChar << endl;
+        std::stringstream ss; ss << "Creating " << filenameChar;
+        say(ss.str().c_str());
 
         data << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl << "<" << filenames[files] << ">" << endl;
         int* newData;
@@ -366,7 +367,7 @@ void CustomWorldUtility::generateEnvironmentData(bool writeToArray)
 
     }
 
-    EV << "Done creating" << endl;
+    say("Done creating");
 
 }
 

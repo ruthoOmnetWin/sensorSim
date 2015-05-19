@@ -35,7 +35,7 @@ void AbstractSensingUnit::initialize(int stage) {
         pMobType = phy->getMobilityModule();
         //save world and provide data inside world
         this->world = World;
-        EV << "CustomWorldUtility found" << endl;
+        say("CustomWorldUtility found");
 
     } else if (stage == 1) {
         readAndForward();

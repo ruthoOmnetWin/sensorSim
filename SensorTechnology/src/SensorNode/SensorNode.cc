@@ -17,9 +17,7 @@
 #include <SimpleBattery.h>
 #include "Processor.h"
 #include "ExtendedMessage_m.h"
-
-
-
+#include <sstream>
 
 void SensorNode::initialize(int stage) {
     if (stage == 0) {
@@ -78,7 +76,8 @@ void SensorNode::setNumGates() {
     cPar numGates = par("numSensors");
     numGates = countGates;
     par("numSensors") = numGates;
-    EV << "Counted " << countGates << " Sensor(s) on the Node." << endl;
+    std::stringstream ss; ss << "Counted " << countGates << " Sensor(s) on the Node." << endl;
+    say(ss.str().c_str());
 }
 
 /**
@@ -131,7 +130,8 @@ void SensorNode::connectProcessorAndSensor(cModule &processor, std::string Senso
     //Transducer.toNodeProcessor --> ned.DatarateChannel {datarate=dataBandwidth;} --> fromTransducerToNodeProcessor;
     sensorOut->connectTo(fromSensor);
     toSensor->connectTo(sensorIn);
-    EV << "Created connections from " << SensorType << "-sensor to the processor." << endl;
+    std::stringstream ss; ss << "Created connections from " << SensorType << "-sensor to the processor.";
+    say(ss.str().c_str());
 }
 
 /**
