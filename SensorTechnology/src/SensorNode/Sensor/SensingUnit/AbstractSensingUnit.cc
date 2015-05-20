@@ -42,6 +42,15 @@ void AbstractSensingUnit::initialize(int stage) {
     }
 }
 
+/**
+ * send sensor data to the signal conditioner
+ *
+ * is called when processor initiates a measuring by "startMeasuring"-event
+ *
+ * reads the sensor data from the world module - readData(), getLocation()
+ * stores it inside a message - generateMessage()
+ * sends the message forward to signal conditioner
+ */
 void AbstractSensingUnit::readAndForward()
 {
     int value = readData();
@@ -54,6 +63,9 @@ void AbstractSensingUnit::readAndForward()
     send(newmsg, "toSignalConditioner");
 }
 
+/**
+ * returns the coord of the node
+ */
 Coord* AbstractSensingUnit::getLocation()
 {
     Coord* back;
@@ -68,6 +80,9 @@ Coord* AbstractSensingUnit::getLocation()
     return new Coord();
 }
 
+/**
+ * reads the measure value at position returned by getLocation()
+ */
 int AbstractSensingUnit::readData()
 {
     Coord *position = getLocation();
@@ -82,6 +97,9 @@ int AbstractSensingUnit::readData()
     return data;
 }
 
+/**
+ * generates an extended message
+ */
 ExtendedMessage* AbstractSensingUnit::generateMessage(const char* msgname)
 {
     int src = getIndex();

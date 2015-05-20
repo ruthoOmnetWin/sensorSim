@@ -21,6 +21,7 @@ import sensortechnology.src.WorldModel.CustomWorldUtility;
 
 //
 //network with the needed parameters for the use of the sensor implementation
+//use this as parent module for sensor networks
 //
 network BasicWSN
 {

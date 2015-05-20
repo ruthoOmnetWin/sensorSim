@@ -55,6 +55,12 @@ CustomWorldUtility::CustomWorldUtility() : BaseWorldUtility()
     c->z = 3;
 }
 
+/**
+ * if while initializing the simulation the needed files for storing the sensor data doesn't exist
+ * this function creates them
+ *
+ * simulation will need to be restarted if this function is called
+ */
 void CustomWorldUtility::createFiles()
 {
     breakAfterInit = false;
@@ -191,6 +197,9 @@ void CustomWorldUtility::handleMessage(cMessage* msg)
     say("</world>");
 }
 
+/**
+ * initialize and extendedmessage
+ */
 ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)
 {
     // Produce source and destination addresses.
@@ -208,6 +217,9 @@ ExtendedMessage* CustomWorldUtility::generateMessage(const char* msgname)
     return msg;
 }
 
+/**
+ * set the values from data to the array parameter
+ */
 void CustomWorldUtility::setValue(int*** &parameter, int*** &data)
 {
     int tmp;
@@ -225,30 +237,45 @@ void CustomWorldUtility::setValue(int*** &parameter, int*** &data)
     delete[] data;
 }
 
+/**
+ * stores the data from temperatures xml file to the classes temperature array
+ */
 void CustomWorldUtility::setTemperature()
 {
     int*** data = readXML(xmlTemperature);
     setValue(this->temperatureArray, data);
 }
 
+/**
+ * stores the data from pressure xml file to the classes pressure array
+ */
 void CustomWorldUtility::setPressure()
 {
     int*** data = readXML(xmlPressure);
     setValue(this->pressureArray, data);
 }
 
+/**
+ * stores the data from humidity xml file to the classes humidity array
+ */
 void CustomWorldUtility::setHumidity()
 {
     int*** data = readXML(xmlHumidity);
     setValue(this->humidityArray, data);
 }
 
+/**
+ * stores the data from light xml file to the classes light array
+ */
 void CustomWorldUtility::setLight()
 {
     int*** data = readXML(xmlLight);
     setValue(this->lightArray, data);
 }
 
+/**
+ * reads the data from the xml file
+ */
 int*** CustomWorldUtility::readXML(int fileName)
 {
     // get the xml from the parameter, return type cXMLElement
@@ -297,6 +324,9 @@ int*** CustomWorldUtility::readXML(int fileName)
     return data;
 }
 
+/**
+ * generates new environmental data by calling the functions generate[type]()
+ */
 void CustomWorldUtility::generateEnvironmentData(bool writeToArray)
 {
     int size = sizeX * sizeY * sizeZ;
@@ -388,14 +418,6 @@ int* CustomWorldUtility::generateTemperature(int size)
     return data;
 }
 
-void CustomWorldUtility::say(const char * say)
-{
-    if (noisy) {
-        ev.bubble(this, say);
-    }
-    EV << say << endl;
-}
-
 /**
  * generates values for the pressure on the playground
  * values will be between 995 and 1005
@@ -441,6 +463,36 @@ int* CustomWorldUtility::generateLight(int size)
     return data;
 }
 
+/**
+ * returns the data of the given type at the given position
+ *
+ * this function is called by the sensingUnit
+ */
+int CustomWorldUtility::getValueByPosition(std::string type, Coord *position)
+{
+    int*** data;
+    if (type == "Humidity") data = humidityArray;
+    if (type == "Pressure") data = pressureArray;
+    if (type == "Temperature") data = temperatureArray;
+    if (type == "Light") data = lightArray;
+    int dataAtPosition =
+            data
+                [(int)(position->x/par("dataGranularity").longValue())]
+                 [(int)(position->y/par("dataGranularity").longValue())]
+                  [(int)(position->z/par("dataGranularity").longValue())];
+    return dataAtPosition;
+}
+
+/**
+ * if the boolean noisy is set to true this will output informational data
+ */
+void CustomWorldUtility::say(const char * say)
+{
+    if (noisy) {
+        ev.bubble(this, say);
+        EV << say << endl;
+    }
+}
 
 void CustomWorldUtility::updateDisplay()
 {
@@ -476,21 +528,6 @@ void CustomWorldUtility::destroySensorData(int*** &arr)
     }
     delete[] arr;
     arr = NULL;
-}
-
-int CustomWorldUtility::getValueByPosition(std::string type, Coord *position)
-{
-    int*** data;
-    if (type == "Humidity") data = humidityArray;
-    if (type == "Pressure") data = pressureArray;
-    if (type == "Temperature") data = temperatureArray;
-    if (type == "Light") data = lightArray;
-    int dataAtPosition =
-            data
-                [(int)(position->x/par("dataGranularity").longValue())]
-                 [(int)(position->y/par("dataGranularity").longValue())]
-                  [(int)(position->z/par("dataGranularity").longValue())];
-    return dataAtPosition;
 }
 
 int CustomWorldUtility::getEnumFromType(std::string type)

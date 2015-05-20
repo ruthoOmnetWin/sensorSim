@@ -93,6 +93,10 @@ void Memory::handleMessage(cMessage *msg)
     say("</Memory>");
 }
 
+/**
+ * this function returns the entire data stored inside
+ * the memory and formats it afterwards
+ */
 storage* Memory::readAllAndClear()
 {
     storage *returnDataSet = new storage[storageDataSets];
@@ -108,6 +112,10 @@ storage* Memory::readAllAndClear()
     return returnDataSet;
 }
 
+/**
+ * CRUD:
+ * create function
+ */
 void Memory::createEntry(std::string type, int value)
 {
     int emptyId = -1;
@@ -127,6 +135,10 @@ void Memory::createEntry(std::string type, int value)
     storageDataSets++;
 }
 
+/**
+ * CRUD:
+ * read by name function
+ */
 storage Memory::readEntry(std::string type)
 {
     int id = getIdByType(type);
@@ -136,11 +148,19 @@ storage Memory::readEntry(std::string type)
     return measureDataStorage[id];
 }
 
+/**
+ * CRUD:
+ * read by id function
+ */
 storage Memory::readEntry(int id)
 {
     return measureDataStorage[id];
 }
 
+/**
+ * CRUD:
+ * update function
+ */
 void Memory::updateEntry(std::string type, int value)
 {
     int id = getIdByType(type);
@@ -151,6 +171,10 @@ void Memory::updateEntry(std::string type, int value)
     measureDataStorage[id].timeCreated = simTime();
 }
 
+/**
+ * CRUD:
+ * delete by name function
+ */
 void Memory::deleteEntry(std::string type)
 {
     int id = getIdByType(type);
@@ -160,6 +184,10 @@ void Memory::deleteEntry(std::string type)
     }
 }
 
+/**
+ * CRUD:
+ * delete by id function
+ */
 void Memory::deleteEntry(int id)
 {
     if (id < storageSize && id >= 0) {
@@ -168,6 +196,9 @@ void Memory::deleteEntry(int id)
     }
 }
 
+/**
+ * convert type to id function
+ */
 int Memory::getIdByType(std::string type)
 {
     int id = -1;
@@ -180,6 +211,9 @@ int Memory::getIdByType(std::string type)
     return id;
 }
 
+/**
+ * output the storages content
+ */
 void Memory::printStorage()
 {
     for (int i = 0; i < storageSize; i++)

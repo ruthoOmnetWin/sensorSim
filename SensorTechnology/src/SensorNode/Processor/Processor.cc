@@ -133,6 +133,10 @@ void Processor::initialize(int stage)
     }
 }
 
+/**
+ * takes responsibility to the output of the prozessors mode
+ * the mode is displayed next to every module
+ */
 void Processor::updateDisplay()
 {
     char buf[40];
@@ -422,6 +426,12 @@ void Processor::handleHostState(const HostState& state)
     }
 }
 
+/**
+ * stores all other simple modules inside periphery
+ *
+ * stores the memory module
+ * stores all simple modules of every sensor on the node
+ */
 void Processor::setPeriphery()
 {
     cModule* sensorNode = getParentModule();
@@ -447,6 +457,9 @@ void Processor::setPeriphery()
     say("Collected all Modules");
 }
 
+/**
+ * helper for setPeriphery()
+ */
 void Processor::addSensorModules(cModule* Sensor)
 {
     BatteryAccess* SensingUnit = (BatteryAccess*) Sensor->getSubmodule("SensingUnit");
