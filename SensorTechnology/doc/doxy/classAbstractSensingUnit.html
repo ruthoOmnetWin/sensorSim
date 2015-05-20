@@ -138,6 +138,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a81c3160c504fe03acb957d36dab11441"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractSensingUnit.html#a81c3160c504fe03acb957d36dab11441">initialize</a> (int stage)</td></tr>
 <tr class="separator:a81c3160c504fe03acb957d36dab11441"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4598892103ce0b0cb445d64f791a5e23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractSensingUnit.html#a4598892103ce0b0cb445d64f791a5e23">readAndForward</a> ()</td></tr>
+<tr class="memdesc:a4598892103ce0b0cb445d64f791a5e23"><td class="mdescLeft">&#160;</td><td class="mdescRight">send sensor data to the signal conditioner  <a href="#a4598892103ce0b0cb445d64f791a5e23">More...</a><br /></td></tr>
 <tr class="separator:a4598892103ce0b0cb445d64f791a5e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78c7bc3d2e75649564f9116d6f589331"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractSensingUnit.html#a78c7bc3d2e75649564f9116d6f589331">handleMessage</a> (<a class="elRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcMessage.html">cMessage</a> *msg)</td></tr>
 <tr class="separator:a78c7bc3d2e75649564f9116d6f589331"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,6 +149,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a144bc00c077326f959c340effd8f61af inherit pub_methods_classBatteryAccess"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f553d183d76b1364049a95f7a941aad inherit pub_methods_classBatteryAccess"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryAccess.html#a6f553d183d76b1364049a95f7a941aad">initialize</a> (int stage)</td></tr>
 <tr class="separator:a6f553d183d76b1364049a95f7a941aad inherit pub_methods_classBatteryAccess"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21333e1b4de66210d5e6b66fa5545b26 inherit pub_methods_classBatteryAccess"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryAccess.html#a21333e1b4de66210d5e6b66fa5545b26">say</a> (const char *)</td></tr>
+<tr class="separator:a21333e1b4de66210d5e6b66fa5545b26 inherit pub_methods_classBatteryAccess"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8622bf7b9f1369b12fe76864d88c87 inherit pub_methods_classBatteryAccess"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryAccess.html#adb8622bf7b9f1369b12fe76864d88c87">say</a> (std::string)</td></tr>
+<tr class="separator:adb8622bf7b9f1369b12fe76864d88c87 inherit pub_methods_classBatteryAccess"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fd058cc0c61299cb19628bb384cc939 inherit pub_methods_classBatteryAccess"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">draw</a> ()</td></tr>
 <tr class="separator:a9fd058cc0c61299cb19628bb384cc939 inherit pub_methods_classBatteryAccess"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1220de1fd5dd08aae48cbb3803bd275c inherit pub_methods_classBatteryAccess"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryAccess.html#a1220de1fd5dd08aae48cbb3803bd275c">changeDrawCurrent</a> (double cur, int acc)</td></tr>
@@ -162,11 +167,17 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1608983181cb95ec4f8519f6fe2c8762"><td class="memItemLeft" align="right" valign="top">Coord *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractSensingUnit.html#a1608983181cb95ec4f8519f6fe2c8762">getLocation</a> ()</td></tr>
+<tr class="memdesc:a1608983181cb95ec4f8519f6fe2c8762"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the coord of the node  <a href="#a1608983181cb95ec4f8519f6fe2c8762">More...</a><br /></td></tr>
 <tr class="separator:a1608983181cb95ec4f8519f6fe2c8762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a558143ac00a8a3bba0288b2cf4e4869b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractSensingUnit.html#a558143ac00a8a3bba0288b2cf4e4869b">readData</a> ()</td></tr>
+<tr class="memdesc:a558143ac00a8a3bba0288b2cf4e4869b"><td class="mdescLeft">&#160;</td><td class="mdescRight">reads the measure value at position returned by <a class="el" href="classAbstractSensingUnit.html#a1608983181cb95ec4f8519f6fe2c8762" title="returns the coord of the node ">getLocation()</a>  <a href="#a558143ac00a8a3bba0288b2cf4e4869b">More...</a><br /></td></tr>
 <tr class="separator:a558143ac00a8a3bba0288b2cf4e4869b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4714cfa2132e7878b407d23283b3c24e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classExtendedMessage.html">ExtendedMessage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractSensingUnit.html#a4714cfa2132e7878b407d23283b3c24e">generateMessage</a> (const char *msgname)</td></tr>
+<tr class="memdesc:a4714cfa2132e7878b407d23283b3c24e"><td class="mdescLeft">&#160;</td><td class="mdescRight">generates an extended message  <a href="#a4714cfa2132e7878b407d23283b3c24e">More...</a><br /></td></tr>
 <tr class="separator:a4714cfa2132e7878b407d23283b3c24e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classBatteryAccess"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classBatteryAccess')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classBatteryAccess.html">BatteryAccess</a></td></tr>
+<tr class="memitem:a4100ccb9b26ae7ee3d1bb992c438f6c4 inherit pro_methods_classBatteryAccess"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSensorNode.html">SensorNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryAccess.html#a4100ccb9b26ae7ee3d1bb992c438f6c4">getSensorNode</a> ()</td></tr>
+<tr class="separator:a4100ccb9b26ae7ee3d1bb992c438f6c4 inherit pro_methods_classBatteryAccess"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -178,6 +189,11 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a8c4554acc912bcf3d50d867715ebed13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86a9983eab854bfee2d60acdce9be46e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAbstractSensingUnit.html#a86a9983eab854bfee2d60acdce9be46e">type</a></td></tr>
 <tr class="separator:a86a9983eab854bfee2d60acdce9be46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classBatteryAccess"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classBatteryAccess')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classBatteryAccess.html">BatteryAccess</a></td></tr>
+<tr class="memitem:ad48082c0b3c98d8037b0cd59af4e5fcf inherit pro_attribs_classBatteryAccess"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcOutVector.html">cOutVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryAccess.html#ad48082c0b3c98d8037b0cd59af4e5fcf">consumption</a></td></tr>
+<tr class="separator:ad48082c0b3c98d8037b0cd59af4e5fcf inherit pro_attribs_classBatteryAccess"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af162b004b3473a64dc63fad9a5fc0307 inherit pro_attribs_classBatteryAccess"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcOutVector.html">cOutVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBatteryAccess.html#af162b004b3473a64dc63fad9a5fc0307">overTime</a></td></tr>
+<tr class="separator:af162b004b3473a64dc63fad9a5fc0307 inherit pro_attribs_classBatteryAccess"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -203,10 +219,10 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                         {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                         {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -230,9 +246,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                          {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                          {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -258,14 +274,16 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">int</span> src = getIndex();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> dest = getParentModule()-&gt;getSubmodule(<span class="stringliteral">&quot;SignalConditioner&quot;</span>)-&gt;getIndex();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classExtendedMessage.html">ExtendedMessage</a> *msg = <span class="keyword">new</span> <a class="code" href="classExtendedMessage.html">ExtendedMessage</a>(msgname);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    msg-&gt;<a class="code" href="classExtendedMessage.html#adccfc56b16455ecc18975b22bc8f9e2b">setSource</a>(src);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    msg-&gt;<a class="code" href="classExtendedMessage.html#a813ecbc567b0127c4d57b451b3afb364">setDestination</a>(dest);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> msg;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+
+<p>generates an extended message </p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">int</span> src = getIndex();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> dest = getParentModule()-&gt;getSubmodule(<span class="stringliteral">&quot;SignalConditioner&quot;</span>)-&gt;getIndex();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="classExtendedMessage.html">ExtendedMessage</a> *msg = <span class="keyword">new</span> <a class="code" href="classExtendedMessage.html">ExtendedMessage</a>(msgname);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    msg-&gt;<a class="code" href="classExtendedMessage.html#adccfc56b16455ecc18975b22bc8f9e2b">setSource</a>(src);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    msg-&gt;<a class="code" href="classExtendedMessage.html#a813ecbc567b0127c4d57b451b3afb364">setDestination</a>(dest);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> msg;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 <div class="ttc" id="classExtendedMessage_html"><div class="ttname"><a href="classExtendedMessage.html">ExtendedMessage</a></div><div class="ttdoc">Class generated from src/ExtendedMessage/ExtendedMessage.msg by opp_msgc. </div><div class="ttdef"><b>Definition:</b> ExtendedMessage_m.h:29</div></div>
 <div class="ttc" id="classExtendedMessage_html_a813ecbc567b0127c4d57b451b3afb364"><div class="ttname"><a href="classExtendedMessage.html#a813ecbc567b0127c4d57b451b3afb364">ExtendedMessage::setDestination</a></div><div class="ttdeci">virtual void setDestination(int destination)</div></div>
 <div class="ttc" id="classExtendedMessage_html_adccfc56b16455ecc18975b22bc8f9e2b"><div class="ttname"><a href="classExtendedMessage.html#adccfc56b16455ecc18975b22bc8f9e2b">ExtendedMessage::setSource</a></div><div class="ttdeci">virtual void setSource(int source)</div></div>
@@ -292,16 +310,21 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    Coord* back;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    BasePhyLayer* phy = FindModule&lt;BasePhyLayer*&gt;::findSubModule(this-&gt;getParentModule()-&gt;getParentModule());</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ChannelMobilityPtrType <a class="code" href="classAbstractSensingUnit.html#a8c4554acc912bcf3d50d867715ebed13">pMobType</a> = phy-&gt;getMobilityModule();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span>(pMobType != NULL){</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        back = <span class="keyword">new</span> Coord(pMobType-&gt;getCurrentPosition());</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> back;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> Coord();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+
+<p>returns the coord of the node </p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Coord* back;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    BasePhyLayer* phy = FindModule&lt;BasePhyLayer*&gt;::findSubModule(this-&gt;getParentModule()-&gt;getParentModule());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    ChannelMobilityPtrType <a class="code" href="classAbstractSensingUnit.html#a8c4554acc912bcf3d50d867715ebed13">pMobType</a> = phy-&gt;getMobilityModule();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span>(pMobType != NULL){</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        back = <span class="keyword">new</span> Coord(pMobType-&gt;getCurrentPosition());</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::stringstream ssay; ssay &lt;&lt; <span class="stringliteral">&quot;SU: My Location: &quot;</span> &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; back-&gt;x &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; back-&gt;y &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; back-&gt;z &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classBatteryAccess.html#a21333e1b4de66210d5e6b66fa5545b26">say</a>(ssay.str());</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> back;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> Coord();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="ttc" id="classBatteryAccess_html_a21333e1b4de66210d5e6b66fa5545b26"><div class="ttname"><a href="classBatteryAccess.html#a21333e1b4de66210d5e6b66fa5545b26">BatteryAccess::say</a></div><div class="ttdeci">void say(const char *)</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:77</div></div>
 <div class="ttc" id="classAbstractSensingUnit_html_a8c4554acc912bcf3d50d867715ebed13"><div class="ttname"><a href="classAbstractSensingUnit.html#a8c4554acc912bcf3d50d867715ebed13">AbstractSensingUnit::pMobType</a></div><div class="ttdeci">ChannelMobilityPtrType pMobType</div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.h:39</div></div>
 </div><!-- fragment -->
 </div>
@@ -319,16 +342,16 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">draw</a>();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::string name = msg-&gt;<a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcNamedObject.html#a5b06a5fdb473bb997c939ba55435c041">getName</a>();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (name == <span class="stringliteral">&quot;startMeasuring&quot;</span>) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="classAbstractSensingUnit.html#a4598892103ce0b0cb445d64f791a5e23">readAndForward</a>();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">delete</span>(msg);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="ttc" id="classAbstractSensingUnit_html_a4598892103ce0b0cb445d64f791a5e23"><div class="ttname"><a href="classAbstractSensingUnit.html#a4598892103ce0b0cb445d64f791a5e23">AbstractSensingUnit::readAndForward</a></div><div class="ttdeci">void readAndForward()</div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.cc:42</div></div>
-<div class="ttc" id="classBatteryAccess_html_a9fd058cc0c61299cb19628bb384cc939"><div class="ttname"><a href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">BatteryAccess::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:59</div></div>
+<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">draw</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    std::string name = msg-&gt;<a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcNamedObject.html#a5b06a5fdb473bb997c939ba55435c041">getName</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> (name == <span class="stringliteral">&quot;startMeasuring&quot;</span>) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classAbstractSensingUnit.html#a4598892103ce0b0cb445d64f791a5e23">readAndForward</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">delete</span>(msg);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="ttc" id="classAbstractSensingUnit_html_a4598892103ce0b0cb445d64f791a5e23"><div class="ttname"><a href="classAbstractSensingUnit.html#a4598892103ce0b0cb445d64f791a5e23">AbstractSensingUnit::readAndForward</a></div><div class="ttdeci">void readAndForward()</div><div class="ttdoc">send sensor data to the signal conditioner </div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.cc:54</div></div>
+<div class="ttc" id="classBatteryAccess_html_a9fd058cc0c61299cb19628bb384cc939"><div class="ttname"><a href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">BatteryAccess::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:87</div></div>
 <div class="ttc" id="classcNamedObject_html_a5b06a5fdb473bb997c939ba55435c041"><div class="ttname"><a href="/home/rutho/BA/omnetpp-4.5//doc/api/classcNamedObject.html#a5b06a5fdb473bb997c939ba55435c041">cNamedObject::getName</a></div><div class="ttdeci">virtual const char * getName() const </div></div>
 </div><!-- fragment -->
 </div>
@@ -346,26 +369,27 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                              {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classBatteryAccess.html#a6f553d183d76b1364049a95f7a941aad">BatteryAccess::initialize</a>(stage);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (stage == 0) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classCustomWorldUtility.html">CustomWorldUtility</a> *World = FindModule&lt;CustomWorldUtility*&gt;::findGlobalModule();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        BasePhyLayer* phy = FindModule&lt;BasePhyLayer*&gt;::findGlobalModule();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classAbstractSensingUnit.html#a8c4554acc912bcf3d50d867715ebed13">pMobType</a> = phy-&gt;getMobilityModule();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">//save world and provide data inside world</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        this-&gt;<a class="code" href="classAbstractSensingUnit.html#ab4f3381044031b23becdd05ebb1c0869">world</a> = World;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/group__Envir.html#ga650ef3eff8a2900bef69dae29c05d2dd">EV</a> &lt;&lt; <span class="stringliteral">&quot;CustomWorldUtility found&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stage == 1) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classAbstractSensingUnit.html#a4598892103ce0b0cb445d64f791a5e23">readAndForward</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                              {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classBatteryAccess.html#a6f553d183d76b1364049a95f7a941aad">BatteryAccess::initialize</a>(stage);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (stage == 0) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classCustomWorldUtility.html">CustomWorldUtility</a> *World = FindModule&lt;CustomWorldUtility*&gt;::findGlobalModule();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        BasePhyLayer* phy = FindModule&lt;BasePhyLayer*&gt;::findGlobalModule();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="classAbstractSensingUnit.html#a8c4554acc912bcf3d50d867715ebed13">pMobType</a> = phy-&gt;getMobilityModule();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">//save world and provide data inside world</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        this-&gt;<a class="code" href="classAbstractSensingUnit.html#ab4f3381044031b23becdd05ebb1c0869">world</a> = World;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classBatteryAccess.html#a21333e1b4de66210d5e6b66fa5545b26">say</a>(<span class="stringliteral">&quot;CustomWorldUtility found&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (stage == 1) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classAbstractSensingUnit.html#a4598892103ce0b0cb445d64f791a5e23">readAndForward</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
 <div class="ttc" id="classAbstractSensingUnit_html_ab4f3381044031b23becdd05ebb1c0869"><div class="ttname"><a href="classAbstractSensingUnit.html#ab4f3381044031b23becdd05ebb1c0869">AbstractSensingUnit::world</a></div><div class="ttdeci">CustomWorldUtility * world</div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.h:38</div></div>
-<div class="ttc" id="classAbstractSensingUnit_html_a4598892103ce0b0cb445d64f791a5e23"><div class="ttname"><a href="classAbstractSensingUnit.html#a4598892103ce0b0cb445d64f791a5e23">AbstractSensingUnit::readAndForward</a></div><div class="ttdeci">void readAndForward()</div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.cc:42</div></div>
+<div class="ttc" id="classAbstractSensingUnit_html_a4598892103ce0b0cb445d64f791a5e23"><div class="ttname"><a href="classAbstractSensingUnit.html#a4598892103ce0b0cb445d64f791a5e23">AbstractSensingUnit::readAndForward</a></div><div class="ttdeci">void readAndForward()</div><div class="ttdoc">send sensor data to the signal conditioner </div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.cc:54</div></div>
+<div class="ttc" id="classBatteryAccess_html_a21333e1b4de66210d5e6b66fa5545b26"><div class="ttname"><a href="classBatteryAccess.html#a21333e1b4de66210d5e6b66fa5545b26">BatteryAccess::say</a></div><div class="ttdeci">void say(const char *)</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:77</div></div>
 <div class="ttc" id="classCustomWorldUtility_html"><div class="ttname"><a href="classCustomWorldUtility.html">CustomWorldUtility</a></div><div class="ttdoc">this class and it&#39;s module provide support for the environment data if generates the data for each of...</div><div class="ttdef"><b>Definition:</b> CustomWorldUtility.h:32</div></div>
-<div class="ttc" id="classBatteryAccess_html_a6f553d183d76b1364049a95f7a941aad"><div class="ttname"><a href="classBatteryAccess.html#a6f553d183d76b1364049a95f7a941aad">BatteryAccess::initialize</a></div><div class="ttdeci">void initialize(int stage)</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:30</div></div>
+<div class="ttc" id="classBatteryAccess_html_a6f553d183d76b1364049a95f7a941aad"><div class="ttname"><a href="classBatteryAccess.html#a6f553d183d76b1364049a95f7a941aad">BatteryAccess::initialize</a></div><div class="ttdeci">void initialize(int stage)</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:29</div></div>
 <div class="ttc" id="classAbstractSensingUnit_html_a8c4554acc912bcf3d50d867715ebed13"><div class="ttname"><a href="classAbstractSensingUnit.html#a8c4554acc912bcf3d50d867715ebed13">AbstractSensingUnit::pMobType</a></div><div class="ttdeci">ChannelMobilityPtrType pMobType</div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.h:39</div></div>
-<div class="ttc" id="group__Envir_html_ga650ef3eff8a2900bef69dae29c05d2dd"><div class="ttname"><a href="/home/rutho/BA/omnetpp-4.5//doc/api/group__Envir.html#ga650ef3eff8a2900bef69dae29c05d2dd">EV</a></div><div class="ttdeci">#define EV</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -381,27 +405,29 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> value = <a class="code" href="classAbstractSensingUnit.html#a558143ac00a8a3bba0288b2cf4e4869b">readData</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/group__Envir.html#ga650ef3eff8a2900bef69dae29c05d2dd">EV</a> &lt;&lt; <span class="stringliteral">&quot;Read data &quot;</span> &lt;&lt; value &lt;&lt; endl;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcModule.html">cModule</a>* Sensor = getParentModule();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::string name = Sensor-&gt;<a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcComponent.html#a73111b3f286cc723519595a4d8d318f7">par</a>(<span class="stringliteral">&quot;type&quot;</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classExtendedMessage.html">ExtendedMessage</a> *newmsg = <a class="code" href="classAbstractSensingUnit.html#a4714cfa2132e7878b407d23283b3c24e">generateMessage</a>(name.c_str());</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classSimpleSensorData.html">SimpleSensorData</a>* data = <span class="keyword">new</span> <a class="code" href="classSimpleSensorData.html">SimpleSensorData</a>(name.c_str(), value);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    newmsg-&gt;<a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcMessage.html#a5902586e577cb30eed9fdd0acf184c15">getParList</a>().<a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcArray.html#ac7d7369e49551ecdd74d8d1e528d106c">add</a>(data);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">draw</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    send(newmsg, <span class="stringliteral">&quot;toSignalConditioner&quot;</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+
+<p>send sensor data to the signal conditioner </p>
+<p>is called when processor initiates a measuring by "startMeasuring"-event</p>
+<p>reads the sensor data from the world module - <a class="el" href="classAbstractSensingUnit.html#a558143ac00a8a3bba0288b2cf4e4869b" title="reads the measure value at position returned by getLocation() ">readData()</a>, <a class="el" href="classAbstractSensingUnit.html#a1608983181cb95ec4f8519f6fe2c8762" title="returns the coord of the node ">getLocation()</a> stores it inside a message - <a class="el" href="classAbstractSensingUnit.html#a4714cfa2132e7878b407d23283b3c24e" title="generates an extended message ">generateMessage()</a> sends the message forward to signal conditioner </p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> value = <a class="code" href="classAbstractSensingUnit.html#a558143ac00a8a3bba0288b2cf4e4869b">readData</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcModule.html">cModule</a>* Sensor = getParentModule();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::string name = Sensor-&gt;<a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcComponent.html#a73111b3f286cc723519595a4d8d318f7">par</a>(<span class="stringliteral">&quot;type&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classExtendedMessage.html">ExtendedMessage</a> *newmsg = <a class="code" href="classAbstractSensingUnit.html#a4714cfa2132e7878b407d23283b3c24e">generateMessage</a>(name.c_str());</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classSimpleSensorData.html">SimpleSensorData</a>* data = <span class="keyword">new</span> <a class="code" href="classSimpleSensorData.html">SimpleSensorData</a>(name.c_str(), value);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    newmsg-&gt;<a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcMessage.html#a5902586e577cb30eed9fdd0acf184c15">getParList</a>().<a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcArray.html#ac7d7369e49551ecdd74d8d1e528d106c">add</a>(data);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">draw</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    send(newmsg, <span class="stringliteral">&quot;toSignalConditioner&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 <div class="ttc" id="classcArray_html_ac7d7369e49551ecdd74d8d1e528d106c"><div class="ttname"><a href="/home/rutho/BA/omnetpp-4.5//doc/api/classcArray.html#ac7d7369e49551ecdd74d8d1e528d106c">cArray::add</a></div><div class="ttdeci">int add(cObject *obj)</div></div>
 <div class="ttc" id="classSimpleSensorData_html"><div class="ttname"><a href="classSimpleSensorData.html">SimpleSensorData</a></div><div class="ttdoc">a small class which can be used to transfer an integer value via messages the parameters list inside ...</div><div class="ttdef"><b>Definition:</b> SimpleSensorData.h:20</div></div>
 <div class="ttc" id="classExtendedMessage_html"><div class="ttname"><a href="classExtendedMessage.html">ExtendedMessage</a></div><div class="ttdoc">Class generated from src/ExtendedMessage/ExtendedMessage.msg by opp_msgc. </div><div class="ttdef"><b>Definition:</b> ExtendedMessage_m.h:29</div></div>
 <div class="ttc" id="classcComponent_html_a73111b3f286cc723519595a4d8d318f7"><div class="ttname"><a href="/home/rutho/BA/omnetpp-4.5//doc/api/classcComponent.html#a73111b3f286cc723519595a4d8d318f7">cComponent::par</a></div><div class="ttdeci">virtual cPar &amp; par(int k)</div></div>
-<div class="ttc" id="classAbstractSensingUnit_html_a558143ac00a8a3bba0288b2cf4e4869b"><div class="ttname"><a href="classAbstractSensingUnit.html#a558143ac00a8a3bba0288b2cf4e4869b">AbstractSensingUnit::readData</a></div><div class="ttdeci">int readData()</div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.cc:67</div></div>
-<div class="ttc" id="classBatteryAccess_html_a9fd058cc0c61299cb19628bb384cc939"><div class="ttname"><a href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">BatteryAccess::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:59</div></div>
-<div class="ttc" id="classAbstractSensingUnit_html_a4714cfa2132e7878b407d23283b3c24e"><div class="ttname"><a href="classAbstractSensingUnit.html#a4714cfa2132e7878b407d23283b3c24e">AbstractSensingUnit::generateMessage</a></div><div class="ttdeci">ExtendedMessage * generateMessage(const char *msgname)</div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.cc:78</div></div>
+<div class="ttc" id="classAbstractSensingUnit_html_a558143ac00a8a3bba0288b2cf4e4869b"><div class="ttname"><a href="classAbstractSensingUnit.html#a558143ac00a8a3bba0288b2cf4e4869b">AbstractSensingUnit::readData</a></div><div class="ttdeci">int readData()</div><div class="ttdoc">reads the measure value at position returned by getLocation() </div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.cc:86</div></div>
+<div class="ttc" id="classBatteryAccess_html_a9fd058cc0c61299cb19628bb384cc939"><div class="ttname"><a href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">BatteryAccess::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:87</div></div>
+<div class="ttc" id="classAbstractSensingUnit_html_a4714cfa2132e7878b407d23283b3c24e"><div class="ttname"><a href="classAbstractSensingUnit.html#a4714cfa2132e7878b407d23283b3c24e">AbstractSensingUnit::generateMessage</a></div><div class="ttdeci">ExtendedMessage * generateMessage(const char *msgname)</div><div class="ttdoc">generates an extended message </div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.cc:103</div></div>
 <div class="ttc" id="classcMessage_html_a5902586e577cb30eed9fdd0acf184c15"><div class="ttname"><a href="/home/rutho/BA/omnetpp-4.5//doc/api/classcMessage.html#a5902586e577cb30eed9fdd0acf184c15">cMessage::getParList</a></div><div class="ttdeci">virtual cArray &amp; getParList()</div></div>
 <div class="ttc" id="classcModule_html"><div class="ttname"><a href="/home/rutho/BA/omnetpp-4.5//doc/api/classcModule.html">cModule</a></div></div>
-<div class="ttc" id="group__Envir_html_ga650ef3eff8a2900bef69dae29c05d2dd"><div class="ttname"><a href="/home/rutho/BA/omnetpp-4.5//doc/api/group__Envir.html#ga650ef3eff8a2900bef69dae29c05d2dd">EV</a></div><div class="ttdeci">#define EV</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -425,22 +451,28 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">draw</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Coord *position = <a class="code" href="classAbstractSensingUnit.html#a1608983181cb95ec4f8519f6fe2c8762">getLocation</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcModule.html">cModule</a>* Sensor = getParentModule();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::string <a class="code" href="classAbstractSensingUnit.html#a86a9983eab854bfee2d60acdce9be46e">type</a> = Sensor-&gt;<a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcComponent.html#a73111b3f286cc723519595a4d8d318f7">par</a>(<span class="stringliteral">&quot;type&quot;</span>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> data = <a class="code" href="classAbstractSensingUnit.html#ab4f3381044031b23becdd05ebb1c0869">world</a>-&gt;<a class="code" href="classCustomWorldUtility.html#a126a0fbfce6a3c25550c6179f2aae2f2">getValueByPosition</a>(type, position);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">delete</span> position;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> data;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+
+<p>reads the measure value at position returned by <a class="el" href="classAbstractSensingUnit.html#a1608983181cb95ec4f8519f6fe2c8762" title="returns the coord of the node ">getLocation()</a> </p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    Coord *position = <a class="code" href="classAbstractSensingUnit.html#a1608983181cb95ec4f8519f6fe2c8762">getLocation</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcModule.html">cModule</a>* Sensor = getParentModule();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::string <a class="code" href="classAbstractSensingUnit.html#a86a9983eab854bfee2d60acdce9be46e">type</a> = Sensor-&gt;<a class="codeRef" doxygen="/home/rutho/BA/omnetpp-4.5/doc/api/opptags.xml:/home/rutho/BA/omnetpp-4.5//doc/api/" href="/home/rutho/BA/omnetpp-4.5//doc/api/classcComponent.html#a73111b3f286cc723519595a4d8d318f7">par</a>(<span class="stringliteral">&quot;type&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> data = <a class="code" href="classAbstractSensingUnit.html#ab4f3381044031b23becdd05ebb1c0869">world</a>-&gt;<a class="code" href="classCustomWorldUtility.html#a126a0fbfce6a3c25550c6179f2aae2f2">getValueByPosition</a>(type, position);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">delete</span> position;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::stringstream ss;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    ss &lt;&lt; <span class="stringliteral">&quot;SU: At position (&quot;</span> &lt;&lt; position-&gt;x &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; position-&gt;y &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; position-&gt;z &lt;&lt; <span class="stringliteral">&quot;); Got value &quot;</span> &lt;&lt; data &lt;&lt; <span class="stringliteral">&quot; for type &quot;</span> &lt;&lt; <a class="code" href="classAbstractSensingUnit.html#a86a9983eab854bfee2d60acdce9be46e">type</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classBatteryAccess.html#a21333e1b4de66210d5e6b66fa5545b26">say</a>(ss.str());</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">draw</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
 <div class="ttc" id="classAbstractSensingUnit_html_a86a9983eab854bfee2d60acdce9be46e"><div class="ttname"><a href="classAbstractSensingUnit.html#a86a9983eab854bfee2d60acdce9be46e">AbstractSensingUnit::type</a></div><div class="ttdeci">std::string type</div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.h:40</div></div>
 <div class="ttc" id="classAbstractSensingUnit_html_ab4f3381044031b23becdd05ebb1c0869"><div class="ttname"><a href="classAbstractSensingUnit.html#ab4f3381044031b23becdd05ebb1c0869">AbstractSensingUnit::world</a></div><div class="ttdeci">CustomWorldUtility * world</div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.h:38</div></div>
 <div class="ttc" id="classcComponent_html_a73111b3f286cc723519595a4d8d318f7"><div class="ttname"><a href="/home/rutho/BA/omnetpp-4.5//doc/api/classcComponent.html#a73111b3f286cc723519595a4d8d318f7">cComponent::par</a></div><div class="ttdeci">virtual cPar &amp; par(int k)</div></div>
-<div class="ttc" id="classCustomWorldUtility_html_a126a0fbfce6a3c25550c6179f2aae2f2"><div class="ttname"><a href="classCustomWorldUtility.html#a126a0fbfce6a3c25550c6179f2aae2f2">CustomWorldUtility::getValueByPosition</a></div><div class="ttdeci">int getValueByPosition(std::string, Coord *)</div><div class="ttdef"><b>Definition:</b> CustomWorldUtility.cc:382</div></div>
-<div class="ttc" id="classBatteryAccess_html_a9fd058cc0c61299cb19628bb384cc939"><div class="ttname"><a href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">BatteryAccess::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:59</div></div>
+<div class="ttc" id="classCustomWorldUtility_html_a126a0fbfce6a3c25550c6179f2aae2f2"><div class="ttname"><a href="classCustomWorldUtility.html#a126a0fbfce6a3c25550c6179f2aae2f2">CustomWorldUtility::getValueByPosition</a></div><div class="ttdeci">int getValueByPosition(std::string, Coord *)</div><div class="ttdoc">returns the data of the given type at the given position </div><div class="ttdef"><b>Definition:</b> CustomWorldUtility.cc:471</div></div>
+<div class="ttc" id="classBatteryAccess_html_a9fd058cc0c61299cb19628bb384cc939"><div class="ttname"><a href="classBatteryAccess.html#a9fd058cc0c61299cb19628bb384cc939">BatteryAccess::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:87</div></div>
+<div class="ttc" id="classBatteryAccess_html_a21333e1b4de66210d5e6b66fa5545b26"><div class="ttname"><a href="classBatteryAccess.html#a21333e1b4de66210d5e6b66fa5545b26">BatteryAccess::say</a></div><div class="ttdeci">void say(const char *)</div><div class="ttdef"><b>Definition:</b> BatteryAccess.cc:77</div></div>
 <div class="ttc" id="classcModule_html"><div class="ttname"><a href="/home/rutho/BA/omnetpp-4.5//doc/api/classcModule.html">cModule</a></div></div>
-<div class="ttc" id="classAbstractSensingUnit_html_a1608983181cb95ec4f8519f6fe2c8762"><div class="ttname"><a href="classAbstractSensingUnit.html#a1608983181cb95ec4f8519f6fe2c8762">AbstractSensingUnit::getLocation</a></div><div class="ttdeci">Coord * getLocation()</div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.cc:55</div></div>
+<div class="ttc" id="classAbstractSensingUnit_html_a1608983181cb95ec4f8519f6fe2c8762"><div class="ttname"><a href="classAbstractSensingUnit.html#a1608983181cb95ec4f8519f6fe2c8762">AbstractSensingUnit::getLocation</a></div><div class="ttdeci">Coord * getLocation()</div><div class="ttdoc">returns the coord of the node </div><div class="ttdef"><b>Definition:</b> AbstractSensingUnit.cc:69</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -535,7 +567,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classAbstractSensingUnit.html">AbstractSensingUnit</a></li>
-    <li class="footer">Generated on Wed May 6 2015 09:45:25 for SensorTechnology by
+    <li class="footer">Generated on Wed May 20 2015 09:30:52 for SensorTechnology by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

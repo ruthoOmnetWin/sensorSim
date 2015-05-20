@@ -9,6 +9,7 @@ var searchData=
   ['stdcharpvector',['stdcharpvector',['/home/rutho/BA/omnetpp-4.5//doc/api/classstdcharpvector.html',1,'']]],
   ['stdstring',['stdstring',['/home/rutho/BA/omnetpp-4.5//doc/api/classstdstring.html',1,'']]],
   ['stdstringvector',['stdstringvector',['/home/rutho/BA/omnetpp-4.5//doc/api/classstdstringvector.html',1,'']]],
+  ['storage',['storage',['../structstorage.html',1,'']]],
   ['stringmapparamresolver',['StringMapParamResolver',['/home/rutho/BA/omnetpp-4.5//doc/api/classStringMapParamResolver.html',1,'']]],
   ['submoduleiterator',['SubmoduleIterator',['/home/rutho/BA/omnetpp-4.5//doc/api/classcModule_1_1SubmoduleIterator.html',1,'cModule']]]
 ];

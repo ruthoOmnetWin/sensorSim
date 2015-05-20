@@ -1,18 +1,12 @@
 var searchData=
 [
-  ['selfmessagemeasure',['selfMessageMeasure',['../classProcessor.html#a87b1b113bf93bdd802b81810b201af6c',1,'Processor']]],
-  ['selfmessageshiftmode',['selfMessageShiftMode',['../classProcessor.html#a9037775765b103debb5666e41d82e249',1,'Processor']]],
-  ['selfmessagestatistics',['selfMessageStatistics',['../classProcessor.html#ad2af6cf93286343b28729fb96576fc80',1,'Processor']]],
-  ['sensingintervall',['sensingIntervall',['../classProcessor.html#a4a778aabdbdffd8e03232bdc56ab1d51',1,'Processor']]],
-  ['sensordata',['sensorData',['../classSimpleSensorData.html#ad510fe1fbc58b19c5c6c0fea4592d966',1,'SimpleSensorData']]],
-  ['shiftprocessormodehighperformanceintervall',['shiftProcessorModeHighPerformanceIntervall',['../classProcessor.html#a4d85c1653f2d5a155a59b20d68161d31',1,'Processor']]],
-  ['shiftprocessormodenormalintervall',['shiftProcessorModeNormalIntervall',['../classProcessor.html#a5efad714a750aaae525a0750144d5673',1,'Processor']]],
-  ['shiftprocessormodepowersavingintervall',['shiftProcessorModePowerSavingIntervall',['../classProcessor.html#a041899097ab5e257f5729f23c97c3170',1,'Processor']]],
-  ['sizex',['sizeX',['../classCustomWorldUtility.html#a05f35ec3e94509d81b44e891be8d52e5',1,'CustomWorldUtility']]],
-  ['sizey',['sizeY',['../classCustomWorldUtility.html#a9941ba5f5607868671de963e427c019e',1,'CustomWorldUtility']]],
-  ['sizez',['sizeZ',['../classCustomWorldUtility.html#a18e5b285951e6160dfe6132d3bd753c6',1,'CustomWorldUtility']]],
-  ['source_5fvar',['source_var',['../classExtendedMessage.html#ad94fa5e715f14f856756f4b76fa7adbf',1,'ExtendedMessage']]],
-  ['storagesize',['storageSize',['../classMemory.html#afb1145e05946a6fa9964a1e54fed339a',1,'Memory']]],
-  ['storagetype',['storageType',['../classMemory.html#afcc6aaacdbdf3f2fd94d93a01bef8717',1,'Memory']]],
-  ['storagevalue',['storageValue',['../classMemory.html#a95d0790fcf3b88960f00d71c8f4bb113',1,'Memory']]]
+  ['readandclearstorageintervall',['readAndClearStorageIntervall',['../classProcessor.html#aeb234d393d1843159e792c713efecd9b',1,'Processor']]],
+  ['recordfunc',['RecordFunc',['/home/rutho/BA/omnetpp-4.5//doc/api/group__EnumsTypes.html#ga7d4cb9b40bf408088eee2d9b42fb9e73',1,]]],
+  ['reldepth',['reldepth',['/home/rutho/BA/omnetpp-4.5//doc/api/structcKSplit_1_1Grid.html#abd97f575d4cd9efedce90953173702b9',1,'cKSplit::Grid']]],
+  ['residualabs',['residualAbs',['../classProcessor.html#a1d65cab1b6fc3997c99a523a4d46c1f6',1,'Processor']]],
+  ['residualabsstats',['residualAbsStats',['../classProcessor.html#aebc51f0b1eb45d6f427441ffb1c7d791',1,'Processor']]],
+  ['residualabsvector',['residualAbsVector',['../classProcessor.html#a02f133a81d3f0c2fa499c6864ea55016',1,'Processor']]],
+  ['residualrelative',['residualRelative',['../classProcessor.html#a2f2b495bb209182095cd2abfbac721b5',1,'Processor']]],
+  ['residualrelativestats',['residualRelativeStats',['../classProcessor.html#aa9f95f84b7d476e4f13b527bc2a35a2e',1,'Processor']]],
+  ['residualrelativevector',['residualRelativeVector',['../classProcessor.html#a601db9019d92563b9cf53e70fee53198',1,'Processor']]]
 ];

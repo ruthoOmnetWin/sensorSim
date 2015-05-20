@@ -51,5 +51,6 @@ var searchData=
   ['opp_5fstrlen',['opp_strlen',['/home/rutho/BA/omnetpp-4.5//doc/api/group__FunctionsString.html#ga5b35bf42f5261c56fb5c0cade0f05ea7',1,]]],
   ['opp_5fstrprettytrunc',['opp_strprettytrunc',['/home/rutho/BA/omnetpp-4.5//doc/api/group__FunctionsString.html#ga1e5a2f95c88cc0cc272063b7d8b381a0',1,]]],
   ['optype',['OpType',['/home/rutho/BA/omnetpp-4.5//doc/api/classcDynamicExpression.html#a9c0e48b0297bf6501285584666679235',1,'cDynamicExpression']]],
+  ['overtime',['overTime',['../classBatteryAccess.html#af162b004b3473a64dc63fad9a5fc0307',1,'BatteryAccess']]],
   ['string',['string',['/home/rutho/BA/omnetpp-4.5//doc/api/classcNEDValue.html#a1a63a1270a911a8a2325e45cb5438eaf',1,'cNEDValue::string()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcPar.html#a689c0c2539a2db2e4402276feaf11ea4',1,'cPar::string()']]]
 ];

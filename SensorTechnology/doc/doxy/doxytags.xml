@@ -5,6 +5,7 @@
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/Sensor/SensingUnit/</path>
     <filename>AbstractSensingUnit_8cc</filename>
     <includes id="AbstractSensingUnit_8h" name="AbstractSensingUnit.h" local="no" imported="no">AbstractSensingUnit.h</includes>
+    <includes id="SensorNode_8h" name="SensorNode.h" local="yes" imported="no">SensorNode.h</includes>
   </compound>
   <compound kind="file">
     <name>AbstractSensingUnit.h</name>
@@ -92,12 +93,12 @@
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
     <filename>BatteryAccess_8cc</filename>
     <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="no" imported="no">BatteryAccess.h</includes>
-    <includes id="SensorNode_8h" name="SensorNode.h" local="yes" imported="no">SensorNode.h</includes>
   </compound>
   <compound kind="file">
     <name>BatteryAccess.h</name>
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
     <filename>BatteryAccess_8h</filename>
+    <includes id="SensorNode_8h" name="SensorNode.h" local="yes" imported="no">SensorNode.h</includes>
     <class kind="class">BatteryAccess</class>
   </compound>
   <compound kind="file">
@@ -131,6 +132,34 @@
       <name>xmlLight</name>
       <anchorfile>CustomWorldUtility_8cc.html</anchorfile>
       <anchor>a19676c482ab5a16017cafb0b585ba45f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>humidityPath</name>
+      <anchorfile>CustomWorldUtility_8cc.html</anchorfile>
+      <anchor>ad3e853e0287df2970ddb150180c21e0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>pressurePath</name>
+      <anchorfile>CustomWorldUtility_8cc.html</anchorfile>
+      <anchor>a30a4cf9b5bc13dde2480bd26e0e817e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>temperaturePath</name>
+      <anchorfile>CustomWorldUtility_8cc.html</anchorfile>
+      <anchor>afbb16b347c0424ab55de9a547873ba82</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>lightPath</name>
+      <anchorfile>CustomWorldUtility_8cc.html</anchorfile>
+      <anchor>abb4fad07d708ca38b6a1e0c631729d67</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -188,6 +217,13 @@
       <anchor>a0c5e59a7caaa02f887d077eaa467f209</anchor>
       <arglist></arglist>
     </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>emptyTime</name>
+      <anchorfile>Memory_8cc.html</anchorfile>
+      <anchor>a50b33848a9dcf8ff4741fcf4a294ed26</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>Memory.h</name>
@@ -195,7 +231,15 @@
     <filename>Memory_8h</filename>
     <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="yes" imported="no">BatteryAccess.h</includes>
     <includes id="SimpleSensorData_8h" name="SimpleSensorData.h" local="yes" imported="no">SimpleSensorData.h</includes>
+    <class kind="struct">storage</class>
     <class kind="class">Memory</class>
+    <member kind="typedef">
+      <type>struct storage</type>
+      <name>storage</name>
+      <anchorfile>Memory_8h.html</anchorfile>
+      <anchor>a2f651364361dc505afbbd4b2b3114265</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>Define_Module</name>
@@ -211,6 +255,7 @@
     <includes id="Processor_8h" name="Processor.h" local="no" imported="no">Processor.h</includes>
     <includes id="SensorNode_8h" name="SensorNode.h" local="yes" imported="no">SensorNode.h</includes>
     <includes id="BatteryAccess_8h" name="BatteryAccess.h" local="yes" imported="no">BatteryAccess.h</includes>
+    <includes id="Memory_8h" name="Memory.h" local="yes" imported="no">Memory.h</includes>
   </compound>
   <compound kind="file">
     <name>Processor.h</name>
@@ -239,6 +284,13 @@
       <anchor>a9cec121eaa1087339a084d8db0ba6266</anchor>
       <arglist></arglist>
     </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>readAndClearStorage</name>
+      <anchorfile>Processor_8h.html</anchorfile>
+      <anchor>a59f393318547ddec28185c57c190c574</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>Define_Module</name>
@@ -253,6 +305,7 @@
     <filename>SensorNode_8cc</filename>
     <includes id="SensorNode_8h" name="SensorNode.h" local="no" imported="no">SensorNode.h</includes>
     <includes id="Processor_8h" name="Processor.h" local="yes" imported="no">Processor.h</includes>
+    <includes id="ExtendedMessage__m_8h" name="ExtendedMessage_m.h" local="yes" imported="no">ExtendedMessage_m.h</includes>
   </compound>
   <compound kind="file">
     <name>SensorNode.h</name>
@@ -503,6 +556,20 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>say</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>a21333e1b4de66210d5e6b66fa5545b26</anchor>
+      <arglist>(const char *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>say</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>adb8622bf7b9f1369b12fe76864d88c87</anchor>
+      <arglist>(std::string)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>draw</name>
       <anchorfile>classBatteryAccess.html</anchorfile>
       <anchor>a9fd058cc0c61299cb19628bb384cc939</anchor>
@@ -548,6 +615,27 @@
       <name>energiePerOperation</name>
       <anchorfile>classBatteryAccess.html</anchorfile>
       <anchor>a8d08f33bb3ed5e89669b55293becc17e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>SensorNode *</type>
+      <name>getSensorNode</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>a4100ccb9b26ae7ee3d1bb992c438f6c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cOutVector</type>
+      <name>consumption</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>ad48082c0b3c98d8037b0cd59af4e5fcf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cOutVector</type>
+      <name>overTime</name>
+      <anchorfile>classBatteryAccess.html</anchorfile>
+      <anchor>af162b004b3473a64dc63fad9a5fc0307</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -626,6 +714,27 @@
       <arglist>(int stage)</arglist>
     </member>
     <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>ac61ee162cfbe625837494d796c046d22</anchor>
+      <arglist>(cMessage *)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a2c0bbdcf5488fc82de7a10b29194d91d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>createFiles</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a28025b2e42892b7f6e19f2caa7880784</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>ExtendedMessage *</type>
       <name>generateMessage</name>
       <anchorfile>classCustomWorldUtility.html</anchorfile>
@@ -636,8 +745,8 @@
       <type>void</type>
       <name>generateEnvironmentData</name>
       <anchorfile>classCustomWorldUtility.html</anchorfile>
-      <anchor>a868e823f29c00d25a3f245f035372521</anchor>
-      <arglist>()</arglist>
+      <anchor>a5c71e3d464d793bdc040d828a678ee4f</anchor>
+      <arglist>(bool)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>int *</type>
@@ -669,20 +778,6 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>updateDisplay</name>
-      <anchorfile>classCustomWorldUtility.html</anchorfile>
-      <anchor>a709aaca388e19d04a3fb4f165d0ceceb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>finish</name>
-      <anchorfile>classCustomWorldUtility.html</anchorfile>
-      <anchor>a2c0bbdcf5488fc82de7a10b29194d91d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
       <name>destroySensorData</name>
       <anchorfile>classCustomWorldUtility.html</anchorfile>
       <anchor>ae0066c89163fe4b34193db17dd2716bc</anchor>
@@ -694,6 +789,20 @@
       <anchorfile>classCustomWorldUtility.html</anchorfile>
       <anchor>ae9e9c291ea460dc7b7a955cc9f3f0289</anchor>
       <arglist>(std::string type)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>say</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a6a89cef90ef7cf2dc96f182deef5b13e</anchor>
+      <arglist>(const char *say)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>updateDisplay</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a709aaca388e19d04a3fb4f165d0ceceb</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>int</type>
@@ -749,6 +858,34 @@
       <name>sizeZ</name>
       <anchorfile>classCustomWorldUtility.html</anchorfile>
       <anchor>a18e5b285951e6160dfe6132d3bd753c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>noisy</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a4f7166b89a8fe28eb3f277bb42fb4edd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>breakAfterInit</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>ac2e079ecdd91c2df91249bb52eb8b6fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>dataRecreationIntervall</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a741c700310f81f97c332aa5393814bc4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cMessage *</type>
+      <name>selfMessageMeasure</name>
+      <anchorfile>classCustomWorldUtility.html</anchorfile>
+      <anchor>a6973fbf7a5ca5cc1376515d664b53715</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -923,11 +1060,18 @@
       <arglist>(std::string, int)</arglist>
     </member>
     <member kind="function">
-      <type>int</type>
+      <type>storage</type>
       <name>readEntry</name>
       <anchorfile>classMemory.html</anchorfile>
-      <anchor>a7ddd91ffcbdd37145317430081eea8c2</anchor>
+      <anchor>ac0542c55a25701239893c69c49cd56e0</anchor>
       <arglist>(std::string)</arglist>
+    </member>
+    <member kind="function">
+      <type>storage</type>
+      <name>readEntry</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>afd208b6292565e8583bc1a10950e6c96</anchor>
+      <arglist>(int)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -944,31 +1088,59 @@
       <arglist>(std::string)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>deleteEntry</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>acdb4a81b834adbb8d4af07f8b5c1b7e7</anchor>
+      <arglist>(int)</arglist>
+    </member>
+    <member kind="function">
       <type>int</type>
       <name>getIdByType</name>
       <anchorfile>classMemory.html</anchorfile>
       <anchor>aeb0696eaa8821ad6efba76d97a7c27e8</anchor>
       <arglist>(std::string)</arglist>
     </member>
-    <member kind="variable" protection="protected">
-      <type>std::string *</type>
-      <name>storageType</name>
+    <member kind="function">
+      <type>storage *</type>
+      <name>readAllAndClear</name>
       <anchorfile>classMemory.html</anchorfile>
-      <anchor>afcc6aaacdbdf3f2fd94d93a01bef8717</anchor>
+      <anchor>ac743d8b310d62c9c68432864f1b82200</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>printStorage</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a77283b9fdd5e2ea3c9290fd5d74a5eff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>const storage</type>
+      <name>empty</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>a16c4c48067c846f1c45fc45d709cc1b4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>int *</type>
-      <name>storageValue</name>
+      <type>storage *</type>
+      <name>measureDataStorage</name>
       <anchorfile>classMemory.html</anchorfile>
-      <anchor>a95d0790fcf3b88960f00d71c8f4bb113</anchor>
+      <anchor>a91164cf7817e12a2197d07acc3f720d9</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static const int</type>
+    <member kind="variable" protection="protected">
+      <type>int</type>
       <name>storageSize</name>
       <anchorfile>classMemory.html</anchorfile>
-      <anchor>afb1145e05946a6fa9964a1e54fed339a</anchor>
+      <anchor>af7a1d34d21ae2ea2f3ead042970e4f80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>storageDataSets</name>
+      <anchorfile>classMemory.html</anchorfile>
+      <anchor>aed373dfbc97cf6b187a36ccd32881a72</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1142,6 +1314,13 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
+      <name>updateDisplay</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>aaf70fc21da31043e12f8731cf8dd77a8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
       <name>setPeriphery</name>
       <anchorfile>classProcessor.html</anchorfile>
       <anchor>ae9ec7e019f442d973b7ffa090272be7e</anchor>
@@ -1197,6 +1376,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>readAndClearStorageIntervall</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>aeb234d393d1843159e792c713efecd9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
       <type>cMessage *</type>
       <name>selfMessageMeasure</name>
       <anchorfile>classProcessor.html</anchorfile>
@@ -1215,6 +1401,13 @@
       <name>selfMessageStatistics</name>
       <anchorfile>classProcessor.html</anchorfile>
       <anchor>ad2af6cf93286343b28729fb96576fc80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cMessage *</type>
+      <name>selfMessageReadAndClear</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a60ca95631384c900045cc2b8297546b2</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -1364,25 +1557,25 @@
       <anchor>a02f133a81d3f0c2fa499c6864ea55016</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>cOutVector</type>
+      <name>activatedModeVector</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>a68c093c142ae7f356494ab702459e58c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cOutVector</type>
+      <name>sensorUnitsActive</name>
+      <anchorfile>classProcessor.html</anchorfile>
+      <anchor>aeaa0e51d98175ef5b878a5927e101673</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>SensorNode</name>
     <filename>classSensorNode.html</filename>
     <base>cModule</base>
-    <member kind="function">
-      <type></type>
-      <name>SensorNode</name>
-      <anchorfile>classSensorNode.html</anchorfile>
-      <anchor>a95a6344f724de6bf5decb1409afc232f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~SensorNode</name>
-      <anchorfile>classSensorNode.html</anchorfile>
-      <anchor>abb48184568647a2bea118ba367068917</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function">
       <type>cDatarateChannel *</type>
       <name>getControlChannel</name>
@@ -1396,6 +1589,20 @@
       <anchorfile>classSensorNode.html</anchorfile>
       <anchor>a4cc02aefaf99391552eb2563fca71230</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>say</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>a2e4b6c12f49731e246f014017dbe32ad</anchor>
+      <arglist>(const char *)</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>noisy</name>
+      <anchorfile>classSensorNode.html</anchorfile>
+      <anchor>a2a109e491fafab5cd7f97e306846c1de</anchor>
+      <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -1476,6 +1683,13 @@
       <type></type>
       <name>SimpleSensorData</name>
       <anchorfile>classSimpleSensorData.html</anchorfile>
+      <anchor>ada607df3fbfa545514876d337c78f180</anchor>
+      <arglist>(const char *name, int sensorData, simtime_t timestamp, bool namepooling=true)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SimpleSensorData</name>
+      <anchorfile>classSimpleSensorData.html</anchorfile>
       <anchor>a73fc4b9e4e33e9218a6fef5039c8f937</anchor>
       <arglist>(const char *name, int sensorData, bool namepooling=true)</arglist>
     </member>
@@ -1484,6 +1698,13 @@
       <name>sensorData</name>
       <anchorfile>classSimpleSensorData.html</anchorfile>
       <anchor>ad510fe1fbc58b19c5c6c0fea4592d966</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>simtime_t</type>
+      <name>timestamp</name>
+      <anchorfile>classSimpleSensorData.html</anchorfile>
+      <anchor>aacad378a2204d4940b705b9430bf48bb</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1537,6 +1758,31 @@
       <name>hopCountVector</name>
       <anchorfile>classStatisticsInterface.html</anchorfile>
       <anchor>a8cfabbb0aa6c933032214ac7b117d225</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>storage</name>
+    <filename>structstorage.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>type</name>
+      <anchorfile>structstorage.html</anchorfile>
+      <anchor>aea35c88e91e00a4b90cbd90fafa00027</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>value</name>
+      <anchorfile>structstorage.html</anchorfile>
+      <anchor>a1fa49e9b91216d3c112461b4ab2cc03b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>simtime_t</type>
+      <name>timeCreated</name>
+      <anchorfile>structstorage.html</anchorfile>
+      <anchor>a8edc8cac05002cbf7e37e6d148078677</anchor>
       <arglist></arglist>
     </member>
   </compound>

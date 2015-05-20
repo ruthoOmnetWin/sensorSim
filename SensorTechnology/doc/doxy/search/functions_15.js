@@ -83,6 +83,5 @@ var searchData=
   ['_7ememory',['~Memory',['../classMemory.html#a0ffa9759ebbf103f11132a505b93bdc0',1,'Memory']]],
   ['_7eopp_5fstring',['~opp_string',['/home/rutho/BA/omnetpp-4.5//doc/api/classopp__string.html#aef59858c19f1ed70ed6d2f80e417c1f2',1,'opp_string']]],
   ['_7eprocessor',['~Processor',['../classProcessor.html#acf37952c5b420d4e903a512571678692',1,'Processor']]],
-  ['_7esensornode',['~SensorNode',['../classSensorNode.html#abb48184568647a2bea118ba367068917',1,'SensorNode']]],
   ['_7esimplesensordata',['~SimpleSensorData',['../classSimpleSensorData.html#a3700727cd38b4754462cbab02d2b202d',1,'SimpleSensorData']]]
 ];

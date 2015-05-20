@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['energieperoperation',['energiePerOperation',['../classBatteryAccess.html#a8d08f33bb3ed5e89669b55293becc17e',1,'BatteryAccess']]],
-  ['energieperoperationhighperformance',['energiePerOperationHighPerformance',['../classProcessor.html#aa260c8b94bd163165df1d31e8f94782f',1,'Processor']]],
-  ['energieperoperationnormal',['energiePerOperationNormal',['../classProcessor.html#a70970f0f016c6f7f6f950002a5ca4c95',1,'Processor']]],
-  ['energieperoperationpowersaving',['energiePerOperationPowerSaving',['../classProcessor.html#aa6281a6edcbd510764632a22292f7ad8',1,'Processor']]]
+  ['datarecreationintervall',['dataRecreationIntervall',['../classCustomWorldUtility.html#a741c700310f81f97c332aa5393814bc4',1,'CustomWorldUtility']]],
+  ['delay',['delay',['/home/rutho/BA/omnetpp-4.5//doc/api/structcChannel_1_1result__t.html#abfef402a841b2cf15549d3107d60754b',1,'cChannel::result_t']]],
+  ['destination_5fvar',['destination_var',['../classExtendedMessage.html#a5500e69efec5761be0282886f730541e',1,'ExtendedMessage']]],
+  ['discard',['discard',['/home/rutho/BA/omnetpp-4.5//doc/api/structcChannel_1_1result__t.html#a008a5c54d6a06538fcba7426210900a8',1,'cChannel::result_t']]],
+  ['displaystring',['displayString',['/home/rutho/BA/omnetpp-4.5//doc/api/classcPostDisplayStringChangeNotification.html#a9e217e483d24189aac2bacbcba3bbea5',1,'cPostDisplayStringChangeNotification::displayString()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcPreDisplayStringChangeNotification.html#a2e1ac58f471baf261ff631a3edd5e9de',1,'cPreDisplayStringChangeNotification::displayString()']]],
+  ['duration',['duration',['/home/rutho/BA/omnetpp-4.5//doc/api/structcChannel_1_1result__t.html#acb8bc35f3c3e1e4c0d09eef09d4dfd0d',1,'cChannel::result_t']]]
 ];

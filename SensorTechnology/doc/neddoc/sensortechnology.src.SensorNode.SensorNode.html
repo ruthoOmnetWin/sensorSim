@@ -36,7 +36,33 @@ a battery, memory, processor and radio module </p>
    </tr>
 <tr>
    <td>
-<a href="sensortechnology.examples.example1.example1.html">example1</a>
+<a href="sensortechnology.examples.AllNodes.AllNodes.html">AllNodes</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+
+<p>a network with every kind of node that can be created with the different sensor types</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="sensortechnology.examples.BasicExample.BasicExample.html">BasicExample</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+
+<p>a network with every kind of node that can be created with the different sensor types</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="sensortechnology.examples.SensorExample.SensorExample.html">SensorExample</a>
    </td>
    <td>
 <i>network</i>
@@ -47,13 +73,40 @@ a battery, memory, processor and radio module </p>
 </tr>
 <tr>
    <td>
-<a href="sensortechnology.examples.BasicExample.SensorTechnology.html">SensorTechnology</a>
+<a href="sensortechnology.examples.SleepOutOfSync.SleepOutOfSync.html">SleepOutOfSync</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+
+<p>a network that shows different nodes with different day-time-routines</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="sensortechnology.examples.SleepVsNoSleep.SleepVsNoSleep.html">SleepVsNoSleep</a>
    </td>
    <td>
 <i>network</i>
    </td>
    <td>
 <i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="sensortechnology.examples.TrafficGenExample.TrafficGenExample.html">TrafficGenExample</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+
+<p>module with a lot of traffic
+it uses the module TrafficGen</p>
+
    </td>
 </tr>
 </table>
@@ -110,7 +163,7 @@ a battery, memory, processor and radio module </p>
    <td>
       <i>string</i>
    </td>
-   <td>"org.mixim.modules.application.SensorApplLayer"</td>
+   <td>""</td>
    <td>
 <p>type of the application layer</p>
    </td>
@@ -184,6 +237,22 @@ a battery, memory, processor and radio module </p>
       <i>int</i>
    </td>
    <td>0s</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>readAndClearStorageIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0s</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>noisy</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
    <td>
    </td>
 </tr>
@@ -830,6 +899,14 @@ battery</p>
    <td>   </td>
 </tr>
 <tr>
+   <td><a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.storageSize</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>   </td>
+</tr>
+<tr>
    <td><a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.currentConsumption</td>
    <td>
       <i>double</i>
@@ -922,6 +999,8 @@ battery</p>
         </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">shiftProcessorModePowerSavingIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
         </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">shiftProcessorModeHighPerformanceIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
         </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">collectStatisticsIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">readAndClearStorageIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">noisy</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
 
         </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">);
         </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">);
@@ -950,8 +1029,7 @@ battery</p>
         </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bgb=447,450;i=block/ifcard&quot;</span><span style="color: #000000; ">);
 
         </span><span style="color: #808080; font-style: italic; ">//custom parameters
-</span><span style="color: #000000; ">        </span><span style="color: #000000; ">applicationType</span><span style="color: #000000; "> = </span><span style="color: #008000; ">&quot;org.mixim.modules.application.SensorApplLayer&quot;</span><span style="color: #000000; ">;
-        </span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;Aggregation&quot;</span><span style="color: #000000; ">);
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;Aggregation&quot;</span><span style="color: #000000; ">);
         </span><span style="color: #000000; ">nicType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;Nic802154_TI_CC2420&quot;</span><span style="color: #000000; ">);  </span><span style="color: #808080; font-style: italic; ">//type of used nic
 </span><span style="color: #000000; ">        </span><span style="color: #000000; ">arpType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;org.mixim.modules.netw.ArpHost&quot;</span><span style="color: #000000; ">);
 

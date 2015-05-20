@@ -1,0 +1,1415 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Network <i>SleepOutOfSync</i></h2>
+<b>Package:</b> sensortechnology.examples.SleepOutOfSync<br/><b>File: <a href="examples-SleepOutOfSync-SleepOutOfSync.ned.html">examples/SleepOutOfSync/SleepOutOfSync.ned</a></b><br/>
+<p>a network that shows different nodes with different day-time-routines</p>
+<h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="sensortechnology.src.SensorNetworkInterface.BasicWSN.html">BasicWSN</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+
+<p>network with the needed parameters for the use of the sensor implementation
+use this as parent module for sensor networks</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>numHosts</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>numEach * 5</td>
+   <td>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>createData</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>noisyWorld</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>playgroundSizeX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>x size of the area the nodes are in (in meters)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>playgroundSizeY</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>y size of the area the nodes are in (in meters)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>playgroundSizeZ</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>z size of the area the nodes are in (in meters)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>cmType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"org.mixim.base.connectionManager.ConnectionManager"</td>
+   <td>
+<p>connection manager to use</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>wuType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"org.mixim.base.modules.CustomWorldUtility"</td>
+   <td>
+<p>world utility to use</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>numEach</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>isNetwork</td>
+   <td><i></i></td>
+   <td></td>
+</tr>
+<tr>
+   <td>display</td>
+   <td><i>bgb=$playgroundSizeX,$playgroundSizeY,white;bgp=0,0</i></td>
+   <td>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.connectionManager.IConnectionManager.html">connectionManager</a>.coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>debug switch for core framework</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.connectionManager.IConnectionManager.html">connectionManager</a>.sendDirect</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>send directly to the node or create separate gates for every connection</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.connectionManager.IConnectionManager.html">connectionManager</a>.pMax</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>maximum sending power used for this network [mW]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.connectionManager.IConnectionManager.html">connectionManager</a>.sat</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>minimum signal attenuation threshold [dBm]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.connectionManager.IConnectionManager.html">connectionManager</a>.alpha</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>minimum path loss coefficient</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.connectionManager.IConnectionManager.html">connectionManager</a>.carrierFrequency</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>minimum carrier frequency of the channel [Hz]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.useTorus</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>use the playground as torus?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.dataRecreationIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.dataGranularity</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.basePath</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.xmlTemperature</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.xmlPressure</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.xmlHumidity</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.xmlLight</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">netwl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">netwl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">tranl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">tranl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">sessl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">sessl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">presl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">presl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseApplLayer.html">appl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the application message header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.notAffectedByHostState</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>write per-activity and per-device statistics to omnetpp.sca
+(if false, only total energy and lifetime are written)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.detail</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>subscribe to battery status and record time series
+data in omnetpp.vec (resolution depends on battery's 
+publishDelta)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.timeSeries</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.nominal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>nominal battery capacity</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.capacity</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>battery capacity</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.voltage</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>nominal voltage</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.resolution</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>capacity is updated at least every resolution time</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.publishDelta</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>if &gt; 0, capacity is published to the BB each publishTime 
+interval</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.publishTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>number of modules that will draw energy from the 
+battery</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.numDevices</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.storageSize</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.numGates</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.currentConsumptionNormal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>NORMAL mode</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.energyConsumptionNormal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.currentConsumptionPowerSaving</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>POWER_SAVING mode</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.energyConsumptionPowerSaving</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.currentConsumptionHighPerformance</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>HIGH_PERFORMANCE mode</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode1</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.energyConsumptionHighPerformance</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">netwl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">netwl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">tranl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">tranl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">sessl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">sessl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">presl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">presl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseApplLayer.html">appl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the application message header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.notAffectedByHostState</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>write per-activity and per-device statistics to omnetpp.sca
+(if false, only total energy and lifetime are written)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.detail</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>subscribe to battery status and record time series
+data in omnetpp.vec (resolution depends on battery's 
+publishDelta)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.timeSeries</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.nominal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>nominal battery capacity</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.capacity</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>battery capacity</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.voltage</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>nominal voltage</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.resolution</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>capacity is updated at least every resolution time</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.publishDelta</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>if &gt; 0, capacity is published to the BB each publishTime 
+interval</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.publishTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>number of modules that will draw energy from the 
+battery</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.numDevices</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.storageSize</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.numGates</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.currentConsumptionNormal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>NORMAL mode</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.energyConsumptionNormal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.currentConsumptionPowerSaving</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>POWER_SAVING mode</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.energyConsumptionPowerSaving</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.currentConsumptionHighPerformance</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>HIGH_PERFORMANCE mode</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TPNode2</a>.<a href="sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.energyConsumptionHighPerformance</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+//a network that shows different nodes with different day-time-routines
+//
+</span><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">SleepOutOfSync</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">BasicWSN</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensorNetworkInterface</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numEach</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numEach</span><span style="color: #000000; "> * </span><span style="color: #008000; ">5</span><span style="color: #000000; ">;
+
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #808080; font-style: italic; ">//two sensors
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">TPNode1</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numEach</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">hasPressureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #000000; ">TPNode2</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numEach</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">hasPressureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+        }
+
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">allowunconnected</span><span style="color: #000000; ">:
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

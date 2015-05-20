@@ -4,8 +4,11 @@
       <link rel="stylesheet" type="text/css" href="style.css" />
    </head>
    <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
-<h2 class="comptitle">Network <i>SensorTechnology</i></h2>
-<b>Package:</b> sensortechnology.examples.BasicExample<br/><b>File: <a href="examples-BasicExample-SensorTechnology.ned.html">examples/BasicExample/SensorTechnology.ned</a></b><br/><p>(no description)</p><h3 class="subtitle">Extends:</h3>
+<h2 class="comptitle">Network <i>TrafficGenExample</i></h2>
+<b>Package:</b> sensortechnology.examples.TrafficGenExample<br/><b>File: <a href="examples-TrafficGenExample-TrafficGenExample.ned.html">examples/TrafficGenExample/TrafficGenExample.ned</a></b><br/>
+<p>module with a lot of traffic
+it uses the module TrafficGen</p>
+<h3 class="subtitle">Extends:</h3>
 <table class="typestable">
    <tr>
       <th class="name">Name</th>
@@ -14,13 +17,16 @@
    </tr>
 <tr>
    <td>
-<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.BaseNetwork.html">BaseNetwork</a>
+<a href="sensortechnology.src.SensorNetworkInterface.BasicWSN.html">BasicWSN</a>
    </td>
    <td>
 <i>network</i>
    </td>
    <td>
-<i>(no description)</i>
+
+<p>network with the needed parameters for the use of the sensor implementation
+use this as parent module for sensor networks</p>
+
    </td>
 </tr>
 </table>
@@ -32,6 +38,31 @@
       <th class="defaultvalue">Default value</th>
       <th class="description">Description</th>
    </tr>
+<tr class="inherited">
+   <td>numHosts</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>9</td>
+   <td>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>createData</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>noisyWorld</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
 <tr class="inherited">
    <td>playgroundSizeX</td>
    <td>
@@ -77,18 +108,10 @@
    <td>
       <i>string</i>
    </td>
-   <td>"CustomWorldUtility"</td>
+   <td>"org.mixim.base.modules.CustomWorldUtility"</td>
    <td>
 <p>world utility to use</p>
    </td>
-</tr>
-<tr class="local">
-   <td>numHosts</td>
-   <td>
-      <i>int</i>
-   </td>
-   <td>4 * 3</td>
-   <td>   </td>
 </tr>
 </table>
 <h3 class="subtitle">Properties:</h3>
@@ -105,7 +128,7 @@
 </tr>
 <tr>
    <td>display</td>
-   <td><i>bgi=maps/germany</i></td>
+   <td><i>bgb=$playgroundSizeX,$playgroundSizeY,white;bgp=0,0</i></td>
    <td>
 </td>
 </tr>
@@ -179,14 +202,70 @@
    </td>
 </tr>
 <tr>
-   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IWorldUtility.html">world</a>.useTorus</td>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.useTorus</td>
    <td>
       <i>bool</i>
    </td>
-   <td></td>
+   <td>false</td>
    <td>
 <p>use the playground as torus?</p>
    </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.dataRecreationIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.dataGranularity</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.basePath</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.xmlTemperature</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.xmlPressure</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.xmlHumidity</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.WorldModel.CustomWorldUtility.html">world</a>.xmlLight</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>   </td>
 </tr>
 <tr>
    <td><a href="sensortechnology.src.SensorNode.SensorNode.html">SensorNode</a>.<a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">netwl</a>.stats</td>
@@ -654,6 +733,14 @@ battery</p>
       <i>double</i>
    </td>
    <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">SensorNode</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.storageSize</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
    <td>   </td>
 </tr>
 <tr>
@@ -1203,6 +1290,14 @@ battery</p>
    <td>   </td>
 </tr>
 <tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TempNode</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.storageSize</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>   </td>
+</tr>
+<tr>
    <td><a href="sensortechnology.src.SensorNode.SensorNode.html">TempNode</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.currentConsumption</td>
    <td>
       <i>double</i>
@@ -1749,6 +1844,14 @@ battery</p>
    <td>   </td>
 </tr>
 <tr>
+   <td><a href="sensortechnology.src.SensorNode.SensorNode.html">AllNode</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.storageSize</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>   </td>
+</tr>
+<tr>
    <td><a href="sensortechnology.src.SensorNode.SensorNode.html">AllNode</a>.<a href="sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.currentConsumption</td>
    <td>
       <i>double</i>
@@ -1828,15 +1931,15 @@ battery</p>
 </tr>
 </table>
 <h3 class="subtitle">Source code:</h3>
-<pre class="src"><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensorTechnology</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">BaseNetwork</span><span style="color: #000000; ">
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+//module with a lot of traffic
+//it uses the module TrafficGen
+//
+</span><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">TrafficGenExample</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">BasicWSN</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">SensorNetworkInterface</span><span style="color: #000000; ">
 {
     </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
-        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #008000; ">4</span><span style="color: #000000; "> * </span><span style="color: #008000; ">3</span><span style="color: #000000; ">;
-        </span><span style="color: #000000; ">world</span><span style="color: #000000; ">.</span><span style="color: #000000; ">createData</span><span style="color: #000000; "> = </span><span style="color: #008000; ">false</span><span style="color: #000000; ">;
 
-        </span><span style="color: #000000; ">cmType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;org.mixim.base.connectionManager.ConnectionManager&quot;</span><span style="color: #000000; ">);
-        </span><span style="color: #000000; ">wuType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;CustomWorldUtility&quot;</span><span style="color: #000000; ">);
-        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bgi=maps/germany&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #008000; ">9</span><span style="color: #000000; ">;
 
     </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
         </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">/</span><span style="color: #008000; ">3</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
@@ -1845,6 +1948,7 @@ battery</p>
         </span><span style="color: #000000; ">TempNode</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">/</span><span style="color: #008000; ">3</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
             </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
             </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">hasLightSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
         }
 
         </span><span style="color: #000000; ">AllNode</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">/</span><span style="color: #008000; ">3</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {

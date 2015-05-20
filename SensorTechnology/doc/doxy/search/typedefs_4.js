@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['voiddelfunc',['VoidDelFunc',['/home/rutho/BA/omnetpp-4.5//doc/api/group__EnumsTypes.html#ga4b8f31d53f8936a0c556ceece17a058f',1,]]],
-  ['voiddupfunc',['VoidDupFunc',['/home/rutho/BA/omnetpp-4.5//doc/api/group__EnumsTypes.html#ga0f99009fbbd87108d6c0679188d7730a',1,]]]
+  ['storage',['storage',['../Memory_8h.html#a2f651364361dc505afbbd4b2b3114265',1,'Memory.h']]]
 ];

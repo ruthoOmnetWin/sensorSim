@@ -38,5 +38,6 @@ var hierarchy =
     ] ],
     [ "StatisticsInterface", "classStatisticsInterface.html", [
       [ "CustomWorldUtility", "classCustomWorldUtility.html", null ]
-    ] ]
+    ] ],
+    [ "storage", "structstorage.html", null ]
 ];

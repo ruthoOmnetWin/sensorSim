@@ -11,6 +11,7 @@ var searchData=
   ['mathfuncnoarg',['MathFuncNoArg',['/home/rutho/BA/omnetpp-4.5//doc/api/group__EnumsTypes.html#ga34fb283ee632e346870a8baca410c7dc',1,]]],
   ['max_5fparsim_5fpartitions',['MAX_PARSIM_PARTITIONS',['/home/rutho/BA/omnetpp-4.5//doc/api/group__ParsimBrief.html#gaa82c54be13c3f5bcbebe1d4d648e8c77',1,]]],
   ['mayhavelisteners',['mayHaveListeners',['/home/rutho/BA/omnetpp-4.5//doc/api/classcComponent.html#ab546525a9dc8b2525fb0365310708d33',1,'cComponent']]],
+  ['measuredatastorage',['measureDataStorage',['../classMemory.html#a91164cf7817e12a2197d07acc3f720d9',1,'Memory']]],
   ['memory',['Memory',['../classMemory.html',1,'Memory'],['../classMemory.html#a585d7bb6fc6f2237bcebf94a86b7dd99',1,'Memory::Memory()']]],
   ['memory_2ecc',['Memory.cc',['../Memory_8cc.html',1,'']]],
   ['memory_2eh',['Memory.h',['../Memory_8h.html',1,'']]],

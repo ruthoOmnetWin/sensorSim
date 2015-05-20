@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['datarecreationintervall',['dataRecreationIntervall',['../classCustomWorldUtility.html#a741c700310f81f97c332aa5393814bc4',1,'CustomWorldUtility']]],
   ['dbl',['dbl',['/home/rutho/BA/omnetpp-4.5//doc/api/classSimTime.html#abd20d87e1b1f27c118e91615163fe428',1,'SimTime']]],
   ['dblrand',['dblrand',['/home/rutho/BA/omnetpp-4.5//doc/api/group__RandomNumbersGen.html#gac48f353c2a520353fb2abb326e719571',1,]]],
   ['debugdump',['debugDump',['/home/rutho/BA/omnetpp-4.5//doc/api/classcXMLElement.html#a8e9623552af52b00ea0a18b8232c8488',1,'cXMLElement']]],
@@ -21,7 +22,7 @@ var searchData=
   ['define_5fned_5fmath_5ffunction3',['Define_NED_Math_Function3',['/home/rutho/BA/omnetpp-4.5//doc/api/group__MacrosReg.html#ga17008e10fe2c26046a2dfb2372376e74',1,]]],
   ['define_5fned_5fmath_5ffunction4',['Define_NED_Math_Function4',['/home/rutho/BA/omnetpp-4.5//doc/api/group__MacrosReg.html#gafb4652c1aa744a704decd8bf8495badd',1,]]],
   ['delay',['delay',['/home/rutho/BA/omnetpp-4.5//doc/api/structcChannel_1_1result__t.html#abfef402a841b2cf15549d3107d60754b',1,'cChannel::result_t']]],
-  ['deleteentry',['deleteEntry',['../classMemory.html#a8dc7068874f26b5d78d16b770cb0a6e8',1,'Memory']]],
+  ['deleteentry',['deleteEntry',['../classMemory.html#a8dc7068874f26b5d78d16b770cb0a6e8',1,'Memory::deleteEntry(std::string)'],['../classMemory.html#acdb4a81b834adbb8d4af07f8b5c1b7e7',1,'Memory::deleteEntry(int)']]],
   ['deletegate',['deleteGate',['/home/rutho/BA/omnetpp-4.5//doc/api/classcModule.html#a3beb4e7ef94e2b8cff4a5b90fcb7c743',1,'cModule']]],
   ['deletemodule',['deleteModule',['/home/rutho/BA/omnetpp-4.5//doc/api/classcModule.html#aa40e04f3a15395bfad553227c0a51866',1,'cModule::deleteModule()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcSimpleModule.html#aed071be3b66c9a695b51bfebd19c5aa5',1,'cSimpleModule::deleteModule()']]],
   ['deletenetwork',['deleteNetwork',['/home/rutho/BA/omnetpp-4.5//doc/api/classcSimulation.html#a366756a8aaaacc40aadde619b6f84573',1,'cSimulation']]],

@@ -12,5 +12,6 @@ var annotated =
     [ "Processor", "classProcessor.html", "classProcessor" ],
     [ "SensorNode", "classSensorNode.html", "classSensorNode" ],
     [ "SimpleSensorData", "classSimpleSensorData.html", "classSimpleSensorData" ],
-    [ "StatisticsInterface", "classStatisticsInterface.html", "classStatisticsInterface" ]
+    [ "StatisticsInterface", "classStatisticsInterface.html", "classStatisticsInterface" ],
+    [ "storage", "structstorage.html", "structstorage" ]
 ];

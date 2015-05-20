@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['vectorsize',['vectorSize',['/home/rutho/BA/omnetpp-4.5//doc/api/classcPostGateDeleteNotification.html#a3277034b49f71eac746e680eb2639bb6',1,'cPostGateDeleteNotification::vectorSize()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcPostModuleDeleteNotification.html#ab27019dc398883ab7fe16ba4fbbbd143',1,'cPostModuleDeleteNotification::vectorSize()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcPreModuleAddNotification.html#a55344643cb62e3fca363012d4451dcb5',1,'cPreModuleAddNotification::vectorSize()']]],
-  ['voltage',['voltage',['../classProcessor.html#a1d95c0f1ff30ee2741d040d04c1bc631',1,'Processor']]],
-  ['voltagestats',['voltageStats',['../classProcessor.html#adf2e7d93d29bd445561889ac50822fb6',1,'Processor']]],
-  ['voltagevector',['voltageVector',['../classProcessor.html#a2cf05fb34f2e567470187b495e20a08d',1,'Processor']]]
+  ['targetgate',['targetGate',['/home/rutho/BA/omnetpp-4.5//doc/api/classcPostGateDisconnectNotification.html#a788e3fb6a378472072d7e8b5a32397e5',1,'cPostGateDisconnectNotification::targetGate()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcPreGateConnectNotification.html#ac0cbb3b1c893f902aa429fabbf3cde75',1,'cPreGateConnectNotification::targetGate()']]],
+  ['temperaturearray',['temperatureArray',['../classCustomWorldUtility.html#ac073fe1cd47798dbbb5645f09a007b5b',1,'CustomWorldUtility']]],
+  ['timecreated',['timeCreated',['../structstorage.html#a8edc8cac05002cbf7e37e6d148078677',1,'storage']]],
+  ['timestamp',['timestamp',['../classSimpleSensorData.html#aacad378a2204d4940b705b9430bf48bb',1,'SimpleSensorData']]],
+  ['total',['total',['/home/rutho/BA/omnetpp-4.5//doc/api/structcKSplit_1_1Grid.html#af2e6af5f4ec06d259003fc871e8d9bcb',1,'cKSplit::Grid']]],
+  ['type',['type',['/home/rutho/BA/omnetpp-4.5//doc/api/classcNEDValue.html#ab07eca5623628b6f2125ec9e96a0bbcb',1,'cNEDValue::type()'],['../structstorage.html#aea35c88e91e00a4b90cbd90fafa00027',1,'storage::type()'],['../classAbstractSensingUnit.html#a86a9983eab854bfee2d60acdce9be46e',1,'AbstractSensingUnit::type()']]]
 ];
