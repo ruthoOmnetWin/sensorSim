@@ -610,51 +610,51 @@ Die omnetpp.ini ist eine Datei, in der Eigenschaften der Simulation geändert we
 \begin{itemize}
 \item Energieverwaltung - kann global oder auch für jedes Modul einzeln definiert werden
 \begin{itemize}
-\item currentConsumption - Verbrauch über Zeit in mA
-\item energyConsumption - Verbrauch für eine Operation in mWs
+\item currentConsumption - integer (in mA): Verbrauch über Zeit
+\item energyConsumption - integer (in mWs): Verbrauch für eine Operation
 \end{itemize}
 \item Energieverwaltung - Prozessorspezifisch, Energieverbrauch für die verschiedenen Prozessormodi
 \begin{itemize}
-\item currentConsumptionNormal
-\item energyConsumptionNormal
-\item currentConsumptionPowerSaving
-\item energyConsumptionPowerSaving
-\item currentConsumptionHighPerformance
-\item energyConsumptionHighPerformance
+\item currentConsumptionNormal - integer (in mA)
+\item energyConsumptionNormal - integer (in mWs)
+\item currentConsumptionPowerSaving - integer (in mA)
+\item energyConsumptionPowerSaving - integer (in mWs)
+\item currentConsumptionHighPerformance - integer (in mA)
+\item energyConsumptionHighPerformance - integer (in mWs)
 \end{itemize}
 \item Energieverwaltung - die folgenden Parameter gelten für die Peripheriemodule (also alle außer dem Prozessor)
 \begin{itemize}
-\item normalRatio
-\item powerSavingRatio
-\item highPerformanceRatio
-\item battery.nominal - Akkukapazität in mAh
+\item normalRatio - double: Verhältnis von currentConsumption und energyConsumption im normalen Modus
+\item powerSavingRatio - double: Verhältnis von currentConsumption und energyConsumption im power saving Modus
+\item highPerformanceRatio - double: Verhältnis von currentConsumption und energyConsumption im high performance Modus
+\item battery.nominal - double (in mAh): Akkukapazität
 \end{itemize}
 \item Metadaten/Eventintervalle - alle Events können komplett deaktiviert werden, indem der Wert auf 0 gesetzt wird
 \begin{itemize}
-\item dataGranularity -je größer der Wert gewählt wird, um so grober ist die Berechnung der Sensorwerte, beim Werte n wird für einen Würfel der Seitenlänge = n jeweils 1 Messwert generiert
-\item sensingIntervall - mit welchem Zeitabstand Messungen werden durchgeführt
-\item shiftProcessorModeNormalIntervall - wie lange wird der Prozessormodus normal behalten, bevor wieder gewechselt wird
-\item shiftProcessorModePowerSavingIntervall - wie lange wird der Prozessormodus power saving behalten, bevor wieder gewechselt wird
-\item shiftProcessorModeHighPerformanceIntervall - wie lange wird der Prozessormodus high performace behalten, bevor wieder gewechselt wird
-\item collectStatisticsIntervall - mit welchem Zeitabstand werden statistische Daten gemessen
-\item readAndClearStorageIntervall - mit welchem Zeitabstand wird der Memory ausgelesen und geleert
-\item dataRecreationIntervall - mit welchem Zeitabstand werden neue Umgebungswerte generiert
+\item dataGranularity - integer: je größer der Wert gewählt wird, um so grober ist die Berechnung der Sensorwerte, beim Werte n wird für einen Würfel der Seitenlänge = n jeweils 1 Messwert generiert
+\item sensingIntervall - integer (in s): mit welchem Zeitabstand Messungen werden durchgeführt
+\item shiftProcessorModeNormalIntervall - integer (in s): wie lange wird der Prozessormodus normal behalten, bevor wieder gewechselt wird
+\item shiftProcessorModePowerSavingIntervall - integer (in s): wie lange wird der Prozessormodus power saving behalten, bevor wieder gewechselt wird
+\item shiftProcessorModeHighPerformanceIntervall - integer (in s): wie lange wird der Prozessormodus high performace behalten, bevor wieder gewechselt wird
+\item collectStatisticsIntervall - integer (in s): mit welchem Zeitabstand werden statistische Daten gemessen
+\item readAndClearStorageIntervall - integer (in s): mit welchem Zeitabstand wird der Memory ausgelesen und geleert
+\item dataRecreationIntervall - integer (in s): mit welchem Zeitabstand werden neue Umgebungswerte generiert
 \end{itemize}
 \item Netzwerkparameter
 \begin{itemize}
-\item createData - beim Start der Simulation neue Messwerte generieren
-\item numHosts - wie viele Sensorknoten befinden sich in der Simulation
+\item createData - boolean: beim Start der Simulation neue Messwerte generieren
+\item numHosts - integer: wie viele Sensorknoten befinden sich in der Simulation
 \item noisyWorld - boolean: wenn auf true gesetzt, macht die Umwelt einige Ausgaben mit Informationen über Zustand und durchgeführte Aktionen
 \item noisy - boolean: wenn auf true gesetzt, macht der Sensorknoten einige Ausgaben mit Informationen über Zustand und durchgeführte Aktionen
-\item playgroundSizeX - Größe der X-dimension in m
-\item playgroundSizeY - Größe der Y-dimension in m
-\item playgroundSizeZ - Größe der Z-dimension in m
+\item playgroundSizeX - integer (in m): Größe der X-dimension
+\item playgroundSizeY - integer (in m): Größe der Y-dimension
+\item playgroundSizeZ - integer (in m): Größe der Z-dimension
 \end{itemize}
 \item Sensorknoten
 \begin{itemize}
 \item dataBandwidth - double (in bps): Bandbreite mit der Daten innerhalb des Sensorknotens versendet werden
 \item controlBandwidth - double (in bps): Bandbreite mit der die Steuerungsleitungen des Prozessors senden
-\item Memory.storageSize - definiert die Anzahl von Datensätze, die das Memorymodul parallel speichern kann
+\item Memory.storageSize - integer: definiert die Anzahl von Datensätze, die das Memorymodul parallel speichern kann
 \end{itemize}
 \end{itemize}
 
