@@ -1,17 +1,17 @@
 \chapter{Simulationsumgebung}
 
 Um eine Simulation in einem geeigneten zeitlichen Rahmen erstellen zu können, bietet sich die Verwendung von einer Simulationsumgebung an. Diese enthält hauptsächlich ein Framework mit vielen Bibliotheken, welche für den speziellen Anwendungsfall viel Arbeit ersparen können. \newline
-Es gibt eine große Auswahl an verschiedenen Simulationsumgebungen, wobei jede ihre Vor- und Nachteile mit sich bringt. Wichtig für die Arbeit ist ein Simulator der Netzwerke bereitstellt und auch drahtlose Kommunikation ermöglicht. Es sollten eigene Knoten erstellt und angepasst werden können, damit die Hardwaresensorik und das Verhalten im Umgang mit Nachrichten untereinander genau definiert werden kann. Auch Funktionen für die Repräsentation von Batterieeigenschaften und die Erfassung und Analyse von Statistiken sollten vorhanden sein.\newline
+Es gibt eine große Auswahl an verschiedenen Simulationsumgebungen, wobei jede ihre Vor- und Nachteile mit sich bringt. Wichtig für die Arbeit ist ein Simulator der Netzwerke bereitstellt und auch drahtlose Kommunikation ermöglicht. Es sollten eigene Knoten erstellt und angepasst werden können, damit die Hardwaresensorik und das Verhalten im Umgang mit Nachrichten untereinander genau definiert werden können. Auch Funktionen für die Repräsentation von Batterieeigenschaften und die Erfassung und Analyse von Statistiken sollten vorhanden sein.\newline
 Im Falle von speziellen Anforderungen der Frameworks sollte eine IDE vorhanden sein, die diese unterstützt. Auch eine sehr wichtige Anforderung an den Simulator ist eine grafische Umgebung für die Simulation selbst, sodass Informationen nicht nur aus Dateien ausgelesen werden können, sondern für den Nutzer auch auf den ersten Blick sichtbar sind.
 
 \section{wichtige Simulationsumgebungen}
 
-Es gibt viele Umgebungen zum Simulieren von Netzwerken. Zunächst werden hier 4 wichtige vorgestellt: die \textbf{IKR Simulation Library (IKR SimLib)} von der Universität Stuttgart, der \textbf{Open Source Wireless Network Simulator} kurz \textbf{openWNS} von der Universität Aachen, \textbf{ns-3} vom ns-3 project und \textbf{Simanet} von der TU Chemnitz.
+Es gibt viele Umgebungen zum Simulieren von Netzwerken. Zunächst werden hier 4 Wichtige vorgestellt: die \textbf{IKR Simulation Library (IKR SimLib)} von der Universität Stuttgart, der \textbf{Open Source Wireless Network Simulator} kurz \textbf{openWNS} von der Universität Aachen, \textbf{ns-3} vom ns-3 project und \textbf{Simanet} von der TU Chemnitz.
 
 \paragraph{Simulation Library (IKR SimLib)\cite{ikr}}
 
 Eine freie Simulationsbibliothek unter der Lizenz GNU LGPL für Kommunikationsnetzwerke in C++ und Java von der Universität Stuttgart. Diese steht für Linux und Unix(-artige) Systeme zur Verfügung, während die Verwendung unter Windows nicht offiziell getestet wurde.\newline
-Da es lediglich eine Bibliothek für Java darstellt existiert keine extra IDE und auch keinerlei GUI oder ähnliche Hilfswerkzeuge. Allerdings kann ein Projekt mit jeder normalen Java- oder C++ IDE benutzt werden, schließlich muss nur die Bibliothek importiert werden.\newline
+Da es lediglich eine Bibliothek für Java darstellt, existieren keine extra IDE und auch keinerlei GUI oder ähnliche Hilfswerkzeuge. Allerdings kann ein Projekt mit jeder normalen Java- oder C++ IDE benutzt werden, schließlich muss nur die Bibliothek importiert werden.\newline
 Da schon seit den 1980ern an IKR SimLib entwickelt wird, kann die Bibliothek weitreichende Funktionalitäten zur Verfügung stellen, wie zum Beispiel Unterstützung für mobile, IP- oder P2P-Netzwerke.
 
 \paragraph{openWNS\cite{openwns}}
@@ -22,15 +22,15 @@ Es gibt keine extra für openWNS erstellte oder angepasste IDE, allerdings wird 
 
 \paragraph{NS-3\cite{ns3}}
 
-ns-3 ist ein freier Netzwerksimulator, der unter der GPLv2 lizensiert ist. Das Erstellen der Simulationen funktioniert mit Hilfe der Sprache Python. Dafür steht keine extra IDE zur Verfügung, was allerdings auch nicht notwenig ist, da es genügend andere Python-Umgebungen gibt.\newline
+ns-3 ist ein freier Netzwerksimulator, der unter der GPLv2 lizensiert ist. Das Erstellen der Simulationen funktioniert mithilfe der Sprache Python. Dafür steht keine extra IDE zur Verfügung, was allerdings auch nicht notwenig ist, da es genügend andere Python-Umgebungen gibt.\newline
 Es werden sowohl kabelgebundene als auch kabellose Verbindungen unterstützt. Allerdings besteht nicht für alle wichtigen Protokolle eine Unterstützung, wie beispielsweise WSN.\newline
-Ein weiterer großer Nachteil ist, dass es keine Oberfläche während der Ausführung gibt. Die Simulation wird per Textausgabe auf der Kommandozeile ausgeführt. Die gesammelten Daten können anschließend mit Plot-Tools visualisiert werden. Für das generieren von Netzwerken steht jedoch ein grafisches Hilfsmittel zur Verfügung. Mit dem Topology Generator\cite{TopGen} können per GUI Netzwerke angelegt werden und anschließend in C++ oder Python-Code umgewandelt werden. 
+Ein weiterer großer Nachteil ist, dass es keine Oberfläche während der Ausführung gibt. Die Simulation wird per Textausgabe auf der Kommandozeile ausgeführt. Die gesammelten Daten können anschließend mit Plot-Tools visualisiert werden. Für das Generieren von Netzwerken steht jedoch ein grafisches Hilfsmittel zur Verfügung. Mit dem Topology Generator\cite{TopGen} können per GUI Netzwerke angelegt werden und anschließend in C++ oder Python-Code umgewandelt werden. 
 
 \paragraph{Simanet\cite{simanet}}
 
-Simanet ist ein Projekt, welches an der TU Chemnitz enstanden ist. Es eignet sich sehr gut für das Simulieren von Funkkommunikation und daher zum Testen von Routingverfahren.\\
+Simanet ist ein Projekt, welches an der TU Chemnitz entstanden ist. Es eignet sich sehr gut für das Simulieren von Funkkommunikation und daher zum Testen von Routingverfahren.\\
 Im Vergleich zu anderen Simulatoren wie Omnet++ oder ns-3 ist Simanet sehr leichtgewichtig und eignet sich daher hervorragend für sehr große Simulationen.\\
-Es gibt zahlreiche vorhandenen Module, die wichtige Funkstandards wie WLAN oder ZigBee, Energiemodelle, Lokalisierung und auch Visualisierung und Auswertung abdecken.
+Es gibt zahlreiche vorhandene Module, die wichtige Funkstandards wie WLAN oder ZigBee, Energiemodelle, Lokalisierung und auch Visualisierung und Auswertung abdecken.
 
 \paragraph{Omnet++\cite{omnet}}
 
@@ -66,18 +66,18 @@ Simanet unterstützt leider keine komplexe Codeausführung innerhalb von Netzwer
 \end{tabularx}
 \end{table}
 
-In Tabelle \ref{Übersicht Simulatoren} ist ein direkter Vergleich der größten Unterschiede zwischen den Simulatoren Omnet++, IKR SimLib, OpenWNS und NS-3 aufgezeigt. Es ist sehr positiv zu bewerten, dass alle Simulationsumgebungen über freie Lizenzen verfügen und die für die Arbeit relevante Drahtlose Kommunikation ermöglichen.\newline
+In Tabelle \ref{Übersicht Simulatoren} ist ein direkter Vergleich der größten Unterschiede zwischen den Simulatoren Omnet++, IKR SimLib, OpenWNS und NS-3 aufgezeigt. Es ist sehr positiv zu bewerten, dass alle Simulationsumgebungen über freie Lizenzen verfügen und die für die Arbeit relevante drahtlose Kommunikation ermöglichen.\newline
 Der größte Nachteil der Simulatoren IKR SimLib und ns-Simulator liegt darin, dass beide keine grafische Umgebung für die Simulation selbst bieten. Das wirkt sich wiederum natürlich positiv auf die Performanz aus, allerdings lässt sich über eine grafische Übersicht deutlich leichter und schneller ein Eindruck über die Zustände der Simulation gewinnen. Ein weiterer Nachteil der beiden ist die eingeschränkte Verfügbarkeit auf verschiedenen Betriebssystemen. \newline
-OpenWNS bietet nur teilweise Unterstützung in grafischer Hinsicht. Es ist möglich mit Hilfe des sogenannten Wrowser die Simulation zu starten und die statistischen Daten zu erfassen. Jedoch bietet es keine so Umfassende Oberfläche wie Omnet++. \newline
-Letztendlich ist die Entscheidung zu Gunsten von Omnet++ gefallen. Die Simulationsumgebung wird im folgenden Abschnitt ausführlicher beschrieben.
+OpenWNS bietet nur teilweise Unterstützung in grafischer Hinsicht. Es ist möglich mithilfe des sogenannten Wrowser die Simulation zu starten und die statistischen Daten zu erfassen. Jedoch bietet es keine so umfassende Oberfläche wie Omnet++. \newline
+Letztendlich ist die Entscheidung zugunsten von Omnet++ gefallen. Die Simulationsumgebung wird im folgenden Abschnitt ausführlicher beschrieben.
 
 \section{Omnet++}
 
 \subsection{Einleitung}
 
 Omnet++\cite{omnet} ist eine C++-Bibliothek und ein C++-Framework, welches primär zum Simulieren von Netzwerken dient. Außerdem bietet es eine Netzwerkbeschreibungssprache namens NED (NEtwork Description) und eine auf Eclipse\cite{eclipse} basierende Entwicklungsumgebung. Für die Simulation besteht außerdem ein grafisches Interface, mit dem die Kommunikation der Knoten im Netzwerk gut verfolgt werden kann.
-\newline Standardmäßig werden keine mobilen oder kabellosen Protokolle in Omnet++ unterstützt. Jedoch kann mit Hilfe des MiXiM-Frameworks die Funktionalität um eben Diese erweitert werden.
-\newline Es bietet unterstützt alle gängigen Betriebssysteme wie Linux, andere Unixbasierte Systeme, Mac OS und Windows und besitzt außerdem eine kostenlose Lizenz.
+\newline Standardmäßig werden keine mobilen oder kabellosen Protokolle in Omnet++ unterstützt. Jedoch kann mithilfe des MiXiM-Frameworks die Funktionalität um eben diese erweitert werden.
+\newline Es bietet unterstützt alle gängigen Betriebssysteme wie Linux, andere unixbasierte Systeme, Mac OS und Windows und besitzt außerdem eine kostenlose Lizenz.
 
 \begin{figure}[htbp]
 \centering
@@ -88,11 +88,11 @@ Omnet++\cite{omnet} ist eine C++-Bibliothek und ein C++-Framework, welches prim�
 
 \subsection{NED language}
 
-Die Netzwerkbeschreibungssprache NED\cite{ned} bietet eine Möglichkeit auch komplexe Netzwerke relativ einfach zu beschreiben und darzustellen. Man kann schnell ein einfaches Modul mit Gates (siehe Listing \ref{lst:simpleNode}) für die Kommunikation beschreiben oder ihm Submodule für verschiedene andere Aufgaben zuweisen und dieses in ein Netzwerk integrieren und dort mehrere und auch verschiedene Instanzen von Modulen verknüpfen (siehe Listing \ref{lst:simpleNetwork}). 
+Die Netzwerkbeschreibungssprache NED\cite{ned} bietet eine Möglichkeit, auch komplexe Netzwerke relativ einfach zu beschreiben und darzustellen. Man kann schnell ein einfaches Modul mit Gates (siehe Listing \ref{lst:simpleNode}) für die Kommunikation beschreiben oder ihm Submodule für verschiedene andere Aufgaben zuweisen und dieses in ein Netzwerk integrieren und dort mehrere und auch verschiedene Instanzen von Modulen verknüpfen (siehe Listing \ref{lst:simpleNetwork}).
 \newline
-Dabei helfen die verschiedenen möglichen Module. Es können die 3 Typen simple, module und network definiert werden. Wie der Name schon sagt ist network dazu da ein Netzwerk zu beschreiben und sollte alle nötigen Module als Submodule beinhalten.
+Dabei helfen die verschiedenen möglichen Module. Es können die 3 Typen simple, module und network definiert werden. Wie der Name schon sagt, ist network dazu da ein Netzwerk zu beschreiben und sollte alle nötigen Module als Submodule beinhalten. 
 \newline
-Mit dem Schlüsselwort module lassen sich komplexe Objekte beschreiben. Neben den Standardvariablen wie beispielsweise Parameter, Gates oder Connections lassen sich auch Submodule definieren. Dadurch ist es möglich verschiedene in sich abgeschlossene Moduleteile in einem großen Modul zu vereinen.
+Mit dem Schlüsselwort module lassen sich komplexe Objekte beschreiben. Neben den Standardvariablen wie beispielsweise Parameter, Gates oder Connections lassen sich auch Submodule definieren. Dadurch ist es möglich verschiedene in sich abgeschlossene Modulteile in einem großen Modul zu vereinen.
 \newline
 Geeignet als ein solches Modulteil ist wiederum das simple-Modul. Dieses kann keine weiteren Submodule besitzen, sondern lediglich einfache Funktionalität definieren.
 
@@ -201,14 +201,14 @@ Eine Übersicht mit Kurzbeschreibung zu den wichtigsten Schlüsselwörtern in NE
 \subsection{Einige Techniken, Funktionen und wichtige Module}
 
 Im folgenden Abschnitt wird ein Ausschnitt darüber gegeben, was Omnet++ an Funktionalitäten bereitstellt. Grundlegend wird für eine einfache Simulation ein Netzwerk benötigt, welches in der Netzwerkbeschreibungssprache NED beschrieben wird. Dieses Netzwerk kann dann Nodes definieren, welche selbst Module sind, welche wiederum auch in NED beschrieben werden. Wenn diese Module ausgehende und/oder eingehende Gates besitzen, können diese im Netzwerk wiederum miteinander verbunden werden.\newline
-Dieser einfache Grundaufbau genügt im Prinzip schon, damit eine valide Simulation ablaufen kann. Um dazu noch etwas Funktionalität in die Module zu bringen ist es möglich für jedes Modul eine Klasse in C++ zu definieren. Man kann zum einen eigene Klassen definieren oder die in der Simulationsbibliothek vorhandenen Klassen nutzen.\newline
+Dieser einfache Grundaufbau genügt im Prinzip schon, damit eine valide Simulation ablaufen kann. Um dazu noch etwas Funktionalität in die Module zu bringen ist es möglich, für jedes Modul eine Klasse in C++ zu definieren. Man kann zum einen eigene Klassen definieren oder die in der Simulationsbibliothek vorhandenen Klassen nutzen.\newline
 Zusätzlich zur Standardbibliothek gibt es noch 3 relevante Frameworks, die weitere Funktionen zur Verfügung stellen: MiXiM, INET und Castalia.
 
 \subsubsection{Nodes and Messages}\label{para:Nodes and Messages}
 
 Für die Steuerung innerhalb einer Simulation sind Nachrichten das wichtigste Werkzeug in \textbf{Omnet++}. So kann man eine Nachricht zu einer festgelegten Simulationszeit verschicken, um diese als Events einzusetzen. Dabei können Knoten auch Nachrichten an sich selbst versenden.
 
-Um einem selbst definierten Modul die Möglichkeit zu geben Nachrichten zu verstehen und zu benutzen werden einige Funktionen bereit gestellt, die man selbst definieren muss.
+Um einem selbst definierten Modul die Möglichkeit zu geben Nachrichten zu verstehen und zu benutzen werden einige Funktionen bereitgestellt, die man selbst definieren muss.
 
 Diese sind für die Funktionalität eines \textbf{cSimpleModule} entscheidend und sollten nach dem Erstellen eines neuen Moduls implementiert werden:
 
@@ -221,27 +221,27 @@ Diese sind für die Funktionalität eines \textbf{cSimpleModule} entscheidend un
 
 \paragraph{initialize()}
 
-Die Funktion \textbf{initialize()} wird nach dem Erstellen eines Modules aufgerufen. Es kann ähnlich wie ein Konstruktor verwendet werden. Entscheidend ist, dass die Methode erst aufgerufen wird, nachdem auch der \textbf{NED}-Teil des Moduls eingelesen wurde. Das bedeuted, dass erst an dieser Stelle auf Parameter des Moduls zugegriffen werden kann und das ist im Konstruktor noch nicht möglich. Auch Nachrichten kann das Modul erst ab diesem Zeitpunkt verschicken. 
+Die Funktion \textbf{initialize()} wird nach dem Erstellen eines Moduls aufgerufen. Es kann so ähnlich wie ein Konstruktor verwendet werden. Entscheidend ist, dass die Methode erst aufgerufen wird, nachdem auch der \textbf{NED}-Teil des Moduls eingelesen wurde. Das bedeutet, dass erst an dieser Stelle auf Parameter des Moduls zugegriffen werden kann und das ist im Konstruktor noch nicht möglich. Auch Nachrichten kann das Modul erst ab diesem Zeitpunkt verschicken.
 
 \paragraph{handleMessage(cMessage *msg)}
 
-Diese Methode kann eingehende Nachrichten auswerten. Sollten bei einem Modul Nachrichten ankommen, ohne dass diese Funktion definiert wurde, wird ein Fehler auftreten. Wie Nachrichten genauer aufgebaut sind ist im Abschnitt \textbf{cMessage} beschrieben.
+Diese Methode kann eingehende Nachrichten auswerten. Sollten bei einem Modul Nachrichten ankommen, ohne dass diese Funktion definiert wurde, wird ein Fehler auftreten. Wie Nachrichten genauer aufgebaut sind, ist im Abschnitt \textbf{cMessage} beschrieben.
 Nachrichten können zeitgesteuert Events auslösen. Die Methode \textbf{handleMessage()} ist somit das Herzstück der meisten Module, da hier das komplette Verhalten geregelt wird. \newline
 Es können im Regelfall natürlich viele verschiedene Arten von Nachrichten in einem Modul eintreffen, die auch unterschiedlich behandelt werden müssen. Zur Fallunterscheidung stehen wiederum viele Funktion im Nachrichtenmodul zur Verfügung, die beispielsweise Informationen über den Sender liefer, ob die Nachricht eine Selfmessage war, also vom Modul an sich selbst gesendet wurde oder einfache Informationen wie der Name der Nachricht.
 
 \paragraph{activity()}
 
-Diese Methode ist eine eher unwichtige Funktion. Wenn \textbf{handleMessage()} korrekt verwendet wird, sollte man auf die Benutzung von \textbf{activity()} am besten komplett verzichten. Es verhält sich oberflächlich betrachtet wie \textbf{handleMessage()}, allerdings wird diese Methode nicht einfach aufgerufen, sollte eine Nachricht ankommen, sondern läuft in einer Endllosschleife und wartet permanet aktiv auf Nachrichten. Daher ist sie wesentlich rechenintensiver als das Gegenstück \textbf{handleMessage()}.
+Diese Methode ist eine eher unwichtige Funktion. Wenn \textbf{handleMessage()} korrekt verwendet wird, sollte man auf die Benutzung von \textbf{activity()} am besten komplett verzichten. Es verhält sich oberflächlich betrachtet wie \textbf{handleMessage()}, allerdings wird diese Methode nicht einfach aufgerufen, sollte eine Nachricht ankommen, sondern läuft in einer Endlosschleife und wartet Permanet aktiv auf Nachrichten. Daher ist sie wesentlich rechenintensiver als das Gegenstück \textbf{handleMessage()}.
 
 \paragraph{finish()}
 
-Diese Methode wird aufgerufen nachdem die Simulation beendet wurde und noch bevor das Modul gelöscht wurde. Sie sollte nicht zum Löschen anderer Module verwendet werden, da nach dem Aufruf von finish() die Simulation erneut gestartet werden kann, ohne das das Netzwerk komplett neu initialisiert wird. Wenn allerdings wichtige Module an dieser Stelle gelöscht wurden ist ein Neustart nicht mehr möglich.\newline
+Diese Methode wird aufgerufen, nachdem die Simulation beendet wurde und noch bevor das Modul gelöscht wurde. Sie sollte nicht zum Löschen anderer Module verwendet werden, da nach dem Aufruf von finish() die Simulation erneut gestartet werden kann, ohne dass das Netzwerk komplett neu initialisiert wird. Wenn allerdings wichtige Module an dieser Stelle gelöscht wurden, ist ein Neustart nicht mehr möglich.\newline
 Die Methode ist stattdessen dafür da die eben abgelaufene Simulation auszuwerten. Es können an dieser Stelle alle relevanten Informationen gespeichert werden, damit diese hinterher statistisch ausgewertet werden können.
 
 \subsubsection{cMessage}
 
-Für die Nachrichten selbst existiert ein fertig implementiertes Modul namens \textbf{cMessage}. Dieses erfüllt schon die wichtigsten Anforderungen, die man an ein Nachrichtenmodul stellt. So können Nachrichten nicht nur \textbf{strings} übertragen, sondern alle Klassen, die von \textbf{cNamedObject} erben. Man kann also auch komplexe, selbst definierte Objekte mithilfe von cMessage übertragen.
-Es empfiehlt sich dennoch eine eigene Kindklasse von cMessage zu definieren, da man in diesem eigene Parameter definieren kann, die verschiedene Werte beschreiben. So kann man zum Beispiel genauere Informationen für Quelle und Senke in der Nachricht speichern oder verschiedene Werte für Statistiken. Sollte man eine veränderte Kindklasse von cMessage definieren, so wird zusätzlich eine Klasse dazu generiert, die viele Funktionen bereitstellt, die zum Beispiel das kopieren einer Nachricht ermöglichen - auch inklusive der extra hinzugefügten Parameter.
+Für die Nachrichten selbst existiert ein fertig implementiertes Modul namens \textbf{cMessage}. Dieses erfüllt schon die wichtigsten Anforderungen, die man an ein Nachrichtenmodul stellt. So können Nachrichten nicht nur \textbf{strings} übertragen, sondern alle Klassen, die von \textbf{cNamedObject} erben. Man kann also auch komplexe, selbst definierte Objekte mithilfe von cMessage übertragen.\\
+Es empfiehlt sich dennoch eine eigene Kindklasse von cMessage zu definieren, da man in diesem eigene Parameter definieren kann, die verschiedene Werte beschreiben. So kann man zum Beispiel genauere Informationen für Quelle und Senke in der Nachricht speichern oder verschiedene Werte für Statistiken. Sollte man eine veränderte Kindklasse von cMessage definieren, so wird zusätzlich eine Klasse dazu generiert, die viele Funktionen bereitstellt, die zum Beispiel das Kopieren einer Nachricht ermöglichen - auch inklusive der extra hinzugefügten Parameter.
 
 \begin{table}[!ht]
   \centering
@@ -286,7 +286,7 @@ for (int i = 0; i < amountRows; i++){
 \subsubsection{Statistiken}
 
 Um die durchgeführten Simulationen ordentlich auswerten zu können, stellt Omnet++ verschiedene Werkzeuge bereit. Neben dem Eventlog ist es möglich, während der Simulation Skalar- sowie Vektorwerte zu definieren. Die Skalarwerte besitzen dabei einen fixen Wert, wogegen Vektoren die Veränderung von bestimmten Variablen im Laufe der Simulationszeit speichern können. Die dazugehörigen Klassen heißen cLongHistogram und cOutVector.\\
-Diese beiden Werte können nach dem erfolgreichen Abschließen einer Simulation auch grafisch ausgewertet werden. Dazu kann nach dem Exportieren der Werte in der Simulationsumgebung ausgewählt werden, welche Daten zusammen in einem Diagramm dargestellt werden sollen. Zum erstellen der Graphen wird Gnuplot\cite{gnuplot} genutzt. Anschließend können noch verschiedene Einstellungen getroffen werden, damit die Daten möglichst gut visualisiert werden können. Beispielsweise kann der Typ des Kurvenverlaufs gewählt werden. In den Bildern \ref{fig:statRight} und \ref{fig:statWrong} ist ein Beispiel dafür. Es liegt ein Automat vor, welcher zwischen 3 Zuständen wechselt. Dabei zeigt\ref{fig:statRight} die wesentlich besser Variante des Graphen.
+Diese beiden Werte können nach dem erfolgreichen Abschließen einer Simulation auch grafisch ausgewertet werden. Dazu kann nach dem Exportieren der Werte in der Simulationsumgebung ausgewählt werden, welche Daten zusammen in einem Diagramm dargestellt werden sollen. Zum Erstellen der Graphen wird Gnuplot\cite{gnuplot} genutzt. Anschließend können noch verschiedene Einstellungen getroffen werden, damit die Daten möglichst gut visualisiert werden können. Beispielsweise kann der Typ des Kurvenverlaufs gewählt werden. In den Bildern \ref{fig:statRight} und \ref{fig:statWrong} ist ein Beispiel dafür. Es liegt ein Automat vor, welcher zwischen 3 Zuständen wechselt. Dabei zeigt\ref{fig:statRight} die wesentlich besser Variante des Graphen.
 
 \begin{figure}[htbp]
 \centering
@@ -304,7 +304,7 @@ Diese beiden Werte können nach dem erfolgreichen Abschließen einer Simulation 
 
 \subsubsection{weitere Beispiele}
 
-\paragraph{cClassDescriptor} Eine Klasse die dabei behilflich ist die Felder eines Objektes zu finden. Dazu muss eine Klasse lediglich von cClassDescriptor erben. Die Verwendung funktioniert wie im Listing \ref{lst:cclassdescriptor} beschrieben.
+\paragraph{cClassDescriptor} Eine Klasse, die dabei behilflich ist, die Felder eines Objektes zu finden. Dazu muss eine Klasse lediglich von cClassDescriptor erben. Die Verwendung funktioniert wie im Listing \ref{lst:cclassdescriptor} beschrieben. 
 
 \begin{minipage}{\textwidth}
 \begin{lstlisting}[language=C++,caption={Verwendung von cClassDescriptor },label=lst:cclassdescriptor]
@@ -347,7 +347,7 @@ scheduleAt(simTime()+delay, event);
 \end{lstlisting}
 \end{minipage}
 
-\paragraph{cArray} Ist eine Klasse, die als Sammlung für Objekte vom Typ cObject dient. Sie kommt zum Beispiel innerhalt der cMessage zum Einsatz. Die Parameterliste der Nachrichten besteht aus einem solchen cArray. Die wichtigsten Funktionen sind hier add() und remove(), die in Listing \ref{lst:carray} kurz an einem Beispiel gezeigt werden.
+\paragraph{cArray} Ist eine Klasse, die als Sammlung für Objekte vom Typ cObject dient. Sie kommt zum Beispiel innerhalb der cMessage zum Einsatz. Die Parameterliste der Nachrichten besteht aus einem solchen cArray. Die wichtigsten Funktionen sind hier add() und remove(), die in Listing \ref{lst:carray} kurz an einem Beispiel gezeigt werden.
 
 \begin{minipage}{\textwidth}
 \begin{lstlisting}[language=C++,caption={cArray add und remove},label=lst:carray]
@@ -375,14 +375,14 @@ Weiterhin gibt es noch Funktionen wie size(), find() oder clear(), die selbsterk
 
 \subsection{Einleitung}
 
-MiXiM\cite{mixim} ist ein Framework welches die Funkionalität von Omnet++ in erster Linie um mobile und kabellose Knoten erweitert. Es implementiert einige Protokolle und stellt verschiedene Knoten bereit.\\
+MiXiM\cite{mixim} ist ein Framework welches die Funktionalität von Omnet++ in erster Linie um mobile und kabellose Knoten erweitert. Es implementiert einige Protokolle und stellt verschiedene Knoten bereit.\\
 Außerdem fügt es zusätzlich auch nützliche Hilfsfunktionen zu Omnet++ hinzu, wie beispielsweise die FindModule-Klasse.
 
 \subsection{Einige wichtige Module}
 
 \subsubsection{FindModule}
 
-Diese Klasse kann eine Instanz eines Objekts anhand eines Modulnamens finden. Es verhält sich daher wie eine Art Servicemanager. Mann kann mit Hilfe Dieser Submodule, globale Module, Hostmodule und Netzwerke finden. Dazu übergibt man einfach an ein Template wie in Beispiel \ref{lst:findmodule} den gewünschten Modulnamen und kann dann eine der Methoden, wie zum Beispiel findSubModule() aufrufen.
+Diese Klasse kann eine Instanz eines Objekts anhand eines Modulnamens finden. Es verhält sich daher wie eine Art Servicemanager. Mann kann mithilfe Dieser Submodule, globale Module, Hostmodule und Netzwerke finden. Dazu übergibt man einfach an ein Template wie in Beispiel \ref{lst:findmodule} den gewünschten Modulnamen und kann dann eine der Methoden, wie zum Beispiel findSubModule() aufrufen.
 
 \begin{lstlisting}[language=C++, caption={Beispiel FindModule}, label=lst:findmodule]
 //template der FindModule Klasse
@@ -393,7 +393,7 @@ FindModule<BasePhyLayer*>::findSubModule(this)
 
 \subsubsection{Coord}
 
-Coord ist eine einfache Klasse zur Repräsentation von Koordinaten im 3-dimensionalen Raum. Es ist eine elementare Klasse für das MiXiM-Framework, da dieses Mobilität implementiert. Coord beinhaltet zusätzlich zu den 3-D-Koordinaten auch beispielsweise untere und obere Grenzen, Operatoren zum rechnen und vergleichen und weitere Methoden wie zum Beispiel eine Distanzberechnung zwischen Koordinaten.
+Coord ist eine einfache Klasse zur Repräsentation von Koordinaten im 3-dimensionalen Raum. Es ist eine elementare Klasse für das MiXiM-Framework, da dieses Mobilität implementiert. Coord beinhaltet zusätzlich zu den 3-D-Koordinaten auch beispielsweise untere und obere Grenzen, Operatoren zum Rechnen und vergleichen und weitere Methoden wie zum Beispiel eine Distanzberechnung zwischen Koordinaten.
 
 \subsubsection{Mobility}
 
@@ -404,4 +404,4 @@ Wie im vorherigen Abschnitt schon erwähnt ist die Mobilität eine der wichtigst
 \item RectangleMobility
 \item LineSegmentMobilityBase
 \end{itemize}
-Während die ersten 3 Arten sich von selbst erklären, ist dass bei der LineSegmentMobilityBase nicht der Fall. Es ist eine weitere Basisklasse für Bewegungsarten welche aus einer Sequenz verschiedener linearer Bewegungen bestehen. Ein Beispiel ist die sogenannte TurtleMobility. Bei dieser kann ein Skript als XML-File hinterlegt werden, welches die Sequenz beschreibt.
+Während die ersten 3 Arten sich von selbst erklären, ist dass bei der LineSegmentMobilityBase nicht der Fall. Es ist eine weitere Basisklasse für Bewegungsarten, welche aus einer Sequenz verschiedener linearer Bewegungen bestehen. Ein Beispiel ist die sogenannte TurtleMobility. Bei dieser kann ein Skript als XML-File hinterlegt werden, welches die Sequenz beschreibt. 

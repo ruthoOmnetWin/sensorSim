@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.22)  20 MAY 2015 21:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.4.22)  21 MAY 2015 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1456,12 +1456,12 @@ File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
- [21]
+ [21] [22]
 Overfull \hbox (14.02925pt too wide) in alignment at lines 264--264
 [][][] 
  []
 
-[22] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1522,20 +1522,21 @@ File: img/SimpleClasses.png Graphic file (type png)
 <use img/SimpleClasses.png>
 Package pdftex.def Info: img/SimpleClasses.png used on input line 331.
 (pdftex.def)             Requested size: 103.58675pt x 117.43845pt.
- [40 <./img/SimpleClasses.png>]
+ [40]
 Overfull \hbox (8.12608pt too wide) in paragraph at lines 351--352
 \T1/aer/m/n/12 ExtendedMessage erbt di-rekt von der Klas-se cMes-sa-ge, der Sta
 ndard-Nachrichtenklasse
  []
 
-<img/ExtendedMessage.png, id=820, 110.21175pt x 215.3646pt>
+<img/ExtendedMessage.png, id=819, 110.21175pt x 215.3646pt>
 File: img/ExtendedMessage.png Graphic file (type png)
 
 <use img/ExtendedMessage.png>
 Package pdftex.def Info: img/ExtendedMessage.png used on input line 356.
 (pdftex.def)             Requested size: 110.21147pt x 215.36406pt.
- [41 <./img/ExtendedMessage.png>] [42] [43]
-[44] [45] <img/SensorModel.png, id=887, 245.75395pt x 389.39508pt>
+ [41 <./img/SimpleClasses.png>] [42 <./img/ExtendedMessage.png>] [43] [44] [45]
+
+<img/SensorModel.png, id=887, 245.75395pt x 389.39508pt>
 File: img/SensorModel.png Graphic file (type png)
 
 <use img/SensorModel.png>
@@ -1565,14 +1566,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 697--699
 
  []
 
-[54] <img/sensorExampleEvents.png, id=1015, 1048.63411pt x 485.03596pt>
+[54] <img/sensorExampleEvents.png, id=1016, 1048.63411pt x 485.03596pt>
 File: img/sensorExampleEvents.png Graphic file (type png)
 
 <use img/sensorExampleEvents.png>
 Package pdftex.def Info: img/sensorExampleEvents.png used on input line 713.
 (pdftex.def)             Requested size: 431.05931pt x 199.3767pt.
 
-<img/startMeasuring.png, id=1016, 816.90268pt x 382.02425pt>
+<img/startMeasuring.png, id=1017, 816.90268pt x 382.02425pt>
 File: img/startMeasuring.png Graphic file (type png)
 
 <use img/startMeasuring.png>
@@ -1593,15 +1594,14 @@ File: img/sleepVsNoSleepResRel.png Graphic file (type png)
 <use img/sleepVsNoSleepResRel.png>
 Package pdftex.def Info: img/sleepVsNoSleepResRel.png used on input line 770.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
- [57 <./img/sleepVsNoSleepPowerModes.png>]
+ [57 <./img/sleepVsNoSleepPowerModes.png> <./img/sleepVsNoSleepResRel.png>]
 <img/outOfSync.png, id=1042, 738.76pt x 296.307pt>
 File: img/outOfSync.png Graphic file (type png)
  <use img/outOfSync.png>
 Package pdftex.def Info: img/outOfSync.png used on input line 783.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
 )
-(./chapters/zusammenfassung.tex [58 <./img/sleepVsNoSleepResRel.png> <./img/out
-OfSync.png>] [59] [60
+(./chapters/zusammenfassung.tex [58 <./img/outOfSync.png>] [59] [60
 
 
 ]
@@ -1845,11 +1845,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
 Here is how much of TeX's memory you used:
  22822 strings out of 493109
  404844 string characters out of 6140856
- 883070 words of memory out of 5000000
+ 884070 words of memory out of 5000000
  25175 multiletter control sequences out of 15000+600000
  50983 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,18n,99p,967b,1939s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 77i,18n,99p,966b,1939s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -1863,7 +1863,7 @@ fonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 re/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/ur
 w/zapfding/uzdr.pfb>
-Output written on main.pdf (75 pages, 5914420 bytes).
+Output written on main.pdf (75 pages, 5917826 bytes).
 PDF statistics:
  1284 PDF objects out of 1440 (max. 8388607)
  1142 compressed objects within 12 object streams

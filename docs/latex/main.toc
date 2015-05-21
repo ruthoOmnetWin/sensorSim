@@ -90,7 +90,7 @@
 \contentsline {paragraph}{\nonumberline AllNodes}{53}{section*.40}
 \contentsline {paragraph}{\nonumberline TrafficGenExample}{54}{section*.41}
 \contentsline {paragraph}{\nonumberline SensorExample}{54}{section*.42}
-\contentsline {paragraph}{\nonumberline SleepVsNoSleep}{57}{figure.5.9}
+\contentsline {paragraph}{\nonumberline SleepVsNoSleep}{58}{figure.5.9}
 \contentsline {paragraph}{\nonumberline SleepOutOfSync}{58}{figure.5.10}
 \contentsline {chapter}{\numberline {6}Zusammenfassung}{61}{chapter.6}
 \contentsline {chapter}{\nonumberline Literatur- und Webverzeichnis}{63}{chapter*.46}
