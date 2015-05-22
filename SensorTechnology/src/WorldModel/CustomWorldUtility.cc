@@ -129,40 +129,6 @@ void CustomWorldUtility::initialize(int stage)
         if (par("createData")) {
             say("Generating New Environment Data");
             this->generateEnvironmentData(false);
-        } else {
-
-            //if any of the 4 xml files doesn't exists new environment data will be created
-            bool filesExist = true;
-            ifstream ifile(par("xmlTemperature"));
-            if (!ifile) {
-                filesExist = false;
-            }
-            ifile.close();
-            if (filesExist) {
-                ifstream ifile(par("xmlPressure"));
-                if (!ifile) {
-                    filesExist = false;
-                }
-                ifile.close();
-            }
-            if (filesExist) {
-                ifstream ifile(par("xmlHumidity"));
-                if (!ifile) {
-                    filesExist = false;
-                }
-                ifile.close();
-            }
-            if (filesExist) {
-                ifstream ifile(par("xmlLight"));
-                if (!ifile) {
-                    filesExist = false;
-                }
-                ifile.close();
-            }
-            if (!filesExist) {
-                say("Generating New Environment Data due to missing files");
-                this->generateEnvironmentData(false);
-            }
         }
 
         this->setTemperature();
@@ -187,7 +153,7 @@ void CustomWorldUtility::handleMessage(cMessage* msg)
 {
     say("<world>");
     std::string name = msg->getName();
-    if (msg->isSelfMessage() && name == "updateData") {
+    if (msg->isSelfMessage() && name == "updateData" && dataRecreationIntervall) {
         generateEnvironmentData(true);
         simtime_t scheduleTime = simTime() + dataRecreationIntervall;
         scheduleAt(scheduleTime , selfMessageMeasure);

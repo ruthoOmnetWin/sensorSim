@@ -1,47 +1,48 @@
-file 18060 1432047855                                           
+file 6140 1432286092                                            
 version 2
-run General-0-20150519-15:39:42-6944
+run General-0-20150522-11:10:37-3577
 attr configname General
-attr datetime 20150519-15:39:42
+attr datetime 20150522-11:10:37
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network SensorExample
-attr processid 6944
+attr processid 3577
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-vector 3  SensorExample.SensorNode.Processor  "power mode"  ETV
-3	1618 450 0 2444 0 69000 32 0 2 24 40
-vector 4  SensorExample.SensorNode.Processor  "Sensor Modules Status"  ETV
-4	2068 192 0 2131 0 60000 14 0 1 6 6
-vector 5  SensorExample.SensorNode.Processor  Voltage  ETV
-5	2260 2941 0 2469 0 69700 204 3 3 612 1836
-vector 6  SensorExample.SensorNode.Processor  residualRelative  ETV
-6	5201 5933 0 2469 0 69700 204 0.054865740740741 1 105.57359259259 70.897609689086
-vector 7  SensorExample.SensorNode.Processor  residualAbs  ETV
-7	11134 4167 0 2469 0 69700 204 592550 10800000 1140194800 8.269497194135e+15
-vector 8  SensorExample.SensorNode.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-8	15301 330 0 2127 0 60000 21 100 100 2100 210000
-vector 9  SensorExample.SensorNode.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-9	15631 357 0 2444 0 69000 24 0.3 3 50.4 144.72
-vector 10  SensorExample.SensorNode.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-10	15988 128 0 2128 0 60000 8 100 100 800 80000
-vector 11  SensorExample.SensorNode.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-11	16116 381 0 2444 0 69000 24 0.3 3 50.4 144.72
-vector 12  SensorExample.SensorNode.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-12	16497 128 0 2129 0 60000 8 100 100 800 80000
-vector 13  SensorExample.SensorNode.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-13	16625 381 0 2444 0 69000 24 0.3 3 50.4 144.72
-vector 14  SensorExample.SensorNode.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-14	17006 128 0 2130 0 60000 8 100 100 800 80000
-vector 15  SensorExample.SensorNode.TemperatureSensor.Transducer  "Current use over time"  ETV
-15	17134 381 0 2444 0 69000 24 0.3 3 50.4 144.72
-vector 16  SensorExample.SensorNode.Memory  "Energy Consumptions"  ETV
-16	17515 164 0 2410 0 68000 10 100 100 1000 100000
-vector 17  SensorExample.SensorNode.Memory  "Current use over time"  ETV
-17	17679 381 0 2444 0 69000 24 0.3 3 50.4 144.72
+
+vector 3  SensorExample.TNode.Processor  "power mode"  ETV
+vector 4  SensorExample.TNode.Processor  "Sensor Modules Status"  ETV
+vector 5  SensorExample.TNode.Processor  Voltage  ETV
+vector 6  SensorExample.TNode.Processor  residualRelative  ETV
+vector 7  SensorExample.TNode.Processor  residualAbs  ETV
+vector 8  SensorExample.TNode.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 9  SensorExample.TNode.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 10  SensorExample.TNode.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 11  SensorExample.TNode.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 12  SensorExample.TNode.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 13  SensorExample.TNode.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 14  SensorExample.TNode.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 15  SensorExample.TNode.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 16  SensorExample.TNode.Memory  "Energy Consumptions"  ETV
+vector 17  SensorExample.TNode.Memory  "Current use over time"  ETV
+3	1543 124 0 652 0 18000 10 0 2 6 10
+4	1667 72 0 727 0 20000 6 0 1 2 2
+5	1739 784 0 741 0 20400 59 3 3 177 531
+6	2523 1617 0 741 0 20400 59 0.72188425925926 1 50.96812962963 44.502335610811
+7	4140 1157 0 741 0 20400 59 7796350 10800000 550455800 5.190752425645e+15
+8	5297 126 0 723 0 20000 9 100 100 900 90000
+9	5423 93 0 652 0 18000 7 0.3 3 15.6 45.18
+10	5516 56 0 724 0 20000 4 100 100 400 40000
+11	5572 100 0 652 0 18000 7 0.3 3 15.6 45.18
+12	5672 56 0 725 0 20000 4 100 100 400 40000
+13	5728 100 0 652 0 18000 7 0.3 3 15.6 45.18
+14	5828 56 0 726 0 20000 4 100 100 400 40000
+15	5884 100 0 652 0 18000 7 0.3 3 15.6 45.18
+16	5984 56 0 728 0 20000 4 100 100 400 40000
+17	6040 100 0 652 0 18000 7 0.3 3 15.6 45.18

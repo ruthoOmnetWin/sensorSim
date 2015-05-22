@@ -13,20 +13,19 @@ network SleepOutOfSync extends BasicWSN like SensorNetworkInterface
 {
     parameters:
         
-        int numEach;
-		numHosts = numEach * 5;
+        //int numEach;
+		//numHosts = numEach * 2;
+		numHosts = 2;
 
     submodules:
         //two sensors
-        TPNode1[numEach]: SensorNode {
+        TNode1: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
-            hasPressureSensor = true;
         }
-        TPNode2[numEach]: SensorNode {
+        TNode2: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
-            hasPressureSensor = true;
         }
 
     connections allowunconnected:

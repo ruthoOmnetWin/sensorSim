@@ -1,0 +1,116 @@
+version 2
+run General-0-20150522-10:52:50-6162
+attr configname General
+attr datetime 20150522-10:52:50
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network SleepVsNoSleep
+attr processid 6162
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar SleepVsNoSleep.world 	#sent 	0
+scalar SleepVsNoSleep.world 	#received 	0
+statistic SleepVsNoSleep.world 	"hop count"
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr type  int
+bin	-INF	0
+bin	-1	0
+bin	0	0
+bin	1	0
+scalar SleepVsNoSleep.SleepNode.nic.mac 	nbTxFrames 	0
+scalar SleepVsNoSleep.SleepNode.nic.mac 	nbRxFrames 	0
+scalar SleepVsNoSleep.SleepNode.nic.mac 	nbDroppedFrames 	0
+scalar SleepVsNoSleep.SleepNode.nic.mac 	nbMissedAcks 	0
+scalar SleepVsNoSleep.SleepNode.nic.mac 	nbRecvdAcks 	0
+scalar SleepVsNoSleep.SleepNode.nic.mac 	nbTxAcks 	0
+scalar SleepVsNoSleep.SleepNode.nic.mac 	nbDuplicates 	0
+scalar SleepVsNoSleep.SleepNode.nic.mac 	meanBackoff 	0
+scalar SleepVsNoSleep.SleepNode.nic.mac 	nbBackoffs 	0
+scalar SleepVsNoSleep.SleepNode.nic.mac 	backoffDurations 	0
+scalar SleepVsNoSleep.SleepNode.nic.phy 	nbFramesWithInterference 	0
+scalar SleepVsNoSleep.SleepNode.nic.phy 	nbFramesWithoutInterference 	0
+scalar SleepVsNoSleep.SleepNode.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar SleepVsNoSleep.SleepNode.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar SleepVsNoSleep.SleepNode.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar SleepVsNoSleep.SleepNode.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar SleepVsNoSleep.SleepNode.tranl 	nbAggrPktReceived 	0
+scalar SleepVsNoSleep.SleepNode.tranl 	"nbAggrPktSentDown " 	0
+scalar SleepVsNoSleep.SleepNode.appl 	"activity duration" 	-1
+attr unit  s
+scalar SleepVsNoSleep.SleepNode.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar SleepVsNoSleep.SleepNode.appl 	lastPacketReception 	-2
+attr unit  s
+scalar SleepVsNoSleep.SleepNode.appl 	nbPacketsSent 	0
+scalar SleepVsNoSleep.SleepNode.appl 	nbPacketsReceived 	0
+statistic SleepVsNoSleep.SleepNode.appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar SleepVsNoSleep.SleepNode.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar SleepVsNoSleep.SleepNode.batteryStats 	total 	6095368
+attr unit  mW-s
+scalar SleepVsNoSleep.SleepNode.batteryStats 	lifetime 	-1
+attr unit  s
+scalar SleepVsNoSleep.SleepNode.batteryStats 	"Mean power consumption" 	87.126472269869
+attr unit  mW
+scalar SleepVsNoSleep.NoSleepNode.nic.mac 	nbTxFrames 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.mac 	nbRxFrames 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.mac 	nbDroppedFrames 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.mac 	nbMissedAcks 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.mac 	nbRecvdAcks 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.mac 	nbTxAcks 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.mac 	nbDuplicates 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.mac 	meanBackoff 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.mac 	nbBackoffs 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.mac 	backoffDurations 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.phy 	nbFramesWithInterference 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.phy 	nbFramesWithoutInterference 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar SleepVsNoSleep.NoSleepNode.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar SleepVsNoSleep.NoSleepNode.tranl 	nbAggrPktReceived 	0
+scalar SleepVsNoSleep.NoSleepNode.tranl 	"nbAggrPktSentDown " 	0
+scalar SleepVsNoSleep.NoSleepNode.appl 	"activity duration" 	-1
+attr unit  s
+scalar SleepVsNoSleep.NoSleepNode.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar SleepVsNoSleep.NoSleepNode.appl 	lastPacketReception 	-2
+attr unit  s
+scalar SleepVsNoSleep.NoSleepNode.appl 	nbPacketsSent 	0
+scalar SleepVsNoSleep.NoSleepNode.appl 	nbPacketsReceived 	0
+statistic SleepVsNoSleep.NoSleepNode.appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar SleepVsNoSleep.NoSleepNode.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar SleepVsNoSleep.NoSleepNode.batteryStats 	total 	10800000
+attr unit  mW-s
+scalar SleepVsNoSleep.NoSleepNode.batteryStats 	lifetime 	23820
+attr unit  s
+scalar SleepVsNoSleep.NoSleepNode.batteryStats 	"Mean power consumption" 	154.37392795883
+attr unit  mW

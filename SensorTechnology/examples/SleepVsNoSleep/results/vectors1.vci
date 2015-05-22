@@ -1,33 +1,174 @@
-file 35261 1431514266                                           
+file 66742 1432284773                                           
 version 2
-run General-0-20150513-12:19:47-7252
+run General-0-20150522-10:52:50-6162
 attr configname General
-attr datetime 20150513-12:19:47
+attr datetime 20150522-10:52:50
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network SleepVsNoSleep
-attr processid 7252
+attr processid 6162
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-vector 3  SleepVsNoSleep.SleepNode[0].Processor  "power mode"  ETV
-3	914 1180 0 6868 0 119000 80 0 2 60 100
-vector 4  SleepVsNoSleep.SleepNode[0].Processor  Voltage  ETV
-4	2094 4536 0 6868 0 119000 306 3 3 918 2754
-vector 5  SleepVsNoSleep.SleepNode[0].Processor  residualRelative  ETV
-5	6630 9007 0 6868 0 119000 306 0.02825 1 159.93009722222 108.87774539068
-vector 6  SleepVsNoSleep.SleepNode[0].Processor  residualAbs  ETV
-6	15637 6379 0 6868 0 119000 306 305100 10800000 1727245050 1.2699500222369e+16
-vector 10  SleepVsNoSleep.NoSleepNode[0].Processor  "power mode"  ETV
-10	22016 1426 0 1762 0 23000 96 0 2 72 120
-vector 11  SleepVsNoSleep.NoSleepNode[0].Processor  Voltage  ETV
-11	23442 2704 0 1762 0 23000 183 3 3 549 1647
-vector 12  SleepVsNoSleep.NoSleepNode[0].Processor  residualRelative  ETV
-12	26146 5306 0 1762 0 23000 183 0.032805555555556 1 94.443255555556 64.571067183248
-vector 13  SleepVsNoSleep.NoSleepNode[0].Processor  residualAbs  ETV
-13	31452 3809 0 1762 0 23000 183 354300 10800000 1019987160 7.531569276254e+15
+
+vector 3  SleepVsNoSleep.SleepNode.Processor  "power mode"  ETV
+vector 4  SleepVsNoSleep.SleepNode.Processor  "Sensor Modules Status"  ETV
+vector 5  SleepVsNoSleep.SleepNode.Processor  Voltage  ETV
+vector 6  SleepVsNoSleep.SleepNode.Processor  residualRelative  ETV
+vector 7  SleepVsNoSleep.SleepNode.Processor  residualAbs  ETV
+vector 11  SleepVsNoSleep.NoSleepNode.Processor  "power mode"  ETV
+vector 12  SleepVsNoSleep.NoSleepNode.Processor  "Sensor Modules Status"  ETV
+vector 13  SleepVsNoSleep.NoSleepNode.Processor  Voltage  ETV
+vector 14  SleepVsNoSleep.NoSleepNode.Processor  residualRelative  ETV
+vector 15  SleepVsNoSleep.NoSleepNode.Processor  residualAbs  ETV
+vector 17  SleepVsNoSleep.SleepNode.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 18  SleepVsNoSleep.SleepNode.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 19  SleepVsNoSleep.SleepNode.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 20  SleepVsNoSleep.SleepNode.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 21  SleepVsNoSleep.SleepNode.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 22  SleepVsNoSleep.SleepNode.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 23  SleepVsNoSleep.SleepNode.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 24  SleepVsNoSleep.SleepNode.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 25  SleepVsNoSleep.SleepNode.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 26  SleepVsNoSleep.SleepNode.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 27  SleepVsNoSleep.SleepNode.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 28  SleepVsNoSleep.SleepNode.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 29  SleepVsNoSleep.SleepNode.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 30  SleepVsNoSleep.SleepNode.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 31  SleepVsNoSleep.SleepNode.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 32  SleepVsNoSleep.SleepNode.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 33  SleepVsNoSleep.SleepNode.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 34  SleepVsNoSleep.SleepNode.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 35  SleepVsNoSleep.SleepNode.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 36  SleepVsNoSleep.SleepNode.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 37  SleepVsNoSleep.SleepNode.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 38  SleepVsNoSleep.SleepNode.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 39  SleepVsNoSleep.SleepNode.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 40  SleepVsNoSleep.SleepNode.PressureSensor.Transducer  "Current use over time"  ETV
+vector 41  SleepVsNoSleep.SleepNode.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 42  SleepVsNoSleep.SleepNode.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 43  SleepVsNoSleep.SleepNode.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 44  SleepVsNoSleep.SleepNode.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 45  SleepVsNoSleep.SleepNode.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 46  SleepVsNoSleep.SleepNode.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 47  SleepVsNoSleep.SleepNode.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 48  SleepVsNoSleep.SleepNode.LightSensor.Transducer  "Current use over time"  ETV
+vector 49  SleepVsNoSleep.SleepNode.Memory  "Energy Consumptions"  ETV
+vector 50  SleepVsNoSleep.SleepNode.Memory  "Current use over time"  ETV
+vector 52  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 53  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 54  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 55  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 56  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 57  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 58  SleepVsNoSleep.NoSleepNode.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 59  SleepVsNoSleep.NoSleepNode.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 60  SleepVsNoSleep.NoSleepNode.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 61  SleepVsNoSleep.NoSleepNode.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 62  SleepVsNoSleep.NoSleepNode.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 63  SleepVsNoSleep.NoSleepNode.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 64  SleepVsNoSleep.NoSleepNode.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 65  SleepVsNoSleep.NoSleepNode.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 66  SleepVsNoSleep.NoSleepNode.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 67  SleepVsNoSleep.NoSleepNode.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 68  SleepVsNoSleep.NoSleepNode.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 69  SleepVsNoSleep.NoSleepNode.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 70  SleepVsNoSleep.NoSleepNode.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 71  SleepVsNoSleep.NoSleepNode.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 72  SleepVsNoSleep.NoSleepNode.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 73  SleepVsNoSleep.NoSleepNode.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 74  SleepVsNoSleep.NoSleepNode.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 75  SleepVsNoSleep.NoSleepNode.PressureSensor.Transducer  "Current use over time"  ETV
+vector 76  SleepVsNoSleep.NoSleepNode.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 77  SleepVsNoSleep.NoSleepNode.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 78  SleepVsNoSleep.NoSleepNode.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 79  SleepVsNoSleep.NoSleepNode.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 80  SleepVsNoSleep.NoSleepNode.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 81  SleepVsNoSleep.NoSleepNode.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 82  SleepVsNoSleep.NoSleepNode.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 83  SleepVsNoSleep.NoSleepNode.LightSensor.Transducer  "Current use over time"  ETV
+vector 84  SleepVsNoSleep.NoSleepNode.Memory  "Energy Consumptions"  ETV
+vector 85  SleepVsNoSleep.NoSleepNode.Memory  "Current use over time"  ETV
+3	7431 672 0 4057 0 66000 47 0 2 34 56
+4	8103 489 0 3749 0 60000 35 0 1 6 6
+5	8592 2534 0 4057 0 66000 176 3 3 528 1584
+6	11126 5096 0 4057 0 66000 176 0.44232407407407 1 129.07637240741 99.58153601198
+7	16222 3625 0 4057 0 66000 176 4777100 10800000 1394024822 1.1615190360437e+16
+11	19847 1426 0 1763 0 23000 96 0 2 72 120
+12	21273 204 0 1545 0 20000 15 0 1 2 2
+13	21477 2704 0 1763 0 23000 183 3 3 549 1647
+14	24181 5306 0 1763 0 23000 183 0.032805555555556 1 94.443255555556 64.571067183248
+15	29487 3809 0 1763 0 23000 183 354300 10800000 1019987160 7.531569276254e+15
+17	33296 354 0 3729 0 60000 21 100 100 2100 210000
+18	33650 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+19	34211 129 0 3734 0 60000 8 100 100 800 80000
+20	34340 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+21	34901 130 0 3738 0 60000 8 100 100 800 80000
+22	35031 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+23	35592 130 0 3742 0 60000 8 100 100 800 80000
+24	35722 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+25	36283 354 0 3730 0 60000 21 100 100 2100 210000
+26	36637 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+27	37198 129 0 3735 0 60000 8 100 100 800 80000
+28	37327 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+29	37888 130 0 3739 0 60000 8 100 100 800 80000
+30	38018 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+31	38579 130 0 3743 0 60000 8 100 100 800 80000
+32	38709 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+33	39270 354 0 3731 0 60000 21 100 100 2100 210000
+34	39624 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+35	40185 129 0 3736 0 60000 8 100 100 800 80000
+36	40314 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+37	40875 130 0 3740 0 60000 8 100 100 800 80000
+38	41005 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+39	41566 130 0 3744 0 60000 8 100 100 800 80000
+40	41696 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+41	42257 354 0 3732 0 60000 21 100 100 2100 210000
+42	42611 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+43	43172 129 0 3737 0 60000 8 100 100 800 80000
+44	43301 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+45	43862 130 0 3741 0 60000 8 100 100 800 80000
+46	43992 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+47	44553 130 0 3745 0 60000 8 100 100 800 80000
+48	44683 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+49	45244 487 0 3753 0 60000 29 100 100 2900 290000
+50	45731 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+52	46292 138 0 1508 0 20000 9 100 100 900 90000
+53	46430 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+54	47548 57 0 1517 0 20000 4 100 100 400 40000
+55	47605 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+56	48723 58 0 1526 0 20000 4 100 100 400 40000
+57	48781 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+58	49899 58 0 1534 0 20000 4 100 100 400 40000
+59	49957 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+60	51075 138 0 1509 0 20000 9 100 100 900 90000
+61	51213 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+62	52331 57 0 1518 0 20000 4 100 100 400 40000
+63	52388 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+64	53506 58 0 1527 0 20000 4 100 100 400 40000
+65	53564 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+66	54682 58 0 1535 0 20000 4 100 100 400 40000
+67	54740 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+68	55858 138 0 1510 0 20000 9 100 100 900 90000
+69	55996 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+70	57114 57 0 1519 0 20000 4 100 100 400 40000
+71	57171 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+72	58289 58 0 1528 0 20000 4 100 100 400 40000
+73	58347 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+74	59465 58 0 1536 0 20000 4 100 100 400 40000
+75	59523 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+76	60641 138 0 1511 0 20000 9 100 100 900 90000
+77	60779 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+78	61897 58 0 1520 0 20000 4 100 100 400 40000
+79	61955 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+80	63073 58 0 1529 0 20000 4 100 100 400 40000
+81	63131 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+82	64249 58 0 1537 0 20000 4 100 100 400 40000
+83	64307 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+84	65425 199 0 1553 0 20000 13 100 100 1300 130000
+85	65624 1118 0 1763 0 23000 72 0.3 3 151.2 434.16

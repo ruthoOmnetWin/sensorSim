@@ -1,0 +1,116 @@
+version 2
+run General-0-20150522-10:52:18-6070
+attr configname General
+attr datetime 20150522-10:52:18
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network SleepOutOfSync
+attr processid 6070
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar SleepOutOfSync.world 	#sent 	0
+scalar SleepOutOfSync.world 	#received 	0
+statistic SleepOutOfSync.world 	"hop count"
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr type  int
+bin	-INF	0
+bin	-1	0
+bin	0	0
+bin	1	0
+scalar SleepOutOfSync.TNode1.nic.mac 	nbTxFrames 	0
+scalar SleepOutOfSync.TNode1.nic.mac 	nbRxFrames 	0
+scalar SleepOutOfSync.TNode1.nic.mac 	nbDroppedFrames 	0
+scalar SleepOutOfSync.TNode1.nic.mac 	nbMissedAcks 	0
+scalar SleepOutOfSync.TNode1.nic.mac 	nbRecvdAcks 	0
+scalar SleepOutOfSync.TNode1.nic.mac 	nbTxAcks 	0
+scalar SleepOutOfSync.TNode1.nic.mac 	nbDuplicates 	0
+scalar SleepOutOfSync.TNode1.nic.mac 	meanBackoff 	0
+scalar SleepOutOfSync.TNode1.nic.mac 	nbBackoffs 	0
+scalar SleepOutOfSync.TNode1.nic.mac 	backoffDurations 	0
+scalar SleepOutOfSync.TNode1.nic.phy 	nbFramesWithInterference 	0
+scalar SleepOutOfSync.TNode1.nic.phy 	nbFramesWithoutInterference 	0
+scalar SleepOutOfSync.TNode1.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar SleepOutOfSync.TNode1.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar SleepOutOfSync.TNode1.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar SleepOutOfSync.TNode1.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar SleepOutOfSync.TNode1.tranl 	nbAggrPktReceived 	0
+scalar SleepOutOfSync.TNode1.tranl 	"nbAggrPktSentDown " 	0
+scalar SleepOutOfSync.TNode1.appl 	"activity duration" 	-1
+attr unit  s
+scalar SleepOutOfSync.TNode1.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar SleepOutOfSync.TNode1.appl 	lastPacketReception 	-2
+attr unit  s
+scalar SleepOutOfSync.TNode1.appl 	nbPacketsSent 	0
+scalar SleepOutOfSync.TNode1.appl 	nbPacketsReceived 	0
+statistic SleepOutOfSync.TNode1.appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar SleepOutOfSync.TNode1.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar SleepOutOfSync.TNode1.batteryStats 	total 	2245150
+attr unit  mW-s
+scalar SleepOutOfSync.TNode1.batteryStats 	lifetime 	-1
+attr unit  s
+scalar SleepOutOfSync.TNode1.batteryStats 	"Mean power consumption" 	32.091909662664
+attr unit  mW
+scalar SleepOutOfSync.TNode2.nic.mac 	nbTxFrames 	0
+scalar SleepOutOfSync.TNode2.nic.mac 	nbRxFrames 	0
+scalar SleepOutOfSync.TNode2.nic.mac 	nbDroppedFrames 	0
+scalar SleepOutOfSync.TNode2.nic.mac 	nbMissedAcks 	0
+scalar SleepOutOfSync.TNode2.nic.mac 	nbRecvdAcks 	0
+scalar SleepOutOfSync.TNode2.nic.mac 	nbTxAcks 	0
+scalar SleepOutOfSync.TNode2.nic.mac 	nbDuplicates 	0
+scalar SleepOutOfSync.TNode2.nic.mac 	meanBackoff 	0
+scalar SleepOutOfSync.TNode2.nic.mac 	nbBackoffs 	0
+scalar SleepOutOfSync.TNode2.nic.mac 	backoffDurations 	0
+scalar SleepOutOfSync.TNode2.nic.phy 	nbFramesWithInterference 	0
+scalar SleepOutOfSync.TNode2.nic.phy 	nbFramesWithoutInterference 	0
+scalar SleepOutOfSync.TNode2.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar SleepOutOfSync.TNode2.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar SleepOutOfSync.TNode2.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar SleepOutOfSync.TNode2.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar SleepOutOfSync.TNode2.tranl 	nbAggrPktReceived 	0
+scalar SleepOutOfSync.TNode2.tranl 	"nbAggrPktSentDown " 	0
+scalar SleepOutOfSync.TNode2.appl 	"activity duration" 	-1
+attr unit  s
+scalar SleepOutOfSync.TNode2.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar SleepOutOfSync.TNode2.appl 	lastPacketReception 	-2
+attr unit  s
+scalar SleepOutOfSync.TNode2.appl 	nbPacketsSent 	0
+scalar SleepOutOfSync.TNode2.appl 	nbPacketsReceived 	0
+statistic SleepOutOfSync.TNode2.appl 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar SleepOutOfSync.TNode2.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar SleepOutOfSync.TNode2.batteryStats 	total 	2245150
+attr unit  mW-s
+scalar SleepOutOfSync.TNode2.batteryStats 	lifetime 	-1
+attr unit  s
+scalar SleepOutOfSync.TNode2.batteryStats 	"Mean power consumption" 	32.091909662664
+attr unit  mW

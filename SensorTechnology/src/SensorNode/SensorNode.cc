@@ -22,8 +22,6 @@
 void SensorNode::initialize(int stage) {
     if (stage == 0) {
 
-        setName("SensorNode");
-
         //generate Processor dynamically
         createProcessor();
         //connect Memory with Processor
