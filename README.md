@@ -1,7 +1,9 @@
 # sensorSim
 
 > author: Thomas Rückert, TU Chemnitz (Informatik)
+
 > e-mail: thomas.rueckert@s2010.tu-chemnitz.de
+
 > informations about the Sensorsimulation can be found inside SensorTechnology/README.md
 
 ## the main implementations can be found inside SensorTechnology/
