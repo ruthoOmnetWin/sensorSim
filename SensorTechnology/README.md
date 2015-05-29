@@ -9,17 +9,17 @@
 * you will need to import the MiXiM Framework inside your project
 * import the SensorTechnology project inside your project
 * create the following files inside your project
-* * config.xml - Options for MiXiM
-** omnetpp.ini - set Parameters for the Simulation
-*** you can also set the values inside the ned-files
-** create an folder data/ with the following files inside
-** alternatively you can just start the simulation and the world model will create these files itself, but the simulation will need to be restarted before you can use it (it will throw an runtimeException)
-** the files to be created:
-*** humidity.xml
-*** light.xml
-*** pressure.xml
-*** temperature.xml
-*** initialise these files with the following content: 
+ * config.xml - Options for MiXiM
+ * omnetpp.ini - set Parameters for the Simulation
+  * you can also set the values inside the ned-files
+ * create an folder data/ with the following files inside
+ * alternatively you can just start the simulation and the world model will create these files itself, but the simulation will need to be restarted before you can use it (it will throw an runtimeException)
+ * the files to be created:
+  * humidity.xml
+  * light.xml
+  * pressure.xml
+  * temperature.xml
+  * initialise these files with the following content: 
 
 <?xml version="1.0" encoding="UTF-8"?>
 <type>
@@ -40,14 +40,14 @@ for example:
 * let your network inherit from it and the most initialisation is done
 
 * left to do:
-** set numHosts to the amount of sensor nodes
-** create as many sensor nodes as you want
-** set numHosts for each of the sensor modules (needed by MiXiMs wireless communication)
+ * set numHosts to the amount of sensor nodes
+ * create as many sensor nodes as you want
+ * set numHosts for each of the sensor modules (needed by MiXiMs wireless communication)
 * if you to define the sensors use the following booleans: (default is false)
-** hasTemperatureSensor
-** hasPressureSensor
-** hasHumiditySensor
-** hasLightSensor
+ * hasTemperatureSensor
+ * hasPressureSensor
+ * hasHumiditySensor
+ * hasLightSensor
 * allow unconnected connections, so that the MiXiM radioIn can be used
 
 ### relevant parameters
