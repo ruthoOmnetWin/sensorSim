@@ -1,145 +1,754 @@
-file 442290 1431514266                                          
+file 709715 1432286460                                          
 version 2
-run General-0-20150513-11:38:23-5455
+run General-0-20150522-11:20:14-3805
 attr configname General
-attr datetime 20150513-11:38:23
+attr datetime 20150522-11:20:14
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network AllNodes
-attr processid 5455
+attr processid 3805
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
+
 vector 3  AllNodes.SensorNode[0].Processor  "power mode"  ETV
-3	4136 2024 0 172581 0 377000 118 0 2 87 145
-vector 4  AllNodes.SensorNode[0].Processor  Voltage  ETV
-4	6160 6906 0 172581 0 377000 400 3 3 1200 3600
-vector 5  AllNodes.SensorNode[0].Processor  residualRelative  ETV
-5	13066 12778 0 172581 0 377000 400 0.014467592592593 1 201.57903074074 133.91442997283
-vector 6  AllNodes.SensorNode[0].Processor  residualAbs  ETV
-6	25844 9305 0 172581 0 377000 400 156250 10800000 2177053532 1.5619779112031e+16
-vector 10  AllNodes.TNode[0].Processor  "power mode"  ETV
-10	35149 1534 0 143023 0 273000 86 0 2 63 105
-vector 11  AllNodes.TNode[0].Processor  Voltage  ETV
-11	36683 7169 0 143023 0 273000 399 3 3 1197 3591
-vector 12  AllNodes.TNode[0].Processor  residualRelative  ETV
-12	43852 12982 0 143023 0 273000 399 0.0037037037037037 1 197.99215740741 131.25783175797
-vector 13  AllNodes.TNode[0].Processor  residualAbs  ETV
-13	56834 9546 0 143023 0 273000 399 40000 10800000 2138315300 1.530991349625e+16
-vector 17  AllNodes.PNode[0].Processor  "power mode"  ETV
-17	66380 1534 0 143024 0 273000 86 0 2 63 105
-vector 18  AllNodes.PNode[0].Processor  Voltage  ETV
-18	67914 7169 0 143024 0 273000 399 3 3 1197 3591
-vector 19  AllNodes.PNode[0].Processor  residualRelative  ETV
-19	75083 12982 0 143024 0 273000 399 0.0037037037037037 1 197.99215740741 131.25783175797
-vector 20  AllNodes.PNode[0].Processor  residualAbs  ETV
-20	88065 9546 0 143024 0 273000 399 40000 10800000 2138315300 1.530991349625e+16
-vector 24  AllNodes.HNode[0].Processor  "power mode"  ETV
-24	97611 1534 0 143025 0 273000 86 0 2 63 105
-vector 25  AllNodes.HNode[0].Processor  Voltage  ETV
-25	99145 7169 0 143025 0 273000 399 3 3 1197 3591
-vector 26  AllNodes.HNode[0].Processor  residualRelative  ETV
-26	106314 12982 0 143025 0 273000 399 0.0037037037037037 1 197.99215740741 131.25783175797
-vector 27  AllNodes.HNode[0].Processor  residualAbs  ETV
-27	119296 9546 0 143025 0 273000 399 40000 10800000 2138315300 1.530991349625e+16
-vector 31  AllNodes.LNode[0].Processor  "power mode"  ETV
-31	128842 1534 0 143026 0 273000 86 0 2 63 105
-vector 32  AllNodes.LNode[0].Processor  Voltage  ETV
-32	130376 7171 0 143026 0 273000 399 3 3 1197 3591
-vector 33  AllNodes.LNode[0].Processor  residualRelative  ETV
-33	137547 12984 0 143026 0 273000 399 0.0037037037037037 1 197.99215740741 131.25783175797
-vector 34  AllNodes.LNode[0].Processor  residualAbs  ETV
-34	150531 9548 0 143026 0 273000 399 40000 10800000 2138315300 1.530991349625e+16
-vector 38  AllNodes.TPNode[0].Processor  "power mode"  ETV
-38	160079 1154 0 119666 0 208000 66 0 2 48 80
-vector 39  AllNodes.TPNode[0].Processor  Voltage  ETV
-39	161233 6174 0 120647 0 210000 350 3 3 1050 3150
-vector 40  AllNodes.TPNode[0].Processor  residualRelative  ETV
-40	167407 11161 0 120647 0 210000 350 0 1 175.33891259259 116.38706556189
-vector 41  AllNodes.TPNode[0].Processor  residualAbs  ETV
-41	178568 8241 0 120647 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
-vector 45  AllNodes.THNode[0].Processor  "power mode"  ETV
-45	186809 1154 0 119667 0 208000 66 0 2 48 80
-vector 46  AllNodes.THNode[0].Processor  Voltage  ETV
-46	187963 6174 0 120649 0 210000 350 3 3 1050 3150
-vector 47  AllNodes.THNode[0].Processor  residualRelative  ETV
-47	194137 11161 0 120649 0 210000 350 0 1 175.33891259259 116.38706556189
-vector 48  AllNodes.THNode[0].Processor  residualAbs  ETV
-48	205298 8241 0 120649 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
-vector 52  AllNodes.TLNode[0].Processor  "power mode"  ETV
-52	213539 1154 0 119668 0 208000 66 0 2 48 80
-vector 53  AllNodes.TLNode[0].Processor  Voltage  ETV
-53	214693 6174 0 120651 0 210000 350 3 3 1050 3150
-vector 54  AllNodes.TLNode[0].Processor  residualRelative  ETV
-54	220867 11161 0 120651 0 210000 350 0 1 175.33891259259 116.38706556189
-vector 55  AllNodes.TLNode[0].Processor  residualAbs  ETV
-55	232028 8241 0 120651 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
-vector 59  AllNodes.PHNode[0].Processor  "power mode"  ETV
-59	240269 1154 0 119669 0 208000 66 0 2 48 80
-vector 60  AllNodes.PHNode[0].Processor  Voltage  ETV
-60	241423 6174 0 120653 0 210000 350 3 3 1050 3150
-vector 61  AllNodes.PHNode[0].Processor  residualRelative  ETV
-61	247597 11161 0 120653 0 210000 350 0 1 175.33891259259 116.38706556189
-vector 62  AllNodes.PHNode[0].Processor  residualAbs  ETV
-62	258758 8241 0 120653 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
-vector 66  AllNodes.PLNode[0].Processor  "power mode"  ETV
-66	266999 1154 0 119670 0 208000 66 0 2 48 80
-vector 67  AllNodes.PLNode[0].Processor  Voltage  ETV
-67	268153 6174 0 120655 0 210000 350 3 3 1050 3150
-vector 68  AllNodes.PLNode[0].Processor  residualRelative  ETV
-68	274327 11161 0 120655 0 210000 350 0 1 175.33891259259 116.38706556189
-vector 69  AllNodes.PLNode[0].Processor  residualAbs  ETV
-69	285488 8241 0 120655 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
-vector 73  AllNodes.HLNode[0].Processor  "power mode"  ETV
-73	293729 1154 0 119671 0 208000 66 0 2 48 80
-vector 74  AllNodes.HLNode[0].Processor  Voltage  ETV
-74	294883 6174 0 120657 0 210000 350 3 3 1050 3150
-vector 75  AllNodes.HLNode[0].Processor  residualRelative  ETV
-75	301057 11161 0 120657 0 210000 350 0 1 175.33891259259 116.38706556189
-vector 76  AllNodes.HLNode[0].Processor  residualAbs  ETV
-76	312218 8241 0 120657 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
-vector 80  AllNodes.PHLNode[0].Processor  "power mode"  ETV
-80	320459 926 0 101287 0 169000 54 0 2 39 65
-vector 81  AllNodes.PHLNode[0].Processor  Voltage  ETV
-81	321385 5595 0 101977 0 170000 323 3 3 969 2907
-vector 82  AllNodes.PHLNode[0].Processor  residualRelative  ETV
-82	326980 10352 0 101977 0 170000 323 0.017291666666667 1 161.19874518519 107.1388317093
-vector 83  AllNodes.PHLNode[0].Processor  residualAbs  ETV
-83	337332 7527 0 101977 0 170000 323 186750 10800000 1740946448 1.2496673330572e+16
-vector 87  AllNodes.THLNode[0].Processor  "power mode"  ETV
-87	344859 926 0 101288 0 169000 54 0 2 39 65
-vector 88  AllNodes.THLNode[0].Processor  Voltage  ETV
-88	345785 5595 0 101980 0 170000 323 3 3 969 2907
-vector 89  AllNodes.THLNode[0].Processor  residualRelative  ETV
-89	351380 10352 0 101980 0 170000 323 0.017291666666667 1 161.19874518519 107.1388317093
-vector 90  AllNodes.THLNode[0].Processor  residualAbs  ETV
-90	361732 7527 0 101980 0 170000 323 186750 10800000 1740946448 1.2496673330572e+16
-vector 94  AllNodes.TPLNode[0].Processor  "power mode"  ETV
-94	369259 926 0 101289 0 169000 54 0 2 39 65
-vector 95  AllNodes.TPLNode[0].Processor  Voltage  ETV
-95	370185 5595 0 101983 0 170000 323 3 3 969 2907
-vector 96  AllNodes.TPLNode[0].Processor  residualRelative  ETV
-96	375780 10352 0 101983 0 170000 323 0.017291666666667 1 161.19874518519 107.1388317093
-vector 97  AllNodes.TPLNode[0].Processor  residualAbs  ETV
-97	386132 7527 0 101983 0 170000 323 186750 10800000 1740946448 1.2496673330572e+16
-vector 101  AllNodes.TPHNode[0].Processor  "power mode"  ETV
-101	393659 980 0 101290 0 169000 54 0 2 39 65
-vector 102  AllNodes.TPHNode[0].Processor  Voltage  ETV
-102	394639 5918 0 101986 0 170000 323 3 3 969 2907
-vector 103  AllNodes.TPHNode[0].Processor  residualRelative  ETV
-103	400557 10675 0 101986 0 170000 323 0.017291666666667 1 161.19874518519 107.1388317093
-vector 104  AllNodes.TPHNode[0].Processor  residualAbs  ETV
-104	411232 7850 0 101986 0 170000 323 186750 10800000 1740946448 1.2496673330572e+16
-vector 108  AllNodes.TPHLNode[0].Processor  "power mode"  ETV
-108	419082 825 0 87308 0 143000 46 0 2 33 55
-vector 109  AllNodes.TPHLNode[0].Processor  Voltage  ETV
-109	419907 5415 0 87308 0 143000 299 3 3 897 2691
-vector 110  AllNodes.TPHLNode[0].Processor  residualRelative  ETV
-110	425322 9752 0 87308 0 143000 299 0.034546296296296 1 151.73982074074 100.94646496108
-vector 111  AllNodes.TPHLNode[0].Processor  residualAbs  ETV
-111	435074 7216 0 87308 0 143000 299 373100 10800000 1638790064 1.1774395673061e+16
+vector 4  AllNodes.SensorNode[0].Processor  "Sensor Modules Status"  ETV
+vector 5  AllNodes.SensorNode[0].Processor  Voltage  ETV
+vector 6  AllNodes.SensorNode[0].Processor  residualRelative  ETV
+vector 7  AllNodes.SensorNode[0].Processor  residualAbs  ETV
+vector 11  AllNodes.TNode[0].Processor  "power mode"  ETV
+vector 12  AllNodes.TNode[0].Processor  "Sensor Modules Status"  ETV
+vector 13  AllNodes.TNode[0].Processor  Voltage  ETV
+vector 14  AllNodes.TNode[0].Processor  residualRelative  ETV
+vector 15  AllNodes.TNode[0].Processor  residualAbs  ETV
+vector 19  AllNodes.PNode[0].Processor  "power mode"  ETV
+vector 20  AllNodes.PNode[0].Processor  "Sensor Modules Status"  ETV
+vector 21  AllNodes.PNode[0].Processor  Voltage  ETV
+vector 22  AllNodes.PNode[0].Processor  residualRelative  ETV
+vector 23  AllNodes.PNode[0].Processor  residualAbs  ETV
+vector 27  AllNodes.HNode[0].Processor  "power mode"  ETV
+vector 28  AllNodes.HNode[0].Processor  "Sensor Modules Status"  ETV
+vector 29  AllNodes.HNode[0].Processor  Voltage  ETV
+vector 30  AllNodes.HNode[0].Processor  residualRelative  ETV
+vector 31  AllNodes.HNode[0].Processor  residualAbs  ETV
+vector 35  AllNodes.LNode[0].Processor  "power mode"  ETV
+vector 36  AllNodes.LNode[0].Processor  "Sensor Modules Status"  ETV
+vector 37  AllNodes.LNode[0].Processor  Voltage  ETV
+vector 38  AllNodes.LNode[0].Processor  residualRelative  ETV
+vector 39  AllNodes.LNode[0].Processor  residualAbs  ETV
+vector 43  AllNodes.TPNode[0].Processor  "power mode"  ETV
+vector 44  AllNodes.TPNode[0].Processor  "Sensor Modules Status"  ETV
+vector 45  AllNodes.TPNode[0].Processor  Voltage  ETV
+vector 46  AllNodes.TPNode[0].Processor  residualRelative  ETV
+vector 47  AllNodes.TPNode[0].Processor  residualAbs  ETV
+vector 51  AllNodes.THNode[0].Processor  "power mode"  ETV
+vector 52  AllNodes.THNode[0].Processor  "Sensor Modules Status"  ETV
+vector 53  AllNodes.THNode[0].Processor  Voltage  ETV
+vector 54  AllNodes.THNode[0].Processor  residualRelative  ETV
+vector 55  AllNodes.THNode[0].Processor  residualAbs  ETV
+vector 59  AllNodes.TLNode[0].Processor  "power mode"  ETV
+vector 60  AllNodes.TLNode[0].Processor  "Sensor Modules Status"  ETV
+vector 61  AllNodes.TLNode[0].Processor  Voltage  ETV
+vector 62  AllNodes.TLNode[0].Processor  residualRelative  ETV
+vector 63  AllNodes.TLNode[0].Processor  residualAbs  ETV
+vector 67  AllNodes.PHNode[0].Processor  "power mode"  ETV
+vector 68  AllNodes.PHNode[0].Processor  "Sensor Modules Status"  ETV
+vector 69  AllNodes.PHNode[0].Processor  Voltage  ETV
+vector 70  AllNodes.PHNode[0].Processor  residualRelative  ETV
+vector 71  AllNodes.PHNode[0].Processor  residualAbs  ETV
+vector 75  AllNodes.PLNode[0].Processor  "power mode"  ETV
+vector 76  AllNodes.PLNode[0].Processor  "Sensor Modules Status"  ETV
+vector 77  AllNodes.PLNode[0].Processor  Voltage  ETV
+vector 78  AllNodes.PLNode[0].Processor  residualRelative  ETV
+vector 79  AllNodes.PLNode[0].Processor  residualAbs  ETV
+vector 83  AllNodes.HLNode[0].Processor  "power mode"  ETV
+vector 84  AllNodes.HLNode[0].Processor  "Sensor Modules Status"  ETV
+vector 85  AllNodes.HLNode[0].Processor  Voltage  ETV
+vector 86  AllNodes.HLNode[0].Processor  residualRelative  ETV
+vector 87  AllNodes.HLNode[0].Processor  residualAbs  ETV
+vector 91  AllNodes.PHLNode[0].Processor  "power mode"  ETV
+vector 92  AllNodes.PHLNode[0].Processor  "Sensor Modules Status"  ETV
+vector 93  AllNodes.PHLNode[0].Processor  Voltage  ETV
+vector 94  AllNodes.PHLNode[0].Processor  residualRelative  ETV
+vector 95  AllNodes.PHLNode[0].Processor  residualAbs  ETV
+vector 99  AllNodes.THLNode[0].Processor  "power mode"  ETV
+vector 100  AllNodes.THLNode[0].Processor  "Sensor Modules Status"  ETV
+vector 101  AllNodes.THLNode[0].Processor  Voltage  ETV
+vector 102  AllNodes.THLNode[0].Processor  residualRelative  ETV
+vector 103  AllNodes.THLNode[0].Processor  residualAbs  ETV
+vector 107  AllNodes.TPLNode[0].Processor  "power mode"  ETV
+vector 108  AllNodes.TPLNode[0].Processor  "Sensor Modules Status"  ETV
+vector 109  AllNodes.TPLNode[0].Processor  Voltage  ETV
+vector 110  AllNodes.TPLNode[0].Processor  residualRelative  ETV
+vector 111  AllNodes.TPLNode[0].Processor  residualAbs  ETV
+vector 115  AllNodes.TPHNode[0].Processor  "power mode"  ETV
+vector 116  AllNodes.TPHNode[0].Processor  "Sensor Modules Status"  ETV
+vector 117  AllNodes.TPHNode[0].Processor  Voltage  ETV
+vector 118  AllNodes.TPHNode[0].Processor  residualRelative  ETV
+vector 119  AllNodes.TPHNode[0].Processor  residualAbs  ETV
+vector 123  AllNodes.TPHLNode[0].Processor  "power mode"  ETV
+vector 124  AllNodes.TPHLNode[0].Processor  "Sensor Modules Status"  ETV
+vector 125  AllNodes.TPHLNode[0].Processor  Voltage  ETV
+vector 126  AllNodes.TPHLNode[0].Processor  residualRelative  ETV
+vector 127  AllNodes.TPHLNode[0].Processor  residualAbs  ETV
+vector 128  AllNodes.SensorNode[0].Memory  "Energy Consumptions"  ETV
+vector 129  AllNodes.SensorNode[0].Memory  "Current use over time"  ETV
+vector 130  AllNodes.TNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 131  AllNodes.TNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 132  AllNodes.TNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 133  AllNodes.TNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 134  AllNodes.TNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 135  AllNodes.TNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 136  AllNodes.TNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 137  AllNodes.TNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 138  AllNodes.TNode[0].Memory  "Energy Consumptions"  ETV
+vector 139  AllNodes.TNode[0].Memory  "Current use over time"  ETV
+vector 140  AllNodes.PNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 141  AllNodes.PNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 142  AllNodes.PNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 143  AllNodes.PNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 144  AllNodes.PNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 145  AllNodes.PNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 146  AllNodes.PNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 147  AllNodes.PNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 148  AllNodes.PNode[0].Memory  "Energy Consumptions"  ETV
+vector 149  AllNodes.PNode[0].Memory  "Current use over time"  ETV
+vector 150  AllNodes.HNode[0].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 151  AllNodes.HNode[0].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 152  AllNodes.HNode[0].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 153  AllNodes.HNode[0].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 154  AllNodes.HNode[0].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 155  AllNodes.HNode[0].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 156  AllNodes.HNode[0].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 157  AllNodes.HNode[0].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 158  AllNodes.HNode[0].Memory  "Energy Consumptions"  ETV
+vector 159  AllNodes.HNode[0].Memory  "Current use over time"  ETV
+vector 160  AllNodes.LNode[0].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 161  AllNodes.LNode[0].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 162  AllNodes.LNode[0].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 163  AllNodes.LNode[0].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 164  AllNodes.LNode[0].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 165  AllNodes.LNode[0].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 166  AllNodes.LNode[0].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 167  AllNodes.LNode[0].LightSensor.Transducer  "Current use over time"  ETV
+vector 168  AllNodes.LNode[0].Memory  "Energy Consumptions"  ETV
+vector 169  AllNodes.LNode[0].Memory  "Current use over time"  ETV
+vector 170  AllNodes.TPNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 171  AllNodes.TPNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 172  AllNodes.TPNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 173  AllNodes.TPNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 174  AllNodes.TPNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 175  AllNodes.TPNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 176  AllNodes.TPNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 177  AllNodes.TPNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 178  AllNodes.TPNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 179  AllNodes.TPNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 180  AllNodes.TPNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 181  AllNodes.TPNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 182  AllNodes.TPNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 183  AllNodes.TPNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 184  AllNodes.TPNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 185  AllNodes.TPNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 186  AllNodes.TPNode[0].Memory  "Energy Consumptions"  ETV
+vector 187  AllNodes.TPNode[0].Memory  "Current use over time"  ETV
+vector 188  AllNodes.THNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 189  AllNodes.THNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 190  AllNodes.THNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 191  AllNodes.THNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 192  AllNodes.THNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 193  AllNodes.THNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 194  AllNodes.THNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 195  AllNodes.THNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 196  AllNodes.THNode[0].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 197  AllNodes.THNode[0].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 198  AllNodes.THNode[0].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 199  AllNodes.THNode[0].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 200  AllNodes.THNode[0].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 201  AllNodes.THNode[0].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 202  AllNodes.THNode[0].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 203  AllNodes.THNode[0].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 204  AllNodes.THNode[0].Memory  "Energy Consumptions"  ETV
+vector 205  AllNodes.THNode[0].Memory  "Current use over time"  ETV
+vector 206  AllNodes.TLNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 207  AllNodes.TLNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 208  AllNodes.TLNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 209  AllNodes.TLNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 210  AllNodes.TLNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 211  AllNodes.TLNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 212  AllNodes.TLNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 213  AllNodes.TLNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 214  AllNodes.TLNode[0].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 215  AllNodes.TLNode[0].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 216  AllNodes.TLNode[0].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 217  AllNodes.TLNode[0].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 218  AllNodes.TLNode[0].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 219  AllNodes.TLNode[0].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 220  AllNodes.TLNode[0].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 221  AllNodes.TLNode[0].LightSensor.Transducer  "Current use over time"  ETV
+vector 222  AllNodes.TLNode[0].Memory  "Energy Consumptions"  ETV
+vector 223  AllNodes.TLNode[0].Memory  "Current use over time"  ETV
+vector 224  AllNodes.PHNode[0].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 225  AllNodes.PHNode[0].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 226  AllNodes.PHNode[0].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 227  AllNodes.PHNode[0].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 228  AllNodes.PHNode[0].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 229  AllNodes.PHNode[0].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 230  AllNodes.PHNode[0].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 231  AllNodes.PHNode[0].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 232  AllNodes.PHNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 233  AllNodes.PHNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 234  AllNodes.PHNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 235  AllNodes.PHNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 236  AllNodes.PHNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 237  AllNodes.PHNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 238  AllNodes.PHNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 239  AllNodes.PHNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 240  AllNodes.PHNode[0].Memory  "Energy Consumptions"  ETV
+vector 241  AllNodes.PHNode[0].Memory  "Current use over time"  ETV
+vector 242  AllNodes.PLNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 243  AllNodes.PLNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 244  AllNodes.PLNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 245  AllNodes.PLNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 246  AllNodes.PLNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 247  AllNodes.PLNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 248  AllNodes.PLNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 249  AllNodes.PLNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 250  AllNodes.PLNode[0].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 251  AllNodes.PLNode[0].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 252  AllNodes.PLNode[0].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 253  AllNodes.PLNode[0].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 254  AllNodes.PLNode[0].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 255  AllNodes.PLNode[0].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 256  AllNodes.PLNode[0].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 257  AllNodes.PLNode[0].LightSensor.Transducer  "Current use over time"  ETV
+vector 258  AllNodes.PLNode[0].Memory  "Energy Consumptions"  ETV
+vector 259  AllNodes.PLNode[0].Memory  "Current use over time"  ETV
+vector 260  AllNodes.HLNode[0].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 261  AllNodes.HLNode[0].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 262  AllNodes.HLNode[0].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 263  AllNodes.HLNode[0].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 264  AllNodes.HLNode[0].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 265  AllNodes.HLNode[0].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 266  AllNodes.HLNode[0].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 267  AllNodes.HLNode[0].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 268  AllNodes.HLNode[0].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 269  AllNodes.HLNode[0].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 270  AllNodes.HLNode[0].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 271  AllNodes.HLNode[0].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 272  AllNodes.HLNode[0].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 273  AllNodes.HLNode[0].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 274  AllNodes.HLNode[0].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 275  AllNodes.HLNode[0].LightSensor.Transducer  "Current use over time"  ETV
+vector 276  AllNodes.HLNode[0].Memory  "Energy Consumptions"  ETV
+vector 277  AllNodes.HLNode[0].Memory  "Current use over time"  ETV
+vector 278  AllNodes.PHLNode[0].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 279  AllNodes.PHLNode[0].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 280  AllNodes.PHLNode[0].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 281  AllNodes.PHLNode[0].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 282  AllNodes.PHLNode[0].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 283  AllNodes.PHLNode[0].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 284  AllNodes.PHLNode[0].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 285  AllNodes.PHLNode[0].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 286  AllNodes.PHLNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 287  AllNodes.PHLNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 288  AllNodes.PHLNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 289  AllNodes.PHLNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 290  AllNodes.PHLNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 291  AllNodes.PHLNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 292  AllNodes.PHLNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 293  AllNodes.PHLNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 294  AllNodes.PHLNode[0].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 295  AllNodes.PHLNode[0].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 296  AllNodes.PHLNode[0].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 297  AllNodes.PHLNode[0].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 298  AllNodes.PHLNode[0].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 299  AllNodes.PHLNode[0].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 300  AllNodes.PHLNode[0].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 301  AllNodes.PHLNode[0].LightSensor.Transducer  "Current use over time"  ETV
+vector 302  AllNodes.PHLNode[0].Memory  "Energy Consumptions"  ETV
+vector 303  AllNodes.PHLNode[0].Memory  "Current use over time"  ETV
+vector 304  AllNodes.THLNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 305  AllNodes.THLNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 306  AllNodes.THLNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 307  AllNodes.THLNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 308  AllNodes.THLNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 309  AllNodes.THLNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 310  AllNodes.THLNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 311  AllNodes.THLNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 312  AllNodes.THLNode[0].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 313  AllNodes.THLNode[0].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 314  AllNodes.THLNode[0].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 315  AllNodes.THLNode[0].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 316  AllNodes.THLNode[0].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 317  AllNodes.THLNode[0].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 318  AllNodes.THLNode[0].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 319  AllNodes.THLNode[0].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 320  AllNodes.THLNode[0].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 321  AllNodes.THLNode[0].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 322  AllNodes.THLNode[0].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 323  AllNodes.THLNode[0].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 324  AllNodes.THLNode[0].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 325  AllNodes.THLNode[0].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 326  AllNodes.THLNode[0].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 327  AllNodes.THLNode[0].LightSensor.Transducer  "Current use over time"  ETV
+vector 328  AllNodes.THLNode[0].Memory  "Energy Consumptions"  ETV
+vector 329  AllNodes.THLNode[0].Memory  "Current use over time"  ETV
+vector 330  AllNodes.TPLNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 331  AllNodes.TPLNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 332  AllNodes.TPLNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 333  AllNodes.TPLNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 334  AllNodes.TPLNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 335  AllNodes.TPLNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 336  AllNodes.TPLNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 337  AllNodes.TPLNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 338  AllNodes.TPLNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 339  AllNodes.TPLNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 340  AllNodes.TPLNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 341  AllNodes.TPLNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 342  AllNodes.TPLNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 343  AllNodes.TPLNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 344  AllNodes.TPLNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 345  AllNodes.TPLNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 346  AllNodes.TPLNode[0].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 347  AllNodes.TPLNode[0].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 348  AllNodes.TPLNode[0].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 349  AllNodes.TPLNode[0].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 350  AllNodes.TPLNode[0].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 351  AllNodes.TPLNode[0].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 352  AllNodes.TPLNode[0].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 353  AllNodes.TPLNode[0].LightSensor.Transducer  "Current use over time"  ETV
+vector 354  AllNodes.TPLNode[0].Memory  "Energy Consumptions"  ETV
+vector 355  AllNodes.TPLNode[0].Memory  "Current use over time"  ETV
+vector 356  AllNodes.TPHNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 357  AllNodes.TPHNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 358  AllNodes.TPHNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 359  AllNodes.TPHNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 360  AllNodes.TPHNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 361  AllNodes.TPHNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 362  AllNodes.TPHNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 363  AllNodes.TPHNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 364  AllNodes.TPHNode[0].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 365  AllNodes.TPHNode[0].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 366  AllNodes.TPHNode[0].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 367  AllNodes.TPHNode[0].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 368  AllNodes.TPHNode[0].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 369  AllNodes.TPHNode[0].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 370  AllNodes.TPHNode[0].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 371  AllNodes.TPHNode[0].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 372  AllNodes.TPHNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 373  AllNodes.TPHNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 374  AllNodes.TPHNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 375  AllNodes.TPHNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 376  AllNodes.TPHNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 377  AllNodes.TPHNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 378  AllNodes.TPHNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 379  AllNodes.TPHNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 380  AllNodes.TPHNode[0].Memory  "Energy Consumptions"  ETV
+vector 381  AllNodes.TPHNode[0].Memory  "Current use over time"  ETV
+vector 382  AllNodes.TPHLNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 383  AllNodes.TPHLNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 384  AllNodes.TPHLNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 385  AllNodes.TPHLNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 386  AllNodes.TPHLNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 387  AllNodes.TPHLNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 388  AllNodes.TPHLNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 389  AllNodes.TPHLNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 390  AllNodes.TPHLNode[0].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 391  AllNodes.TPHLNode[0].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 392  AllNodes.TPHLNode[0].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 393  AllNodes.TPHLNode[0].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 394  AllNodes.TPHLNode[0].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 395  AllNodes.TPHLNode[0].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 396  AllNodes.TPHLNode[0].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 397  AllNodes.TPHLNode[0].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 398  AllNodes.TPHLNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 399  AllNodes.TPHLNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 400  AllNodes.TPHLNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 401  AllNodes.TPHLNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 402  AllNodes.TPHLNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 403  AllNodes.TPHLNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 404  AllNodes.TPHLNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 405  AllNodes.TPHLNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 406  AllNodes.TPHLNode[0].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 407  AllNodes.TPHLNode[0].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 408  AllNodes.TPHLNode[0].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 409  AllNodes.TPHLNode[0].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 410  AllNodes.TPHLNode[0].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 411  AllNodes.TPHLNode[0].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 412  AllNodes.TPHLNode[0].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 413  AllNodes.TPHLNode[0].LightSensor.Transducer  "Current use over time"  ETV
+vector 414  AllNodes.TPHLNode[0].Memory  "Energy Consumptions"  ETV
+vector 415  AllNodes.TPHLNode[0].Memory  "Current use over time"  ETV
+3	30404 2024 0 172582 0 377000 118 0 2 87 145
+4	32428 8 0 0 0 0 1 0 0 0 0
+5	32436 6906 0 172582 0 377000 400 3 3 1200 3600
+6	39342 12778 0 172582 0 377000 400 0.014467592592593 1 201.57903074074 133.91442997283
+7	52120 9305 0 172582 0 377000 400 156250 10800000 2177053532 1.5619779112031e+16
+11	61425 1534 0 143024 0 273000 86 0 2 63 105
+12	62959 995 0 141960 0 270000 56 0 1 27 27
+13	63954 7169 0 143024 0 273000 399 3 3 1197 3591
+14	71123 12982 0 143024 0 273000 399 0.0037037037037037 1 197.99215740741 131.25783175797
+15	84105 9546 0 143024 0 273000 399 40000 10800000 2138315300 1.530991349625e+16
+19	93651 1534 0 143025 0 273000 86 0 2 63 105
+20	95185 995 0 141961 0 270000 56 0 1 27 27
+21	96180 7169 0 143025 0 273000 399 3 3 1197 3591
+22	103349 12982 0 143025 0 273000 399 0.0037037037037037 1 197.99215740741 131.25783175797
+23	116331 9546 0 143025 0 273000 399 40000 10800000 2138315300 1.530991349625e+16
+27	125877 1534 0 143026 0 273000 86 0 2 63 105
+28	127411 996 0 141962 0 270000 56 0 1 27 27
+29	128407 7171 0 143026 0 273000 399 3 3 1197 3591
+30	135578 12984 0 143026 0 273000 399 0.0037037037037037 1 197.99215740741 131.25783175797
+31	148562 9548 0 143026 0 273000 399 40000 10800000 2138315300 1.530991349625e+16
+35	158110 1534 0 143027 0 273000 86 0 2 63 105
+36	159644 996 0 141963 0 270000 56 0 1 27 27
+37	160640 7171 0 143027 0 273000 399 3 3 1197 3591
+38	167811 12984 0 143027 0 273000 399 0.0037037037037037 1 197.99215740741 131.25783175797
+39	180795 9548 0 143027 0 273000 399 40000 10800000 2138315300 1.530991349625e+16
+43	190343 1154 0 119667 0 208000 66 0 2 48 80
+44	191497 1153 0 120648 0 210000 66 0 1 21 21
+45	192650 6174 0 120648 0 210000 350 3 3 1050 3150
+46	198824 11161 0 120648 0 210000 350 0 1 175.33891259259 116.38706556189
+47	209985 8241 0 120648 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
+51	218226 1154 0 119668 0 208000 66 0 2 48 80
+52	219380 1153 0 120650 0 210000 66 0 1 21 21
+53	220533 6174 0 120650 0 210000 350 3 3 1050 3150
+54	226707 11161 0 120650 0 210000 350 0 1 175.33891259259 116.38706556189
+55	237868 8241 0 120650 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
+59	246109 1154 0 119669 0 208000 66 0 2 48 80
+60	247263 1153 0 120652 0 210000 66 0 1 21 21
+61	248416 6174 0 120652 0 210000 350 3 3 1050 3150
+62	254590 11161 0 120652 0 210000 350 0 1 175.33891259259 116.38706556189
+63	265751 8241 0 120652 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
+67	273992 1154 0 119670 0 208000 66 0 2 48 80
+68	275146 1153 0 120654 0 210000 66 0 1 21 21
+69	276299 6174 0 120654 0 210000 350 3 3 1050 3150
+70	282473 11161 0 120654 0 210000 350 0 1 175.33891259259 116.38706556189
+71	293634 8241 0 120654 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
+75	301875 1154 0 119671 0 208000 66 0 2 48 80
+76	303029 1153 0 120656 0 210000 66 0 1 21 21
+77	304182 6174 0 120656 0 210000 350 3 3 1050 3150
+78	310356 11161 0 120656 0 210000 350 0 1 175.33891259259 116.38706556189
+79	321517 8241 0 120656 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
+83	329758 1154 0 119672 0 208000 66 0 2 48 80
+84	330912 1153 0 120658 0 210000 66 0 1 21 21
+85	332065 6174 0 120658 0 210000 350 3 3 1050 3150
+86	338239 11161 0 120658 0 210000 350 0 1 175.33891259259 116.38706556189
+87	349400 8241 0 120658 0 210000 350 0 10800000 1893660256 1.3575387327139e+16
+91	357641 926 0 101288 0 169000 54 0 2 39 65
+92	358567 1234 0 101978 0 170000 72 0 1 17 17
+93	359801 5595 0 101978 0 170000 323 3 3 969 2907
+94	365396 10352 0 101978 0 170000 323 0.017291666666667 1 161.19874518519 107.1388317093
+95	375748 7527 0 101978 0 170000 323 186750 10800000 1740946448 1.2496673330572e+16
+99	383275 926 0 101289 0 169000 54 0 2 39 65
+100	384201 1306 0 101981 0 170000 72 0 1 17 17
+101	385507 5918 0 101981 0 170000 323 3 3 969 2907
+102	391425 10675 0 101981 0 170000 323 0.017291666666667 1 161.19874518519 107.1388317093
+103	402100 7850 0 101981 0 170000 323 186750 10800000 1740946448 1.2496673330572e+16
+107	409950 980 0 101290 0 169000 54 0 2 39 65
+108	410930 1306 0 101984 0 170000 72 0 1 17 17
+109	412236 5918 0 101984 0 170000 323 3 3 969 2907
+110	418154 10675 0 101984 0 170000 323 0.017291666666667 1 161.19874518519 107.1388317093
+111	428829 7850 0 101984 0 170000 323 186750 10800000 1740946448 1.2496673330572e+16
+115	436679 980 0 101291 0 169000 54 0 2 39 65
+116	437659 1306 0 101987 0 170000 72 0 1 17 17
+117	438965 5918 0 101987 0 170000 323 3 3 969 2907
+118	444883 10675 0 101987 0 170000 323 0.017291666666667 1 161.19874518519 107.1388317093
+119	455558 7850 0 101987 0 170000 323 186750 10800000 1740946448 1.2496673330572e+16
+123	463408 825 0 87309 0 143000 46 0 2 33 55
+124	464233 1343 0 85645 0 140000 75 0 1 14 14
+125	465576 5415 0 87309 0 143000 299 3 3 897 2691
+126	470991 9752 0 87309 0 143000 299 0.034546296296296 1 151.73982074074 100.94646496108
+127	480743 7216 0 87309 0 143000 299 373100 10800000 1638790064 1.1774395673061e+16
+128	487959 12 0 0 0 0 1 100 100 100 10000
+129	487971 1747 0 172582 0 377000 88 0.3 3 185.7 533.61
+130	489718 1743 0 141944 0 270000 84 100 100 8400 840000
+131	491461 1251 0 143024 0 273000 64 0.3 3 135.3 388.89
+132	492712 593 0 141948 0 270000 29 100 100 2900 290000
+133	493305 1251 0 143024 0 273000 64 0.3 3 135.3 388.89
+134	494556 594 0 141952 0 270000 29 100 100 2900 290000
+135	495150 1251 0 143024 0 273000 64 0.3 3 135.3 388.89
+136	496401 594 0 141956 0 270000 29 100 100 2900 290000
+137	496995 1251 0 143024 0 273000 64 0.3 3 135.3 388.89
+138	498246 595 0 141964 0 270000 29 100 100 2900 290000
+139	498841 1251 0 143024 0 273000 64 0.3 3 135.3 388.89
+140	500092 1743 0 141945 0 270000 84 100 100 8400 840000
+141	501835 1251 0 143025 0 273000 64 0.3 3 135.3 388.89
+142	503086 593 0 141949 0 270000 29 100 100 2900 290000
+143	503679 1251 0 143025 0 273000 64 0.3 3 135.3 388.89
+144	504930 594 0 141953 0 270000 29 100 100 2900 290000
+145	505524 1251 0 143025 0 273000 64 0.3 3 135.3 388.89
+146	506775 594 0 141957 0 270000 29 100 100 2900 290000
+147	507369 1251 0 143025 0 273000 64 0.3 3 135.3 388.89
+148	508620 595 0 141965 0 270000 29 100 100 2900 290000
+149	509215 1251 0 143025 0 273000 64 0.3 3 135.3 388.89
+150	510466 1743 0 141946 0 270000 84 100 100 8400 840000
+151	512209 1251 0 143026 0 273000 64 0.3 3 135.3 388.89
+152	513460 593 0 141950 0 270000 29 100 100 2900 290000
+153	514053 1251 0 143026 0 273000 64 0.3 3 135.3 388.89
+154	515304 594 0 141954 0 270000 29 100 100 2900 290000
+155	515898 1251 0 143026 0 273000 64 0.3 3 135.3 388.89
+156	517149 594 0 141958 0 270000 29 100 100 2900 290000
+157	517743 1251 0 143026 0 273000 64 0.3 3 135.3 388.89
+158	518994 595 0 141966 0 270000 29 100 100 2900 290000
+159	519589 1251 0 143026 0 273000 64 0.3 3 135.3 388.89
+160	520840 1743 0 141947 0 270000 84 100 100 8400 840000
+161	522583 1251 0 143027 0 273000 64 0.3 3 135.3 388.89
+162	523834 593 0 141951 0 270000 29 100 100 2900 290000
+163	524427 1251 0 143027 0 273000 64 0.3 3 135.3 388.89
+164	525678 594 0 141955 0 270000 29 100 100 2900 290000
+165	526272 1251 0 143027 0 273000 64 0.3 3 135.3 388.89
+166	527523 594 0 141959 0 270000 29 100 100 2900 290000
+167	528117 1251 0 143027 0 273000 64 0.3 3 135.3 388.89
+168	529368 595 0 141967 0 270000 29 100 100 2900 290000
+169	529963 1251 0 143027 0 273000 64 0.3 3 135.3 388.89
+170	531214 1347 0 120583 0 210000 66 100 100 6600 660000
+171	532561 941 0 119667 0 208000 49 0.3 3 103.8 298.44
+172	533502 461 0 120599 0 210000 23 100 100 2300 230000
+173	533963 941 0 119667 0 208000 49 0.3 3 103.8 298.44
+174	534904 462 0 120615 0 210000 23 100 100 2300 230000
+175	535366 941 0 119667 0 208000 49 0.3 3 103.8 298.44
+176	536307 462 0 120631 0 210000 23 100 100 2300 230000
+177	536769 941 0 119667 0 208000 49 0.3 3 103.8 298.44
+178	537710 1347 0 120584 0 210000 66 100 100 6600 660000
+179	539057 941 0 119667 0 208000 49 0.3 3 103.8 298.44
+180	539998 461 0 120600 0 210000 23 100 100 2300 230000
+181	540459 941 0 119667 0 208000 49 0.3 3 103.8 298.44
+182	541400 462 0 120616 0 210000 23 100 100 2300 230000
+183	541862 941 0 119667 0 208000 49 0.3 3 103.8 298.44
+184	542803 462 0 120632 0 210000 23 100 100 2300 230000
+185	543265 941 0 119667 0 208000 49 0.3 3 103.8 298.44
+186	544206 914 0 120664 0 210000 45 100 100 4500 450000
+187	545120 941 0 119667 0 208000 49 0.3 3 103.8 298.44
+188	546061 1347 0 120585 0 210000 66 100 100 6600 660000
+189	547408 941 0 119668 0 208000 49 0.3 3 103.8 298.44
+190	548349 461 0 120601 0 210000 23 100 100 2300 230000
+191	548810 941 0 119668 0 208000 49 0.3 3 103.8 298.44
+192	549751 462 0 120617 0 210000 23 100 100 2300 230000
+193	550213 941 0 119668 0 208000 49 0.3 3 103.8 298.44
+194	551154 462 0 120633 0 210000 23 100 100 2300 230000
+195	551616 941 0 119668 0 208000 49 0.3 3 103.8 298.44
+196	552557 1347 0 120586 0 210000 66 100 100 6600 660000
+197	553904 941 0 119668 0 208000 49 0.3 3 103.8 298.44
+198	554845 461 0 120602 0 210000 23 100 100 2300 230000
+199	555306 941 0 119668 0 208000 49 0.3 3 103.8 298.44
+200	556247 462 0 120618 0 210000 23 100 100 2300 230000
+201	556709 941 0 119668 0 208000 49 0.3 3 103.8 298.44
+202	557650 462 0 120634 0 210000 23 100 100 2300 230000
+203	558112 941 0 119668 0 208000 49 0.3 3 103.8 298.44
+204	559053 914 0 120666 0 210000 45 100 100 4500 450000
+205	559967 941 0 119668 0 208000 49 0.3 3 103.8 298.44
+206	560908 1347 0 120587 0 210000 66 100 100 6600 660000
+207	562255 941 0 119669 0 208000 49 0.3 3 103.8 298.44
+208	563196 462 0 120603 0 210000 23 100 100 2300 230000
+209	563658 941 0 119669 0 208000 49 0.3 3 103.8 298.44
+210	564599 462 0 120619 0 210000 23 100 100 2300 230000
+211	565061 941 0 119669 0 208000 49 0.3 3 103.8 298.44
+212	566002 462 0 120635 0 210000 23 100 100 2300 230000
+213	566464 941 0 119669 0 208000 49 0.3 3 103.8 298.44
+214	567405 1347 0 120588 0 210000 66 100 100 6600 660000
+215	568752 941 0 119669 0 208000 49 0.3 3 103.8 298.44
+216	569693 462 0 120604 0 210000 23 100 100 2300 230000
+217	570155 941 0 119669 0 208000 49 0.3 3 103.8 298.44
+218	571096 462 0 120620 0 210000 23 100 100 2300 230000
+219	571558 941 0 119669 0 208000 49 0.3 3 103.8 298.44
+220	572499 462 0 120636 0 210000 23 100 100 2300 230000
+221	572961 941 0 119669 0 208000 49 0.3 3 103.8 298.44
+222	573902 914 0 120668 0 210000 45 100 100 4500 450000
+223	574816 941 0 119669 0 208000 49 0.3 3 103.8 298.44
+224	575757 1347 0 120589 0 210000 66 100 100 6600 660000
+225	577104 941 0 119670 0 208000 49 0.3 3 103.8 298.44
+226	578045 462 0 120605 0 210000 23 100 100 2300 230000
+227	578507 941 0 119670 0 208000 49 0.3 3 103.8 298.44
+228	579448 462 0 120621 0 210000 23 100 100 2300 230000
+229	579910 941 0 119670 0 208000 49 0.3 3 103.8 298.44
+230	580851 462 0 120637 0 210000 23 100 100 2300 230000
+231	581313 941 0 119670 0 208000 49 0.3 3 103.8 298.44
+232	582254 1347 0 120590 0 210000 66 100 100 6600 660000
+233	583601 941 0 119670 0 208000 49 0.3 3 103.8 298.44
+234	584542 462 0 120606 0 210000 23 100 100 2300 230000
+235	585004 941 0 119670 0 208000 49 0.3 3 103.8 298.44
+236	585945 462 0 120622 0 210000 23 100 100 2300 230000
+237	586407 941 0 119670 0 208000 49 0.3 3 103.8 298.44
+238	587348 462 0 120638 0 210000 23 100 100 2300 230000
+239	587810 941 0 119670 0 208000 49 0.3 3 103.8 298.44
+240	588751 914 0 120670 0 210000 45 100 100 4500 450000
+241	589665 941 0 119670 0 208000 49 0.3 3 103.8 298.44
+242	590606 1347 0 120591 0 210000 66 100 100 6600 660000
+243	591953 941 0 119671 0 208000 49 0.3 3 103.8 298.44
+244	592894 462 0 120607 0 210000 23 100 100 2300 230000
+245	593356 941 0 119671 0 208000 49 0.3 3 103.8 298.44
+246	594297 462 0 120623 0 210000 23 100 100 2300 230000
+247	594759 941 0 119671 0 208000 49 0.3 3 103.8 298.44
+248	595700 462 0 120639 0 210000 23 100 100 2300 230000
+249	596162 941 0 119671 0 208000 49 0.3 3 103.8 298.44
+250	597103 1347 0 120592 0 210000 66 100 100 6600 660000
+251	598450 941 0 119671 0 208000 49 0.3 3 103.8 298.44
+252	599391 462 0 120608 0 210000 23 100 100 2300 230000
+253	599853 941 0 119671 0 208000 49 0.3 3 103.8 298.44
+254	600794 462 0 120624 0 210000 23 100 100 2300 230000
+255	601256 941 0 119671 0 208000 49 0.3 3 103.8 298.44
+256	602197 462 0 120640 0 210000 23 100 100 2300 230000
+257	602659 941 0 119671 0 208000 49 0.3 3 103.8 298.44
+258	603600 914 0 120672 0 210000 45 100 100 4500 450000
+259	604514 941 0 119671 0 208000 49 0.3 3 103.8 298.44
+260	605455 1347 0 120593 0 210000 66 100 100 6600 660000
+261	606802 941 0 119672 0 208000 49 0.3 3 103.8 298.44
+262	607743 462 0 120609 0 210000 23 100 100 2300 230000
+263	608205 941 0 119672 0 208000 49 0.3 3 103.8 298.44
+264	609146 462 0 120625 0 210000 23 100 100 2300 230000
+265	609608 941 0 119672 0 208000 49 0.3 3 103.8 298.44
+266	610549 462 0 120641 0 210000 23 100 100 2300 230000
+267	611011 941 0 119672 0 208000 49 0.3 3 103.8 298.44
+268	611952 1347 0 120594 0 210000 66 100 100 6600 660000
+269	613299 941 0 119672 0 208000 49 0.3 3 103.8 298.44
+270	614240 462 0 120610 0 210000 23 100 100 2300 230000
+271	614702 941 0 119672 0 208000 49 0.3 3 103.8 298.44
+272	615643 462 0 120626 0 210000 23 100 100 2300 230000
+273	616105 941 0 119672 0 208000 49 0.3 3 103.8 298.44
+274	617046 462 0 120642 0 210000 23 100 100 2300 230000
+275	617508 941 0 119672 0 208000 49 0.3 3 103.8 298.44
+276	618449 914 0 120674 0 210000 45 100 100 4500 450000
+277	619363 941 0 119672 0 208000 49 0.3 3 103.8 298.44
+278	620304 1083 0 101864 0 170000 54 100 100 5400 540000
+279	621387 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+280	622142 374 0 101892 0 170000 19 100 100 1900 190000
+281	622516 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+282	623271 374 0 101920 0 170000 19 100 100 1900 190000
+283	623645 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+284	624400 374 0 101948 0 170000 19 100 100 1900 190000
+285	624774 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+286	625529 1083 0 101865 0 170000 54 100 100 5400 540000
+287	626612 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+288	627367 374 0 101893 0 170000 19 100 100 1900 190000
+289	627741 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+290	628496 374 0 101921 0 170000 19 100 100 1900 190000
+291	628870 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+292	629625 374 0 101949 0 170000 19 100 100 1900 190000
+293	629999 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+294	630754 1083 0 101866 0 170000 54 100 100 5400 540000
+295	631837 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+296	632592 374 0 101894 0 170000 19 100 100 1900 190000
+297	632966 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+298	633721 374 0 101922 0 170000 19 100 100 1900 190000
+299	634095 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+300	634850 374 0 101950 0 170000 19 100 100 1900 190000
+301	635224 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+302	635979 1101 0 102006 0 170000 55 100 100 5500 550000
+303	637080 755 0 101288 0 169000 40 0.3 3 84.9 244.17
+304	637835 1083 0 101867 0 170000 54 100 100 5400 540000
+305	638918 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+306	639673 374 0 101895 0 170000 19 100 100 1900 190000
+307	640047 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+308	640802 374 0 101923 0 170000 19 100 100 1900 190000
+309	641176 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+310	641931 374 0 101951 0 170000 19 100 100 1900 190000
+311	642305 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+312	643060 1083 0 101868 0 170000 54 100 100 5400 540000
+313	644143 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+314	644898 374 0 101896 0 170000 19 100 100 1900 190000
+315	645272 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+316	646027 374 0 101924 0 170000 19 100 100 1900 190000
+317	646401 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+318	647156 374 0 101952 0 170000 19 100 100 1900 190000
+319	647530 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+320	648285 1083 0 101869 0 170000 54 100 100 5400 540000
+321	649368 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+322	650123 374 0 101897 0 170000 19 100 100 1900 190000
+323	650497 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+324	651252 374 0 101925 0 170000 19 100 100 1900 190000
+325	651626 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+326	652381 374 0 101953 0 170000 19 100 100 1900 190000
+327	652755 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+328	653510 1101 0 102009 0 170000 55 100 100 5500 550000
+329	654611 755 0 101289 0 169000 40 0.3 3 84.9 244.17
+330	655366 1083 0 101870 0 170000 54 100 100 5400 540000
+331	656449 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+332	657204 374 0 101898 0 170000 19 100 100 1900 190000
+333	657578 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+334	658333 374 0 101926 0 170000 19 100 100 1900 190000
+335	658707 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+336	659462 374 0 101954 0 170000 19 100 100 1900 190000
+337	659836 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+338	660591 1083 0 101871 0 170000 54 100 100 5400 540000
+339	661674 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+340	662429 374 0 101899 0 170000 19 100 100 1900 190000
+341	662803 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+342	663558 374 0 101927 0 170000 19 100 100 1900 190000
+343	663932 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+344	664687 374 0 101955 0 170000 19 100 100 1900 190000
+345	665061 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+346	665816 1083 0 101872 0 170000 54 100 100 5400 540000
+347	666899 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+348	667654 374 0 101900 0 170000 19 100 100 1900 190000
+349	668028 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+350	668783 374 0 101928 0 170000 19 100 100 1900 190000
+351	669157 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+352	669912 374 0 101956 0 170000 19 100 100 1900 190000
+353	670286 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+354	671041 1101 0 102012 0 170000 55 100 100 5500 550000
+355	672142 755 0 101290 0 169000 40 0.3 3 84.9 244.17
+356	672897 1083 0 101873 0 170000 54 100 100 5400 540000
+357	673980 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+358	674735 374 0 101901 0 170000 19 100 100 1900 190000
+359	675109 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+360	675864 374 0 101929 0 170000 19 100 100 1900 190000
+361	676238 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+362	676993 374 0 101957 0 170000 19 100 100 1900 190000
+363	677367 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+364	678122 1083 0 101874 0 170000 54 100 100 5400 540000
+365	679205 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+366	679960 374 0 101902 0 170000 19 100 100 1900 190000
+367	680334 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+368	681089 374 0 101930 0 170000 19 100 100 1900 190000
+369	681463 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+370	682218 374 0 101958 0 170000 19 100 100 1900 190000
+371	682592 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+372	683347 1083 0 101875 0 170000 54 100 100 5400 540000
+373	684430 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+374	685185 374 0 101903 0 170000 19 100 100 1900 190000
+375	685559 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+376	686314 374 0 101931 0 170000 19 100 100 1900 190000
+377	686688 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+378	687443 374 0 101959 0 170000 19 100 100 1900 190000
+379	687817 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+380	688572 1101 0 102015 0 170000 55 100 100 5500 550000
+381	689673 755 0 101291 0 169000 40 0.3 3 84.9 244.17
+382	690428 891 0 85514 0 140000 45 100 100 4500 450000
+383	691319 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+384	691954 310 0 85546 0 140000 16 100 100 1600 160000
+385	692264 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+386	692899 310 0 85578 0 140000 16 100 100 1600 160000
+387	693209 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+388	693844 310 0 85610 0 140000 16 100 100 1600 160000
+389	694154 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+390	694789 891 0 85515 0 140000 45 100 100 4500 450000
+391	695680 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+392	696315 310 0 85547 0 140000 16 100 100 1600 160000
+393	696625 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+394	697260 310 0 85579 0 140000 16 100 100 1600 160000
+395	697570 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+396	698205 310 0 85611 0 140000 16 100 100 1600 160000
+397	698515 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+398	699150 891 0 85516 0 140000 45 100 100 4500 450000
+399	700041 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+400	700676 310 0 85548 0 140000 16 100 100 1600 160000
+401	700986 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+402	701621 310 0 85580 0 140000 16 100 100 1600 160000
+403	701931 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+404	702566 310 0 85612 0 140000 16 100 100 1600 160000
+405	702876 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+406	703511 891 0 85517 0 140000 45 100 100 4500 450000
+407	704402 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+408	705037 310 0 85549 0 140000 16 100 100 1600 160000
+409	705347 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+410	705982 310 0 85581 0 140000 16 100 100 1600 160000
+411	706292 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+412	706927 310 0 85613 0 140000 16 100 100 1600 160000
+413	707237 635 0 87309 0 143000 34 0.3 3 72.3 207.99
+414	707872 1208 0 85677 0 140000 61 100 100 6100 610000
+415	709080 635 0 87309 0 143000 34 0.3 3 72.3 207.99

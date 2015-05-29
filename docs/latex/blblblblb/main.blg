@@ -1,0 +1,116 @@
+This is BibTeX, Version 0.99d (TeX Live 2014/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: meta/metadaten.aux
+The style file: gerplain.bst
+Database file #1: bib/literatur.bib
+Warning--to sort, need author or key in git
+Warning--to sort, need author or key in github
+Warning--to sort, need author or key in omnet
+Warning--to sort, need author or key in mixim
+Warning--to sort, need author or key in wrowser
+Warning--to sort, need author or key in emacs
+Warning--to sort, need author or key in TopGen
+Warning--to sort, need author or key in eclipse
+Warning--to sort, need author or key in ned
+Warning--to sort, need author or key in gnuplot
+Warning--to sort, need author or key in doxygen
+Warning--to sort, need author or key in sensornetzwiki
+Warning--to sort, need author or key in miximapiref
+Warning--to sort, need author or key in omnetman
+Warning--to sort, need author or key in ns3-wiki
+Warning--empty author in doxygen
+Warning--empty booktitle in doxygen
+Warning--empty year in doxygen
+Warning--empty author in eclipse
+Warning--empty booktitle in eclipse
+Warning--empty year in eclipse
+Warning--empty author in emacs
+Warning--empty booktitle in emacs
+Warning--empty year in emacs
+Warning--empty author in git
+Warning--empty booktitle in git
+Warning--empty year in git
+Warning--empty author in github
+Warning--empty booktitle in github
+Warning--empty year in github
+Warning--empty author in gnuplot
+Warning--empty booktitle in gnuplot
+Warning--empty year in gnuplot
+Warning--empty author in miximapiref
+Warning--empty booktitle in miximapiref
+Warning--empty year in miximapiref
+Warning--empty author in mixim
+Warning--empty booktitle in mixim
+Warning--empty year in mixim
+Warning--empty author in ned
+Warning--empty booktitle in ned
+Warning--empty year in ned
+Warning--empty author in ns3-wiki
+Warning--empty booktitle in ns3-wiki
+Warning--empty year in ns3-wiki
+Warning--empty author in omnetman
+Warning--empty booktitle in omnetman
+Warning--empty year in omnetman
+Warning--empty author in omnet
+Warning--empty booktitle in omnet
+Warning--empty year in omnet
+Warning--empty author in wrowser
+Warning--empty booktitle in wrowser
+Warning--empty year in wrowser
+Warning--empty author in TopGen
+Warning--empty booktitle in TopGen
+Warning--empty year in TopGen
+Warning--empty author in sensornetzwiki
+Warning--empty booktitle in sensornetzwiki
+Warning--empty year in sensornetzwiki
+Warning--empty booktitle in openwns
+Warning--empty year in openwns
+Warning--empty booktitle in hsc
+Warning--empty year in hsc
+Warning--empty booktitle in ns3
+Warning--empty year in ns3
+Warning--empty booktitle in ikr
+Warning--empty year in ikr
+You've used 20 entries,
+            2343 wiz_defined-function locations,
+            614 strings with 7281 characters,
+and the built_in function-call counts, 4874 in all, are:
+= -- 406
+> -- 99
+< -- 0
++ -- 49
+- -- 28
+* -- 382
+:= -- 621
+add.period$ -- 40
+call.type$ -- 20
+change.case$ -- 54
+chr.to.int$ -- 0
+cite$ -- 88
+duplicate$ -- 291
+empty$ -- 588
+format.name$ -- 28
+if$ -- 1123
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 21
+newline$ -- 83
+num.names$ -- 10
+pop$ -- 201
+preamble$ -- 1
+purify$ -- 54
+quote$ -- 0
+skip$ -- 168
+stack$ -- 0
+substring$ -- 116
+swap$ -- 53
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 80
+warning$ -- 68
+while$ -- 11
+width$ -- 22
+write$ -- 149
+(There were 68 warnings)

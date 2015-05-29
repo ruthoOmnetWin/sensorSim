@@ -94,59 +94,7 @@ Dabei helfen die verschiedenen möglichen Module. Es können die 3 Typen simple,
 \newline
 Mit dem Schlüsselwort module lassen sich komplexe Objekte beschreiben. Neben den Standardvariablen wie beispielsweise Parameter, Gates oder Connections lassen sich auch Submodule definieren. Dadurch ist es möglich verschiedene in sich abgeschlossene Modulteile in einem großen Modul zu vereinen.
 \newline
-Geeignet als ein solches Modulteil ist wiederum das simple-Modul. Dieses kann keine weiteren Submodule besitzen, sondern lediglich einfache Funktionalität definieren.
-
-\begin{minipage}{\textwidth}
-\begin{lstlisting}[language=ned,caption={einfaches Modul: LED},label=lst:simpleNodeLed]
-simple LED
-{
-	parameters:
-		bool ledLeuchtet;
-	gates:
-		input control;
-}
-\end{lstlisting}
-\end{minipage}
-\begin{minipage}{\textwidth}
-\begin{lstlisting}[language=ned,caption={einfaches Modul: Knopf},label=lst:simpleNodeButton]
-simple Knopf
-{
-	gates:
-		input buttonStateChange;
-		output signal;
-}
-\end{lstlisting}
-\end{minipage}
-\begin{minipage}{\textwidth}
-\begin{lstlisting}[language=ned,caption={Compound Modul},label=lst:simpleNode]
-module Knoten
-{
-	parameters:
-		string name="KnotenMitLedUndKnopf";
-	submodules:
-		Blinker: LED {
-		}
-		Button: Knopf {
-		}
-	gates:
-		input in;
-		output out;
-}
-\end{lstlisting}
-\end{minipage}
-\begin{minipage}{\textwidth}
-\begin{lstlisting}[language=ned,caption={einfaches Netzwerk},label=lst:simpleNetwork]
-network Netzwerk
-{
-	submodules:
-		node1: Knoten;
-		node2: Knoten;
-	connections:
-		node1.in <-- node2.out;
-		node1.out --> node2.in;
-}
-\end{lstlisting}
-\end{minipage}
+Geeignet als ein solches Modulteil ist wiederum das simple-Modul. Dieses kann keine weiteren Submodule besitzen, sondern lediglich einfache Funktionalität definieren.\\
 Wenn nicht anders über den Parameter @class angegeben sucht \textbf{Omnet++} nach einer Klasse, die den gleichen Namen wie das erstellte Modul besitzt. In dieser können Funktionen deklariert und implementiert werden, die das Verhalten des Moduls beeinflusst. Welche Funktionen von \textbf{Omnet++} interpretiert werden, wird im Kapitel \ref{para:Nodes and Messages} näher erklärt.
 Eine Übersicht mit Kurzbeschreibung zu den wichtigsten Schlüsselwörtern in NED in der Tabelle \ref{tab:NED} zu finden.
 
@@ -197,6 +145,62 @@ Eine Übersicht mit Kurzbeschreibung zu den wichtigsten Schlüsselwörtern in NE
 \label{fig:messageEvent}
 \includegraphics[width=\textwidth]{omnetEclipse}
 \end{figure}
+
+\paragraph{Beispiel} Ein kurzes Beispiel soll das Zusammenspiel einiger wichtiger Schlüsselworte aufzeigen:
+
+Zunächst wird ein einfach Modul (Listing \ref{lst:simpleNodeLed}) erstellt, welches eine LED repräsentiert. Dieses erhält dafür einen Parameter vom Typ boolean, welcher anzeigt, ob die LED leuchtet und einen eingehenden Port, welcher die Lampe steuern kann. 
+\begin{lstlisting}[language=ned,caption={einfaches Modul: LED},label=lst:simpleNodeLed]
+simple LED
+{
+	parameters:
+		bool ledLeuchtet;
+	gates:
+		input control;
+}
+\end{lstlisting}
+
+Als zweites Modul, ebenso wie die LED vom Typ simple, wird ein einfach Knopf (Listing \ref{lst:simpleNodeButton}) definiert. Dieser hat ein input-Gate über welches einen Knopfdruck simulieren kann und ein ausgehendes Gate, welches im Falle eines Knopfdrucks ein Signal ausgeben kann.
+\begin{lstlisting}[language=ned,caption={einfaches Modul: Knopf},label=lst:simpleNodeButton]
+simple Knopf
+{
+	gates:
+		input buttonStateChange;
+		output signal;
+}
+\end{lstlisting}
+
+Als drittes wird ein Modul vom Typ module definiert (Listing \ref{lst:simpleNode}). Es handelt sich dabei um ein Compound-Modul. Dieses kann genutzt werden, um verschiedene simple-Module auf sich zu vereinen und die Interaktion zwischen diesen zu ermöglichen. So können komplexe Bauteile modular definiert werden.\\
+Das Modul repräsentiert einen Bauteil, welches einen Knopf und eine LED besitzt. Zusätzlich besitzt es ein eingehendes und ein ausgehendes Gate. Das output-Gate vom Knopf ist mit dem eingehendes Gate von der LED verbunden, den durch einen Knopfdruck soll die LED ein- oder ausgeschaltet werden können.
+\begin{lstlisting}[language=ned,caption={Compound Modul},label=lst:simpleNode]
+module Knoten
+{
+	parameters:
+		string name="KnotenMitLedUndKnopf";
+	submodules:
+		Blinker: LED {
+		}
+		Button: Knopf {
+		}
+	gates:
+		input in;
+		output out;
+	connections:
+		Button.signal --> Blinker.control;
+}
+\end{lstlisting}
+
+Da es sich in Omnet++ um eine Netzwerksimulation handelt, wird einschließend noch ein kleines Netzwerk aus den vorher definierten Modulen aufgebaut werden (Listing \ref{lst:simpleNetwork}). Dabei werden zwei Module vom Typ Knoten erstellt und die jweiligen Gates der Beiden miteinander verbunden.
+\begin{lstlisting}[language=ned,caption={einfaches Netzwerk},label=lst:simpleNetwork]
+network Netzwerk
+{
+	submodules:
+		node1: Knoten;
+		node2: Knoten;
+	connections:
+		node1.in <-- node2.out;
+		node1.out --> node2.in;
+}
+\end{lstlisting}
 
 \subsection{Einige Techniken, Funktionen und wichtige Module}
 
@@ -292,14 +296,14 @@ Diese beiden Werte können nach dem erfolgreichen Abschließen einer Simulation 
 \centering
 \caption{Zustandswechsel Automat falsch}
 \label{fig:statWrong}
-\includegraphics[width=0.5\textwidth]{statWrong}
+\includegraphics[width=\textwidth]{statWrong}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \caption{Zustandswechsel Automat richtig}
 \label{fig:statRight}
-\includegraphics[width=0.5\textwidth]{statRight}
+\includegraphics[width=\textwidth]{statRight}
 \end{figure}
 
 \subsubsection{weitere Beispiele}

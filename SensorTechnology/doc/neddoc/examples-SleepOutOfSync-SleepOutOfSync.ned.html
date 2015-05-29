@@ -41,20 +41,19 @@
 {
     </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
         
-        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numEach</span><span style="color: #000000; ">;
-		</span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numEach</span><span style="color: #000000; "> * </span><span style="color: #008000; ">5</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">//int numEach;
+</span><span style="color: #000000; ">		</span><span style="color: #808080; font-style: italic; ">//numHosts = numEach * 2;
+</span><span style="color: #000000; ">		</span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #008000; ">2</span><span style="color: #000000; ">;
 
     </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
         </span><span style="color: #808080; font-style: italic; ">//two sensors
-</span><span style="color: #000000; ">        </span><span style="color: #000000; ">TPNode1</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numEach</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">TNode1</span><span style="color: #000000; ">: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
             </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
             </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
-            </span><span style="color: #000000; ">hasPressureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
         }
-        </span><span style="color: #000000; ">TPNode2</span><span style="color: #000000; ">[</span><span style="color: #000000; ">numEach</span><span style="color: #000000; ">]: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
+        </span><span style="color: #000000; ">TNode2</span><span style="color: #000000; ">: </span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; "> {
             </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
             </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
-            </span><span style="color: #000000; ">hasPressureSensor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
         }
 
     </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">allowunconnected</span><span style="color: #000000; ">:

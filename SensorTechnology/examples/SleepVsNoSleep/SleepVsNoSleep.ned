@@ -12,14 +12,14 @@ network SleepVsNoSleep extends BasicWSN like SensorNetworkInterface
 		numHosts = 2;
 
     submodules:
-        SleepNode[1]: SensorNode {
+        SleepNode: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
             hasPressureSensor = true;
             hasHumiditySensor = true;
             hasLightSensor = true;
         }
-        NoSleepNode[1]: SensorNode {
+        NoSleepNode: SensorNode {
             numHosts = numHosts;
             hasTemperatureSensor = true;
             hasPressureSensor = true;

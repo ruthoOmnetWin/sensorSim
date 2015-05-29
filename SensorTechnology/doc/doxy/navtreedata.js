@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "SensorTechnology", "index.html", [
+    [ "Sensor Simulation for Omnet++", "md_README.html", null ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],

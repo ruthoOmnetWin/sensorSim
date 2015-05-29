@@ -1,33 +1,78 @@
-file 49383 1431514266                                           
+file 26876 1432284742                                           
 version 2
-run General-0-20150513-12:06:30-6670
+run General-0-20150522-10:52:18-6070
 attr configname General
-attr datetime 20150513-12:06:30
+attr datetime 20150522-10:52:18
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network SleepOutOfSync
-attr processid 6670
+attr processid 6070
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-vector 3  SleepOutOfSync.TPNode1[0].Processor  "power mode"  ETV
-3	890 870 0 9892 0 140000 58 0 2 42 70
-vector 4  SleepOutOfSync.TPNode1[0].Processor  Voltage  ETV
-4	1760 5155 0 9907 0 140000 341 3 3 1023 3069
-vector 5  SleepOutOfSync.TPNode1[0].Processor  residualRelative  ETV
-5	6915 10143 0 9907 0 140000 341 0.0098888888888889 1 164.89034722222 108.43832604575
-vector 6  SleepOutOfSync.TPNode1[0].Processor  residualAbs  ETV
-6	17058 7185 0 9907 0 140000 341 106800 10800000 1780815750 1.2648246349976e+16
-vector 10  SleepOutOfSync.TPNode2[0].Processor  "power mode"  ETV
-10	24243 955 0 10177 0 145000 60 0 2 45 75
-vector 11  SleepOutOfSync.TPNode2[0].Processor  Voltage  ETV
-11	25198 5658 0 10178 0 145000 351 3 3 1053 3159
-vector 12  SleepOutOfSync.TPNode2[0].Processor  residualRelative  ETV
-12	30856 10782 0 10178 0 145000 351 0.0046759259259259 1 173.67503888889 117.24455547026
-vector 13  SleepOutOfSync.TPNode2[0].Processor  residualAbs  ETV
-13	41638 7745 0 10178 0 145000 351 50500 10800000 1875690420 1.3675404950051e+16
+
+vector 3  SleepOutOfSync.TNode1.Processor  "power mode"  ETV
+vector 4  SleepOutOfSync.TNode1.Processor  "Sensor Modules Status"  ETV
+vector 5  SleepOutOfSync.TNode1.Processor  Voltage  ETV
+vector 6  SleepOutOfSync.TNode1.Processor  residualRelative  ETV
+vector 7  SleepOutOfSync.TNode1.Processor  residualAbs  ETV
+vector 11  SleepOutOfSync.TNode2.Processor  "power mode"  ETV
+vector 12  SleepOutOfSync.TNode2.Processor  "Sensor Modules Status"  ETV
+vector 13  SleepOutOfSync.TNode2.Processor  Voltage  ETV
+vector 14  SleepOutOfSync.TNode2.Processor  residualRelative  ETV
+vector 15  SleepOutOfSync.TNode2.Processor  residualAbs  ETV
+vector 17  SleepOutOfSync.TNode1.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 18  SleepOutOfSync.TNode1.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 19  SleepOutOfSync.TNode1.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 20  SleepOutOfSync.TNode1.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 21  SleepOutOfSync.TNode1.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 22  SleepOutOfSync.TNode1.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 23  SleepOutOfSync.TNode1.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 24  SleepOutOfSync.TNode1.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 25  SleepOutOfSync.TNode1.Memory  "Energy Consumptions"  ETV
+vector 26  SleepOutOfSync.TNode1.Memory  "Current use over time"  ETV
+vector 28  SleepOutOfSync.TNode2.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 29  SleepOutOfSync.TNode2.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 30  SleepOutOfSync.TNode2.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 31  SleepOutOfSync.TNode2.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 32  SleepOutOfSync.TNode2.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 33  SleepOutOfSync.TNode2.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 34  SleepOutOfSync.TNode2.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 35  SleepOutOfSync.TNode2.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 36  SleepOutOfSync.TNode2.Memory  "Energy Consumptions"  ETV
+vector 37  SleepOutOfSync.TNode2.Memory  "Current use over time"  ETV
+3	2787 326 0 4676 0 67500 23 0 2 16 26
+4	3113 194 0 4162 0 60000 14 0 1 6 6
+5	3307 2043 0 4676 0 67500 140 3 3 420 1260
+6	5350 4081 0 4676 0 67500 140 0.79382407407407 1 125.47062962963 112.87602150596
+7	9431 2936 0 4676 0 67500 140 8573300 10800000 1355082800 1.3165859148455e+16
+11	12367 349 0 4677 0 67500 23 0 2 16 26
+12	12716 208 0 4163 0 60000 14 0 1 6 6
+13	12924 2183 0 4677 0 67500 140 3 3 420 1260
+14	15107 4221 0 4677 0 67500 140 0.79382407407407 1 125.47062962963 112.87602150596
+15	19328 3076 0 4677 0 67500 140 8573300 10800000 1355082800 1.3165859148455e+16
+17	22404 354 0 4154 0 60000 21 100 100 2100 210000
+18	22758 273 0 4676 0 67500 17 0.3 3 34.8 99.54
+19	23031 129 0 4156 0 60000 8 100 100 800 80000
+20	23160 273 0 4676 0 67500 17 0.3 3 34.8 99.54
+21	23433 129 0 4158 0 60000 8 100 100 800 80000
+22	23562 273 0 4676 0 67500 17 0.3 3 34.8 99.54
+23	23835 129 0 4160 0 60000 8 100 100 800 80000
+24	23964 273 0 4676 0 67500 17 0.3 3 34.8 99.54
+25	24237 130 0 4164 0 60000 8 100 100 800 80000
+26	24367 273 0 4676 0 67500 17 0.3 3 34.8 99.54
+28	24640 354 0 4155 0 60000 21 100 100 2100 210000
+29	24994 273 0 4677 0 67500 17 0.3 3 34.8 99.54
+30	25267 129 0 4157 0 60000 8 100 100 800 80000
+31	25396 273 0 4677 0 67500 17 0.3 3 34.8 99.54
+32	25669 129 0 4159 0 60000 8 100 100 800 80000
+33	25798 273 0 4677 0 67500 17 0.3 3 34.8 99.54
+34	26071 129 0 4161 0 60000 8 100 100 800 80000
+35	26200 273 0 4677 0 67500 17 0.3 3 34.8 99.54
+36	26473 130 0 4165 0 60000 8 100 100 800 80000
+37	26603 273 0 4677 0 67500 17 0.3 3 34.8 99.54
