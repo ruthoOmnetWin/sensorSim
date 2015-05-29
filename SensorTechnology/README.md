@@ -9,7 +9,7 @@
 * you will need to import the MiXiM Framework inside your project
 * import the SensorTechnology project inside your project
 * create the following files inside your project
-** config.xml - Options for MiXiM
+* * config.xml - Options for MiXiM
 ** omnetpp.ini - set Parameters for the Simulation
 *** you can also set the values inside the ned-files
 ** create an folder data/ with the following files inside
