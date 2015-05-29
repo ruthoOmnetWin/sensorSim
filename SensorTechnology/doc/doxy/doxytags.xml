@@ -300,6 +300,11 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>README.md</name>
+    <path>/home/rutho/BA/sensorSim/SensorTechnology/</path>
+    <filename>README_8md</filename>
+  </compound>
+  <compound kind="file">
     <name>SensorNode.cc</name>
     <path>/home/rutho/BA/sensorSim/SensorTechnology/src/SensorNode/</path>
     <filename>SensorNode_8cc</filename>
@@ -1898,5 +1903,10 @@
     <name>APIChanges</name>
     <title>API Changes</title>
     <filename>APIChanges</filename>
+  </compound>
+  <compound kind="page">
+    <name>md_README</name>
+    <title>Sensor Simulation for Omnet++</title>
+    <filename>md_README</filename>
   </compound>
 </tagfile>

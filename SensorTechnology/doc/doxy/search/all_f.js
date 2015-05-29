@@ -13,6 +13,7 @@ var searchData=
   ['readandforward',['readAndForward',['../classAbstractSensingUnit.html#a4598892103ce0b0cb445d64f791a5e23',1,'AbstractSensingUnit']]],
   ['readdata',['readData',['../classAbstractSensingUnit.html#a558143ac00a8a3bba0288b2cf4e4869b',1,'AbstractSensingUnit']]],
   ['readentry',['readEntry',['../classMemory.html#ac0542c55a25701239893c69c49cd56e0',1,'Memory::readEntry(std::string)'],['../classMemory.html#afd208b6292565e8583bc1a10950e6c96',1,'Memory::readEntry(int)']]],
+  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['readparameter',['readParameter',['/home/rutho/BA/omnetpp-4.5//doc/api/classcEnvir.html#af71434f15310c1d498ef96ac76dc7448',1,'cEnvir::readParameter()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcNullEnvir.html#aa80b448b4958c82b72642f29d95d088a',1,'cNullEnvir::readParameter()']]],
   ['readxml',['readXML',['../classCustomWorldUtility.html#a1c72ebd667de5072ff048a8c1a2aec76',1,'CustomWorldUtility']]],
   ['receive',['receive',['/home/rutho/BA/omnetpp-4.5//doc/api/classcSimpleModule.html#ae67be4c6ee87a9b09129e81c866a2b1c',1,'cSimpleModule::receive()'],['/home/rutho/BA/omnetpp-4.5//doc/api/classcSimpleModule.html#a64c0ef9d9a844c062ed58d9837f281c0',1,'cSimpleModule::receive(simtime_t timeout)']]],
