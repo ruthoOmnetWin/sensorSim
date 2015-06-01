@@ -2,10 +2,18 @@
 
 > a Codedocumentation can be found inside CodeDocu.html
 
+> the following version of omnet++ was used to create the sensor simulation:
+* Version: 4.5
+* Build id: 140714-c6b1772
+
+> the following mixim version was used
+* v2.3
+
 ## Installation of a Network using Sensors
 
 > you can have a look inside the examples/ folder or even copy the BasicExample inside it
 
+* get omnet++ and mixim, for best results use versions given above
 * you will need to import the MiXiM Framework inside your project
 * import the SensorTechnology project inside your project
 * create the following files inside your project
