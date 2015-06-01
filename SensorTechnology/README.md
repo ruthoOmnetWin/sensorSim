@@ -5,6 +5,7 @@
 > the following version of omnet++ was used to create the sensor simulation:
 * Version: 4.5
 * Build id: 140714-c6b1772
+* Linux-Version
 
 > the following mixim version was used
 * v2.3
