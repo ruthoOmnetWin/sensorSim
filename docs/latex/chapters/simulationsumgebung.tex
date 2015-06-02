@@ -86,7 +86,7 @@ Omnet++\cite{omnet} ist eine C++-Bibliothek und ein C++-Framework, welches prim�
 \includegraphics[width=\textwidth]{SimulationUI}
 \end{figure}
 
-\subsection{NED language}
+\subsection{NED language}\label{NED language} 
 
 Die Netzwerkbeschreibungssprache NED\cite{ned} bietet eine Möglichkeit, auch komplexe Netzwerke relativ einfach zu beschreiben und darzustellen. Man kann schnell ein einfaches Modul mit Gates (siehe Listing \ref{lst:simpleNode}) für die Kommunikation beschreiben oder ihm Submodule für verschiedene andere Aufgaben zuweisen und dieses in ein Netzwerk integrieren und dort mehrere und auch verschiedene Instanzen von Modulen verknüpfen (siehe Listing \ref{lst:simpleNetwork}).
 \newline
@@ -148,6 +148,8 @@ Eine Übersicht mit Kurzbeschreibung zu den wichtigsten Schlüsselwörtern in NE
 
 \paragraph{Beispiel} Ein kurzes Beispiel soll das Zusammenspiel einiger wichtiger Schlüsselworte aufzeigen:
 
+\label{StartNedExample}
+
 Zunächst wird ein einfach Modul (Listing \ref{lst:simpleNodeLed}) erstellt, welches eine LED repräsentiert. Dieses erhält dafür einen Parameter vom Typ boolean, welcher anzeigt, ob die LED leuchtet und einen eingehenden Port, welcher die Lampe steuern kann. 
 \begin{lstlisting}[language=ned,caption={einfaches Modul: LED},label=lst:simpleNodeLed]
 simple LED
@@ -204,9 +206,9 @@ network Netzwerk
 
 \subsection{Einige Techniken, Funktionen und wichtige Module}
 
-Im folgenden Abschnitt wird ein Ausschnitt darüber gegeben, was Omnet++ an Funktionalitäten bereitstellt. Grundlegend wird für eine einfache Simulation ein Netzwerk benötigt, welches in der Netzwerkbeschreibungssprache NED beschrieben wird. Dieses Netzwerk kann dann Nodes definieren, welche selbst Module sind, welche wiederum auch in NED beschrieben werden. Wenn diese Module ausgehende und/oder eingehende Gates besitzen, können diese im Netzwerk wiederum miteinander verbunden werden.\newline
-Dieser einfache Grundaufbau genügt im Prinzip schon, damit eine valide Simulation ablaufen kann. Um dazu noch etwas Funktionalität in die Module zu bringen ist es möglich, für jedes Modul eine Klasse in C++ zu definieren. Man kann zum einen eigene Klassen definieren oder die in der Simulationsbibliothek vorhandenen Klassen nutzen.\newline
-Zusätzlich zur Standardbibliothek gibt es noch 3 relevante Frameworks, die weitere Funktionen zur Verfügung stellen: MiXiM, INET und Castalia.
+Im folgenden Abschnitt werden die wichtigsten Elemente für eine Omnet++-Simulation beschrieben. Allgemein wird für eine einfache Simulation ein Netzwerk benötigt, welches in der Netzwerkbeschreibungssprache NED beschrieben wird. Dieses Netzwerk kann dann Knoten verwenden, welche selbst in Form von Modulen in NED definiert wurden. Wenn diese Module ausgehende und/oder eingehende Gates besitzen, können diese im Netzwerk wiederum miteinander verbunden werden. Der beschriebene Aufbau wurde im Kapitel \ref{NED language} ab S.\pageref{StartNedExample} bereits an einem beschrieben. \newline
+Dieser einfache Grundaufbau genügt im Prinzip schon, damit eine valide und sinnvolle Simulation vorliegt. Um dazu noch etwas Funktionalität in die Module zu bringen ist es möglich, für jedes Modul eine Klasse in C++ zu definieren. Man kann zum einen eigene Klassen definieren oder die in der Simulationsbibliothek vorhandenen Klassen nutzen.\newline
+Zusätzlich zur Standardbibliothek gibt es noch 3 relevante Frameworks, die weitere Funktionen zur Verfügung stellen: MiXiM, INET und Castalia. Da nur MiXiM verwendet wurde, wird auch nur dieses in der Arbeit näher beschrieben.
 
 \subsubsection{Nodes and Messages}\label{para:Nodes and Messages}
 
