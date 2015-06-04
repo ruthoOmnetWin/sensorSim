@@ -42,8 +42,8 @@ Zusätzlich dazu stellt die Klasse selbst die notwendigen Parameter für die Umw
 Es kann zu Beginn der Simulation entschieden werden, ob neue Werte berechnet werden sollen oder die bereits vorhandenen Werte für die Umgebung übernommen werden sollen. Die Arrays besitzen die gleiche Größe wie der Playground. Diese Größe ist auch zusätzlich in den Parametern sizeX, sizeY und sizeZ gespeichert. \newline
 Da jedoch im 3-dimensionalen Fall die Datenmenge sehr schnell steigt, ist auch möglich über den Paremeter dataGranularity im zugehörigen ned-Modul zu definieren, wie detailliert die Daten erstellt werden sollen. Sollte man zum Beispiel den Wert 10 setzen, so wird nur alle 10 Meter ein Wert generiert.\\
 Wenn neue Werte generiert werden sollen, so wird für jeden Messtyp eine xml-Datei in der entsprechenden Größe angelegt und mit Messdaten gefüllt. Diese werden anschließend ausgelesen und in Form der oben genannten Arrays gespeichert. Wenn keine neuen Daten erstellt werden sollen, so wird ein bereits existierendes xml-File genutzt.\\
-Zum Erstellen neuer Daten kann die Funktion \textbf{generateEnvironmentData()} genutzt werden. Es ist dadurch auch möglich während der Simulation neue Werte zu generieren, indem man diese Funktion aufruft. Die Funktion legt pro Umweltparameter eine xml-Datei im Ordner \textit{WorldModel/data} an. Jede der xml-Dateien wird beim Start mithilfe der Funktion \textbf{readXML(int)} eingelesen, verarbeitet, das heißt in ein Array umgewandelt und anschließend in der Klasse gespeichert. \newline
-Sollte nun ein Sensor einen Messwert auslesen wollen, so kann dieser auf die Funktion \textbf{getValueByPosition((std::string type, Coord *position))} zugreifen und anhand seines Sensortyps und seiner Position einen entsprechenden Wert geliefert bekommen.
+Zum Erstellen neuer Daten kann die Funktion generateEnvironmentData() genutzt werden. Es ist dadurch auch möglich während der Simulation neue Werte zu generieren, indem man diese Funktion aufruft. Die Funktion legt pro Umweltparameter eine xml-Datei im Ordner \textit{WorldModel/data} an. Jede der xml-Dateien wird beim Start mithilfe der Funktion readXML(int) eingelesen, verarbeitet, das heißt in ein Array umgewandelt und anschließend in der Klasse gespeichert. \newline
+Sollte nun ein Sensor einen Messwert auslesen wollen, so kann dieser auf die Funktion getValueByPosition((std::string type, Coord *position)) zugreifen und anhand seines Sensortyps und seiner Position einen entsprechenden Wert geliefert bekommen.
 
 \paragraph{Einblick in einige Funktionen}
 
@@ -80,9 +80,9 @@ for (int i = 0; i < count; i++){
 }
 \end{lstlisting}
 
-Um eben diese Daten wieder lesen zu können, dient die Funktion \textbf{readXML()}. Sie verwendet die cXMLElement-Funktionen aus dem Omnet++-Framework. Diese sind sehr hilfreich beim Verarbeiten von XML-Dateien. Ein Beispiel für die Verwendung bei einem XML-File mit einer Verschachtelungstiefe von 1 ist im Listing \ref{lst:readXML} zu sehen. Da in dieser Simulation die Umweltparameter in Form von XML gespeichert sind, ist dies eine sehr nützliche Funktionalität.\\
+Um eben diese Daten wieder lesen zu können, dient die Funktion readXML(). Sie verwendet die cXMLElement-Funktionen aus dem Omnet++-Framework. Diese sind sehr hilfreich beim Verarbeiten von XML-Dateien. Ein Beispiel für die Verwendung bei einem XML-File mit einer Verschachtelungstiefe von 1 ist im Listing \ref{lst:readXML} zu sehen. Da in dieser Simulation die Umweltparameter in Form von XML gespeichert sind, ist dies eine sehr nützliche Funktionalität.\\
 Die bis jetzt beschriebenen Funktionen dienen alle zur Initialisierung der Simulationsdaten. Es ist natürlich auch möglich diese in einem späteren Verlauf der Simulation erneut aufzurufen und damit neue Werte zu generieren. \\
-Für den späteren Verlauf der Simulation ist nun noch die Funktion \textbf{getValueByPosition(std::string, Coord*)} (\ref{lst:getValueByPosition}) von großer Bedeutung. Diese Funktion ermöglicht den Sensoreinheiten, auf die gespeicherten Daten zuzugreifen.
+Für den späteren Verlauf der Simulation ist nun noch die Funktion getValueByPosition(std::string, Coord*) (\ref{lst:getValueByPosition}) von großer Bedeutung. Diese Funktion ermöglicht den Sensoreinheiten, auf die gespeicherten Daten zuzugreifen.
 
 \begin{lstlisting}[language=C++, label=lst:getValueByPosition, caption=getValueByPosition()]
 int CustomWorldUtility::getValueByPosition(std::string type, Coord *position)
@@ -135,7 +135,7 @@ Der Sensor in seiner Gesamtheit besitzt keine eigene C++-Klasse. Jedoch besitzt 
 
 \paragraph{SensingUnit}
 
-Die SensingUnit ist der wichtigste Teil des Sensors. Innerhalb der Definition von \textbf{handleMessage(cMessage*)} wartet das Modul auf ein Signal vom Prozessor. Sobald dieses kommt, wird ein Messvorgang gestartet. Zunächst überprüft das Modul dabei die eigene Position. In Abhängigkeit von dieser wird anschließend ein dem Typ entsprechender Messwert aus dem Modul \textbf{CustomWorldUtility} ausgelesen, welcher hinterher an den SignalConditioner weitergegeben wird. Dazu wird eine Instanz der Klasse SimpleSensorData genutzt, welche an eine cMessage angehängt wird und dann über das entsprechende Gate gesendet wird.
+Die SensingUnit ist der wichtigste Teil des Sensors. Innerhalb der Definition von handleMessage(cMessage*) wartet das Modul auf ein Signal vom Prozessor. Sobald dieses kommt, wird ein Messvorgang gestartet. Zunächst überprüft das Modul dabei die eigene Position. In Abhängigkeit von dieser wird anschließend ein dem Typ entsprechender Messwert aus dem Modul CustomWorldUtility ausgelesen, welcher hinterher an den SignalConditioner weitergegeben wird. Dazu wird eine Instanz der Klasse SimpleSensorData genutzt, welche an eine cMessage angehängt wird und dann über das entsprechende Gate gesendet wird.
 
 \paragraph{SignalConditioner}
 
@@ -151,7 +151,7 @@ Das letzte Bauteil der Messkette ist der Transducer. Dieser erhält seine Daten 
 
 \subsubsection{Prozessor}
 
-Eine wichtige Funktion des Prozessors wurde eben schon indirekt beschrieben. Die Klasse \textbf{Processor} kümmert sich um die Steuerung des Sensors. Aber er erfüllt auch andere Funktionen, wie die Energieverwaltung des Sensorknotens und die Verwertung von statistischen Daten.
+Eine wichtige Funktion des Prozessors wurde eben schon indirekt beschrieben. Die Klasse Processor kümmert sich um die Steuerung des Sensors. Aber er erfüllt auch andere Funktionen, wie die Energieverwaltung des Sensorknotens und die Verwertung von statistischen Daten.
 
 \paragraph{Sensorsteuerung}
 
@@ -301,7 +301,7 @@ Wenn nun von außen eine Message mit einem Datensatz an den Speicher geschickt w
 \subsubsection{BatteryAccess}
 
 Die Klasse BatteryAccess ermöglicht den Modulen des Sensors auf die Batterie zugreifen zu können. Dafür ist zunächst eigentlich die Klasse MiximBatteryAccess zuständig. BatteryAccess erbt von dieser und erweitert sie um einige wichtige Funktionen.\\
-So können zum Beispiel direkt Werte für den Energieverbrauch des entsprechenden Moduls hinterlegt werden. Immer wenn nun eine energieintensive Operation durchgeführt wird, verbraucht die Batterie Energie in Höhe dieses definierten Wertes, indem die Funktion draw() aufgerufen wird. Diese ruft anschließend die Funktion drawEnergie(float) mit dem gespeicherten Wert \textbf{float energiePerOperation} auf. \\
+So können zum Beispiel direkt Werte für den Energieverbrauch des entsprechenden Moduls hinterlegt werden. Immer wenn nun eine energieintensive Operation durchgeführt wird, verbraucht die Batterie Energie in Höhe dieses definierten Wertes, indem die Funktion draw() aufgerufen wird. Diese ruft anschließend die Funktion drawEnergie(float) mit dem gespeicherten Wert float energiePerOperation auf. \\
 Die Klasse kümmert sich weiterhin um die Initialisierung und um den Fall, dass die Batterie den leeren Zustand erreicht (handleHostState()).
 
 \begin{lstlisting}[language=C++, label=lst:BatteryAccess, caption=BatteryAccess]
@@ -532,7 +532,7 @@ Anhand der Submoduldefinition ist auch ersichtlich, weshalb jedes Modul des Sens
 \end{figure}
 
 Der SensorNode ist das komplexeste Compound Modul in der Simulation, denn es beinhaltet die bisher beschriebenen Module Sensor, Prozessor, Memory und die in MiXiM enthaltenen Module für die Funkkommunikation und eine Batterie.\\
-Die MiXiM-Module werden dem Sensorknoten durch das erben von dem Modul \textbf{WirelessNodeBatteryPlusTran} aus dem MiXiM-Framework zugewiesen, da dieses die benötigte Batterie und die Funkkommunikation bereitstellt. Alle anderen Module werden wie im Beispiel \ref{lst:SensorNode} definiert. Dieses ist dabei auf die Definition der Submodule reduziert.
+Die MiXiM-Module werden dem Sensorknoten durch das erben von dem Modul WirelessNodeBatteryPlusTran aus dem MiXiM-Framework zugewiesen, da dieses die benötigte Batterie und die Funkkommunikation bereitstellt. Alle anderen Module werden wie im Beispiel \ref{lst:SensorNode} definiert. Dieses ist dabei auf die Definition der Submodule reduziert.
 
 \begin{lstlisting}[language=ned,caption={SensorNode mit den neu definierten Modulen},label=lst:SensorNode]
 module SensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface

@@ -6,7 +6,7 @@ Im Falle von speziellen Anforderungen der Frameworks sollte eine IDE vorhanden s
 
 \section{wichtige Simulationsumgebungen}
 
-Es gibt viele Umgebungen zum Simulieren von Netzwerken. Zunächst werden hier 4 Wichtige vorgestellt: die \textbf{IKR Simulation Library (IKR SimLib)} von der Universität Stuttgart, der \textbf{Open Source Wireless Network Simulator} kurz \textbf{openWNS} von der Universität Aachen, \textbf{ns-3} vom ns-3 project und \textbf{Simanet} von der TU Chemnitz.
+Es gibt viele Umgebungen zum Simulieren von Netzwerken. Zunächst werden hier 4 Wichtige vorgestellt: die IKR Simulation Library (IKR SimLib) von der Universität Stuttgart, der Open Source Wireless Network Simulator kurz openWNS von der Universität Aachen, ns-3 vom ns-3 project und Simanet von der TU Chemnitz.
 
 \paragraph{Simulation Library (IKR SimLib)\cite{ikr}}
 
@@ -95,7 +95,7 @@ Dabei helfen die verschiedenen möglichen Module. Es können die 3 Typen simple,
 Mit dem Schlüsselwort module lassen sich komplexe Objekte beschreiben. Neben den Standardvariablen wie beispielsweise Parameter, Gates oder Connections lassen sich auch Submodule definieren. Dadurch ist es möglich verschiedene in sich abgeschlossene Modulteile in einem großen Modul zu vereinen.
 \newline
 Geeignet als ein solches Modulteil ist wiederum das simple-Modul. Dieses kann keine weiteren Submodule besitzen, sondern lediglich einfache Funktionalität definieren.\\
-Wenn nicht anders über den Parameter @class angegeben sucht \textbf{Omnet++} nach einer Klasse, die den gleichen Namen wie das erstellte Modul besitzt. In dieser können Funktionen deklariert und implementiert werden, die das Verhalten des Moduls beeinflusst. Welche Funktionen von \textbf{Omnet++} interpretiert werden, wird im Kapitel \ref{para:Nodes and Messages} näher erklärt.
+Wenn nicht anders über den Parameter @class angegeben sucht Omnet++ nach einer Klasse, die den gleichen Namen wie das erstellte Modul besitzt. In dieser können Funktionen deklariert und implementiert werden, die das Verhalten des Moduls beeinflusst. Welche Funktionen von Omnet++ interpretiert werden, wird im Kapitel \ref{para:Nodes and Messages} näher erklärt.
 Eine Übersicht mit Kurzbeschreibung zu den wichtigsten Schlüsselwörtern in NED in der Tabelle \ref{tab:NED} zu finden.
 
 \begin{table}[!ht]
@@ -212,11 +212,11 @@ Zusätzlich zur Standardbibliothek gibt es noch 3 relevante Frameworks, die weit
 
 \subsubsection{Nodes and Messages}\label{para:Nodes and Messages}
 
-Für die Steuerung innerhalb einer Simulation sind Nachrichten das wichtigste Werkzeug in \textbf{Omnet++}. So kann man eine Nachricht zu einer festgelegten Simulationszeit verschicken, um diese als Events einzusetzen. Dabei können Knoten auch Nachrichten an sich selbst versenden.
+Für die Steuerung innerhalb einer Simulation sind Nachrichten das wichtigste Werkzeug in Omnet++. So kann man eine Nachricht zu einer festgelegten Simulationszeit verschicken, um diese als Events einzusetzen. Dabei können Knoten auch Nachrichten an sich selbst versenden.
 
 Um einem selbst definierten Modul die Möglichkeit zu geben Nachrichten zu verstehen und zu benutzen werden einige Funktionen bereitgestellt, die man selbst definieren muss.
 
-Diese sind für die Funktionalität eines \textbf{cSimpleModule} entscheidend und sollten nach dem Erstellen eines neuen Moduls implementiert werden:
+Diese sind für die Funktionalität eines cSimpleModule entscheidend und sollten nach dem Erstellen eines neuen Moduls implementiert werden:
 
 \begin{itemize}
 \item void initialize()
@@ -227,17 +227,17 @@ Diese sind für die Funktionalität eines \textbf{cSimpleModule} entscheidend un
 
 \paragraph{initialize()}
 
-Die Funktion \textbf{initialize()} wird nach dem Erstellen eines Moduls aufgerufen. Es kann so ähnlich wie ein Konstruktor verwendet werden. Entscheidend ist, dass die Methode erst aufgerufen wird, nachdem auch der \textbf{NED}-Teil des Moduls eingelesen wurde. Das bedeutet, dass erst an dieser Stelle auf Parameter des Moduls zugegriffen werden kann und das ist im Konstruktor noch nicht möglich. Auch Nachrichten kann das Modul erst ab diesem Zeitpunkt verschicken.
+Die Funktion initialize() wird nach dem Erstellen eines Moduls aufgerufen. Es kann so ähnlich wie ein Konstruktor verwendet werden. Entscheidend ist, dass die Methode erst aufgerufen wird, nachdem auch der NED-Teil des Moduls eingelesen wurde. Das bedeutet, dass erst an dieser Stelle auf Parameter des Moduls zugegriffen werden kann und das ist im Konstruktor noch nicht möglich. Auch Nachrichten kann das Modul erst ab diesem Zeitpunkt verschicken.
 
 \paragraph{handleMessage(cMessage *msg)}
 
-Diese Methode kann eingehende Nachrichten auswerten. Sollten bei einem Modul Nachrichten ankommen, ohne dass diese Funktion definiert wurde, wird ein Fehler auftreten. Wie Nachrichten genauer aufgebaut sind, ist im Abschnitt \textbf{cMessage} beschrieben.
-Nachrichten können zeitgesteuert Events auslösen. Die Methode \textbf{handleMessage()} ist somit das Herzstück der meisten Module, da hier das komplette Verhalten geregelt wird. \newline
+Diese Methode kann eingehende Nachrichten auswerten. Sollten bei einem Modul Nachrichten ankommen, ohne dass diese Funktion definiert wurde, wird ein Fehler auftreten. Wie Nachrichten genauer aufgebaut sind, ist im Abschnitt cMessage beschrieben.
+Nachrichten können zeitgesteuert Events auslösen. Die Methode handleMessage() ist somit das Herzstück der meisten Module, da hier das komplette Verhalten geregelt wird. \newline
 Es können im Regelfall natürlich viele verschiedene Arten von Nachrichten in einem Modul eintreffen, die auch unterschiedlich behandelt werden müssen. Zur Fallunterscheidung stehen wiederum viele Funktion im Nachrichtenmodul zur Verfügung, die beispielsweise Informationen über den Sender liefer, ob die Nachricht eine Selfmessage war, also vom Modul an sich selbst gesendet wurde oder einfache Informationen wie der Name der Nachricht.
 
 \paragraph{activity()}
 
-Diese Methode ist eine eher unwichtige Funktion. Wenn \textbf{handleMessage()} korrekt verwendet wird, sollte man auf die Benutzung von \textbf{activity()} am besten komplett verzichten. Es verhält sich oberflächlich betrachtet wie \textbf{handleMessage()}, allerdings wird diese Methode nicht einfach aufgerufen, sollte eine Nachricht ankommen, sondern läuft in einer Endlosschleife und wartet Permanet aktiv auf Nachrichten. Daher ist sie wesentlich rechenintensiver als das Gegenstück \textbf{handleMessage()}.
+Diese Methode ist eine eher unwichtige Funktion. Wenn handleMessage() korrekt verwendet wird, sollte man auf die Benutzung von activity() am besten komplett verzichten. Es verhält sich oberflächlich betrachtet wie handleMessage(), allerdings wird diese Methode nicht einfach aufgerufen, sollte eine Nachricht ankommen, sondern läuft in einer Endlosschleife und wartet Permanet aktiv auf Nachrichten. Daher ist sie wesentlich rechenintensiver als das Gegenstück handleMessage().
 
 \paragraph{finish()}
 
@@ -246,7 +246,7 @@ Die Methode ist stattdessen dafür da die eben abgelaufene Simulation auszuwerte
 
 \subsubsection{cMessage}
 
-Für die Nachrichten selbst existiert ein fertig implementiertes Modul namens \textbf{cMessage}. Dieses erfüllt schon die wichtigsten Anforderungen, die man an ein Nachrichtenmodul stellt. So können Nachrichten nicht nur \textbf{strings} übertragen, sondern alle Klassen, die von \textbf{cNamedObject} erben. Man kann also auch komplexe, selbst definierte Objekte mithilfe von cMessage übertragen.\\
+Für die Nachrichten selbst existiert ein fertig implementiertes Modul namens cMessage. Dieses erfüllt schon die wichtigsten Anforderungen, die man an ein Nachrichtenmodul stellt. So können Nachrichten nicht nur strings übertragen, sondern alle Klassen, die von cNamedObject erben. Man kann also auch komplexe, selbst definierte Objekte mithilfe von cMessage übertragen.\\
 Es empfiehlt sich dennoch eine eigene Kindklasse von cMessage zu definieren, da man in diesem eigene Parameter definieren kann, die verschiedene Werte beschreiben. So kann man zum Beispiel genauere Informationen für Quelle und Senke in der Nachricht speichern oder verschiedene Werte für Statistiken. Sollte man eine veränderte Kindklasse von cMessage definieren, so wird zusätzlich eine Klasse dazu generiert, die viele Funktionen bereitstellt, die zum Beispiel das Kopieren einer Nachricht ermöglichen - auch inklusive der extra hinzugefügten Parameter.
 
 \begin{table}[!ht]
@@ -272,7 +272,7 @@ Es empfiehlt sich dennoch eine eigene Kindklasse von cMessage zu definieren, da 
 
 \subsubsection{XML Support}
 
-NED-Parameter eines Moduls können vom Typ xml sein. Die dazu gehörende Klasse cXMLElement bietet ihrerseits umfangreiche Unterstützung dafür an. Diese orientiert sich dabei an einem DOM-Parser, ist allerdings aus Performanzgründen nur ähnlich aufgebaut. Dabei stellt die Klasse die für X-Path typischen Funktionen für XML-Zugriffe bereit wie zum Beispiel \textbf{getParentNode()} oder \textbf{getChildren()}.
+NED-Parameter eines Moduls können vom Typ xml sein. Die dazu gehörende Klasse cXMLElement bietet ihrerseits umfangreiche Unterstützung dafür an. Diese orientiert sich dabei an einem DOM-Parser, ist allerdings aus Performanzgründen nur ähnlich aufgebaut. Dabei stellt die Klasse die für X-Path typischen Funktionen für XML-Zugriffe bereit wie zum Beispiel getParentNode() oder getChildren().
 
 \begin{minipage}{\textwidth}
 \begin{lstlisting}[language=C++,caption={Beispiel einlesen von XML},label=lst:xml]
