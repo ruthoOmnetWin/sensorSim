@@ -25,7 +25,7 @@ Ein Prototyp ist ebenfalls eine Implementierung eines Systems, die den komplette
 
 Für die Arbeit ist die Entscheidung auf eine Simulation gefallen. Man kann sich dabei auf die wesentlichen Funktionen konzentrieren und grundsätzliche Überlegungen über die genaue Umsetzung von gewissen Bauteilen zunächst außer Acht lassen. So ist die genaue Implementierung der einzelnen Komponenten des Sensors für diese Arbeit beispielsweise nicht so relevant, da eher das gesamte Verhalten der Sensorknoten und deren Energiemanagement von Bedeutung sind. Ein Modell muss stets nur so genau spezifiziert werden wie nötig und so gut wie nie mit der Komplexität der Realität übereinstimmen. \newline
 Der Fokus der Arbeit liegt daher auch auf dem Verwalten von Umweltparametern, der Erfassung dieser durch Sensoren auf vielen verschiedenen Sensorknoten. Wie genau die einzelnen Bauteile technisch aufgebaut sind, ist für die theoretische Betrachtung natürlich von Bedeutung, soll jedoch nicht bis ins kleinste Detail simuliert werden.
-
+\newpage
 \section{Sensoren}
 
 Den Hauptgegenstand in der Simulation bilden Sensoren, welche auf Sensorknoten angebracht sind. Ein solcher Knoten kann dann wiederum ein oder mehrere Sensoren besitzen.\newline
@@ -61,6 +61,7 @@ Ein Beispiel für eine Umsetzung ist ein Temperatursensor mit Aufnehmer in Form 
 
 Ein Lichtsensor oder auch Fotodetektor dient dazu, um die Stärke des einfallenden Lichts zu bestimmen, also die Helligkeit. Diese können unter Nutzung des fotoelektrischen Effekts ganz ähnlich zum vorgestellten Temperatursensor mit Heißleiter genutzt werden. Die sogenannte Fotoleitung bezeichnet hierbei die Zunahme der Leitfähigkeit durch steigende Bestrahlung. Um den Sensor mit einem aktiven Aufnehmer zu nutzen, kann ein Sensor auch mit dem fotovoltaischen Effekt gebaut werden. Dieser wird ebenfalls bei der Gewinnung von elektrischer Energie durch das Sonnenlicht benutzt. Je stärker die einfallende Sonnenenergie auf der Fotovoltaikfläche ist, um so mehr Energie wird erzeugt und um so größer ist die Helligkeit.
 
+\newpage
 \paragraph{Luftdruck}
 
 Auch von Drucksensoren gibt es sehr viele verschiedene Arten, welche auf unterschiedliche Weise funktionieren. Dabei gibt es Sensoren, welche lediglich Messwertänderungen feststellen können und andere, die wiederum auch statische Werte ermitteln können. Ein Beispiel für die zweite Variante ist ein piezoresistiver Drucksensor. Bei diesem befindet sich im Aufnehmer eine Membran, deren Position sich durch unterschiedlich hohen Druck verändert. Um diese Bewegung nun messbar zu machen, werden auf der Membran Widerstände aufgebracht.

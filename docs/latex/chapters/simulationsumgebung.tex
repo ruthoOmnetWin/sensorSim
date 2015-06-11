@@ -146,6 +146,7 @@ Eine Übersicht mit Kurzbeschreibung zu den wichtigsten Schlüsselwörtern in NE
 \includegraphics[width=\textwidth]{omnetEclipse}
 \end{figure}
 
+\newpage
 \paragraph{Beispiel} Ein kurzes Beispiel soll das Zusammenspiel einiger wichtiger Schlüsselworte aufzeigen:
 
 \label{StartNedExample}
@@ -162,6 +163,7 @@ simple LED
 \end{lstlisting}
 
 Als zweites Modul, ebenso wie die LED vom Typ simple, wird ein einfach Knopf (Listing \ref{lst:simpleNodeButton}) definiert. Dieser hat ein input-Gate über welches einen Knopfdruck simulieren kann und ein ausgehendes Gate, welches im Falle eines Knopfdrucks ein Signal ausgeben kann.
+\newpage
 \begin{lstlisting}[language=ned,caption={einfaches Modul: Knopf},label=lst:simpleNodeButton]
 simple Knopf
 {
@@ -192,6 +194,7 @@ module Knoten
 \end{lstlisting}
 
 Da es sich in Omnet++ um eine Netzwerksimulation handelt, wird einschließend noch ein kleines Netzwerk aus den vorher definierten Modulen aufgebaut werden (Listing \ref{lst:simpleNetwork}). Dabei werden zwei Module vom Typ Knoten erstellt und die jweiligen Gates der Beiden miteinander verbunden.
+\newpage
 \begin{lstlisting}[language=ned,caption={einfaches Netzwerk},label=lst:simpleNetwork]
 network Netzwerk
 {
@@ -353,7 +356,7 @@ scheduleAt(simTime()+delay, event);
 \end{lstlisting}
 \end{minipage}
 
-\paragraph{cArray} Ist eine Klasse, die als Sammlung für Objekte vom Typ cObject dient. Sie kommt zum Beispiel innerhalb der cMessage zum Einsatz. Die Parameterliste der Nachrichten besteht aus einem solchen cArray. Die wichtigsten Funktionen sind hier add() und remove(), die in Listing \ref{lst:carray} kurz an einem Beispiel gezeigt werden.
+\paragraph{cArray} Ist eine Klasse, die als Sammlung für Objekte vom Typ cObject dient. Sie kommt zum Beispiel innerhalb der cMessage zum Einsatz. Die Parameterliste der Nachrichten besteht aus einem solchen cArray. Die wichtigsten Funktionen sind hier add() und remove(), die in Listing \ref{lst:carray} kurz an einem Beispiel gezeigt werden. Weiterhin gibt es noch Funktionen wie size(), find() oder clear(), die selbsterklärend sind. Neben remove() gibt es auch noch die Möglichkeit per get() auf Elemente zuzugreifen, ohne sie dabei sofort zu entfernen.
 
 \begin{minipage}{\textwidth}
 \begin{lstlisting}[language=C++,caption={cArray add und remove},label=lst:carray]
@@ -375,8 +378,6 @@ delete array;
 \end{lstlisting}
 \end{minipage}
 
-Weiterhin gibt es noch Funktionen wie size(), find() oder clear(), die selbsterklärend sind. Neben remove() gibt es auch noch die Möglichkeit per get() auf Elemente zuzugreifen, ohne sie dabei sofort zu entfernen.
-
 \section{MiXiM-Framework als Omnet++-Erweiterung}
 
 \subsection{Einleitung}
@@ -390,12 +391,14 @@ Außerdem fügt es zusätzlich auch nützliche Hilfsfunktionen zu Omnet++ hinzu,
 
 Diese Klasse kann eine Instanz eines Objekts anhand eines Modulnamens finden. Es verhält sich daher wie eine Art Servicemanager. Mann kann mithilfe Dieser Submodule, globale Module, Hostmodule und Netzwerke finden. Dazu übergibt man einfach an ein Template wie in Beispiel \ref{lst:findmodule} den gewünschten Modulnamen und kann dann eine der Methoden, wie zum Beispiel findSubModule() aufrufen.
 
+\begin{minipage}{\textwidth}
 \begin{lstlisting}[language=C++, caption={Beispiel FindModule}, label=lst:findmodule]
 //template der FindModule Klasse
 template<typename T = cModule * const >
 //Beispielverwendung
 FindModule<BasePhyLayer*>::findSubModule(this)
 \end{lstlisting}
+\end{minipage}
 
 \subsubsection{Coord}
 

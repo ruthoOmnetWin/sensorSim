@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.6.1)  4 JUN 2015 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.6.1)  11 JUN 2015 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1058,20 +1058,20 @@ LaTeX Warning: Label `fig:messageEvent' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 
 bibgerm.sty: (n)german.sty 2.5b detected
@@ -1142,7 +1142,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box72
-Package hyperref Info: Link coloring ON on input line 6.
+Package hyperref Info: Link coloring ON on input line 7.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1152,9 +1152,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count160
 )
-LaTeX Info: Redefining \ref on input line 6.
-LaTeX Info: Redefining \pageref on input line 6.
-LaTeX Info: Redefining \nameref on input line 6.
+LaTeX Info: Redefining \ref on input line 7.
+LaTeX Info: Redefining \pageref on input line 7.
+LaTeX Info: Redefining \nameref on input line 7.
  (./main.out)
 (./main.out)
 \@outlinefile=\write6
@@ -1163,17 +1163,17 @@ LaTeX Info: Redefining \nameref on input line 6.
 \openout2 = `meta/metadaten.aux'.
 
  (./meta/metadaten.tex) (./formalLayout/titel.tex)
-LaTeX Font Info:    Try loading font information for T1+aess on input line 14.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 15.
 
 (/usr/share/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
-<img/TUC_deutsch_einzeile_CMYK.pdf, id=123, 273.02pt x 24.09pt>
+<img/TUC_deutsch_einzeile_CMYK.pdf, id=119, 273.02pt x 24.09pt>
 File: img/TUC_deutsch_einzeile_CMYK.pdf Graphic file (type pdf)
 
 <use img/TUC_deutsch_einzeile_CMYK.pdf>
 Package pdftex.def Info: img/TUC_deutsch_einzeile_CMYK.pdf used on input line 1
-4.
+5.
 (pdftex.def)             Requested size: 382.22539pt x 33.72574pt.
 
 
@@ -1188,7 +1188,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 14.
+(scrreprt)              by `\normalfont \bfseries ' on input line 15.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\sf'!
@@ -1202,12 +1202,12 @@ Class scrreprt Warning: Usage of deprecated font command `\sf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\sf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\sf'
-(scrreprt)              by `\normalfont \sffamily ' on input line 14.
+(scrreprt)              by `\normalfont \sffamily ' on input line 15.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 14.
+(Font)              <17.28> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
+(Font)              <12> on input line 15.
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              You should note, that in 1994 font command `\bf' has
@@ -1220,21 +1220,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 14.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\bf'!
-(scrreprt)              You should note, that in 1994 font command `\bf' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\bf' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 14.
+(scrreprt)              by `\normalfont \bfseries ' on input line 15.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -1248,7 +1234,21 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 14.
+(scrreprt)              by `\normalfont \bfseries ' on input line 15.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 15.
 
 [1
 
@@ -1354,108 +1354,109 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.15 
-      [3]
+      [3]pdfTeX warning (ext4): destination with the same identifier (name{page
+.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.28 \newpage
+              [4]
 Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.33 
-      [4] <img/AbstraktesSensorModell.png, id=277, 300.322pt x 660.869pt>
+<img/AbstraktesSensorModell.png, id=272, 300.322pt x 660.869pt>
 File: img/AbstraktesSensorModell.png Graphic file (type png)
 
 <use img/AbstraktesSensorModell.png>
 Package pdftex.def Info: img/AbstraktesSensorModell.png used on input line 38.
 (pdftex.def)             Requested size: 137.81068pt x 303.25pt.
  [5 <./img/AbstraktesSensorModell.png>]
-<img/temperatur.png, id=283, 843.15pt x 993.7125pt>
+<img/temperatur.png, id=278, 843.15pt x 993.7125pt>
 File: img/temperatur.png Graphic file (type png)
  <use img/temperatur.png>
 Package pdftex.def Info: img/temperatur.png used on input line 57.
 (pdftex.def)             Requested size: 387.95074pt x 457.2346pt.
 
 [6] [7 <./img/temperatur.png (PNG copy)>]
-<img/feuchtigkeit.png, id=296, 717.68124pt x 702.625pt>
+<img/feuchtigkeit.png, id=290, 717.68124pt x 702.625pt>
 File: img/feuchtigkeit.png Graphic file (type png)
 
 <use img/feuchtigkeit.png>
-Package pdftex.def Info: img/feuchtigkeit.png used on input line 76.
+Package pdftex.def Info: img/feuchtigkeit.png used on input line 77.
 (pdftex.def)             Requested size: 301.74019pt x 295.41139pt.
  [8 <./img/feuchtigkeit.png (PNG copy)>]
-<img/AbstraktesSensorknotenModell.png, id=303, 592.614pt x 419.166pt>
+<img/AbstraktesSensorknotenModell.png, id=298, 592.614pt x 419.166pt>
 File: img/AbstraktesSensorknotenModell.png Graphic file (type png)
 
 <use img/AbstraktesSensorknotenModell.png>
 Package pdftex.def Info: img/AbstraktesSensorknotenModell.png used on input lin
-e 94.
+e 95.
 (pdftex.def)             Requested size: 258.63821pt x 182.94334pt.
-
-Overfull \hbox (11.30644pt too wide) in paragraph at lines 99--102
+ [9]
+Overfull \hbox (11.30644pt too wide) in paragraph at lines 100--103
 \T1/aer/m/n/12 Die Ver-bin-dung zu An-wen-dungs-schicht stellt dann bei-spiels-
 wei-se das ZigBee-Framework
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--102
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
 
  []
 
-[9]) (./chapters/simulationsumgebung.tex [10 <./img/AbstraktesSensorknotenModel
-l.png>]
+) (./chapters/simulationsumgebung.tex [10 <./img/AbstraktesSensorknotenModell.p
+ng>] [11] [12
+
+
+]
 Kapitel 3.
-[11
-
-
-] [12]
+[13] [14]
 Overfull \hbox (6.7693pt too wide) in alignment at lines 66--66
 [][][][][] 
  []
 
-[13] <img/SimulationUI.pdf, id=355, 1096.89806pt x 616.70403pt>
+[15] <img/SimulationUI.pdf, id=359, 1096.89806pt x 616.70403pt>
 File: img/SimulationUI.pdf Graphic file (type pdf)
 
 <use img/SimulationUI.pdf>
 Package pdftex.def Info: img/SimulationUI.pdf used on input line 86.
 (pdftex.def)             Requested size: 431.05931pt x 242.34857pt.
- [14] [15 <./img/SimulationUI.pdf>]
+ [16] [17 <./img/SimulationUI.pdf>]
 Overfull \hbox (2.87025pt too wide) in alignment at lines 138--138
 [][][] 
  []
 
-<img/omnetEclipse.pdf, id=379, 1096.89806pt x 616.70403pt>
+<img/omnetEclipse.pdf, id=382, 1096.89806pt x 616.70403pt>
 File: img/omnetEclipse.pdf Graphic file (type pdf)
 
 <use img/omnetEclipse.pdf>
 Package pdftex.def Info: img/omnetEclipse.pdf used on input line 146.
 (pdftex.def)             Requested size: 431.05931pt x 242.34857pt.
- [16]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 154.
+ [18]
+LaTeX Font Info:    Try loading font information for T1+aett on input line 155.
 
  (/usr/share/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-[17 <./img/omnetEclipse.pdf>] [18]
-Overfull \hbox (8.67839pt too wide) in paragraph at lines 209--212
+[19 <./img/omnetEclipse.pdf>] [20]
+Overfull \hbox (8.67839pt too wide) in paragraph at lines 212--215
 \T1/aer/m/n/12 Im fol-gen-den Ab-schnitt wer-den die wich-tigs-ten Ele-men-te f
 ür ei-ne Omnet++-Simulation
  []
 
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 222.
+[21]
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 225.
 
-(/usr/share/texmf-dist/tex/latex/ae/omsaer.fd
+ (/usr/share/texmf-dist/tex/latex/ae/omsaer.fd
 File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 222.
- [19] [20]
-Overfull \hbox (14.02925pt too wide) in alignment at lines 270--270
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 225.
+ [22]
+Overfull \hbox (14.02925pt too wide) in alignment at lines 273--273
 [][][] 
  []
 
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+[23] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1463,33 +1464,33 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-) [21]
-<img/statWrong.pdf, id=469, 800.68036pt x 422.42516pt>
+)
+<img/statWrong.pdf, id=471, 800.68036pt x 422.42516pt>
 File: img/statWrong.pdf Graphic file (type pdf)
  <use img/statWrong.pdf>
-Package pdftex.def Info: img/statWrong.pdf used on input line 301.
+Package pdftex.def Info: img/statWrong.pdf used on input line 304.
 (pdftex.def)             Requested size: 431.05931pt x 227.42294pt.
 
-<img/statRight.pdf, id=470, 800.68036pt x 422.42516pt>
+<img/statRight.pdf, id=472, 800.68036pt x 422.42516pt>
 File: img/statRight.pdf Graphic file (type pdf)
  <use img/statRight.pdf>
-Package pdftex.def Info: img/statRight.pdf used on input line 308.
+Package pdftex.def Info: img/statRight.pdf used on input line 311.
 (pdftex.def)             Requested size: 431.05931pt x 227.42294pt.
 
-[22] [23 <./img/statWrong.pdf> <./img/statRight.pdf>]
+[24] [25 <./img/statWrong.pdf> <./img/statRight.pdf>]
 <img/messageEvent.pdf, id=509, 707.52129pt x 301.96114pt>
 File: img/messageEvent.pdf Graphic file (type pdf)
 
 <use img/messageEvent.pdf>
-Package pdftex.def Info: img/messageEvent.pdf used on input line 340.
+Package pdftex.def Info: img/messageEvent.pdf used on input line 343.
 (pdftex.def)             Requested size: 344.84875pt x 147.17896pt.
- [24 <./img/messageEvent.pdf>] [25]
-Overfull \hbox (4.62202pt too wide) in paragraph at lines 402--403
+ [26] [27 <./img/messageEvent.pdf>] [28]
+Overfull \hbox (4.62202pt too wide) in paragraph at lines 405--406
 \T1/aer/m/n/12 Coord ist ei-ne ein-fa-che Klas-se zur Re-prä-sen-ta-ti-on von K
 o-or-di-na-ten im 3-dimensionalen
  []
 
-[26]) (./chapters/implementierung.tex [27] [28
+) (./chapters/implementierung.tex [29] [30
 
 
 ]
@@ -1499,121 +1500,101 @@ Overfull \hbox (17.79706pt too wide) in alignment at lines 35--35
 [][] 
  []
 
-[29] [30] [31] [32] [33] [34] [35] [36]
-<img/switchingModes5000.pdf, id=729, 290.85864pt x 116.65582pt>
+[31] [32] [33] [34]
+Overfull \hbox (8.96613pt too wide) in paragraph at lines 110--114
+\T1/aer/m/n/12 Stattdessen wird die In-itia-li-sie-rung des Pro-zes-sors zu-sam
+-men mit sei-nen Ga-tes, Connec-
+ []
+
+[35] [36] [37] [38] [39]
+<img/switchingModes5000.pdf, id=739, 290.85864pt x 116.65582pt>
 File: img/switchingModes5000.pdf Graphic file (type pdf)
 
 <use img/switchingModes5000.pdf>
-Package pdftex.def Info: img/switchingModes5000.pdf used on input line 243.
+Package pdftex.def Info: img/switchingModes5000.pdf used on input line 249.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
- [37] [38 <./img/switchingModes5000.pdf>]
-[39] <img/SimpleClasses.png, id=816, 103.587pt x 117.43875pt>
+ [40 <./img/switchingModes5000.pdf>] [41]
+<img/SimpleClasses.png, id=794, 103.587pt x 117.43875pt>
 File: img/SimpleClasses.png Graphic file (type png)
 
 <use img/SimpleClasses.png>
-Package pdftex.def Info: img/SimpleClasses.png used on input line 331.
+Package pdftex.def Info: img/SimpleClasses.png used on input line 314.
 (pdftex.def)             Requested size: 103.58675pt x 117.43845pt.
- [40]
-Overfull \hbox (8.12608pt too wide) in paragraph at lines 351--352
+ [42 <./img/SimpleClasses.png>]
+Overfull \hbox (8.12608pt too wide) in paragraph at lines 334--335
 \T1/aer/m/n/12 ExtendedMessage erbt di-rekt von der Klas-se cMes-sa-ge, der Sta
 ndard-Nachrichtenklasse
  []
 
-<img/ExtendedMessage.png, id=837, 110.21175pt x 215.3646pt>
+<img/ExtendedMessage.png, id=815, 110.21175pt x 215.3646pt>
 File: img/ExtendedMessage.png Graphic file (type png)
 
 <use img/ExtendedMessage.png>
-Package pdftex.def Info: img/ExtendedMessage.png used on input line 356.
+Package pdftex.def Info: img/ExtendedMessage.png used on input line 339.
 (pdftex.def)             Requested size: 110.21147pt x 215.36406pt.
- [41 <./img/SimpleClasses.png>] [42 <./img/ExtendedMessage.png>] [43] [44] [45]
-
-<img/SensorModel.png, id=905, 245.75395pt x 389.39508pt>
+ [43 <./img/ExtendedMessage.png>] [44] [45]
+[46] <img/SensorModel.png, id=876, 245.75395pt x 389.39508pt>
 File: img/SensorModel.png Graphic file (type png)
 
 <use img/SensorModel.png>
-Package pdftex.def Info: img/SensorModel.png used on input line 500.
+Package pdftex.def Info: img/SensorModel.png used on input line 484.
 (pdftex.def)             Requested size: 129.3191pt x 204.90486pt.
- [46 <./img/SensorModel.png>]
-<img/Sensornode.png, id=916, 364.76575pt x 410.96822pt>
+ [47] [48 <./img/SensorModel.png>]
+<img/Sensornode.png, id=893, 364.76575pt x 410.96822pt>
 File: img/Sensornode.png Graphic file (type png)
 
 <use img/Sensornode.png>
-Package pdftex.def Info: img/Sensornode.png used on input line 531.
+Package pdftex.def Info: img/Sensornode.png used on input line 517.
 (pdftex.def)             Requested size: 301.74019pt x 339.96849pt.
- [47] [48 <./img/Sensornode.png>] [49] [50] [51]
-[52] [53]
-Overfull \hbox (1.14394pt too wide) in paragraph at lines 679--680
-[] []\T1/aess/bx/n/12 TrafficGenExample[][] \T1/aer/m/n/12 Das Netz-werk Traf-f
-ic-GenExam-ple un-ter-schei-det nur we-nig vom
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 683--684
+ [49] [50 <./img/Sensornode.png>] [51] [52] [53]
+[54] [55]
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 697--699
-
- []
-
-[54] <img/sensorExampleEvents.png, id=1034, 1048.63411pt x 485.03596pt>
+[56] <img/sensorExampleEvents.png, id=1010, 1048.63411pt x 485.03596pt>
 File: img/sensorExampleEvents.png Graphic file (type png)
 
 <use img/sensorExampleEvents.png>
-Package pdftex.def Info: img/sensorExampleEvents.png used on input line 713.
+Package pdftex.def Info: img/sensorExampleEvents.png used on input line 695.
 (pdftex.def)             Requested size: 431.05931pt x 199.3767pt.
 
-<img/startMeasuring.png, id=1035, 816.90268pt x 382.02425pt>
+<img/startMeasuring.png, id=1011, 816.90268pt x 382.02425pt>
 File: img/startMeasuring.png Graphic file (type png)
 
 <use img/startMeasuring.png>
-Package pdftex.def Info: img/startMeasuring.png used on input line 720.
+Package pdftex.def Info: img/startMeasuring.png used on input line 702.
 (pdftex.def)             Requested size: 431.05931pt x 201.58585pt.
- [55 <./img/sensorExampleEvents.png>] [56 <./img/startMeasuring.png>]
-<img/sleepVsNoSleepPowerModes.pdf, id=1048, 290.85864pt x 116.65582pt>
+ [57 <./img/sensorExampleEvents.png>] [58 <./img/startMeasuring.png>]
+<img/sleepVsNoSleepPowerModes.pdf, id=1026, 290.85864pt x 116.65582pt>
 File: img/sleepVsNoSleepPowerModes.pdf Graphic file (type pdf)
 
 <use img/sleepVsNoSleepPowerModes.pdf>
-Package pdftex.def Info: img/sleepVsNoSleepPowerModes.pdf used on input line 76
-3.
+Package pdftex.def Info: img/sleepVsNoSleepPowerModes.pdf used on input line 74
+7.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
 
-<img/sleepVsNoSleepResRel.pdf, id=1049, 738.84229pt x 296.34012pt>
+<img/sleepVsNoSleepResRel.pdf, id=1027, 738.84229pt x 296.34012pt>
 File: img/sleepVsNoSleepResRel.pdf Graphic file (type pdf)
 
 <use img/sleepVsNoSleepResRel.pdf>
-Package pdftex.def Info: img/sleepVsNoSleepResRel.pdf used on input line 770.
+Package pdftex.def Info: img/sleepVsNoSleepResRel.pdf used on input line 754.
 (pdftex.def)             Requested size: 431.05931pt x 172.89478pt.
- [57 <./img/sleepVsNoSleepPowerModes.pdf> <./img/sleepVsNoSleepResRel.pdf>]
-<img/outOfSync.pdf, id=1070, 73.40816pt x 70.56282pt>
+ [59 <./img/sleepVsNoSleepPowerModes.pdf>]
+<img/outOfSync.pdf, id=1042, 73.40816pt x 70.56282pt>
 File: img/outOfSync.pdf Graphic file (type pdf)
  <use img/outOfSync.pdf>
-Package pdftex.def Info: img/outOfSync.pdf used on input line 783.
-(pdftex.def)             Requested size: 431.05931pt x 414.36061pt.
+Package pdftex.def Info: img/outOfSync.pdf used on input line 767.
+(pdftex.def)             Requested size: 215.52965pt x 207.17976pt.
 )
-(./chapters/zusammenfassung.tex [58] [59 <./img/outOfSync.pdf>] [60
+(./chapters/zusammenfassung.tex [60 <./img/sleepVsNoSleepResRel.pdf> <./img/out
+OfSync.pdf>] [61] [62
 
 
 ]
 Kapitel 5.
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-[62] [63] [64
-
-
-]
-Kapitel 6.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 24--37
-
- []
-
-(./formalLayout/glossar.tex) (./formalLayout/literaturverzeichnis.tex
-(./main.bbl [65] [66
+[63]) [64] (./formalLayout/glossar.tex)
+(./formalLayout/literaturverzeichnis.tex (./main.bbl [65] [66
 
 
 ] [67]
@@ -1831,27 +1812,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--10
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
  (./main.aux (./meta/metadaten.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 570F77E877B3272FC45F7F6F03E9C287;1877.
+(rerunfilecheck)             Checksum: E0871187E075410F51C85D02E5318AD3;1831.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
- 22837 strings out of 493109
- 405013 string characters out of 6140857
- 910070 words of memory out of 5000000
- 25177 multiletter control sequences out of 15000+600000
+ 22793 strings out of 493109
+ 404356 string characters out of 6140857
+ 913070 words of memory out of 5000000
+ 25161 multiletter control sequences out of 15000+600000
  50983 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,18n,99p,1050b,1939s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 77i,18n,99p,991b,1937s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -1866,10 +1847,10 @@ pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr.
 pfb>
-Output written on main.pdf (79 pages, 6599493 bytes).
+Output written on main.pdf (79 pages, 6596247 bytes).
 PDF statistics:
- 1346 PDF objects out of 1440 (max. 8388607)
- 1195 compressed objects within 12 object streams
- 581 named destinations out of 1000 (max. 500000)
- 345 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1310 PDF objects out of 1440 (max. 8388607)
+ 1159 compressed objects within 12 object streams
+ 553 named destinations out of 1000 (max. 500000)
+ 337 words of extra memory for PDF output out of 10000 (max. 10000000)
 
