@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.6.1)  11 JUN 2015 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.6.1)  15 JUN 2015 12:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1547,53 +1547,48 @@ File: img/Sensornode.png Graphic file (type png)
 Package pdftex.def Info: img/Sensornode.png used on input line 517.
 (pdftex.def)             Requested size: 301.74019pt x 339.96849pt.
  [49] [50 <./img/Sensornode.png>] [51] [52] [53]
-[54] [55]
-Underfull \hbox (badness 10000) in paragraph at lines 662--663
-
- []
-
-[56] <img/sensorExampleEvents.png, id=1010, 1048.63411pt x 485.03596pt>
+[54] [55] <img/sensorExampleEvents.png, id=985, 1048.63411pt x 485.03596pt>
 File: img/sensorExampleEvents.png Graphic file (type png)
 
 <use img/sensorExampleEvents.png>
-Package pdftex.def Info: img/sensorExampleEvents.png used on input line 695.
+Package pdftex.def Info: img/sensorExampleEvents.png used on input line 696.
 (pdftex.def)             Requested size: 431.05931pt x 199.3767pt.
 
-<img/startMeasuring.png, id=1011, 816.90268pt x 382.02425pt>
+<img/startMeasuring.png, id=986, 816.90268pt x 382.02425pt>
 File: img/startMeasuring.png Graphic file (type png)
 
 <use img/startMeasuring.png>
 Package pdftex.def Info: img/startMeasuring.png used on input line 702.
 (pdftex.def)             Requested size: 431.05931pt x 201.58585pt.
- [57 <./img/sensorExampleEvents.png>] [58 <./img/startMeasuring.png>]
-<img/sleepVsNoSleepPowerModes.pdf, id=1026, 290.85864pt x 116.65582pt>
+ [56] [57] [58 <./img/sensorExampleEvents.png> <./img/startMeasuring.png>]
+<img/sleepVsNoSleepPowerModes.pdf, id=1025, 290.85864pt x 116.65582pt>
 File: img/sleepVsNoSleepPowerModes.pdf Graphic file (type pdf)
 
 <use img/sleepVsNoSleepPowerModes.pdf>
 Package pdftex.def Info: img/sleepVsNoSleepPowerModes.pdf used on input line 74
-7.
+6.
 (pdftex.def)             Requested size: 431.05931pt x 172.89354pt.
 
-<img/sleepVsNoSleepResRel.pdf, id=1027, 738.84229pt x 296.34012pt>
+<img/sleepVsNoSleepResRel.pdf, id=1026, 738.84229pt x 296.34012pt>
 File: img/sleepVsNoSleepResRel.pdf Graphic file (type pdf)
 
 <use img/sleepVsNoSleepResRel.pdf>
-Package pdftex.def Info: img/sleepVsNoSleepResRel.pdf used on input line 754.
+Package pdftex.def Info: img/sleepVsNoSleepResRel.pdf used on input line 753.
 (pdftex.def)             Requested size: 431.05931pt x 172.89478pt.
- [59 <./img/sleepVsNoSleepPowerModes.pdf>]
-<img/outOfSync.pdf, id=1042, 73.40816pt x 70.56282pt>
+ [59] [60 <./img/sleepVsNoSleepPowerModes.pdf> <./img/sleepVsNoSleepResRel.pdf>
+]
+<img/outOfSync.pdf, id=1051, 73.40816pt x 70.56282pt>
 File: img/outOfSync.pdf Graphic file (type pdf)
  <use img/outOfSync.pdf>
-Package pdftex.def Info: img/outOfSync.pdf used on input line 767.
+Package pdftex.def Info: img/outOfSync.pdf used on input line 766.
 (pdftex.def)             Requested size: 215.52965pt x 207.17976pt.
 )
-(./chapters/zusammenfassung.tex [60 <./img/sleepVsNoSleepResRel.pdf> <./img/out
-OfSync.pdf>] [61] [62
-
-
-]
+(./chapters/zusammenfassung.tex [61 <./img/outOfSync.pdf>] [62]
 Kapitel 5.
-[63]) [64] (./formalLayout/glossar.tex)
+[63
+
+
+]) [64] (./formalLayout/glossar.tex)
 (./formalLayout/literaturverzeichnis.tex (./main.bbl [65] [66
 
 
@@ -1806,19 +1801,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--10
  []
 
 \us=\skip57
-) [69
+) (./formalLayout/anhang.tex [69
 
 
+
+
+] [70
+
+
+] [71
 
 
 ]
+Underfull \hbox (badness 10000) in alignment at lines 70--70
+[][][][][] 
+ []
+
+) [72]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
  (./main.aux (./meta/metadaten.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E0871187E075410F51C85D02E5318AD3;1831.
+(rerunfilecheck)             Checksum: 100D3331A81CF24D8E1F4A10D276224D;1827.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1826,10 +1832,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
- 22793 strings out of 493109
- 404356 string characters out of 6140857
- 913070 words of memory out of 5000000
- 25161 multiletter control sequences out of 15000+600000
+ 22806 strings out of 493109
+ 404555 string characters out of 6140857
+ 914070 words of memory out of 5000000
+ 25164 multiletter control sequences out of 15000+600000
  50983 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,18n,99p,991b,1937s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1847,10 +1853,10 @@ pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
 nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr.
 pfb>
-Output written on main.pdf (79 pages, 6596247 bytes).
+Output written on main.pdf (82 pages, 6600229 bytes).
 PDF statistics:
- 1310 PDF objects out of 1440 (max. 8388607)
- 1159 compressed objects within 12 object streams
- 553 named destinations out of 1000 (max. 500000)
+ 1327 PDF objects out of 1440 (max. 8388607)
+ 1173 compressed objects within 12 object streams
+ 560 named destinations out of 1000 (max. 500000)
  337 words of extra memory for PDF output out of 10000 (max. 10000000)
 

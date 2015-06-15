@@ -85,13 +85,13 @@
 \contentsline {subsubsection}{\numberline {4.2.2.10}DatarateChannel}{52}{subsubsection.4.2.2.10}
 \contentsline {subsubsection}{\numberline {4.2.2.11}BasicWSN}{52}{subsubsection.4.2.2.11}
 \contentsline {subsection}{\numberline {4.2.3}Simulationsparameter und omnetpp.ini}{53}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Funktionsweise mit Beispielanwendungen}{55}{section.4.3}
-\contentsline {paragraph}{\nonumberline BasicExample}{55}{section*.41}
+\contentsline {section}{\numberline {4.3}Auswertung und Beispielanwendungen}{55}{section.4.3}
+\contentsline {paragraph}{\nonumberline BasicExample}{56}{section*.41}
 \contentsline {paragraph}{\nonumberline AllNodes}{56}{section*.42}
 \contentsline {paragraph}{\nonumberline TrafficGenExample}{56}{section*.43}
 \contentsline {paragraph}{\nonumberline SensorExample}{56}{section*.44}
-\contentsline {paragraph}{\nonumberline Events und die dazugeh\IeC {\"o}rigen Zeitintervalle}{58}{section*.45}
-\contentsline {paragraph}{\nonumberline SleepVsNoSleep}{59}{figure.4.9}
+\contentsline {paragraph}{\nonumberline Events und die dazugeh\IeC {\"o}rigen Zeitintervalle}{59}{section*.45}
+\contentsline {paragraph}{\nonumberline SleepVsNoSleep}{61}{figure.4.9}
 \contentsline {paragraph}{\nonumberline SleepOutOfSync}{61}{figure.4.10}
 \contentsline {chapter}{\numberline {5}Zusammenfassung}{63}{chapter.5}
 \contentsline {paragraph}{\nonumberline Anforderungen}{63}{section*.49}

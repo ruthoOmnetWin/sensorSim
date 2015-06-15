@@ -637,9 +637,12 @@ Die omnetpp.ini ist eine Datei, in der Eigenschaften der Simulation geändert we
 \end{itemize}
 \end{itemize}
 
-\section{Funktionsweise mit Beispielanwendungen}
+\section{Auswertung und Beispielanwendungen}
 
-Alle in diesem Kapitel beschriebenen Module wirken für die Simulation zusammen, um ein Netzwerk aus Sensorknoten zu schaffen, in dem die Knoten miteinander und mit ihrer Umgebung gemeinsam agieren können. Dazu werden nach dem Start der Simulation Umweltparameter bereitgestellt und eine festgelegte Anzahl von verschiedenen Sensorknoten erzeugt. Diese können sich anschließend bewegen oder ihr Position beibehalten. Sie können mit ihren Sensoren Werte der Umgebung erfassen und diese über Funk an andere Sensorknoten übertragen, sollten diese in der näheren Umgebung zur Verfügung stehen.
+Alle in diesem Kapitel beschriebenen Module wirken für die Simulation zusammen, um ein Netzwerk aus Sensorknoten zu schaffen, in dem die Knoten miteinander und mit ihrer Umgebung gemeinsam agieren können. Dazu werden nach dem Start der Simulation Umweltparameter von der simulierten Welt bereitgestellt. Innerhalb des festgelegten Raums wird den Sensorknoten dadurch eine realistische Umgebung geboten. Sie haben wie in der Realität eine feste Position. Diese kann sich auch ändern, sofern dies gewollt ist. \\
+Die Knoten können die Daten der Umgebung bestimmen, falls sie die erforderlichen Sensoren besitzen. Wenn das der Fall ist, kann beispielsweise die Temperatur bestimmt werden. Je nachdem ob die Knoten gerade eine Funkverbindung zu Anderen besitzen können sie die gemessenen Daten sofort versenden. Falls nicht können die Daten auch zunächst im Speicher abgelegt werden.\\
+Messungen werden innerhalb des Prozessormoduls initiiert und verarbeitet. Zusätzlich ist er für weitere Aufgaben zuständig. Er kann neben der Sensoreinheit auch das Energiemanagement steuern. Dazu stehen verschiedene Energiemodi bereit, zwischen denen er wechseln kann. Weiterhin hat er Zugriff auf den Speicher des Knotens. Dort kann der Prozessor Daten anlegen, verändern, löschen und auslesen. \\
+Die einzelnen Komponenten ermöglichen dem Knoten ein komplexes Verhalten, ob in Interaktion mit anderen Knoten oder allein. In folgenden Abschnitt wird Dieses an einigen Beispielen veranschaulicht.
 
 \subsection*{allgemeine Beispiele}
 
@@ -660,7 +663,7 @@ Das Netzwerk TrafficGenExample unterscheidet sich nur wenig vom BasicExample. De
 \paragraph{SensorExample}
 
 Im Beispiel SensorExample wird die Funktionsweise von den Bauelementen der simulierten Sensorik und der Umgebung aufgezeigt. Dafür wurden verschiedene Parameter in der omnet.ini und in den Modulen so gewählt, damit dies gut abgelesen werden kann (Listing \ref{lst:sePar}).\\
-
+Die beiden Parameter noisy und noisyWorld dienen dazu, dass während der Simulation an den entscheidenden Stellen der Simulation Ausgaben gemacht werden. Diese geben Informationen darüber, welche Aktionen ausgeführt werden und wie der Zustand von einigen Modulen ist, so zum Beispiel wird bei Änderung der Speicherinhalt vom Memory-Modul ausgegeben und stets der aktuelle Prozessormodus angegeben.\\
 \begin{minipage}{\textwidth}
 \begin{lstlisting}[language=ned,caption={Parameter für das Beispiel SensorExample},label=lst:sePar]
 **.sensingIntervall = 10000s
@@ -674,7 +677,6 @@ Im Beispiel SensorExample wird die Funktionsweise von den Bauelementen der simul
 **.noisy = true; 
 \end{lstlisting}
 \end{minipage}
-Die beiden Parameter noisy und noisyWorld dienen dazu, dass während der Simulation an den entscheidenden Stellen der Simulation Ausgaben gemacht werden. Diese geben Informationen darüber, welche Aktionen ausgeführt werden und wie der Zustand von einigen Modulen ist, so zum Beispiel wird bei Änderung der Speicherinhalt vom Memory-Modul ausgegeben und stets der aktuelle Prozessormodus angegeben.\\
 \begin{minipage}{\textwidth}
 \begin{lstlisting}[language=ned,caption={Ausgabe des Speicherinhalts durch den Prozessor bei t=40000s},label=lst:seProzessorOut]
 Processor: received data:
@@ -687,21 +689,18 @@ Processor: Temperature: 27 (t=30000s)
 Im Beispiel wird alle 10000 Sekunden von den Sensoren ein Messwert abgegriffen. Außerdem werden die vorliegenden Werte alle 13000 Sekunden geändert. Die verschiedenen Werte werden dann nacheinander im Speicher abgelegt.\\
 Da dieser im Beispiel nur Platz für 4 Datensätze bietet und auch nur ein einziger Sensor genutzt wird ist er nach 4 Messungen voll. Daher wird nach je 4 Messungen der Speicher geleert. Die bis dahin gespeicherten Werte werden dann an den Prozessor gesendet. Eine Beispielausgabe des Prozessors aus einem Testlauf, in dem in dem nur ein einziger Knoten mit einem Temperatursensor genutzt wurde, sind in Listing \ref{lst:seProzessorOut} zu sehen. Diese Ausgabe wurde zum Zeitpunkt t=34000s getätigt, ausgelöst durch den Event readAndClearStorage. Es wurde also gleichzeitig auch der Memory gelöscht. Direkt danach wurde der Speicher wieder mit neuen Datensätzen gefüllt.\\
 Dies ist ein realistisches Szenario. Während sich die Knoten in einem Ruhemodus befinden, um Strom zu sparen, kann dennoch regelmäßig eine Messung durchgeführt und gespeichert werden. Wenn nun ein Zeitfenster erreicht wird, in dem Kommunikation im Netzwerk stattfindet, so werden gleich mehrere Messwerte auf einmal versendet.
-
 \begin{figure}[htbp]
 \centering
 \caption{Die verschiedenen Events im Beispiel SensorExample}
 \label{fig:seEvents}
 \includegraphics[width=\textwidth]{sensorExampleEvents}
 \end{figure}
-
 \begin{figure}[htbp]
 \centering
 \caption{Beispiel für den Nachrichtenverlauf beim Einlesen von Sensordaten}
 \label{fig:seStartMeasuring}
 \includegraphics[width=\textwidth]{startMeasuring}
 \end{figure}
-
 Im Bild \ref{fig:seEvents} sind die verschiedenen Events zu sehen, die im Sensor- und Worldmodul auftauchen. In der CustomWorldUtility wird nur einer der Events ausgelöst, welcher zum erneuten Erstellen von Sensordaten dient: updateData mit dem Intervall dataRecreationIntervall.\\
 Die anderen Events finden im Prozessor statt. Sie dienen dazu, bestimmte Arbeitsabläufe anzustoßen. Der wichtigste Event ist startSensingUnit, dessen Zeitintervall durch sensingIntervall festgelegt wird. Er dient dazu, einen Messvorgang in Gang zu setzen. Am Ende werden die gemessenen Werte stets im Memory-Modul gespeichert. 
 
