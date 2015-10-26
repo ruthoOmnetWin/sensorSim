@@ -1,0 +1,13 @@
+#ifndef CE_PACKETS_H
+#define CE_PACKETS_H
+
+
+#include "ce-packetstructs.h"
+
+
+void packetsProcessMyPacket(GENERIC_PACKET * myPacket);
+void networkSendPacketToAllChildreen(GENERIC_PACKET* myPacket);
+void packetsProcessIncommingPacket(GENERIC_PACKET_RX * myPacket);
+void networkSendPacket(GENERIC_PACKET* myPacket);
+
+#endif

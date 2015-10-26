@@ -1,0 +1,48 @@
+file 6309 1436944918                                            
+version 2
+run General-0-20150715-09:20:56-28792
+attr configname General
+attr datetime 20150715-09:20:56
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network WakeUpRecv
+attr processid 28792
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 6  WakeUpRecv.node1.batteryStats  capacity  ETV
+attr unit  mW-s
+vector 7  WakeUpRecv.node1.batteryStats  capacity(relative)  ETV
+vector 8  WakeUpRecv.node1.batteryStats  estimate  ETV
+attr unit  mW-s
+vector 9  WakeUpRecv.node1.batteryStats  estimate(relative)  ETV
+vector 17  WakeUpRecv.node2.batteryStats  capacity  ETV
+attr unit  mW-s
+vector 18  WakeUpRecv.node2.batteryStats  capacity(relative)  ETV
+vector 19  WakeUpRecv.node2.batteryStats  estimate  ETV
+attr unit  mW-s
+vector 20  WakeUpRecv.node2.batteryStats  estimate(relative)  ETV
+vector 28  WakeUpRecv.node3.batteryStats  capacity  ETV
+attr unit  mW-s
+vector 29  WakeUpRecv.node3.batteryStats  capacity(relative)  ETV
+vector 30  WakeUpRecv.node3.batteryStats  estimate  ETV
+attr unit  mW-s
+vector 31  WakeUpRecv.node3.batteryStats  estimate(relative)  ETV
+6	1227 398 0 344 0 16 17 11879007.390159 11880000 201951562.75604 2.3990843368412e+015
+7	1625 425 0 344 0 16 17 0.99991644698311 1 16.999289794279 16.998579629354
+8	2050 398 0 344 0 16 17 11879007.390159 11880000 201951562.75604 2.3990843368412e+015
+9	2448 425 0 344 0 16 17 0.99991644698311 1 16.999289794279 16.998579629354
+17	2873 411 0 345 0 16 17 11879379.634619 11880000 201954416.88742 2.3991521475923e+015
+18	3284 442 0 345 0 16 17 0.99994778069183 1 16.999530041028 16.999060098688
+19	3726 411 0 345 0 16 17 11879379.634619 11880000 201954416.88742 2.3991521475923e+015
+20	4137 442 0 345 0 16 17 0.99994778069183 1 16.999530041028 16.999060098688
+28	4579 425 0 346 0 16 17 11879565.781994 11880000 201955906.1591 2.3991875317099e+015
+29	5004 440 0 346 0 16 17 0.99996344966276 1 16.999655400598 16.9993108109
+30	5444 425 0 346 0 16 17 11879565.781994 11880000 201955906.1591 2.3991875317099e+015
+31	5869 440 0 346 0 16 17 0.99996344966276 1 16.999655400598 16.9993108109

@@ -1,0 +1,89 @@
+version 2
+run General-0-20150715-09:20:56-28792
+attr configname General
+attr datetime 20150715-09:20:56
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network WakeUpRecv
+attr processid 28792
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar WakeUpRecv.node1.nic.mac 	nbTxFrames 	13
+scalar WakeUpRecv.node1.nic.mac 	nbRxFrames 	0
+scalar WakeUpRecv.node1.nic.mac 	nbDroppedFrames 	0
+scalar WakeUpRecv.node1.nic.mac 	nbMissedAcks 	0
+scalar WakeUpRecv.node1.nic.mac 	nbRecvdAcks 	0
+scalar WakeUpRecv.node1.nic.mac 	nbTxAcks 	0
+scalar WakeUpRecv.node1.nic.mac 	nbDuplicates 	0
+scalar WakeUpRecv.node1.nic.mac 	meanBackoff 	0.0010338461538462
+scalar WakeUpRecv.node1.nic.mac 	nbBackoffs 	13
+scalar WakeUpRecv.node1.nic.mac 	backoffDurations 	0.01344
+scalar WakeUpRecv.node1.nic.phy 	nbFramesWithInterference 	0
+scalar WakeUpRecv.node1.nic.phy 	nbFramesWithoutInterference 	0
+scalar WakeUpRecv.node1.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar WakeUpRecv.node1.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar WakeUpRecv.node1.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar WakeUpRecv.node1.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar WakeUpRecv.node1.batteryStats 	nominal 	11880000
+attr unit  mW-s
+scalar WakeUpRecv.node1.batteryStats 	total 	993.18941466324
+attr unit  mW-s
+scalar WakeUpRecv.node1.batteryStats 	lifetime 	-1
+attr unit  s
+scalar WakeUpRecv.node1.batteryStats 	"Mean power consumption" 	62.038116141773
+attr unit  mW
+scalar WakeUpRecv.node2.nic.mac 	nbTxFrames 	0
+scalar WakeUpRecv.node2.nic.mac 	nbRxFrames 	6
+scalar WakeUpRecv.node2.nic.mac 	nbDroppedFrames 	0
+scalar WakeUpRecv.node2.nic.mac 	nbMissedAcks 	0
+scalar WakeUpRecv.node2.nic.mac 	nbRecvdAcks 	0
+scalar WakeUpRecv.node2.nic.mac 	nbTxAcks 	0
+scalar WakeUpRecv.node2.nic.mac 	nbDuplicates 	0
+scalar WakeUpRecv.node2.nic.mac 	meanBackoff 	0
+scalar WakeUpRecv.node2.nic.mac 	nbBackoffs 	0
+scalar WakeUpRecv.node2.nic.mac 	backoffDurations 	0
+scalar WakeUpRecv.node2.nic.phy 	nbFramesWithInterference 	0
+scalar WakeUpRecv.node2.nic.phy 	nbFramesWithoutInterference 	6
+scalar WakeUpRecv.node2.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar WakeUpRecv.node2.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar WakeUpRecv.node2.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar WakeUpRecv.node2.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar WakeUpRecv.node2.batteryStats 	nominal 	11880000
+attr unit  mW-s
+scalar WakeUpRecv.node2.batteryStats 	total 	620.36538175307
+attr unit  mW-s
+scalar WakeUpRecv.node2.batteryStats 	lifetime 	-1
+attr unit  s
+scalar WakeUpRecv.node2.batteryStats 	"Mean power consumption" 	38.75021122389
+attr unit  mW
+scalar WakeUpRecv.node3.nic.mac 	nbTxFrames 	0
+scalar WakeUpRecv.node3.nic.mac 	nbRxFrames 	0
+scalar WakeUpRecv.node3.nic.mac 	nbDroppedFrames 	0
+scalar WakeUpRecv.node3.nic.mac 	nbMissedAcks 	0
+scalar WakeUpRecv.node3.nic.mac 	nbRecvdAcks 	0
+scalar WakeUpRecv.node3.nic.mac 	nbTxAcks 	0
+scalar WakeUpRecv.node3.nic.mac 	nbDuplicates 	0
+scalar WakeUpRecv.node3.nic.mac 	meanBackoff 	0
+scalar WakeUpRecv.node3.nic.mac 	nbBackoffs 	0
+scalar WakeUpRecv.node3.nic.mac 	backoffDurations 	0
+scalar WakeUpRecv.node3.nic.phy 	nbFramesWithInterference 	0
+scalar WakeUpRecv.node3.nic.phy 	nbFramesWithoutInterference 	0
+scalar WakeUpRecv.node3.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar WakeUpRecv.node3.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar WakeUpRecv.node3.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar WakeUpRecv.node3.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar WakeUpRecv.node3.batteryStats 	nominal 	11880000
+attr unit  mW-s
+scalar WakeUpRecv.node3.batteryStats 	total 	434.2180070933
+attr unit  mW-s
+scalar WakeUpRecv.node3.batteryStats 	lifetime 	-1
+attr unit  s
+scalar WakeUpRecv.node3.batteryStats 	"Mean power consumption" 	27.122789225494
+attr unit  mW

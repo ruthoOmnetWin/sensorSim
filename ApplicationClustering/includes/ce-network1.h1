@@ -1,0 +1,20 @@
+#ifndef _CE_NETWORK_H_
+#define _CE_NETWORK_H_
+
+#include "ce-packetstructs.h"
+//OMNET
+#include "BaseMacLayer.h"
+#include "NetwControlInfo.h"
+#include <vector>
+#include <omnetpp.h>
+
+#include "MiXiMDefs.h"
+#include "BaseModule.h"
+#include "SimpleAddress.h"
+#include "DiceApplication.h"
+
+void networkSendPacket(GENERIC_PACKET* myPacket);
+void networkSendPacketSim(GENERIC_PACKET* myPacket,DiceApplication *diceApplication,int port);
+void networkSendPacketDirect(GENERIC_PACKET* myPacket,unsigned short destinationNode);
+void networkInit(unsigned int dataIn,unsigned int dataOut);
+#endif //_NETWORK_H_

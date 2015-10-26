@@ -1,0 +1,605 @@
+version 2
+run General-0-20151026-10:08:43-5320
+attr configname General
+attr datetime 20151026-10:08:43
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network ApplicationClustering
+attr processid 5320
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar ApplicationClustering.node1.nic.mac 	nbTxFrames 	0
+scalar ApplicationClustering.node1.nic.mac 	nbRxFrames 	4
+scalar ApplicationClustering.node1.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node1.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node1.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClustering.node1.nic.mac 	nbTxAcks 	0
+scalar ApplicationClustering.node1.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node1.nic.mac 	meanBackoff 	0
+scalar ApplicationClustering.node1.nic.mac 	nbBackoffs 	0
+scalar ApplicationClustering.node1.nic.mac 	backoffDurations 	0
+scalar ApplicationClustering.node1.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node1.nic.phy 	nbFramesWithoutInterference 	13
+scalar ApplicationClustering.node1.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node1.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node1.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node1.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node1.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node1.batteryStats 	total 	77.723351347144
+attr unit  mW-s
+scalar ApplicationClustering.node1.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node1.batteryStats 	"Mean power consumption" 	2.2117661192666
+attr unit  mW
+scalar ApplicationClustering.node1.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node1.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node1.batteryStats 	"device total (mWs)" 	77.723351347401
+scalar ApplicationClustering.node1.batteryStats 	account 	0
+scalar ApplicationClustering.node1.batteryStats 	"energy (mWs)" 	10.181954949123
+scalar ApplicationClustering.node1.batteryStats 	"time (s)" 	33.939849830409
+scalar ApplicationClustering.node1.batteryStats 	account 	1
+scalar ApplicationClustering.node1.batteryStats 	"energy (mWs)" 	67.534524795078
+scalar ApplicationClustering.node1.batteryStats 	"time (s)" 	1.197420652395
+scalar ApplicationClustering.node1.batteryStats 	account 	2
+scalar ApplicationClustering.node1.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node1.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node1.batteryStats 	account 	3
+scalar ApplicationClustering.node1.batteryStats 	"energy (mWs)" 	0.0068716032
+scalar ApplicationClustering.node1.batteryStats 	"time (s)" 	0.003584
+scalar ApplicationClustering.node1.batteryStats 	account 	4
+scalar ApplicationClustering.node1.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node1.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node1.batteryStats 	Sensornode 	1
+scalar ApplicationClustering.node1.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node1.batteryStats 	account 	0
+scalar ApplicationClustering.node1.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node1.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node1.batteryStats 	account 	1
+scalar ApplicationClustering.node1.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node1.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node1.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node1.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node1.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node1.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node2.nic.mac 	nbTxFrames 	0
+scalar ApplicationClustering.node2.nic.mac 	nbRxFrames 	4
+scalar ApplicationClustering.node2.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node2.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node2.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClustering.node2.nic.mac 	nbTxAcks 	0
+scalar ApplicationClustering.node2.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node2.nic.mac 	meanBackoff 	0
+scalar ApplicationClustering.node2.nic.mac 	nbBackoffs 	0
+scalar ApplicationClustering.node2.nic.mac 	backoffDurations 	0
+scalar ApplicationClustering.node2.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node2.nic.phy 	nbFramesWithoutInterference 	13
+scalar ApplicationClustering.node2.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node2.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node2.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node2.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node2.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node2.batteryStats 	total 	77.740630620858
+attr unit  mW-s
+scalar ApplicationClustering.node2.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node2.batteryStats 	"Mean power consumption" 	2.212257833938
+attr unit  mW
+scalar ApplicationClustering.node2.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node2.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node2.batteryStats 	"device total (mWs)" 	77.740630621109
+scalar ApplicationClustering.node2.batteryStats 	account 	0
+scalar ApplicationClustering.node2.batteryStats 	"energy (mWs)" 	10.181862546589
+scalar ApplicationClustering.node2.batteryStats 	"time (s)" 	33.939541821965
+scalar ApplicationClustering.node2.batteryStats 	account 	1
+scalar ApplicationClustering.node2.batteryStats 	"energy (mWs)" 	67.55189647132
+scalar ApplicationClustering.node2.batteryStats 	"time (s)" 	1.197728660839
+scalar ApplicationClustering.node2.batteryStats 	account 	2
+scalar ApplicationClustering.node2.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node2.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node2.batteryStats 	account 	3
+scalar ApplicationClustering.node2.batteryStats 	"energy (mWs)" 	0.0068716032
+scalar ApplicationClustering.node2.batteryStats 	"time (s)" 	0.003584
+scalar ApplicationClustering.node2.batteryStats 	account 	4
+scalar ApplicationClustering.node2.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node2.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node2.batteryStats 	Sensornode 	1
+scalar ApplicationClustering.node2.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node2.batteryStats 	account 	0
+scalar ApplicationClustering.node2.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node2.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node2.batteryStats 	account 	1
+scalar ApplicationClustering.node2.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node2.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node2.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node2.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node2.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node2.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node3.nic.mac 	nbTxFrames 	3
+scalar ApplicationClustering.node3.nic.mac 	nbRxFrames 	7
+scalar ApplicationClustering.node3.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node3.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node3.nic.mac 	nbRecvdAcks 	1
+scalar ApplicationClustering.node3.nic.mac 	nbTxAcks 	5
+scalar ApplicationClustering.node3.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node3.nic.mac 	meanBackoff 	0.0010666666666667
+scalar ApplicationClustering.node3.nic.mac 	nbBackoffs 	3
+scalar ApplicationClustering.node3.nic.mac 	backoffDurations 	0.0032
+scalar ApplicationClustering.node3.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node3.nic.phy 	nbFramesWithoutInterference 	6
+scalar ApplicationClustering.node3.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node3.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node3.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node3.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node3.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node3.batteryStats 	total 	91.032577014645
+attr unit  mW-s
+scalar ApplicationClustering.node3.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node3.batteryStats 	"Mean power consumption" 	2.5905055057552
+attr unit  mW
+scalar ApplicationClustering.node3.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node3.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node3.batteryStats 	"device total (mWs)" 	91.032577014524
+scalar ApplicationClustering.node3.batteryStats 	account 	0
+scalar ApplicationClustering.node3.batteryStats 	"energy (mWs)" 	10.110602940208
+scalar ApplicationClustering.node3.batteryStats 	"time (s)" 	33.702009800692
+scalar ApplicationClustering.node3.batteryStats 	account 	1
+scalar ApplicationClustering.node3.batteryStats 	"energy (mWs)" 	80.335070471117
+scalar ApplicationClustering.node3.batteryStats 	"time (s)" 	1.424380682112
+scalar ApplicationClustering.node3.batteryStats 	account 	2
+scalar ApplicationClustering.node3.batteryStats 	"energy (mWs)" 	0.4176
+scalar ApplicationClustering.node3.batteryStats 	"time (s)" 	0.008
+scalar ApplicationClustering.node3.batteryStats 	account 	3
+scalar ApplicationClustering.node3.batteryStats 	"energy (mWs)" 	0.1693036032
+scalar ApplicationClustering.node3.batteryStats 	"time (s)" 	0.006464
+scalar ApplicationClustering.node3.batteryStats 	account 	4
+scalar ApplicationClustering.node3.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node3.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node3.batteryStats 	Sensornode 	1
+scalar ApplicationClustering.node3.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node3.batteryStats 	account 	0
+scalar ApplicationClustering.node3.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node3.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node3.batteryStats 	account 	1
+scalar ApplicationClustering.node3.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node3.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node3.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node3.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node3.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node3.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node4.nic.mac 	nbTxFrames 	1
+scalar ApplicationClustering.node4.nic.mac 	nbRxFrames 	4
+scalar ApplicationClustering.node4.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node4.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node4.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClustering.node4.nic.mac 	nbTxAcks 	0
+scalar ApplicationClustering.node4.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node4.nic.mac 	meanBackoff 	0
+scalar ApplicationClustering.node4.nic.mac 	nbBackoffs 	1
+scalar ApplicationClustering.node4.nic.mac 	backoffDurations 	0
+scalar ApplicationClustering.node4.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node4.nic.phy 	nbFramesWithoutInterference 	12
+scalar ApplicationClustering.node4.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node4.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node4.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node4.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node4.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node4.batteryStats 	total 	77.735767974518
+attr unit  mW-s
+scalar ApplicationClustering.node4.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node4.batteryStats 	"Mean power consumption" 	2.2121194580672
+attr unit  mW
+scalar ApplicationClustering.node4.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node4.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node4.batteryStats 	"device total (mWs)" 	77.735767974679
+scalar ApplicationClustering.node4.batteryStats 	account 	0
+scalar ApplicationClustering.node4.batteryStats 	"energy (mWs)" 	10.181854770367
+scalar ApplicationClustering.node4.batteryStats 	"time (s)" 	33.939515901224
+scalar ApplicationClustering.node4.batteryStats 	account 	1
+scalar ApplicationClustering.node4.batteryStats 	"energy (mWs)" 	67.446875201112
+scalar ApplicationClustering.node4.batteryStats 	"time (s)" 	1.19586658158
+scalar ApplicationClustering.node4.batteryStats 	account 	2
+scalar ApplicationClustering.node4.batteryStats 	"energy (mWs)" 	0.0785088
+scalar ApplicationClustering.node4.batteryStats 	"time (s)" 	0.001504
+scalar ApplicationClustering.node4.batteryStats 	account 	3
+scalar ApplicationClustering.node4.batteryStats 	"energy (mWs)" 	0.0285292032
+scalar ApplicationClustering.node4.batteryStats 	"time (s)" 	0.003968
+scalar ApplicationClustering.node4.batteryStats 	account 	4
+scalar ApplicationClustering.node4.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node4.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node4.batteryStats 	Sensornode 	1
+scalar ApplicationClustering.node4.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node4.batteryStats 	account 	0
+scalar ApplicationClustering.node4.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node4.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node4.batteryStats 	account 	1
+scalar ApplicationClustering.node4.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node4.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node4.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node4.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node4.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node4.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node5.nic.mac 	nbTxFrames 	0
+scalar ApplicationClustering.node5.nic.mac 	nbRxFrames 	4
+scalar ApplicationClustering.node5.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node5.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node5.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClustering.node5.nic.mac 	nbTxAcks 	0
+scalar ApplicationClustering.node5.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node5.nic.mac 	meanBackoff 	0
+scalar ApplicationClustering.node5.nic.mac 	nbBackoffs 	0
+scalar ApplicationClustering.node5.nic.mac 	backoffDurations 	0
+scalar ApplicationClustering.node5.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node5.nic.phy 	nbFramesWithoutInterference 	13
+scalar ApplicationClustering.node5.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node5.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node5.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node5.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node5.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node5.batteryStats 	total 	77.756583890296
+attr unit  mW-s
+scalar ApplicationClustering.node5.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node5.batteryStats 	"Mean power consumption" 	2.21271181463
+attr unit  mW
+scalar ApplicationClustering.node5.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node5.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node5.batteryStats 	"device total (mWs)" 	77.75658389059
+scalar ApplicationClustering.node5.batteryStats 	account 	0
+scalar ApplicationClustering.node5.batteryStats 	"energy (mWs)" 	10.181777234988
+scalar ApplicationClustering.node5.batteryStats 	"time (s)" 	33.93925744996
+scalar ApplicationClustering.node5.batteryStats 	account 	1
+scalar ApplicationClustering.node5.batteryStats 	"energy (mWs)" 	67.567935052402
+scalar ApplicationClustering.node5.batteryStats 	"time (s)" 	1.198013032844
+scalar ApplicationClustering.node5.batteryStats 	account 	2
+scalar ApplicationClustering.node5.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node5.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node5.batteryStats 	account 	3
+scalar ApplicationClustering.node5.batteryStats 	"energy (mWs)" 	0.0068716032
+scalar ApplicationClustering.node5.batteryStats 	"time (s)" 	0.003584
+scalar ApplicationClustering.node5.batteryStats 	account 	4
+scalar ApplicationClustering.node5.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node5.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node5.batteryStats 	Sensornode 	1
+scalar ApplicationClustering.node5.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node5.batteryStats 	account 	0
+scalar ApplicationClustering.node5.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node5.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node5.batteryStats 	account 	1
+scalar ApplicationClustering.node5.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node5.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node5.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node5.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node5.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node5.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node6.nic.mac 	nbTxFrames 	0
+scalar ApplicationClustering.node6.nic.mac 	nbRxFrames 	4
+scalar ApplicationClustering.node6.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node6.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node6.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClustering.node6.nic.mac 	nbTxAcks 	0
+scalar ApplicationClustering.node6.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node6.nic.mac 	meanBackoff 	0
+scalar ApplicationClustering.node6.nic.mac 	nbBackoffs 	0
+scalar ApplicationClustering.node6.nic.mac 	backoffDurations 	0
+scalar ApplicationClustering.node6.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node6.nic.phy 	nbFramesWithoutInterference 	13
+scalar ApplicationClustering.node6.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node6.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node6.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node6.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node6.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node6.batteryStats 	total 	77.745022698306
+attr unit  mW-s
+scalar ApplicationClustering.node6.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node6.batteryStats 	"Mean power consumption" 	2.212382818874
+attr unit  mW
+scalar ApplicationClustering.node6.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node6.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node6.batteryStats 	"device total (mWs)" 	77.745022698636
+scalar ApplicationClustering.node6.batteryStats 	account 	0
+scalar ApplicationClustering.node6.batteryStats 	"energy (mWs)" 	10.181839059544
+scalar ApplicationClustering.node6.batteryStats 	"time (s)" 	33.939463531813
+scalar ApplicationClustering.node6.batteryStats 	account 	1
+scalar ApplicationClustering.node6.batteryStats 	"energy (mWs)" 	67.556312035892
+scalar ApplicationClustering.node6.batteryStats 	"time (s)" 	1.197806950991
+scalar ApplicationClustering.node6.batteryStats 	account 	2
+scalar ApplicationClustering.node6.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node6.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node6.batteryStats 	account 	3
+scalar ApplicationClustering.node6.batteryStats 	"energy (mWs)" 	0.0068716032
+scalar ApplicationClustering.node6.batteryStats 	"time (s)" 	0.003584
+scalar ApplicationClustering.node6.batteryStats 	account 	4
+scalar ApplicationClustering.node6.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node6.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node6.batteryStats 	Sensornode 	1
+scalar ApplicationClustering.node6.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node6.batteryStats 	account 	0
+scalar ApplicationClustering.node6.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node6.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node6.batteryStats 	account 	1
+scalar ApplicationClustering.node6.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node6.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node6.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node6.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node6.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node6.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node7.nic.mac 	nbTxFrames 	2
+scalar ApplicationClustering.node7.nic.mac 	nbRxFrames 	5
+scalar ApplicationClustering.node7.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node7.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node7.nic.mac 	nbRecvdAcks 	2
+scalar ApplicationClustering.node7.nic.mac 	nbTxAcks 	1
+scalar ApplicationClustering.node7.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node7.nic.mac 	meanBackoff 	0.00112
+scalar ApplicationClustering.node7.nic.mac 	nbBackoffs 	2
+scalar ApplicationClustering.node7.nic.mac 	backoffDurations 	0.00224
+scalar ApplicationClustering.node7.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node7.nic.phy 	nbFramesWithoutInterference 	10
+scalar ApplicationClustering.node7.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node7.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node7.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node7.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node7.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node7.batteryStats 	total 	276.24130930845
+attr unit  mW-s
+scalar ApplicationClustering.node7.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node7.batteryStats 	"Mean power consumption" 	7.8609730290885
+attr unit  mW
+scalar ApplicationClustering.node7.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node7.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node7.batteryStats 	"device total (mWs)" 	89.184599989769
+scalar ApplicationClustering.node7.batteryStats 	account 	0
+scalar ApplicationClustering.node7.batteryStats 	"energy (mWs)" 	10.120539792746
+scalar ApplicationClustering.node7.batteryStats 	"time (s)" 	33.735132642488
+scalar ApplicationClustering.node7.batteryStats 	account 	1
+scalar ApplicationClustering.node7.batteryStats 	"energy (mWs)" 	78.701566193822
+scalar ApplicationClustering.node7.batteryStats 	"time (s)" 	1.395417840316
+scalar ApplicationClustering.node7.batteryStats 	account 	2
+scalar ApplicationClustering.node7.batteryStats 	"energy (mWs)" 	0.2906496
+scalar ApplicationClustering.node7.batteryStats 	"time (s)" 	0.005568
+scalar ApplicationClustering.node7.batteryStats 	account 	3
+scalar ApplicationClustering.node7.batteryStats 	"energy (mWs)" 	0.0718444032
+scalar ApplicationClustering.node7.batteryStats 	"time (s)" 	0.004736
+scalar ApplicationClustering.node7.batteryStats 	account 	4
+scalar ApplicationClustering.node7.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node7.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node7.batteryStats 	Sensornode 	1
+scalar ApplicationClustering.node7.batteryStats 	"device total (mWs)" 	187.05670931902
+scalar ApplicationClustering.node7.batteryStats 	account 	0
+scalar ApplicationClustering.node7.batteryStats 	"energy (mWs)" 	187.05670931902
+scalar ApplicationClustering.node7.batteryStats 	"time (s)" 	29.716101310305
+scalar ApplicationClustering.node7.batteryStats 	account 	1
+scalar ApplicationClustering.node7.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node7.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node7.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node7.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node7.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node7.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node8.nic.mac 	nbTxFrames 	0
+scalar ApplicationClustering.node8.nic.mac 	nbRxFrames 	4
+scalar ApplicationClustering.node8.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node8.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node8.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClustering.node8.nic.mac 	nbTxAcks 	0
+scalar ApplicationClustering.node8.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node8.nic.mac 	meanBackoff 	0
+scalar ApplicationClustering.node8.nic.mac 	nbBackoffs 	0
+scalar ApplicationClustering.node8.nic.mac 	backoffDurations 	0
+scalar ApplicationClustering.node8.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node8.nic.phy 	nbFramesWithoutInterference 	13
+scalar ApplicationClustering.node8.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node8.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node8.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node8.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node8.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node8.batteryStats 	total 	77.738448585616
+attr unit  mW-s
+scalar ApplicationClustering.node8.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node8.batteryStats 	"Mean power consumption" 	2.2121957399658
+attr unit  mW
+scalar ApplicationClustering.node8.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node8.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node8.batteryStats 	"device total (mWs)" 	77.738448585859
+scalar ApplicationClustering.node8.batteryStats 	account 	0
+scalar ApplicationClustering.node8.batteryStats 	"energy (mWs)" 	10.181874215227
+scalar ApplicationClustering.node8.batteryStats 	"time (s)" 	33.939580717424
+scalar ApplicationClustering.node8.batteryStats 	account 	1
+scalar ApplicationClustering.node8.batteryStats 	"energy (mWs)" 	67.549702767432
+scalar ApplicationClustering.node8.batteryStats 	"time (s)" 	1.19768976538
+scalar ApplicationClustering.node8.batteryStats 	account 	2
+scalar ApplicationClustering.node8.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node8.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node8.batteryStats 	account 	3
+scalar ApplicationClustering.node8.batteryStats 	"energy (mWs)" 	0.0068716032
+scalar ApplicationClustering.node8.batteryStats 	"time (s)" 	0.003584
+scalar ApplicationClustering.node8.batteryStats 	account 	4
+scalar ApplicationClustering.node8.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node8.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node8.batteryStats 	Sensornode 	1
+scalar ApplicationClustering.node8.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node8.batteryStats 	account 	0
+scalar ApplicationClustering.node8.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node8.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node8.batteryStats 	account 	1
+scalar ApplicationClustering.node8.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node8.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node8.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node8.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node8.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node8.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node9.nic.mac 	nbTxFrames 	0
+scalar ApplicationClustering.node9.nic.mac 	nbRxFrames 	4
+scalar ApplicationClustering.node9.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node9.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node9.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClustering.node9.nic.mac 	nbTxAcks 	0
+scalar ApplicationClustering.node9.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node9.nic.mac 	meanBackoff 	0
+scalar ApplicationClustering.node9.nic.mac 	nbBackoffs 	0
+scalar ApplicationClustering.node9.nic.mac 	backoffDurations 	0
+scalar ApplicationClustering.node9.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node9.nic.phy 	nbFramesWithoutInterference 	13
+scalar ApplicationClustering.node9.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node9.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node9.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node9.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node9.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node9.batteryStats 	total 	77.756054332363
+attr unit  mW-s
+scalar ApplicationClustering.node9.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node9.batteryStats 	"Mean power consumption" 	2.2126967450496
+attr unit  mW
+scalar ApplicationClustering.node9.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node9.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node9.batteryStats 	"device total (mWs)" 	77.756054332676
+scalar ApplicationClustering.node9.batteryStats 	account 	0
+scalar ApplicationClustering.node9.batteryStats 	"energy (mWs)" 	10.181780066848
+scalar ApplicationClustering.node9.batteryStats 	"time (s)" 	33.939266889495
+scalar ApplicationClustering.node9.batteryStats 	account 	1
+scalar ApplicationClustering.node9.batteryStats 	"energy (mWs)" 	67.567402662628
+scalar ApplicationClustering.node9.batteryStats 	"time (s)" 	1.198003593309
+scalar ApplicationClustering.node9.batteryStats 	account 	2
+scalar ApplicationClustering.node9.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node9.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node9.batteryStats 	account 	3
+scalar ApplicationClustering.node9.batteryStats 	"energy (mWs)" 	0.0068716032
+scalar ApplicationClustering.node9.batteryStats 	"time (s)" 	0.003584
+scalar ApplicationClustering.node9.batteryStats 	account 	4
+scalar ApplicationClustering.node9.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node9.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node9.batteryStats 	Sensornode 	1
+scalar ApplicationClustering.node9.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node9.batteryStats 	account 	0
+scalar ApplicationClustering.node9.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node9.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node9.batteryStats 	account 	1
+scalar ApplicationClustering.node9.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node9.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node9.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node9.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node9.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node9.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node10.nic.mac 	nbTxFrames 	0
+scalar ApplicationClustering.node10.nic.mac 	nbRxFrames 	4
+scalar ApplicationClustering.node10.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node10.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node10.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClustering.node10.nic.mac 	nbTxAcks 	0
+scalar ApplicationClustering.node10.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node10.nic.mac 	meanBackoff 	0
+scalar ApplicationClustering.node10.nic.mac 	nbBackoffs 	0
+scalar ApplicationClustering.node10.nic.mac 	backoffDurations 	0
+scalar ApplicationClustering.node10.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node10.nic.phy 	nbFramesWithoutInterference 	13
+scalar ApplicationClustering.node10.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node10.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node10.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node10.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node10.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node10.batteryStats 	total 	77.72780510562
+attr unit  mW-s
+scalar ApplicationClustering.node10.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node10.batteryStats 	"Mean power consumption" 	2.2118928594538
+attr unit  mW
+scalar ApplicationClustering.node10.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node10.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node10.batteryStats 	"device total (mWs)" 	77.72780510598
+scalar ApplicationClustering.node10.batteryStats 	account 	0
+scalar ApplicationClustering.node10.batteryStats 	"energy (mWs)" 	10.181931132232
+scalar ApplicationClustering.node10.batteryStats 	"time (s)" 	33.939770440773
+scalar ApplicationClustering.node10.batteryStats 	account 	1
+scalar ApplicationClustering.node10.batteryStats 	"energy (mWs)" 	67.539002370548
+scalar ApplicationClustering.node10.batteryStats 	"time (s)" 	1.197500042031
+scalar ApplicationClustering.node10.batteryStats 	account 	2
+scalar ApplicationClustering.node10.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node10.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node10.batteryStats 	account 	3
+scalar ApplicationClustering.node10.batteryStats 	"energy (mWs)" 	0.0068716032
+scalar ApplicationClustering.node10.batteryStats 	"time (s)" 	0.003584
+scalar ApplicationClustering.node10.batteryStats 	account 	4
+scalar ApplicationClustering.node10.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node10.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node10.batteryStats 	Sensornode 	1
+scalar ApplicationClustering.node10.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node10.batteryStats 	account 	0
+scalar ApplicationClustering.node10.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node10.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node10.batteryStats 	account 	1
+scalar ApplicationClustering.node10.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node10.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node10.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node10.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node10.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node10.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node11.nic.mac 	nbTxFrames 	4
+scalar ApplicationClustering.node11.nic.mac 	nbRxFrames 	2
+scalar ApplicationClustering.node11.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClustering.node11.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClustering.node11.nic.mac 	nbRecvdAcks 	2
+scalar ApplicationClustering.node11.nic.mac 	nbTxAcks 	0
+scalar ApplicationClustering.node11.nic.mac 	nbDuplicates 	0
+scalar ApplicationClustering.node11.nic.mac 	meanBackoff 	0.0012
+scalar ApplicationClustering.node11.nic.mac 	nbBackoffs 	4
+scalar ApplicationClustering.node11.nic.mac 	backoffDurations 	0.0048
+scalar ApplicationClustering.node11.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClustering.node11.nic.phy 	nbFramesWithoutInterference 	7
+scalar ApplicationClustering.node11.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClustering.node11.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClustering.node11.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClustering.node11.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClustering.node11.batteryStats 	nominal 	594000
+attr unit  mW-s
+scalar ApplicationClustering.node11.batteryStats 	total 	23.815326030017
+attr unit  mW-s
+scalar ApplicationClustering.node11.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClustering.node11.batteryStats 	"Mean power consumption" 	0.67771049909076
+attr unit  mW
+scalar ApplicationClustering.node11.batteryStats 	"num devices" 	4
+scalar ApplicationClustering.node11.batteryStats 	"physical layer" 	0
+scalar ApplicationClustering.node11.batteryStats 	"device total (mWs)" 	23.815326030218
+scalar ApplicationClustering.node11.batteryStats 	account 	0
+scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	10.470144038519
+scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	34.900480128398
+scalar ApplicationClustering.node11.batteryStats 	account 	1
+scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	13.044550388498
+scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0.231286354406
+scalar ApplicationClustering.node11.batteryStats 	account 	2
+scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	0.2071296
+scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0.003968
+scalar ApplicationClustering.node11.batteryStats 	account 	3
+scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	0.0935020032
+scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0.00512
+scalar ApplicationClustering.node11.batteryStats 	account 	4
+scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	0
+scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0
+scalar ApplicationClustering.node11.batteryStats 	(unnamed) 	1
+scalar ApplicationClustering.node11.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node11.batteryStats 	(unnamed) 	2
+scalar ApplicationClustering.node11.batteryStats 	"device total (mWs)" 	0
+scalar ApplicationClustering.node11.batteryStats 	(unnamed) 	3
+scalar ApplicationClustering.node11.batteryStats 	"device total (mWs)" 	0

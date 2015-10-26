@@ -1,0 +1,160 @@
+#ifndef _HARDWARE_H_
+#define _HARDWARE_H_
+
+#define OFF 0
+#define ON 1
+#define TOGGLE 2
+
+//CS
+#define CC2420   1
+#define TMP275   2
+#define DS1339   3
+#define EEPROM   4
+
+
+// MSP430 IO ports
+//
+
+//-----------------------------------------------------------------------------------
+// Port 1
+#define TXD             1
+#define FIFO            2  // P1.3 - Input: FIFO from CC2420
+#define FIFO_P          3  // P1.4 - Input: FIFOP from CC2420
+#define INT0            4
+#define BUTTON_1             6
+#define BUTTON_2             7
+//-----------------------------------------------------------------------------------
+// Port 2
+#define INT1            0
+#define RXD             2
+#define SQW             4
+#define CCA             6  // P2.7 - Input:  CCA from CC2420
+#define SFD             7  // P2.6 - Input:  SFD from CC2420
+
+//-----------------------------------------------------------------------------------
+// Port 3
+
+
+//-----------------------------------------------------------------------------------
+// Port 4
+#define LED1            1
+#define LED2            2
+#define LED3            4
+#define LED4            8
+
+#define CC2591_EN       4
+#define HOLD            5
+#define CCFLASH         6
+#define REFON1          7
+
+//-----------------------------------------------------------------------------------
+// Port 5
+
+#define CSN            0  // P5.0 - Output: SPI Chip Select (CS_N)
+#define MOSI           1  // P5.1 - Output: SPI Master out - slave in (MOSI)
+#define MISO           2  // P5.2 - Input:  SPI Master in - slave out (MISO)
+#define SCK            3  // P5.3 - Output: SPI Serial Clock (SCLK)
+#define DIO_0           6
+#define IN0             7
+
+//-----------------------------------------------------------------------------------
+// Port 6
+#define VREG_EN        0  // P6.0 - Output: VREG_EN to CC2420
+#define RESET_N        1  // P6.1 - Output: RESET_N to CC2420
+#define CC2591_HGM      2
+#define CC2591_PAEN     3
+#define CS_A            5
+
+
+//I2C
+#define ACK   0x01
+#define NACK  0x00
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+// CC2420 PIN ACCESS
+//
+
+// Pin status
+#define BUTTON_4_IS       (!(P1IN & BM(IN2)))
+#define BUTTON_5_IS       (!(P1IN & BM(IN3)))
+
+#define FIFO_IS_1       (!!(P1IN & BM(FIFO)))
+#define CCA_IS_1        (!!(P2IN & BM(CCA) ))
+#define RESET_IS_1      (!!(P6IN & BM(RESET_N)))
+#define VREG_IS_1       (!!(P6IN & BM(VREG_EN)))
+#define FIFOP_IS_1      (!!(P1IN & BM(FIFO_P)))
+#define SFD_IS_1        (!!(P2IN & BM(SFD)))
+
+// The CC2420 reset pin
+#define SET_RESET_INACTIVE()    ( P6OUT |=  BM(RESET_N) )
+#define SET_RESET_ACTIVE()      ( P6OUT &= ~BM(RESET_N) )
+
+// CC2420 voltage regulator enable pin
+#define SET_VREG_ACTIVE()       ( P6OUT |=  BM(VREG_EN) )
+#define SET_VREG_INACTIVE()     ( P6OUT &= ~BM(VREG_EN) )
+
+//CC2591
+#define SET_CC2591_HGM_ACTIVE()       ( P6OUT |=  BM(CC2591_HGM) )
+#define SET_CC2591_HGM_INACTIVE()     ( P6OUT &= ~BM(CC2591_HGM) )
+
+#define SET_CC2591_PAEN_ACTIVE()       ( P6OUT |=  BM(CC2591_PAEN) )
+#define SET_CC2591_PAEN_INACTIVE()     ( P6OUT &= ~BM(CC2591_PAEN) )
+
+#define SET_CC2591_EN_ACTIVE()       ( P6OUT |=  BM(CC2591_EN) )
+#define SET_CC2591_EN_INACTIVE()     ( P6OUT &= ~BM(CC2591_EN) )
+
+//-----------------------------------------------------------------------------------
+#define SPI_ENABLE()    ( P5OUT &= ~BM(CSN) ) // ENABLE CSn (active low)
+#define SPI_DISABLE()	( P5OUT |=  BM(CSN) ) // DISABLE CSn (active low)
+
+
+#define ENABLE_GLOBAL_INT()     _EINT()
+#define DISABLE_GLOBAL_INT()    _DINT()
+
+#define SPI_ENABLE()    ( P5OUT &= ~BM(CSN) ) // ENABLE CSn (active low)
+#define SPI_DISABLE()	( P5OUT |=  BM(CSN) ) // DISABLE CSn (active low)
+
+
+
+// Rising edge trigger for external interrupt 0 (FIFOP)
+#define FIFOP_INT_INIT()            do { P1IES &= ~BM(FIFO_P); CLEAR_FIFOP_INT(); } while (0)
+
+// FIFOP on external interrupt 0
+#define ENABLE_FIFOP_INT()          do { P1IE |= BM(FIFO_P); } while (0)
+#define DISABLE_FIFOP_INT()         do { P1IE &= ~BM(FIFO_P); } while (0)
+#define CLEAR_FIFOP_INT()           do { P1IFG &= ~BM(FIFO_P); } while (0)
+//-----------------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------------
+// SFD interrupt on timer 1 capture pin
+//#define ENABLE_SFD_CAPTURE_INT()    do { TIMSK |= BM(TICIE1); } while (0)
+//#define DISABLE_SFD_CAPTURE_INT()   do { TIMSK &= ~BM(TICIE1); } while (0)
+//#define CLEAR_SFD_CAPTURE_INT()     do { TIFR = BM(ICF1); } while (0)
+//-----------------------------------------------------------------------------------
+void Wait(unsigned short time);
+void LedSwitch(unsigned char led, unsigned char state);
+void LedFlash(unsigned char led, unsigned int time);
+unsigned short ReadADC(unsigned char channel);
+void HardwareInit(void);
+void InitXTAL(void);
+int __putchar(int ch);
+//void InitUart0(void);   
+//void InitI2C(void) ;
+//void InitXTAL(void);
+
+//Information Flash
+void FlashErase(int address);
+void FlashWriteShort(int address, unsigned short data);
+
+//useful
+#define BM(n) (1 << (n))
+#define BF(x,b,s) (((x) & (b)) >> (s))
+#define MIN(n,m) (((n) < (m)) ? (n) : (m))
+#define MAX(n,m) (((n) < (m)) ? (m) : (n))
+#define ABS(n) ((n < 0) ? -(n) : (n))
+
+// Dynamic function pointer
+typedef void (*VFPTR)(void);
+#endif //_HARDWARE_H_

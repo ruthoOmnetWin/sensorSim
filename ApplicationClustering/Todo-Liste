@@ -1,0 +1,7 @@
+Todo
+
+
+- Abbruch wenn nicht genügend Sensorknoten für die Aufgabe bereitstehen
+
+
+- Bit im "Status"-Byte für die Möglichkeit "AppMaster" zu sein

@@ -1,0 +1,156 @@
+#ifndef _DATA_H_
+#define _DATA_H_
+
+#include "typedefs.h"
+#include "circ_buffer.h"
+#include "config.h"
+#include "ce-packetstructs.h"
+#include "cc2420.h"
+
+#define MYIP_HIGH 0x8007
+#define MYIP_LOW  0x0009
+
+extern unsigned short myNodeId;
+extern unsigned short myPanId;
+extern unsigned short routingHopDistance;
+extern unsigned short routingParentNode;
+
+extern unsigned long ticks;
+extern unsigned short sleepPermission; 
+extern unsigned short sleepState; 
+extern unsigned short sleepTimer;
+
+//RINGBuffers
+#define TX_BUFFER_SIZE 512
+#define RX_BUFFER_SIZE 256         // TODO - make bigger if possible (2048)
+#define TX_UART_BUFFER_SIZE  128
+#define RX_UART_BUFFER_SIZE  128
+
+extern queue txQueue;
+extern queue rxQueue;
+extern queue rxUartQueue;
+extern queue txUartQueue;
+
+extern unsigned long txQueueBuffer[TX_BUFFER_SIZE/4];
+extern unsigned long rxQueueBuffer[RX_BUFFER_SIZE/4];
+
+extern unsigned long txUartQueueBuffer[TX_UART_BUFFER_SIZE/4];
+extern unsigned long rxUartQueueBuffer[RX_UART_BUFFER_SIZE/4];
+extern unsigned long rxUartPacketBuffer[RX_UART_BUFFER_SIZE/4];
+extern unsigned int  rxUartPacketSize;
+extern unsigned char rxUartPacketIsEscaped;
+
+//-----------------------------------------------------------------------------
+//receiving data structures
+//-----------------------------------------------------------------------------
+extern CC2420_RX_INFO CC2420RxInfo;
+extern CC2420_TX_INFO CC2420TxInfo;
+
+extern GENERIC_PACKET_RX rxPacketWork,rxPacketIsr,rxUartPacket;
+extern GENERIC_PACKET_TX txPacket,txPacketPrepare;
+
+//-----------------------------------------------------------------------------
+//Application 
+//-----------------------------------------------------------------------------
+extern unsigned char networkDataStates;
+extern long networkDataCount;
+extern long networkDataSubmitted;
+extern unsigned short networkDataDestination;
+extern unsigned char thisNodeIsRoot;
+extern unsigned char debugMode;
+
+//-----------------------------------------------------------------------------
+//Application and WakeUp
+//-----------------------------------------------------------------------------
+extern unsigned char WakeupTimer;
+extern volatile unsigned char WakeupCause;
+extern unsigned char ApplicationState;
+extern unsigned char networkConfigState;
+extern unsigned char networkCurrentState;
+
+enum APPLICATIONSTATES 
+{
+    INIT = 0,
+    APP_RUN,
+    SLEEP,
+    UART_RECEIVE,
+    UART_TRANSMIT,
+    STANDBY,
+    RECEIVE,
+    TRANSMIT,
+    TRANSMIT_ACK,
+    KEY_EVENT
+};
+
+enum NETWORK_STATES
+{
+    NETWORK_STATE_SLEEPING,
+    NETWORK_STATE_ALWAYS_ON,
+    NETWORK_STATE_GO_SLEEPING,
+    NETWORK_STATE_WAKING_UP,
+    NETWORK_STATE_IS_READY
+};
+
+#define WAKEUP_CAUSE_WURX     0x01
+
+/*
+#define WAKEUP_CAUSE_RTC      0x02
+#define WAKEUP_CAUSE_LPC      0x04
+#define WAKEUP_CAUSE_INT0     0x08
+
+
+
+#define WAKEUP_CAUSE_CONFIG   0x40
+#define WAKEUP_CAUSE_EXPLORE  0x80
+*/
+#define WAKEUP_CAUSE_APP_RUN   0x10
+#define WAKEUP_CAUSE_RX        0x20
+#define WAKEUP_CAUSE_BUTTON_1  0x01
+#define WAKEUP_CAUSE_BUTTON_2  0x02
+
+extern unsigned int globalEvents;
+#define EVENT_APP_MANAGER      0x01
+
+
+#define DATA_TRANSFER_STARTING   0x01
+#define DATA_TRANSFER_RUNNING    0x02
+#define DATA_TRANSFER_DEBUG_1    0x04
+#define DATA_TRANSFER_DEBUG_2    0x08
+
+#define MODUS_MEASUREMENT   0x01
+#define MODUS_WAKEUP        0x02
+#define MODUS_EXPLORATION   0x04
+#define MODUS_CONFIGURATION 0x08   
+#define MODUS_TRANSMISSION  0x10
+#define MODUS_COM           0x20
+#define MODUS_ALERT         0x40
+#define MODUS_SLEEP         0x80
+
+
+
+
+extern unsigned char demonstratorModi ;
+extern unsigned long CC2420CCAempty;
+extern unsigned char reTransmitValue;
+extern unsigned char CC2420WaitCount;
+//-----------------------------------------------------------------------------
+
+
+//unsigned int datasetCount;
+
+
+#define HTONS(n) (((((unsigned short)(n) & 0xFF)) << 8) | (((unsigned short)(n) & 0xFF00) >> 8))
+#define NTOHS(n) (((((unsigned short)(n) & 0xFF)) << 8) | (((unsigned short)(n) & 0xFF00) >> 8))
+
+#define HTONL(n) (((((unsigned long)(n) & 0xFF)) << 24) | \
+                  ((((unsigned long)(n) & 0xFF00)) << 8) | \
+                  ((((unsigned long)(n) & 0xFF0000)) >> 8) | \
+                  ((((unsigned long)(n) & 0xFF000000)) >> 24))
+
+#define NTOHL(n) (((((unsigned long)(n) & 0xFF)) << 24) | \
+                  ((((unsigned long)(n) & 0xFF00)) << 8) | \
+                  ((((unsigned long)(n) & 0xFF0000)) >> 8) | \
+                  ((((unsigned long)(n) & 0xFF000000)) >> 24))
+  
+
+#endif
