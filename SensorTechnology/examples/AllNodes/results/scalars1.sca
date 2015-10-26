@@ -1,14 +1,14 @@
 version 2
-run General-0-20150522-11:20:14-3805
+run General-0-20150615-19:02:50-20121
 attr configname General
-attr datetime 20150522-11:20:14
+attr datetime 20150615-19:02:50
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network AllNodes
-attr processid 3805
+attr processid 20121
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -54,7 +54,7 @@ scalar AllNodes.SensorNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.SensorNode[0].batteryStats 	lifetime 	379320
 attr unit  s
-scalar AllNodes.SensorNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.SensorNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.TNode[0].nic.mac 	nbTxFrames 	14
 scalar AllNodes.TNode[0].nic.mac 	nbRxFrames 	9
@@ -80,7 +80,7 @@ scalar AllNodes.TNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.TNode[0].batteryStats 	lifetime 	273420
 attr unit  s
-scalar AllNodes.TNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.TNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.PNode[0].nic.mac 	nbTxFrames 	17
 scalar AllNodes.PNode[0].nic.mac 	nbRxFrames 	28
@@ -106,7 +106,7 @@ scalar AllNodes.PNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.PNode[0].batteryStats 	lifetime 	273420
 attr unit  s
-scalar AllNodes.PNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.PNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.HNode[0].nic.mac 	nbTxFrames 	13
 scalar AllNodes.HNode[0].nic.mac 	nbRxFrames 	31
@@ -132,7 +132,7 @@ scalar AllNodes.HNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.HNode[0].batteryStats 	lifetime 	273420
 attr unit  s
-scalar AllNodes.HNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.HNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.LNode[0].nic.mac 	nbTxFrames 	17
 scalar AllNodes.LNode[0].nic.mac 	nbRxFrames 	39
@@ -158,7 +158,7 @@ scalar AllNodes.LNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.LNode[0].batteryStats 	lifetime 	273420
 attr unit  s
-scalar AllNodes.LNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.LNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.TPNode[0].nic.mac 	nbTxFrames 	12
 scalar AllNodes.TPNode[0].nic.mac 	nbRxFrames 	22
@@ -184,7 +184,7 @@ scalar AllNodes.TPNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.TPNode[0].batteryStats 	lifetime 	210000
 attr unit  s
-scalar AllNodes.TPNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.TPNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.THNode[0].nic.mac 	nbTxFrames 	15
 scalar AllNodes.THNode[0].nic.mac 	nbRxFrames 	9
@@ -210,7 +210,7 @@ scalar AllNodes.THNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.THNode[0].batteryStats 	lifetime 	210000
 attr unit  s
-scalar AllNodes.THNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.THNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.TLNode[0].nic.mac 	nbTxFrames 	6
 scalar AllNodes.TLNode[0].nic.mac 	nbRxFrames 	3
@@ -236,7 +236,7 @@ scalar AllNodes.TLNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.TLNode[0].batteryStats 	lifetime 	210000
 attr unit  s
-scalar AllNodes.TLNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.TLNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.PHNode[0].nic.mac 	nbTxFrames 	18
 scalar AllNodes.PHNode[0].nic.mac 	nbRxFrames 	30
@@ -262,7 +262,7 @@ scalar AllNodes.PHNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.PHNode[0].batteryStats 	lifetime 	210000
 attr unit  s
-scalar AllNodes.PHNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.PHNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.PLNode[0].nic.mac 	nbTxFrames 	15
 scalar AllNodes.PLNode[0].nic.mac 	nbRxFrames 	15
@@ -288,7 +288,7 @@ scalar AllNodes.PLNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.PLNode[0].batteryStats 	lifetime 	210000
 attr unit  s
-scalar AllNodes.PLNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.PLNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.HLNode[0].nic.mac 	nbTxFrames 	6
 scalar AllNodes.HLNode[0].nic.mac 	nbRxFrames 	15
@@ -314,7 +314,7 @@ scalar AllNodes.HLNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.HLNode[0].batteryStats 	lifetime 	210000
 attr unit  s
-scalar AllNodes.HLNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.HLNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.PHLNode[0].nic.mac 	nbTxFrames 	14
 scalar AllNodes.PHLNode[0].nic.mac 	nbRxFrames 	30
@@ -340,7 +340,7 @@ scalar AllNodes.PHLNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.PHLNode[0].batteryStats 	lifetime 	171060
 attr unit  s
-scalar AllNodes.PHLNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.PHLNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.THLNode[0].nic.mac 	nbTxFrames 	15
 scalar AllNodes.THLNode[0].nic.mac 	nbRxFrames 	21
@@ -366,7 +366,7 @@ scalar AllNodes.THLNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.THLNode[0].batteryStats 	lifetime 	171060
 attr unit  s
-scalar AllNodes.THLNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.THLNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.TPLNode[0].nic.mac 	nbTxFrames 	15
 scalar AllNodes.TPLNode[0].nic.mac 	nbRxFrames 	17
@@ -392,7 +392,7 @@ scalar AllNodes.TPLNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.TPLNode[0].batteryStats 	lifetime 	171060
 attr unit  s
-scalar AllNodes.TPLNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.TPLNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.TPHNode[0].nic.mac 	nbTxFrames 	6
 scalar AllNodes.TPHNode[0].nic.mac 	nbRxFrames 	3
@@ -418,7 +418,7 @@ scalar AllNodes.TPHNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.TPHNode[0].batteryStats 	lifetime 	171060
 attr unit  s
-scalar AllNodes.TPHNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.TPHNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW
 scalar AllNodes.TPHLNode[0].nic.mac 	nbTxFrames 	15
 scalar AllNodes.TPHLNode[0].nic.mac 	nbRxFrames 	20
@@ -444,5 +444,5 @@ scalar AllNodes.TPHLNode[0].batteryStats 	total 	10800000
 attr unit  mW-s
 scalar AllNodes.TPHLNode[0].batteryStats 	lifetime 	144780
 attr unit  s
-scalar AllNodes.TPHLNode[0].batteryStats 	"Mean power consumption" 	20.536223616657
+scalar AllNodes.TPHLNode[0].batteryStats 	"Mean power consumption" 	22.750252780586
 attr unit  mW

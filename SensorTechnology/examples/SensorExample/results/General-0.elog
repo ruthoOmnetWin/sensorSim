@@ -1,5 +1,5 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20150522-11:10:37-3577 b 1000
+SB v 1029 rid General-0-20150722-10:45:36-5095 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t sensortechnology.examples.SensorExample.SensorExample n SensorExample cm 1
 MS id 1 d bgb=$playgroundSizeX,$playgroundSizeY,white;bgp=0,0
@@ -315,8 +315,8 @@ ME
 MB sm 1 tm 17 m initialize(1)
 BU id 4 txt "SU: My Location: (337.706,331.52,85.7946)"
 - SU: My Location: (337.706,331.52,85.7946)
-BU id 4 txt "SU: At position (337.706,331.52,85.7946); Got value 11 for type Temperature"
-- SU: At position (337.706,331.52,85.7946); Got value 11 for type Temperature
+BU id 4 txt "SU: At position (337.706,331.52,85.7946); Got value 10 for type Temperature"
+- SU: At position (337.706,331.52,85.7946); Got value 10 for type Temperature
 MB sm 17 tm 12 m ""
 ME
 CM id 10 tid 10 eid 10 etid 10 c cMessage n Temperature pe -1
@@ -412,13 +412,13 @@ ME
 E # 5 t 0 m 14 ce 4 msg 10
 BU id 4 txt <Memory>
 - <Memory>
-BU id 4 txt "Memory: Got type: Temperature with value:11\n"
-- Memory: Got type: Temperature with value:11
+BU id 4 txt "Memory: Got type: Temperature with value:10\n"
+- Memory: Got type: Temperature with value:10
 - 
 BU id 4 txt "New storage entry created."
 - New storage entry created.
-BU id 4 txt "0: Temperature, 11, 0"
-- 0: Temperature, 11, 0
+BU id 4 txt "0: Temperature, 10, 0"
+- 0: Temperature, 10, 0
 BU id 4 txt "1: , -9999, -1"
 - 1: , -9999, -1
 BU id 4 txt "2: , -9999, -1"
@@ -2215,8 +2215,8 @@ MB sm 17 tm 12 m ""
 ME
 BU id 4 txt "SU: My Location: (337.706,331.52,85.7946)"
 - SU: My Location: (337.706,331.52,85.7946)
-BU id 4 txt "SU: At position (337.706,331.52,85.7946); Got value 11 for type Temperature"
-- SU: At position (337.706,331.52,85.7946); Got value 11 for type Temperature
+BU id 4 txt "SU: At position (337.706,331.52,85.7946); Got value 10 for type Temperature"
+- SU: At position (337.706,331.52,85.7946); Got value 10 for type Temperature
 MB sm 17 tm 12 m ""
 ME
 CM id 55 tid 55 eid 55 etid 55 c cMessage n Temperature pe -1
@@ -2287,15 +2287,15 @@ ME
 E # 377 t 10000 m 14 ce 376 msg 55
 BU id 4 txt <Memory>
 - <Memory>
-BU id 4 txt "Memory: Got type: Temperature with value:11\n"
-- Memory: Got type: Temperature with value:11
+BU id 4 txt "Memory: Got type: Temperature with value:10\n"
+- Memory: Got type: Temperature with value:10
 - 
 BU id 4 txt "New storage entry created."
 - New storage entry created.
-BU id 4 txt "0: Temperature, 11, 0"
-- 0: Temperature, 11, 0
-BU id 4 txt "1: Temperature, 11, 10000"
-- 1: Temperature, 11, 10000
+BU id 4 txt "0: Temperature, 10, 0"
+- 0: Temperature, 10, 0
+BU id 4 txt "1: Temperature, 10, 10000"
+- 1: Temperature, 10, 10000
 BU id 4 txt "2: , -9999, -1"
 - 2: , -9999, -1
 BU id 4 txt "3: , -9999, -1"
@@ -4034,8 +4034,8 @@ MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=blo
 ME
 BU id 4 txt "SU: My Location: (337.706,331.52,85.7946)"
 - SU: My Location: (337.706,331.52,85.7946)
-BU id 4 txt "SU: At position (337.706,331.52,85.7946); Got value 10 for type Temperature"
-- SU: At position (337.706,331.52,85.7946); Got value 10 for type Temperature
+BU id 4 txt "SU: At position (337.706,331.52,85.7946); Got value 15 for type Temperature"
+- SU: At position (337.706,331.52,85.7946); Got value 15 for type Temperature
 MB sm 17 tm 12 m ""
 MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
 ME
@@ -4112,17 +4112,17 @@ ME
 E # 728 t 20000 m 14 ce 727 msg 63
 BU id 4 txt <Memory>
 - <Memory>
-BU id 4 txt "Memory: Got type: Temperature with value:10\n"
-- Memory: Got type: Temperature with value:10
+BU id 4 txt "Memory: Got type: Temperature with value:15\n"
+- Memory: Got type: Temperature with value:15
 - 
 BU id 4 txt "New storage entry created."
 - New storage entry created.
-BU id 4 txt "0: Temperature, 11, 0"
-- 0: Temperature, 11, 0
-BU id 4 txt "1: Temperature, 11, 10000"
-- 1: Temperature, 11, 10000
-BU id 4 txt "2: Temperature, 10, 20000"
-- 2: Temperature, 10, 20000
+BU id 4 txt "0: Temperature, 10, 0"
+- 0: Temperature, 10, 0
+BU id 4 txt "1: Temperature, 10, 10000"
+- 1: Temperature, 10, 10000
+BU id 4 txt "2: Temperature, 15, 20000"
+- 2: Temperature, 15, 20000
 BU id 4 txt "3: , -9999, -1"
 - 3: , -9999, -1
 DM id 63 tid 63 eid 63 etid 63 c cMessage n Temperature pe 728
@@ -4253,41 +4253,1386 @@ E # 750 t 20640 m 12 ce 748 msg 9
 BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 750
 ES t 20700
 MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
-DM id 10 tid 10 eid 10 etid 10 c cMessage n Temperature pe 0
-DM id 10 tid 10 eid 10 etid 10 c cMessage n Temperature pe 1
-DM id 10 tid 10 eid 10 etid 10 c cMessage n Temperature pe 2
-DM id 10 tid 10 eid 10 etid 10 c cMessage n Temperature pe 3
-DM id 10 tid 10 eid 10 etid 10 c cMessage n Temperature pe 4
-DM id 20 tid 20 eid 20 etid 20 c cMessage n BROADCAST_MESSAGE k 25001 pe 6
-DM id 22 tid 22 eid 22 etid 22 c cMessage n BROADCAST_MESSAGE k 25001 pe 6
-DM id 24 tid 24 eid 24 etid 24 c cMessage n BROADCAST_MESSAGE k 25001 pe 6
-DM id 20 tid 20 eid 20 etid 20 c cMessage n BROADCAST_MESSAGE k 25001 pe 7
-DM id 22 tid 22 eid 22 etid 22 c cMessage n BROADCAST_MESSAGE k 25001 pe 8
-DM id 24 tid 24 eid 24 etid 24 c cMessage n BROADCAST_MESSAGE k 25001 pe 9
-DM id 29 tid 29 eid 29 etid 29 c cMessage n BROADCAST_MESSAGE k 25001 pe 10
-DM id 31 tid 31 eid 31 etid 31 c cMessage n BROADCAST_MESSAGE k 25001 pe 11
-DM id 33 tid 33 eid 33 etid 33 c cMessage n BROADCAST_MESSAGE k 25001 pe 12
-DM id 20 tid 20 eid 20 etid 20 c cMessage n BROADCAST_MESSAGE k 25001 pe 10
-DM id 29 tid 29 eid 29 etid 29 c cMessage n BROADCAST_MESSAGE k 25001 pe 13
-DM id 38 tid 35 eid 38 etid 35 c cMessage n BROADCAST_MESSAGE pe 17
-DM id 41 tid 41 eid 41 etid 41 c cMessage n "Transmission over" k 22000 pe 19
-DM id 22 tid 22 eid 22 etid 22 c cMessage n BROADCAST_MESSAGE k 25001 pe 11
-DM id 31 tid 31 eid 31 etid 31 c cMessage n BROADCAST_MESSAGE k 25001 pe 14
-DM id 43 tid 36 eid 43 etid 36 c cMessage n BROADCAST_MESSAGE pe 22
-DM id 46 tid 46 eid 46 etid 46 c cMessage n "Transmission over" k 22000 pe 24
-DM id 24 tid 24 eid 24 etid 24 c cMessage n BROADCAST_MESSAGE k 25001 pe 12
-DM id 33 tid 33 eid 33 etid 33 c cMessage n BROADCAST_MESSAGE k 25001 pe 15
-DM id 48 tid 37 eid 48 etid 37 c cMessage n BROADCAST_MESSAGE pe 27
-DM id 51 tid 51 eid 51 etid 51 c cMessage n "Transmission over" k 22000 pe 29
-DM id 53 tid 53 eid 53 etid 53 c cMessage n startMeasuring pe 371
-DM id 55 tid 55 eid 55 etid 55 c cMessage n Temperature pe 372
-DM id 55 tid 55 eid 55 etid 55 c cMessage n Temperature pe 373
-DM id 55 tid 55 eid 55 etid 55 c cMessage n Temperature pe 374
-DM id 55 tid 55 eid 55 etid 55 c cMessage n Temperature pe 375
-DM id 55 tid 55 eid 55 etid 55 c cMessage n Temperature pe 376
-DM id 61 tid 61 eid 61 etid 61 c cMessage n startMeasuring pe 722
-DM id 63 tid 63 eid 63 etid 63 c cMessage n Temperature pe 723
-DM id 63 tid 63 eid 63 etid 63 c cMessage n Temperature pe 724
-DM id 63 tid 63 eid 63 etid 63 c cMessage n Temperature pe 725
-DM id 63 tid 63 eid 63 etid 63 c cMessage n Temperature pe 726
-DM id 63 tid 63 eid 63 etid 63 c cMessage n Temperature pe 727
+
+E # 751 t 20640 m 12 ce 749 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 751
+ES t 20700
+
+E # 752 t 20700 m 12 ce 750 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 752
+ES t 20760
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 753 t 20700 m 12 ce 751 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 753
+ES t 20760
+
+E # 754 t 20760 m 12 ce 752 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 754
+ES t 20820
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 755 t 20760 m 12 ce 753 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 755
+ES t 20820
+
+E # 756 t 20820 m 12 ce 754 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 756
+ES t 20880
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 757 t 20820 m 12 ce 755 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 757
+ES t 20880
+
+E # 758 t 20880 m 12 ce 756 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 758
+ES t 20940
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 759 t 20880 m 12 ce 757 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 759
+ES t 20940
+
+E # 760 t 20940 m 12 ce 758 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 760
+ES t 21000
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 761 t 20940 m 12 ce 759 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 761
+ES t 21000
+
+E # 762 t 21000 m 21 ce 652 msg 13
+BU id 4 txt "Processor: scheduling shiftMode"
+- Processor: scheduling shiftMode
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+BU id 4 txt "Processor: switched power mode"
+- Processor: switched power mode
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+BS id 13 tid 13 eid 13 etid 13 c cMessage n shiftMode pe 762
+ES t 24000
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+
+E # 763 t 21000 m 12 ce 760 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 763
+ES t 21060
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 764 t 21000 m 12 ce 761 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 764
+ES t 21060
+
+E # 765 t 21060 m 12 ce 763 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 765
+ES t 21120
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 766 t 21060 m 12 ce 764 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 766
+ES t 21120
+
+E # 767 t 21120 m 12 ce 765 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 767
+ES t 21180
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 768 t 21120 m 12 ce 766 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 768
+ES t 21180
+
+E # 769 t 21180 m 12 ce 767 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 769
+ES t 21240
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 770 t 21180 m 12 ce 768 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 770
+ES t 21240
+
+E # 771 t 21240 m 12 ce 769 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 771
+ES t 21300
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 772 t 21240 m 12 ce 770 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 772
+ES t 21300
+
+E # 773 t 21300 m 12 ce 771 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 773
+ES t 21360
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 774 t 21300 m 12 ce 772 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 774
+ES t 21360
+
+E # 775 t 21360 m 12 ce 773 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 775
+ES t 21420
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 776 t 21360 m 12 ce 774 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 776
+ES t 21420
+
+E # 777 t 21420 m 12 ce 775 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 777
+ES t 21480
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 778 t 21420 m 12 ce 776 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 778
+ES t 21480
+
+E # 779 t 21480 m 12 ce 777 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 779
+ES t 21540
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 780 t 21480 m 12 ce 778 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 780
+ES t 21540
+
+E # 781 t 21540 m 12 ce 779 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 781
+ES t 21600
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 782 t 21540 m 12 ce 780 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 782
+ES t 21600
+
+E # 783 t 21600 m 12 ce 781 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 783
+ES t 21660
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 784 t 21600 m 12 ce 782 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 784
+ES t 21660
+
+E # 785 t 21660 m 12 ce 783 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 785
+ES t 21720
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 786 t 21660 m 12 ce 784 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 786
+ES t 21720
+
+E # 787 t 21720 m 12 ce 785 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 787
+ES t 21780
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 788 t 21720 m 12 ce 786 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 788
+ES t 21780
+
+E # 789 t 21780 m 12 ce 787 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 789
+ES t 21840
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 790 t 21780 m 12 ce 788 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 790
+ES t 21840
+
+E # 791 t 21840 m 12 ce 789 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 791
+ES t 21900
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 792 t 21840 m 12 ce 790 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 792
+ES t 21900
+
+E # 793 t 21900 m 12 ce 791 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 793
+ES t 21960
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 794 t 21900 m 12 ce 792 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 794
+ES t 21960
+
+E # 795 t 21960 m 12 ce 793 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 795
+ES t 22020
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 796 t 21960 m 12 ce 794 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 796
+ES t 22020
+
+E # 797 t 22020 m 12 ce 795 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 797
+ES t 22080
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 798 t 22020 m 12 ce 796 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 798
+ES t 22080
+
+E # 799 t 22080 m 12 ce 797 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 799
+ES t 22140
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 800 t 22080 m 12 ce 798 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 800
+ES t 22140
+
+E # 801 t 22100 m 21 ce 741 msg 14
+BU id 4 txt "Processor: scheduling collect Statistics"
+- Processor: scheduling collect Statistics
+BS id 14 tid 14 eid 14 etid 14 c cMessage n collectStatistics pe 801
+ES t 23800
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+
+E # 802 t 22140 m 12 ce 799 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 802
+ES t 22200
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 803 t 22140 m 12 ce 800 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 803
+ES t 22200
+
+E # 804 t 22200 m 12 ce 802 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 804
+ES t 22260
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 805 t 22200 m 12 ce 803 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 805
+ES t 22260
+
+E # 806 t 22260 m 12 ce 804 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 806
+ES t 22320
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 807 t 22260 m 12 ce 805 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 807
+ES t 22320
+
+E # 808 t 22320 m 12 ce 806 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 808
+ES t 22380
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 809 t 22320 m 12 ce 807 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 809
+ES t 22380
+
+E # 810 t 22380 m 12 ce 808 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 810
+ES t 22440
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 811 t 22380 m 12 ce 809 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 811
+ES t 22440
+
+E # 812 t 22440 m 12 ce 810 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 812
+ES t 22500
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 813 t 22440 m 12 ce 811 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 813
+ES t 22500
+
+E # 814 t 22500 m 12 ce 812 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 814
+ES t 22560
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 815 t 22500 m 12 ce 813 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 815
+ES t 22560
+
+E # 816 t 22560 m 12 ce 814 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 816
+ES t 22620
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 817 t 22560 m 12 ce 815 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 817
+ES t 22620
+
+E # 818 t 22620 m 12 ce 816 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 818
+ES t 22680
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 819 t 22620 m 12 ce 817 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 819
+ES t 22680
+
+E # 820 t 22680 m 12 ce 818 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 820
+ES t 22740
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 821 t 22680 m 12 ce 819 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 821
+ES t 22740
+
+E # 822 t 22740 m 12 ce 820 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 822
+ES t 22800
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 823 t 22740 m 12 ce 821 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 823
+ES t 22800
+
+E # 824 t 22800 m 12 ce 822 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 824
+ES t 22860
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 825 t 22800 m 12 ce 823 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 825
+ES t 22860
+
+E # 826 t 22860 m 12 ce 824 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 826
+ES t 22920
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 827 t 22860 m 12 ce 825 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 827
+ES t 22920
+
+E # 828 t 22920 m 12 ce 826 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 828
+ES t 22980
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 829 t 22920 m 12 ce 827 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 829
+ES t 22980
+
+E # 830 t 22980 m 12 ce 828 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 830
+ES t 23040
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 831 t 22980 m 12 ce 829 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 831
+ES t 23040
+
+E # 832 t 23040 m 12 ce 830 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 832
+ES t 23100
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 833 t 23040 m 12 ce 831 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 833
+ES t 23100
+
+E # 834 t 23100 m 12 ce 832 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 834
+ES t 23160
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 835 t 23100 m 12 ce 833 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 835
+ES t 23160
+
+E # 836 t 23160 m 12 ce 834 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 836
+ES t 23220
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 837 t 23160 m 12 ce 835 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 837
+ES t 23220
+
+E # 838 t 23220 m 12 ce 836 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 838
+ES t 23280
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 839 t 23220 m 12 ce 837 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 839
+ES t 23280
+
+E # 840 t 23280 m 12 ce 838 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 840
+ES t 23340
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 841 t 23280 m 12 ce 839 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 841
+ES t 23340
+
+E # 842 t 23340 m 12 ce 840 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 842
+ES t 23400
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 843 t 23340 m 12 ce 841 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 843
+ES t 23400
+
+E # 844 t 23400 m 12 ce 842 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 844
+ES t 23460
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 845 t 23400 m 12 ce 843 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 845
+ES t 23460
+
+E # 846 t 23460 m 12 ce 844 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 846
+ES t 23520
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 847 t 23460 m 12 ce 845 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 847
+ES t 23520
+
+E # 848 t 23520 m 12 ce 846 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 848
+ES t 23580
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 849 t 23520 m 12 ce 847 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 849
+ES t 23580
+
+E # 850 t 23580 m 12 ce 848 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 850
+ES t 23640
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 851 t 23580 m 12 ce 849 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 851
+ES t 23640
+
+E # 852 t 23640 m 12 ce 850 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 852
+ES t 23700
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 853 t 23640 m 12 ce 851 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 853
+ES t 23700
+
+E # 854 t 23700 m 12 ce 852 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 854
+ES t 23760
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 855 t 23700 m 12 ce 853 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 855
+ES t 23760
+
+E # 856 t 23760 m 12 ce 854 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 856
+ES t 23820
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 857 t 23760 m 12 ce 855 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 857
+ES t 23820
+
+E # 858 t 23800 m 21 ce 801 msg 14
+BU id 4 txt "Processor: scheduling collect Statistics"
+- Processor: scheduling collect Statistics
+BS id 14 tid 14 eid 14 etid 14 c cMessage n collectStatistics pe 858
+ES t 25500
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+
+E # 859 t 23820 m 12 ce 856 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 859
+ES t 23880
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 860 t 23820 m 12 ce 857 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 860
+ES t 23880
+
+E # 861 t 23880 m 12 ce 859 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 861
+ES t 23940
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 862 t 23880 m 12 ce 860 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 862
+ES t 23940
+
+E # 863 t 23940 m 12 ce 861 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 863
+ES t 24000
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 864 t 23940 m 12 ce 862 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 864
+ES t 24000
+
+E # 865 t 24000 m 21 ce 762 msg 13
+BU id 4 txt "Processor: scheduling shiftMode"
+- Processor: scheduling shiftMode
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: power saving;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+BU id 4 txt "Processor: switched power mode"
+- Processor: switched power mode
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+BS id 13 tid 13 eid 13 etid 13 c cMessage n shiftMode pe 865
+ES t 27000
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+
+E # 866 t 24000 m 12 ce 863 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 866
+ES t 24060
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 867 t 24000 m 12 ce 864 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 867
+ES t 24060
+
+E # 868 t 24060 m 12 ce 866 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 868
+ES t 24120
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 869 t 24060 m 12 ce 867 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 869
+ES t 24120
+
+E # 870 t 24120 m 12 ce 868 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 870
+ES t 24180
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 871 t 24120 m 12 ce 869 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 871
+ES t 24180
+
+E # 872 t 24180 m 12 ce 870 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 872
+ES t 24240
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 873 t 24180 m 12 ce 871 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 873
+ES t 24240
+
+E # 874 t 24240 m 12 ce 872 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 874
+ES t 24300
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 875 t 24240 m 12 ce 873 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 875
+ES t 24300
+
+E # 876 t 24300 m 12 ce 874 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 876
+ES t 24360
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 877 t 24300 m 12 ce 875 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 877
+ES t 24360
+
+E # 878 t 24360 m 12 ce 876 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 878
+ES t 24420
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 879 t 24360 m 12 ce 877 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 879
+ES t 24420
+
+E # 880 t 24420 m 12 ce 878 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 880
+ES t 24480
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 881 t 24420 m 12 ce 879 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 881
+ES t 24480
+
+E # 882 t 24480 m 12 ce 880 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 882
+ES t 24540
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 883 t 24480 m 12 ce 881 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 883
+ES t 24540
+
+E # 884 t 24540 m 12 ce 882 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 884
+ES t 24600
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 885 t 24540 m 12 ce 883 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 885
+ES t 24600
+
+E # 886 t 24600 m 12 ce 884 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 886
+ES t 24660
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 887 t 24600 m 12 ce 885 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 887
+ES t 24660
+
+E # 888 t 24660 m 12 ce 886 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 888
+ES t 24720
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 889 t 24660 m 12 ce 887 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 889
+ES t 24720
+
+E # 890 t 24720 m 12 ce 888 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 890
+ES t 24780
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 891 t 24720 m 12 ce 889 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 891
+ES t 24780
+
+E # 892 t 24780 m 12 ce 890 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 892
+ES t 24840
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 893 t 24780 m 12 ce 891 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 893
+ES t 24840
+
+E # 894 t 24840 m 12 ce 892 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 894
+ES t 24900
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 895 t 24840 m 12 ce 893 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 895
+ES t 24900
+
+E # 896 t 24900 m 12 ce 894 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 896
+ES t 24960
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 897 t 24900 m 12 ce 895 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 897
+ES t 24960
+
+E # 898 t 24960 m 12 ce 896 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 898
+ES t 25020
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 899 t 24960 m 12 ce 897 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 899
+ES t 25020
+
+E # 900 t 25020 m 12 ce 898 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 900
+ES t 25080
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 901 t 25020 m 12 ce 899 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 901
+ES t 25080
+
+E # 902 t 25080 m 12 ce 900 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 902
+ES t 25140
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 903 t 25080 m 12 ce 901 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 903
+ES t 25140
+
+E # 904 t 25140 m 12 ce 902 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 904
+ES t 25200
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 905 t 25140 m 12 ce 903 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 905
+ES t 25200
+
+E # 906 t 25200 m 12 ce 904 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 906
+ES t 25260
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 907 t 25200 m 12 ce 905 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 907
+ES t 25260
+
+E # 908 t 25260 m 12 ce 906 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 908
+ES t 25320
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 909 t 25260 m 12 ce 907 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 909
+ES t 25320
+
+E # 910 t 25320 m 12 ce 908 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 910
+ES t 25380
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 911 t 25320 m 12 ce 909 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 911
+ES t 25380
+
+E # 912 t 25380 m 12 ce 910 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 912
+ES t 25440
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 913 t 25380 m 12 ce 911 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 913
+ES t 25440
+
+E # 914 t 25440 m 12 ce 912 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 914
+ES t 25500
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 915 t 25440 m 12 ce 913 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 915
+ES t 25500
+
+E # 916 t 25500 m 21 ce 858 msg 14
+BU id 4 txt "Processor: scheduling collect Statistics"
+- Processor: scheduling collect Statistics
+BS id 14 tid 14 eid 14 etid 14 c cMessage n collectStatistics pe 916
+ES t 27200
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+
+E # 917 t 25500 m 12 ce 914 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 917
+ES t 25560
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 918 t 25500 m 12 ce 915 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 918
+ES t 25560
+
+E # 919 t 25560 m 12 ce 917 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 919
+ES t 25620
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 920 t 25560 m 12 ce 918 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 920
+ES t 25620
+
+E # 921 t 25620 m 12 ce 919 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 921
+ES t 25680
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 922 t 25620 m 12 ce 920 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 922
+ES t 25680
+
+E # 923 t 25680 m 12 ce 921 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 923
+ES t 25740
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 924 t 25680 m 12 ce 922 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 924
+ES t 25740
+
+E # 925 t 25740 m 12 ce 923 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 925
+ES t 25800
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 926 t 25740 m 12 ce 924 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 926
+ES t 25800
+
+E # 927 t 25800 m 12 ce 925 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 927
+ES t 25860
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 928 t 25800 m 12 ce 926 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 928
+ES t 25860
+
+E # 929 t 25860 m 12 ce 927 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 929
+ES t 25920
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 930 t 25860 m 12 ce 928 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 930
+ES t 25920
+
+E # 931 t 25920 m 12 ce 929 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 931
+ES t 25980
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 932 t 25920 m 12 ce 930 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 932
+ES t 25980
+
+E # 933 t 25980 m 12 ce 931 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 933
+ES t 26040
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 934 t 25980 m 12 ce 932 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 934
+ES t 26040
+
+E # 935 t 26000 m 3 ce 481 msg 0
+BU id 3 txt <world>
+- <world>
+BU id 3 txt "Starting to create files"
+- Starting to create files
+BU id 3 txt "Creating data/humidity.xml"
+- Creating data/humidity.xml
+BU id 3 txt "Creating data/pressure.xml"
+- Creating data/pressure.xml
+BU id 3 txt "Creating data/temperature.xml"
+- Creating data/temperature.xml
+BU id 3 txt "Creating Data Temperature:"
+- Creating Data Temperature:
+BU id 3 txt "Creating data/light.xml"
+- Creating data/light.xml
+BU id 3 txt "Done creating"
+- Done creating
+BS id 0 tid 0 eid 0 etid 0 c cMessage n updateData pe 935
+ES t 39000
+BU id 3 txt </world>
+- </world>
+
+E # 936 t 26040 m 12 ce 933 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 936
+ES t 26100
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 937 t 26040 m 12 ce 934 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 937
+ES t 26100
+
+E # 938 t 26100 m 12 ce 936 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 938
+ES t 26160
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 939 t 26100 m 12 ce 937 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 939
+ES t 26160
+
+E # 940 t 26160 m 12 ce 938 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 940
+ES t 26220
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 941 t 26160 m 12 ce 939 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 941
+ES t 26220
+
+E # 942 t 26220 m 12 ce 940 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 942
+ES t 26280
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 943 t 26220 m 12 ce 941 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 943
+ES t 26280
+
+E # 944 t 26280 m 12 ce 942 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 944
+ES t 26340
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 945 t 26280 m 12 ce 943 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 945
+ES t 26340
+
+E # 946 t 26340 m 12 ce 944 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 946
+ES t 26400
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 947 t 26340 m 12 ce 945 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 947
+ES t 26400
+
+E # 948 t 26400 m 12 ce 946 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 948
+ES t 26460
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 949 t 26400 m 12 ce 947 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 949
+ES t 26460
+
+E # 950 t 26460 m 12 ce 948 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 950
+ES t 26520
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 951 t 26460 m 12 ce 949 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 951
+ES t 26520
+
+E # 952 t 26520 m 12 ce 950 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 952
+ES t 26580
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 953 t 26520 m 12 ce 951 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 953
+ES t 26580
+
+E # 954 t 26580 m 12 ce 952 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 954
+ES t 26640
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 955 t 26580 m 12 ce 953 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 955
+ES t 26640
+
+E # 956 t 26640 m 12 ce 954 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 956
+ES t 26700
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 957 t 26640 m 12 ce 955 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 957
+ES t 26700
+
+E # 958 t 26700 m 12 ce 956 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 958
+ES t 26760
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 959 t 26700 m 12 ce 957 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 959
+ES t 26760
+
+E # 960 t 26760 m 12 ce 958 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 960
+ES t 26820
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 961 t 26760 m 12 ce 959 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 961
+ES t 26820
+
+E # 962 t 26820 m 12 ce 960 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 962
+ES t 26880
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 963 t 26820 m 12 ce 961 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 963
+ES t 26880
+
+E # 964 t 26880 m 12 ce 962 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 964
+ES t 26940
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 965 t 26880 m 12 ce 963 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 965
+ES t 26940
+
+E # 966 t 26940 m 12 ce 964 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 966
+ES t 27000
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 967 t 26940 m 12 ce 965 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 967
+ES t 27000
+
+E # 968 t 27000 m 21 ce 865 msg 13
+BU id 4 txt "Processor: scheduling shiftMode"
+- Processor: scheduling shiftMode
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: high performance;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+BU id 4 txt "Processor: switched power mode"
+- Processor: switched power mode
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+BU id 4 txt "Processor: switched power mode"
+- Processor: switched power mode
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+BS id 13 tid 13 eid 13 etid 13 c cMessage n shiftMode pe 968
+ES t 30000
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+
+E # 969 t 27000 m 12 ce 966 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 969
+ES t 27060
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 970 t 27000 m 12 ce 967 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 970
+ES t 27060
+
+E # 971 t 27060 m 12 ce 969 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 971
+ES t 27120
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 972 t 27060 m 12 ce 970 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 972
+ES t 27120
+
+E # 973 t 27120 m 12 ce 971 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 973
+ES t 27180
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 974 t 27120 m 12 ce 972 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 974
+ES t 27180
+
+E # 975 t 27180 m 12 ce 973 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 975
+ES t 27240
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 976 t 27180 m 12 ce 974 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 976
+ES t 27240
+
+E # 977 t 27200 m 21 ce 916 msg 14
+BU id 4 txt "Processor: scheduling collect Statistics"
+- Processor: scheduling collect Statistics
+BS id 14 tid 14 eid 14 etid 14 c cMessage n collectStatistics pe 977
+ES t 28900
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+MB sm 21 tm 12 m ""
+ME
+
+E # 978 t 27240 m 12 ce 975 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 978
+ES t 27300
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 979 t 27240 m 12 ce 976 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 979
+ES t 27300
+
+E # 980 t 27300 m 12 ce 978 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 980
+ES t 27360
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 981 t 27300 m 12 ce 979 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 981
+ES t 27360
+
+E # 982 t 27360 m 12 ce 980 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 982
+ES t 27420
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 983 t 27360 m 12 ce 981 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 983
+ES t 27420
+
+E # 984 t 27420 m 12 ce 982 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 984
+ES t 27480
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 985 t 27420 m 12 ce 983 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 985
+ES t 27480
+
+E # 986 t 27480 m 12 ce 984 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 986
+ES t 27540
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 987 t 27480 m 12 ce 985 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 987
+ES t 27540
+
+E # 988 t 27540 m 12 ce 986 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 988
+ES t 27600
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 989 t 27540 m 12 ce 987 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 989
+ES t 27600
+
+E # 990 t 27600 m 12 ce 988 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 990
+ES t 27660
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 991 t 27600 m 12 ce 989 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 991
+ES t 27660
+
+E # 992 t 27660 m 12 ce 990 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 992
+ES t 27720
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 993 t 27660 m 12 ce 991 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 993
+ES t 27720
+
+E # 994 t 27720 m 12 ce 992 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 994
+ES t 27780
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 995 t 27720 m 12 ce 993 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 995
+ES t 27780
+
+E # 996 t 27780 m 12 ce 994 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 996
+ES t 27840
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 997 t 27780 m 12 ce 995 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 997
+ES t 27840
+
+E # 998 t 27840 m 12 ce 996 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 998
+ES t 27900
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 999 t 27840 m 12 ce 997 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 999
+ES t 27900
+
+E # 1000 t 27900 m 12 ce 998 msg 9
+KF p 81 c 0:18, s 0:162-175,0:3-10,0:12-135,0:348,722:3,935:17,968:27,977:3,998:3,999:1,
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 1000
+ES t 27960
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 1001 t 27900 m 12 ce 999 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 1001
+ES t 27960
+
+E # 1002 t 27960 m 12 ce 1000 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 1002
+ES t 28020
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 1003 t 27960 m 12 ce 1001 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 1003
+ES t 28020
+
+E # 1004 t 28020 m 12 ce 1002 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n auto-update p 500 pe 1004
+ES t 28080
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+
+E # 1005 t 28020 m 12 ce 1003 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n publish k 1 p 2000 pe 1005
+ES t 28080
+SE e 0 c 9 m "The user has finished the simulation at event #1006, t=28020."
+- Sent:     0
+- Received: 0
+- Hop count, min:    0
+- Hop count, max:    0
+- Hop count, mean:   0
+- Hop count, stddev: -nan
+MS id 4 d "p=337,331;t=mode: normal;i2=status/battery_80;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
+MB sm 12 tm 11 m ""
+ME
+MB sm 12 tm 11 m ""
+ME

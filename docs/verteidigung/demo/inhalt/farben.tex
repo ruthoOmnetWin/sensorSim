@@ -1,0 +1,114 @@
+\begingroup
+%\newcommand{\colorname}[2]{#1~(\texttt{#2})}
+\newcommand{\colorname}[2]{\texttt{#2}}
+\newcommand{\lara}[1]{\textnormal{{\fontfamily{lmss}\selectfont\textlangle}\textit{#1}{\fontfamily{lmss}\selectfont\textrangle}}}
+
+\begin{frame}
+\frametitle{Farben}
+
+\small
+\begin{center}
+\begin{tikzpicture}[yscale=0.9,xscale=1.7]
+\node at (0.4, -6.0) [below] {\footnotesize RGB};  \node at (4.4, -6.0) [below] {\footnotesize RGB};
+\node at (1.4, -6.0) [below] {\footnotesize CMYK}; \node at (5.4, -6.0) [below] {\footnotesize CMYK};
+
+\fill [tuccolor@black@rgb]  (0.0, -0.0) rectangle (0.8, -0.8); \fill [tuccolor@black@cmyk]  (1.0, -0.0) rectangle (1.8, -0.8); \node at (2.0, -0.4) [right] {\colorname{Schwarz}{black}};
+\fill [tuccolor@tuc@rgb]    (0.0, -1.0) rectangle (0.8, -1.8); \fill [tuccolor@tuc@cmyk]    (1.0, -1.0) rectangle (1.8, -1.8); \node at (2.0, -1.4) [right] {\colorname{Uni}{tuc}};
+\fill [tuccolor@natwi@rgb]  (0.0, -2.0) rectangle (0.8, -2.8); \fill [tuccolor@natwi@cmyk]  (1.0, -2.0) rectangle (1.8, -2.8); \node at (2.0, -2.4) [right] {\colorname{NatWi}{natwi}};
+\fill [tuccolor@ma@rgb]     (0.0, -3.0) rectangle (0.8, -3.8); \fill [tuccolor@ma@cmyk]     (1.0, -3.0) rectangle (1.8, -3.8); \node at (2.0, -3.4) [right] {\colorname{Mathe}{ma}};
+\fill [tuccolor@mb@rgb]     (0.0, -4.0) rectangle (0.8, -4.8); \fill [tuccolor@mb@cmyk]     (1.0, -4.0) rectangle (1.8, -4.8); \node at (2.0, -4.4) [right] {\colorname{MB}{mb}};
+\fill [tuccolor@etit@rgb]   (0.0, -5.0) rectangle (0.8, -5.8); \fill [tuccolor@etit@cmyk]   (1.0, -5.0) rectangle (1.8, -5.8); \node at (2.0, -5.4) [right] {\colorname{ET/IT}{etit}};
+\fill [tuccolor@if@rgb]     (4.0, -0.0) rectangle (4.8, -0.8); \fill [tuccolor@if@cmyk]     (5.0, -0.0) rectangle (5.8, -0.8); \node at (6.0, -0.4) [right] {\colorname{IF}{if}};
+\fill [tuccolor@wiwi@rgb]   (4.0, -1.0) rectangle (4.8, -1.8); \fill [tuccolor@wiwi@cmyk]   (5.0, -1.0) rectangle (5.8, -1.8); \node at (6.0, -1.4) [right] {\colorname{Wiwi}{wiwi}};
+\fill [tuccolor@phil@rgb]   (4.0, -2.0) rectangle (4.8, -2.8); \fill [tuccolor@phil@cmyk]   (5.0, -2.0) rectangle (5.8, -2.8); \node at (6.0, -2.4) [right] {\colorname{Phil}{phil}};
+\fill [tuccolor@hsw@rgb]    (4.0, -3.0) rectangle (4.8, -3.8); \fill [tuccolor@hsw@cmyk]    (5.0, -3.0) rectangle (5.8, -3.8); \node at (6.0, -3.4) [right] {\colorname{HSW}{hsw}};
+\fill [tuccolor@gold@rgb]   (4.0, -4.0) rectangle (4.8, -4.8); \fill [tuccolor@gold@cmyk]   (5.0, -4.0) rectangle (5.8, -4.8); \node at (6.0, -4.4) [right] {\colorname{Gold}{gold}};
+\fill [tuccolor@silver@rgb] (4.0, -5.0) rectangle (4.8, -5.8); \fill [tuccolor@silver@cmyk] (5.0, -5.0) rectangle (5.8, -5.8); \node at (6.0, -5.4) [right] {\colorname{Silber}{silver}};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[containsverbatim]
+\frametitle{Auswahl der Auszeichnungsfarbe}
+
+\begin{itemize}
+\item Die Auszeichnungsfarbe wird durch Parameterübergabe bei \\
+      \lstinline[language={[LaTeX]TeX}]{\usetheme} bzw.
+      \lstinline[language={[LaTeX]TeX}]{\usecolortheme} gewählt.
+  \begin{itemize}
+  \item \texttt{fakcolor=\lara{Fakultät}}
+  \item \texttt{colorspace=\lara{Farbraum}}
+  \end{itemize}
+
+\item Folgende Auszeichnungsfarben stehen zur Auswahl:
+  \begin{itemize}
+  \item Die Farbcodes sind auf der vorangehenden Folie aufgelistet.
+  \item Ohne Angabe einer Farbe ist \texttt{tuc} vorausgewählt.
+  \item Bitte \structure{Kleinschreibung} verwenden.
+  \end{itemize}
+
+\item Als Farbräume stehen \texttt{rgb} (Vorauswahl) und \texttt{cmyk} zur Auswahl.
+
+\bigskip
+
+\item Beispiel: Laden das Farbschemas für die Fakultät für Informatik.
+\begin{lstlisting}[style=block,language={[LaTeX]TeX}]
+\usetheme[fakcolor=if]{tuc2014}
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[containsverbatim]
+\frametitle{Farbaliasse}
+
+\begin{itemize}
+\item Zur Erstellung eigener Grafiken kann wie folgt auf die Farben zugegriffen werden.
+\bigskip
+\item \structure{\texttt{tuccolor}} für die aktive Auszeichnungsfarbe
+\item \structure{\texttt{tuccolor@\lara{Farbcode}}} für die Auszeichnungsfarbe
+      mit dem gegebenen Code
+\item \structure{\texttt{tuccolor@\lara{Farbcode}@\lara{Farbraum}}} 
+      für die Farbe mit dem entsprechenden Code im angegebenen Farbraum.
+\bigskip
+\item Beispiel: \textbf{\color{tuccolor@if}{Informatik}}
+\begin{lstlisting}[style=block,language={[LaTeX]TeX}]
+\textbf{\color{tuccolor@if}{Informatik}}
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[containsverbatim]
+\frametitle{Farben für Hervorhebungen}
+
+\begin{itemize}
+\item Die Hervorhebungsfarben orientieren sich am Webseitendesign.
+\item Es sind folgende Farben festgelegt.
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[yscale=0.9,xscale=1.8]
+\node at (0.4, -3.0) [below] {\footnotesize RGB};
+\node at (1.4, -3.0) [below] {\footnotesize CMYK};
+
+\fill [tuccolor@info@rgb]    (0.0, -0.0) rectangle (0.8, -0.8); \fill [tuccolor@info@cmyk]    (1.0, -0.0) rectangle (1.8, -0.8); \node at (2.0, -0.4) [right] {\texttt{tuccolor@info}};
+\fill [tuccolor@warning@rgb] (0.0, -1.0) rectangle (0.8, -1.8); \fill [tuccolor@warning@cmyk] (1.0, -1.0) rectangle (1.8, -1.8); \node at (2.0, -1.4) [right] {\texttt{tuccolor@warning}};
+\fill [tuccolor@danger@rgb]  (0.0, -2.0) rectangle (0.8, -2.8); \fill [tuccolor@danger@cmyk]  (1.0, -2.0) rectangle (1.8, -2.8); \node at (2.0, -2.4) [right] {\texttt{tuccolor@danger}};
+\end{tikzpicture}
+\end{center}
+\vspace*{-\medskipamount}
+
+\begin{itemize}
+\item Es gelten folgende Voreinstellungen für Warnungen und Beispiele:
+\begingroup
+\small
+\begin{lstlisting}[style=block,language={[LaTeX]TeX}]
+\setbeamercolor*{alerted text}{fg=tuccolor@warning}
+\setbeamercolor*{example text}{fg=tuccolor@info}
+\end{lstlisting}
+\endgroup
+\end{itemize}
+\end{frame}
+\endgroup

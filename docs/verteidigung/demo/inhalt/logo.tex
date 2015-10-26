@@ -1,0 +1,58 @@
+\begin{frame}[containsverbatim]
+\frametitle{Die Logospalte}
+
+\begin{itemize}
+\item Standardmäßig wird die gesamte Folienbreite für den Inhalt genutzt.
+\item Mittels \lstinline+\tucnarrowframe+ wird die Logospalte aktiviert.
+\item Sie ist so breit wie das TU-Logo in der Kopfzeile.
+\item Mittels \lstinline+\tucwideframe+ wird auf die volle breite zurückgeschaltet.
+\end{itemize}
+
+\medskip
+
+\begin{alertblock}{Achtung}
+\centering
+Da diese Befehle den Satzspiegel ändern, dürfen Sie nur außerhalb von
+\texttt{frame}-Umgebungen und dort auch nur außerhalb von Gruppen oder weiteren
+Umgebungen aufgerufen werden.
+\end{alertblock}
+\end{frame}
+
+\tucnarrowframe
+
+\begingroup
+\logo{\includegraphics[width=\hsize]{bilder/urzlogo}\\%
+\includegraphics[width=\hsize]{bilder/urzlogo_grau}}
+
+\begin{frame}[containsverbatim]
+\frametitle{Logos}
+
+\begin{itemize}
+\item Logos werden mittels \lstinline[language={[LaTeX]TeX}]+\logo{}+
+      \structure{außerhalb} des Frames festgelegt.
+\item Die Breite der Logospalte wird durch die Länge
+      \lstinline[language={[LaTeX]TeX}]+\hsize+ bereitgestellt.
+\item Mittels \lstinline[language={[LaTeX]TeX}]+\\+ wird vertikaler Abstand zwischen
+      den Logos eingefügt.
+\medskip
+\item Bsp. für diese Folie:
+\begingroup
+\footnotesize
+\begin{lstlisting}[style=numberedblock,language={[LaTeX]TeX}]
+\tucnarrowframe
+\begingroup
+\logo{\includegraphics[width=\hsize]{bilder/urzlogo}\\%
+\includegraphics[width=\hsize]{bilder/urzlogo_grau}}
+
+\begin{frame}
+% Inhalt
+\end{frame}
+\endgroup
+\tucwideframe
+\end{lstlisting}
+\endgroup
+\end{itemize}
+\end{frame}
+\endgroup
+
+\tucwideframe

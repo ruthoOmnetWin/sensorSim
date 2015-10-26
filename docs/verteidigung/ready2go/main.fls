@@ -1,0 +1,12 @@
+PWD /home/rutho/BA/sensorSim/docs/presentation/ready2go
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/latex.fmt
+INPUT main.tex
+OUTPUT main.log
+INPUT main.aux
+INPUT main.aux
+OUTPUT main.aux
+INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+OUTPUT main.dvi
+INPUT main.aux

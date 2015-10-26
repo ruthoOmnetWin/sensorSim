@@ -1,0 +1,48 @@
+\beamer@endinputifotherversion {3.33pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\sectionentry {1}{Einleitung}{5}{Einleitung}{0}}
+\headcommand {\beamer@sectionpages {1}{4}}
+\headcommand {\beamer@subsectionpages {1}{4}}
+\headcommand {\slideentry {1}{0}{3}{5/5}{}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{7}{Aufgabe}}\headcommand {\beamer@subsectionpages {5}{6}}
+\headcommand {\slideentry {1}{1}{1}{7/7}{Aufgabe}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\sectionentry {2}{Vorbetrachtungen}{9}{Vorbetrachtungen}{0}}
+\headcommand {\beamer@sectionpages {5}{8}}
+\headcommand {\beamer@subsectionpages {7}{8}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{9}{Simulation vs. Emulation und Prototyping}}\headcommand {\beamer@subsectionpages {9}{8}}
+\headcommand {\slideentry {2}{1}{1}{9/9}{Simulation vs. Emulation und Prototyping}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{11}{Sensoren}}\headcommand {\beamer@subsectionpages {9}{10}}
+\headcommand {\slideentry {2}{2}{1}{11/11}{Sensoren}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\sectionentry {3}{Umsetzung}{13}{Umsetzung}{0}}
+\headcommand {\beamer@sectionpages {9}{12}}
+\headcommand {\beamer@subsectionpages {11}{12}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{13}{Omnet++}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\slideentry {3}{1}{1}{13/13}{Omnet++}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{15}{bisherige Anwendung}}\headcommand {\beamer@subsectionpages {13}{14}}
+\headcommand {\slideentry {3}{2}{1}{15/15}{bisherige Anwendung}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{17}{Beispiel}}\headcommand {\beamer@subsectionpages {15}{16}}
+\headcommand {\slideentry {3}{3}{1}{17/17}{Beispiel}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {4}{0}{2}{19/19}{}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\beamer@partpages {1}{22}}
+\headcommand {\beamer@subsectionpages {19}{22}}
+\headcommand {\beamer@sectionpages {19}{22}}
+\headcommand {\beamer@documentpages {22}}
+\headcommand {\def \inserttotalframenumber {10}}
+\headcommand {\partentry {Anhang}{1}}
+\headcommand {\beamer@partpages {1}{20}}
+\headcommand {\beamer@sectionpages {19}{20}}
+\headcommand {\beamer@subsectionpages {19}{20}}
+\headcommand {\beamer@appendixpages {21}}
+\headcommand {\slideentry {4}{0}{3}{21/21}{}{1}}
+\headcommand {\beamer@framepages {21}{21}}

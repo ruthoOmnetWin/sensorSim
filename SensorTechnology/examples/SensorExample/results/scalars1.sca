@@ -1,0 +1,58 @@
+version 2
+run General-0-20150722-10:45:36-5095
+attr configname General
+attr datetime 20150722-10:45:36
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network SensorExample
+attr processid 5095
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar SensorExample.world 	#sent 	0
+scalar SensorExample.world 	#received 	0
+statistic SensorExample.world 	"hop count"
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr type  int
+bin	-INF	0
+bin	-1	0
+bin	0	0
+bin	1	0
+scalar SensorExample.TNode.nic.mac 	nbTxFrames 	3
+scalar SensorExample.TNode.nic.mac 	nbRxFrames 	0
+scalar SensorExample.TNode.nic.mac 	nbDroppedFrames 	0
+scalar SensorExample.TNode.nic.mac 	nbMissedAcks 	0
+scalar SensorExample.TNode.nic.mac 	nbRecvdAcks 	0
+scalar SensorExample.TNode.nic.mac 	nbTxAcks 	0
+scalar SensorExample.TNode.nic.mac 	nbDuplicates 	0
+scalar SensorExample.TNode.nic.mac 	meanBackoff 	0.50666666666667
+scalar SensorExample.TNode.nic.mac 	nbBackoffs 	3
+scalar SensorExample.TNode.nic.mac 	backoffDurations 	1.52
+scalar SensorExample.TNode.nic.phy 	nbFramesWithInterference 	0
+scalar SensorExample.TNode.nic.phy 	nbFramesWithoutInterference 	0
+scalar SensorExample.TNode.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar SensorExample.TNode.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar SensorExample.TNode.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar SensorExample.TNode.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar SensorExample.TNode.tranl 	nbAggrPktReceived 	0
+scalar SensorExample.TNode.tranl 	"nbAggrPktSentDown " 	0
+scalar SensorExample.TNode.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar SensorExample.TNode.batteryStats 	total 	4232600
+attr unit  mW-s
+scalar SensorExample.TNode.batteryStats 	lifetime 	-1
+attr unit  s
+scalar SensorExample.TNode.batteryStats 	"Mean power consumption" 	151.05638829408
+attr unit  mW

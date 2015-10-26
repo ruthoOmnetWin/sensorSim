@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                             %
+% Anwendungsbeispiel für das Beamer-Template TU Chemnitz                      %
+% (c) Mario Haustein (mario.haustein@hrz.tu-chemnitz.de), 2013-2014           %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{ifxetex}
+\usepackage{ifluatex}
+\ifxetex
+\usepackage[babelshorthands]{polyglossia}
+\setmainlanguage{german}
+\else\ifluatex
+\usepackage[babelshorthands]{polyglossia}
+\setmainlanguage{german}
+\else
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\fi\fi
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{exscale}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{textcomp}
+\usepackage{chemfig}
+\usepackage{metalogo}
+\usepackage{tabularx}
+
+
+
+% Trennstellen für URLs
+\def\UrlBreaks{\do\:\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]%
+ \do\)\do\,\do\?\do\'\do+\do\=\do\#}
+\def\UrlBigBreaks{}
+
+% Voreinstellungen für Quellcodelistings
+\lstset{basicstyle=\ttfamily,keywordstyle=\fontfamily{lmss}\bfseries,breaklines,tabsize=2}
+\ifxetex\else\ifluatex\else\lstset{inputencoding=utf8/latin1}\fi\fi
+\lstdefinestyle{block}{basicstyle=\ttfamily,keywordstyle=\fontfamily{lmss}\bfseries,breakindent=10pt}
+\lstdefinestyle{numberedblock}{basicstyle=\ttfamily,keywordstyle=\fontfamily{lmss}\bfseries,numbers=left,numberstyle=\scriptsize,xleftmargin=20pt,frame=leftline,breakindent=10pt}
+
+% TUC-Templates laden.
+\usetheme{tuc2014}
+\mode<article>{\usepackage{beamerarticletuc2014}}
+
+
+% Metadaten
+\title{\LaTeX-Beamer an der TU Chemnitz}
+\subtitle[Anleitung und Musterbeispiel]{Anleitung und Musterbeispiel für das \texttt{tuc2014}-Beamer-Template}
+\author{Mario Haustein}
+\date[\today]{Stand: \today}
+\institute[TUC, URZ]{TU Chemnitz, Universitätsrechenzentrum}
+\titlegraphic{\includegraphics[height=0.2\textheight]{tuc2014/logo/tuc_green}}
+\tucurl{http://www.tu-chemnitz.de/urz/}
+
+
+\begin{document}
+\begingroup
+\tucthreeheadlines
+\frame{\titlepage}
+\endgroup
+
+\input{inhalt/intro}
+
+\frame{\frametitle{Gliederung}\tableofcontents}
+\note{\begin{itemize}
+\item Weitere Anmerkungen \dots
+\item \dots\ in Stichpunkten \dots
+\item \dots\ formuliert.
+\end{itemize}}
+
+\section{Anwendungsbeispiele für \LaTeX-Beamer}
+\subsection{Formatierung}
+\input{inhalt/format}
+\input{inhalt/columns}
+
+\subsection{Listen}
+\input{inhalt/list}
+
+\subsection{Mathematik}
+\input{inhalt/math}
+
+\subsection{Bilder}
+\input{inhalt/figure}
+
+\subsection{Quellcode}
+\input{inhalt/code}
+
+
+\section{Das Template}
+\input{inhalt/tuc2014}
+
+\subsection{Farben (Color-Theme)}
+\input{inhalt/farben}
+
+\subsection{Schriften (Font-Theme)}
+\input{inhalt/fonts}
+
+\subsection{Folienrahmen (Outer-Theme)}
+\input{inhalt/logo}
+\input{inhalt/headline}
+\input{inhalt/tucurl}
+
+\subsection{Folieninhalt (Inner-Theme)}
+\input{inhalt/titlepage}
+
+\subsection{Das \LaTeX-Beamer-Grundgerüst}
+\input{inhalt/files}
+\input{inhalt/overlays}
+
+
+\section{Verschiedenes}
+\subsection{Kontakt}
+\input{inhalt/kontakt}
+
+\subsection{Literatur}
+\input{inhalt/bib}
+
+
+\section{}
+\frame<beamer| trans>{\Huge\begin{center}\scalebox{2}{\texttt{\textbackslash endinput}}\end{center}}
+
+\end{document}

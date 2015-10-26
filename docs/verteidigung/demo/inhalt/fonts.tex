@@ -1,0 +1,28 @@
+\begin{frame}[containsverbatim]
+\frametitle{Schriften}
+
+\begin{itemize}
+\item Standardmäßig wird "`Roboto Condensed"' für den Folienrahmen
+      und den Folieninhalt verwendet.
+\item Für \XeTeX\ und \LuaTeX\ reicht es aus, wenn die TrueType-Schrift
+      systemweit installiert ist.
+\item Für \TeX\ und pdf\TeX\ muss das Paket \texttt{roboto} installiert sein.
+  \begin{itemize}
+  \item Download unter \url{http://www.tu-chemnitz.de/uk/corporate_design/}
+  \end{itemize}
+
+\bigskip
+
+\item Weiterhin können folgende Optionen an
+      \lstinline[language={[LaTeX]TeX}]{\usetheme} bzw.
+      \lstinline[language={[LaTeX]TeX}]{\usecolortheme} übergeben werden.
+  \begin{description}
+  \item[\rlap{\texttt{latexfonts}}\phantom{\texttt{latexfontsbody}}]
+         Verwendet die \LaTeX-Standardschriften
+  \item[\texttt{latexfontsbody}]
+         Verwendet die Standardschriften für den Folieninhalt. \\
+         Kopf- und Fußzeile werden in "`Roboto Condensed"' gesetzt.
+  \end{description}
+\item Die Schriften inkl. Umschaltbefehle werden aber in jedem Fall geladen.
+\end{itemize}
+\end{frame}

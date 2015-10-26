@@ -1,57 +1,478 @@
-file 88587 1431514266                                           
+file 237316 1437489694                                          
 version 2
-run General-0-20150513-11:57:49-6359
+run General-0-20150721-16:40:49-1654
 attr configname General
-attr datetime 20150513-11:57:49
+attr datetime 20150721-16:40:49
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network BasicExample
-attr processid 6359
+attr processid 1654
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
+
 vector 3  BasicExample.SensorNode[0].Processor  "power mode"  ETV
-3	1638 354 0 13584 0 85000 24 0 2 18 30
-vector 4  BasicExample.SensorNode[0].Processor  Voltage  ETV
-4	1992 4508 0 13785 0 87000 296 3 3 888 2664
-vector 5  BasicExample.SensorNode[0].Processor  residualRelative  ETV
-5	6500 8857 0 13785 0 87000 296 0.023083333333333 1 153.56278648148 105.4883045054
-vector 6  BasicExample.SensorNode[0].Processor  residualAbs  ETV
-6	15357 6291 0 13785 0 87000 296 249300 10800000 1658478094 1.2304155837509e+16
-vector 10  BasicExample.TNode[0].Processor  "power mode"  ETV
-10	21648 310 0 12004 0 70000 20 0 2 15 25
-vector 11  BasicExample.TNode[0].Processor  Voltage  ETV
-11	21958 4464 0 12368 0 73000 278 3 3 834 2502
-vector 12  BasicExample.TNode[0].Processor  residualRelative  ETV
-12	26422 8548 0 12368 0 73000 278 0.0024675925925926 1 143.31259722222 98.422937785729
-vector 13  BasicExample.TNode[0].Processor  residualAbs  ETV
-13	34970 6161 0 12368 0 73000 278 26650 10800000 1547776050 1.1480051463328e+16
-vector 17  BasicExample.TPNode[0].Processor  "power mode"  ETV
-17	41131 276 0 10776 0 60000 18 0 2 12 20
-vector 18  BasicExample.TPNode[0].Processor  Voltage  ETV
-18	41407 3879 0 10794 0 60000 245 3 3 735 2205
-vector 19  BasicExample.TPNode[0].Processor  residualRelative  ETV
-19	45286 7401 0 10794 0 60000 245 0.010203703703704 1 129.74326222222 89.877430869044
-vector 20  BasicExample.TPNode[0].Processor  residualAbs  ETV
-20	52687 5377 0 10794 0 60000 245 110200 10800000 1401227232 1.0483303536565e+16
-vector 24  BasicExample.PHLNode[0].Processor  "power mode"  ETV
-24	58064 242 0 10062 0 55000 16 0 2 12 20
-vector 25  BasicExample.PHLNode[0].Processor  Voltage  ETV
-25	58306 3719 0 10223 0 56000 237 3 3 711 2133
-vector 26  BasicExample.PHLNode[0].Processor  residualRelative  ETV
-26	62025 7242 0 10223 0 56000 237 0.024435185185185 1 120.79997351852 83.713332060497
-vector 27  BasicExample.PHLNode[0].Processor  residualAbs  ETV
-27	69267 5124 0 10223 0 56000 237 263900 10800000 1304639714 9.7643230515364e+15
-vector 31  BasicExample.TPHLNode[0].Processor  "power mode"  ETV
-31	74391 209 0 8428 0 45000 14 0 2 9 15
-vector 32  BasicExample.TPHLNode[0].Processor  Voltage  ETV
-32	74600 3235 0 8783 0 47000 208 3 3 624 1872
-vector 33  BasicExample.TPHLNode[0].Processor  residualRelative  ETV
-33	77835 6268 0 8783 0 47000 208 0.0073842592592593 1 113.4990812963 79.274329100208
-vector 34  BasicExample.TPHLNode[0].Processor  residualAbs  ETV
-34	84103 4484 0 8783 0 47000 208 79750 10800000 1225790078 9.2465577462483e+15
+vector 4  BasicExample.SensorNode[0].Processor  "Sensor Modules Status"  ETV
+vector 5  BasicExample.SensorNode[0].Processor  Voltage  ETV
+vector 6  BasicExample.SensorNode[0].Processor  residualRelative  ETV
+vector 7  BasicExample.SensorNode[0].Processor  residualAbs  ETV
+vector 11  BasicExample.SensorNode[1].Processor  "power mode"  ETV
+vector 12  BasicExample.SensorNode[1].Processor  "Sensor Modules Status"  ETV
+vector 13  BasicExample.SensorNode[1].Processor  Voltage  ETV
+vector 14  BasicExample.SensorNode[1].Processor  residualRelative  ETV
+vector 15  BasicExample.SensorNode[1].Processor  residualAbs  ETV
+vector 19  BasicExample.TNode[0].Processor  "power mode"  ETV
+vector 20  BasicExample.TNode[0].Processor  "Sensor Modules Status"  ETV
+vector 21  BasicExample.TNode[0].Processor  Voltage  ETV
+vector 22  BasicExample.TNode[0].Processor  residualRelative  ETV
+vector 23  BasicExample.TNode[0].Processor  residualAbs  ETV
+vector 27  BasicExample.TNode[1].Processor  "power mode"  ETV
+vector 28  BasicExample.TNode[1].Processor  "Sensor Modules Status"  ETV
+vector 29  BasicExample.TNode[1].Processor  Voltage  ETV
+vector 30  BasicExample.TNode[1].Processor  residualRelative  ETV
+vector 31  BasicExample.TNode[1].Processor  residualAbs  ETV
+vector 35  BasicExample.TPNode[0].Processor  "power mode"  ETV
+vector 36  BasicExample.TPNode[0].Processor  "Sensor Modules Status"  ETV
+vector 37  BasicExample.TPNode[0].Processor  Voltage  ETV
+vector 38  BasicExample.TPNode[0].Processor  residualRelative  ETV
+vector 39  BasicExample.TPNode[0].Processor  residualAbs  ETV
+vector 43  BasicExample.TPNode[1].Processor  "power mode"  ETV
+vector 44  BasicExample.TPNode[1].Processor  "Sensor Modules Status"  ETV
+vector 45  BasicExample.TPNode[1].Processor  Voltage  ETV
+vector 46  BasicExample.TPNode[1].Processor  residualRelative  ETV
+vector 47  BasicExample.TPNode[1].Processor  residualAbs  ETV
+vector 51  BasicExample.PHLNode[0].Processor  "power mode"  ETV
+vector 52  BasicExample.PHLNode[0].Processor  "Sensor Modules Status"  ETV
+vector 53  BasicExample.PHLNode[0].Processor  Voltage  ETV
+vector 54  BasicExample.PHLNode[0].Processor  residualRelative  ETV
+vector 55  BasicExample.PHLNode[0].Processor  residualAbs  ETV
+vector 59  BasicExample.PHLNode[1].Processor  "power mode"  ETV
+vector 60  BasicExample.PHLNode[1].Processor  "Sensor Modules Status"  ETV
+vector 61  BasicExample.PHLNode[1].Processor  Voltage  ETV
+vector 62  BasicExample.PHLNode[1].Processor  residualRelative  ETV
+vector 63  BasicExample.PHLNode[1].Processor  residualAbs  ETV
+vector 67  BasicExample.TPHLNode[0].Processor  "power mode"  ETV
+vector 68  BasicExample.TPHLNode[0].Processor  "Sensor Modules Status"  ETV
+vector 69  BasicExample.TPHLNode[0].Processor  Voltage  ETV
+vector 70  BasicExample.TPHLNode[0].Processor  residualRelative  ETV
+vector 71  BasicExample.TPHLNode[0].Processor  residualAbs  ETV
+vector 75  BasicExample.TPHLNode[1].Processor  "power mode"  ETV
+vector 76  BasicExample.TPHLNode[1].Processor  "Sensor Modules Status"  ETV
+vector 77  BasicExample.TPHLNode[1].Processor  Voltage  ETV
+vector 78  BasicExample.TPHLNode[1].Processor  residualRelative  ETV
+vector 79  BasicExample.TPHLNode[1].Processor  residualAbs  ETV
+vector 80  BasicExample.SensorNode[0].Memory  "Energy Consumptions"  ETV
+vector 81  BasicExample.SensorNode[0].Memory  "Current use over time"  ETV
+vector 82  BasicExample.SensorNode[1].Memory  "Energy Consumptions"  ETV
+vector 83  BasicExample.SensorNode[1].Memory  "Current use over time"  ETV
+vector 84  BasicExample.TNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 85  BasicExample.TNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 86  BasicExample.TNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 87  BasicExample.TNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 88  BasicExample.TNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 89  BasicExample.TNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 90  BasicExample.TNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 91  BasicExample.TNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 92  BasicExample.TNode[0].Memory  "Energy Consumptions"  ETV
+vector 93  BasicExample.TNode[0].Memory  "Current use over time"  ETV
+vector 94  BasicExample.TNode[1].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 95  BasicExample.TNode[1].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 96  BasicExample.TNode[1].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 97  BasicExample.TNode[1].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 98  BasicExample.TNode[1].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 99  BasicExample.TNode[1].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 100  BasicExample.TNode[1].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 101  BasicExample.TNode[1].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 102  BasicExample.TNode[1].Memory  "Energy Consumptions"  ETV
+vector 103  BasicExample.TNode[1].Memory  "Current use over time"  ETV
+vector 104  BasicExample.TPNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 105  BasicExample.TPNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 106  BasicExample.TPNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 107  BasicExample.TPNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 108  BasicExample.TPNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 109  BasicExample.TPNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 110  BasicExample.TPNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 111  BasicExample.TPNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 112  BasicExample.TPNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 113  BasicExample.TPNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 114  BasicExample.TPNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 115  BasicExample.TPNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 116  BasicExample.TPNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 117  BasicExample.TPNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 118  BasicExample.TPNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 119  BasicExample.TPNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 120  BasicExample.TPNode[0].Memory  "Energy Consumptions"  ETV
+vector 121  BasicExample.TPNode[0].Memory  "Current use over time"  ETV
+vector 122  BasicExample.TPNode[1].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 123  BasicExample.TPNode[1].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 124  BasicExample.TPNode[1].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 125  BasicExample.TPNode[1].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 126  BasicExample.TPNode[1].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 127  BasicExample.TPNode[1].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 128  BasicExample.TPNode[1].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 129  BasicExample.TPNode[1].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 130  BasicExample.TPNode[1].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 131  BasicExample.TPNode[1].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 132  BasicExample.TPNode[1].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 133  BasicExample.TPNode[1].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 134  BasicExample.TPNode[1].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 135  BasicExample.TPNode[1].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 136  BasicExample.TPNode[1].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 137  BasicExample.TPNode[1].PressureSensor.Transducer  "Current use over time"  ETV
+vector 138  BasicExample.TPNode[1].Memory  "Energy Consumptions"  ETV
+vector 139  BasicExample.TPNode[1].Memory  "Current use over time"  ETV
+vector 140  BasicExample.PHLNode[0].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 141  BasicExample.PHLNode[0].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 142  BasicExample.PHLNode[0].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 143  BasicExample.PHLNode[0].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 144  BasicExample.PHLNode[0].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 145  BasicExample.PHLNode[0].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 146  BasicExample.PHLNode[0].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 147  BasicExample.PHLNode[0].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 148  BasicExample.PHLNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 149  BasicExample.PHLNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 150  BasicExample.PHLNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 151  BasicExample.PHLNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 152  BasicExample.PHLNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 153  BasicExample.PHLNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 154  BasicExample.PHLNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 155  BasicExample.PHLNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 156  BasicExample.PHLNode[0].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 157  BasicExample.PHLNode[0].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 158  BasicExample.PHLNode[0].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 159  BasicExample.PHLNode[0].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 160  BasicExample.PHLNode[0].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 161  BasicExample.PHLNode[0].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 162  BasicExample.PHLNode[0].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 163  BasicExample.PHLNode[0].LightSensor.Transducer  "Current use over time"  ETV
+vector 164  BasicExample.PHLNode[0].Memory  "Energy Consumptions"  ETV
+vector 165  BasicExample.PHLNode[0].Memory  "Current use over time"  ETV
+vector 166  BasicExample.PHLNode[1].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 167  BasicExample.PHLNode[1].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 168  BasicExample.PHLNode[1].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 169  BasicExample.PHLNode[1].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 170  BasicExample.PHLNode[1].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 171  BasicExample.PHLNode[1].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 172  BasicExample.PHLNode[1].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 173  BasicExample.PHLNode[1].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 174  BasicExample.PHLNode[1].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 175  BasicExample.PHLNode[1].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 176  BasicExample.PHLNode[1].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 177  BasicExample.PHLNode[1].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 178  BasicExample.PHLNode[1].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 179  BasicExample.PHLNode[1].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 180  BasicExample.PHLNode[1].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 181  BasicExample.PHLNode[1].PressureSensor.Transducer  "Current use over time"  ETV
+vector 182  BasicExample.PHLNode[1].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 183  BasicExample.PHLNode[1].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 184  BasicExample.PHLNode[1].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 185  BasicExample.PHLNode[1].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 186  BasicExample.PHLNode[1].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 187  BasicExample.PHLNode[1].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 188  BasicExample.PHLNode[1].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 189  BasicExample.PHLNode[1].LightSensor.Transducer  "Current use over time"  ETV
+vector 190  BasicExample.PHLNode[1].Memory  "Energy Consumptions"  ETV
+vector 191  BasicExample.PHLNode[1].Memory  "Current use over time"  ETV
+vector 192  BasicExample.TPHLNode[0].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 193  BasicExample.TPHLNode[0].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 194  BasicExample.TPHLNode[0].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 195  BasicExample.TPHLNode[0].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 196  BasicExample.TPHLNode[0].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 197  BasicExample.TPHLNode[0].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 198  BasicExample.TPHLNode[0].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 199  BasicExample.TPHLNode[0].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 200  BasicExample.TPHLNode[0].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 201  BasicExample.TPHLNode[0].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 202  BasicExample.TPHLNode[0].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 203  BasicExample.TPHLNode[0].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 204  BasicExample.TPHLNode[0].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 205  BasicExample.TPHLNode[0].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 206  BasicExample.TPHLNode[0].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 207  BasicExample.TPHLNode[0].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 208  BasicExample.TPHLNode[0].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 209  BasicExample.TPHLNode[0].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 210  BasicExample.TPHLNode[0].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 211  BasicExample.TPHLNode[0].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 212  BasicExample.TPHLNode[0].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 213  BasicExample.TPHLNode[0].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 214  BasicExample.TPHLNode[0].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 215  BasicExample.TPHLNode[0].PressureSensor.Transducer  "Current use over time"  ETV
+vector 216  BasicExample.TPHLNode[0].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 217  BasicExample.TPHLNode[0].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 218  BasicExample.TPHLNode[0].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 219  BasicExample.TPHLNode[0].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 220  BasicExample.TPHLNode[0].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 221  BasicExample.TPHLNode[0].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 222  BasicExample.TPHLNode[0].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 223  BasicExample.TPHLNode[0].LightSensor.Transducer  "Current use over time"  ETV
+vector 224  BasicExample.TPHLNode[0].Memory  "Energy Consumptions"  ETV
+vector 225  BasicExample.TPHLNode[0].Memory  "Current use over time"  ETV
+vector 226  BasicExample.TPHLNode[1].TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 227  BasicExample.TPHLNode[1].TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 228  BasicExample.TPHLNode[1].TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 229  BasicExample.TPHLNode[1].TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 230  BasicExample.TPHLNode[1].TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 231  BasicExample.TPHLNode[1].TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 232  BasicExample.TPHLNode[1].TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 233  BasicExample.TPHLNode[1].TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 234  BasicExample.TPHLNode[1].HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 235  BasicExample.TPHLNode[1].HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 236  BasicExample.TPHLNode[1].HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 237  BasicExample.TPHLNode[1].HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 238  BasicExample.TPHLNode[1].HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 239  BasicExample.TPHLNode[1].HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 240  BasicExample.TPHLNode[1].HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 241  BasicExample.TPHLNode[1].HumiditySensor.Transducer  "Current use over time"  ETV
+vector 242  BasicExample.TPHLNode[1].PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 243  BasicExample.TPHLNode[1].PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 244  BasicExample.TPHLNode[1].PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 245  BasicExample.TPHLNode[1].PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 246  BasicExample.TPHLNode[1].PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 247  BasicExample.TPHLNode[1].PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 248  BasicExample.TPHLNode[1].PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 249  BasicExample.TPHLNode[1].PressureSensor.Transducer  "Current use over time"  ETV
+vector 250  BasicExample.TPHLNode[1].LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 251  BasicExample.TPHLNode[1].LightSensor.SensingUnit  "Current use over time"  ETV
+vector 252  BasicExample.TPHLNode[1].LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 253  BasicExample.TPHLNode[1].LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 254  BasicExample.TPHLNode[1].LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 255  BasicExample.TPHLNode[1].LightSensor.SignalConverter  "Current use over time"  ETV
+vector 256  BasicExample.TPHLNode[1].LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 257  BasicExample.TPHLNode[1].LightSensor.Transducer  "Current use over time"  ETV
+vector 258  BasicExample.TPHLNode[1].Memory  "Energy Consumptions"  ETV
+vector 259  BasicExample.TPHLNode[1].Memory  "Current use over time"  ETV
+3	20215 363 0 29810 0 85000 24 0 2 18 30
+4	20578 8 0 0 0 0 1 0 0 0 0
+5	20586 4639 0 30212 0 87000 296 3 3 888 2664
+6	25225 8988 0 30212 0 87000 296 0.023083333333333 1 153.56278648148 105.4883045054
+7	34213 6422 0 30212 0 87000 296 249300 10800000 1658478094 1.2304155837509e+16
+11	40635 387 0 29811 0 85000 24 0 2 18 30
+12	41022 9 0 0 0 0 1 0 0 0 0
+13	41031 4935 0 30213 0 87000 296 3 3 888 2664
+14	45966 9284 0 30213 0 87000 296 0.023083333333333 1 153.56278648148 105.4883045054
+15	55250 6718 0 30213 0 87000 296 249300 10800000 1658478094 1.2304155837509e+16
+19	61968 319 0 26650 0 70000 20 0 2 15 25
+20	62287 255 0 26664 0 70000 16 0 1 7 7
+21	62542 4611 0 27378 0 73000 278 3 3 834 2502
+22	67153 8695 0 27378 0 73000 278 0.0024675925925926 1 143.31259722222 98.42293778573
+23	75848 6308 0 27378 0 73000 278 26650 10800000 1547776050 1.1480051463328e+16
+27	82156 319 0 26651 0 70000 20 0 2 15 25
+28	82475 255 0 26665 0 70000 16 0 1 7 7
+29	82730 4611 0 27379 0 73000 278 3 3 834 2502
+30	87341 8695 0 27379 0 73000 278 0.0024675925925926 1 143.31259722222 98.42293778573
+31	96036 6308 0 27379 0 73000 278 26650 10800000 1547776050 1.1480051463328e+16
+35	102344 285 0 24194 0 60000 18 0 2 12 20
+36	102629 332 0 24229 0 60000 21 0 1 6 6
+37	102961 4034 0 24229 0 60000 245 3 3 735 2205
+38	106995 7556 0 24229 0 60000 245 0.010203703703704 1 129.74326222222 89.877430869044
+39	114551 5532 0 24229 0 60000 245 110200 10800000 1401227232 1.0483303536565e+16
+43	120083 285 0 24195 0 60000 18 0 2 12 20
+44	120368 332 0 24231 0 60000 21 0 1 6 6
+45	120700 4034 0 24231 0 60000 245 3 3 735 2205
+46	124734 7556 0 24231 0 60000 245 0.010203703703704 1 129.74326222222 89.877430869044
+47	132290 5532 0 24231 0 60000 245 110200 10800000 1401227232 1.0483303536565e+16
+51	137822 251 0 22766 0 55000 16 0 2 12 20
+52	138073 375 0 21218 0 50000 24 0 1 5 5
+53	138448 3882 0 23088 0 56000 237 3 3 711 2133
+54	142330 7405 0 23088 0 56000 237 0.024435185185185 1 120.79997351852 83.713332060497
+55	149735 5287 0 23088 0 56000 237 263900 10800000 1304639714 9.7643230515364e+15
+59	155022 251 0 22767 0 55000 16 0 2 12 20
+60	155273 375 0 21221 0 50000 24 0 1 5 5
+61	155648 3882 0 23089 0 56000 237 3 3 711 2133
+62	159530 7405 0 23089 0 56000 237 0.024435185185185 1 120.79997351852 83.713332060497
+63	166935 5287 0 23089 0 56000 237 263900 10800000 1304639714 9.7643230515364e+15
+67	172222 217 0 19498 0 45000 14 0 2 9 15
+68	172439 384 0 17765 0 40000 25 0 1 4 4
+69	172823 3373 0 20208 0 47000 208 3 3 624 1872
+70	176196 6406 0 20208 0 47000 208 0.0073842592592593 1 113.4990812963 79.274329100208
+71	182602 4622 0 20208 0 47000 208 79750 10800000 1225790078 9.2465577462483e+15
+75	187224 217 0 19499 0 45000 14 0 2 9 15
+76	187441 384 0 17769 0 40000 25 0 1 4 4
+77	187825 3373 0 20209 0 47000 208 3 3 624 1872
+78	191198 6406 0 20209 0 47000 208 0.0073842592592593 1 113.4990812963 79.274329100208
+79	197604 4622 0 20209 0 47000 208 79750 10800000 1225790078 9.2465577462483e+15
+80	202226 11 0 0 0 0 1 100 100 100 10000
+81	202237 306 0 29810 0 85000 18 0.3 3 37.8 108.54
+82	202543 11 0 0 0 0 1 100 100 100 10000
+83	202554 306 0 29811 0 85000 18 0.3 3 37.8 108.54
+84	202860 429 0 26656 0 70000 24 100 100 2400 240000
+85	203289 253 0 26650 0 70000 15 0.3 3 31.5 90.45
+86	203542 154 0 26658 0 70000 9 100 100 900 90000
+87	203696 253 0 26650 0 70000 15 0.3 3 31.5 90.45
+88	203949 155 0 26660 0 70000 9 100 100 900 90000
+89	204104 253 0 26650 0 70000 15 0.3 3 31.5 90.45
+90	204357 155 0 26662 0 70000 9 100 100 900 90000
+91	204512 253 0 26650 0 70000 15 0.3 3 31.5 90.45
+92	204765 155 0 26666 0 70000 9 100 100 900 90000
+93	204920 253 0 26650 0 70000 15 0.3 3 31.5 90.45
+94	205173 429 0 26657 0 70000 24 100 100 2400 240000
+95	205602 253 0 26651 0 70000 15 0.3 3 31.5 90.45
+96	205855 154 0 26659 0 70000 9 100 100 900 90000
+97	206009 253 0 26651 0 70000 15 0.3 3 31.5 90.45
+98	206262 155 0 26661 0 70000 9 100 100 900 90000
+99	206417 253 0 26651 0 70000 15 0.3 3 31.5 90.45
+100	206670 164 0 26663 0 70000 9 100 100 900 90000
+101	206834 268 0 26651 0 70000 15 0.3 3 31.5 90.45
+102	207102 164 0 26667 0 70000 9 100 100 900 90000
+103	207266 268 0 26651 0 70000 15 0.3 3 31.5 90.45
+104	207534 393 0 24204 0 60000 21 100 100 2100 210000
+105	207927 230 0 24194 0 60000 13 0.3 3 28.2 81.36
+106	208157 143 0 24210 0 60000 8 100 100 800 80000
+107	208300 230 0 24194 0 60000 13 0.3 3 28.2 81.36
+108	208530 144 0 24216 0 60000 8 100 100 800 80000
+109	208674 230 0 24194 0 60000 13 0.3 3 28.2 81.36
+110	208904 144 0 24222 0 60000 8 100 100 800 80000
+111	209048 230 0 24194 0 60000 13 0.3 3 28.2 81.36
+112	209278 393 0 24205 0 60000 21 100 100 2100 210000
+113	209671 230 0 24194 0 60000 13 0.3 3 28.2 81.36
+114	209901 143 0 24211 0 60000 8 100 100 800 80000
+115	210044 230 0 24194 0 60000 13 0.3 3 28.2 81.36
+116	210274 144 0 24217 0 60000 8 100 100 800 80000
+117	210418 230 0 24194 0 60000 13 0.3 3 28.2 81.36
+118	210648 144 0 24223 0 60000 8 100 100 800 80000
+119	210792 230 0 24194 0 60000 13 0.3 3 28.2 81.36
+120	211022 276 0 24235 0 60000 15 100 100 1500 150000
+121	211298 230 0 24194 0 60000 13 0.3 3 28.2 81.36
+122	211528 393 0 24206 0 60000 21 100 100 2100 210000
+123	211921 230 0 24195 0 60000 13 0.3 3 28.2 81.36
+124	212151 143 0 24212 0 60000 8 100 100 800 80000
+125	212294 230 0 24195 0 60000 13 0.3 3 28.2 81.36
+126	212524 144 0 24218 0 60000 8 100 100 800 80000
+127	212668 230 0 24195 0 60000 13 0.3 3 28.2 81.36
+128	212898 144 0 24224 0 60000 8 100 100 800 80000
+129	213042 230 0 24195 0 60000 13 0.3 3 28.2 81.36
+130	213272 393 0 24207 0 60000 21 100 100 2100 210000
+131	213665 230 0 24195 0 60000 13 0.3 3 28.2 81.36
+132	213895 143 0 24213 0 60000 8 100 100 800 80000
+133	214038 230 0 24195 0 60000 13 0.3 3 28.2 81.36
+134	214268 144 0 24219 0 60000 8 100 100 800 80000
+135	214412 230 0 24195 0 60000 13 0.3 3 28.2 81.36
+136	214642 144 0 24225 0 60000 8 100 100 800 80000
+137	214786 230 0 24195 0 60000 13 0.3 3 28.2 81.36
+138	215016 276 0 24237 0 60000 15 100 100 1500 150000
+139	215292 230 0 24195 0 60000 13 0.3 3 28.2 81.36
+140	215522 333 0 21168 0 50000 18 100 100 1800 180000
+141	215855 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+142	216067 123 0 21180 0 50000 7 100 100 700 70000
+143	216190 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+144	216402 124 0 21192 0 50000 7 100 100 700 70000
+145	216526 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+146	216738 124 0 21204 0 50000 7 100 100 700 70000
+147	216862 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+148	217074 333 0 21169 0 50000 18 100 100 1800 180000
+149	217407 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+150	217619 123 0 21181 0 50000 7 100 100 700 70000
+151	217742 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+152	217954 124 0 21193 0 50000 7 100 100 700 70000
+153	218078 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+154	218290 124 0 21205 0 50000 7 100 100 700 70000
+155	218414 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+156	218626 333 0 21170 0 50000 18 100 100 1800 180000
+157	218959 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+158	219171 124 0 21182 0 50000 7 100 100 700 70000
+159	219295 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+160	219507 124 0 21194 0 50000 7 100 100 700 70000
+161	219631 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+162	219843 124 0 21206 0 50000 7 100 100 700 70000
+163	219967 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+164	220179 348 0 21230 0 50000 19 100 100 1900 190000
+165	220527 212 0 22766 0 55000 12 0.3 3 25.2 72.36
+166	220739 333 0 21171 0 50000 18 100 100 1800 180000
+167	221072 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+168	221284 124 0 21183 0 50000 7 100 100 700 70000
+169	221408 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+170	221620 124 0 21195 0 50000 7 100 100 700 70000
+171	221744 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+172	221956 124 0 21207 0 50000 7 100 100 700 70000
+173	222080 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+174	222292 333 0 21172 0 50000 18 100 100 1800 180000
+175	222625 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+176	222837 124 0 21184 0 50000 7 100 100 700 70000
+177	222961 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+178	223173 124 0 21196 0 50000 7 100 100 700 70000
+179	223297 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+180	223509 124 0 21208 0 50000 7 100 100 700 70000
+181	223633 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+182	223845 333 0 21173 0 50000 18 100 100 1800 180000
+183	224178 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+184	224390 124 0 21185 0 50000 7 100 100 700 70000
+185	224514 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+186	224726 124 0 21197 0 50000 7 100 100 700 70000
+187	224850 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+188	225062 124 0 21209 0 50000 7 100 100 700 70000
+189	225186 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+190	225398 348 0 21233 0 50000 19 100 100 1900 190000
+191	225746 212 0 22767 0 55000 12 0.3 3 25.2 72.36
+192	225958 273 0 17682 0 40000 15 100 100 1500 150000
+193	226231 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+194	226405 104 0 17702 0 40000 6 100 100 600 60000
+195	226509 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+196	226683 104 0 17722 0 40000 6 100 100 600 60000
+197	226787 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+198	226961 104 0 17742 0 40000 6 100 100 600 60000
+199	227065 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+200	227239 273 0 17683 0 40000 15 100 100 1500 150000
+201	227512 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+202	227686 104 0 17703 0 40000 6 100 100 600 60000
+203	227790 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+204	227964 104 0 17723 0 40000 6 100 100 600 60000
+205	228068 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+206	228242 104 0 17743 0 40000 6 100 100 600 60000
+207	228346 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+208	228520 273 0 17684 0 40000 15 100 100 1500 150000
+209	228793 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+210	228967 104 0 17704 0 40000 6 100 100 600 60000
+211	229071 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+212	229245 104 0 17724 0 40000 6 100 100 600 60000
+213	229349 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+214	229523 104 0 17744 0 40000 6 100 100 600 60000
+215	229627 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+216	229801 273 0 17685 0 40000 15 100 100 1500 150000
+217	230074 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+218	230248 104 0 17705 0 40000 6 100 100 600 60000
+219	230352 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+220	230526 104 0 17725 0 40000 6 100 100 600 60000
+221	230630 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+222	230804 104 0 17745 0 40000 6 100 100 600 60000
+223	230908 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+224	231082 380 0 17785 0 40000 21 100 100 2100 210000
+225	231462 174 0 19498 0 45000 10 0.3 3 21.9 63.27
+226	231636 273 0 17686 0 40000 15 100 100 1500 150000
+227	231909 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+228	232083 104 0 17706 0 40000 6 100 100 600 60000
+229	232187 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+230	232361 104 0 17726 0 40000 6 100 100 600 60000
+231	232465 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+232	232639 104 0 17746 0 40000 6 100 100 600 60000
+233	232743 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+234	232917 273 0 17687 0 40000 15 100 100 1500 150000
+235	233190 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+236	233364 104 0 17707 0 40000 6 100 100 600 60000
+237	233468 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+238	233642 104 0 17727 0 40000 6 100 100 600 60000
+239	233746 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+240	233920 104 0 17747 0 40000 6 100 100 600 60000
+241	234024 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+242	234198 273 0 17688 0 40000 15 100 100 1500 150000
+243	234471 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+244	234645 104 0 17708 0 40000 6 100 100 600 60000
+245	234749 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+246	234923 104 0 17728 0 40000 6 100 100 600 60000
+247	235027 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+248	235201 104 0 17748 0 40000 6 100 100 600 60000
+249	235305 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+250	235479 273 0 17689 0 40000 15 100 100 1500 150000
+251	235752 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+252	235926 104 0 17709 0 40000 6 100 100 600 60000
+253	236030 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+254	236204 104 0 17729 0 40000 6 100 100 600 60000
+255	236308 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+256	236482 104 0 17749 0 40000 6 100 100 600 60000
+257	236586 174 0 19499 0 45000 10 0.3 3 21.9 63.27
+258	236760 382 0 17789 0 40000 21 100 100 2100 210000
+259	237142 174 0 19499 0 45000 10 0.3 3 21.9 63.27

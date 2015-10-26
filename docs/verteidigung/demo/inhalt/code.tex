@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+\frametitle{Quellcode}
+
+\begingroup
+\small
+\begin{lstlisting}[style=numberedblock,language=C]
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+  int x = 2;
+
+  x = x * (x + 1);
+  x = 7 * x;
+  printf("Die Antwort lautet: %d\n", x);
+
+  return x;
+}
+\end{lstlisting}
+\endgroup
+\end{frame}

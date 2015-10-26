@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                             %
+% Beamer-Template für das Corporate Design 2014 der TU Chemnitz               %
+% (c) Mario Haustein (mario.haustein@hrz.tu-chemnitz.de), 2013 - 2014         %
+%                                                                             %
+% Dieses Material steht unter der Creative-Commons-Lizenz Namensnennung -     %
+% Weitergabe unter gleichen Bedingungen 4.0 International. Um eine Kopie      %
+% dieser Lizenz zu sehen, besuchen Sie                                        %
+% http://creativecommons.org/licenses/by-sa/4.0/deed.de.                      %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\iftuc@roboto\tuc@robototrue
+\newif\iftuc@robotoheader\tuc@robotoheadertrue
+
+\DeclareOptionBeamer{latexfonts}{\tuc@robotofalse\tuc@robotoheaderfalse}
+\DeclareOptionBeamer{latexfontsbody}{\tuc@robotofalse}
+\DeclareOptionBeamer{scaled}{\PassOptionsToPackage{\CurrentOption}{tucroboto}}
+\ProcessOptionsBeamer
+
+\RequirePackage{tucroboto}
+
+% Standardschrift auf Roboto umstellen.
+\iftuc@roboto
+\renewcommand{\rmdefault}{robs}
+\renewcommand{\sfdefault}{robc}
+\setbeamerfont{normal text}{family=\robcfamily}
+\fi
+
+% Kopf- und Fußzeilenschrift auf Roboto umstellen.
+\iftuc@robotoheader
+\setbeamerfont{headline}{family=\robcfamily}
+\setbeamerfont{footline}{family=\robcfamily}
+\setbeamerfont{tiny structure}{family=\robcfamily}
+\fi

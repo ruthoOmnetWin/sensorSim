@@ -14,4 +14,18 @@
 * MiXiM/ contains the data of the MiXiM tool
 * samples/ contains both ready samples from omnetpp and my own tutorial work
 
+## comming next
+
+* cluster based sensor network
+ * proper playground
+ * routing strategies
+ * save routing network
+ * end communication if energy is empty
+ * testing
+* application clustering
+ * integration
+* wakeup receiver
+ * integration
+* example scenarios
+
 for more informations - the wiki: https://github.com/ThomasRueckert/sensorSim/wiki

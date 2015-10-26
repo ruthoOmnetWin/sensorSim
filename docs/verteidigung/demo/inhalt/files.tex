@@ -1,0 +1,22 @@
+\begingroup
+\newcommand{\mymark}[1]{\hspace*{4em}\llap{\texttt{#1}}}
+
+\begin{frame}
+\frametitle{Verzeichnisstruktur der Vorlage}
+
+\begin{itemize}
+\item Neben dem Makefile enthält die Vorlage eine Reihe von \TeX-Dateien.
+\item Der eigentliche Inhalt der Präsentation wird in \texttt{main.tex} kodiert.
+\item Zusätzlich existieren die folgenden Dateien, die ihrerseits \texttt{main.tex} einbinden.
+  \begin{description}
+  \item[\mymark{beamer.tex}]  Erstellt die Präsentation zur Anzeige auf einem Beamer.
+  \item[\mymark{dualmon.tex}] Erstellt ein PDF doppelter Breite. Die linke
+                              Hälfte enthält die eigentliche Beamer-Präsentation.
+                              Die rechte Hälfte die Anmerkungen zur Anzeige auf dem
+                              Laptop-Bildschirm.
+  \item[\mymark{notes.tex}]   Druckversion der Präsentation mit Anmerkungen.
+  \item[\mymark{handout.tex}] Druckversion der Präsentation zur Veröffentlichung.
+  \end{description}
+\end{itemize}
+\end{frame}
+\endgroup

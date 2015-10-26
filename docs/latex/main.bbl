@@ -66,6 +66,16 @@
 \newblock Online unter \url{https://launchpad.net/openwns-wrowser}; zuletzt
   besucht am 25. April 2015.
 
+\bibitem{sensor}
+{\em Sensor auf Wikipedia}.
+\newblock Online unter \url{https://de.wikipedia.org/wiki/Sensor}; zuletzt
+  besucht am 12. May 2015.
+
+\bibitem{tempsensor}
+{\em Temperatursensor auf Wikipedia}.
+\newblock Online unter \url{https://de.wikipedia.org/wiki/Temperatursensor};
+  zuletzt besucht am 1. Juni 2015.
+
 \bibitem{TopGen}
 {\em Topology Generator des NS-Simulators}.
 \newblock Online unter \url{https://www.nsnam.org/wiki/Topology_Generator};
@@ -81,6 +91,13 @@
   Max~(Chair of~Communication Networks RWTH Aachen~University)}: {\em openWNS}.
 \newblock Online unter \url{http://openwns.org}; zuletzt besucht am 04. Mai
   2015.
+
+\bibitem{softwarearch}
+{\sc Golatowski, Frank}, {\sc Jan Blumenthal}, {\sc Matthias Handy}, {\sc Marc
+  Haase}, {\sc Hagen Burchardt} \btxandlong{}\ {\sc Dirk Timmermann}: {\em
+  Softwarearchitektur für Sensornetzwerke}.
+\newblock Institut f. Angewandte Mikroelektronik und Datentechnik Universität
+  Rostock.
 
 \bibitem{hsc}
 {\sc Hardt, Prof. Dr.~Wolfram}: {\em Veranstaltungen zu Hard-/Software Codesign
