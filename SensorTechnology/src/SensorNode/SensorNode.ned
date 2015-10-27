@@ -51,7 +51,7 @@ module SensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
             	+(hasPressureSensor ? 1 : 0)
             	+(hasLightSensor ? 1 : 0)
         	) * numSensorModules //calculate number of energie accounts from sensor 
-        	+ 2; //memory, processor
+        	+ 2 + 1; //memory, processor
     	battery.numDevices = numDevices;
         int numHosts;
         @class("SensorNode");
@@ -61,7 +61,7 @@ module SensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
 
         //custom parameters
         transportType = default("Aggregation");
-        nicType = default("Nic802154_TI_CC2420");  //type of used nic
+        nicType = "CustomNic802154";  //CustomNic for wakeup receiver states
         arpType = default("org.mixim.modules.netw.ArpHost");
 
         batteryStats.detail = default(false);
