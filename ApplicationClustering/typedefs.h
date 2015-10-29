@@ -114,9 +114,13 @@ typedef unsigned short     uint16;
 //typedef unsigned long      uint32_t;
 //typedef   signed long       int32_t;
 
-typedef unsigned long long uint64_t;
-typedef   signed long long  int64_t;
-typedef unsigned long long uint64;
+//start - previous declaration on linux system
+//typedef unsigned long long uint64_t;
+//typedef   signed long long  int64_t;
+//typedef unsigned long long uint64;
+//end - previous declaration on linux system
+
+
 //
 //
 //

@@ -39,8 +39,8 @@ module Nic802154_TI_CC2420A extends WirelessNicBattery
         macType = "CSMA802154";
 
         // power consumption from boards (at 3.3V)
-        setupWakeupCurrent = 0.000021mA; // 0.021 µA
-        wakeupCurrent = 0.000021mA; // 0.021 µA
+        double setupWakeupCurrent @unit(mA) = 0.000021mA; // 0.021 µA
+        double wakeupCurrent @unit(mA) = 0.000021mA; // 0.021 µA
         sleepCurrent = 0.000021mA; // 0.021 µA
         rxCurrent = 18.8 mA;
         decodingCurrentDelta = 0 mA;

@@ -70,8 +70,8 @@ void MyTestApplication::sendPacket(void)
     if (myNodeId == 1)
     {
         GenericPacket* gPacketP = new GenericPacket();
-        gPacketP->setDstId(LAddress::L2BROADCAST);
-        NetwControlInfo::setControlInfo(gPacketP, LAddress::L2BROADCAST);
+        gPacketP->setDstId(LAddress::L2BROADCAST.getInt());
+        NetwControlInfo::setControlInfo(gPacketP, LAddress::L2BROADCAST.getInt());
         send(gPacketP, dataOut);
         //findHost()->sendDelayed(gPacketP, delay, myOutGate);
         return;

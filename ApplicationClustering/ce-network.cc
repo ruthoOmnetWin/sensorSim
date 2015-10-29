@@ -38,8 +38,8 @@ void MYCLASS networkSendPacketDirect(GENERIC_PACKET* myPacket,
 
         if (myPacket->dstId == 0xFFFF)
         {
-            gPacketP->setDstId(LAddress::L2BROADCAST);
-            NetwControlInfo::setControlInfo(gPacketP, LAddress::L2BROADCAST);
+            gPacketP->setDstId(LAddress::L2BROADCAST.getInt());
+            NetwControlInfo::setControlInfo(gPacketP, LAddress::L2BROADCAST.getInt());
         }
         else
         {

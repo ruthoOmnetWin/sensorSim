@@ -226,7 +226,7 @@ void DiceApplication::handleMessage(cMessage * msg)
             debugEV << "  start wakeup" << endl;
             WakeUpPacket* wuPacketP = new WakeUpPacket();
             wuPacketP->setDestAddr(0xFFFF);
-            NetwControlInfo::setControlInfo(wuPacketP, LAddress::L2BROADCAST);
+            NetwControlInfo::setControlInfo(wuPacketP, LAddress::L2BROADCAST.getInt());
             send(wuPacketP, dataOut);
             //wait some ms
             scheduleAt(simTime() + 0.05 + uniform(0, 0.001), delayTimer);

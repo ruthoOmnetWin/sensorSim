@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgc 4.5 from Packets/ApplicationPacket.msg.
+// Generated file, do not edit! Created by opp_msgc 4.5 from Packets/WakeUpPacket.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:
@@ -10,7 +10,7 @@
 
 #include <iostream>
 #include <sstream>
-#include "ApplicationPacket_m.h"
+#include "WakeUpPacket_m.h"
 
 USING_NAMESPACE
 
@@ -53,24 +53,24 @@ inline std::ostream& operator<<(std::ostream& out, const std::vector<T,A>& vec)
 template<typename T>
 inline std::ostream& operator<<(std::ostream& out,const T&) {return out;}
 
-Register_Class(ApplicationPacket);
+Register_Class(WakeUpPacket);
 
-ApplicationPacket::ApplicationPacket(const char *name, int kind) : ::cPacket(name,kind)
+WakeUpPacket::WakeUpPacket(const char *name, int kind) : ::cPacket(name,kind)
 {
     this->destAddr_var = LAddress::L3BROADCAST;
     this->srcAddr_var = LAddress::L3BROADCAST;
 }
 
-ApplicationPacket::ApplicationPacket(const ApplicationPacket& other) : ::cPacket(other)
+WakeUpPacket::WakeUpPacket(const WakeUpPacket& other) : ::cPacket(other)
 {
     copy(other);
 }
 
-ApplicationPacket::~ApplicationPacket()
+WakeUpPacket::~WakeUpPacket()
 {
 }
 
-ApplicationPacket& ApplicationPacket::operator=(const ApplicationPacket& other)
+WakeUpPacket& WakeUpPacket::operator=(const WakeUpPacket& other)
 {
     if (this==&other) return *this;
     ::cPacket::operator=(other);
@@ -78,51 +78,51 @@ ApplicationPacket& ApplicationPacket::operator=(const ApplicationPacket& other)
     return *this;
 }
 
-void ApplicationPacket::copy(const ApplicationPacket& other)
+void WakeUpPacket::copy(const WakeUpPacket& other)
 {
     this->destAddr_var = other.destAddr_var;
     this->srcAddr_var = other.srcAddr_var;
 }
 
-void ApplicationPacket::parsimPack(cCommBuffer *b)
+void WakeUpPacket::parsimPack(cCommBuffer *b)
 {
     ::cPacket::parsimPack(b);
     doPacking(b,this->destAddr_var);
     doPacking(b,this->srcAddr_var);
 }
 
-void ApplicationPacket::parsimUnpack(cCommBuffer *b)
+void WakeUpPacket::parsimUnpack(cCommBuffer *b)
 {
     ::cPacket::parsimUnpack(b);
     doUnpacking(b,this->destAddr_var);
     doUnpacking(b,this->srcAddr_var);
 }
 
-LAddress::L3Type& ApplicationPacket::getDestAddr()
+LAddress::L3Type& WakeUpPacket::getDestAddr()
 {
     return destAddr_var;
 }
 
-void ApplicationPacket::setDestAddr(const LAddress::L3Type& destAddr)
+void WakeUpPacket::setDestAddr(const LAddress::L3Type& destAddr)
 {
     this->destAddr_var = destAddr;
 }
 
-LAddress::L3Type& ApplicationPacket::getSrcAddr()
+LAddress::L3Type& WakeUpPacket::getSrcAddr()
 {
     return srcAddr_var;
 }
 
-void ApplicationPacket::setSrcAddr(const LAddress::L3Type& srcAddr)
+void WakeUpPacket::setSrcAddr(const LAddress::L3Type& srcAddr)
 {
     this->srcAddr_var = srcAddr;
 }
 
-class ApplicationPacketDescriptor : public cClassDescriptor
+class WakeUpPacketDescriptor : public cClassDescriptor
 {
   public:
-    ApplicationPacketDescriptor();
-    virtual ~ApplicationPacketDescriptor();
+    WakeUpPacketDescriptor();
+    virtual ~WakeUpPacketDescriptor();
 
     virtual bool doesSupport(cObject *obj) const;
     virtual const char *getProperty(const char *propertyname) const;
@@ -141,34 +141,34 @@ class ApplicationPacketDescriptor : public cClassDescriptor
     virtual void *getFieldStructPointer(void *object, int field, int i) const;
 };
 
-Register_ClassDescriptor(ApplicationPacketDescriptor);
+Register_ClassDescriptor(WakeUpPacketDescriptor);
 
-ApplicationPacketDescriptor::ApplicationPacketDescriptor() : cClassDescriptor("ApplicationPacket", "cPacket")
+WakeUpPacketDescriptor::WakeUpPacketDescriptor() : cClassDescriptor("WakeUpPacket", "cPacket")
 {
 }
 
-ApplicationPacketDescriptor::~ApplicationPacketDescriptor()
+WakeUpPacketDescriptor::~WakeUpPacketDescriptor()
 {
 }
 
-bool ApplicationPacketDescriptor::doesSupport(cObject *obj) const
+bool WakeUpPacketDescriptor::doesSupport(cObject *obj) const
 {
-    return dynamic_cast<ApplicationPacket *>(obj)!=NULL;
+    return dynamic_cast<WakeUpPacket *>(obj)!=NULL;
 }
 
-const char *ApplicationPacketDescriptor::getProperty(const char *propertyname) const
+const char *WakeUpPacketDescriptor::getProperty(const char *propertyname) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     return basedesc ? basedesc->getProperty(propertyname) : NULL;
 }
 
-int ApplicationPacketDescriptor::getFieldCount(void *object) const
+int WakeUpPacketDescriptor::getFieldCount(void *object) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     return basedesc ? 2+basedesc->getFieldCount(object) : 2;
 }
 
-unsigned int ApplicationPacketDescriptor::getFieldTypeFlags(void *object, int field) const
+unsigned int WakeUpPacketDescriptor::getFieldTypeFlags(void *object, int field) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     if (basedesc) {
@@ -183,7 +183,7 @@ unsigned int ApplicationPacketDescriptor::getFieldTypeFlags(void *object, int fi
     return (field>=0 && field<2) ? fieldTypeFlags[field] : 0;
 }
 
-const char *ApplicationPacketDescriptor::getFieldName(void *object, int field) const
+const char *WakeUpPacketDescriptor::getFieldName(void *object, int field) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     if (basedesc) {
@@ -198,7 +198,7 @@ const char *ApplicationPacketDescriptor::getFieldName(void *object, int field) c
     return (field>=0 && field<2) ? fieldNames[field] : NULL;
 }
 
-int ApplicationPacketDescriptor::findField(void *object, const char *fieldName) const
+int WakeUpPacketDescriptor::findField(void *object, const char *fieldName) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     int base = basedesc ? basedesc->getFieldCount(object) : 0;
@@ -207,7 +207,7 @@ int ApplicationPacketDescriptor::findField(void *object, const char *fieldName) 
     return basedesc ? basedesc->findField(object, fieldName) : -1;
 }
 
-const char *ApplicationPacketDescriptor::getFieldTypeString(void *object, int field) const
+const char *WakeUpPacketDescriptor::getFieldTypeString(void *object, int field) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     if (basedesc) {
@@ -222,7 +222,7 @@ const char *ApplicationPacketDescriptor::getFieldTypeString(void *object, int fi
     return (field>=0 && field<2) ? fieldTypeStrings[field] : NULL;
 }
 
-const char *ApplicationPacketDescriptor::getFieldProperty(void *object, int field, const char *propertyname) const
+const char *WakeUpPacketDescriptor::getFieldProperty(void *object, int field, const char *propertyname) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     if (basedesc) {
@@ -235,7 +235,7 @@ const char *ApplicationPacketDescriptor::getFieldProperty(void *object, int fiel
     }
 }
 
-int ApplicationPacketDescriptor::getArraySize(void *object, int field) const
+int WakeUpPacketDescriptor::getArraySize(void *object, int field) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     if (basedesc) {
@@ -243,13 +243,13 @@ int ApplicationPacketDescriptor::getArraySize(void *object, int field) const
             return basedesc->getArraySize(object, field);
         field -= basedesc->getFieldCount(object);
     }
-    ApplicationPacket *pp = (ApplicationPacket *)object; (void)pp;
+    WakeUpPacket *pp = (WakeUpPacket *)object; (void)pp;
     switch (field) {
         default: return 0;
     }
 }
 
-std::string ApplicationPacketDescriptor::getFieldAsString(void *object, int field, int i) const
+std::string WakeUpPacketDescriptor::getFieldAsString(void *object, int field, int i) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     if (basedesc) {
@@ -257,7 +257,7 @@ std::string ApplicationPacketDescriptor::getFieldAsString(void *object, int fiel
             return basedesc->getFieldAsString(object,field,i);
         field -= basedesc->getFieldCount(object);
     }
-    ApplicationPacket *pp = (ApplicationPacket *)object; (void)pp;
+    WakeUpPacket *pp = (WakeUpPacket *)object; (void)pp;
     switch (field) {
         case 0: {std::stringstream out; out << pp->getDestAddr(); return out.str();}
         case 1: {std::stringstream out; out << pp->getSrcAddr(); return out.str();}
@@ -265,7 +265,7 @@ std::string ApplicationPacketDescriptor::getFieldAsString(void *object, int fiel
     }
 }
 
-bool ApplicationPacketDescriptor::setFieldAsString(void *object, int field, int i, const char *value) const
+bool WakeUpPacketDescriptor::setFieldAsString(void *object, int field, int i, const char *value) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     if (basedesc) {
@@ -273,13 +273,13 @@ bool ApplicationPacketDescriptor::setFieldAsString(void *object, int field, int 
             return basedesc->setFieldAsString(object,field,i,value);
         field -= basedesc->getFieldCount(object);
     }
-    ApplicationPacket *pp = (ApplicationPacket *)object; (void)pp;
+    WakeUpPacket *pp = (WakeUpPacket *)object; (void)pp;
     switch (field) {
         default: return false;
     }
 }
 
-const char *ApplicationPacketDescriptor::getFieldStructName(void *object, int field) const
+const char *WakeUpPacketDescriptor::getFieldStructName(void *object, int field) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     if (basedesc) {
@@ -294,7 +294,7 @@ const char *ApplicationPacketDescriptor::getFieldStructName(void *object, int fi
     };
 }
 
-void *ApplicationPacketDescriptor::getFieldStructPointer(void *object, int field, int i) const
+void *WakeUpPacketDescriptor::getFieldStructPointer(void *object, int field, int i) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
     if (basedesc) {
@@ -302,7 +302,7 @@ void *ApplicationPacketDescriptor::getFieldStructPointer(void *object, int field
             return basedesc->getFieldStructPointer(object, field, i);
         field -= basedesc->getFieldCount(object);
     }
-    ApplicationPacket *pp = (ApplicationPacket *)object; (void)pp;
+    WakeUpPacket *pp = (WakeUpPacket *)object; (void)pp;
     switch (field) {
         case 0: return (void *)(&pp->getDestAddr()); break;
         case 1: return (void *)(&pp->getSrcAddr()); break;

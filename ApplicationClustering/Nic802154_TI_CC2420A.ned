@@ -33,14 +33,14 @@ import org.mixim.modules.nic.WirelessNicBattery;
 //"Nic802154_TI_CC2420_Decider.xml" from "modules/nic/" to your simulation directory.
 // @author Jerome Rousselot
 //
-module Nic802154_TI_CC2420A extends WirelessNicBattery
+module mixim_Nic802154_TI_CC2420A extends WirelessNicBattery
 {
     parameters:
         macType = "CSMA802154";
         
         // power consumption from boards (at 3.3V)
-        setupWakeupCurrent   = 0.1mA; // 0.021 µA
-        wakeupCurrent        = 0.1mA; // 0.021 µA
+        double setupWakeupCurrent @unit(mA) = 0.1mA; // 0.021 µA
+        double wakeupCurrent @unit(mA) = 0.1mA; // 0.021 µA
         //sleepCurrent         = 0.000021mA; // 0.021 µA
         sleepCurrent         = 0.1mA;
         rxCurrent            = 18.8 mA;

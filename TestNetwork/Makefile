@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for TestNetwork
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I/home/rutho/BA/mixim-2.3/src/base/phyLayer -I/home/rutho/BA/mixim-2.3/src -I/home/rutho/BA/mixim-2.3/src/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility -I/home/rutho/BA/mixim-2.3/src/base/utils -I/home/rutho/BA/mixim-2.3/src/base/modules -I/home/rutho/BA/mixim-2.3/src/inet_stub/base -I/home/rutho/BA/mixim-2.3/src/inet_stub/util -I/home/rutho/BA/mixim-2.3/src/inet_stub/linklayer/contract -I/home/rutho/BA/mixim-2.3/src/base/messages -I/home/rutho/BA/mixim-2.3/src/base/connectionManager -I/home/rutho/BA/mixim-2.3/src/inet_stub/mobility/models -I/home/rutho/BA/mixim-2.3/src/inet_stub/networklayer/common -L/home/rutho/BA/mixim-2.3/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=/home/rutho/BA/mixim-2.3
+#  opp_makemake -f --deep -O out -I../MiXiM/src/base/phyLayer -I../MiXiM/src -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/base/utils -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/base -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/messages -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/inet_stub/networklayer/common -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=../MiXiM
 #
 
 # Name of target to be created (-o option)
@@ -15,19 +15,19 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 
 # C++ include paths (with -I)
 INCLUDE_PATH = \
-    -I$(MIXIM_PROJ)/src/base/phyLayer \
-    -I$(MIXIM_PROJ)/src \
-    -I$(MIXIM_PROJ)/src/base \
-    -I$(MIXIM_PROJ)/src/inet_stub/mobility \
-    -I$(MIXIM_PROJ)/src/base/utils \
-    -I$(MIXIM_PROJ)/src/base/modules \
-    -I$(MIXIM_PROJ)/src/inet_stub/base \
-    -I$(MIXIM_PROJ)/src/inet_stub/util \
-    -I$(MIXIM_PROJ)/src/inet_stub/linklayer/contract \
-    -I$(MIXIM_PROJ)/src/base/messages \
-    -I$(MIXIM_PROJ)/src/base/connectionManager \
-    -I$(MIXIM_PROJ)/src/inet_stub/mobility/models \
-    -I$(MIXIM_PROJ)/src/inet_stub/networklayer/common \
+    -I../MiXiM/src/base/phyLayer \
+    -I../MiXiM/src \
+    -I../MiXiM/src/base \
+    -I../MiXiM/src/inet_stub/mobility \
+    -I../MiXiM/src/base/utils \
+    -I../MiXiM/src/base/modules \
+    -I../MiXiM/src/inet_stub/base \
+    -I../MiXiM/src/inet_stub/util \
+    -I../MiXiM/src/inet_stub/linklayer/contract \
+    -I../MiXiM/src/base/messages \
+    -I../MiXiM/src/base/connectionManager \
+    -I../MiXiM/src/inet_stub/mobility/models \
+    -I../MiXiM/src/inet_stub/networklayer/common \
     -I. \
     -IExtendedMessage \
     -IMobility \
@@ -50,8 +50,8 @@ INCLUDE_PATH = \
 EXTRA_OBJS =
 
 # Additional libraries (-L, -l options)
-LIBS = -L$(MIXIM_PROJ)/out/$(CONFIGNAME)/src  -lmixim
-LIBS += -Wl,-rpath,`abspath $(MIXIM_PROJ)/out/$(CONFIGNAME)/src`
+LIBS = -L../MiXiM/out/$(CONFIGNAME)/src  -lmixim
+LIBS += -Wl,-rpath,`abspath ../MiXiM/out/$(CONFIGNAME)/src`
 
 # Output directory
 PROJECT_OUTPUT_DIR = out
@@ -76,7 +76,7 @@ MSGFILES = \
     ExtendedMessage/ExtendedMessage.msg
 
 # Other makefile variables (-K)
-MIXIM_PROJ=/home/rutho/BA/mixim-2.3
+MIXIM_PROJ=../MiXiM
 
 #------------------------------------------------------------------------------
 

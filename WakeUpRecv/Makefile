@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for WakeUpRecv
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/networklayer/common -I../MiXiM/src -I../MiXiM/src/modules/utility -I../MiXiM/src/base/utils -I../MiXiM/src/modules/power/battery -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/base -I../MiXiM/src/modules/phy -I../MiXiM/src/base/phyLayer -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/modules/analogueModel -I../MiXiM/src/inet_stub/util -I../MiXiM/src/modules/messages -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/base -I../MiXiM/src/base/messages -I../MiXiM/src/modules -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM
+#  opp_makemake -f --deep -O out -I../MiXiM/src/inet_stub/base -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/inet_stub/util -I../MiXiM/src/base/utils -I../MiXiM/src/inet_stub/networklayer/common -I../MiXiM/src/modules/messages -I../MiXiM/src/base/phyLayer -I../MiXiM/src -I../MiXiM/src/modules/utility -I../MiXiM/src/modules/analogueModel -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/base/modules -I../MiXiM/src/modules -I../MiXiM/src/modules/phy -I../MiXiM/src/modules/power/battery -I../MiXiM/src/base/messages -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/mobility/models -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=../MiXiM
 #
 
 # Name of target to be created (-o option)
@@ -15,25 +15,25 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 
 # C++ include paths (with -I)
 INCLUDE_PATH = \
-    -I../MiXiM/src/base/modules \
+    -I../MiXiM/src/inet_stub/base \
+    -I../MiXiM/src/inet_stub/linklayer/contract \
+    -I../MiXiM/src/inet_stub/util \
+    -I../MiXiM/src/base/utils \
     -I../MiXiM/src/inet_stub/networklayer/common \
+    -I../MiXiM/src/modules/messages \
+    -I../MiXiM/src/base/phyLayer \
     -I../MiXiM/src \
     -I../MiXiM/src/modules/utility \
-    -I../MiXiM/src/base/utils \
-    -I../MiXiM/src/modules/power/battery \
-    -I../MiXiM/src/inet_stub/mobility/models \
-    -I../MiXiM/src/base \
-    -I../MiXiM/src/modules/phy \
-    -I../MiXiM/src/base/phyLayer \
-    -I../MiXiM/src/inet_stub/mobility \
     -I../MiXiM/src/modules/analogueModel \
-    -I../MiXiM/src/inet_stub/util \
-    -I../MiXiM/src/modules/messages \
-    -I../MiXiM/src/inet_stub/linklayer/contract \
-    -I../MiXiM/src/base/connectionManager \
-    -I../MiXiM/src/inet_stub/base \
-    -I../MiXiM/src/base/messages \
+    -I../MiXiM/src/base \
+    -I../MiXiM/src/inet_stub/mobility \
+    -I../MiXiM/src/base/modules \
     -I../MiXiM/src/modules \
+    -I../MiXiM/src/modules/phy \
+    -I../MiXiM/src/modules/power/battery \
+    -I../MiXiM/src/base/messages \
+    -I../MiXiM/src/base/connectionManager \
+    -I../MiXiM/src/inet_stub/mobility/models \
     -I. \
     -IPackets \
     -Iresults
@@ -51,12 +51,12 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/MyTestApplication.o $O/NetworkLayer2.o $O/Packets/ApplicationPacket_m.o $O/Packets/GenericPacket_m.o $O/Packets/NetworkPacket_m.o
+OBJS = $O/NetworkLayer2.o $O/MyTestApplication.o $O/Packets/GenericPacket_m.o $O/Packets/ApplicationPacket_m.o $O/Packets/NetworkPacket_m.o
 
 # Message files
 MSGFILES = \
-    Packets/ApplicationPacket.msg \
     Packets/GenericPacket.msg \
+    Packets/ApplicationPacket.msg \
     Packets/NetworkPacket.msg
 
 # Other makefile variables (-K)
@@ -86,7 +86,7 @@ include $(CONFIGFILE)
 OMNETPP_LIB_SUBDIR = $(OMNETPP_LIB_DIR)/$(TOOLCHAIN_NAME)
 OMNETPP_LIBS = -L"$(OMNETPP_LIB_SUBDIR)" -L"$(OMNETPP_LIB_DIR)" -loppmain$D $(USERIF_LIBS) $(KERNEL_LIBS) $(SYS_LIBS)
 
-COPTS = $(CFLAGS)  $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
+COPTS = $(CFLAGS) -DMIXIM_INET=1 $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
 MSGCOPTS = $(INCLUDE_PATH)
 
 # we want to recompile everything if COPTS changes,
@@ -176,6 +176,7 @@ $O/MyTestApplication.o: MyTestApplication.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
@@ -200,12 +201,16 @@ $O/NetworkLayer2.o: NetworkLayer2.cc \
 	$(MIXIM_PROJ)/src/base/utils/PassedMessage.h \
 	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
 	$(MIXIM_PROJ)/src/modules/messages/DummyRoutePkt_m.h \
 	NetworkLayer2.h
 $O/Packets/ApplicationPacket_m.o: Packets/ApplicationPacket_m.cc \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
 	Packets/ApplicationPacket_m.h
 $O/Packets/GenericPacket_m.o: Packets/GenericPacket_m.cc \
 	Packets/GenericPacket_m.h
@@ -213,5 +218,7 @@ $O/Packets/NetworkPacket_m.o: Packets/NetworkPacket_m.cc \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
 	Packets/NetworkPacket_m.h
 
