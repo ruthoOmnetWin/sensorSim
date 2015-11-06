@@ -49,6 +49,4 @@ protected:
     void connectProcessorAndSensor(cModule&, std::string);
 };
 
-Define_Module(SensorNode);
-
 #endif /* ABSTRACTSENSORNODE_H_ */

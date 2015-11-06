@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for ApplicationClustering
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -Xincludes1 -I../WakeUpRecv/Packets -I../MiXiM/src/base/phyLayer -I../MiXiM/src -I../MiXiM/src/modules/analogueModel -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility -I../WakeUpRecv -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/base -I../MiXiM/src/base/messages -I../SensorTechnology/src -I../SensorTechnology/src/PhysicalLayer -I../MiXiM/src/modules/messages -I../MiXiM/src/modules/utility -I../MiXiM/src/base/utils -I../MiXiM/src/modules -I../MiXiM/src/modules/phy -I../MiXiM/src/modules/power/battery -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/inet_stub/networklayer/common -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -DMIXIM_INET=1 -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology -KWAKEUPRECV_PROJ=../WakeUpRecv
+#  opp_makemake -f --deep -O out -Xincludes1 -I../WakeUpRecv/Packets -I../MiXiM/src/base/phyLayer -I../MiXiM/src -I../MiXiM/src/modules/analogueModel -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility -I../WakeUpRecv -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/base -I../MiXiM/src/base/messages -I../SensorTechnology/src -I../SensorTechnology/src/PhysicalLayer -I../MiXiM/src/modules/messages -I../MiXiM/src/modules/utility -I../MiXiM/src/base/utils -I../MiXiM/src/modules -I../MiXiM/src/modules/phy -I../MiXiM/src/modules/power/battery -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/inet_stub/networklayer/common -L../MiXiM/out/$$\(CONFIGNAME\)/src -L../SensorTechnology/out/$$\(CONFIGNAME\)/src -lmixim -lSensorTechnology -DMIXIM_INET=1 -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology -KWAKEUPRECV_PROJ=../WakeUpRecv
 #
 
 # Name of target to be created (-o option)
@@ -51,8 +51,8 @@ INCLUDE_PATH = \
 EXTRA_OBJS =
 
 # Additional libraries (-L, -l options)
-LIBS = -L../MiXiM/out/$(CONFIGNAME)/src  -lmixim
-LIBS += -Wl,-rpath,`abspath ../MiXiM/out/$(CONFIGNAME)/src`
+LIBS = -L../MiXiM/out/$(CONFIGNAME)/src -L../SensorTechnology/out/$(CONFIGNAME)/src  -lmixim -lSensorTechnology
+LIBS += -Wl,-rpath,`abspath ../MiXiM/out/$(CONFIGNAME)/src` -Wl,-rpath,`abspath ../SensorTechnology/out/$(CONFIGNAME)/src`
 
 # Output directory
 PROJECT_OUTPUT_DIR = out

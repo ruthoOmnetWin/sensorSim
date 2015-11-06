@@ -30,4 +30,3 @@
 //Use the links in the left frame to navigate around.
 
 package sensortechnology;
-package sensor;

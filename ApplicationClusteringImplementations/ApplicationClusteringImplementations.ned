@@ -15,9 +15,8 @@
 
 package applicationclusteringimplementations;
 
-import org.mixim.modules.node.WirelessNode;
-
 import org.mixim.base.modules.BaseNetwork;
+import sensortechnology.src.SensorNode.SensorNode;
 
 network ApplicationClusteringImplementations extends BaseNetwork
 {
@@ -26,120 +25,165 @@ network ApplicationClusteringImplementations extends BaseNetwork
 
         @display("bgi=background/floorplan;bgb=856,323");
     submodules:
-        testPos: WirelessNode {
+        TemperatureSensorNode: SensorNode {
             @display("p=59,50");
-        }
-        testPos1: WirelessNode {
-            @display("p=232,50");
-        }
-        testPos2: WirelessNode {
-            @display("p=59,98");
-        }
-        testPos3: WirelessNode {
-            @display("p=59,146");
-        }
-        testPos4: WirelessNode {
-            @display("p=59,260");
-        }
-        testPos5: WirelessNode {
-            @display("p=165,45");
-        }
-        testPos6: WirelessNode {
-            @display("p=165,100");
-        }
-        testPos7: WirelessNode {
-            @display("p=165,175");
-        }
-        testPos8: WirelessNode {
-            @display("p=122,257");
-        }
-        testPos9: WirelessNode {
-            @display("p=169,257");
-        }
-        testPos10: WirelessNode {
-            @display("p=219,257");
-        }
-        testPos11: WirelessNode {
-            @display("p=267,257");
-        }
-        testPos12: WirelessNode {
-            @display("p=300,117");
-        }
-        testPos13: WirelessNode {
-            @display("p=280,50");
-        }
-        testPos14: WirelessNode {
-            @display("p=319,50");
-        }
-        testPos15: WirelessNode {
-            @display("p=280,50");
-        }
-        testPos16: WirelessNode {
-            @display("p=300,199");
-        }
-        testPos17: WirelessNode {
-            @display("p=358,199");
-        }
-        testPos18: WirelessNode {
-            @display("p=385,45");
-        }
-        testPos19: WirelessNode {
-            @display("p=472,78");
-        }
-        testPos20: WirelessNode {
-            @display("p=472,125");
-        }
-        testPos21: WirelessNode {
-            @display("p=537,50");
-        }
-        testPos22: WirelessNode {
-            @display("p=585,59");
-        }
-        testPos23: WirelessNode {
-            @display("p=635,59");
-        }
-        testPos24: WirelessNode {
-            @display("p=683,59");
-        }
-        testPos25: WirelessNode {
-            @display("p=546,125");
-        }
-        testPos26: WirelessNode {
-            @display("p=563,199");
-        }
-        testPos27: WirelessNode {
-            @display("p=635,156");
-        }
-        testPos28: WirelessNode {
-            @display("p=701,139");
-        }
-        testPos29: WirelessNode {
-            @display("p=612,251");
-        }
-        testPos30: WirelessNode {
-            @display("p=651,251");
-        }
-        testPos31: WirelessNode {
-            @display("p=701,238");
-        }
-        testPos32: WirelessNode {
-            @display("p=754,238");
-        }
-        testPos33: WirelessNode {
-            @display("p=768,136");
-        }
-        testPos34: WirelessNode {
-            @display("p=768,185");
-        }
-        testPos35: WirelessNode {
-            @display("p=729,59");
-        }
-        testPos36: WirelessNode {
-            @display("p=793,45");
-        }
-        testPos37: WirelessNode {
-            @display("p=807,98");
+            //hasTemperatureSensor = true;
+            //@class(ApplicationClusteringImplementations);
         }
     connections allowunconnected:
+        
     // all connections and gates are to be generated dynamically
+}
+
+network ApplicationClusteringImplementations2 extends BaseNetwork
+{
+        submodules:
+        TemperatureSensorNode1: SensorNode {
+            @display("p=232,50");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode2: SensorNode {
+            @display("p=59,98");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode3: SensorNode {
+            @display("p=59,146");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode4: SensorNode {
+            @display("p=59,260");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode5: SensorNode {
+            @display("p=165,45");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode6: SensorNode {
+            @display("p=165,100");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode7: SensorNode {
+            @display("p=165,175");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode8: SensorNode {
+            @display("p=122,257");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode9: SensorNode {
+            @display("p=169,257");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode10: SensorNode {
+            @display("p=219,257");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode11: SensorNode {
+            @display("p=267,257");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode12: SensorNode {
+            @display("p=300,117");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode13: SensorNode {
+            @display("p=280,50");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode14: SensorNode {
+            @display("p=319,50");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode15: SensorNode {
+            @display("p=280,50");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode16: SensorNode {
+            @display("p=300,199");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode17: SensorNode {
+            @display("p=358,199");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode18: SensorNode {
+            @display("p=385,45");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode19: SensorNode {
+            @display("p=472,78");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode20: SensorNode {
+            @display("p=472,125");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode21: SensorNode {
+            @display("p=537,50");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode22: SensorNode {
+            @display("p=585,59");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode23: SensorNode {
+            @display("p=635,59");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode24: SensorNode {
+            @display("p=683,59");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode25: SensorNode {
+            @display("p=546,125");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode26: SensorNode {
+            @display("p=563,199");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode27: SensorNode {
+            @display("p=635,156");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode28: SensorNode {
+            @display("p=701,139");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode29: SensorNode {
+            @display("p=612,251");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode30: SensorNode {
+            @display("p=651,251");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode31: SensorNode {
+            @display("p=701,238");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode32: SensorNode {
+            @display("p=754,238");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode33: SensorNode {
+            @display("p=768,136");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode34: SensorNode {
+            @display("p=768,185");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode35: SensorNode {
+            @display("p=729,59");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode36: SensorNode {
+            @display("p=793,45");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode37: SensorNode {
+            @display("p=807,98");
+            hasTemperatureSensor = true;
+        }
 }

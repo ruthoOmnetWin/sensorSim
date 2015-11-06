@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for ApplicationClusteringImplementations
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -L../MiXiM/out/$$\(CONFIGNAME\)/src -lmixim -KMIXIM_PROJ=../MiXiM
+#  opp_makemake -f --deep -O out -I../MiXiM/src/base/phyLayer -I../MiXiM/src -I../SensorTechnology/src/SensorNode -I../SensorTechnology/src/ExtendedMessage -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/base/utils -I../SensorTechnology/src/SensorNode/Memory -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/base -I../MiXiM/src/modules/power/battery -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/linklayer/contract -I../SensorTechnology/src/SensorNode/Processor -I../MiXiM/src/base/messages -I../MiXiM/src/base/connectionManager -I../SensorTechnology/src -I../MiXiM/src/inet_stub/mobility/models -I../SensorTechnology/src/SimpleSensorData -I../MiXiM/src/inet_stub/networklayer/common -L../MiXiM/out/$$\(CONFIGNAME\)/src -L../SensorTechnology/out/$$\(CONFIGNAME\)/src -lmixim -lSensorTechnology -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology
 #
 
 # Name of target to be created (-o option)
@@ -14,14 +14,36 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Iresults
+INCLUDE_PATH = \
+    -I../MiXiM/src/base/phyLayer \
+    -I../MiXiM/src \
+    -I../SensorTechnology/src/SensorNode \
+    -I../SensorTechnology/src/ExtendedMessage \
+    -I../MiXiM/src/base \
+    -I../MiXiM/src/inet_stub/mobility \
+    -I../MiXiM/src/base/utils \
+    -I../SensorTechnology/src/SensorNode/Memory \
+    -I../MiXiM/src/base/modules \
+    -I../MiXiM/src/inet_stub/base \
+    -I../MiXiM/src/modules/power/battery \
+    -I../MiXiM/src/inet_stub/util \
+    -I../MiXiM/src/inet_stub/linklayer/contract \
+    -I../SensorTechnology/src/SensorNode/Processor \
+    -I../MiXiM/src/base/messages \
+    -I../MiXiM/src/base/connectionManager \
+    -I../SensorTechnology/src \
+    -I../MiXiM/src/inet_stub/mobility/models \
+    -I../SensorTechnology/src/SimpleSensorData \
+    -I../MiXiM/src/inet_stub/networklayer/common \
+    -I. \
+    -Iresults
 
 # Additional object and library files to link with
 EXTRA_OBJS =
 
 # Additional libraries (-L, -l options)
-LIBS = -L../MiXiM/out/$(CONFIGNAME)/src  -lmixim
-LIBS += -Wl,-rpath,`abspath ../MiXiM/out/$(CONFIGNAME)/src`
+LIBS = -L../MiXiM/out/$(CONFIGNAME)/src -L../SensorTechnology/out/$(CONFIGNAME)/src  -lmixim -lSensorTechnology
+LIBS += -Wl,-rpath,`abspath ../MiXiM/out/$(CONFIGNAME)/src` -Wl,-rpath,`abspath ../SensorTechnology/out/$(CONFIGNAME)/src`
 
 # Output directory
 PROJECT_OUTPUT_DIR = out
@@ -29,13 +51,14 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS =
+OBJS = $O/ApplicationClusteringImplementations.o
 
 # Message files
 MSGFILES =
 
 # Other makefile variables (-K)
 MIXIM_PROJ=../MiXiM
+SENSORTECHNOLOGY_PROJ=../SensorTechnology
 
 #------------------------------------------------------------------------------
 
@@ -119,4 +142,8 @@ depend:
 	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+$O/ApplicationClusteringImplementations.o: ApplicationClusteringImplementations.cc \
+	ApplicationClusteringImplementations.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h
 

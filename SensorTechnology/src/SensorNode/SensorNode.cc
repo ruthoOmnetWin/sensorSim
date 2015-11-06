@@ -19,6 +19,9 @@
 #include "ExtendedMessage_m.h"
 #include <sstream>
 
+Define_Module(SensorNode);
+Register_Class(SensorNode);
+
 void SensorNode::initialize(int stage) {
     if (stage == 0) {
 

@@ -54,7 +54,8 @@ module SensorNode extends WirelessNodeBatteryPlusTran like SensorNodeInterface
         	+ 2 + 1; //memory, processor
     	battery.numDevices = numDevices;
         int numHosts;
-        @class("SensorNode");
+        //@class("SensorNode");
+        @class(SensorNode);
         //these are used to draw the overview of the model
         bool fakeProcessor = false;
         @display("bgb=447,450;i=block/ifcard");
