@@ -22,22 +22,17 @@ network ApplicationClusteringImplementations extends BaseNetwork
 {
     parameters:
         int numNodes; // total number of hosts in the network
+        numNodes = 38;
 
         @display("bgi=background/floorplan;bgb=856,323");
+        wuType = default("sensortechnology.src.WorldModel.CustomWorldUtility");
+        
     submodules:
         TemperatureSensorNode: SensorNode {
             @display("p=59,50");
-            //hasTemperatureSensor = true;
+            hasTemperatureSensor = true;
             //@class(ApplicationClusteringImplementations);
         }
-    connections allowunconnected:
-        
-    // all connections and gates are to be generated dynamically
-}
-
-network ApplicationClusteringImplementations2 extends BaseNetwork
-{
-        submodules:
         TemperatureSensorNode1: SensorNode {
             @display("p=232,50");
             hasTemperatureSensor = true;
@@ -186,4 +181,8 @@ network ApplicationClusteringImplementations2 extends BaseNetwork
             @display("p=807,98");
             hasTemperatureSensor = true;
         }
+    connections allowunconnected:
+        //TemperatureSensorNode.tranl.upperLayerIn
+        
+    // all connections and gates are to be generated dynamically
 }

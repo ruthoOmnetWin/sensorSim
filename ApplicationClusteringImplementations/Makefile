@@ -36,6 +36,7 @@ INCLUDE_PATH = \
     -I../SensorTechnology/src/SimpleSensorData \
     -I../MiXiM/src/inet_stub/networklayer/common \
     -I. \
+    -Idata \
     -Iresults
 
 # Additional object and library files to link with
@@ -132,6 +133,7 @@ clean:
 	$(Q)-rm -rf $O
 	$(Q)-rm -f ApplicationClusteringImplementations ApplicationClusteringImplementations.exe libApplicationClusteringImplementations.so libApplicationClusteringImplementations.a libApplicationClusteringImplementations.dll libApplicationClusteringImplementations.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
+	$(Q)-rm -f data/*_m.cc data/*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
 
 cleanall: clean
@@ -139,7 +141,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc data/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/ApplicationClusteringImplementations.o: ApplicationClusteringImplementations.cc \

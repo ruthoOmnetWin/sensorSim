@@ -31,6 +31,10 @@ void AbstractSensingUnit::initialize(int stage) {
     if (stage == 0) {
         CustomWorldUtility *World = FindModule<CustomWorldUtility*>::findGlobalModule();
 
+        if (World == NULL) {
+            error("CustomWorldUtility was not initialised. You need to use CustomWorldUtility in order to use the SensorNode.");
+        }
+
         BasePhyLayer* phy = FindModule<BasePhyLayer*>::findGlobalModule();
         pMobType = phy->getMobilityModule();
         //save world and provide data inside world

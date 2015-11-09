@@ -273,7 +273,7 @@ int*** CustomWorldUtility::readXML(int fileName)
         for (int j = 0; j < amountColumns; j++) {
 
             //this is a row as cXMLElement
-            cXMLElement* nListRowArrayZ = nLeafElementsList[i];
+            cXMLElement* nListRowArrayZ = nLeafElementsList[j];
             //this is a list of an entire row as cXMLElements
             cXMLElementList nLeafElementsListZ = nListRowArrayZ->getChildren();
             int amountColumnsZ = nLeafElementsListZ.size();
@@ -439,6 +439,7 @@ int CustomWorldUtility::getValueByPosition(std::string type, Coord *position)
     int*** data;
     if (type == "Humidity") data = humidityArray;
     if (type == "Pressure") data = pressureArray;
+    int test = temperatureArray[0][0][0];
     if (type == "Temperature") data = temperatureArray;
     if (type == "Light") data = lightArray;
     int dataAtPosition =

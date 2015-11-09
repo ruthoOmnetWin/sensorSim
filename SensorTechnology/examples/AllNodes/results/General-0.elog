@@ -1,5 +1,5 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20151102-11:20:45-11588 b 1000
+SB v 1029 rid General-0-20151109-12:36:47-9438 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t sensortechnology.examples.AllNodes.AllNodes n AllNodes cm 1
 MS id 1 d bgb=$playgroundSizeX,$playgroundSizeY,white;bgp=0,0
@@ -2776,6 +2776,8 @@ GC m 359 g 0 n fromHumiditySensor o 0
 GC m 359 g 3 n toHumiditySensor o 1
 CC sm 71 sg 1 dm 359 dg 0
 CC sm 359 sg 3 dm 71 dg 2
+BU id 7 txt "Created connections from Humidity-sensor to the processor."
+- Created connections from Humidity-sensor to the processor.
 GC m 72 g 0 n connectToProcessor$i o 0
 GC m 72 g 1 n connectToProcessor$o o 1
 GC m 359 g 4 n connectToMemory$i o 0
@@ -2784,6 +2786,9 @@ CC sm 72 sg 1 dm 359 dg 4
 CS sm 72 sg 1 d ""
 CC sm 359 sg 5 dm 72 dg 0
 CS sm 359 sg 5 d ""
+BU id 7 txt "Counted 1 Sensor(s) on the Node.\n"
+- Counted 1 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 63 m initialize(0)
 ME
@@ -2946,14 +2951,10 @@ GC m 361 g 0 n fromTemperatureSensor o 0
 GC m 361 g 3 n toTemperatureSensor o 1
 CC sm 103 sg 1 dm 361 dg 0
 CC sm 361 sg 3 dm 103 dg 2
-BU id 9 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 361 g 4 n fromPressureSensor o 0
 GC m 361 g 7 n toPressureSensor o 1
 CC sm 104 sg 1 dm 361 dg 4
 CC sm 361 sg 7 dm 104 dg 2
-BU id 9 txt "Created connections from Pressure-sensor to the processor."
-- Created connections from Pressure-sensor to the processor.
 GC m 105 g 0 n connectToProcessor$i o 0
 GC m 105 g 1 n connectToProcessor$o o 1
 GC m 361 g 8 n connectToMemory$i o 0
@@ -2962,9 +2963,6 @@ CC sm 105 sg 1 dm 361 dg 8
 CS sm 105 sg 1 d ""
 CC sm 361 sg 9 dm 105 dg 0
 CS sm 361 sg 9 d ""
-BU id 9 txt "Counted 2 Sensor(s) on the Node.\n"
-- Counted 2 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 95 m initialize(0)
 ME
@@ -3167,10 +3165,14 @@ GC m 363 g 0 n fromTemperatureSensor o 0
 GC m 363 g 3 n toTemperatureSensor o 1
 CC sm 145 sg 1 dm 363 dg 0
 CC sm 363 sg 3 dm 145 dg 2
+BU id 11 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 363 g 4 n fromLightSensor o 0
 GC m 363 g 7 n toLightSensor o 1
 CC sm 146 sg 1 dm 363 dg 4
 CC sm 363 sg 7 dm 146 dg 2
+BU id 11 txt "Created connections from Light-sensor to the processor."
+- Created connections from Light-sensor to the processor.
 GC m 147 g 0 n connectToProcessor$i o 0
 GC m 147 g 1 n connectToProcessor$o o 1
 GC m 363 g 8 n connectToMemory$i o 0
@@ -3179,6 +3181,9 @@ CC sm 147 sg 1 dm 363 dg 8
 CS sm 147 sg 1 d ""
 CC sm 363 sg 9 dm 147 dg 0
 CS sm 363 sg 9 d ""
+BU id 11 txt "Counted 2 Sensor(s) on the Node.\n"
+- Counted 2 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 137 m initialize(0)
 ME
@@ -3381,14 +3386,10 @@ GC m 365 g 0 n fromPressureSensor o 0
 GC m 365 g 3 n toPressureSensor o 1
 CC sm 187 sg 1 dm 365 dg 0
 CC sm 365 sg 3 dm 187 dg 2
-BU id 13 txt "Created connections from Pressure-sensor to the processor."
-- Created connections from Pressure-sensor to the processor.
 GC m 365 g 4 n fromLightSensor o 0
 GC m 365 g 7 n toLightSensor o 1
 CC sm 188 sg 1 dm 365 dg 4
 CC sm 365 sg 7 dm 188 dg 2
-BU id 13 txt "Created connections from Light-sensor to the processor."
-- Created connections from Light-sensor to the processor.
 GC m 189 g 0 n connectToProcessor$i o 0
 GC m 189 g 1 n connectToProcessor$o o 1
 GC m 365 g 8 n connectToMemory$i o 0
@@ -3397,9 +3398,6 @@ CC sm 189 sg 1 dm 365 dg 8
 CS sm 189 sg 1 d ""
 CC sm 365 sg 9 dm 189 dg 0
 CS sm 365 sg 9 d ""
-BU id 13 txt "Counted 2 Sensor(s) on the Node.\n"
-- Counted 2 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 179 m initialize(0)
 ME
@@ -3495,10 +3493,14 @@ GC m 366 g 0 n fromHumiditySensor o 0
 GC m 366 g 3 n toHumiditySensor o 1
 CC sm 208 sg 1 dm 366 dg 0
 CC sm 366 sg 3 dm 208 dg 2
+BU id 14 txt "Created connections from Humidity-sensor to the processor."
+- Created connections from Humidity-sensor to the processor.
 GC m 366 g 4 n fromLightSensor o 0
 GC m 366 g 7 n toLightSensor o 1
 CC sm 209 sg 1 dm 366 dg 4
 CC sm 366 sg 7 dm 209 dg 2
+BU id 14 txt "Created connections from Light-sensor to the processor."
+- Created connections from Light-sensor to the processor.
 GC m 210 g 0 n connectToProcessor$i o 0
 GC m 210 g 1 n connectToProcessor$o o 1
 GC m 366 g 8 n connectToMemory$i o 0
@@ -3507,6 +3509,9 @@ CC sm 210 sg 1 dm 366 dg 8
 CS sm 210 sg 1 d ""
 CC sm 366 sg 9 dm 210 dg 0
 CS sm 366 sg 9 d ""
+BU id 14 txt "Counted 2 Sensor(s) on the Node.\n"
+- Counted 2 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 200 m initialize(0)
 ME
@@ -3740,20 +3745,14 @@ GC m 368 g 0 n fromTemperatureSensor o 0
 GC m 368 g 3 n toTemperatureSensor o 1
 CC sm 255 sg 1 dm 368 dg 0
 CC sm 368 sg 3 dm 255 dg 2
-BU id 16 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 368 g 4 n fromHumiditySensor o 0
 GC m 368 g 7 n toHumiditySensor o 1
 CC sm 256 sg 1 dm 368 dg 4
 CC sm 368 sg 7 dm 256 dg 2
-BU id 16 txt "Created connections from Humidity-sensor to the processor."
-- Created connections from Humidity-sensor to the processor.
 GC m 368 g 8 n fromLightSensor o 0
 GC m 368 g 11 n toLightSensor o 1
 CC sm 257 sg 1 dm 368 dg 8
 CC sm 368 sg 11 dm 257 dg 2
-BU id 16 txt "Created connections from Light-sensor to the processor."
-- Created connections from Light-sensor to the processor.
 GC m 258 g 0 n connectToProcessor$i o 0
 GC m 258 g 1 n connectToProcessor$o o 1
 GC m 368 g 12 n connectToMemory$i o 0
@@ -3762,9 +3761,6 @@ CC sm 258 sg 1 dm 368 dg 12
 CS sm 258 sg 1 d ""
 CC sm 368 sg 13 dm 258 dg 0
 CS sm 368 sg 13 d ""
-BU id 16 txt "Counted 3 Sensor(s) on the Node.\n"
-- Counted 3 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 247 m initialize(0)
 ME
@@ -4007,20 +4003,14 @@ GC m 370 g 0 n fromTemperatureSensor o 0
 GC m 370 g 3 n toTemperatureSensor o 1
 CC sm 307 sg 1 dm 370 dg 0
 CC sm 370 sg 3 dm 307 dg 2
-BU id 18 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 370 g 4 n fromHumiditySensor o 0
 GC m 370 g 7 n toHumiditySensor o 1
 CC sm 308 sg 1 dm 370 dg 4
 CC sm 370 sg 7 dm 308 dg 2
-BU id 18 txt "Created connections from Humidity-sensor to the processor."
-- Created connections from Humidity-sensor to the processor.
 GC m 370 g 8 n fromPressureSensor o 0
 GC m 370 g 11 n toPressureSensor o 1
 CC sm 309 sg 1 dm 370 dg 8
 CC sm 370 sg 11 dm 309 dg 2
-BU id 18 txt "Created connections from Pressure-sensor to the processor."
-- Created connections from Pressure-sensor to the processor.
 GC m 310 g 0 n connectToProcessor$i o 0
 GC m 310 g 1 n connectToProcessor$o o 1
 GC m 370 g 12 n connectToMemory$i o 0
@@ -4029,9 +4019,6 @@ CC sm 310 sg 1 dm 370 dg 12
 CS sm 310 sg 1 d ""
 CC sm 370 sg 13 dm 310 dg 0
 CS sm 370 sg 13 d ""
-BU id 18 txt "Counted 3 Sensor(s) on the Node.\n"
-- Counted 3 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 299 m initialize(0)
 ME
@@ -4145,26 +4132,18 @@ GC m 371 g 0 n fromTemperatureSensor o 0
 GC m 371 g 3 n toTemperatureSensor o 1
 CC sm 333 sg 1 dm 371 dg 0
 CC sm 371 sg 3 dm 333 dg 2
-BU id 19 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 371 g 4 n fromHumiditySensor o 0
 GC m 371 g 7 n toHumiditySensor o 1
 CC sm 334 sg 1 dm 371 dg 4
 CC sm 371 sg 7 dm 334 dg 2
-BU id 19 txt "Created connections from Humidity-sensor to the processor."
-- Created connections from Humidity-sensor to the processor.
 GC m 371 g 8 n fromPressureSensor o 0
 GC m 371 g 11 n toPressureSensor o 1
 CC sm 335 sg 1 dm 371 dg 8
 CC sm 371 sg 11 dm 335 dg 2
-BU id 19 txt "Created connections from Pressure-sensor to the processor."
-- Created connections from Pressure-sensor to the processor.
 GC m 371 g 12 n fromLightSensor o 0
 GC m 371 g 15 n toLightSensor o 1
 CC sm 336 sg 1 dm 371 dg 12
 CC sm 371 sg 15 dm 336 dg 2
-BU id 19 txt "Created connections from Light-sensor to the processor."
-- Created connections from Light-sensor to the processor.
 GC m 337 g 0 n connectToProcessor$i o 0
 GC m 337 g 1 n connectToProcessor$o o 1
 GC m 371 g 16 n connectToMemory$i o 0
@@ -4173,9 +4152,6 @@ CC sm 337 sg 1 dm 371 dg 16
 CS sm 337 sg 1 d ""
 CC sm 371 sg 17 dm 337 dg 0
 CS sm 371 sg 17 d ""
-BU id 19 txt "Counted 4 Sensor(s) on the Node.\n"
-- Counted 4 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 325 m initialize(0)
 ME

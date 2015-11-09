@@ -20,13 +20,13 @@ simple CustomWorldUtility extends BaseWorldUtility
 {
     parameters:
         int dataRecreationIntervall = default(0) @unit(s);
-        bool createData;
-        bool noisy;
-        int dataGranularity;
-        string basePath;
-        xml xmlTemperature;
-        xml xmlPressure;
-        xml xmlHumidity;
-        xml xmlLight;
+        bool createData = default(true);
+        bool noisy = default(false);
+        int dataGranularity = (10);
+        string basePath = default("data/");
+        xml xmlTemperature = default(xmldoc("data/temperature.xml"));
+        xml xmlPressure = default(xmldoc("data/pressure.xml"));
+        xml xmlHumidity = default(xmldoc("data/humidity.xml"));
+        xml xmlLight = default(xmldoc("data/light.xml"));
         @class("CustomWorldUtility");
 }
