@@ -18,6 +18,8 @@
 #include "Processor.h"
 #include "ExtendedMessage_m.h"
 #include <sstream>
+#include "FindModule.h"
+#include <WiseRoute.h>
 
 Define_Module(SensorNode);
 Register_Class(SensorNode);
@@ -163,6 +165,7 @@ void SensorNode::handleMessage(cMessage *msg) {
 
 void SensorNode::finish()
 {
+    WiseRoute* wiseRoute = FindModule<WiseRoute*>::findSubModule(this);
     //define this function
     //stop the module here
     //EV << "Finished Module" << this->getFullName() << endl;

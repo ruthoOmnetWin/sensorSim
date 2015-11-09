@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for ApplicationClusteringImplementations
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I../MiXiM/src/base/phyLayer -I../MiXiM/src -I../SensorTechnology/src/SensorNode -I../SensorTechnology/src/ExtendedMessage -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/base/utils -I../SensorTechnology/src/SensorNode/Memory -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/base -I../MiXiM/src/modules/power/battery -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/linklayer/contract -I../SensorTechnology/src/SensorNode/Processor -I../MiXiM/src/base/messages -I../MiXiM/src/base/connectionManager -I../SensorTechnology/src -I../MiXiM/src/inet_stub/mobility/models -I../SensorTechnology/src/SimpleSensorData -I../MiXiM/src/inet_stub/networklayer/common -L../MiXiM/out/$$\(CONFIGNAME\)/src -L../SensorTechnology/out/$$\(CONFIGNAME\)/src -lmixim -lSensorTechnology -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology
+#  opp_makemake -f --deep -O out -I../MiXiM/src/base/phyLayer -I../MiXiM/src -I../MiXiM/src/modules/analogueModel -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility -I../SensorTechnology/src/SensorNode/Memory -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/base -I../MiXiM/src/base/messages -I../SensorTechnology/src/SensorNode/Processor -I../SensorTechnology/src -I../MiXiM/src/modules/messages -I../MiXiM/src/modules/netw -I../MiXiM/src/modules/utility -I../SensorTechnology/src/SensorNode -I../SensorTechnology/src/ExtendedMessage -I../MiXiM/src/base/utils -I../MiXiM/src/modules -I../MiXiM/src/modules/phy -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/modules/power/battery -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/mobility/models -I../SensorTechnology/src/SimpleSensorData -I../MiXiM/src/inet_stub/networklayer/common -L../MiXiM/out/$$\(CONFIGNAME\)/src -L../SensorTechnology/out/$$\(CONFIGNAME\)/src -lmixim -lSensorTechnology -DMIXIM_INET=1 -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology
 #
 
 # Name of target to be created (-o option)
@@ -17,21 +17,27 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 INCLUDE_PATH = \
     -I../MiXiM/src/base/phyLayer \
     -I../MiXiM/src \
-    -I../SensorTechnology/src/SensorNode \
-    -I../SensorTechnology/src/ExtendedMessage \
+    -I../MiXiM/src/modules/analogueModel \
     -I../MiXiM/src/base \
     -I../MiXiM/src/inet_stub/mobility \
-    -I../MiXiM/src/base/utils \
     -I../SensorTechnology/src/SensorNode/Memory \
     -I../MiXiM/src/base/modules \
     -I../MiXiM/src/inet_stub/base \
-    -I../MiXiM/src/modules/power/battery \
+    -I../MiXiM/src/base/messages \
+    -I../SensorTechnology/src/SensorNode/Processor \
+    -I../SensorTechnology/src \
+    -I../MiXiM/src/modules/messages \
+    -I../MiXiM/src/modules/netw \
+    -I../MiXiM/src/modules/utility \
+    -I../SensorTechnology/src/SensorNode \
+    -I../SensorTechnology/src/ExtendedMessage \
+    -I../MiXiM/src/base/utils \
+    -I../MiXiM/src/modules \
+    -I../MiXiM/src/modules/phy \
     -I../MiXiM/src/inet_stub/util \
     -I../MiXiM/src/inet_stub/linklayer/contract \
-    -I../SensorTechnology/src/SensorNode/Processor \
-    -I../MiXiM/src/base/messages \
+    -I../MiXiM/src/modules/power/battery \
     -I../MiXiM/src/base/connectionManager \
-    -I../SensorTechnology/src \
     -I../MiXiM/src/inet_stub/mobility/models \
     -I../SensorTechnology/src/SimpleSensorData \
     -I../MiXiM/src/inet_stub/networklayer/common \
@@ -52,7 +58,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/ApplicationClusteringImplementations.o
+OBJS = $O/CustomWiseRoute.o $O/ApplicationClusteringImplementations.o
 
 # Message files
 MSGFILES =
@@ -85,7 +91,7 @@ include $(CONFIGFILE)
 OMNETPP_LIB_SUBDIR = $(OMNETPP_LIB_DIR)/$(TOOLCHAIN_NAME)
 OMNETPP_LIBS = -L"$(OMNETPP_LIB_SUBDIR)" -L"$(OMNETPP_LIB_DIR)" -loppmain$D $(USERIF_LIBS) $(KERNEL_LIBS) $(SYS_LIBS)
 
-COPTS = $(CFLAGS)  $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
+COPTS = $(CFLAGS) -DMIXIM_INET=1 $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
 MSGCOPTS = $(INCLUDE_PATH)
 
 # we want to recompile everything if COPTS changes,
@@ -148,4 +154,30 @@ $O/ApplicationClusteringImplementations.o: ApplicationClusteringImplementations.
 	ApplicationClusteringImplementations.h \
 	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h
+$O/CustomWiseRoute.o: CustomWiseRoute.cc \
+	CustomWiseRoute.h \
+	$(MIXIM_PROJ)/src/base/messages/NetwPkt_m.h \
+	$(MIXIM_PROJ)/src/base/modules/ArpInterface.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseLayer.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseNetwLayer.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseWorldUtility.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
+	$(MIXIM_PROJ)/src/base/utils/HostState.h \
+	$(MIXIM_PROJ)/src/base/utils/MacToNetwControlInfo.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/NetwControlInfo.h \
+	$(MIXIM_PROJ)/src/base/utils/PassedMessage.h \
+	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/messages/WiseRoutePkt_m.h \
+	$(MIXIM_PROJ)/src/modules/netw/WiseRoute.h \
+	$(MIXIM_PROJ)/src/modules/utility/Packet.h \
+	$(MIXIM_PROJ)/src/modules/utility/SimTracer.h
 

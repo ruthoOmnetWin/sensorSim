@@ -27,8 +27,8 @@ network ApplicationClusteringImplementations extends BaseNetwork
         @display("bgi=background/floorplan;bgb=856,323");
         wuType = default("sensortechnology.src.WorldModel.CustomWorldUtility");
         
-    submodules:
-        TemperatureSensorNode: SensorNode {
+    submodules:   
+        TemperatureSensorNode0: SensorNode {
             @display("p=59,50");
             hasTemperatureSensor = true;
             //@class(ApplicationClusteringImplementations);
@@ -182,7 +182,6 @@ network ApplicationClusteringImplementations extends BaseNetwork
             hasTemperatureSensor = true;
         }
     connections allowunconnected:
-        //TemperatureSensorNode.tranl.upperLayerIn
         
     // all connections and gates are to be generated dynamically
 }
