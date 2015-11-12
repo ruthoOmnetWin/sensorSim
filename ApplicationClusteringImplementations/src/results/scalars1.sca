@@ -1,0 +1,266 @@
+version 2
+run General-0-20151112-18:58:26-18961
+attr configname General
+attr datetime 20151112-18:58:26
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network ApplicationClusteringImplementations
+attr processid 18961
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar ApplicationClusteringImplementations.world 	#sent 	0
+scalar ApplicationClusteringImplementations.world 	#received 	0
+statistic ApplicationClusteringImplementations.world 	"hop count"
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr type  int
+bin	-INF	0
+bin	-1	0
+bin	0	0
+bin	1	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.mac 	nbTxFrames 	19
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.mac 	nbRxFrames 	14
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.mac 	nbDroppedFrames 	4
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.mac 	nbTxAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.mac 	nbDuplicates 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.mac 	meanBackoff 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.mac 	nbBackoffs 	81
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.mac 	backoffDurations 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.phy 	nbFramesWithInterference 	5
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.phy 	nbFramesWithoutInterference 	12
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.phy 	nbFramesWithInterferenceDropped 	1
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.tranl 	nbAggrPktReceived 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.tranl 	"nbAggrPktSentDown " 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.batteryStats 	total 	514648.30029905
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode0.batteryStats 	"Mean power consumption" 	161.83908814436
+attr unit  mW
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.mac 	nbTxFrames 	19
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.mac 	nbRxFrames 	14
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.mac 	nbTxAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.mac 	nbDuplicates 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.mac 	meanBackoff 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.mac 	nbBackoffs 	19
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.mac 	backoffDurations 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.phy 	nbFramesWithInterference 	3
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.phy 	nbFramesWithoutInterference 	11
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.tranl 	nbAggrPktReceived 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.tranl 	"nbAggrPktSentDown " 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.batteryStats 	total 	514648.30029908
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode1.batteryStats 	"Mean power consumption" 	161.83908814436
+attr unit  mW
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.mac 	nbTxFrames 	16
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.mac 	nbRxFrames 	14
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.mac 	nbDroppedFrames 	4
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.mac 	nbTxAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.mac 	nbDuplicates 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.mac 	meanBackoff 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.mac 	nbBackoffs 	78
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.mac 	backoffDurations 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.phy 	nbFramesWithInterference 	6
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.phy 	nbFramesWithoutInterference 	11
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.phy 	nbFramesWithInterferencePartial 	3
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.phy 	nbFramesWithInterferenceDropped 	3
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.tranl 	nbAggrPktReceived 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.tranl 	"nbAggrPktSentDown " 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.batteryStats 	total 	514648.88446235
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode2.batteryStats 	"Mean power consumption" 	161.83927184351
+attr unit  mW
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.mac 	nbTxFrames 	16
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.mac 	nbRxFrames 	18
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.mac 	nbDroppedFrames 	2
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.mac 	nbTxAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.mac 	nbDuplicates 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.mac 	meanBackoff 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.mac 	nbBackoffs 	51
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.mac 	backoffDurations 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.phy 	nbFramesWithInterference 	7
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.phy 	nbFramesWithoutInterference 	12
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.phy 	nbFramesWithInterferencePartial 	6
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.phy 	nbFramesWithInterferenceDropped 	4
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.tranl 	nbAggrPktReceived 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.tranl 	"nbAggrPktSentDown " 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.batteryStats 	total 	514648.88446237
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode3.batteryStats 	"Mean power consumption" 	161.83927184351
+attr unit  mW
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.mac 	nbTxFrames 	19
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.mac 	nbRxFrames 	12
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.mac 	nbTxAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.mac 	nbDuplicates 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.mac 	meanBackoff 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.mac 	nbBackoffs 	19
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.mac 	backoffDurations 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.phy 	nbFramesWithoutInterference 	12
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.tranl 	nbAggrPktReceived 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.tranl 	"nbAggrPktSentDown " 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.batteryStats 	total 	514648.30029904
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode4.batteryStats 	"Mean power consumption" 	161.83908814435
+attr unit  mW
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.mac 	nbTxFrames 	15
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.mac 	nbRxFrames 	18
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.mac 	nbTxAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.mac 	nbDuplicates 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.mac 	meanBackoff 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.mac 	nbBackoffs 	15
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.mac 	backoffDurations 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.phy 	nbFramesWithInterference 	2
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.phy 	nbFramesWithoutInterference 	16
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.phy 	nbFramesWithInterferencePartial 	7
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.phy 	nbFramesWithInterferenceDropped 	3
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.tranl 	nbAggrPktReceived 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.tranl 	"nbAggrPktSentDown " 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.batteryStats 	total 	514649.07918348
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode5.batteryStats 	"Mean power consumption" 	161.83933307657
+attr unit  mW
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.mac 	nbTxFrames 	16
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.mac 	nbRxFrames 	20
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.mac 	nbDroppedFrames 	2
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.mac 	nbTxAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.mac 	nbDuplicates 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.mac 	meanBackoff 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.mac 	nbBackoffs 	46
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.mac 	backoffDurations 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.phy 	nbFramesWithInterference 	2
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.phy 	nbFramesWithoutInterference 	18
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.phy 	nbFramesWithInterferencePartial 	8
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.phy 	nbFramesWithInterferenceDropped 	3
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.tranl 	nbAggrPktReceived 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.tranl 	"nbAggrPktSentDown " 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.batteryStats 	total 	514648.88446235
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode6.batteryStats 	"Mean power consumption" 	161.83927184351
+attr unit  mW
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.mac 	nbTxFrames 	13
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.mac 	nbRxFrames 	13
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.mac 	nbDroppedFrames 	4
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.mac 	nbTxAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.mac 	nbDuplicates 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.mac 	meanBackoff 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.mac 	nbBackoffs 	73
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.mac 	backoffDurations 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.phy 	nbFramesWithInterference 	2
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.phy 	nbFramesWithoutInterference 	12
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.phy 	nbFramesWithInterferencePartial 	6
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.phy 	nbFramesWithInterferenceDropped 	9
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.tranl 	nbAggrPktReceived 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.tranl 	"nbAggrPktSentDown " 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.batteryStats 	total 	514649.46862564
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode7.batteryStats 	"Mean power consumption" 	161.83945554266
+attr unit  mW
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.mac 	nbTxFrames 	19
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.mac 	nbRxFrames 	17
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.mac 	nbDroppedFrames 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.mac 	nbMissedAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.mac 	nbRecvdAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.mac 	nbTxAcks 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.mac 	nbDuplicates 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.mac 	meanBackoff 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.mac 	nbBackoffs 	19
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.mac 	backoffDurations 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.phy 	nbFramesWithInterference 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.phy 	nbFramesWithoutInterference 	17
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.phy 	nbFramesWithInterferencePartial 	2
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.tranl 	nbAggrPktReceived 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.tranl 	"nbAggrPktSentDown " 	0
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.batteryStats 	total 	514648.30029907
+attr unit  mW-s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.batteryStats 	lifetime 	-1
+attr unit  s
+scalar ApplicationClusteringImplementations.TemperatureSensorNode8.batteryStats 	"Mean power consumption" 	161.83908814436
+attr unit  mW

@@ -22,8 +22,8 @@
 class CustomWiseRoute : public WiseRoute
 {
 public:
-    virtual ~CustomWiseRoute();
     CustomWiseRoute();
+    void finish();
 };
 
 #endif /* CUSTOMWISEROUTE_H_ */

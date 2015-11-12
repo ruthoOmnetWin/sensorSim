@@ -30,12 +30,25 @@ using std::make_pair;
 
 Define_Module(CustomWiseRoute);
 
-CustomWiseRoute::~CustomWiseRoute() {
-    // TODO Auto-generated destructor stub
+CustomWiseRoute::CustomWiseRoute() : WiseRoute() {
 }
 
-CustomWiseRoute::CustomWiseRoute() {
-    // TODO Auto-generated constructor stub
+void CustomWiseRoute::finish() {
 
+    tFloodTable::iterator pos = floodTable.begin();
+    tFloodTable::iterator posEnd = floodTable.end();
+
+    EV << "my number is: " << this->floodSeqNumber << endl;
+    EV << "my mac is: " << this->macaddress << endl;
+    EV << "my sink is: " << this->sinkAddress << endl;
+    EV << "my networkaddress is: " << myNetwAddr << endl;
+
+    while (pos != posEnd) {
+        EV << " " << pos->first << "," << pos->second << endl;
+        ++pos;
+    }
+
+    this->routeTable[0];
+
+    WiseRoute::finish();
 }
-
