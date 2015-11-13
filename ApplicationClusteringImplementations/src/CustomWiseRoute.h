@@ -33,10 +33,11 @@ public:
 
     void convertTreeToRouteTable();
     WiseRoute::tRouteTableEntry makeEntry(int nextAddr);
-    void CustomWiseRoute::proccessChildNodes();
-    void CustomWiseRoute::proccessRemainingNodes();
+    void proccessChildNodes();
+    void proccessRemainingNodes();
 
-    std::vector<std::string> routeTree;
+    int* routeTree;
+    int numHosts;
 
 };
 

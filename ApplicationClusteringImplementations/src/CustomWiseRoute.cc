@@ -41,9 +41,20 @@ void CustomWiseRoute::initialize(int stage) {
     if (stage == 1) {
         SensorNode* node = (SensorNode*) this->getParentModule();
         const char *vstr = node->par("routeTree").stringValue();
-        SensorNode* sensornode = FindModule<SensorNode*>::findSubModule(this->getParentModule());
         std::vector<std::string> v = cStringTokenizer(vstr).asVector();
+        int max = v.size();
+
+        routeTree = new int[max];
+
+        for (int i = 0; i < max; i++) {
+            //routeTree[i] = std::stoi(v.at(i));
+            routeTree[i] = atoi( v[i].c_str() );
+            EV << routeTree[i] << endl;
+        }
+
         convertTreeToRouteTable();
+
+        numHosts = node->par("numHosts");
     }
 }
 
@@ -56,6 +67,35 @@ WiseRoute::tRouteTableEntry CustomWiseRoute::makeEntry(int nextAddr) {
 void CustomWiseRoute::convertTreeToRouteTable() {
     //routeTree;
     //routeTable;
+    //myNetwAddr;
+
+    bool isLeaf = true;
+    int childs[numHosts];
+    int c = 0;
+    for (int i = 0; i < numHosts; i++) {
+        childs[i] = -1;
+        if (routeTree[i] == myNetwAddr) {
+            childs[c++] = i;
+            isLeaf = false;
+        }
+
+    }
+
+    if (myNetwAddr != routeTree[myNetwAddr]) {
+
+        //not the root node
+        proccessRemainingNodes();
+
+    }
+
+
+        //leaf node -> no children
+
+
+        //middle node -> father and children
+        proccessChildNodes();
+        proccessRemainingNodes();
+
 }
 
 void CustomWiseRoute::proccessChildNodes() {
