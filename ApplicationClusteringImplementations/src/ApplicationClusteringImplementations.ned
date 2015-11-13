@@ -16,7 +16,6 @@
 package applicationclusteringimplementations;
 
 import org.mixim.base.modules.BaseNetwork;
-import sensortechnology.src.SensorNode.SensorNode;
 
 network ApplicationClusteringImplementations extends BaseNetwork
 {
@@ -28,40 +27,40 @@ network ApplicationClusteringImplementations extends BaseNetwork
         wuType = default("sensortechnology.src.WorldModel.CustomWorldUtility");
         
     submodules:   
-        TemperatureSensorNode0: SensorNode {
+        TemperatureSensorNode0: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=59,50");
             hasTemperatureSensor = true;
             //@class(ApplicationClusteringImplementations);
         }
-        TemperatureSensorNode1: SensorNode {
+        TemperatureSensorNode1: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=232,50");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode2: SensorNode {
+        TemperatureSensorNode2: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=59,98");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode3: SensorNode {
+        TemperatureSensorNode3: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=59,146");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode4: SensorNode {
+        TemperatureSensorNode4: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=59,260");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode5: SensorNode {
+        TemperatureSensorNode5: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=165,45");
             hasTemperatureSensor = true;
     	}
-        TemperatureSensorNode6: SensorNode {
+        TemperatureSensorNode6: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=165,100");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode7: SensorNode {
+        TemperatureSensorNode7: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=165,175");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode8: SensorNode {
+        TemperatureSensorNode8: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=122,257");
             hasTemperatureSensor = true;
         }
@@ -75,119 +74,119 @@ submodules:
     
        
     
-    TemperatureSensorNode9: SensorNode {
+    TemperatureSensorNode9: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=169,257");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode10: SensorNode {
+    TemperatureSensorNode10: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=219,257");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode11: SensorNode {
+    TemperatureSensorNode11: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=267,257");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode12: SensorNode {
+    TemperatureSensorNode12: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=300,117");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode13: SensorNode {
+    TemperatureSensorNode13: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=280,50");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode14: SensorNode {
+    TemperatureSensorNode14: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=319,50");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode15: SensorNode {
+    TemperatureSensorNode15: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=280,50");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode16: SensorNode {
+    TemperatureSensorNode16: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=300,199");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode17: SensorNode {
+    TemperatureSensorNode17: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=358,199");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode18: SensorNode {
+    TemperatureSensorNode18: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=385,45");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode19: SensorNode {
+    TemperatureSensorNode19: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=472,78");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode20: SensorNode {
+    TemperatureSensorNode20: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=472,125");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode21: SensorNode {
+    TemperatureSensorNode21: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=537,50");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode22: SensorNode {
+    TemperatureSensorNode22: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=585,59");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode23: SensorNode {
+    TemperatureSensorNode23: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=635,59");
         hasTemperatureSensor = true;
     }
-TemperatureSensorNode24: SensorNode {
+TemperatureSensorNode24: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=683,59");
             hasTemperatureSensor = true;
         }
-    TemperatureSensorNode25: SensorNode {
+    TemperatureSensorNode25: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=546,125");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode26: SensorNode {
+    TemperatureSensorNode26: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=563,199");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode27: SensorNode {
+    TemperatureSensorNode27: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=635,156");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode28: SensorNode {
+    TemperatureSensorNode28: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=701,139");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode29: SensorNode {
+    TemperatureSensorNode29: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=612,251");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode30: SensorNode {
+    TemperatureSensorNode30: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=651,251");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode31: SensorNode {
+    TemperatureSensorNode31: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=701,238");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode32: SensorNode {
+    TemperatureSensorNode32: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=754,238");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode33: SensorNode {
+    TemperatureSensorNode33: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=768,136");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode34: SensorNode {
+    TemperatureSensorNode34: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=768,185");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode35: SensorNode {
+    TemperatureSensorNode35: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=729,59");
         hasTemperatureSensor = true;
     }
-    TemperatureSensorNode36: SensorNode {
+    TemperatureSensorNode36: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=793,45");
         hasTemperatureSensor = true;
     }
-     TemperatureSensorNode37: SensorNode {
+     TemperatureSensorNode37: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=807,98");
             hasTemperatureSensor = true;
         }

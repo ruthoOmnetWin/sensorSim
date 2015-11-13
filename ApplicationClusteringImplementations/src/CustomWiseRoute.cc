@@ -25,24 +25,49 @@
 #include "FindModule.h"
 #include "WiseRoutePkt_m.h"
 #include "SimTracer.h"
+#include "SensorNode.h"
 
 using std::make_pair;
 
 Define_Module(CustomWiseRoute);
 
-void CustomWiseRoute::initialize(int stage) {
-    BaseLayer::initialize(stage);
-
-    EV << myNetwAddr << endl;
-    EV << myNetwAddr << endl;
+CustomWiseRoute::CustomWiseRoute() : WiseRoute() {
 
 }
 
-CustomWiseRoute::CustomWiseRoute() : WiseRoute() {
+void CustomWiseRoute::initialize(int stage) {
+    WiseRoute::initialize(stage);
+
+    if (stage == 1) {
+        SensorNode* node = (SensorNode*) this->getParentModule();
+        const char *vstr = node->par("routeTree").stringValue();
+        SensorNode* sensornode = FindModule<SensorNode*>::findSubModule(this->getParentModule());
+        std::vector<std::string> v = cStringTokenizer(vstr).asVector();
+        convertTreeToRouteTable();
+    }
+}
+
+WiseRoute::tRouteTableEntry CustomWiseRoute::makeEntry(int nextAddr) {
+    WiseRoute::tRouteTableEntry newEntry;
+    newEntry.nextHop = nextAddr;
+    routeTable.insert(make_pair(nextAddr, newEntry));
+}
+
+void CustomWiseRoute::convertTreeToRouteTable() {
+    //routeTree;
+    //routeTable;
+}
+
+void CustomWiseRoute::proccessChildNodes() {
+
+}
+
+void CustomWiseRoute::proccessRemainingNodes() {
+
 }
 
 void CustomWiseRoute::finish() {
-
+/*
     if (myNetwAddr == 1) {
 
         tRouteTableEntry toFive;
@@ -67,6 +92,7 @@ void CustomWiseRoute::finish() {
     }
 
     this->routeTable[0];
-
+*/
     WiseRoute::finish();
 }
+

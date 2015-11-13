@@ -24,8 +24,19 @@ class CustomWiseRoute : public WiseRoute
 public:
     CustomWiseRoute();
 
+    //special omnet methods
+
     void initialize(int stage);
     void finish();
+
+    //methods for initialization of the routeTable
+
+    void convertTreeToRouteTable();
+    WiseRoute::tRouteTableEntry makeEntry(int nextAddr);
+    void CustomWiseRoute::proccessChildNodes();
+    void CustomWiseRoute::proccessRemainingNodes();
+
+    std::vector<std::string> routeTree;
 
 };
 

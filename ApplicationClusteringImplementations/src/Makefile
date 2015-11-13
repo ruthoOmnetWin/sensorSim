@@ -179,5 +179,6 @@ $O/CustomWiseRoute.o: CustomWiseRoute.cc \
 	$(MIXIM_PROJ)/src/modules/messages/WiseRoutePkt_m.h \
 	$(MIXIM_PROJ)/src/modules/netw/WiseRoute.h \
 	$(MIXIM_PROJ)/src/modules/utility/Packet.h \
-	$(MIXIM_PROJ)/src/modules/utility/SimTracer.h
+	$(MIXIM_PROJ)/src/modules/utility/SimTracer.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h
 
