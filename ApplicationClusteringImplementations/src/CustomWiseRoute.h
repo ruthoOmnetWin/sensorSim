@@ -24,7 +24,7 @@ class CustomWiseRoute : public WiseRoute
 public:
     CustomWiseRoute();
 
-    void initialize(int stage)
+    void initialize(int stage);
     void finish();
 
 };
