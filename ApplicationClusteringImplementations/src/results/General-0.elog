@@ -1,5 +1,5 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20151113-20:05:17-9619 b 1000
+SB v 1029 rid General-0-20151113-20:12:43-11519 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t applicationclusteringimplementations.ApplicationClusteringImplementations n ApplicationClusteringImplementations cm 1
 MS id 1 d bgi=background/floorplan;bgb=856,323,white;bgp=0,0
@@ -1252,8 +1252,6 @@ GC m 158 g 0 n fromTemperatureSensor o 0
 GC m 158 g 3 n toTemperatureSensor o 1
 CC sm 37 sg 1 dm 158 dg 0
 CC sm 158 sg 3 dm 37 dg 2
-BU id 5 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 38 g 0 n connectToProcessor$i o 0
 GC m 38 g 1 n connectToProcessor$o o 1
 GC m 158 g 4 n connectToMemory$i o 0
@@ -1262,9 +1260,6 @@ CC sm 38 sg 1 dm 158 dg 4
 CS sm 38 sg 1 d ""
 CC sm 158 sg 5 dm 38 dg 0
 CS sm 158 sg 5 d ""
-BU id 5 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 29 m initialize(0)
 ME
@@ -1345,8 +1340,6 @@ GC m 159 g 0 n fromTemperatureSensor o 0
 GC m 159 g 3 n toTemperatureSensor o 1
 CC sm 53 sg 1 dm 159 dg 0
 CC sm 159 sg 3 dm 53 dg 2
-BU id 6 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 54 g 0 n connectToProcessor$i o 0
 GC m 54 g 1 n connectToProcessor$o o 1
 GC m 159 g 4 n connectToMemory$i o 0
@@ -1355,9 +1348,6 @@ CC sm 54 sg 1 dm 159 dg 4
 CS sm 54 sg 1 d ""
 CC sm 159 sg 5 dm 54 dg 0
 CS sm 159 sg 5 d ""
-BU id 6 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 45 m initialize(0)
 ME
@@ -1531,6 +1521,8 @@ GC m 161 g 0 n fromTemperatureSensor o 0
 GC m 161 g 3 n toTemperatureSensor o 1
 CC sm 85 sg 1 dm 161 dg 0
 CC sm 161 sg 3 dm 85 dg 2
+BU id 8 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 86 g 0 n connectToProcessor$i o 0
 GC m 86 g 1 n connectToProcessor$o o 1
 GC m 161 g 4 n connectToMemory$i o 0
@@ -1539,6 +1531,9 @@ CC sm 86 sg 1 dm 161 dg 4
 CS sm 86 sg 1 d ""
 CC sm 161 sg 5 dm 86 dg 0
 CS sm 161 sg 5 d ""
+BU id 8 txt "Counted 1 Sensor(s) on the Node.\n"
+- Counted 1 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 77 m initialize(0)
 ME
@@ -1619,6 +1614,8 @@ GC m 162 g 0 n fromTemperatureSensor o 0
 GC m 162 g 3 n toTemperatureSensor o 1
 CC sm 101 sg 1 dm 162 dg 0
 CC sm 162 sg 3 dm 101 dg 2
+BU id 9 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 102 g 0 n connectToProcessor$i o 0
 GC m 102 g 1 n connectToProcessor$o o 1
 GC m 162 g 4 n connectToMemory$i o 0
@@ -1627,6 +1624,9 @@ CC sm 102 sg 1 dm 162 dg 4
 CS sm 102 sg 1 d ""
 CC sm 162 sg 5 dm 102 dg 0
 CS sm 162 sg 5 d ""
+BU id 9 txt "Counted 1 Sensor(s) on the Node.\n"
+- Counted 1 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 93 m initialize(0)
 ME
@@ -1800,6 +1800,8 @@ GC m 164 g 0 n fromTemperatureSensor o 0
 GC m 164 g 3 n toTemperatureSensor o 1
 CC sm 133 sg 1 dm 164 dg 0
 CC sm 164 sg 3 dm 133 dg 2
+BU id 11 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 134 g 0 n connectToProcessor$i o 0
 GC m 134 g 1 n connectToProcessor$o o 1
 GC m 164 g 4 n connectToMemory$i o 0
@@ -1808,6 +1810,9 @@ CC sm 134 sg 1 dm 164 dg 4
 CS sm 134 sg 1 d ""
 CC sm 164 sg 5 dm 134 dg 0
 CS sm 164 sg 5 d ""
+BU id 11 txt "Counted 1 Sensor(s) on the Node.\n"
+- Counted 1 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 125 m initialize(0)
 ME
@@ -1888,6 +1893,8 @@ GC m 165 g 0 n fromTemperatureSensor o 0
 GC m 165 g 3 n toTemperatureSensor o 1
 CC sm 149 sg 1 dm 165 dg 0
 CC sm 165 sg 3 dm 149 dg 2
+BU id 12 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 150 g 0 n connectToProcessor$i o 0
 GC m 150 g 1 n connectToProcessor$o o 1
 GC m 165 g 4 n connectToMemory$i o 0
@@ -1896,6 +1903,9 @@ CC sm 150 sg 1 dm 165 dg 4
 CS sm 150 sg 1 d ""
 CC sm 165 sg 5 dm 150 dg 0
 CS sm 165 sg 5 d ""
+BU id 12 txt "Counted 1 Sensor(s) on the Node.\n"
+- Counted 1 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 141 m initialize(0)
 ME
@@ -2760,595 +2770,4 @@ CC sm 111 sg 12 dm 120 dg 12
 CC sm 4 sg 17 dm 10 dg 4
 GC m 10 g 7 n out111-2 o 1
 GC m 111 g 15 n out111-2 o 1
-CC sm 111 sg 15 dm 10 dg 7
-GC m 120 g 15 n out111-2 o 1
-CC sm 120 sg 15 dm 111 dg 15
-GC m 6 g 14 n in47-4 o 0
-GC m 47 g 22 n in47-4 o 0
-CC sm 6 sg 14 dm 47 dg 22
-GC m 56 g 22 n in47-4 o 0
-CC sm 47 sg 22 dm 56 dg 22
-CC sm 10 sg 7 dm 6 dg 14
-GC m 6 g 17 n out47-4 o 1
-GC m 47 g 25 n out47-4 o 1
-CC sm 47 sg 25 dm 6 dg 17
-GC m 56 g 25 n out47-4 o 1
-CC sm 56 sg 25 dm 47 dg 25
-GC m 10 g 8 n in111-2 o 0
-GC m 111 g 16 n in111-2 o 0
-CC sm 10 sg 8 dm 111 dg 16
-GC m 120 g 16 n in111-2 o 0
-CC sm 111 sg 16 dm 120 dg 16
-CC sm 6 sg 17 dm 10 dg 8
-GC m 10 g 11 n out111-3 o 1
-GC m 111 g 19 n out111-3 o 1
-CC sm 111 sg 19 dm 10 dg 11
-GC m 120 g 19 n out111-3 o 1
-CC sm 120 sg 19 dm 111 dg 19
-GC m 7 g 14 n in63-4 o 0
-GC m 63 g 22 n in63-4 o 0
-CC sm 7 sg 14 dm 63 dg 22
-GC m 72 g 22 n in63-4 o 0
-CC sm 63 sg 22 dm 72 dg 22
-CC sm 10 sg 11 dm 7 dg 14
-GC m 7 g 17 n out63-4 o 1
-GC m 63 g 25 n out63-4 o 1
-CC sm 63 sg 25 dm 7 dg 17
-GC m 72 g 25 n out63-4 o 1
-CC sm 72 sg 25 dm 63 dg 25
-GC m 10 g 12 n in111-3 o 0
-GC m 111 g 20 n in111-3 o 0
-CC sm 10 sg 12 dm 111 dg 20
-GC m 120 g 20 n in111-3 o 0
-CC sm 111 sg 20 dm 120 dg 20
-CC sm 7 sg 17 dm 10 dg 12
-GC m 10 g 15 n out111-4 o 1
-GC m 111 g 23 n out111-4 o 1
-CC sm 111 sg 23 dm 10 dg 15
-GC m 120 g 23 n out111-4 o 1
-CC sm 120 sg 23 dm 111 dg 23
-GC m 5 g 6 n in31-2 o 0
-GC m 31 g 14 n in31-2 o 0
-CC sm 5 sg 6 dm 31 dg 14
-GC m 40 g 14 n in31-2 o 0
-CC sm 31 sg 14 dm 40 dg 14
-CC sm 10 sg 15 dm 5 dg 6
-GC m 5 g 9 n out31-2 o 1
-GC m 31 g 17 n out31-2 o 1
-CC sm 31 sg 17 dm 5 dg 9
-GC m 40 g 17 n out31-2 o 1
-CC sm 40 sg 17 dm 31 dg 17
-GC m 10 g 16 n in111-4 o 0
-GC m 111 g 24 n in111-4 o 0
-CC sm 10 sg 16 dm 111 dg 24
-GC m 120 g 24 n in111-4 o 0
-CC sm 111 sg 24 dm 120 dg 24
-CC sm 5 sg 9 dm 10 dg 16
-GC m 10 g 19 n out111-5 o 1
-GC m 111 g 27 n out111-5 o 1
-CC sm 111 sg 27 dm 10 dg 19
-GC m 120 g 27 n out111-5 o 1
-CC sm 120 sg 27 dm 111 dg 27
-GC m 9 g 14 n in95-4 o 0
-GC m 95 g 22 n in95-4 o 0
-CC sm 9 sg 14 dm 95 dg 22
-GC m 104 g 22 n in95-4 o 0
-CC sm 95 sg 22 dm 104 dg 22
-CC sm 10 sg 19 dm 9 dg 14
-GC m 9 g 17 n out95-4 o 1
-GC m 95 g 25 n out95-4 o 1
-CC sm 95 sg 25 dm 9 dg 17
-GC m 104 g 25 n out95-4 o 1
-CC sm 104 sg 25 dm 95 dg 25
-GC m 10 g 20 n in111-5 o 0
-GC m 111 g 28 n in111-5 o 0
-CC sm 10 sg 20 dm 111 dg 28
-GC m 120 g 28 n in111-5 o 0
-CC sm 111 sg 28 dm 120 dg 28
-CC sm 9 sg 17 dm 10 dg 20
-- visual position. x = 165 y = 100 z = 0
-MS id 10 d "t=mode: normal;p=165,100;i2=status/battery;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
-MS id 10 d "t=mode: normal;p=165,100;i2=status/battery;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
-- initializing MovingMobilityBase stage 1
-- initializing LinearMobility stage 1
-ME
-MB sm 1 tm 119 m initialize(1)
-ME
-MB sm 1 tm 120 m initialize(1)
-MB sm 120 tm 116 m ""
-ME
-ME
-MB sm 1 tm 112 m initialize(1)
-- Host index=0, Id=10
--   host IP address=6
-MB sm 112 tm 109 m ""
-ME
--   host macaddress=00-00-00-00-00-06
-MB sm 112 tm 109 m ""
-ME
-CM id 127 tid 127 eid 127 etid 127 c cMessage n route-flood-timer k 3 pe -1
-- 6
-- 6
-- 6
-- 6
-- 3
-- 6
-- 6
-- 6
-- 7
-ME
-MB sm 1 tm 113 m initialize(1)
-ME
-MB sm 1 tm 114 m initialize(1)
-BS id 68 tid 68 eid 68 etid 68 c cMessage n delay-timer k 25000 pe 0
-ES t 7.991585638374
-ME
-MB sm 1 tm 115 m initialize(1)
-ME
-MB sm 1 tm 116 m initialize(1)
-MB sm 116 tm 109 m ""
-ME
-MB sm 116 tm 119 m ""
-ME
-MB sm 116 tm 112 m ""
-ME
-MB sm 116 tm 113 m ""
-ME
-MB sm 116 tm 114 m ""
-ME
-MB sm 116 tm 115 m ""
-ME
-MB sm 116 tm 121 m ""
-ME
-MB sm 116 tm 122 m ""
-ME
-MB sm 116 tm 123 m ""
-ME
-MB sm 116 tm 124 m ""
-ME
-MB sm 116 tm 118 m ""
-ME
-MB sm 116 tm 163 m ""
-ME
-ME
-MB sm 1 tm 121 m initialize(1)
-MB sm 121 tm 116 m ""
-ME
-CM id 128 tid 128 eid 128 etid 128 c cMessage n Temperature pe -1
-MB sm 121 tm 116 m ""
-ME
-BS id 128 tid 128 eid 128 etid 128 c ExtendedMessage n Temperature pe 0
-CL id 128 tid 128 eid 128 etid 128 c ExtendedMessage n Temperature pe 0 cid 129
-SH sm 121 sg 1
-ES t 0
-ME
-MB sm 1 tm 122 m initialize(1)
-ME
-MB sm 1 tm 123 m initialize(1)
-ME
-MB sm 1 tm 124 m initialize(1)
-ME
-MB sm 1 tm 118 m initialize(1)
-ME
-MB sm 1 tm 163 m initialize(1)
-CM id 130 tid 130 eid 130 etid 130 c cMessage n startSensingUnit pe -1
-BS id 130 tid 130 eid 130 etid 130 c cMessage n startSensingUnit pe 0
-ES t 10000
-CM id 131 tid 131 eid 131 etid 131 c cMessage n shiftMode pe -1
-BS id 131 tid 131 eid 131 etid 131 c cMessage n shiftMode pe 0
-ES t 5000
-CM id 132 tid 132 eid 132 etid 132 c cMessage n collectStatistics pe -1
-BS id 132 tid 132 eid 132 etid 132 c cMessage n collectStatistics pe 0
-ES t 1000
-MS id 10 d "t=mode: normal;p=165,100;i2=status/battery;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
-ME
-MB sm 1 tm 125 m initialize(1)
-ME
-MB sm 1 tm 126 m initialize(1)
-- initializing MobilityBase stage 1
-- initial position. x = 165 y = 175 z = 0
-GC m 11 g 3 n out127-1 o 1
-GC m 127 g 11 n out127-1 o 1
-CC sm 127 sg 11 dm 11 dg 3
-GC m 136 g 11 n out127-1 o 1
-CC sm 136 sg 11 dm 127 dg 11
-GC m 6 g 18 n in47-5 o 0
-GC m 47 g 26 n in47-5 o 0
-CC sm 6 sg 18 dm 47 dg 26
-GC m 56 g 26 n in47-5 o 0
-CC sm 47 sg 26 dm 56 dg 26
-CC sm 11 sg 3 dm 6 dg 18
-GC m 6 g 21 n out47-5 o 1
-GC m 47 g 29 n out47-5 o 1
-CC sm 47 sg 29 dm 6 dg 21
-GC m 56 g 29 n out47-5 o 1
-CC sm 56 sg 29 dm 47 dg 29
-GC m 11 g 4 n in127-1 o 0
-GC m 127 g 12 n in127-1 o 0
-CC sm 11 sg 4 dm 127 dg 12
-GC m 136 g 12 n in127-1 o 0
-CC sm 127 sg 12 dm 136 dg 12
-CC sm 6 sg 21 dm 11 dg 4
-GC m 11 g 7 n out127-2 o 1
-GC m 127 g 15 n out127-2 o 1
-CC sm 127 sg 15 dm 11 dg 7
-GC m 136 g 15 n out127-2 o 1
-CC sm 136 sg 15 dm 127 dg 15
-GC m 7 g 18 n in63-5 o 0
-GC m 63 g 26 n in63-5 o 0
-CC sm 7 sg 18 dm 63 dg 26
-GC m 72 g 26 n in63-5 o 0
-CC sm 63 sg 26 dm 72 dg 26
-CC sm 11 sg 7 dm 7 dg 18
-GC m 7 g 21 n out63-5 o 1
-GC m 63 g 29 n out63-5 o 1
-CC sm 63 sg 29 dm 7 dg 21
-GC m 72 g 29 n out63-5 o 1
-CC sm 72 sg 29 dm 63 dg 29
-GC m 11 g 8 n in127-2 o 0
-GC m 127 g 16 n in127-2 o 0
-CC sm 11 sg 8 dm 127 dg 16
-GC m 136 g 16 n in127-2 o 0
-CC sm 127 sg 16 dm 136 dg 16
-CC sm 7 sg 21 dm 11 dg 8
-GC m 11 g 11 n out127-3 o 1
-GC m 127 g 19 n out127-3 o 1
-CC sm 127 sg 19 dm 11 dg 11
-GC m 136 g 19 n out127-3 o 1
-CC sm 136 sg 19 dm 127 dg 19
-GC m 9 g 18 n in95-5 o 0
-GC m 95 g 26 n in95-5 o 0
-CC sm 9 sg 18 dm 95 dg 26
-GC m 104 g 26 n in95-5 o 0
-CC sm 95 sg 26 dm 104 dg 26
-CC sm 11 sg 11 dm 9 dg 18
-GC m 9 g 21 n out95-5 o 1
-GC m 95 g 29 n out95-5 o 1
-CC sm 95 sg 29 dm 9 dg 21
-GC m 104 g 29 n out95-5 o 1
-CC sm 104 sg 29 dm 95 dg 29
-GC m 11 g 12 n in127-3 o 0
-GC m 127 g 20 n in127-3 o 0
-CC sm 11 sg 12 dm 127 dg 20
-GC m 136 g 20 n in127-3 o 0
-CC sm 127 sg 20 dm 136 dg 20
-CC sm 9 sg 21 dm 11 dg 12
-GC m 11 g 15 n out127-4 o 1
-GC m 127 g 23 n out127-4 o 1
-CC sm 127 sg 23 dm 11 dg 15
-GC m 136 g 23 n out127-4 o 1
-CC sm 136 sg 23 dm 127 dg 23
-GC m 10 g 22 n in111-6 o 0
-GC m 111 g 30 n in111-6 o 0
-CC sm 10 sg 22 dm 111 dg 30
-GC m 120 g 30 n in111-6 o 0
-CC sm 111 sg 30 dm 120 dg 30
-CC sm 11 sg 15 dm 10 dg 22
-GC m 10 g 25 n out111-6 o 1
-GC m 111 g 33 n out111-6 o 1
-CC sm 111 sg 33 dm 10 dg 25
-GC m 120 g 33 n out111-6 o 1
-CC sm 120 sg 33 dm 111 dg 33
-GC m 11 g 16 n in127-4 o 0
-GC m 127 g 24 n in127-4 o 0
-CC sm 11 sg 16 dm 127 dg 24
-GC m 136 g 24 n in127-4 o 0
-CC sm 127 sg 24 dm 136 dg 24
-CC sm 10 sg 25 dm 11 dg 16
-- visual position. x = 165 y = 175 z = 0
-MS id 11 d "t=mode: normal;p=165,175;i2=status/battery;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
-MS id 11 d "t=mode: normal;p=165,175;i2=status/battery;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
-- initializing MovingMobilityBase stage 1
-- initializing LinearMobility stage 1
-ME
-MB sm 1 tm 135 m initialize(1)
-ME
-MB sm 1 tm 136 m initialize(1)
-MB sm 136 tm 132 m ""
-ME
-ME
-MB sm 1 tm 128 m initialize(1)
-- Host index=0, Id=11
--   host IP address=7
-MB sm 128 tm 125 m ""
-ME
--   host macaddress=00-00-00-00-00-07
-MB sm 128 tm 125 m ""
-ME
-CM id 133 tid 133 eid 133 etid 133 c cMessage n route-flood-timer k 3 pe -1
-- 6
-- 6
-- 6
-- 6
-- 3
-- 6
-- 6
-- 6
-- 7
-ME
-MB sm 1 tm 129 m initialize(1)
-ME
-MB sm 1 tm 130 m initialize(1)
-BS id 78 tid 78 eid 78 etid 78 c cMessage n delay-timer k 25000 pe 0
-ES t 8.009107524994
-ME
-MB sm 1 tm 131 m initialize(1)
-ME
-MB sm 1 tm 132 m initialize(1)
-MB sm 132 tm 125 m ""
-ME
-MB sm 132 tm 135 m ""
-ME
-MB sm 132 tm 128 m ""
-ME
-MB sm 132 tm 129 m ""
-ME
-MB sm 132 tm 130 m ""
-ME
-MB sm 132 tm 131 m ""
-ME
-MB sm 132 tm 137 m ""
-ME
-MB sm 132 tm 138 m ""
-ME
-MB sm 132 tm 139 m ""
-ME
-MB sm 132 tm 140 m ""
-ME
-MB sm 132 tm 134 m ""
-ME
-MB sm 132 tm 164 m ""
-ME
-ME
-MB sm 1 tm 137 m initialize(1)
-MB sm 137 tm 132 m ""
-ME
-CM id 134 tid 134 eid 134 etid 134 c cMessage n Temperature pe -1
-MB sm 137 tm 132 m ""
-ME
-BS id 134 tid 134 eid 134 etid 134 c ExtendedMessage n Temperature pe 0
-CL id 134 tid 134 eid 134 etid 134 c ExtendedMessage n Temperature pe 0 cid 135
-SH sm 137 sg 1
-ES t 0
-ME
-MB sm 1 tm 138 m initialize(1)
-ME
-MB sm 1 tm 139 m initialize(1)
-ME
-MB sm 1 tm 140 m initialize(1)
-ME
-MB sm 1 tm 134 m initialize(1)
-ME
-MB sm 1 tm 164 m initialize(1)
-CM id 136 tid 136 eid 136 etid 136 c cMessage n startSensingUnit pe -1
-BS id 136 tid 136 eid 136 etid 136 c cMessage n startSensingUnit pe 0
-ES t 10000
-CM id 137 tid 137 eid 137 etid 137 c cMessage n shiftMode pe -1
-BS id 137 tid 137 eid 137 etid 137 c cMessage n shiftMode pe 0
-ES t 5000
-CM id 138 tid 138 eid 138 etid 138 c cMessage n collectStatistics pe -1
-BS id 138 tid 138 eid 138 etid 138 c cMessage n collectStatistics pe 0
-ES t 1000
-MS id 11 d "t=mode: normal;p=165,175;i2=status/battery;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
-ME
-MB sm 1 tm 141 m initialize(1)
-ME
-MB sm 1 tm 142 m initialize(1)
-- initializing MobilityBase stage 1
-- initial position. x = 122 y = 257 z = 0
-GC m 12 g 3 n out143-1 o 1
-GC m 143 g 11 n out143-1 o 1
-CC sm 143 sg 11 dm 12 dg 3
-GC m 152 g 11 n out143-1 o 1
-CC sm 152 sg 11 dm 143 dg 11
-GC m 7 g 22 n in63-6 o 0
-GC m 63 g 30 n in63-6 o 0
-CC sm 7 sg 22 dm 63 dg 30
-GC m 72 g 30 n in63-6 o 0
-CC sm 63 sg 30 dm 72 dg 30
-CC sm 12 sg 3 dm 7 dg 22
-GC m 7 g 25 n out63-6 o 1
-GC m 63 g 33 n out63-6 o 1
-CC sm 63 sg 33 dm 7 dg 25
-GC m 72 g 33 n out63-6 o 1
-CC sm 72 sg 33 dm 63 dg 33
-GC m 12 g 4 n in143-1 o 0
-GC m 143 g 12 n in143-1 o 0
-CC sm 12 sg 4 dm 143 dg 12
-GC m 152 g 12 n in143-1 o 0
-CC sm 143 sg 12 dm 152 dg 12
-CC sm 7 sg 25 dm 12 dg 4
-GC m 12 g 7 n out143-2 o 1
-GC m 143 g 15 n out143-2 o 1
-CC sm 143 sg 15 dm 12 dg 7
-GC m 152 g 15 n out143-2 o 1
-CC sm 152 sg 15 dm 143 dg 15
-GC m 8 g 6 n in79-2 o 0
-GC m 79 g 14 n in79-2 o 0
-CC sm 8 sg 6 dm 79 dg 14
-GC m 88 g 14 n in79-2 o 0
-CC sm 79 sg 14 dm 88 dg 14
-CC sm 12 sg 7 dm 8 dg 6
-GC m 8 g 9 n out79-2 o 1
-GC m 79 g 17 n out79-2 o 1
-CC sm 79 sg 17 dm 8 dg 9
-GC m 88 g 17 n out79-2 o 1
-CC sm 88 sg 17 dm 79 dg 17
-GC m 12 g 8 n in143-2 o 0
-GC m 143 g 16 n in143-2 o 0
-CC sm 12 sg 8 dm 143 dg 16
-GC m 152 g 16 n in143-2 o 0
-CC sm 143 sg 16 dm 152 dg 16
-CC sm 8 sg 9 dm 12 dg 8
-GC m 12 g 11 n out143-3 o 1
-GC m 143 g 19 n out143-3 o 1
-CC sm 143 sg 19 dm 12 dg 11
-GC m 152 g 19 n out143-3 o 1
-CC sm 152 sg 19 dm 143 dg 19
-GC m 11 g 18 n in127-5 o 0
-GC m 127 g 26 n in127-5 o 0
-CC sm 11 sg 18 dm 127 dg 26
-GC m 136 g 26 n in127-5 o 0
-CC sm 127 sg 26 dm 136 dg 26
-CC sm 12 sg 11 dm 11 dg 18
-GC m 11 g 21 n out127-5 o 1
-GC m 127 g 29 n out127-5 o 1
-CC sm 127 sg 29 dm 11 dg 21
-GC m 136 g 29 n out127-5 o 1
-CC sm 136 sg 29 dm 127 dg 29
-GC m 12 g 12 n in143-3 o 0
-GC m 143 g 20 n in143-3 o 0
-CC sm 12 sg 12 dm 143 dg 20
-GC m 152 g 20 n in143-3 o 0
-CC sm 143 sg 20 dm 152 dg 20
-CC sm 11 sg 21 dm 12 dg 12
-- visual position. x = 122 y = 257 z = 0
-MS id 12 d "t=mode: normal;p=122,257;i2=status/battery;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
-MS id 12 d "t=mode: normal;p=122,257;i2=status/battery;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
-- initializing MovingMobilityBase stage 1
-- initializing LinearMobility stage 1
-ME
-MB sm 1 tm 151 m initialize(1)
-ME
-MB sm 1 tm 152 m initialize(1)
-MB sm 152 tm 148 m ""
-ME
-ME
-MB sm 1 tm 144 m initialize(1)
-- Host index=0, Id=12
--   host IP address=8
-MB sm 144 tm 141 m ""
-ME
--   host macaddress=00-00-00-00-00-08
-MB sm 144 tm 141 m ""
-ME
-CM id 139 tid 139 eid 139 etid 139 c cMessage n route-flood-timer k 3 pe -1
-- 6
-- 6
-- 6
-- 6
-- 3
-- 6
-- 6
-- 6
-- 7
-ME
-MB sm 1 tm 145 m initialize(1)
-ME
-MB sm 1 tm 146 m initialize(1)
-BS id 88 tid 88 eid 88 etid 88 c cMessage n delay-timer k 25000 pe 0
-ES t 4.614793627988
-ME
-MB sm 1 tm 147 m initialize(1)
-ME
-MB sm 1 tm 148 m initialize(1)
-MB sm 148 tm 141 m ""
-ME
-MB sm 148 tm 151 m ""
-ME
-MB sm 148 tm 144 m ""
-ME
-MB sm 148 tm 145 m ""
-ME
-MB sm 148 tm 146 m ""
-ME
-MB sm 148 tm 147 m ""
-ME
-MB sm 148 tm 153 m ""
-ME
-MB sm 148 tm 154 m ""
-ME
-MB sm 148 tm 155 m ""
-ME
-MB sm 148 tm 156 m ""
-ME
-MB sm 148 tm 150 m ""
-ME
-MB sm 148 tm 165 m ""
-ME
-ME
-MB sm 1 tm 153 m initialize(1)
-MB sm 153 tm 148 m ""
-ME
-CM id 140 tid 140 eid 140 etid 140 c cMessage n Temperature pe -1
-MB sm 153 tm 148 m ""
-ME
-BS id 140 tid 140 eid 140 etid 140 c ExtendedMessage n Temperature pe 0
-CL id 140 tid 140 eid 140 etid 140 c ExtendedMessage n Temperature pe 0 cid 141
-SH sm 153 sg 1
-ES t 0
-ME
-MB sm 1 tm 154 m initialize(1)
-ME
-MB sm 1 tm 155 m initialize(1)
-ME
-MB sm 1 tm 156 m initialize(1)
-ME
-MB sm 1 tm 150 m initialize(1)
-ME
-MB sm 1 tm 165 m initialize(1)
-CM id 142 tid 142 eid 142 etid 142 c cMessage n startSensingUnit pe -1
-BS id 142 tid 142 eid 142 etid 142 c cMessage n startSensingUnit pe 0
-ES t 10000
-CM id 143 tid 143 eid 143 etid 143 c cMessage n shiftMode pe -1
-BS id 143 tid 143 eid 143 etid 143 c cMessage n shiftMode pe 0
-ES t 5000
-CM id 144 tid 144 eid 144 etid 144 c cMessage n collectStatistics pe -1
-BS id 144 tid 144 eid 144 etid 144 c cMessage n collectStatistics pe 0
-ES t 1000
-MS id 12 d "t=mode: normal;p=122,257;i2=status/battery;bgb=447,450,white;i=block/ifcard;b=40,40,rect"
-ME
-MB sm 1 tm 14 m initialize(2)
-- initializing MobilityBase stage 2
-- initializing MovingMobilityBase stage 2
-- initializing LinearMobility stage 2
-ME
-MB sm 1 tm 30 m initialize(2)
-- initializing MobilityBase stage 2
-- initializing MovingMobilityBase stage 2
-- initializing LinearMobility stage 2
-ME
-MB sm 1 tm 46 m initialize(2)
-- initializing MobilityBase stage 2
-- initializing MovingMobilityBase stage 2
-- initializing LinearMobility stage 2
-ME
-MB sm 1 tm 62 m initialize(2)
-- initializing MobilityBase stage 2
-- initializing MovingMobilityBase stage 2
-- initializing LinearMobility stage 2
-ME
-MB sm 1 tm 78 m initialize(2)
-- initializing MobilityBase stage 2
-- initializing MovingMobilityBase stage 2
-- initializing LinearMobility stage 2
-ME
-MB sm 1 tm 94 m initialize(2)
-- initializing MobilityBase stage 2
-- initializing MovingMobilityBase stage 2
-- initializing LinearMobility stage 2
-ME
-MB sm 1 tm 110 m initialize(2)
-- initializing MobilityBase stage 2
-- initializing MovingMobilityBase stage 2
-- initializing LinearMobility stage 2
-ME
-MB sm 1 tm 126 m initialize(2)
-- initializing MobilityBase stage 2
-- initializing MovingMobilityBase stage 2
-- initializing LinearMobility stage 2
-ME
-MB sm 1 tm 142 m initialize(2)
-- initializing MobilityBase stage 2
-- initializing MovingMobilityBase stage 2
-- initializing LinearMobility stage 2
-ME
-DM id 92 tid 92 eid 92 etid 92 c cMessage n Temperature pe 0
-DM id 98 tid 98 eid 98 etid 98 c cMessage n Temperature pe 0
-DM id 104 tid 104 eid 104 etid 104 c cMessage n Temperature pe 0
-DM id 110 tid 110 eid 110 etid 110 c cMessage n Temperature pe 0
-DM id 116 tid 116 eid 116 etid 116 c cMessage n Temperature pe 0
-DM id 122 tid 122 eid 122 etid 122 c cMessage n Temperature pe 0
-DM id 128 tid 128 eid 128 etid 128 c cMessage n Temperature pe 0
-DM id 134 tid 134 eid 134 etid 134 c cMessage n Temperature pe 0
-DM id 140 tid 140 eid 140 etid 140 c cMessage n Temperature pe 0
+CC sm 111

@@ -43,6 +43,7 @@ void CustomWiseRoute::initialize(int stage) {
         const char *vstr = node->par("routeTree").stringValue();
         std::vector<std::string> v = cStringTokenizer(vstr).asVector();
         int max = v.size();
+        numHosts = max;
 
         routeTree = new int[max];
 
@@ -54,7 +55,7 @@ void CustomWiseRoute::initialize(int stage) {
 
         convertTreeToRouteTable();
 
-        numHosts = node->par("numHosts");
+
     }
 }
 
@@ -88,14 +89,9 @@ void CustomWiseRoute::convertTreeToRouteTable() {
 
     }
 
-
-        //leaf node -> no children
-
-
-        //middle node -> father and children
+    if (!isLeaf) {
         proccessChildNodes();
-        proccessRemainingNodes();
-
+    }
 }
 
 void CustomWiseRoute::proccessChildNodes() {
