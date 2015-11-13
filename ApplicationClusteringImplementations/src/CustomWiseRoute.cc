@@ -30,10 +30,28 @@ using std::make_pair;
 
 Define_Module(CustomWiseRoute);
 
+void CustomWiseRoute::initialize(int stage) {
+    BaseLayer::initialize(stage);
+
+    EV << myNetwAddr << endl;
+    EV << myNetwAddr << endl;
+
+}
+
 CustomWiseRoute::CustomWiseRoute() : WiseRoute() {
 }
 
 void CustomWiseRoute::finish() {
+
+    if (myNetwAddr == 1) {
+
+        tRouteTableEntry toFive;
+        toFive.nextHop = 5;
+        routeTable.insert(make_pair(5, toFive));
+
+        LAddress::L3Type next = getRoute(5, true);
+        EV << "next: " << next << endl;
+    }
 
     tFloodTable::iterator pos = floodTable.begin();
     tFloodTable::iterator posEnd = floodTable.end();

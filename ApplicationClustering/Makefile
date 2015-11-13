@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for ApplicationClustering
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -Xincludes1 -I../WakeUpRecv/Packets -I../MiXiM/src/base/phyLayer -I../MiXiM/src -I../MiXiM/src/modules/analogueModel -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility -I../WakeUpRecv -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/base -I../MiXiM/src/base/messages -I../SensorTechnology/src -I../SensorTechnology/src/PhysicalLayer -I../MiXiM/src/modules/messages -I../MiXiM/src/modules/utility -I../MiXiM/src/base/utils -I../MiXiM/src/modules -I../MiXiM/src/modules/phy -I../MiXiM/src/modules/power/battery -I../MiXiM/src/inet_stub/util -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/inet_stub/networklayer/common -L../MiXiM/out/$$\(CONFIGNAME\)/src -L../SensorTechnology/out/$$\(CONFIGNAME\)/src -lmixim -lSensorTechnology -DMIXIM_INET=1 -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology -KWAKEUPRECV_PROJ=../WakeUpRecv
+#  opp_makemake -f --deep -O out -Xincludes1 -I../MiXiM/src/base/modules -I../MiXiM/src -I../MiXiM/src/base/utils -I../MiXiM/src/modules/power/battery -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/modules/phy -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/base -I../SensorTechnology/src -I../MiXiM/src/inet_stub/networklayer/common -I../MiXiM/src/modules/utility -I../MiXiM/src/base/phyLayer -I../MiXiM/src/inet_stub/util -I../MiXiM/src/modules/analogueModel -I../MiXiM/src/modules/messages -I../SensorTechnology/src/PhysicalLayer -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/messages -I../WakeUpRecv -I../WakeUpRecv/Packets -I../MiXiM/src/modules -L../MiXiM/out/$$\(CONFIGNAME\)/src -L../SensorTechnology/out/$$\(CONFIGNAME\)/src -lmixim -lSensorTechnology -DMIXIM_INET=1 -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology -KWAKEUPRECV_PROJ=../WakeUpRecv
 #
 
 # Name of target to be created (-o option)
@@ -15,29 +15,29 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 
 # C++ include paths (with -I)
 INCLUDE_PATH = \
-    -I../WakeUpRecv/Packets \
-    -I../MiXiM/src/base/phyLayer \
-    -I../MiXiM/src \
-    -I../MiXiM/src/modules/analogueModel \
-    -I../MiXiM/src/base \
-    -I../MiXiM/src/inet_stub/mobility \
-    -I../WakeUpRecv \
     -I../MiXiM/src/base/modules \
-    -I../MiXiM/src/inet_stub/base \
-    -I../MiXiM/src/base/messages \
-    -I../SensorTechnology/src \
-    -I../SensorTechnology/src/PhysicalLayer \
-    -I../MiXiM/src/modules/messages \
-    -I../MiXiM/src/modules/utility \
+    -I../MiXiM/src \
     -I../MiXiM/src/base/utils \
-    -I../MiXiM/src/modules \
-    -I../MiXiM/src/modules/phy \
     -I../MiXiM/src/modules/power/battery \
-    -I../MiXiM/src/inet_stub/util \
-    -I../MiXiM/src/inet_stub/linklayer/contract \
-    -I../MiXiM/src/base/connectionManager \
+    -I../MiXiM/src/base \
     -I../MiXiM/src/inet_stub/mobility/models \
+    -I../MiXiM/src/modules/phy \
+    -I../MiXiM/src/inet_stub/mobility \
+    -I../MiXiM/src/base/connectionManager \
+    -I../MiXiM/src/inet_stub/base \
+    -I../SensorTechnology/src \
     -I../MiXiM/src/inet_stub/networklayer/common \
+    -I../MiXiM/src/modules/utility \
+    -I../MiXiM/src/base/phyLayer \
+    -I../MiXiM/src/inet_stub/util \
+    -I../MiXiM/src/modules/analogueModel \
+    -I../MiXiM/src/modules/messages \
+    -I../SensorTechnology/src/PhysicalLayer \
+    -I../MiXiM/src/inet_stub/linklayer/contract \
+    -I../MiXiM/src/base/messages \
+    -I../WakeUpRecv \
+    -I../WakeUpRecv/Packets \
+    -I../MiXiM/src/modules \
     -I. \
     -IPackets \
     -Iimages \

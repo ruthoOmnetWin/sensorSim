@@ -23,7 +23,10 @@ class CustomWiseRoute : public WiseRoute
 {
 public:
     CustomWiseRoute();
+
+    void initialize(int stage)
     void finish();
+
 };
 
 #endif /* CUSTOMWISEROUTE_H_ */

@@ -165,7 +165,7 @@ void SensorNode::handleMessage(cMessage *msg) {
 
 void SensorNode::finish()
 {
-    WiseRoute* wiseRoute = FindModule<WiseRoute*>::findSubModule(this);
+    //WiseRoute* wiseRoute = FindModule<WiseRoute*>::findSubModule(this);
     //define this function
     //stop the module here
     //EV << "Finished Module" << this->getFullName() << endl;
