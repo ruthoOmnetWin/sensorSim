@@ -51,7 +51,7 @@ void CustomWiseRoute::initialize(int stage) {
         for (int i = 0; i < max; i++) {
             //routeTree[i] = std::stoi(v.at(i));
             routeTree[i] = atoi( v[i].c_str() );
-            EV << routeTree[i] << endl;
+            //EV << routeTree[i] << endl;
         }
 
         for (int child = 0; child < max; child++) {
@@ -135,9 +135,6 @@ void CustomWiseRoute::convertTreeToRouteTable() {
 
     //list of childs of the node i are inside routeTreeAdjList[i]
     int fatherAddr = routeTree[myNetwAddr];
-    if (myNetwAddr == 6) {
-        EV << "father" << endl;
-    }
 
     if (routeTreeAdjList[myNetwAddr].value == -1) {
         //no children
@@ -162,6 +159,10 @@ void CustomWiseRoute::convertTreeToRouteTable() {
     } else {
         //process all nodes that aren't children
         for (int i = 0; i < numHosts; i++) {
+            if (i == myNetwAddr) {
+                makeEntry(i, i);
+                continue;
+            }
             if (!containsElement(&routeTreeAdjList[myNetwAddr], i)) {
                 makeEntry(i, routeTree[myNetwAddr]);
             }

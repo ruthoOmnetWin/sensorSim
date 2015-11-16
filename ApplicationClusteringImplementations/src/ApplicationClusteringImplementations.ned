@@ -25,8 +25,8 @@ network ApplicationClusteringImplementations extends BaseNetwork
 
         @display("bgi=background/floorplan;bgb=856,323");
         wuType = default("sensortechnology.src.WorldModel.CustomWorldUtility");
-        
-    submodules:   
+
+    submodules:
         TemperatureSensorNode0: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=59,50");
             hasTemperatureSensor = true;
@@ -51,7 +51,7 @@ network ApplicationClusteringImplementations extends BaseNetwork
         TemperatureSensorNode5: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=165,45");
             hasTemperatureSensor = true;
-    	}
+        }
         TemperatureSensorNode6: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=165,100");
             hasTemperatureSensor = true;
@@ -65,131 +65,122 @@ network ApplicationClusteringImplementations extends BaseNetwork
             hasTemperatureSensor = true;
         }
         TemperatureSensorNode9: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=169,257");
-        hasTemperatureSensor = true;
-    	}
-    	TemperatureSensorNode10: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=219,257");
-        hasTemperatureSensor = true;
+            @display("p=169,257");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode10: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=219,257");
+            hasTemperatureSensor = true;
         }
         TemperatureSensorNode11: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=267,257");
             hasTemperatureSensor = true;
         }
-    connections allowunconnected:
-        
-    // all connections and gates are to be generated dynamically
-}
-
-network no {
-submodules:
-    
-       
-    
-    
-    
-    TemperatureSensorNode12: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=300,117");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode13: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=280,50");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode14: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=319,50");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode15: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=280,50");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode16: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=300,199");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode17: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=358,199");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode18: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=385,45");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode19: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=472,78");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode20: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=472,125");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode21: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=537,50");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode22: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=585,59");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode23: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=635,59");
-        hasTemperatureSensor = true;
-    }
-TemperatureSensorNode24: Sensor_Wakeup_Nic802154_TI_CC2420A {
+        TemperatureSensorNode12: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=300,117");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode13: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=358,117");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode14: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=319,50");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode15: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=280,50");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode16: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=300,199");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode17: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=358,199");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode18: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=385,45");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode19: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=472,78");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode20: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=472,125");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode21: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=537,50");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode22: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=585,59");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode23: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=635,59");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode24: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=683,59");
             hasTemperatureSensor = true;
         }
-    TemperatureSensorNode25: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=546,125");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode26: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=563,199");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode27: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=635,156");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode28: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=701,139");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode29: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=612,251");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode30: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=651,251");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode31: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=701,238");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode32: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=754,238");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode33: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=768,136");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode34: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=768,185");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode35: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=729,59");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode36: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=793,45");
-        hasTemperatureSensor = true;
-    }
-     TemperatureSensorNode37: Sensor_Wakeup_Nic802154_TI_CC2420A {
+        TemperatureSensorNode25: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=546,125");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode26: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=563,199");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode27: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=635,156");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode28: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=701,139");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode29: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=612,251");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode30: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=651,251");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode31: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=701,238");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode32: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=754,238");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode33: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=768,136");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode34: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=768,185");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode35: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=729,59");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode36: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=793,45");
+            hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode37: Sensor_Wakeup_Nic802154_TI_CC2420A {
             @display("p=807,98");
             hasTemperatureSensor = true;
         }
+    connections allowunconnected:
+
+    // all connections and gates are to be generated dynamically
 }
