@@ -32,12 +32,23 @@ public:
     //methods for initialization of the routeTable
 
     void convertTreeToRouteTable();
-    WiseRoute::tRouteTableEntry makeEntry(int nextAddr);
-    void proccessChildNodes();
+    void makeEntry(int targetAddr, int nextAddr);
+    void proccessChildNodes(int routeAddr);
     void proccessRemainingNodes();
 
+    struct AdjListElement {
+        int value = -1;
+        AdjListElement* next = NULL;
+    };
+    AdjListElement* findListEnd(AdjListElement*);
+    void insertList(int index, int value);
+    bool containsElement(AdjListElement* elem, int value);
+
     int* routeTree;
+    AdjListElement* routeTreeAdjList;
     int numHosts;
+    bool isRoot = false;
+    bool isLeaf = false;
 
 };
 

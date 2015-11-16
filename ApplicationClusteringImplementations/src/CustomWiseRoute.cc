@@ -46,6 +46,7 @@ void CustomWiseRoute::initialize(int stage) {
         numHosts = max;
 
         routeTree = new int[max];
+        routeTreeAdjList = new AdjListElement[max];
 
         for (int i = 0; i < max; i++) {
             //routeTree[i] = std::stoi(v.at(i));
@@ -53,49 +54,140 @@ void CustomWiseRoute::initialize(int stage) {
             EV << routeTree[i] << endl;
         }
 
+        for (int child = 0; child < max; child++) {
+            int father = routeTree[child];
+            if (child != father) {
+                insertList(father, child);
+            }
+
+        }
+
         convertTreeToRouteTable();
 
+        //output routing tables
+        EV << "Routing table for " << myNetwAddr << endl;
+        for (int i = 0; i < numHosts; i++) {
+            EV << "target: " << i << ", next: " << getRoute(i) << endl;
+        }
 
     }
 }
 
-WiseRoute::tRouteTableEntry CustomWiseRoute::makeEntry(int nextAddr) {
-    WiseRoute::tRouteTableEntry newEntry;
-    newEntry.nextHop = nextAddr;
-    routeTable.insert(make_pair(nextAddr, newEntry));
+/**
+ * check if a given value (node id) is element of the given list
+ * => check if the given node id is a child of the node's list
+ */
+bool CustomWiseRoute::containsElement(AdjListElement* elem, int value) {
+    if (value == elem->value) {
+        return true;
+    }
+    if (elem->next == NULL) {
+        return false;
+    }
+    return containsElement(elem->next, value);
 }
 
+/**
+ * when creating or updating the adjazenz list use this function to insert new elements
+ *
+ * @var int index is the position in the array routeTreeAdjList to insert
+ * @var int value is the the id of the child node (of the father with id index) to be inserted
+ */
+void CustomWiseRoute::insertList(int index, int value) {
+    AdjListElement* last = findListEnd(&routeTreeAdjList[index]);
+    if (last->value != -1) {
+        AdjListElement* newLast = new AdjListElement;
+        last->next = newLast;
+        last = newLast;
+    }
+    last->value = value;
+}
+
+/**
+ * find the last element of a given list (AdjListElement)
+ */
+CustomWiseRoute::AdjListElement* CustomWiseRoute::findListEnd(AdjListElement* elem) {
+    if (elem->next == NULL) {
+        return elem;
+    }
+    return findListEnd(elem->next);
+}
+
+/**
+ * add entry to the routeTable
+ *
+ * @var int targetAddr is the target node to be routed
+ * @var int nextAddr is the next hop to be done to reach the target
+ */
+void CustomWiseRoute::makeEntry(int targetAddr, int nextAddr) {
+    WiseRoute::tRouteTableEntry newEntry;
+    newEntry.nextHop = nextAddr;
+    routeTable.insert(make_pair(targetAddr, newEntry));
+}
+
+/**
+ * convert the general routing tree into the node specific routing table
+ */
 void CustomWiseRoute::convertTreeToRouteTable() {
     //routeTree;
     //routeTable;
     //myNetwAddr;
 
-    bool isLeaf = true;
-    int childs[numHosts];
-    int c = 0;
-    for (int i = 0; i < numHosts; i++) {
-        childs[i] = -1;
-        if (routeTree[i] == myNetwAddr) {
-            childs[c++] = i;
-            isLeaf = false;
+    //list of childs of the node i are inside routeTreeAdjList[i]
+    int fatherAddr = routeTree[myNetwAddr];
+    if (myNetwAddr == 6) {
+        EV << "father" << endl;
+    }
+
+    if (routeTreeAdjList[myNetwAddr].value == -1) {
+        //no children
+        //this means all other nodes can be accessed through the father
+        isLeaf = true;
+    } else {
+        //proccess the children
+        AdjListElement* currentElement = &routeTreeAdjList[myNetwAddr];
+
+        do {
+            int child = currentElement->value;
+            makeEntry(child, child);
+
+            proccessChildNodes(child);
+            currentElement = currentElement->next;
+        } while (currentElement != NULL);
+    }
+
+    if (myNetwAddr == fatherAddr) {
+        //no father -> root
+        isRoot = true;
+    } else {
+        //process all nodes that aren't children
+        for (int i = 0; i < numHosts; i++) {
+            if (!containsElement(&routeTreeAdjList[myNetwAddr], i)) {
+                makeEntry(i, routeTree[myNetwAddr]);
+            }
         }
-
     }
 
-    if (myNetwAddr != routeTree[myNetwAddr]) {
-
-        //not the root node
-        proccessRemainingNodes();
-
-    }
-
-    if (!isLeaf) {
-        proccessChildNodes();
-    }
 }
 
-void CustomWiseRoute::proccessChildNodes() {
+void CustomWiseRoute::proccessChildNodes(int routeAddr) {
+    AdjListElement* currentElement = &routeTreeAdjList[routeAddr];
+    AdjListElement* lastElement = findListEnd(currentElement);
 
+    do {
+        int child = currentElement->value;
+
+        if (child == -1) {
+            break;
+        }
+
+        makeEntry(child, routeAddr);
+
+        //recursive
+        proccessChildNodes(child);
+
+        currentElement = currentElement->next;
+    } while (currentElement != NULL);
 }
 
 void CustomWiseRoute::proccessRemainingNodes() {
