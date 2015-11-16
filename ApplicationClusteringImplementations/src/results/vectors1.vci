@@ -1,15 +1,15 @@
-file 20269 1447675677                                           
+file 24293 1447676855                                           
 version 2
-run General-0-20151116-13:06:21-17492
+run General-0-20151116-13:25:07-19590
 attr configname General
-attr datetime 20151116-13:06:21
+attr datetime 20151116-13:25:07
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network ApplicationClusteringImplementations
-attr processid 17492
+attr processid 19590
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -66,253 +66,313 @@ vector 116  ApplicationClusteringImplementations.TemperatureSensorNode9.Processo
 vector 117  ApplicationClusteringImplementations.TemperatureSensorNode9.Processor  Voltage  ETV
 vector 118  ApplicationClusteringImplementations.TemperatureSensorNode9.Processor  residualRelative  ETV
 vector 119  ApplicationClusteringImplementations.TemperatureSensorNode9.Processor  residualAbs  ETV
-vector 127  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 128  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 129  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 130  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 131  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 132  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 133  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 134  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 135  ApplicationClusteringImplementations.TemperatureSensorNode0.Memory  "Energy Consumptions"  ETV
-vector 136  ApplicationClusteringImplementations.TemperatureSensorNode0.Memory  "Current use over time"  ETV
-vector 144  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 145  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 146  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 147  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 148  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 149  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 150  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 151  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 152  ApplicationClusteringImplementations.TemperatureSensorNode1.Memory  "Energy Consumptions"  ETV
-vector 153  ApplicationClusteringImplementations.TemperatureSensorNode1.Memory  "Current use over time"  ETV
-vector 161  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 162  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 163  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 164  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 165  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 166  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 167  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 168  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 169  ApplicationClusteringImplementations.TemperatureSensorNode2.Memory  "Energy Consumptions"  ETV
-vector 170  ApplicationClusteringImplementations.TemperatureSensorNode2.Memory  "Current use over time"  ETV
-vector 178  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 179  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 180  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 181  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 182  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 183  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 184  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 185  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 186  ApplicationClusteringImplementations.TemperatureSensorNode3.Memory  "Energy Consumptions"  ETV
-vector 187  ApplicationClusteringImplementations.TemperatureSensorNode3.Memory  "Current use over time"  ETV
-vector 195  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 196  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 197  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 198  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 199  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 200  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 201  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 202  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 203  ApplicationClusteringImplementations.TemperatureSensorNode4.Memory  "Energy Consumptions"  ETV
-vector 204  ApplicationClusteringImplementations.TemperatureSensorNode4.Memory  "Current use over time"  ETV
-vector 212  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 213  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 214  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 215  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 216  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 217  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 218  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 219  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 220  ApplicationClusteringImplementations.TemperatureSensorNode5.Memory  "Energy Consumptions"  ETV
-vector 221  ApplicationClusteringImplementations.TemperatureSensorNode5.Memory  "Current use over time"  ETV
-vector 229  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 230  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 231  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 232  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 233  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 234  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 235  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 236  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 237  ApplicationClusteringImplementations.TemperatureSensorNode6.Memory  "Energy Consumptions"  ETV
-vector 238  ApplicationClusteringImplementations.TemperatureSensorNode6.Memory  "Current use over time"  ETV
-vector 246  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 247  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 248  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 249  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 250  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 251  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 252  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 253  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 254  ApplicationClusteringImplementations.TemperatureSensorNode7.Memory  "Energy Consumptions"  ETV
-vector 255  ApplicationClusteringImplementations.TemperatureSensorNode7.Memory  "Current use over time"  ETV
-vector 263  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 264  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 265  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 266  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 267  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 268  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 269  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 270  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 271  ApplicationClusteringImplementations.TemperatureSensorNode8.Memory  "Energy Consumptions"  ETV
-vector 272  ApplicationClusteringImplementations.TemperatureSensorNode8.Memory  "Current use over time"  ETV
-vector 280  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 281  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 282  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 283  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 284  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 285  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 286  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 287  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 288  ApplicationClusteringImplementations.TemperatureSensorNode9.Memory  "Energy Consumptions"  ETV
-vector 289  ApplicationClusteringImplementations.TemperatureSensorNode9.Memory  "Current use over time"  ETV
-7	18311 16 0 0 0 0 2 0 0 0 0
-8	18327 8 0 0 0 0 1 0 0 0 0
-9	18335 8 0 0 0 0 1 3 3 3 9
-10	18343 9 0 0 0 0 1 1 1 1 1
-11	18352 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
-19	18368 18 0 0 0 0 2 0 0 0 0
-20	18386 9 0 0 0 0 1 0 0 0 0
-21	18395 9 0 0 0 0 1 3 3 3 9
-22	18404 9 0 0 0 0 1 1 1 1 1
-23	18413 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
-31	18429 18 0 0 0 0 2 0 0 0 0
-32	18447 9 0 0 0 0 1 0 0 0 0
-33	18456 9 0 0 0 0 1 3 3 3 9
-34	18465 9 0 0 0 0 1 1 1 1 1
-35	18474 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
-43	18490 18 0 0 0 0 2 0 0 0 0
-44	18508 9 0 0 0 0 1 0 0 0 0
-45	18517 9 0 0 0 0 1 3 3 3 9
-46	18526 9 0 0 0 0 1 1 1 1 1
-47	18535 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
-55	18551 18 0 0 0 0 2 0 0 0 0
-56	18569 9 0 0 0 0 1 0 0 0 0
-57	18578 9 0 0 0 0 1 3 3 3 9
-58	18587 9 0 0 0 0 1 1 1 1 1
-59	18596 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
-67	18612 18 0 0 0 0 2 0 0 0 0
-68	18630 9 0 0 0 0 1 0 0 0 0
-69	18639 9 0 0 0 0 1 3 3 3 9
-70	18648 9 0 0 0 0 1 1 1 1 1
-71	18657 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
-79	18673 18 0 0 0 0 2 0 0 0 0
-80	18691 9 0 0 0 0 1 0 0 0 0
-81	18700 9 0 0 0 0 1 3 3 3 9
-82	18709 9 0 0 0 0 1 1 1 1 1
-83	18718 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
-91	18734 18 0 0 0 0 2 0 0 0 0
-92	18752 9 0 0 0 0 1 0 0 0 0
-93	18761 9 0 0 0 0 1 3 3 3 9
-94	18770 9 0 0 0 0 1 1 1 1 1
-95	18779 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
-103	18795 20 0 0 0 0 2 0 0 0 0
-104	18815 10 0 0 0 0 1 0 0 0 0
-105	18825 10 0 0 0 0 1 3 3 3 9
-106	18835 10 0 0 0 0 1 1 1 1 1
-107	18845 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
-115	18862 20 0 0 0 0 2 0 0 0 0
-116	18882 10 0 0 0 0 1 0 0 0 0
-117	18892 10 0 0 0 0 1 3 3 3 9
-118	18902 10 0 0 0 0 1 1 1 1 1
-119	18912 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
-127	18929 36 0 0 0 0 3 100 100 300 30000
-128	18965 10 0 0 0 0 1 3 3 3 9
-129	18975 12 0 0 0 0 1 100 100 100 10000
-130	18987 10 0 0 0 0 1 3 3 3 9
-131	18997 12 0 0 0 0 1 100 100 100 10000
-132	19009 10 0 0 0 0 1 3 3 3 9
-133	19019 12 0 0 0 0 1 100 100 100 10000
-134	19031 10 0 0 0 0 1 3 3 3 9
-135	19041 12 0 0 0 0 1 100 100 100 10000
-136	19053 10 0 0 0 0 1 3 3 3 9
-144	19063 36 0 0 0 0 3 100 100 300 30000
-145	19099 10 0 0 0 0 1 3 3 3 9
-146	19109 12 0 0 0 0 1 100 100 100 10000
-147	19121 10 0 0 0 0 1 3 3 3 9
-148	19131 12 0 0 0 0 1 100 100 100 10000
-149	19143 10 0 0 0 0 1 3 3 3 9
-150	19153 12 0 0 0 0 1 100 100 100 10000
-151	19165 10 0 0 0 0 1 3 3 3 9
-152	19175 12 0 0 0 0 1 100 100 100 10000
-153	19187 10 0 0 0 0 1 3 3 3 9
-161	19197 36 0 0 0 0 3 100 100 300 30000
-162	19233 10 0 0 0 0 1 3 3 3 9
-163	19243 12 0 0 0 0 1 100 100 100 10000
-164	19255 10 0 0 0 0 1 3 3 3 9
-165	19265 12 0 0 0 0 1 100 100 100 10000
-166	19277 10 0 0 0 0 1 3 3 3 9
-167	19287 12 0 0 0 0 1 100 100 100 10000
-168	19299 10 0 0 0 0 1 3 3 3 9
-169	19309 12 0 0 0 0 1 100 100 100 10000
-170	19321 10 0 0 0 0 1 3 3 3 9
-178	19331 36 0 0 0 0 3 100 100 300 30000
-179	19367 10 0 0 0 0 1 3 3 3 9
-180	19377 12 0 0 0 0 1 100 100 100 10000
-181	19389 10 0 0 0 0 1 3 3 3 9
-182	19399 12 0 0 0 0 1 100 100 100 10000
-183	19411 10 0 0 0 0 1 3 3 3 9
-184	19421 12 0 0 0 0 1 100 100 100 10000
-185	19433 10 0 0 0 0 1 3 3 3 9
-186	19443 12 0 0 0 0 1 100 100 100 10000
-187	19455 10 0 0 0 0 1 3 3 3 9
-195	19465 36 0 0 0 0 3 100 100 300 30000
-196	19501 10 0 0 0 0 1 3 3 3 9
-197	19511 12 0 0 0 0 1 100 100 100 10000
-198	19523 10 0 0 0 0 1 3 3 3 9
-199	19533 12 0 0 0 0 1 100 100 100 10000
-200	19545 10 0 0 0 0 1 3 3 3 9
-201	19555 12 0 0 0 0 1 100 100 100 10000
-202	19567 10 0 0 0 0 1 3 3 3 9
-203	19577 12 0 0 0 0 1 100 100 100 10000
-204	19589 10 0 0 0 0 1 3 3 3 9
-212	19599 36 0 0 0 0 3 100 100 300 30000
-213	19635 10 0 0 0 0 1 3 3 3 9
-214	19645 12 0 0 0 0 1 100 100 100 10000
-215	19657 10 0 0 0 0 1 3 3 3 9
-216	19667 12 0 0 0 0 1 100 100 100 10000
-217	19679 10 0 0 0 0 1 3 3 3 9
-218	19689 12 0 0 0 0 1 100 100 100 10000
-219	19701 10 0 0 0 0 1 3 3 3 9
-220	19711 12 0 0 0 0 1 100 100 100 10000
-221	19723 10 0 0 0 0 1 3 3 3 9
-229	19733 36 0 0 0 0 3 100 100 300 30000
-230	19769 10 0 0 0 0 1 3 3 3 9
-231	19779 12 0 0 0 0 1 100 100 100 10000
-232	19791 10 0 0 0 0 1 3 3 3 9
-233	19801 12 0 0 0 0 1 100 100 100 10000
-234	19813 10 0 0 0 0 1 3 3 3 9
-235	19823 12 0 0 0 0 1 100 100 100 10000
-236	19835 10 0 0 0 0 1 3 3 3 9
-237	19845 12 0 0 0 0 1 100 100 100 10000
-238	19857 10 0 0 0 0 1 3 3 3 9
-246	19867 36 0 0 0 0 3 100 100 300 30000
-247	19903 10 0 0 0 0 1 3 3 3 9
-248	19913 12 0 0 0 0 1 100 100 100 10000
-249	19925 10 0 0 0 0 1 3 3 3 9
-250	19935 12 0 0 0 0 1 100 100 100 10000
-251	19947 10 0 0 0 0 1 3 3 3 9
-252	19957 12 0 0 0 0 1 100 100 100 10000
-253	19969 10 0 0 0 0 1 3 3 3 9
-254	19979 12 0 0 0 0 1 100 100 100 10000
-255	19991 10 0 0 0 0 1 3 3 3 9
-263	20001 36 0 0 0 0 3 100 100 300 30000
-264	20037 10 0 0 0 0 1 3 3 3 9
-265	20047 12 0 0 0 0 1 100 100 100 10000
-266	20059 10 0 0 0 0 1 3 3 3 9
-267	20069 12 0 0 0 0 1 100 100 100 10000
-268	20081 10 0 0 0 0 1 3 3 3 9
-269	20091 12 0 0 0 0 1 100 100 100 10000
-270	20103 10 0 0 0 0 1 3 3 3 9
-271	20113 12 0 0 0 0 1 100 100 100 10000
-272	20125 10 0 0 0 0 1 3 3 3 9
-280	20135 36 0 0 0 0 3 100 100 300 30000
-281	20171 10 0 0 0 0 1 3 3 3 9
-282	20181 12 0 0 0 0 1 100 100 100 10000
-283	20193 10 0 0 0 0 1 3 3 3 9
-284	20203 12 0 0 0 0 1 100 100 100 10000
-285	20215 10 0 0 0 0 1 3 3 3 9
-286	20225 12 0 0 0 0 1 100 100 100 10000
-287	20237 10 0 0 0 0 1 3 3 3 9
-288	20247 12 0 0 0 0 1 100 100 100 10000
-289	20259 10 0 0 0 0 1 3 3 3 9
+vector 127  ApplicationClusteringImplementations.TemperatureSensorNode10.Processor  "power mode"  ETV
+vector 128  ApplicationClusteringImplementations.TemperatureSensorNode10.Processor  "Sensor Modules Status"  ETV
+vector 129  ApplicationClusteringImplementations.TemperatureSensorNode10.Processor  Voltage  ETV
+vector 130  ApplicationClusteringImplementations.TemperatureSensorNode10.Processor  residualRelative  ETV
+vector 131  ApplicationClusteringImplementations.TemperatureSensorNode10.Processor  residualAbs  ETV
+vector 139  ApplicationClusteringImplementations.TemperatureSensorNode11.Processor  "power mode"  ETV
+vector 140  ApplicationClusteringImplementations.TemperatureSensorNode11.Processor  "Sensor Modules Status"  ETV
+vector 141  ApplicationClusteringImplementations.TemperatureSensorNode11.Processor  Voltage  ETV
+vector 142  ApplicationClusteringImplementations.TemperatureSensorNode11.Processor  residualRelative  ETV
+vector 143  ApplicationClusteringImplementations.TemperatureSensorNode11.Processor  residualAbs  ETV
+vector 151  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 152  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 153  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 154  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 155  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 156  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 157  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 158  ApplicationClusteringImplementations.TemperatureSensorNode0.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 159  ApplicationClusteringImplementations.TemperatureSensorNode0.Memory  "Energy Consumptions"  ETV
+vector 160  ApplicationClusteringImplementations.TemperatureSensorNode0.Memory  "Current use over time"  ETV
+vector 168  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 169  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 170  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 171  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 172  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 173  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 174  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 175  ApplicationClusteringImplementations.TemperatureSensorNode1.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 176  ApplicationClusteringImplementations.TemperatureSensorNode1.Memory  "Energy Consumptions"  ETV
+vector 177  ApplicationClusteringImplementations.TemperatureSensorNode1.Memory  "Current use over time"  ETV
+vector 185  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 186  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 187  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 188  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 189  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 190  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 191  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 192  ApplicationClusteringImplementations.TemperatureSensorNode2.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 193  ApplicationClusteringImplementations.TemperatureSensorNode2.Memory  "Energy Consumptions"  ETV
+vector 194  ApplicationClusteringImplementations.TemperatureSensorNode2.Memory  "Current use over time"  ETV
+vector 202  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 203  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 204  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 205  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 206  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 207  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 208  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 209  ApplicationClusteringImplementations.TemperatureSensorNode3.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 210  ApplicationClusteringImplementations.TemperatureSensorNode3.Memory  "Energy Consumptions"  ETV
+vector 211  ApplicationClusteringImplementations.TemperatureSensorNode3.Memory  "Current use over time"  ETV
+vector 219  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 220  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 221  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 222  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 223  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 224  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 225  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 226  ApplicationClusteringImplementations.TemperatureSensorNode4.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 227  ApplicationClusteringImplementations.TemperatureSensorNode4.Memory  "Energy Consumptions"  ETV
+vector 228  ApplicationClusteringImplementations.TemperatureSensorNode4.Memory  "Current use over time"  ETV
+vector 236  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 237  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 238  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 239  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 240  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 241  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 242  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 243  ApplicationClusteringImplementations.TemperatureSensorNode5.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 244  ApplicationClusteringImplementations.TemperatureSensorNode5.Memory  "Energy Consumptions"  ETV
+vector 245  ApplicationClusteringImplementations.TemperatureSensorNode5.Memory  "Current use over time"  ETV
+vector 253  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 254  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 255  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 256  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 257  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 258  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 259  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 260  ApplicationClusteringImplementations.TemperatureSensorNode6.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 261  ApplicationClusteringImplementations.TemperatureSensorNode6.Memory  "Energy Consumptions"  ETV
+vector 262  ApplicationClusteringImplementations.TemperatureSensorNode6.Memory  "Current use over time"  ETV
+vector 270  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 271  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 272  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 273  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 274  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 275  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 276  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 277  ApplicationClusteringImplementations.TemperatureSensorNode7.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 278  ApplicationClusteringImplementations.TemperatureSensorNode7.Memory  "Energy Consumptions"  ETV
+vector 279  ApplicationClusteringImplementations.TemperatureSensorNode7.Memory  "Current use over time"  ETV
+vector 287  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 288  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 289  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 290  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 291  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 292  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 293  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 294  ApplicationClusteringImplementations.TemperatureSensorNode8.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 295  ApplicationClusteringImplementations.TemperatureSensorNode8.Memory  "Energy Consumptions"  ETV
+vector 296  ApplicationClusteringImplementations.TemperatureSensorNode8.Memory  "Current use over time"  ETV
+vector 304  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 305  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 306  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 307  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 308  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 309  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 310  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 311  ApplicationClusteringImplementations.TemperatureSensorNode9.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 312  ApplicationClusteringImplementations.TemperatureSensorNode9.Memory  "Energy Consumptions"  ETV
+vector 313  ApplicationClusteringImplementations.TemperatureSensorNode9.Memory  "Current use over time"  ETV
+vector 321  ApplicationClusteringImplementations.TemperatureSensorNode10.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 322  ApplicationClusteringImplementations.TemperatureSensorNode10.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 323  ApplicationClusteringImplementations.TemperatureSensorNode10.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 324  ApplicationClusteringImplementations.TemperatureSensorNode10.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 325  ApplicationClusteringImplementations.TemperatureSensorNode10.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 326  ApplicationClusteringImplementations.TemperatureSensorNode10.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 327  ApplicationClusteringImplementations.TemperatureSensorNode10.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 328  ApplicationClusteringImplementations.TemperatureSensorNode10.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 329  ApplicationClusteringImplementations.TemperatureSensorNode10.Memory  "Energy Consumptions"  ETV
+vector 330  ApplicationClusteringImplementations.TemperatureSensorNode10.Memory  "Current use over time"  ETV
+vector 338  ApplicationClusteringImplementations.TemperatureSensorNode11.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 339  ApplicationClusteringImplementations.TemperatureSensorNode11.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 340  ApplicationClusteringImplementations.TemperatureSensorNode11.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 341  ApplicationClusteringImplementations.TemperatureSensorNode11.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 342  ApplicationClusteringImplementations.TemperatureSensorNode11.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 343  ApplicationClusteringImplementations.TemperatureSensorNode11.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 344  ApplicationClusteringImplementations.TemperatureSensorNode11.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 345  ApplicationClusteringImplementations.TemperatureSensorNode11.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 346  ApplicationClusteringImplementations.TemperatureSensorNode11.Memory  "Energy Consumptions"  ETV
+vector 347  ApplicationClusteringImplementations.TemperatureSensorNode11.Memory  "Current use over time"  ETV
+7	21933 16 0 0 0 0 2 0 0 0 0
+8	21949 8 0 0 0 0 1 0 0 0 0
+9	21957 8 0 0 0 0 1 3 3 3 9
+10	21965 9 0 0 0 0 1 1 1 1 1
+11	21974 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+19	21990 18 0 0 0 0 2 0 0 0 0
+20	22008 9 0 0 0 0 1 0 0 0 0
+21	22017 9 0 0 0 0 1 3 3 3 9
+22	22026 9 0 0 0 0 1 1 1 1 1
+23	22035 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+31	22051 18 0 0 0 0 2 0 0 0 0
+32	22069 9 0 0 0 0 1 0 0 0 0
+33	22078 9 0 0 0 0 1 3 3 3 9
+34	22087 9 0 0 0 0 1 1 1 1 1
+35	22096 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+43	22112 18 0 0 0 0 2 0 0 0 0
+44	22130 9 0 0 0 0 1 0 0 0 0
+45	22139 9 0 0 0 0 1 3 3 3 9
+46	22148 9 0 0 0 0 1 1 1 1 1
+47	22157 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+55	22173 18 0 0 0 0 2 0 0 0 0
+56	22191 9 0 0 0 0 1 0 0 0 0
+57	22200 9 0 0 0 0 1 3 3 3 9
+58	22209 9 0 0 0 0 1 1 1 1 1
+59	22218 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+67	22234 18 0 0 0 0 2 0 0 0 0
+68	22252 9 0 0 0 0 1 0 0 0 0
+69	22261 9 0 0 0 0 1 3 3 3 9
+70	22270 9 0 0 0 0 1 1 1 1 1
+71	22279 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+79	22295 18 0 0 0 0 2 0 0 0 0
+80	22313 9 0 0 0 0 1 0 0 0 0
+81	22322 9 0 0 0 0 1 3 3 3 9
+82	22331 9 0 0 0 0 1 1 1 1 1
+83	22340 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+91	22356 18 0 0 0 0 2 0 0 0 0
+92	22374 9 0 0 0 0 1 0 0 0 0
+93	22383 9 0 0 0 0 1 3 3 3 9
+94	22392 9 0 0 0 0 1 1 1 1 1
+95	22401 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+103	22417 20 0 0 0 0 2 0 0 0 0
+104	22437 10 0 0 0 0 1 0 0 0 0
+105	22447 10 0 0 0 0 1 3 3 3 9
+106	22457 10 0 0 0 0 1 1 1 1 1
+107	22467 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+115	22484 20 0 0 0 0 2 0 0 0 0
+116	22504 10 0 0 0 0 1 0 0 0 0
+117	22514 10 0 0 0 0 1 3 3 3 9
+118	22524 10 0 0 0 0 1 1 1 1 1
+119	22534 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+127	22551 20 0 0 0 0 2 0 0 0 0
+128	22571 10 0 0 0 0 1 0 0 0 0
+129	22581 10 0 0 0 0 1 3 3 3 9
+130	22591 10 0 0 0 0 1 1 1 1 1
+131	22601 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+139	22618 20 0 0 0 0 2 0 0 0 0
+140	22638 10 0 0 0 0 1 0 0 0 0
+141	22648 10 0 0 0 0 1 3 3 3 9
+142	22658 10 0 0 0 0 1 1 1 1 1
+143	22668 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+151	22685 36 0 0 0 0 3 100 100 300 30000
+152	22721 10 0 0 0 0 1 3 3 3 9
+153	22731 12 0 0 0 0 1 100 100 100 10000
+154	22743 10 0 0 0 0 1 3 3 3 9
+155	22753 12 0 0 0 0 1 100 100 100 10000
+156	22765 10 0 0 0 0 1 3 3 3 9
+157	22775 12 0 0 0 0 1 100 100 100 10000
+158	22787 10 0 0 0 0 1 3 3 3 9
+159	22797 12 0 0 0 0 1 100 100 100 10000
+160	22809 10 0 0 0 0 1 3 3 3 9
+168	22819 36 0 0 0 0 3 100 100 300 30000
+169	22855 10 0 0 0 0 1 3 3 3 9
+170	22865 12 0 0 0 0 1 100 100 100 10000
+171	22877 10 0 0 0 0 1 3 3 3 9
+172	22887 12 0 0 0 0 1 100 100 100 10000
+173	22899 10 0 0 0 0 1 3 3 3 9
+174	22909 12 0 0 0 0 1 100 100 100 10000
+175	22921 10 0 0 0 0 1 3 3 3 9
+176	22931 12 0 0 0 0 1 100 100 100 10000
+177	22943 10 0 0 0 0 1 3 3 3 9
+185	22953 36 0 0 0 0 3 100 100 300 30000
+186	22989 10 0 0 0 0 1 3 3 3 9
+187	22999 12 0 0 0 0 1 100 100 100 10000
+188	23011 10 0 0 0 0 1 3 3 3 9
+189	23021 12 0 0 0 0 1 100 100 100 10000
+190	23033 10 0 0 0 0 1 3 3 3 9
+191	23043 12 0 0 0 0 1 100 100 100 10000
+192	23055 10 0 0 0 0 1 3 3 3 9
+193	23065 12 0 0 0 0 1 100 100 100 10000
+194	23077 10 0 0 0 0 1 3 3 3 9
+202	23087 36 0 0 0 0 3 100 100 300 30000
+203	23123 10 0 0 0 0 1 3 3 3 9
+204	23133 12 0 0 0 0 1 100 100 100 10000
+205	23145 10 0 0 0 0 1 3 3 3 9
+206	23155 12 0 0 0 0 1 100 100 100 10000
+207	23167 10 0 0 0 0 1 3 3 3 9
+208	23177 12 0 0 0 0 1 100 100 100 10000
+209	23189 10 0 0 0 0 1 3 3 3 9
+210	23199 12 0 0 0 0 1 100 100 100 10000
+211	23211 10 0 0 0 0 1 3 3 3 9
+219	23221 36 0 0 0 0 3 100 100 300 30000
+220	23257 10 0 0 0 0 1 3 3 3 9
+221	23267 12 0 0 0 0 1 100 100 100 10000
+222	23279 10 0 0 0 0 1 3 3 3 9
+223	23289 12 0 0 0 0 1 100 100 100 10000
+224	23301 10 0 0 0 0 1 3 3 3 9
+225	23311 12 0 0 0 0 1 100 100 100 10000
+226	23323 10 0 0 0 0 1 3 3 3 9
+227	23333 12 0 0 0 0 1 100 100 100 10000
+228	23345 10 0 0 0 0 1 3 3 3 9
+236	23355 36 0 0 0 0 3 100 100 300 30000
+237	23391 10 0 0 0 0 1 3 3 3 9
+238	23401 12 0 0 0 0 1 100 100 100 10000
+239	23413 10 0 0 0 0 1 3 3 3 9
+240	23423 12 0 0 0 0 1 100 100 100 10000
+241	23435 10 0 0 0 0 1 3 3 3 9
+242	23445 12 0 0 0 0 1 100 100 100 10000
+243	23457 10 0 0 0 0 1 3 3 3 9
+244	23467 12 0 0 0 0 1 100 100 100 10000
+245	23479 10 0 0 0 0 1 3 3 3 9
+253	23489 36 0 0 0 0 3 100 100 300 30000
+254	23525 10 0 0 0 0 1 3 3 3 9
+255	23535 12 0 0 0 0 1 100 100 100 10000
+256	23547 10 0 0 0 0 1 3 3 3 9
+257	23557 12 0 0 0 0 1 100 100 100 10000
+258	23569 10 0 0 0 0 1 3 3 3 9
+259	23579 12 0 0 0 0 1 100 100 100 10000
+260	23591 10 0 0 0 0 1 3 3 3 9
+261	23601 12 0 0 0 0 1 100 100 100 10000
+262	23613 10 0 0 0 0 1 3 3 3 9
+270	23623 36 0 0 0 0 3 100 100 300 30000
+271	23659 10 0 0 0 0 1 3 3 3 9
+272	23669 12 0 0 0 0 1 100 100 100 10000
+273	23681 10 0 0 0 0 1 3 3 3 9
+274	23691 12 0 0 0 0 1 100 100 100 10000
+275	23703 10 0 0 0 0 1 3 3 3 9
+276	23713 12 0 0 0 0 1 100 100 100 10000
+277	23725 10 0 0 0 0 1 3 3 3 9
+278	23735 12 0 0 0 0 1 100 100 100 10000
+279	23747 10 0 0 0 0 1 3 3 3 9
+287	23757 36 0 0 0 0 3 100 100 300 30000
+288	23793 10 0 0 0 0 1 3 3 3 9
+289	23803 12 0 0 0 0 1 100 100 100 10000
+290	23815 10 0 0 0 0 1 3 3 3 9
+291	23825 12 0 0 0 0 1 100 100 100 10000
+292	23837 10 0 0 0 0 1 3 3 3 9
+293	23847 12 0 0 0 0 1 100 100 100 10000
+294	23859 10 0 0 0 0 1 3 3 3 9
+295	23869 12 0 0 0 0 1 100 100 100 10000
+296	23881 10 0 0 0 0 1 3 3 3 9
+304	23891 36 0 0 0 0 3 100 100 300 30000
+305	23927 10 0 0 0 0 1 3 3 3 9
+306	23937 12 0 0 0 0 1 100 100 100 10000
+307	23949 10 0 0 0 0 1 3 3 3 9
+308	23959 12 0 0 0 0 1 100 100 100 10000
+309	23971 10 0 0 0 0 1 3 3 3 9
+310	23981 12 0 0 0 0 1 100 100 100 10000
+311	23993 10 0 0 0 0 1 3 3 3 9
+312	24003 12 0 0 0 0 1 100 100 100 10000
+313	24015 10 0 0 0 0 1 3 3 3 9
+321	24025 36 0 0 0 0 3 100 100 300 30000
+322	24061 10 0 0 0 0 1 3 3 3 9
+323	24071 12 0 0 0 0 1 100 100 100 10000
+324	24083 10 0 0 0 0 1 3 3 3 9
+325	24093 12 0 0 0 0 1 100 100 100 10000
+326	24105 10 0 0 0 0 1 3 3 3 9
+327	24115 12 0 0 0 0 1 100 100 100 10000
+328	24127 10 0 0 0 0 1 3 3 3 9
+329	24137 12 0 0 0 0 1 100 100 100 10000
+330	24149 10 0 0 0 0 1 3 3 3 9
+338	24159 36 0 0 0 0 3 100 100 300 30000
+339	24195 10 0 0 0 0 1 3 3 3 9
+340	24205 12 0 0 0 0 1 100 100 100 10000
+341	24217 10 0 0 0 0 1 3 3 3 9
+342	24227 12 0 0 0 0 1 100 100 100 10000
+343	24239 10 0 0 0 0 1 3 3 3 9
+344	24249 12 0 0 0 0 1 100 100 100 10000
+345	24261 10 0 0 0 0 1 3 3 3 9
+346	24271 12 0 0 0 0 1 100 100 100 10000
+347	24283 10 0 0 0 0 1 3 3 3 9

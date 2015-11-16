@@ -33,8 +33,7 @@ public:
 
     void convertTreeToRouteTable();
     void makeEntry(int targetAddr, int nextAddr);
-    void proccessChildNodes(int routeAddr);
-    void proccessRemainingNodes();
+    void proccessChildNodes(int routeAddr, int father);
 
     struct AdjListElement {
         int value = -1;

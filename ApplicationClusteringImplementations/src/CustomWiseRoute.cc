@@ -151,7 +151,7 @@ void CustomWiseRoute::convertTreeToRouteTable() {
             int child = currentElement->value;
             makeEntry(child, child);
 
-            proccessChildNodes(child);
+            proccessChildNodes(child, child);
             currentElement = currentElement->next;
         } while (currentElement != NULL);
     }
@@ -170,9 +170,12 @@ void CustomWiseRoute::convertTreeToRouteTable() {
 
 }
 
-void CustomWiseRoute::proccessChildNodes(int routeAddr) {
+/**
+ * for a given child (routeAddr) the nodes of the entire subtree must be accessed through
+ * this given child node
+ */
+void CustomWiseRoute::proccessChildNodes(int routeAddr, int father) {
     AdjListElement* currentElement = &routeTreeAdjList[routeAddr];
-    AdjListElement* lastElement = findListEnd(currentElement);
 
     do {
         int child = currentElement->value;
@@ -181,17 +184,13 @@ void CustomWiseRoute::proccessChildNodes(int routeAddr) {
             break;
         }
 
-        makeEntry(child, routeAddr);
+        makeEntry(child, father);
 
         //recursive
-        proccessChildNodes(child);
+        proccessChildNodes(child, father);
 
         currentElement = currentElement->next;
     } while (currentElement != NULL);
-}
-
-void CustomWiseRoute::proccessRemainingNodes() {
-
 }
 
 void CustomWiseRoute::finish() {

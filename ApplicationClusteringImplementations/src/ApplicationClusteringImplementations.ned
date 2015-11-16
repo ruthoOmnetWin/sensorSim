@@ -68,6 +68,14 @@ network ApplicationClusteringImplementations extends BaseNetwork
         @display("p=169,257");
         hasTemperatureSensor = true;
     	}
+    	TemperatureSensorNode10: Sensor_Wakeup_Nic802154_TI_CC2420A {
+        @display("p=219,257");
+        hasTemperatureSensor = true;
+        }
+        TemperatureSensorNode11: Sensor_Wakeup_Nic802154_TI_CC2420A {
+            @display("p=267,257");
+            hasTemperatureSensor = true;
+        }
     connections allowunconnected:
         
     // all connections and gates are to be generated dynamically
@@ -79,14 +87,7 @@ submodules:
        
     
     
-    TemperatureSensorNode10: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=219,257");
-        hasTemperatureSensor = true;
-    }
-    TemperatureSensorNode11: Sensor_Wakeup_Nic802154_TI_CC2420A {
-        @display("p=267,257");
-        hasTemperatureSensor = true;
-    }
+    
     TemperatureSensorNode12: Sensor_Wakeup_Nic802154_TI_CC2420A {
         @display("p=300,117");
         hasTemperatureSensor = true;
