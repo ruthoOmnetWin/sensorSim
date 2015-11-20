@@ -9,7 +9,7 @@
 #include <SimpleBattery.h>
 #include <PhyLayerBattery.h>
 #include <WakeUpPacket_m.h>
-#include <CustomMiximRadio.h>
+#include "WakeupPhyUtils.h"
 
 using std::endl;
 
@@ -95,7 +95,7 @@ void MatrixApplication::handleMessage(cMessage * msg)
         clusterApp->applicationLedSwitch(4,0);
         //disable recv
         clusterApp->nodeIsDown = true;
-        clusterApp->myPhyLayerBattery->setRadioState(CustomMiximRadio::POWERDOWN);
+        clusterApp->myPhyLayerBattery->setRadioState(WakeupMiximRadio::POWERDOWN);
         sprintf(bubblestr," OFF ");
         clusterApp->myBaseHost->getDisplayString().setTagArg("t", 0, bubblestr);
         clusterApp->myBaseHost->getDisplayString().setTagArg("b", 3, "gray");

@@ -51,10 +51,21 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
-OBJS = $O/NetworkLayer2.o $O/MyTestApplication.o $O/Packets/GenericPacket_m.o $O/Packets/ApplicationPacket_m.o $O/Packets/NetworkPacket_m.o
+OBJS = \
+    $O/NetworkLayer2.o \
+    $O/WakeupPhyLayerBattery.o \
+    $O/WakeupBaseDecider.o \
+    $O/WakeupPhyUtils.o \
+    $O/WakeupBaseMacLayer.o \
+    $O/MyTestApplication.o \
+    $O/WakeUpPacket_m.o \
+    $O/Packets/GenericPacket_m.o \
+    $O/Packets/ApplicationPacket_m.o \
+    $O/Packets/NetworkPacket_m.o
 
 # Message files
 MSGFILES = \
+    WakeUpPacket.msg \
     Packets/GenericPacket.msg \
     Packets/ApplicationPacket.msg \
     Packets/NetworkPacket.msg
@@ -205,6 +216,128 @@ $O/NetworkLayer2.o: NetworkLayer2.cc \
 	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
 	$(MIXIM_PROJ)/src/modules/messages/DummyRoutePkt_m.h \
 	NetworkLayer2.h
+$O/WakeUpPacket_m.o: WakeUpPacket_m.cc \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
+	WakeUpPacket_m.h
+$O/WakeupBaseDecider.o: WakeupBaseDecider.cc \
+	$(MIXIM_PROJ)/src/base/messages/ChannelSenseRequest_m.h \
+	$(MIXIM_PROJ)/src/base/messages/MacPkt_m.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Decider.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyToMacControlInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	WakeUpPacket_m.h \
+	WakeupBaseDecider.h
+$O/WakeupBaseMacLayer.o: WakeupBaseMacLayer.cc \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MacPkt_m.h \
+	$(MIXIM_PROJ)/src/base/modules/AddressingInterface.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseLayer.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyControlInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
+	$(MIXIM_PROJ)/src/base/utils/HostState.h \
+	$(MIXIM_PROJ)/src/base/utils/MacToNetwControlInfo.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/NetwToMacControlInfo.h \
+	$(MIXIM_PROJ)/src/base/utils/PassedMessage.h \
+	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/NotifierConsts.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/networklayer/common/IInterfaceTable.h \
+	$(MIXIM_PROJ)/src/inet_stub/networklayer/common/InterfaceEntry.h \
+	$(MIXIM_PROJ)/src/inet_stub/networklayer/common/InterfaceTableAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/networklayer/common/InterfaceToken.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	WakeupBaseMacLayer.h
+$O/WakeupPhyLayerBattery.o: WakeupPhyLayerBattery.cc \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MacPkt_m.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMMacPkt.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyControlInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
+	$(MIXIM_PROJ)/src/base/utils/HostState.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/phy/Decider80211Battery.h \
+	$(MIXIM_PROJ)/src/modules/phy/Decider80211MultiChannel.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
+	WakeupPhyLayerBattery.h \
+	WakeupPhyUtils.h
+$O/WakeupPhyUtils.o: WakeupPhyUtils.cc \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	WakeupPhyUtils.h
 $O/Packets/ApplicationPacket_m.o: Packets/ApplicationPacket_m.cc \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \

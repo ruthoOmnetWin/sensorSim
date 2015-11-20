@@ -13,14 +13,15 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package sensortechnology.src.PhysicalLayer;
+package applicationclusteringimplementations;
 
-import org.mixim.modules.phy.PhyLayerBattery;
+import org.mixim.modules.nic.Nic802154_TI_CC2420;
 
-//override the initialisation of the radio to use the CustomMiXiMRadio with additional states
-//needed for the wake up receiver
-simple CustomPhyLayer extends PhyLayerBattery
+//
+// TODO auto-generated type
+//
+module CustomNic802154 extends Nic802154_TI_CC2420
 {
     parameters:
-        @class(CustomPhyLayer);
+        phyType = default("CustomPhyLayer");
 }

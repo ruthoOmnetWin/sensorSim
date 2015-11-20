@@ -32,7 +32,6 @@ INCLUDE_PATH = \
     -I../../MiXiM/src/modules \
     -I. \
     -IExtendedMessage \
-    -IPhysicalLayer \
     -ISensorNetworkInterface \
     -ISensorNode \
     -ISensorNode/Memory \
@@ -60,7 +59,6 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
 OBJS = \
-    $O/PhysicalLayer/CustomPhyLayer.o \
     $O/SensorNode/BatteryAccess.o \
     $O/SensorNode/SensorNode.o \
     $O/SensorNode/Memory/Memory.o \
@@ -156,7 +154,6 @@ clean:
 	$(Q)-rm -f SensorTechnology SensorTechnology.exe libSensorTechnology.so libSensorTechnology.a libSensorTechnology.dll libSensorTechnology.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
 	$(Q)-rm -f ExtendedMessage/*_m.cc ExtendedMessage/*_m.h
-	$(Q)-rm -f PhysicalLayer/*_m.cc PhysicalLayer/*_m.h
 	$(Q)-rm -f SensorNetworkInterface/*_m.cc SensorNetworkInterface/*_m.h
 	$(Q)-rm -f SensorNode/*_m.cc SensorNode/*_m.h
 	$(Q)-rm -f SensorNode/Memory/*_m.cc SensorNode/Memory/*_m.h
@@ -175,43 +172,11 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ExtendedMessage/*.cc PhysicalLayer/*.cc SensorNetworkInterface/*.cc SensorNode/*.cc SensorNode/Memory/*.cc SensorNode/Processor/*.cc SensorNode/Sensor/*.cc SensorNode/Sensor/SensingUnit/*.cc SensorNode/Sensor/SignalConditioner/*.cc SensorNode/Sensor/SignalConverter/*.cc SensorNode/Sensor/Transducer/*.cc SimpleSensorData/*.cc StatisticsInterface/*.cc WorldModel/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ExtendedMessage/*.cc SensorNetworkInterface/*.cc SensorNode/*.cc SensorNode/Memory/*.cc SensorNode/Processor/*.cc SensorNode/Sensor/*.cc SensorNode/Sensor/SensingUnit/*.cc SensorNode/Sensor/SignalConditioner/*.cc SensorNode/Sensor/SignalConverter/*.cc SensorNode/Sensor/Transducer/*.cc SimpleSensorData/*.cc StatisticsInterface/*.cc WorldModel/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/ExtendedMessage/ExtendedMessage_m.o: ExtendedMessage/ExtendedMessage_m.cc \
 	ExtendedMessage/ExtendedMessage_m.h
-$O/PhysicalLayer/CustomPhyLayer.o: PhysicalLayer/CustomPhyLayer.cc \
-	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
-	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
-	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
-	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
-	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
-	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
-	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
-	$(MIXIM_PROJ)/src/base/utils/HostState.h \
-	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
-	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
-	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
-	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
-	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
-	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
-	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
-	$(MIXIM_PROJ)/src/modules/phy/PhyLayerBattery.h \
-	PhysicalLayer/CustomMiximRadio.h \
-	PhysicalLayer/CustomPhyLayer.h
 $O/SensorNode/BatteryAccess.o: SensorNode/BatteryAccess.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \

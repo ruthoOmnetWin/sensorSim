@@ -27,7 +27,7 @@ class NetwPkt;
  * @author Jerome Rousselot
  **/
 
-class MIXIM_API NetworkLayer2 : public BaseNetwLayer
+class NetworkLayer2 : public BaseNetwLayer
 {
 public:
 	NetworkLayer2()

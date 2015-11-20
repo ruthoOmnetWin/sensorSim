@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for ApplicationClustering
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -Xincludes1 -I../MiXiM/src/base/modules -I../MiXiM/src -I../MiXiM/src/base/utils -I../MiXiM/src/modules/power/battery -I../MiXiM/src/base -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/modules/phy -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/base -I../SensorTechnology/src -I../MiXiM/src/inet_stub/networklayer/common -I../MiXiM/src/modules/utility -I../MiXiM/src/base/phyLayer -I../MiXiM/src/inet_stub/util -I../MiXiM/src/modules/analogueModel -I../MiXiM/src/modules/messages -I../SensorTechnology/src/PhysicalLayer -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/messages -I../WakeUpRecv -I../WakeUpRecv/Packets -I../MiXiM/src/modules -L../MiXiM/out/$$\(CONFIGNAME\)/src -L../SensorTechnology/out/$$\(CONFIGNAME\)/src -lmixim -lSensorTechnology -DMIXIM_INET=1 -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology -KWAKEUPRECV_PROJ=../WakeUpRecv
+#  opp_makemake -f --deep -O out -Xincludes1 -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/networklayer/common -I../MiXiM/src -I../MiXiM/src/modules/utility -I../MiXiM/src/modules/power/battery -I../MiXiM/src/base/utils -I../MiXiM/src/modules/phy -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/base -I../MiXiM/src/base/phyLayer -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/modules/analogueModel -I../MiXiM/src/inet_stub/util -I../MiXiM/src/modules/messages -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/base -I../WakeUpRecv -I../MiXiM/src/base/messages -I../WakeUpRecv/Packets -I../MiXiM/src/modules -L../MiXiM/out/$$\(CONFIGNAME\)/src -L../SensorTechnology/out/$$\(CONFIGNAME\)/src -lmixim -lSensorTechnology -DMIXIM_INET=1 -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology -KWAKEUPRECV_PROJ=../WakeUpRecv
 #
 
 # Name of target to be created (-o option)
@@ -16,26 +16,24 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 # C++ include paths (with -I)
 INCLUDE_PATH = \
     -I../MiXiM/src/base/modules \
+    -I../MiXiM/src/inet_stub/networklayer/common \
     -I../MiXiM/src \
-    -I../MiXiM/src/base/utils \
+    -I../MiXiM/src/modules/utility \
     -I../MiXiM/src/modules/power/battery \
-    -I../MiXiM/src/base \
-    -I../MiXiM/src/inet_stub/mobility/models \
+    -I../MiXiM/src/base/utils \
     -I../MiXiM/src/modules/phy \
+    -I../MiXiM/src/inet_stub/mobility/models \
+    -I../MiXiM/src/base \
+    -I../MiXiM/src/base/phyLayer \
     -I../MiXiM/src/inet_stub/mobility \
+    -I../MiXiM/src/modules/analogueModel \
+    -I../MiXiM/src/inet_stub/util \
+    -I../MiXiM/src/modules/messages \
+    -I../MiXiM/src/inet_stub/linklayer/contract \
     -I../MiXiM/src/base/connectionManager \
     -I../MiXiM/src/inet_stub/base \
-    -I../SensorTechnology/src \
-    -I../MiXiM/src/inet_stub/networklayer/common \
-    -I../MiXiM/src/modules/utility \
-    -I../MiXiM/src/base/phyLayer \
-    -I../MiXiM/src/inet_stub/util \
-    -I../MiXiM/src/modules/analogueModel \
-    -I../MiXiM/src/modules/messages \
-    -I../SensorTechnology/src/PhysicalLayer \
-    -I../MiXiM/src/inet_stub/linklayer/contract \
-    -I../MiXiM/src/base/messages \
     -I../WakeUpRecv \
+    -I../MiXiM/src/base/messages \
     -I../WakeUpRecv/Packets \
     -I../MiXiM/src/modules \
     -I. \
@@ -230,7 +228,8 @@ $O/DiceApplication.o: DiceApplication.cc \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
-	$(WAKEUPRECV_PROJ)/Packets/GenericPacket_m.h
+	$(WAKEUPRECV_PROJ)/Packets/GenericPacket_m.h \
+	$(WAKEUPRECV_PROJ)/WakeUpPacket_m.h
 $O/MatrixApplication.o: MatrixApplication.cc \
 	Packets/GenericPacket_m.h \
 	Packets/WakeUpPacket_m.h \
@@ -282,8 +281,9 @@ $O/MatrixApplication.o: MatrixApplication.cc \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
-	$(SENSORTECHNOLOGY_PROJ)/src/PhysicalLayer/CustomMiximRadio.h \
-	$(WAKEUPRECV_PROJ)/Packets/GenericPacket_m.h
+	$(WAKEUPRECV_PROJ)/Packets/GenericPacket_m.h \
+	$(WAKEUPRECV_PROJ)/WakeUpPacket_m.h \
+	$(WAKEUPRECV_PROJ)/WakeupPhyUtils.h
 $O/NetworkLayer2.o: NetworkLayer2.cc \
 	NetworkLayer2.h \
 	$(MIXIM_PROJ)/src/base/messages/NetwPkt_m.h \
@@ -540,5 +540,6 @@ $O/Packets/WakeUpPacket_m.o: Packets/WakeUpPacket_m.cc \
 	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
-	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
+	$(WAKEUPRECV_PROJ)/WakeUpPacket_m.h
 
