@@ -3,6 +3,7 @@
 	<name>WakeUpRecv</name>
 	<comment></comment>
 	<projects>
+		<project>ApplicationClustering</project>
 		<project>MiXiM</project>
 	</projects>
 	<buildSpec>

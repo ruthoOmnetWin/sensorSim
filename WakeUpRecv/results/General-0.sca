@@ -1,30 +1,30 @@
 version 2
-run General-0-20151123-13:22:49-8499
+run General-0-20151123-13:48:23-13111
 attr configname General
-attr datetime 20151123-13:22:49
+attr datetime 20151123-13:48:23
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network WakeUpRecv
-attr processid 8499
+attr processid 13111
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-scalar WakeUpRecv.node1.nic.mac 	nbTxFrames 	6
+scalar WakeUpRecv.node1.nic.mac 	nbTxFrames 	25
 scalar WakeUpRecv.node1.nic.mac 	nbRxFrames 	0
 scalar WakeUpRecv.node1.nic.mac 	nbDroppedFrames 	0
 scalar WakeUpRecv.node1.nic.mac 	nbMissedAcks 	0
 scalar WakeUpRecv.node1.nic.mac 	nbRecvdAcks 	0
 scalar WakeUpRecv.node1.nic.mac 	nbTxAcks 	0
 scalar WakeUpRecv.node1.nic.mac 	nbDuplicates 	0
-scalar WakeUpRecv.node1.nic.mac 	meanBackoff 	0.00096
-scalar WakeUpRecv.node1.nic.mac 	nbBackoffs 	6
-scalar WakeUpRecv.node1.nic.mac 	backoffDurations 	0.00576
+scalar WakeUpRecv.node1.nic.mac 	meanBackoff 	0.001216
+scalar WakeUpRecv.node1.nic.mac 	nbBackoffs 	25
+scalar WakeUpRecv.node1.nic.mac 	backoffDurations 	0.0304
 scalar WakeUpRecv.node1.nic.phy 	nbFramesWithInterference 	0
 scalar WakeUpRecv.node1.nic.phy 	nbFramesWithoutInterference 	0
 scalar WakeUpRecv.node1.nic.phy 	nbFramesWithInterferencePartial 	0
@@ -33,14 +33,14 @@ scalar WakeUpRecv.node1.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar WakeUpRecv.node1.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar WakeUpRecv.node1.batteryStats 	nominal 	11880000
 attr unit  mW-s
-scalar WakeUpRecv.node1.batteryStats 	total 	558.34492033347
+scalar WakeUpRecv.node1.batteryStats 	total 	1613.9352285378
 attr unit  mW-s
 scalar WakeUpRecv.node1.batteryStats 	lifetime 	-1
 attr unit  s
-scalar WakeUpRecv.node1.batteryStats 	"Mean power consumption" 	62.038324481497
+scalar WakeUpRecv.node1.batteryStats 	"Mean power consumption" 	62.037584821552
 attr unit  mW
 scalar WakeUpRecv.node2.nic.mac 	nbTxFrames 	0
-scalar WakeUpRecv.node2.nic.mac 	nbRxFrames 	2
+scalar WakeUpRecv.node2.nic.mac 	nbRxFrames 	10
 scalar WakeUpRecv.node2.nic.mac 	nbDroppedFrames 	0
 scalar WakeUpRecv.node2.nic.mac 	nbMissedAcks 	0
 scalar WakeUpRecv.node2.nic.mac 	nbRecvdAcks 	0
@@ -50,18 +50,18 @@ scalar WakeUpRecv.node2.nic.mac 	meanBackoff 	0
 scalar WakeUpRecv.node2.nic.mac 	nbBackoffs 	0
 scalar WakeUpRecv.node2.nic.mac 	backoffDurations 	0
 scalar WakeUpRecv.node2.nic.phy 	nbFramesWithInterference 	0
-scalar WakeUpRecv.node2.nic.phy 	nbFramesWithoutInterference 	2
+scalar WakeUpRecv.node2.nic.phy 	nbFramesWithoutInterference 	10
 scalar WakeUpRecv.node2.nic.phy 	nbFramesWithInterferencePartial 	0
 scalar WakeUpRecv.node2.nic.phy 	nbFramesWithoutInterferencePartial 	0
 scalar WakeUpRecv.node2.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar WakeUpRecv.node2.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar WakeUpRecv.node2.batteryStats 	nominal 	11880000
 attr unit  mW-s
-scalar WakeUpRecv.node2.batteryStats 	total 	248.02580231801
+scalar WakeUpRecv.node2.batteryStats 	total 	744.38720968738
 attr unit  mW-s
 scalar WakeUpRecv.node2.batteryStats 	lifetime 	-1
 attr unit  s
-scalar WakeUpRecv.node2.batteryStats 	"Mean power consumption" 	27.558422479779
+scalar WakeUpRecv.node2.batteryStats 	"Mean power consumption" 	28.613282518716
 attr unit  mW
 scalar WakeUpRecv.node3.nic.mac 	nbTxFrames 	0
 scalar WakeUpRecv.node3.nic.mac 	nbRxFrames 	0
@@ -81,9 +81,9 @@ scalar WakeUpRecv.node3.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar WakeUpRecv.node3.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar WakeUpRecv.node3.batteryStats 	nominal 	11880000
 attr unit  mW-s
-scalar WakeUpRecv.node3.batteryStats 	total 	248.18419351056
+scalar WakeUpRecv.node3.batteryStats 	total 	744.34269355424
 attr unit  mW-s
 scalar WakeUpRecv.node3.batteryStats 	lifetime 	-1
 attr unit  s
-scalar WakeUpRecv.node3.batteryStats 	"Mean power consumption" 	27.576021501174
+scalar WakeUpRecv.node3.batteryStats 	"Mean power consumption" 	28.611571376077
 attr unit  mW

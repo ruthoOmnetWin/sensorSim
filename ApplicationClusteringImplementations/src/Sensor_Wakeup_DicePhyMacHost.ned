@@ -78,13 +78,13 @@ module Sensor_Wakeup_DicePhyMacHost
         //memory, processor
         //calculate number of energie accounts from sensor 
         int numDevices = (
-        		 (hasTemperatureSensor ? 1 : 0) 
+        		 (hasTemperatureSensor ? 1 : 1) 
             	+(hasHumiditySensor ? 1 : 0)
             	+(hasPressureSensor ? 1 : 0)
             	+(hasLightSensor ? 1 : 0)
         	) * numSensorModules //calculate number of energie accounts from sensor 
-        	+ 2 + 1; //memory, processor
-    	battery.numDevices = numDevices;
+        	+ 2 //memory, processor
+        	+ 1;//physical layer
         int numHosts;
         //@class("SensorNode");
         @class(SensorNode);
@@ -114,14 +114,14 @@ module Sensor_Wakeup_DicePhyMacHost
 		//--------------- END WAKEUP ---------------
     
     	//--------------- BEGIN WIRELESSNODE ---------------
-    	string networkType = "NetworkLayer2";                //type of the network layer
+    	string networkType = default("NetworkLayer2");       //type of the network layer
         string transportType = default("Aggregation");       //type of the transport layer
         string sessionType = default("");                    //type of the session layer
         string presentationType = default("");               //type of the presentation layer
         string applicationType = default("BurstApplLayer");  //type of the application layer
         string mobilityType = default("StationaryMobility"); //type of the mobility module
-        string arpType = "ArpHost";                          //type of address resolution module
-        string nicType = "Wakeup_Nic802154_TI_CC2420A";
+        string arpType = default("ArpHost");                 //type of address resolution module
+        string nicType = default("Wakeup_Nic802154_TI_CC2420A");
         @node();
 		//--------------- END WIRELESSNODE ---------------
 		
@@ -129,6 +129,16 @@ module Sensor_Wakeup_DicePhyMacHost
         input radioIn; // gate for sendDirect
 		
     submodules:
+        //--------------- BEGIN DICE ---------------
+        batteryStats: BatteryStats {
+            @display("p=140,240;i=block/table,#FF8040");
+        }
+        battery: SimpleBattery {
+            @display("p=140,170;i=block/plug,#FF8000");
+            numDevices = numDevices;
+        }
+        //--------------- END DICE ---------------
+        
         //--------------- BEGIN SENSOR ---------------
         TemperatureSensor: TemperatureSensor if hasTemperatureSensor {
             @display("p=275,51");
@@ -159,15 +169,6 @@ module Sensor_Wakeup_DicePhyMacHost
             @display("p=400,159");
         }
         //--------------- END SENSOR ---------------
-		
-		//--------------- BEGIN DICE ---------------
-        batteryStats: BatteryStats {
-            @display("p=140,240;i=block/table,#FF8040");
-        }
-        battery: SimpleBattery {
-            @display("p=140,170;i=block/plug,#FF8000");
-        }
-        //--------------- END DICE ---------------
         
         //--------------- BEGIN WAKEUP ---------------
 		//--------------- END WAKEUP ---------------

@@ -3,8 +3,10 @@
 	<name>ApplicationClusteringImplementations</name>
 	<comment></comment>
 	<projects>
+		<project>ApplicationClustering</project>
 		<project>MiXiM</project>
 		<project>SensorTechnology</project>
+		<project>WakeUpRecv</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
