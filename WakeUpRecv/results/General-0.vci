@@ -1,0 +1,48 @@
+file 1338 1448294683                                            
+version 2
+run General-0-20151123-17:04:35-28121
+attr configname General
+attr datetime 20151123-17:04:35
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network WakeUpRecv
+attr processid 28121
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 6  WakeUpRecv.node1.batteryStats  capacity  ETV
+attr unit  mW-s
+vector 7  WakeUpRecv.node1.batteryStats  capacity(relative)  ETV
+vector 8  WakeUpRecv.node1.batteryStats  estimate  ETV
+attr unit  mW-s
+vector 9  WakeUpRecv.node1.batteryStats  estimate(relative)  ETV
+vector 17  WakeUpRecv.node2.batteryStats  capacity  ETV
+attr unit  mW-s
+vector 18  WakeUpRecv.node2.batteryStats  capacity(relative)  ETV
+vector 19  WakeUpRecv.node2.batteryStats  estimate  ETV
+attr unit  mW-s
+vector 20  WakeUpRecv.node2.batteryStats  estimate(relative)  ETV
+vector 28  WakeUpRecv.node3.batteryStats  capacity  ETV
+attr unit  mW-s
+vector 29  WakeUpRecv.node3.batteryStats  capacity(relative)  ETV
+vector 30  WakeUpRecv.node3.batteryStats  estimate  ETV
+attr unit  mW-s
+vector 31  WakeUpRecv.node3.batteryStats  estimate(relative)  ETV
+6	1192 15 0 0 0 0 1 11880000 11880000 11880000 1.411344e+14
+7	1207 8 0 0 0 0 1 1 1 1 1
+8	1215 15 0 0 0 0 1 11880000 11880000 11880000 1.411344e+14
+9	1230 8 0 0 0 0 1 1 1 1 1
+17	1238 16 0 0 0 0 1 11880000 11880000 11880000 1.411344e+14
+18	1254 9 0 0 0 0 1 1 1 1 1
+19	1263 16 0 0 0 0 1 11880000 11880000 11880000 1.411344e+14
+20	1279 9 0 0 0 0 1 1 1 1 1
+28	1288 16 0 0 0 0 1 11880000 11880000 11880000 1.411344e+14
+29	1304 9 0 0 0 0 1 1 1 1 1
+30	1313 16 0 0 0 0 1 11880000 11880000 11880000 1.411344e+14
+31	1329 9 0 0 0 0 1 1 1 1 1

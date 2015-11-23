@@ -115,7 +115,7 @@ module Sensor_Wakeup_DicePhyMacHost
     
     	//--------------- BEGIN WIRELESSNODE ---------------
     	string networkType = default("CustomWiseRoute");       //type of the network layer
-        string transportType = default("Aggregation");       //type of the transport layer
+        string transportType = default("");       //type of the transport layer
         string sessionType = default("");                    //type of the session layer
         string presentationType = default("");               //type of the presentation layer
         string applicationType = default("BurstApplLayer");  //type of the application layer
