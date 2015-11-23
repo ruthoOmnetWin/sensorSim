@@ -17,6 +17,12 @@ package applicationclusteringimplementations;
 import org.mixim.modules.netw.WiseRoute;
 
 simple CustomWiseRoute extends WiseRoute 
-{
-    @class("CustomWiseRoute");
+{    
+    parameters:
+        // debug switch
+        trace = default(false);
+        stats = default(true);
+        headerLength = default(0);
+        int networkID = default(0);  // network ID, allows coexistence tests
+    	@class("CustomWiseRoute");
 }

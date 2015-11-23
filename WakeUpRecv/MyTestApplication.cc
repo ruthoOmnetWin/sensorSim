@@ -34,10 +34,10 @@ void MyTestApplication::initialize(int stage)
 
         myNodeId = LAddress::L3Type(par("nodeAddr").longValue());
 
-        mySimpleBattery = new SimpleBattery();
+        //mySimpleBattery = new SimpleBattery();
         mySimpleBattery = FindModule<SimpleBattery*>::findSubModule(findHost());
 
-        myPhyLayerBattery = new PhyLayerBattery();
+        //myPhyLayerBattery = new PhyLayerBattery();
         myPhyLayerBattery = FindModule<PhyLayerBattery*>::findSubModule(findHost());
         //HostState::set
 

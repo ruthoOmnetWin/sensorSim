@@ -84,7 +84,7 @@ module Sensor_Wakeup_DicePhyMacHost
             	+(hasLightSensor ? 1 : 0)
         	) * numSensorModules //calculate number of energie accounts from sensor 
         	+ 2 //memory, processor
-        	+ 1;//physical layer
+        	+ 2;//physical layer, sensornode
         int numHosts;
         //@class("SensorNode");
         @class(SensorNode);
@@ -124,6 +124,9 @@ module Sensor_Wakeup_DicePhyMacHost
         string nicType = default("Wakeup_Nic802154_TI_CC2420A");
         @node();
 		//--------------- END WIRELESSNODE ---------------
+		
+		appl.nodeAddr = arp.offset;
+		appl.nodeAddr = arp.offset;
 		
 	gates:
         input radioIn; // gate for sendDirect

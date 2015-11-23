@@ -18,9 +18,11 @@
 
 #include <WiseRoute.h>
 #include <omnetpp.h>
+#include <DummyRoutePkt_m.h>
 
 class CustomWiseRoute : public WiseRoute
 {
+
 public:
     CustomWiseRoute();
 
@@ -49,6 +51,19 @@ public:
     bool isRoot = false;
     bool isLeaf = false;
 
+protected:
+
+    bool stats, trace;
+
+    int networkID;  // the network to which we belong
+    int ip;  // the network to which we belong
+
+    void handleLowerMsg(cMessage* msg);
+    void handleUpperControl(cMessage *msg);
+    void handleLowerControl(cMessage *msg);
+    void handleUpperMsg(cMessage* msg);
+    netwpkt_ptr_t encapsMsg(cPacket *appPkt);
+    cPacket* decapsMsg(netwpkt_ptr_t msg);
 };
 
 #endif /* CUSTOMWISEROUTE_H_ */
