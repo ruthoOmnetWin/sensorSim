@@ -1,14 +1,14 @@
 version 2
-run General-0-20151123-14:07:26-15436
+run General-0-20151123-15:37:17-5586
 attr configname General
-attr datetime 20151123-14:07:26
+attr datetime 20151123-15:37:17
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network ApplicationClusteringImplementations
-attr processid 15436
+attr processid 5586
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -818,13 +818,10 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 456	0	0	100
 457	0	0	3
 458	0	0	100
-458	2	0	100
 459	0	0	3
 460	0	0	100
-460	40	0	100
 461	0	0	3
 462	0	0	100
-462	78	0	100
 463	0	0	3
 464	0	0	100
 465	0	0	3
@@ -833,13 +830,10 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 473	0	0	100
 474	0	0	3
 475	0	0	100
-475	3	0	100
 476	0	0	3
 477	0	0	100
-477	41	0	100
 478	0	0	3
 479	0	0	100
-479	79	0	100
 480	0	0	3
 481	0	0	100
 482	0	0	3
@@ -848,13 +842,10 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 490	0	0	100
 491	0	0	3
 492	0	0	100
-492	4	0	100
 493	0	0	3
 494	0	0	100
-494	42	0	100
 495	0	0	3
 496	0	0	100
-496	80	0	100
 497	0	0	3
 498	0	0	100
 499	0	0	3
@@ -863,13 +854,10 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 507	0	0	100
 508	0	0	3
 509	0	0	100
-509	5	0	100
 510	0	0	3
 511	0	0	100
-511	43	0	100
 512	0	0	3
 513	0	0	100
-513	81	0	100
 514	0	0	3
 515	0	0	100
 516	0	0	3
@@ -878,13 +866,10 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 524	0	0	100
 525	0	0	3
 526	0	0	100
-526	6	0	100
 527	0	0	3
 528	0	0	100
-528	44	0	100
 529	0	0	3
 530	0	0	100
-530	82	0	100
 531	0	0	3
 532	0	0	100
 533	0	0	3
@@ -893,13 +878,10 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 541	0	0	100
 542	0	0	3
 543	0	0	100
-543	7	0	100
 544	0	0	3
 545	0	0	100
-545	45	0	100
 546	0	0	3
 547	0	0	100
-547	83	0	100
 548	0	0	3
 549	0	0	100
 550	0	0	3
@@ -908,13 +890,10 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 558	0	0	100
 559	0	0	3
 560	0	0	100
-560	8	0	100
 561	0	0	3
 562	0	0	100
-562	46	0	100
 563	0	0	3
 564	0	0	100
-564	84	0	100
 565	0	0	3
 566	0	0	100
 567	0	0	3
@@ -923,13 +902,10 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 575	0	0	100
 576	0	0	3
 577	0	0	100
-577	9	0	100
 578	0	0	3
 579	0	0	100
-579	47	0	100
 580	0	0	3
 581	0	0	100
-581	85	0	100
 582	0	0	3
 583	0	0	100
 584	0	0	3
@@ -938,13 +914,10 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 592	0	0	100
 593	0	0	3
 594	0	0	100
-594	10	0	100
 595	0	0	3
 596	0	0	100
-596	48	0	100
 597	0	0	3
 598	0	0	100
-598	86	0	100
 599	0	0	3
 600	0	0	100
 601	0	0	3
@@ -953,10 +926,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 609	0	0	100
 610	0	0	3
 611	0	0	100
-611	11	0	100
 612	0	0	3
 613	0	0	100
-613	49	0	100
 614	0	0	3
 615	0	0	100
 616	0	0	3
@@ -967,10 +938,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 626	0	0	100
 627	0	0	3
 628	0	0	100
-628	12	0	100
 629	0	0	3
 630	0	0	100
-630	50	0	100
 631	0	0	3
 632	0	0	100
 633	0	0	3
@@ -981,10 +950,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 643	0	0	100
 644	0	0	3
 645	0	0	100
-645	13	0	100
 646	0	0	3
 647	0	0	100
-647	51	0	100
 648	0	0	3
 649	0	0	100
 650	0	0	3
@@ -995,10 +962,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 660	0	0	100
 661	0	0	3
 662	0	0	100
-662	14	0	100
 663	0	0	3
 664	0	0	100
-664	52	0	100
 665	0	0	3
 666	0	0	100
 667	0	0	3
@@ -1009,10 +974,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 677	0	0	100
 678	0	0	3
 679	0	0	100
-679	15	0	100
 680	0	0	3
 681	0	0	100
-681	53	0	100
 682	0	0	3
 683	0	0	100
 684	0	0	3
@@ -1023,10 +986,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 694	0	0	100
 695	0	0	3
 696	0	0	100
-696	16	0	100
 697	0	0	3
 698	0	0	100
-698	54	0	100
 699	0	0	3
 700	0	0	100
 701	0	0	3
@@ -1037,10 +998,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 711	0	0	100
 712	0	0	3
 713	0	0	100
-713	17	0	100
 714	0	0	3
 715	0	0	100
-715	55	0	100
 716	0	0	3
 717	0	0	100
 718	0	0	3
@@ -1051,10 +1010,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 728	0	0	100
 729	0	0	3
 730	0	0	100
-730	18	0	100
 731	0	0	3
 732	0	0	100
-732	56	0	100
 733	0	0	3
 734	0	0	100
 735	0	0	3
@@ -1065,10 +1022,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 745	0	0	100
 746	0	0	3
 747	0	0	100
-747	19	0	100
 748	0	0	3
 749	0	0	100
-749	57	0	100
 750	0	0	3
 751	0	0	100
 752	0	0	3
@@ -1079,10 +1034,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 762	0	0	100
 763	0	0	3
 764	0	0	100
-764	20	0	100
 765	0	0	3
 766	0	0	100
-766	58	0	100
 767	0	0	3
 768	0	0	100
 769	0	0	3
@@ -1093,10 +1046,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 779	0	0	100
 780	0	0	3
 781	0	0	100
-781	21	0	100
 782	0	0	3
 783	0	0	100
-783	59	0	100
 784	0	0	3
 785	0	0	100
 786	0	0	3
@@ -1107,10 +1058,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 796	0	0	100
 797	0	0	3
 798	0	0	100
-798	22	0	100
 799	0	0	3
 800	0	0	100
-800	60	0	100
 801	0	0	3
 802	0	0	100
 803	0	0	3
@@ -1121,10 +1070,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 813	0	0	100
 814	0	0	3
 815	0	0	100
-815	23	0	100
 816	0	0	3
 817	0	0	100
-817	61	0	100
 818	0	0	3
 819	0	0	100
 820	0	0	3
@@ -1135,10 +1082,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 830	0	0	100
 831	0	0	3
 832	0	0	100
-832	24	0	100
 833	0	0	3
 834	0	0	100
-834	62	0	100
 835	0	0	3
 836	0	0	100
 837	0	0	3
@@ -1149,10 +1094,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 847	0	0	100
 848	0	0	3
 849	0	0	100
-849	25	0	100
 850	0	0	3
 851	0	0	100
-851	63	0	100
 852	0	0	3
 853	0	0	100
 854	0	0	3
@@ -1163,10 +1106,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 864	0	0	100
 865	0	0	3
 866	0	0	100
-866	26	0	100
 867	0	0	3
 868	0	0	100
-868	64	0	100
 869	0	0	3
 870	0	0	100
 871	0	0	3
@@ -1177,10 +1118,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 881	0	0	100
 882	0	0	3
 883	0	0	100
-883	27	0	100
 884	0	0	3
 885	0	0	100
-885	65	0	100
 886	0	0	3
 887	0	0	100
 888	0	0	3
@@ -1191,10 +1130,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 898	0	0	100
 899	0	0	3
 900	0	0	100
-900	28	0	100
 901	0	0	3
 902	0	0	100
-902	66	0	100
 903	0	0	3
 904	0	0	100
 905	0	0	3
@@ -1205,10 +1142,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 915	0	0	100
 916	0	0	3
 917	0	0	100
-917	29	0	100
 918	0	0	3
 919	0	0	100
-919	67	0	100
 920	0	0	3
 921	0	0	100
 922	0	0	3
@@ -1219,10 +1154,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 932	0	0	100
 933	0	0	3
 934	0	0	100
-934	30	0	100
 935	0	0	3
 936	0	0	100
-936	68	0	100
 937	0	0	3
 938	0	0	100
 939	0	0	3
@@ -1233,10 +1166,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 949	0	0	100
 950	0	0	3
 951	0	0	100
-951	31	0	100
 952	0	0	3
 953	0	0	100
-953	69	0	100
 954	0	0	3
 955	0	0	100
 956	0	0	3
@@ -1247,10 +1178,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 966	0	0	100
 967	0	0	3
 968	0	0	100
-968	32	0	100
 969	0	0	3
 970	0	0	100
-970	70	0	100
 971	0	0	3
 972	0	0	100
 973	0	0	3
@@ -1261,10 +1190,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 983	0	0	100
 984	0	0	3
 985	0	0	100
-985	33	0	100
 986	0	0	3
 987	0	0	100
-987	71	0	100
 988	0	0	3
 989	0	0	100
 990	0	0	3
@@ -1275,10 +1202,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 1000	0	0	100
 1001	0	0	3
 1002	0	0	100
-1002	34	0	100
 1003	0	0	3
 1004	0	0	100
-1004	72	0	100
 1005	0	0	3
 1006	0	0	100
 1007	0	0	3
@@ -1289,10 +1214,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 1017	0	0	100
 1018	0	0	3
 1019	0	0	100
-1019	35	0	100
 1020	0	0	3
 1021	0	0	100
-1021	73	0	100
 1022	0	0	3
 1023	0	0	100
 1024	0	0	3
@@ -1303,10 +1226,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 1034	0	0	100
 1035	0	0	3
 1036	0	0	100
-1036	36	0	100
 1037	0	0	3
 1038	0	0	100
-1038	74	0	100
 1039	0	0	3
 1040	0	0	100
 1041	0	0	3
@@ -1317,10 +1238,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 1051	0	0	100
 1052	0	0	3
 1053	0	0	100
-1053	37	0	100
 1054	0	0	3
 1055	0	0	100
-1055	75	0	100
 1056	0	0	3
 1057	0	0	100
 1058	0	0	3
@@ -1331,10 +1250,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 1068	0	0	100
 1069	0	0	3
 1070	0	0	100
-1070	38	0	100
 1071	0	0	3
 1072	0	0	100
-1072	76	0	100
 1073	0	0	3
 1074	0	0	100
 1075	0	0	3
@@ -1345,10 +1262,8 @@ vector 1094  ApplicationClusteringImplementations.TemperatureSensorNode37.Memory
 1085	0	0	100
 1086	0	0	3
 1087	0	0	100
-1087	39	0	100
 1088	0	0	3
 1089	0	0	100
-1089	77	0	100
 1090	0	0	3
 1091	0	0	100
 1092	0	0	3
