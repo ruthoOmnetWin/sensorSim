@@ -56,18 +56,8 @@ void WakeupPhyLayerBattery::initialize(int stage) {
 
 Decider* WakeupPhyLayerBattery::getDeciderFromName(const std::string& name,
         ParameterMap& params) {
-    params["decodingCurrentDelta"] =
-            cMsgPar("decodingCurrentDelta").setDoubleValue(
-                    decodingCurrentDelta);
-
-    if (name == "Decider80211Battery") {
-        return createDecider<Decider80211Battery>(params);
-    }
-    if (name == "Decider80211MultiChannel") {
-        return createDecider<Decider80211MultiChannel>(params);
-    }
-
-    return PhyLayer::getDeciderFromName(name, params);
+    //always return WakeupBaseDecider when WakeupPhyLayer is in use
+    return createDecider<Decider80211>(params);
 }
 
 void WakeupPhyLayerBattery::drawCurrent(double amount, int activity) {

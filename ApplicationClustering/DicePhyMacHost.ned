@@ -5,7 +5,6 @@ import org.mixim.modules.application.SensorApplLayer;
 import org.mixim.modules.node.WirelessNodeBatteryNetwl;
 import org.mixim.modules.power.battery.SimpleBattery;
 
-
 module DicePhyMacHost extends WirelessNodeBatteryNetwl
 {
     parameters:

@@ -74,7 +74,7 @@ void RadioStateAnalogueModel::writeRecvEntry(simtime_t_cref time, Argument::mapp
 	}
 }
 
-MiximRadio::MiximRadio(int numRadioStates,
+WakeupMiximRadio::WakeupMiximRadio(int numRadioStates,
 			 bool recordStats,
 			 int initialState,
 			 Argument::mapped_type_cref minAtt, Argument::mapped_type_cref maxAtt,
@@ -117,7 +117,7 @@ MiximRadio::MiximRadio(int numRadioStates,
 	}
 }
 
-MiximRadio::~MiximRadio()
+WakeupMiximRadio::~WakeupMiximRadio()
 {
 	// delete all allocated memory for the switching times matrix
 	for (int i = 0; i < numRadioStates; i++)
@@ -129,7 +129,7 @@ MiximRadio::~MiximRadio()
 	swTimes = 0;
 }
 
-simtime_t MiximRadio::switchTo(int newState, simtime_t_cref now)
+simtime_t WakeupMiximRadio::switchTo(int newState, simtime_t_cref now)
 {
 	// state to switch to must be in a valid range, i.e. 0 <= newState < numRadioStates
 	assert(0 <= newState && newState < numRadioStates);
@@ -140,7 +140,7 @@ simtime_t MiximRadio::switchTo(int newState, simtime_t_cref now)
 	// return error value if newState is the same as the current state
 	// if (newState == state) return -1;
 
-	// return error value if MiximRadio is currently switching
+	// return error value if WakeupMiximRadio is currently switching
 	if (state == SWITCHING) return -1;
 
 
@@ -159,7 +159,7 @@ simtime_t MiximRadio::switchTo(int newState, simtime_t_cref now)
 	return swTimes[lastState][nextState];
 }
 
-void MiximRadio::setSwitchTime(int from, int to, simtime_t_cref time)
+void WakeupMiximRadio::setSwitchTime(int from, int to, simtime_t_cref time)
 {
 	// assert parameters are in valid range
 	assert(time >= 0.0);
@@ -173,7 +173,7 @@ void MiximRadio::setSwitchTime(int from, int to, simtime_t_cref time)
 	return;
 }
 
-void MiximRadio::endSwitch(simtime_t_cref now)
+void WakeupMiximRadio::endSwitch(simtime_t_cref now)
 {
 	// make sure we are currently switching
 	assert(state == SWITCHING);
