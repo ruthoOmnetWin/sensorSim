@@ -28,6 +28,8 @@ import org.mixim.modules.nic.IWirelessNicUpperCtrl;
 import org.mixim.base.phyLayer.IWirelessPhy;
 import org.mixim.base.modules.IWirelessMac;
 
+import wakeuprecv.WakeupPhyLayerBattery;
+
 //
 // This NIC implements a Texas Instruments CC 2420 802.15.4 network interface card
 // using the CSMA protocol as specified in IEEE 802.15.4-2006.
@@ -40,7 +42,7 @@ module Wakeup_Nic802154_TI_CC2420A like IWirelessNicUpperCtrl
 {
     parameters:
         string connectionManagerName = default("");   //name of the ConnectionManager module
-        string phyType = default("org.mixim.modules.phy.PhyLayerBattery");
+        //string phyType = default("org.mixim.modules.phy.PhyLayerBattery");
         string macType = default("CSMA802154");
         
         double sleepCurrent @unit(mA);
@@ -91,9 +93,8 @@ module Wakeup_Nic802154_TI_CC2420A like IWirelessNicUpperCtrl
         mac: <macType> like IWirelessMac {
             @display("p=52,51;i=block/layer");
         }
-        phy: <phyType> like IWirelessPhy {
+        phy: WakeupPhyLayerBattery {
             @display("p=52,125;i=block/process_s");
-            @class(WakeupPhyLayerBattery);
         }
 
     connections:

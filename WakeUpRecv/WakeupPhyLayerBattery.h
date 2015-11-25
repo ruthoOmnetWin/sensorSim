@@ -61,12 +61,14 @@ protected:
 
 	/** @name The different currents in mA.*/
 	/*@{*/
-	double sleepCurrent, rxCurrent, decodingCurrentDelta, txCurrent, wakeupCurrent;
+	double sleepCurrent, rxCurrent, decodingCurrentDelta, txCurrent;
 	/*@}*/
 
 	/** @name The different switching state currents in mA.*/
 	/*@{*/
-	double setupRxCurrent, setupTxCurrent, rxTxCurrent, txRxCurrent,setupWakeupCurrent;
+	double setupRxCurrent, setupTxCurrent, rxTxCurrent, txRxCurrent;
+
+	double wakeupCurrent, setupWakeupCurrent;
 	/*@}*/
 
 	/**
@@ -92,7 +94,7 @@ protected:
 	 * - Decider80211Battery
 	 * - Decider80211MultiChannel
 	 */
-	virtual Decider* getDeciderFromName(const std::string& name, ParameterMap& params);
+	Decider* getDeciderFromName(const std::string& name, ParameterMap& params);
 
 	/**
 	 * @brief Calculates the current needed for the transmission of the

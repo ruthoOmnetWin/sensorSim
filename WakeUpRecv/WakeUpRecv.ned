@@ -22,7 +22,7 @@ network WakeUpRecv extends BaseNetwork
     parameters:
         int numNodes; // total number of hosts in the network
 
-        @display("bgb=938,473");
+        @display("bgb=364,473");
     submodules:
 
         node1: WakeupPhyMacHost {
@@ -33,14 +33,14 @@ network WakeUpRecv extends BaseNetwork
         }
         node2: WakeupPhyMacHost {
             parameters:
-                @display("p=300,100;b=42,42,rect,yellow;i=old/proc1,red,0;is=n;i2=-");
+                @display("p=192,114;b=42,42,rect,yellow;i=old/proc1,red,0;is=n;i2=-");
                 applicationType = "MyTestApplication";
 
         }
 
         node3: WakeupPhyMacHost {
             parameters:
-                @display("p=753,301;b=42,42,rect,yellow;i=old/proc1,red,0;is=n;i2=status/green");
+                @display("p=192,285;b=42,42,rect,yellow;i=old/proc1,red,0;is=n;i2=status/green");
                 applicationType = "MyTestApplication";
         }
 

@@ -19,6 +19,7 @@
 #include "MacToPhyControlInfo.h"
 #include "MiXiMMacPkt.h"
 #include "WakeupPhyUtils.h"
+#include "WakeupBaseDecider.h"
 
 Define_Module(WakeupPhyLayerBattery);
 
@@ -56,8 +57,39 @@ void WakeupPhyLayerBattery::initialize(int stage) {
 
 Decider* WakeupPhyLayerBattery::getDeciderFromName(const std::string& name,
         ParameterMap& params) {
+    WakeupBaseDecider *const pDecider = new WakeupBaseDecider(this, sensitivity, findHost()->getIndex(), coreDebug);
+
+    if (pDecider != NULL && !pDecider->initFromMap(params)) {
+        opp_warning("Decider from config.xml could not be initialized correctly!");
+    }
+
+    return pDecider;
+/*
+    params["decodingCurrentDelta"] =
+                cMsgPar("decodingCurrentDelta").setDoubleValue(
+                        decodingCurrentDelta);
+
+    if (name == "Decider80211Battery") {
+        return createDecider<Decider80211Battery>(params);
+    }
+    if (name == "Decider80211MultiChannel") {
+        return createDecider<Decider80211MultiChannel>(params);
+    }
+    if (name == "WakeupBaseDecider") {
+        return createDecider<WakeupBaseDecider>(params);
+    }
+
+*/
+
     //always return WakeupBaseDecider when WakeupPhyLayer is in use
-    return createDecider<Decider80211>(params);
+    //return createDecider<WakeupBaseDecider>(params);
+    //return createDecider<Decider802154Narrow>(params);
+/*
+    WakeupBaseDecider *const pDecider = new WakeupBaseDecider(this, sensitivity, findHost()->getIndex(), coreDebug);
+    if (pDecider != NULL && !pDecider->initFromMap(params)) {
+        opp_warning("Decider from config.xml could not be initialized correctly!");
+    }
+    return pDecider;*/
 }
 
 void WakeupPhyLayerBattery::drawCurrent(double amount, int activity) {

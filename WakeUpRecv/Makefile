@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for libWakeUpRecv
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep --make-lib -O out -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/networklayer/common -I../MiXiM/src -I../MiXiM/src/modules/utility -I../MiXiM/src/base/utils -I../MiXiM/src/modules/power/battery -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/base -I../MiXiM/src/modules/phy -I../MiXiM/src/base/phyLayer -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/modules/analogueModel -I../MiXiM/src/inet_stub/util -I../ApplicationClustering/Packets -I../MiXiM/src/modules/messages -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/base -I../MiXiM/src/base/messages -I../MiXiM/src/modules -L../ApplicationClustering/out/$$\(CONFIGNAME\) -L../MiXiM/out/$$\(CONFIGNAME\)/src -L../SensorTechnology/out/$$\(CONFIGNAME\)/src -L./out/$$\(CONFIGNAME\) -lApplicationClustering -lmixim -lSensorTechnology -lWakeUpRecv -DMIXIM_INET=1 -KAPPLICATIONCLUSTERING_PROJ=../ApplicationClustering -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology -KWAKEUPRECV_PROJ=.
+#  opp_makemake -f --deep --make-lib -O out -I../MiXiM/src/base/modules -I../MiXiM/src/inet_stub/networklayer/common -I../MiXiM/src -I../MiXiM/src/modules/utility -I../MiXiM/src/base/utils -I../MiXiM/src/modules/power/battery -I../MiXiM/src/inet_stub/mobility/models -I../MiXiM/src/base -I../MiXiM/src/modules/phy -I../MiXiM/src/base/phyLayer -I../MiXiM/src/inet_stub/mobility -I../MiXiM/src/modules/analogueModel -I../ApplicationClustering/Packets -I../MiXiM/src/inet_stub/util -I../MiXiM/src/modules/messages -I../MiXiM/src/inet_stub/linklayer/contract -I../MiXiM/src/base/connectionManager -I../MiXiM/src/inet_stub/base -I../MiXiM/src/base/messages -I../MiXiM/src/modules -L../ApplicationClustering/out/$$\(CONFIGNAME\) -L../MiXiM/out/$$\(CONFIGNAME\)/src -L../SensorTechnology/out/$$\(CONFIGNAME\)/src -L./out/$$\(CONFIGNAME\) -lApplicationClustering -lmixim -lSensorTechnology -lWakeUpRecv -DMIXIM_INET=1 -KAPPLICATIONCLUSTERING_PROJ=../ApplicationClustering -KMIXIM_PROJ=../MiXiM -KSENSORTECHNOLOGY_PROJ=../SensorTechnology -KWAKEUPRECV_PROJ=.
 #
 
 # Name of target to be created (-o option)
@@ -22,8 +22,8 @@ INCLUDE_PATH = \
     -I../MiXiM/src/base/phyLayer \
     -I../MiXiM/src/inet_stub/mobility \
     -I../MiXiM/src/modules/analogueModel \
-    -I../MiXiM/src/inet_stub/util \
     -I../ApplicationClustering/Packets \
+    -I../MiXiM/src/inet_stub/util \
     -I../MiXiM/src/modules/messages \
     -I../MiXiM/src/inet_stub/linklayer/contract \
     -I../MiXiM/src/base/connectionManager \
@@ -176,9 +176,9 @@ $O/MyTestApplication.o: MyTestApplication.cc \
 $O/WakeupBaseDecider.o: WakeupBaseDecider.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \
 	$(MIXIM_PROJ)/src/base/messages/ChannelSenseRequest_m.h \
-	$(MIXIM_PROJ)/src/base/messages/MacPkt_m.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
 	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BaseDecider.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/Decider.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
@@ -194,9 +194,11 @@ $O/WakeupBaseDecider.o: WakeupBaseDecider.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/phy/Decider802154Narrow.h \
 	WakeupBaseDecider.h
 $O/WakeupPhyLayerBattery.o: WakeupPhyLayerBattery.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/ChannelSenseRequest_m.h \
 	$(MIXIM_PROJ)/src/base/messages/MacPkt_m.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMMacPkt.h \
@@ -205,9 +207,11 @@ $O/WakeupPhyLayerBattery.o: WakeupPhyLayerBattery.cc \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BaseDecider.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Decider.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyControlInfo.h \
@@ -230,7 +234,9 @@ $O/WakeupPhyLayerBattery.o: WakeupPhyLayerBattery.cc \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	$(MIXIM_PROJ)/src/modules/phy/Decider80211Battery.h \
 	$(MIXIM_PROJ)/src/modules/phy/Decider80211MultiChannel.h \
+	$(MIXIM_PROJ)/src/modules/phy/Decider802154Narrow.h \
 	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
+	WakeupBaseDecider.h \
 	WakeupPhyLayerBattery.h \
 	WakeupPhyUtils.h
 $O/WakeupPhyUtils.o: WakeupPhyUtils.cc \

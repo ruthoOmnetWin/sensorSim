@@ -121,7 +121,7 @@ module Sensor_Wakeup_DicePhyMacHost
         string applicationType = default("BurstApplLayer");  //type of the application layer
         string mobilityType = default("StationaryMobility"); //type of the mobility module
         string arpType = default("ArpHost");                 //type of address resolution module
-        string nicType = default("Wakeup_Nic802154_TI_CC2420A");
+        //string nicType = default("Wakeup_Nic802154_TI_CC2420A");
         @node();
 		//--------------- END WIRELESSNODE ---------------
 		
@@ -184,7 +184,7 @@ module Sensor_Wakeup_DicePhyMacHost
             parameters:
                 @display("p=140,30;i=block/cogwheel");
         }
-        nic: <nicType> like IWirelessNicUpperCtrl {
+        nic: Wakeup_Nic802154_TI_CC2420A {
             parameters:
                 @display("p=70,380;i=block/wrxtx,#008000");
         }
