@@ -168,11 +168,12 @@ $O/MyTestApplication.o: MyTestApplication.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
-	$(MIXIM_PROJ)/src/modules/phy/PhyLayerBattery.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
-	MyTestApplication.h
+	MyTestApplication.h \
+	WakeupPhyLayerBattery.h \
+	WakeupPhyUtils.h
 $O/WakeupBaseDecider.o: WakeupBaseDecider.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \
 	$(MIXIM_PROJ)/src/base/messages/ChannelSenseRequest_m.h \

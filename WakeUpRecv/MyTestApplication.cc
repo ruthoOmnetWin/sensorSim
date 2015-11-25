@@ -4,7 +4,7 @@
 #include <omnetpp.h>
 #include "GenericPacket_m.h"
 #include "FindModule.h"
-
+#include "WakeupPhyUtils.h"
 
 using std::endl;
 
@@ -38,7 +38,7 @@ void MyTestApplication::initialize(int stage)
         mySimpleBattery = FindModule<SimpleBattery*>::findSubModule(findHost());
 
         //myPhyLayerBattery = new PhyLayerBattery();
-        myPhyLayerBattery = FindModule<PhyLayerBattery*>::findSubModule(findHost());
+        myPhyLayerBattery = FindModule<WakeupPhyLayerBattery*>::findSubModule(findHost());
         //HostState::set
 
         INITIAL_DELAY = rand() % 5 + 1; // initial delay before sending first packet
@@ -83,14 +83,14 @@ void MyTestApplication::sendPacket(void)
         {
             sleepState=1;
             ev<< "Node: " << myNodeId << ": " <<  "Enter SleepMode" << endl;
-            myPhyLayerBattery->setRadioState(MiximRadio::SLEEP);
+            myPhyLayerBattery->setRadioState(WakeupMiximRadio::SLEEP);
             findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
         }
         else
         {
             sleepState=0;
             ev<< "Node: " << myNodeId << ": " << "Leave SleepMode" << endl;
-            myPhyLayerBattery->setRadioState(MiximRadio::RX);
+            myPhyLayerBattery->setRadioState(WakeupMiximRadio::RX);
             findHost()->getDisplayString().setTagArg("i2", 0, "status/green");
         }
 #endif

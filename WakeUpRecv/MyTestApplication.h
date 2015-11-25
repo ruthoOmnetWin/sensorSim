@@ -8,7 +8,7 @@
 #include "BaseModule.h"
 #include "SimpleAddress.h"
 #include <SimpleBattery.h>
-#include <PhyLayerBattery.h>
+#include <WakeupPhyLayerBattery.h>
 
 #define MIXIM_INET
 
@@ -50,7 +50,7 @@ public:
 
         SimpleBattery* mySimpleBattery;
         int mySimpleBatteryId;  //id for additional load of energy (sensor application)
-        PhyLayerBattery* myPhyLayerBattery;
+        WakeupPhyLayerBattery* myPhyLayerBattery;
         int myNodeId;
         unsigned int sleepState = 0;
 
