@@ -48,8 +48,9 @@ public:
     int* routeTree;
     AdjListElement* routeTreeAdjList;
     int numHosts;
-    bool isRoot = false;
-    bool isLeaf = false;
+    bool isRoot;
+    bool isLeaf;
+    bool active;
 
 protected:
 
@@ -64,6 +65,8 @@ protected:
     void handleUpperMsg(cMessage* msg);
     netwpkt_ptr_t encapsMsg(cPacket *appPkt);
     cPacket* decapsMsg(netwpkt_ptr_t msg);
+
+    void handleHostState(const HostState& state);
 };
 
 #endif /* CUSTOMWISEROUTE_H_ */

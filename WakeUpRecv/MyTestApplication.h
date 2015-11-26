@@ -70,11 +70,15 @@ public:
         int INITIAL_DELAY;
         int PAYLOAD_SIZE;
 
+        bool active;
         // state variables
 //        int nbPacketsReceived;
 //        std::vector < cStdDev > latencies;
 //        cOutVector latenciesRaw;
 //        cStdDev testStat;
+    protected:
+
+        void handleHostState(const HostState& state);
 };
 
 #endif // MY_TEST_APPLICATION_H

@@ -5,6 +5,7 @@
 	<projects>
 		<project>ApplicationClustering</project>
 		<project>MiXiM</project>
+		<project>SensorTechnology</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

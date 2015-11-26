@@ -28,7 +28,7 @@ void MyTestApplication::initialize(int stage)
         ctrlOut = findGate("lowerControlOut");
         ctrlIn = findGate("lowerControlIn");
 
-
+        active = true;
 
         //myApp->myBaseHost = findHost();
 
@@ -142,4 +142,13 @@ void MyTestApplication::handleMessage(cMessage * msg)
          delete msg;
     }
 
+}
+
+void MyTestApplication::handleHostState(const HostState& state) {
+    if(notAffectedByHostState)
+        return;
+
+    if(state.get() != HostState::ACTIVE) {
+        active = false;
+    }
 }

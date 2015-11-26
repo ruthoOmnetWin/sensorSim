@@ -43,6 +43,11 @@ CustomWiseRoute::CustomWiseRoute() : WiseRoute()
 void CustomWiseRoute::initialize(int stage) {
     WiseRoute::initialize(stage);
     if (stage == 0) {
+
+        isRoot = false;
+        isLeaf = false;
+        active = true;
+
         trace = par("trace");
         networkID = par("networkID");
     }
@@ -59,6 +64,7 @@ void CustomWiseRoute::initialize(int stage) {
         for (int i = 0; i < max; i++) {
             //routeTree[i] = std::stoi(v.at(i));
             routeTree[i] = atoi( v[i].c_str() );
+            routeTreeAdjList->value = -1;
             //EV << routeTree[i] << endl;
         }
 
@@ -328,4 +334,13 @@ cPacket* CustomWiseRoute::decapsMsg(netwpkt_ptr_t msg) {
         // delete the netw packet
     delete msg;
     return m;
+}
+
+void CustomWiseRoute::handleHostState(const HostState& state) {
+    if(notAffectedByHostState)
+        return;
+
+    if(state.get() != HostState::ACTIVE) {
+        active = false;
+    }
 }

@@ -43,7 +43,7 @@ module Wakeup_Nic802154_TI_CC2420A like IWirelessNicUpperCtrl
     parameters:
         string connectionManagerName = default("");   //name of the ConnectionManager module
         //string phyType = default("org.mixim.modules.phy.PhyLayerBattery");
-        string macType = default("CSMA802154");
+        //string macType = default("CSMA802154HostStateHandled");
         
         double sleepCurrent @unit(mA);
         double rxCurrent @unit(mA);
@@ -90,8 +90,9 @@ module Wakeup_Nic802154_TI_CC2420A like IWirelessNicUpperCtrl
         input radioIn; // radioIn gate for sendDirect
     
     submodules:
-        mac: <macType> like IWirelessMac {
+        mac: CSMA802154HostStateHandled {
             @display("p=52,51;i=block/layer");
+            @class(CSMA802154HostStateHandled);
         }
         phy: WakeupPhyLayerBattery {
             @display("p=52,125;i=block/process_s");

@@ -21,6 +21,7 @@
 #include "WakeupPhyUtils.h"
 #include "WakeupBaseDecider.h"
 
+
 Define_Module(WakeupPhyLayerBattery);
 
 void WakeupPhyLayerBattery::initialize(int stage) {
