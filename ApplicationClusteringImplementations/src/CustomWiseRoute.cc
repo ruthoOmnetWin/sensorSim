@@ -28,6 +28,7 @@
 #include "SensorNode.h"
 #include "exception"
 #include "GenericPacket_m.h"
+#include "vector"
 
 using std::make_pair;
 
@@ -210,6 +211,10 @@ void CustomWiseRoute::proccessChildNodes(int routeAddr, int father) {
     } while (currentElement != NULL);
 }
 
+CustomWiseRoute::AdjListElement* CustomWiseRoute::getChildNodes(int nodeId) {
+    return &routeTreeAdjList[nodeId];
+}
+
 void CustomWiseRoute::finish() {
 /*
     if (myNetwAddr == 1) {
@@ -279,19 +284,63 @@ void CustomWiseRoute::handleLowerControl(cMessage *msg) {
 }
 
 void CustomWiseRoute::handleUpperMsg(cMessage* msg) {
-//  NetwControlInfo* cInfo =
-//          dynamic_cast<NetwControlInfo*> (msg->removeControlInfo());
-//  LAddress::L2Type nextHopMacAddr;
-//  if (cInfo == 0) {
-//      EV<<"DummyRoute warning: Application layer did not specifiy a destination L3 address\n"
-//         << "\tusing broadcast address instead\n";
-//      nextHopMacAddr = LAddress::L2BROADCAST;
-//  } else {
-//      nextHopMacAddr = arp->getMacAddr(cInfo->getNetwAddr());
-//  }
-//  LAddress::setL3ToL2ControlInfo(msg, myNetwAddr, nextHopMacAddr);
     if (active) {
-        sendDown(encapsMsg(check_and_cast<cPacket*>(msg)));
+
+        /**
+         * transform destination address?
+         * handle broadcast
+         */
+
+        //sendDown(encapsMsg(check_and_cast<cPacket*>(msg)));
+
+        LAddress::L3Type finalDestAddr;
+        LAddress::L3Type nextHopAddr;
+        LAddress::L2Type nextHopMacAddr;
+        cObject*         cInfo = msg->removeControlInfo();
+
+        if ( cInfo == NULL ) {
+            EV << "WiseRoute warning: Application layer did not specifiy a destination L3 address\n"
+               << "\tusing broadcast address instead\n";
+            finalDestAddr = LAddress::L3BROADCAST;
+        }
+        else {
+            EV <<"WiseRoute: CInfo removed, netw addr="<< NetwControlInfo::getAddressFromControlInfo( cInfo ) <<endl;
+            finalDestAddr = NetwControlInfo::getAddressFromControlInfo( cInfo );
+            delete cInfo;
+        }
+
+        if (LAddress::isL3Broadcast(finalDestAddr)) {
+            //nextHopAddr = LAddress::L3BROADCAST;
+            //
+
+            AdjListElement* childs = getChildNodes(myNetwAddr);
+            std::vector<int> children;
+            do {
+                if (childs->value != -1) {
+                    children.push_back(childs->value);
+                    nextHopAddr = childs->value;
+                    WiseRoutePkt* pkt = new WiseRoutePkt(msg->getName(), DATA);
+                    pkt->setByteLength(headerLength);
+                    pkt->setFinalDestAddr(childs->value);
+                    pkt->setInitialSrcAddr(myNetwAddr);
+                    pkt->setSrcAddr(myNetwAddr);
+                    pkt->setNbHops(0);
+                    pkt->setIsFlood(0);
+                    nbPureUnicastSent++;
+                    nextHopMacAddr = arp->getMacAddr(nextHopAddr);
+                    setDownControlInfo(pkt, nextHopMacAddr);
+                    assert(static_cast<cPacket*>(msg));
+                    pkt->encapsulate(static_cast<cPacket*>(msg));
+                    sendDown(pkt);
+                    nbDataPacketsSent++;
+                }
+
+            } while (childs->next);
+
+        } else {
+            nextHopAddr = getRoute(finalDestAddr, true);
+        }
+
     } else {
         delete msg;
     }

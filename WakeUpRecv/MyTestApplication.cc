@@ -137,18 +137,21 @@ void MyTestApplication::handleMessage(cMessage * msg)
     else if (msg->getArrivalGateId() == dataIn)
     {
         try {
-            ApplPkt* genPkt = static_cast<ApplPkt*>(msg);
-            if (genPkt->getDestAddr() == LAddress::L2BROADCAST.getInt() || genPkt->getDestAddr() == LAddress::L3BROADCAST) {
-                int messageId = genPkt->getId();
+            ApplPkt* applPkt = static_cast<ApplPkt*>(msg);
+            if (applPkt->getDestAddr() == LAddress::L2BROADCAST.getInt() || applPkt->getDestAddr() == LAddress::L3BROADCAST) {
+                int messageId = applPkt->getId();
                 if (messageId > lastBroadcastId) {
-                    lastBroadcastId = genPkt->getId();
+                    //message to be forwared
+                    lastBroadcastId = messageId;
+                    send(applPkt, dataOut);
                 } else {
-                    EV << "Found smaller ID";
+                    //message the node send it self and which came back (because of broadcast)
+                    delete applPkt;
                 }
 
                 // handle broadcast
             }
-            delete genPkt;
+
         } catch (int e) {
 
         }

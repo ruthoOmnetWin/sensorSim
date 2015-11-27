@@ -41,6 +41,8 @@ public:
         int value = -1;
         AdjListElement* next = NULL;
     };
+
+    AdjListElement* getChildNodes(int nodeId);
     AdjListElement* findListEnd(AdjListElement*);
     void insertList(int index, int value);
     bool containsElement(AdjListElement* elem, int value);
