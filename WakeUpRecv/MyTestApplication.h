@@ -29,6 +29,7 @@ public:
 		, dataIn(-1)
 		, ctrlOut(-1)
 		, ctrlIn(-1)
+        , lastBroadcastId(0)
 	{}
 
 	virtual ~MyTestApplication();
@@ -79,6 +80,7 @@ public:
     protected:
 
         void handleHostState(const HostState& state);
+        int lastBroadcastId;
 };
 
 #endif // MY_TEST_APPLICATION_H

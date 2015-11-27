@@ -45,3 +45,21 @@ Tcl error: moduleinspector.cc#631: ptr0x3e48400 not found
 "ModuleInspector:drawNextEventMarker .network.c ptr0x3e48400 2"
 
 
+----------------------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#499: bad window path name ""
+    while executing
+"winfo toplevel [focus]"
+    invoked from within
+"if [catch {
+       opp_displaystring $dispstr parse tags $submodptr 1
+
+       # scale (x,y)
+       if {$scaling != ""} {
+           set x [expr $scali..."
+    (procedure "ModuleInspector:drawSubmodule" line 20)
+    invoked from within
+"ModuleInspector:drawSubmodule .network.c ptr0x546e660 612 251 {TemperatureSensorNode29} {i2=,status/red;t=mode: normal;p=612,251;bgb=447,450;i=block/i..."
+
+

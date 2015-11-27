@@ -26,6 +26,8 @@
 #include "WiseRoutePkt_m.h"
 #include "SimTracer.h"
 #include "SensorNode.h"
+#include "exception"
+#include "GenericPacket_m.h"
 
 using std::make_pair;
 

@@ -5,6 +5,7 @@
 #include "GenericPacket_m.h"
 #include "FindModule.h"
 #include "WakeupPhyUtils.h"
+#include "ApplPkt_m.h"
 
 using std::endl;
 
@@ -70,9 +71,9 @@ void MyTestApplication::sendPacket(void)
         char bubblestr[32];
         if (myNodeId == 1)
         {
-            GenericPacket* gPacketP = new GenericPacket();
-            gPacketP->setDstId(LAddress::L2BROADCAST.getInt());
-            NetwControlInfo::setControlInfo(gPacketP, LAddress::L2BROADCAST.getInt());
+            ApplPkt* gPacketP = new ApplPkt();
+            gPacketP->setDestAddr(LAddress::L3BROADCAST);
+            NetwControlInfo::setControlInfo(gPacketP, LAddress::L3BROADCAST);
             send(gPacketP, dataOut);
             //findHost()->sendDelayed(gPacketP, delay, myOutGate);
             return;
@@ -116,7 +117,6 @@ void MyTestApplication::handleMessage(cMessage * msg)
     //sprintf(bubblestr," %i %% ",(int) energy);
     //ev<< "Node: " << myNodeId << ": " << "Battery State: " << bubblestr << endl;
     //ev<< "In MatrixApplication::handleMessage" << endl;
-
     if (msg == delayTimer)
     {
         if (active) {
@@ -136,7 +136,22 @@ void MyTestApplication::handleMessage(cMessage * msg)
     }
     else if (msg->getArrivalGateId() == dataIn)
     {
-        delete msg;
+        try {
+            ApplPkt* genPkt = static_cast<ApplPkt*>(msg);
+            if (genPkt->getDestAddr() == LAddress::L2BROADCAST.getInt() || genPkt->getDestAddr() == LAddress::L3BROADCAST) {
+                int messageId = genPkt->getId();
+                if (messageId > lastBroadcastId) {
+                    lastBroadcastId = genPkt->getId();
+                } else {
+                    EV << "Found smaller ID";
+                }
+
+                // handle broadcast
+            }
+            delete genPkt;
+        } catch (int e) {
+
+        }
     }
     else if (msg->getArrivalGateId() == ctrlIn)
     {
