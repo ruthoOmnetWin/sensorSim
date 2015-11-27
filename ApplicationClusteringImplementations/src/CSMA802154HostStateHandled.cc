@@ -17,12 +17,24 @@
 
 Define_Module(CSMA802154HostStateHandled);
 
+
+
+CSMA802154HostStateHandled::~CSMA802154HostStateHandled() {
+
+}
+
+CSMA802154HostStateHandled::CSMA802154HostStateHandled() {
+    active = true;
+}
+
 void CSMA802154HostStateHandled::handleHostState(const HostState& state) {
     if(notAffectedByHostState)
         return;
 
     if(state.get() != HostState::ACTIVE) {
         active = false;
+    } else {
+        active = true;
     }
 }
 
@@ -34,13 +46,16 @@ void CSMA802154HostStateHandled::initialize(int stage) {
 cPacket* CSMA802154HostStateHandled::decapsMsg(macpkt_ptr_t macPkt) {
     if (active) {
         return CSMA802154::decapsMsg(macPkt);
+    } else {
+        //delete macPkt;
+        return NULL;
     }
-    return NULL;
 }
-
 
 void CSMA802154HostStateHandled::handleLowerControl(cMessage *msg) {
     if (active) {
         CSMA802154::handleLowerControl(msg);
+    } else {
+        delete msg;
     }
 }

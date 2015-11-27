@@ -251,11 +251,15 @@ void NetworkLayer2::initialize(int stage) {
 */
 
 void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
-    DummyRoutePkt* pkt = check_and_cast<DummyRoutePkt*>(msg);
-    if(pkt->getNetworkID()==networkID) {
-        sendUp(decapsMsg(pkt));
+    if (active) {
+        DummyRoutePkt* pkt = check_and_cast<DummyRoutePkt*>(msg);
+        if(pkt->getNetworkID()==networkID) {
+            sendUp(decapsMsg(pkt));
+        } else {
+            delete pkt;
+        }
     } else {
-        delete pkt;
+        delete msg;
     }
 }
 
@@ -265,7 +269,11 @@ void CustomWiseRoute::handleUpperControl(cMessage *msg) {
 
 
 void CustomWiseRoute::handleLowerControl(cMessage *msg) {
-    sendControlUp(msg);
+    if (active) {
+        sendControlUp(msg);
+    } else {
+        delete msg;
+    }
 }
 
 void CustomWiseRoute::handleUpperMsg(cMessage* msg) {
@@ -280,60 +288,72 @@ void CustomWiseRoute::handleUpperMsg(cMessage* msg) {
 //      nextHopMacAddr = arp->getMacAddr(cInfo->getNetwAddr());
 //  }
 //  LAddress::setL3ToL2ControlInfo(msg, myNetwAddr, nextHopMacAddr);
-    sendDown(encapsMsg(check_and_cast<cPacket*>(msg)));
+    if (active) {
+        sendDown(encapsMsg(check_and_cast<cPacket*>(msg)));
+    } else {
+        delete msg;
+    }
 }
 
 CustomWiseRoute::netwpkt_ptr_t CustomWiseRoute::encapsMsg(cPacket *appPkt) {
-    LAddress::L2Type macAddr;
-    LAddress::L3Type netwAddr;
+    if (active) {
+        LAddress::L2Type macAddr;
+        LAddress::L3Type netwAddr;
 
 
-    debugEV <<"in encaps...\n";
-    DummyRoutePkt *pkt = new DummyRoutePkt(appPkt->getName(), appPkt->getKind());
-    pkt->setBitLength(headerLength);
+        debugEV <<"in encaps...\n";
+        DummyRoutePkt *pkt = new DummyRoutePkt(appPkt->getName(), appPkt->getKind());
+        pkt->setBitLength(headerLength);
 
-    cObject* cInfo = appPkt->removeControlInfo();
+        cObject* cInfo = appPkt->removeControlInfo();
 
-    if(cInfo == NULL){
-      EV << "warning: Application layer did not specifiy a destination L3 address\n"
-       << "\tusing broadcast address instead\n";
-      netwAddr = LAddress::L3BROADCAST;
+        if(cInfo == NULL){
+          EV << "warning: Application layer did not specifiy a destination L3 address\n"
+           << "\tusing broadcast address instead\n";
+          netwAddr = LAddress::L3BROADCAST;
+        } else {
+          //debugEV <<"CInfo removed, netw addr="<< NetwControlInfo::getAddressFromControlInfo( cInfo ) << endl;
+          netwAddr = NetwControlInfo::getAddressFromControlInfo( cInfo );
+          delete cInfo;
+        }
+
+        pkt->setNetworkID(networkID);
+        pkt->setSrcAddr(myNetwAddr);
+        pkt->setDestAddr(netwAddr);
+        //debugEV << " netw "<< myNetwAddr << " sending packet" <<endl;
+        if(LAddress::isL3Broadcast(netwAddr)) {
+    //        debugEV << "sendDown: nHop=L3BROADCAST -> message has to be broadcasted"
+    //           << " -> set destMac=L2BROADCAST\n";
+            macAddr = LAddress::L2BROADCAST;
+        }
+        else{
+            macAddr = arp->getMacAddr(netwAddr);
+
+
+
+        }
+
+        setDownControlInfo(pkt, macAddr);
+
+        //encapsulate the application packet
+        pkt->encapsulate(appPkt);
+        debugEV <<" pkt encapsulated\n";
+        return pkt;
     } else {
-      //debugEV <<"CInfo removed, netw addr="<< NetwControlInfo::getAddressFromControlInfo( cInfo ) << endl;
-      netwAddr = NetwControlInfo::getAddressFromControlInfo( cInfo );
-      delete cInfo;
+        delete appPkt;
     }
-
-    pkt->setNetworkID(networkID);
-    pkt->setSrcAddr(myNetwAddr);
-    pkt->setDestAddr(netwAddr);
-    //debugEV << " netw "<< myNetwAddr << " sending packet" <<endl;
-    if(LAddress::isL3Broadcast(netwAddr)) {
-//        debugEV << "sendDown: nHop=L3BROADCAST -> message has to be broadcasted"
-//           << " -> set destMac=L2BROADCAST\n";
-        macAddr = LAddress::L2BROADCAST;
-    }
-    else{
-        macAddr = arp->getMacAddr(netwAddr);
-
-
-
-    }
-
-    setDownControlInfo(pkt, macAddr);
-
-    //encapsulate the application packet
-    pkt->encapsulate(appPkt);
-    debugEV <<" pkt encapsulated\n";
-    return pkt;
 }
 
 cPacket* CustomWiseRoute::decapsMsg(netwpkt_ptr_t msg) {
-    cPacket *m = msg->decapsulate();
-    setUpControlInfo(m, msg->getSrcAddr());
-        // delete the netw packet
-    delete msg;
-    return m;
+    if (active) {
+        cPacket *m = msg->decapsulate();
+        setUpControlInfo(m, msg->getSrcAddr());
+            // delete the netw packet
+        delete msg;
+        return m;
+    } else {
+        delete msg;
+    }
 }
 
 void CustomWiseRoute::handleHostState(const HostState& state) {
@@ -342,5 +362,7 @@ void CustomWiseRoute::handleHostState(const HostState& state) {
 
     if(state.get() != HostState::ACTIVE) {
         active = false;
+    } else {
+        active = true;
     }
 }

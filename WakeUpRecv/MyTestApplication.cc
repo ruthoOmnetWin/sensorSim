@@ -66,41 +66,43 @@ void MyTestApplication::finish()
 
 void MyTestApplication::sendPacket(void)
 {
-    char bubblestr[32];
-    if (myNodeId == 1)
-    {
-        GenericPacket* gPacketP = new GenericPacket();
-        gPacketP->setDstId(LAddress::L2BROADCAST.getInt());
-        NetwControlInfo::setControlInfo(gPacketP, LAddress::L2BROADCAST.getInt());
-        send(gPacketP, dataOut);
-        //findHost()->sendDelayed(gPacketP, delay, myOutGate);
-        return;
-    }
-    else
-    {
-#if 1
-        if (sleepState == 0)
+    if (active) {
+        char bubblestr[32];
+        if (myNodeId == 1)
         {
-            sleepState=1;
-            ev<< "Node: " << myNodeId << ": " <<  "Enter SleepMode" << endl;
-            myPhyLayerBattery->setRadioState(WakeupMiximRadio::SLEEP);
-            findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
+            GenericPacket* gPacketP = new GenericPacket();
+            gPacketP->setDstId(LAddress::L2BROADCAST.getInt());
+            NetwControlInfo::setControlInfo(gPacketP, LAddress::L2BROADCAST.getInt());
+            send(gPacketP, dataOut);
+            //findHost()->sendDelayed(gPacketP, delay, myOutGate);
+            return;
         }
         else
         {
-            sleepState=0;
-            ev<< "Node: " << myNodeId << ": " << "Leave SleepMode" << endl;
-            myPhyLayerBattery->setRadioState(WakeupMiximRadio::RX);
-            findHost()->getDisplayString().setTagArg("i2", 0, "status/green");
+    #if 1
+            if (sleepState == 0)
+            {
+                sleepState=1;
+                ev<< "Node: " << myNodeId << ": " <<  "Enter SleepMode" << endl;
+                myPhyLayerBattery->setRadioState(WakeupMiximRadio::SLEEP);
+                findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
+            }
+            else
+            {
+                sleepState=0;
+                ev<< "Node: " << myNodeId << ": " << "Leave SleepMode" << endl;
+                myPhyLayerBattery->setRadioState(WakeupMiximRadio::RX);
+                findHost()->getDisplayString().setTagArg("i2", 0, "status/green");
+            }
+    #endif
         }
-#endif
-    }
     //ev<< "TestApp...Send Packet" << endl;
     //GenericPacket* gPacketP = new GenericPacket();
     //gPacketP->setDstId(LAddress::L2BROADCAST);
     //NetwControlInfo::setControlInfo(gPacketP, LAddress::L2BROADCAST);
     //send(gPacketP, dataOut);
     //findHost()->sendDelayed(gPacketP, delay, myOutGate);
+    }
 
 }
 
@@ -115,18 +117,21 @@ void MyTestApplication::handleMessage(cMessage * msg)
     //ev<< "Node: " << myNodeId << ": " << "Battery State: " << bubblestr << endl;
     //ev<< "In MatrixApplication::handleMessage" << endl;
 
-
-
     if (msg == delayTimer)
     {
-        int i = 5;
-        if (myNodeId==1) i=1;
-        //diceEvent();
-        sendPacket();
-        debugEV << "  processing application timer." << endl;
-        if (!delayTimer->isScheduled())
-        {
-            scheduleAt(simTime() + i + uniform(0, 0.001), delayTimer);
+        if (active) {
+            int i = 5;
+            if (myNodeId==1) i=1;
+            //diceEvent();
+            sendPacket();
+            debugEV << "  processing application timer." << endl;
+            if (!delayTimer->isScheduled())
+            {
+                scheduleAt(simTime() + i + uniform(0, 0.001), delayTimer);
+            }
+        } else {
+            cancelAndDelete(delayTimer);
+            delayTimer = NULL;
         }
     }
     else if (msg->getArrivalGateId() == dataIn)
@@ -150,5 +155,7 @@ void MyTestApplication::handleHostState(const HostState& state) {
 
     if(state.get() != HostState::ACTIVE) {
         active = false;
+    } else {
+        active = true;
     }
 }

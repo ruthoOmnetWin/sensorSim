@@ -20,14 +20,17 @@
 
 class CSMA802154HostStateHandled : public CSMA802154
 {
+public:
+    ~CSMA802154HostStateHandled();
+    CSMA802154HostStateHandled();
     bool active;
 protected:
-    virtual void initialize(int stage);
+    void initialize(int stage);
     void handleHostState(const HostState& state);
 
     //do not allow communication if host state not active
-    virtual cPacket *decapsMsg(macpkt_ptr_t macPkt);
-    virtual void handleLowerControl(cMessage *msg);
+    cPacket *decapsMsg(macpkt_ptr_t macPkt);
+    void handleLowerControl(cMessage *msg);
 };
 
 #endif /* CSMA802154HOSTSTATEHANDLED_H_ */
