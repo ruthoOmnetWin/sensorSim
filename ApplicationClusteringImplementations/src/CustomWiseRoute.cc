@@ -29,6 +29,7 @@
 #include "exception"
 #include "GenericPacket_m.h"
 #include "vector"
+#include "exception"
 
 using std::make_pair;
 
@@ -259,12 +260,10 @@ void NetworkLayer2::initialize(int stage) {
 
 void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
     if (active) {
-        DummyRoutePkt* pkt = check_and_cast<DummyRoutePkt*>(msg);
-        if(pkt->getNetworkID()==networkID) {
-            sendUp(decapsMsg(pkt));
-        } else {
-            delete pkt;
-        }
+
+        //TODO check if broadcast information
+        WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+        sendUp(decapsMsg(pkt));
     } else {
         delete msg;
     }
@@ -333,6 +332,8 @@ void CustomWiseRoute::handleUpperMsg(cMessage* msg) {
                     pkt->encapsulate(static_cast<cPacket*>(msg));
                     sendDown(pkt);
                     nbDataPacketsSent++;
+                    //TODO add broadcast information to packet
+
                 }
 
             } while (childs->next);

@@ -136,6 +136,7 @@ void MyTestApplication::handleMessage(cMessage * msg)
     }
     else if (msg->getArrivalGateId() == dataIn)
     {
+        //TODO when receiving broadcoast (but self handeled) exclude the src address from the list of new receivers
         try {
             ApplPkt* applPkt = static_cast<ApplPkt*>(msg);
             if (applPkt->getDestAddr() == LAddress::L2BROADCAST.getInt() || applPkt->getDestAddr() == LAddress::L3BROADCAST) {
