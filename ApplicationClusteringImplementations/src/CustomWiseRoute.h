@@ -19,6 +19,8 @@
 #include <WiseRoute.h>
 #include <omnetpp.h>
 #include <DummyRoutePkt_m.h>
+#include "vector"
+#include "ApplPkt_m.h"
 
 class CustomWiseRoute : public WiseRoute
 {
@@ -53,8 +55,14 @@ public:
     bool isRoot;
     bool isLeaf;
     bool active;
+    const char* bcName;
 
 protected:
+
+    void sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestAddr, LAddress::L3Type &nextHopAddr, LAddress::L3Type &initialSrcAddr, LAddress::L3Type &srcAddr);
+    void forward(ApplPkt* msg, LAddress::L3Type);
+    void forward(cMessage* msg, LAddress::L3Type);
+    std::vector<int> lastBroadcastId;
 
     bool stats, trace;
 

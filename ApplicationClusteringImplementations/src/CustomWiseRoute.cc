@@ -28,7 +28,7 @@
 #include "SensorNode.h"
 #include "exception"
 #include "GenericPacket_m.h"
-#include "vector"
+
 #include "exception"
 
 using std::make_pair;
@@ -36,6 +36,7 @@ using std::make_pair;
 Define_Module(CustomWiseRoute);
 
 CustomWiseRoute::CustomWiseRoute() : WiseRoute()
+        , bcName("LAddress::L3BROADCAST")
         , stats(false)
         , trace(false)
         , networkID(-1)
@@ -258,12 +259,34 @@ void NetworkLayer2::initialize(int stage) {
 }
 */
 
+/**
+ * handle messages in different ways (and restore final destination)
+ * -> if only i should receive -> get the final destination (is it my own address? -> appl layer)
+ * -> if it was meant to be a broadcast -> set the l3 bc address
+ */
 void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
     if (active) {
 
         //TODO check if broadcast information
+
         WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+
+        //pkt->setFinalDestAddr(LAddress::L3BROADCAST);
+        WiseRoutePkt* copyPkt = pkt->dup();
         sendUp(decapsMsg(pkt));
+
+        //forward broadcast
+        LAddress::L3Type finalDestAddr = copyPkt->getFinalDestAddr();
+        LAddress::L3Type initialSrcAddr = copyPkt->getInitialSrcAddr();
+        LAddress::L3Type destAddr = copyPkt->getDestAddr();
+        LAddress::L3Type srcAddr = copyPkt->getSrcAddr();
+
+        if (LAddress::isL3Broadcast(finalDestAddr)) {
+            //pkt->setFinalDestAddr();
+            NetwControlInfo::setControlInfo(copyPkt, LAddress::L3BROADCAST);
+            forward(copyPkt, srcAddr);
+        }
+
     } else {
         delete msg;
     }
@@ -282,20 +305,38 @@ void CustomWiseRoute::handleLowerControl(cMessage *msg) {
     }
 }
 
+/**
+ * check if target address is broadcast -> send one message to each child and father node (done)
+ * transform any other target address (final destination -> next hop)
+ */
 void CustomWiseRoute::handleUpperMsg(cMessage* msg) {
     if (active) {
 
-        /**
-         * transform destination address?
-         * handle broadcast
-         */
+        forward(msg, -2);
 
-        //sendDown(encapsMsg(check_and_cast<cPacket*>(msg)));
+    } else {
+        delete msg;
+    }
+}
 
-        LAddress::L3Type finalDestAddr;
-        LAddress::L3Type nextHopAddr;
-        LAddress::L2Type nextHopMacAddr;
-        cObject*         cInfo = msg->removeControlInfo();
+void CustomWiseRoute::forward(ApplPkt* msg, LAddress::L3Type srcAddr) {
+    EV << "Wrong package, not forwarding" << endl;
+}
+
+void CustomWiseRoute::forward(cMessage* msg, LAddress::L3Type srcAddr) {
+    /**
+     * transform destination address?
+     * handle broadcast
+     */
+
+    //sendDown(encapsMsg(check_and_cast<cPacket*>(msg)));
+
+    LAddress::L3Type finalDestAddr;
+    LAddress::L3Type nextHopAddr;
+    LAddress::L3Type initialSrc;
+    cObject*         cInfo = msg->removeControlInfo();
+    lastBroadcastId.push_back(msg->getId());
+    LAddress::L3Type L3myNetwAddr = myNetwAddr;
 
         if ( cInfo == NULL ) {
             EV << "WiseRoute warning: Application layer did not specifiy a destination L3 address\n"
@@ -308,43 +349,94 @@ void CustomWiseRoute::handleUpperMsg(cMessage* msg) {
             delete cInfo;
         }
 
-        if (LAddress::isL3Broadcast(finalDestAddr)) {
-            //nextHopAddr = LAddress::L3BROADCAST;
-            //
+    if (LAddress::isL3Broadcast(finalDestAddr) || srcAddr >= 0) {
+        //nextHopAddr = LAddress::L3BROADCAST;
+        //
 
-            AdjListElement* childs = getChildNodes(myNetwAddr);
-            std::vector<int> children;
-            do {
-                if (childs->value != -1) {
-                    children.push_back(childs->value);
-                    nextHopAddr = childs->value;
-                    WiseRoutePkt* pkt = new WiseRoutePkt(msg->getName(), DATA);
-                    pkt->setByteLength(headerLength);
-                    pkt->setFinalDestAddr(childs->value);
-                    pkt->setInitialSrcAddr(myNetwAddr);
-                    pkt->setSrcAddr(myNetwAddr);
-                    pkt->setNbHops(0);
-                    pkt->setIsFlood(0);
-                    nbPureUnicastSent++;
-                    nextHopMacAddr = arp->getMacAddr(nextHopAddr);
-                    setDownControlInfo(pkt, nextHopMacAddr);
-                    assert(static_cast<cPacket*>(msg));
-                    pkt->encapsulate(static_cast<cPacket*>(msg));
-                    sendDown(pkt);
-                    nbDataPacketsSent++;
-                    //TODO add broadcast information to packet
-
-                }
-
-            } while (childs->next);
-
+        if (srcAddr != -2) {
+            WiseRoutePkt* wpkt = check_and_cast<WiseRoutePkt*>(msg);
+            initialSrc = wpkt->getInitialSrcAddr();
         } else {
-            nextHopAddr = getRoute(finalDestAddr, true);
+            initialSrc = L3myNetwAddr;
         }
 
+        //todo SEND TO CHILDREN AND FATHER
+
+        //child list
+        AdjListElement* childs = getChildNodes(myNetwAddr);
+
+        //father (from array)
+        int fatherAddress = routeTree[myNetwAddr];
+
+        //send to all direct children
+        std::vector<int> children;
+        do {
+            if (childs->value != -1) {
+
+                //TODO add broadcast information to packet
+                children.push_back(childs->value);
+                cMessage* newMsg = msg->dup();
+                //NetwControlInfo::setControlInfo(newMsg, LAddress::L3BROADCAST);
+                lastBroadcastId.push_back(msg->getId());
+
+                nextHopAddr = childs->value;
+                sendToNeighbor(
+                        newMsg,
+                        finalDestAddr,
+                        nextHopAddr,
+                        initialSrc,
+                        srcAddr
+                );
+
+            }
+
+            childs = childs->next;
+
+        } while (childs != NULL);
+
+        //send to father
+        nextHopAddr = fatherAddress;
+
+        if (fatherAddress == myNetwAddr) {
+            return;
+        }
+
+        sendToNeighbor(msg, finalDestAddr, nextHopAddr, initialSrc, srcAddr);
+
     } else {
-        delete msg;
+        nextHopAddr = getRoute(finalDestAddr, true);
     }
+}
+
+void CustomWiseRoute::sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestAddr, LAddress::L3Type &nextHopAddr, LAddress::L3Type &initialSrcAddr, LAddress::L3Type &srcAddr) {
+
+    //außer BC
+    if (!LAddress::isL3Broadcast(nextHopAddr) && nextHopAddr == srcAddr) {
+        return;
+    }
+
+    LAddress::L2Type nextHopMacAddr;
+    const char *name;
+    if (strcmp(msg->getName(), "") == 0) {
+        name = bcName;
+    } else {
+        name = msg->getName();
+    }
+    WiseRoutePkt* pkt = new WiseRoutePkt(name, DATA);
+    pkt->setByteLength(headerLength);
+    pkt->setFinalDestAddr(finalDestAddr);
+    pkt->setInitialSrcAddr(initialSrcAddr);
+    pkt->setSrcAddr(myNetwAddr);
+    pkt->setDestAddr(nextHopAddr);
+    pkt->setNbHops(0);
+    pkt->setIsFlood(0);
+    nbPureUnicastSent++;
+    nextHopMacAddr = arp->getMacAddr(nextHopAddr);
+    setDownControlInfo(pkt, nextHopMacAddr);
+    assert(static_cast<cPacket*>(msg));
+    pkt->encapsulate(static_cast<cPacket*>(msg));
+    sendDown(pkt);
+    nbDataPacketsSent++;
 }
 
 CustomWiseRoute::netwpkt_ptr_t CustomWiseRoute::encapsMsg(cPacket *appPkt) {

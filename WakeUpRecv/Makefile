@@ -146,6 +146,7 @@ $O/MyTestApplication.o: MyTestApplication.cc \
 	$(MIXIM_PROJ)/src/base/messages/ApplPkt_m.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
 	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/messages/NetwPkt_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseLayer.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseMacLayer.h \
@@ -177,6 +178,7 @@ $O/MyTestApplication.o: MyTestApplication.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/messages/WiseRoutePkt_m.h \
 	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \

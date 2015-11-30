@@ -6,6 +6,7 @@
 #include "FindModule.h"
 #include "WakeupPhyUtils.h"
 #include "ApplPkt_m.h"
+#include "WiseRoutePkt_m.h"
 
 using std::endl;
 
@@ -136,26 +137,28 @@ void MyTestApplication::handleMessage(cMessage * msg)
     }
     else if (msg->getArrivalGateId() == dataIn)
     {
-        //TODO when receiving broadcoast (but self handeled) exclude the src address from the list of new receivers
-        try {
-            ApplPkt* applPkt = static_cast<ApplPkt*>(msg);
-            if (applPkt->getDestAddr() == LAddress::L2BROADCAST.getInt() || applPkt->getDestAddr() == LAddress::L3BROADCAST) {
-                int messageId = applPkt->getId();
-                if (messageId > lastBroadcastId) {
-                    //message to be forwared
-                    lastBroadcastId = messageId;
-                    send(applPkt, dataOut);
-                } else {
-                    //message the node send it self and which came back (because of broadcast)
-                    delete applPkt;
-                }
+        ApplPkt* applPkt = static_cast<ApplPkt*>(msg);
 
-                // handle broadcast
-            }
-
-        } catch (int e) {
-
-        }
+//        try {
+//            ApplPkt* applPkt = static_cast<ApplPkt*>(msg);
+//            //WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+//            if (applPkt->getDestAddr() == LAddress::L2BROADCAST.getInt() || applPkt->getDestAddr() == LAddress::L3BROADCAST) {
+//                int messageId = applPkt->getId();
+//                if (messageId > lastBroadcastId) {
+//                    //message to be forwared
+//                    lastBroadcastId = messageId;
+//                    send(applPkt, dataOut);
+//                } else {
+//                    //message the node send it self and which came back (because of broadcast)
+//                    delete applPkt;
+//                }
+//
+//                // handle broadcast
+//            }
+//
+//        } catch (int e) {
+//
+//        }
     }
     else if (msg->getArrivalGateId() == ctrlIn)
     {

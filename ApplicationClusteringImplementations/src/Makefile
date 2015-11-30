@@ -160,6 +160,8 @@ $O/ApplicationClusteringImplementations.o: ApplicationClusteringImplementations.
 	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h
 $O/CSMA802154HostStateHandled.o: CSMA802154HostStateHandled.cc \
 	CSMA802154HostStateHandled.h \
+	$(MIXIM_PROJ)/src/base/messages/MacPkt_m.h \
+	$(MIXIM_PROJ)/src/base/messages/NetwPkt_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseLayer.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseMacLayer.h \
@@ -176,10 +178,12 @@ $O/CSMA802154HostStateHandled.o: CSMA802154HostStateHandled.cc \
 	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
 	$(MIXIM_PROJ)/src/modules/mac/CSMA802154.h \
 	$(MIXIM_PROJ)/src/modules/mac/csma.h \
+	$(MIXIM_PROJ)/src/modules/messages/WiseRoutePkt_m.h \
 	$(MIXIM_PROJ)/src/modules/utility/DroppedPacket.h
 $O/CustomWiseRoute.o: CustomWiseRoute.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/GenericPacket_m.h \
 	CustomWiseRoute.h \
+	$(MIXIM_PROJ)/src/base/messages/ApplPkt_m.h \
 	$(MIXIM_PROJ)/src/base/messages/NetwPkt_m.h \
 	$(MIXIM_PROJ)/src/base/modules/ArpInterface.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
