@@ -32,6 +32,7 @@ public:
 
     void initialize(int stage);
     void finish();
+    void handleMessage(cMessage* msg);
 
     //methods for initialization of the routeTable
 

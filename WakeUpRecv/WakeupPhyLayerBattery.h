@@ -86,6 +86,8 @@ protected:
 	};
 
 protected:
+	void handleMessage(cMessage* msg);
+
 	/**
 	 * @brief Creates and returns an instance of the decider with the specified
 	 * name.

@@ -53,6 +53,7 @@ public:
         int mySimpleBatteryId;  //id for additional load of energy (sensor application)
         WakeupPhyLayerBattery* myPhyLayerBattery;
         int myNodeId;
+        int initiatorAddr;
         unsigned int sleepState = 0;
 
         // module parameters

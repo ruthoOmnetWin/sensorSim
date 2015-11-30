@@ -92,6 +92,41 @@ void CustomWiseRoute::initialize(int stage) {
     }
 }
 
+void CustomWiseRoute::handleMessage(cMessage* msg)
+{
+    if (msg->isSelfMessage()) {
+        handleSelfMsg(msg);
+    } else if(msg->getArrivalGateId()==upperLayerIn) {
+        recordPacket(PassedMessage::INCOMING,PassedMessage::UPPER_DATA,msg);
+        handleUpperMsg(msg);
+    } else if(msg->getArrivalGateId()==upperControlIn) {
+        recordPacket(PassedMessage::INCOMING,PassedMessage::UPPER_CONTROL,msg);
+        handleUpperControl(msg);
+    } else if(msg->getArrivalGateId()==lowerControlIn){
+        recordPacket(PassedMessage::INCOMING,PassedMessage::LOWER_CONTROL,msg);
+        handleLowerControl(msg);
+    } else if(msg->getArrivalGateId()==lowerLayerIn) {
+        recordPacket(PassedMessage::INCOMING,PassedMessage::LOWER_DATA,msg);
+        handleLowerMsg(msg);
+    }
+    else if(msg->getArrivalGateId()==-1) {
+        /* Classes extending this class may not use all the gates, f.e.
+         * BaseApplLayer has no upper gates. In this case all upper gate-
+         * handles are initialized to -1. When getArrivalGateId() equals -1,
+         * it would be wrong to forward the message to one of these gates,
+         * as they actually don't exist, so raise an error instead.
+         */
+        opp_error("No self message and no gateID?? Check configuration.");
+    } else {
+        /* msg->getArrivalGateId() should be valid, but it isn't recognized
+         * here. This could signal the case that this class is extended
+         * with extra gates, but handleMessage() isn't overridden to
+         * check for the new gate(s).
+         */
+        opp_error("Unknown gateID?? Check configuration or override handleMessage().");
+    }
+}
+
 /**
  * check if a given value (node id) is element of the given list
  * => check if the given node id is a child of the node's list
@@ -265,6 +300,7 @@ void NetworkLayer2::initialize(int stage) {
  * -> if it was meant to be a broadcast -> set the l3 bc address
  */
 void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
+
     if (active) {
 
         //TODO check if broadcast information
@@ -283,6 +319,9 @@ void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
 
         if (LAddress::isL3Broadcast(finalDestAddr)) {
             //pkt->setFinalDestAddr();
+
+            EV << "I am NODE " << myNetwAddr << " FORWARDING" << "-------------------- I am NODE ---------" << endl;
+
             NetwControlInfo::setControlInfo(copyPkt, LAddress::L3BROADCAST);
             forward(copyPkt, srcAddr);
         }
@@ -324,10 +363,13 @@ void CustomWiseRoute::forward(ApplPkt* msg, LAddress::L3Type srcAddr) {
 }
 
 void CustomWiseRoute::forward(cMessage* msg, LAddress::L3Type srcAddr) {
+
     /**
      * transform destination address?
      * handle broadcast
      */
+
+    EV << "I am NODE " << myNetwAddr<< "-------------------- I am NODE ---------" << endl;
 
     //sendDown(encapsMsg(check_and_cast<cPacket*>(msg)));
 
@@ -373,20 +415,17 @@ void CustomWiseRoute::forward(cMessage* msg, LAddress::L3Type srcAddr) {
         do {
             if (childs->value != -1) {
 
+
+
                 //TODO add broadcast information to packet
                 children.push_back(childs->value);
                 cMessage* newMsg = msg->dup();
+
                 //NetwControlInfo::setControlInfo(newMsg, LAddress::L3BROADCAST);
                 lastBroadcastId.push_back(msg->getId());
 
                 nextHopAddr = childs->value;
-                sendToNeighbor(
-                        newMsg,
-                        finalDestAddr,
-                        nextHopAddr,
-                        initialSrc,
-                        srcAddr
-                );
+                sendToNeighbor(newMsg, finalDestAddr, nextHopAddr, initialSrc, srcAddr);
 
             }
 
@@ -413,6 +452,11 @@ void CustomWiseRoute::sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestA
     //außer BC
     if (!LAddress::isL3Broadcast(nextHopAddr) && nextHopAddr == srcAddr) {
         return;
+    }
+
+    EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
+    if (nextHopAddr == 6 || nextHopAddr == 7 || nextHopAddr == 20) {
+        EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
     }
 
     LAddress::L2Type nextHopMacAddr;

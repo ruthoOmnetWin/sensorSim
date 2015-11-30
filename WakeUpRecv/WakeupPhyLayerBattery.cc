@@ -266,3 +266,28 @@ simtime_t WakeupPhyLayerBattery::setRadioState(int rs) {
 
     return endSwitch;
 }
+
+void WakeupPhyLayerBattery::handleMessage(cMessage* msg) {
+
+    //self messages
+    if(msg->isSelfMessage()) {
+        handleSelfMessage(msg);
+
+    //MacPkts <- MacToPhyControlInfo
+    } else if(msg->getArrivalGateId() == upperLayerIn) {
+        handleUpperMessage(msg);
+
+    //controlmessages
+    } else if(msg->getArrivalGateId() == upperControlIn) {
+        handleUpperControlMessage(msg);
+
+    //AirFrames
+    } else if(msg->getKind() == AIR_FRAME){
+        handleAirFrame(static_cast<airframe_ptr_t>(msg));
+
+    //unknown message
+    } else {
+        ev << "Unknown message received." << endl;
+        delete msg;
+    }
+}

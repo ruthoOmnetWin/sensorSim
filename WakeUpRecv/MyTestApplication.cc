@@ -34,6 +34,7 @@ void MyTestApplication::initialize(int stage)
 
         //myApp->myBaseHost = findHost();
 
+        initiatorAddr = par("coordinatorNodeAddr").longValue();
         myNodeId = LAddress::L3Type(par("nodeAddr").longValue());
 
         //mySimpleBattery = new SimpleBattery();
@@ -70,7 +71,7 @@ void MyTestApplication::sendPacket(void)
 {
     if (active) {
         char bubblestr[32];
-        if (myNodeId == 1)
+        if (myNodeId == initiatorAddr)
         {
             ApplPkt* gPacketP = new ApplPkt();
             gPacketP->setDestAddr(LAddress::L3BROADCAST);
@@ -81,7 +82,7 @@ void MyTestApplication::sendPacket(void)
         }
         else
         {
-    #if 1
+    #if 0
             if (sleepState == 0)
             {
                 sleepState=1;
@@ -122,7 +123,7 @@ void MyTestApplication::handleMessage(cMessage * msg)
     {
         if (active) {
             int i = 5;
-            if (myNodeId==1) i=1;
+            if (myNodeId==initiatorAddr) i=120;
             //diceEvent();
             sendPacket();
             debugEV << "  processing application timer." << endl;

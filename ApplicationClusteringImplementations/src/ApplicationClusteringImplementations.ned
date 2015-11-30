@@ -27,159 +27,163 @@ network ApplicationClusteringImplementations extends BaseNetwork
         wuType = default("sensortechnology.src.WorldModel.CustomWorldUtility");
 
     submodules:
-        TemperatureSensorNode0: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=59,50");
+        Node0: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=410,148");
             hasTemperatureSensor = true;
-            //@class(ApplicationClusteringImplementations);
+                    //@class(ApplicationClusteringImplementations);
         }
-        TemperatureSensorNode1: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=232,50");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode2: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=59,98");
+        Node1: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=321,127");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode3: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=59,146");
+        Node2: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=232,109");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode4: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=59,260");
+        Node3: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=142,88");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode5: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=165,45");
+        Node4: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=77,42");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode6: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=165,100");
+        Node5: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=375,218");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode7: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=165,175");
+        Node6: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=299,257");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode8: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=122,257");
+        Node7: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=209,269");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode9: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=169,257");
+        Node8: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=132,277");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode10: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=219,257");
+        Node9: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=449,81");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode11: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=267,257");
+        Node10: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=540,49");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode12: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=300,117");
+        Node11: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=644,42");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode13: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=358,117");
+        Node12: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=761,42");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode14: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=319,50");
+        Node13: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=515,187");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode15: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=280,50");
+        Node14: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=605,226");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode16: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=300,199");
+        Node15: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=691,257");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode17: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=358,199");
+        Node16: Sensor_Wakeup_DicePhyMacHost {
+            @display("p=800,265");
             hasTemperatureSensor = true;
         }
-        TemperatureSensorNode18: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=385,45");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode19: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=472,78");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode20: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=472,125");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode21: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=537,50");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode22: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=585,59");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode23: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=635,59");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode24: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=683,59");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode25: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=546,125");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode26: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=563,199");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode27: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=635,156");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode28: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=701,139");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode29: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=612,251");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode30: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=651,251");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode31: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=701,238");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode32: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=754,238");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode33: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=768,136");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode34: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=768,185");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode35: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=729,59");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode36: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=793,45");
-            hasTemperatureSensor = true;
-        }
-        TemperatureSensorNode37: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=807,98");
-            hasTemperatureSensor = true;
-        }
+        //        Node17: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=411,125");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node18: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=385,45");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node19: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=472,78");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node20: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=472,125");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node21: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=537,50");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node22: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=585,59");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node23: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=635,59");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node24: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=683,59");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node25: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=546,125");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node26: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=563,199");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node27: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=635,156");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node28: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=701,139");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node29: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=612,251");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node30: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=651,251");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node31: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=701,238");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node32: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=754,238");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node33: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=768,136");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node34: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=768,185");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node35: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=729,59");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node36: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=793,45");
+        //            hasTemperatureSensor = true;
+        //        }
+        //        Node37: Sensor_Wakeup_DicePhyMacHost {
+        //            @display("p=807,98");
+        //            hasTemperatureSensor = true;
+        //        }
+    //        Node38: Sensor_Wakeup_DicePhyMacHost {
+    //            @display("p=258,125");
+    //            hasTemperatureSensor = true;
+    //        }
     connections allowunconnected:
 
     // all connections and gates are to be generated dynamically
