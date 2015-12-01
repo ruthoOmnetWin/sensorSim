@@ -15,7 +15,7 @@
 //#include "BaseModule.h"
 #include <PhyLayerBattery.h>
 #include <SimpleBattery.h>
-#include <PhyUtils.h>
+#include <WakeupPhyUtils.h>
 
 /****************************************************************************
  * WakeUp Sleep
@@ -66,7 +66,7 @@ void MYCLASS wakeupSleepEnterSleep(void)
             0
     );
     */
-    myPhyLayerBattery->setRadioState(MiximRadio::SLEEP);
+    myPhyLayerBattery->setRadioState(WakeupMiximRadio::SLEEP);
 
 }
 
@@ -81,7 +81,7 @@ void MYCLASS wakeupSleepLeaveSleep(void)
 
 
     //myPhyLayerBattery->setRadioState(0);
-    myPhyLayerBattery->setRadioState(MiximRadio::RX);
+    myPhyLayerBattery->setRadioState(WakeupMiximRadio::RX);
     myBaseHost->getDisplayString().setTagArg("b", 3, "yellow");
     isInSleepMode = true;
     //wakeupSleepUpdateTimer();

@@ -7,6 +7,7 @@
 #include <SimpleBattery.h>
 #include <PhyLayerBattery.h>
 #include <FindModule.h>
+
 using std::endl;
 
 //Globals
@@ -33,7 +34,7 @@ void DiceApplication::initialize(int stage)
         clusterApp = new ClusterApplication(this, dataOut);
         clusterApp->myBaseHost = findHost();
         clusterApp->mySimpleBattery = FindModule<SimpleBattery*>::findSubModule(findHost());
-        clusterApp->myPhyLayerBattery = FindModule<PhyLayerBattery*>::findSubModule(findHost());
+        clusterApp->myPhyLayerBattery = FindModule<PhyLayer*>::findSubModule(findHost());
 
         //myData = new Data(clusterApp);
         // myNetwork = new Network(myData,this,dataOut);

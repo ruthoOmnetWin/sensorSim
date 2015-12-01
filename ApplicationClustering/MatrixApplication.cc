@@ -9,7 +9,8 @@
 #include <SimpleBattery.h>
 #include <PhyLayerBattery.h>
 #include <WakeUpPacket_m.h>
-#include "WakeupPhyUtils.h"
+#include <PhyLayer.h>
+#include <WakeupPhyUtils.h>
 
 using std::endl;
 
@@ -35,7 +36,7 @@ void MatrixApplication::initialize(int stage)
         clusterApp = new ClusterApplication(this, dataOut);
         clusterApp->myBaseHost = findHost();
         clusterApp->mySimpleBattery = FindModule<SimpleBattery*>::findSubModule(findHost());
-        clusterApp->myPhyLayerBattery = FindModule<PhyLayerBattery*>::findSubModule(findHost());
+        clusterApp->myPhyLayerBattery = FindModule<PhyLayer*>::findSubModule(findHost());
 
 
         //myData = new Data(clusterApp);

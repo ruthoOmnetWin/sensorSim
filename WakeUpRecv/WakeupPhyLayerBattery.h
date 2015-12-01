@@ -19,6 +19,7 @@
 #include "MiXiMDefs.h"
 #include "PhyLayer.h"
 #include "HostState.h"
+#include "BasePhyLayer.h"
 
 class MacToPhyControlInfo;
 class MacPkt;
@@ -96,7 +97,7 @@ protected:
 	 * - Decider80211Battery
 	 * - Decider80211MultiChannel
 	 */
-	Decider* getDeciderFromName(const std::string& name, ParameterMap& params);
+	virtual Decider* getDeciderFromName(const std::string& name, ParameterMap& params);
 
 	/**
 	 * @brief Calculates the current needed for the transmission of the
@@ -109,8 +110,7 @@ protected:
 	 * a default TX-current for every transmission but a current depending on
 	 * the actual used TX power for a packet.
 	 */
-	virtual double calcTXCurrentForPacket(macpkt_ptr_t /*pkt*/, MacToPhyControlInfo* /*cInfo*/) const
-	{ return -1.0; }
+	virtual double calcTXCurrentForPacket(macpkt_ptr_t /*pkt*/, MacToPhyControlInfo* /*cInfo*/) const;
 
 	/** @brief Updates the actual current drawn for the passed state.*/
 	virtual void setRadioCurrent(int rs);
@@ -152,12 +152,13 @@ protected:
 
 public:
 	WakeupPhyLayerBattery()
-		: PhyLayer()
-		, numActivities(0)
-		, sleepCurrent(0), rxCurrent(0), decodingCurrentDelta(0), txCurrent(0)
-		, setupRxCurrent(0), setupTxCurrent(0), rxTxCurrent(0), txRxCurrent(0)
-        , wakeupCurrent(0), setupWakeupCurrent (0)
-	{}
+	        : PhyLayer()
+	        , numActivities(0)
+	        , sleepCurrent(0), rxCurrent(0), decodingCurrentDelta(0), txCurrent(0)
+	        , setupRxCurrent(0), setupTxCurrent(0), rxTxCurrent(0), txRxCurrent(0)
+	        , wakeupCurrent(0), setupWakeupCurrent (0)
+	    {}
+
 	virtual void initialize(int stage);
 
 	/**
@@ -175,6 +176,8 @@ public:
 	 * @brief Captures radio switches to adjust power consumption.
 	 */
 	virtual simtime_t setRadioState(int rs);
+
+	virtual int myProtocolId() const;
 };
 
 #endif /* PHYLAYERBATTERY_H_ */

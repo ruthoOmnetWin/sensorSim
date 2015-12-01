@@ -305,7 +305,6 @@ void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
 
     if (active) {
 
-        //TODO check if broadcast information
 
         WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
 
@@ -404,7 +403,7 @@ void CustomWiseRoute::forward(cMessage* msg, LAddress::L3Type srcAddr) {
             initialSrc = L3myNetwAddr;
         }
 
-        //todo SEND TO CHILDREN AND FATHER
+        //SEND TO CHILDREN AND FATHER
 
         //child list
         AdjListElement* childs = getChildNodes(myNetwAddr);
@@ -417,9 +416,6 @@ void CustomWiseRoute::forward(cMessage* msg, LAddress::L3Type srcAddr) {
         do {
             if (childs->value != -1) {
 
-
-
-                //TODO add broadcast information to packet
                 children.push_back(childs->value);
                 cMessage* newMsg = msg->dup();
 
@@ -454,6 +450,7 @@ void CustomWiseRoute::sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestA
 
     //außer BC
     if (!LAddress::isL3Broadcast(nextHopAddr) && nextHopAddr == srcAddr) {
+        delete msg;
         return;
     }
 
@@ -483,13 +480,6 @@ void CustomWiseRoute::sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestA
     assert(static_cast<cPacket*>(msg));
     pkt->encapsulate(static_cast<cPacket*>(msg));
     sendDown(pkt);
-
-    //TODO drop message
-//    SensorNode *sensor = FindModule<SensorNode*>::findGlobalModule();
-//    BaseModule *appl = FindModule<BaseModule*>::findSubModule(sensor);
-//    drop(msg);
-//    delete(msg);
-
     nbDataPacketsSent++;
 }
 

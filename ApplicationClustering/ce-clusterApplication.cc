@@ -7,7 +7,6 @@
 
 #include "ce-clusterApplication.h"
 #include <SimpleBattery.h>
-#include <PhyLayerBattery.h>
 
 ClusterApplication::ClusterApplication(BaseModule* baseModule, int oGate)
 {
@@ -29,7 +28,7 @@ ClusterApplication::ClusterApplication(BaseModule* baseModule, int oGate)
         timers[i] = 0;
     }
     mySimpleBattery = new SimpleBattery();
-    myPhyLayerBattery = new PhyLayerBattery();
+    //myPhyLayerBattery = new WakeupPhyLayerBattery();
     sleepTimeout = SLEEP_TIMEOUT;
 
     clusterApplicationUpdateTickCounter(0); //Clear Systick

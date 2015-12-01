@@ -16,6 +16,7 @@
 #include "ce-coordinator.h"
 
 #include "BaseModule.h"
+#include "PhyLayer.h"
 
 #define SLEEP_TIMEOUT 1000
 #define MYCLASS ClusterApplication::
@@ -32,7 +33,7 @@ class ClusterApplication
         int myOutGate;
         bool nodeIsDown = false;
         SimpleBattery* mySimpleBattery;
-        PhyLayerBattery* myPhyLayerBattery;
+        PhyLayer* myPhyLayerBattery;
         int mySimpleBatteryId;
         unsigned long ticks;  // internal tick-timer  (ca. 1ms)
         cMessage* sysTimer;

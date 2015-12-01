@@ -21,7 +21,6 @@
 #include "WakeupPhyUtils.h"
 #include "WakeupBaseDecider.h"
 
-
 Define_Module(WakeupPhyLayerBattery);
 
 void WakeupPhyLayerBattery::initialize(int stage) {
@@ -291,3 +290,26 @@ void WakeupPhyLayerBattery::handleMessage(cMessage* msg) {
         delete msg;
     }
 }
+
+double WakeupPhyLayerBattery::calcTXCurrentForPacket(macpkt_ptr_t pkt, MacToPhyControlInfo* cInfo) const {
+    return -1.0;
+}
+
+int WakeupPhyLayerBattery::myProtocolId() const {
+    return protocolId;
+}
+
+//WakeupPhyLayerBattery::WakeupPhyLayerBattery()
+//{
+//    numActivities = 0;
+//    sleepCurrent = 0;
+//    rxCurrent = 0;
+//    decodingCurrentDelta = 0;
+//    txCurrent = 0;
+//    setupRxCurrent = 0;
+//    setupTxCurrent = 0;
+//    rxTxCurrent = 0;
+//    txRxCurrent = 0;
+//    wakeupCurrent = 0;
+//    setupWakeupCurrent = 0;
+//}

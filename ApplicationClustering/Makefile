@@ -295,11 +295,34 @@ $O/ce-application.o: ce-application.cc \
 	ce-resourcemanager.h \
 	includes/ce-packetstructs.h \
 	typedefs.h \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h
@@ -312,10 +335,34 @@ $O/ce-appmanager.o: ce-appmanager.cc \
 	ce-resourcemanager.h \
 	includes/ce-packetstructs.h \
 	typedefs.h \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
-	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h
 $O/ce-appmaster.o: ce-appmaster.cc \
 	ce-appscheduler.h \
 	ce-appstructs.h \
@@ -325,10 +372,34 @@ $O/ce-appmaster.o: ce-appmaster.cc \
 	ce-resourcemanager.h \
 	includes/ce-packetstructs.h \
 	typedefs.h \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
-	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h
 $O/ce-appscheduler.o: ce-appscheduler.cc \
 	ce-appscheduler.h \
 	ce-appstructs.h \
@@ -338,10 +409,34 @@ $O/ce-appscheduler.o: ce-appscheduler.cc \
 	ce-resourcemanager.h \
 	includes/ce-packetstructs.h \
 	typedefs.h \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
-	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h
 $O/ce-clusterApplication.o: ce-clusterApplication.cc \
 	ce-appscheduler.h \
 	ce-appstructs.h \
@@ -378,7 +473,6 @@ $O/ce-clusterApplication.o: ce-clusterApplication.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
-	$(MIXIM_PROJ)/src/modules/phy/PhyLayerBattery.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h
@@ -390,10 +484,34 @@ $O/ce-coordinator.o: ce-coordinator.cc \
 	ce-resourcemanager.h \
 	includes/ce-packetstructs.h \
 	typedefs.h \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
-	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h
 $O/ce-network.o: ce-network.cc \
 	Packets/GenericPacket_m.h \
 	ce-appscheduler.h \
@@ -404,13 +522,28 @@ $O/ce-network.o: ce-network.cc \
 	ce-resourcemanager.h \
 	includes/ce-packetstructs.h \
 	typedefs.h \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/ApplPkt_m.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseLayer.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseNetwLayer.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseWorldUtility.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
 	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
@@ -420,8 +553,12 @@ $O/ce-network.o: ce-network.cc \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
 	$(MIXIM_PROJ)/src/modules/utility/Packet.h
 $O/ce-packets.o: ce-packets.cc \
 	ce-appscheduler.h \
@@ -432,10 +569,34 @@ $O/ce-packets.o: ce-packets.cc \
 	ce-resourcemanager.h \
 	includes/ce-packetstructs.h \
 	typedefs.h \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
-	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h
 $O/ce-resourceManager.o: ce-resourceManager.cc \
 	ce-appscheduler.h \
 	ce-appstructs.h \
@@ -444,13 +605,34 @@ $O/ce-resourceManager.o: ce-resourceManager.cc \
 	ce-resourcemanager.h \
 	includes/ce-packetstructs.h \
 	typedefs.h \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h
@@ -495,7 +677,8 @@ $O/ce-wakeupSleep.o: ce-wakeupSleep.cc \
 	$(MIXIM_PROJ)/src/modules/phy/PhyLayerBattery.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
-	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h
+	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
+	$(WAKEUPRECV_PROJ)/WakeupPhyUtils.h
 $O/Packets/ApplicationPacket_m.o: Packets/ApplicationPacket_m.cc \
 	Packets/ApplicationPacket_m.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
