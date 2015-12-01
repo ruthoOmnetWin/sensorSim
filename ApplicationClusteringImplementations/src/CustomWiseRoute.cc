@@ -18,16 +18,18 @@
 #include <limits>
 #include <algorithm>
 #include <cassert>
+#include <MyTestApplication.h>
+#include <FindModule.h>
 
 #include "NetwControlInfo.h"
 #include "MacToNetwControlInfo.h"
 #include "ArpInterface.h"
-#include "FindModule.h"
 #include "WiseRoutePkt_m.h"
 #include "SimTracer.h"
 #include "SensorNode.h"
 #include "exception"
 #include "GenericPacket_m.h"
+
 
 #include "exception"
 
@@ -437,6 +439,7 @@ void CustomWiseRoute::forward(cMessage* msg, LAddress::L3Type srcAddr) {
         nextHopAddr = fatherAddress;
 
         if (fatherAddress == myNetwAddr) {
+            delete msg;
             return;
         }
 
@@ -480,6 +483,13 @@ void CustomWiseRoute::sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestA
     assert(static_cast<cPacket*>(msg));
     pkt->encapsulate(static_cast<cPacket*>(msg));
     sendDown(pkt);
+
+    //TODO drop message
+//    SensorNode *sensor = FindModule<SensorNode*>::findGlobalModule();
+//    BaseModule *appl = FindModule<BaseModule*>::findSubModule(sensor);
+//    drop(msg);
+//    delete(msg);
+
     nbDataPacketsSent++;
 }
 

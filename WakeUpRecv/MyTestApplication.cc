@@ -139,6 +139,7 @@ void MyTestApplication::handleMessage(cMessage * msg)
     else if (msg->getArrivalGateId() == dataIn)
     {
         ApplPkt* applPkt = static_cast<ApplPkt*>(msg);
+        delete applPkt;
 
 //        try {
 //            ApplPkt* applPkt = static_cast<ApplPkt*>(msg);
