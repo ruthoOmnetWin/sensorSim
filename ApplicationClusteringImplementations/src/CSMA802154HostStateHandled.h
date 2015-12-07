@@ -31,6 +31,7 @@ protected:
     //do not allow communication if host state not active
     cPacket *decapsMsg(macpkt_ptr_t macPkt);
     void handleLowerControl(cMessage *msg);
+    void handleLowerMsg(cMessage *msg);
 };
 
 #endif /* CSMA802154HOSTSTATEHANDLED_H_ */

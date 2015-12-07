@@ -1,5 +1,5 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20151207-16:45:09-10675 b 1000
+SB v 1029 rid General-0-20151207-19:11:04-28908 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t applicationclusteringimplementations.ApplicationClusteringImplementations n ApplicationClusteringImplementations cm 1
 MS id 1 d bgi=background/roomsBigger;bgb=867,430,white;bgp=0,0
@@ -89,7 +89,7 @@ GC m 28 g 11 n lowerLayerOut o 1
 GC m 28 g 12 n lowerControlIn o 0
 GC m 28 g 15 n lowerControlOut o 1
 MS id 28 d p=70,310;i=block/layer
-MC id 29 c CustomMatrixApplication t applicationclusteringimplementations.CustomMatrixApplication pid 4 n appl
+MC id 29 c CustomDiceApplication t applicationclusteringimplementations.CustomDiceApplication pid 4 n appl
 GC m 29 g 0 n lowerLayerIn o 0
 GC m 29 g 3 n lowerLayerOut o 1
 GC m 29 g 4 n lowerControlIn o 0
@@ -1519,7 +1519,7 @@ GC m 223 g 11 n lowerLayerOut o 1
 GC m 223 g 12 n lowerControlIn o 0
 GC m 223 g 15 n lowerControlOut o 1
 MS id 223 d p=70,310;i=block/layer
-MC id 224 c CustomDiceApplication t applicationclusteringimplementations.CustomDiceApplication pid 17 n appl
+MC id 224 c CustomMatrixApplication t applicationclusteringimplementations.CustomMatrixApplication pid 17 n appl
 GC m 224 g 0 n lowerLayerIn o 0
 GC m 224 g 3 n lowerLayerOut o 1
 GC m 224 g 4 n lowerControlIn o 0
@@ -2131,6 +2131,8 @@ GC m 278 g 0 n fromTemperatureSensor o 0
 GC m 278 g 3 n toTemperatureSensor o 1
 CC sm 53 sg 1 dm 278 dg 0
 CC sm 278 sg 3 dm 53 dg 2
+BU id 6 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 54 g 0 n connectToProcessor$i o 0
 GC m 54 g 1 n connectToProcessor$o o 1
 GC m 278 g 4 n connectToMemory$i o 0
@@ -2139,6 +2141,9 @@ CC sm 54 sg 1 dm 278 dg 4
 CS sm 54 sg 1 d ""
 CC sm 278 sg 5 dm 54 dg 0
 CS sm 278 sg 5 d ""
+BU id 6 txt "Counted 1 Sensor(s) on the Node.\n"
+- Counted 1 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 51 m initialize(0)
 ME
@@ -2320,6 +2325,8 @@ GC m 280 g 0 n fromTemperatureSensor o 0
 GC m 280 g 3 n toTemperatureSensor o 1
 CC sm 83 sg 1 dm 280 dg 0
 CC sm 280 sg 3 dm 83 dg 2
+BU id 8 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 84 g 0 n connectToProcessor$i o 0
 GC m 84 g 1 n connectToProcessor$o o 1
 GC m 280 g 4 n connectToMemory$i o 0
@@ -2328,6 +2335,9 @@ CC sm 84 sg 1 dm 280 dg 4
 CS sm 84 sg 1 d ""
 CC sm 280 sg 5 dm 84 dg 0
 CS sm 280 sg 5 d ""
+BU id 8 txt "Counted 1 Sensor(s) on the Node.\n"
+- Counted 1 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 81 m initialize(0)
 ME
@@ -2698,8 +2708,6 @@ GC m 284 g 0 n fromTemperatureSensor o 0
 GC m 284 g 3 n toTemperatureSensor o 1
 CC sm 143 sg 1 dm 284 dg 0
 CC sm 284 sg 3 dm 143 dg 2
-BU id 12 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 144 g 0 n connectToProcessor$i o 0
 GC m 144 g 1 n connectToProcessor$o o 1
 GC m 284 g 4 n connectToMemory$i o 0
@@ -2708,9 +2716,6 @@ CC sm 144 sg 1 dm 284 dg 4
 CS sm 144 sg 1 d ""
 CC sm 284 sg 5 dm 144 dg 0
 CS sm 284 sg 5 d ""
-BU id 12 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 141 m initialize(0)
 ME
@@ -2795,8 +2800,6 @@ GC m 285 g 0 n fromTemperatureSensor o 0
 GC m 285 g 3 n toTemperatureSensor o 1
 CC sm 158 sg 1 dm 285 dg 0
 CC sm 285 sg 3 dm 158 dg 2
-BU id 13 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 159 g 0 n connectToProcessor$i o 0
 GC m 159 g 1 n connectToProcessor$o o 1
 GC m 285 g 4 n connectToMemory$i o 0
@@ -2805,9 +2808,6 @@ CC sm 159 sg 1 dm 285 dg 4
 CS sm 159 sg 1 d ""
 CC sm 285 sg 5 dm 159 dg 0
 CS sm 285 sg 5 d ""
-BU id 13 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 156 m initialize(0)
 ME
@@ -2892,8 +2892,6 @@ GC m 286 g 0 n fromTemperatureSensor o 0
 GC m 286 g 3 n toTemperatureSensor o 1
 CC sm 173 sg 1 dm 286 dg 0
 CC sm 286 sg 3 dm 173 dg 2
-BU id 14 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 174 g 0 n connectToProcessor$i o 0
 GC m 174 g 1 n connectToProcessor$o o 1
 GC m 286 g 4 n connectToMemory$i o 0
@@ -2902,9 +2900,6 @@ CC sm 174 sg 1 dm 286 dg 4
 CS sm 174 sg 1 d ""
 CC sm 286 sg 5 dm 174 dg 0
 CS sm 286 sg 5 d ""
-BU id 14 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 171 m initialize(0)
 ME
@@ -2989,8 +2984,6 @@ GC m 287 g 0 n fromTemperatureSensor o 0
 GC m 287 g 3 n toTemperatureSensor o 1
 CC sm 188 sg 1 dm 287 dg 0
 CC sm 287 sg 3 dm 188 dg 2
-BU id 15 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 189 g 0 n connectToProcessor$i o 0
 GC m 189 g 1 n connectToProcessor$o o 1
 GC m 287 g 4 n connectToMemory$i o 0
@@ -2999,9 +2992,6 @@ CC sm 189 sg 1 dm 287 dg 4
 CS sm 189 sg 1 d ""
 CC sm 287 sg 5 dm 189 dg 0
 CS sm 287 sg 5 d ""
-BU id 15 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 186 m initialize(0)
 ME
@@ -3183,8 +3173,6 @@ GC m 289 g 0 n fromTemperatureSensor o 0
 GC m 289 g 3 n toTemperatureSensor o 1
 CC sm 218 sg 1 dm 289 dg 0
 CC sm 289 sg 3 dm 218 dg 2
-BU id 17 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 219 g 0 n connectToProcessor$i o 0
 GC m 219 g 1 n connectToProcessor$o o 1
 GC m 289 g 4 n connectToMemory$i o 0
@@ -3193,9 +3181,6 @@ CC sm 219 sg 1 dm 289 dg 4
 CS sm 219 sg 1 d ""
 CC sm 289 sg 5 dm 219 dg 0
 CS sm 289 sg 5 d ""
-BU id 17 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 216 m initialize(0)
 ME
@@ -3280,8 +3265,6 @@ GC m 290 g 0 n fromTemperatureSensor o 0
 GC m 290 g 3 n toTemperatureSensor o 1
 CC sm 233 sg 1 dm 290 dg 0
 CC sm 290 sg 3 dm 233 dg 2
-BU id 18 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 234 g 0 n connectToProcessor$i o 0
 GC m 234 g 1 n connectToProcessor$o o 1
 GC m 290 g 4 n connectToMemory$i o 0
@@ -3290,9 +3273,6 @@ CC sm 234 sg 1 dm 290 dg 4
 CS sm 234 sg 1 d ""
 CC sm 290 sg 5 dm 234 dg 0
 CS sm 290 sg 5 d ""
-BU id 18 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 231 m initialize(0)
 ME
@@ -3377,8 +3357,6 @@ GC m 291 g 0 n fromTemperatureSensor o 0
 GC m 291 g 3 n toTemperatureSensor o 1
 CC sm 248 sg 1 dm 291 dg 0
 CC sm 291 sg 3 dm 248 dg 2
-BU id 19 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 249 g 0 n connectToProcessor$i o 0
 GC m 249 g 1 n connectToProcessor$o o 1
 GC m 291 g 4 n connectToMemory$i o 0
@@ -3387,9 +3365,6 @@ CC sm 249 sg 1 dm 291 dg 4
 CS sm 249 sg 1 d ""
 CC sm 291 sg 5 dm 249 dg 0
 CS sm 291 sg 5 d ""
-BU id 19 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 246 m initialize(0)
 ME
@@ -3474,6 +3449,8 @@ GC m 292 g 0 n fromTemperatureSensor o 0
 GC m 292 g 3 n toTemperatureSensor o 1
 CC sm 263 sg 1 dm 292 dg 0
 CC sm 292 sg 3 dm 263 dg 2
+BU id 20 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 264 g 0 n connectToProcessor$i o 0
 GC m 264 g 1 n connectToProcessor$o o 1
 GC m 292 g 4 n connectToMemory$i o 0
@@ -3482,6 +3459,9 @@ CC sm 264 sg 1 dm 292 dg 4
 CS sm 264 sg 1 d ""
 CC sm 292 sg 5 dm 264 dg 0
 CS sm 292 sg 5 d ""
+BU id 20 txt "Counted 1 Sensor(s) on the Node.\n"
+- Counted 1 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 261 m initialize(0)
 ME
@@ -5924,6 +5904,23 @@ MB sm 1 tm 266 m initialize(2)
 - initializing MovingMobilityBase stage 2
 - initializing LinearMobility stage 2
 ME
+tage 2
+ME
+MB sm 1 tm 236 m initialize(2)
+- initializing MobilityBase stage 2
+- initializing MovingMobilityBase stage 2
+- initializing LinearMobility stage 2
+ME
+MB sm 1 tm 251 m initialize(2)
+- initializing MobilityBase stage 2
+- initializing MovingMobilityBase stage 2
+- initializing LinearMobility stage 2
+ME
+MB sm 1 tm 266 m initialize(2)
+- initializing MobilityBase stage 2
+- initializing MovingMobilityBase stage 2
+- initializing LinearMobility stage 2
+ME
 
 E # 1 t 0 m 3 ce 0 msg 0
 DM id 0 tid 0 eid 0 etid 0 c cMessage n updateData pe 1
@@ -6824,148 +6821,147 @@ BS id 36 tid 36 eid 36 etid 36 c cMessage n app-delay-timer pe 91
 ES t 10.000324366191
 
 E # 92 t 5.000324141004 m 29 ce 0 msg 12
-MB sm 29 tm 22 m ""
+BS id 11 tid 11 eid 11 etid 11 c cMessage n clusterApplicationSleepTimer pe 0
+ES t 5.100976931322
+MB sm 29 tm 35 m ""
+BS id 8 tid 8 eid 8 etid 8 c cMessage n "radio switching over" k 22001 pe 0
+ES t 5.002116141004
+MB sm 35 tm 22 m ""
 ME
-- In MatrixApplication::handleMessage
-MS id 4 d "b=,,,white;t= 99.26 % ;p=408,218;bgb=447,450;i=block/ifcard"
--   processing application timer.
+ME
+MS id 4 d "b=,,,yellow;t=mode: normal;p=408,218;bgb=447,450;i=block/ifcard"
+- DiceEvent: 1
+MS id 4 d "b=,,,yellow;t=mode: normal;p=408,218;bgb=447,450;i=dice/Dice1a"
+MS id 4 d "b=,,,yellow;t=Dice: 1  ;p=408,218;bgb=447,450;i=dice/Dice1a"
+CM id 375 tid 375 eid 375 etid 375 c cMessage n "" pe -1
+BS id 375 tid 375 eid 375 etid 375 c WakeUpPacket n wakeup pe 92
+CL id 375 tid 375 eid 375 etid 375 c WakeUpPacket n wakeup pe 92 cid 376
+SH sm 29 sg 3
+ES t 5.000324141004
 BS id 12 tid 12 eid 12 etid 12 c cMessage n app-delay-timer pe 92
-ES t 10.000976931322
+ES t 5.050533017762
 
-E # 93 t 5.000325047227 m 254 ce 0 msg 192
+E # 93 t 5.000324141004 m 28 ce 92 msg 375
+- I am NODE 0-------------------- I am NODE ---------
+-           received msg with name: wakeup
+- WiseRoute: CInfo removed, netw addr=-1
+CL id 375 tid 375 eid 375 etid 375 c WakeUpPacket n wakeup pe 93 cid 377
+CM id 378 tid 378 eid 378 etid 378 c cMessage n wakeup k 1 pe -1
+MB sm 28 tm 25 m ""
+ME
+BS id 378 tid 378 eid 377 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 93
+CL id 378 tid 378 eid 377 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 93 cid 379
+SH sm 28 sg 11
+SH sm 27 sg 0
+ES t 5.000324141004
+CL id 375 tid 375 eid 375 etid 375 c WakeUpPacket n wakeup pe 93 cid 380
+CM id 381 tid 381 eid 381 etid 381 c cMessage n wakeup k 1 pe -1
+MB sm 28 tm 25 m ""
+ME
+BS id 381 tid 381 eid 380 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 93
+CL id 381 tid 381 eid 380 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 93 cid 382
+SH sm 28 sg 11
+SH sm 27 sg 0
+ES t 5.000324141004
+CL id 375 tid 375 eid 375 etid 375 c WakeUpPacket n wakeup pe 93 cid 383
+CM id 384 tid 384 eid 384 etid 384 c cMessage n wakeup k 1 pe -1
+MB sm 28 tm 25 m ""
+ME
+BS id 384 tid 384 eid 383 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 93
+CL id 384 tid 384 eid 383 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 93 cid 385
+SH sm 28 sg 11
+SH sm 27 sg 0
+ES t 5.000324141004
+DM id 375 tid 375 eid 375 etid 375 c cMessage n wakeup pe 93
+
+E # 94 t 5.000324141004 m 34 ce 93 msg 378
+CM id 386 tid 386 eid 386 etid 386 c cMessage n wakeup pe -1
+BS id 4 tid 4 eid 4 etid 4 c cMessage n timer-backoff pe 0
+ES t 5.000324141004
+
+E # 95 t 5.000324141004 m 34 ce 93 msg 381
+CM id 387 tid 387 eid 387 etid 387 c cMessage n wakeup pe -1
+
+E # 96 t 5.000324141004 m 34 ce 93 msg 384
+CM id 388 tid 388 eid 388 etid 388 c cMessage n wakeup pe -1
+
+E # 97 t 5.000324141004 m 34 ce 94 msg 4
+BS id 5 tid 5 eid 5 etid 5 c cMessage n timer-cca pe 0
+ES t 5.002616141004
+MB sm 34 tm 35 m ""
+ME
+
+E # 98 t 5.000325047227 m 254 ce 0 msg 192
 MB sm 254 tm 247 m ""
 ME
 - In MatrixApplication::handleMessage
 MS id 19 d "b=,,,white;t= 99.26 % ;p=652,349;bgb=447,450;i=block/ifcard"
 -   processing application timer.
-BS id 192 tid 192 eid 192 etid 192 c cMessage n app-delay-timer pe 93
-ES t 10.000533923985
+BS id 192 tid 192 eid 192 etid 192 c cMessage n app-delay-timer pe 98
+ES t 10.000486356738
 
-E # 94 t 5.00035815217 m 209 ce 0 msg 156
+E # 99 t 5.00035815217 m 209 ce 0 msg 156
 MB sm 209 tm 202 m ""
 ME
 - In MatrixApplication::handleMessage
 MS id 16 d "b=,,,white;t= 99.26 % ;p=783,103;bgb=447,450;i=block/ifcard"
 -   processing application timer.
-BS id 156 tid 156 eid 156 etid 156 c cMessage n app-delay-timer pe 94
-ES t 10.000993211047
+BS id 156 tid 156 eid 156 etid 156 c cMessage n app-delay-timer pe 99
+ES t 10.001353451735
 
-E # 95 t 5.000386488978 m 74 ce 0 msg 48
+E # 100 t 5.000386488978 m 74 ce 0 msg 48
 MB sm 74 tm 67 m ""
 ME
 - In MatrixApplication::handleMessage
 MS id 7 d "b=,,,white;t= 99.26 % ;p=193,142;bgb=447,450;i=block/ifcard"
 -   processing application timer.
-BS id 48 tid 48 eid 48 etid 48 c cMessage n app-delay-timer pe 95
-ES t 10.000547798489
+BS id 48 tid 48 eid 48 etid 48 c cMessage n app-delay-timer pe 100
+ES t 10.0010395973
 
-E # 96 t 5.000449949989 m 104 ce 0 msg 72
+E # 101 t 5.000449949989 m 104 ce 0 msg 72
 MB sm 104 tm 97 m ""
 ME
 - In MatrixApplication::handleMessage
 MS id 9 d "b=,,,white;t= 99.26 % ;p=401,328;bgb=447,450;i=block/ifcard"
 -   processing application timer.
-BS id 72 tid 72 eid 72 etid 72 c cMessage n app-delay-timer pe 96
-ES t 10.001445249554
+BS id 72 tid 72 eid 72 etid 72 c cMessage n app-delay-timer pe 101
+ES t 10.001031800321
 
-E # 97 t 5.000607830666 m 239 ce 0 msg 180
+E # 102 t 5.000607830666 m 239 ce 0 msg 180
 MB sm 239 tm 232 m ""
 ME
 - In MatrixApplication::handleMessage
 MS id 18 d "b=,,,white;t= 99.26 % ;p=589,328;bgb=447,450;i=block/ifcard"
 -   processing application timer.
-BS id 180 tid 180 eid 180 etid 180 c cMessage n app-delay-timer pe 97
-ES t 10.001260938988
+BS id 180 tid 180 eid 180 etid 180 c cMessage n app-delay-timer pe 102
+ES t 10.000861122267
 
-E # 98 t 5.000613063461 m 119 ce 0 msg 84
+E # 103 t 5.000613063461 m 119 ce 0 msg 84
 MB sm 119 tm 112 m ""
 ME
 - In MatrixApplication::handleMessage
 MS id 10 d "b=,,,white;t= 99.26 % ;p=296,367;bgb=447,450;i=block/ifcard"
 -   processing application timer.
-BS id 84 tid 84 eid 84 etid 84 c cMessage n app-delay-timer pe 98
-ES t 10.001194913793
+BS id 84 tid 84 eid 84 etid 84 c cMessage n app-delay-timer pe 103
+ES t 10.001027432049
 
-E # 99 t 5.000653140032 m 179 ce 0 msg 132
+E # 104 t 5.000653140032 m 179 ce 0 msg 132
 MB sm 179 tm 172 m ""
 ME
 - In MatrixApplication::handleMessage
 MS id 14 d "b=,,,white;t= 99.26 % ;p=605,77;bgb=447,450;i=block/ifcard"
 -   processing application timer.
-BS id 132 tid 132 eid 132 etid 132 c cMessage n app-delay-timer pe 99
-ES t 10.000906431633
+BS id 132 tid 132 eid 132 etid 132 c cMessage n app-delay-timer pe 104
+ES t 10.001119450804
 
-E # 100 t 5.000750686138 m 224 ce 0 msg 168
-BS id 167 tid 167 eid 167 etid 167 c cMessage n clusterApplicationSleepTimer pe 0
-ES t 5.101165054726
-MB sm 224 tm 230 m ""
-BS id 164 tid 164 eid 164 etid 164 c cMessage n "radio switching over" k 22001 pe 0
-ES t 5.002542686138
-MB sm 230 tm 217 m ""
+E # 105 t 5.000750686138 m 224 ce 0 msg 168
+MB sm 224 tm 217 m ""
 ME
-ME
-MS id 17 d "b=,,,yellow;t=mode: normal;p=519,218;bgb=447,450;i=block/ifcard"
-- DiceEvent: 2
-MS id 17 d "b=,,,yellow;t=mode: normal;p=519,218;bgb=447,450;i=dice/Dice2a"
-MS id 17 d "b=,,,yellow;t=Dice: 2  ;p=519,218;bgb=447,450;i=dice/Dice2a"
-CM id 375 tid 375 eid 375 etid 375 c cMessage n "" pe -1
-BS id 375 tid 375 eid 375 etid 375 c ApplPkt n wakeup pe 100
-CL id 375 tid 375 eid 375 etid 375 c ApplPkt n wakeup pe 100 cid 376
-SH sm 224 sg 3
-ES t 5.000750686138
-BS id 168 tid 168 eid 168 etid 168 c cMessage n app-delay-timer pe 100
-ES t 5.05121699691
-
-E # 101 t 5.000750686138 m 223 ce 100 msg 375
-- I am NODE 13-------------------- I am NODE ---------
--           received msg with name: wakeup
-- WiseRoute: CInfo removed, netw addr=-1
-CL id 375 tid 375 eid 375 etid 375 c ApplPkt n wakeup pe 101 cid 377
-- Nexthop  :9-------------------- I am NODE ---------
-CM id 378 tid 378 eid 378 etid 378 c cMessage n wakeup k 1 pe -1
-MB sm 223 tm 220 m ""
-ME
-BS id 378 tid 378 eid 377 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 101
-CL id 378 tid 378 eid 377 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 101 cid 379
-SH sm 223 sg 11
-SH sm 222 sg 0
-ES t 5.000750686138
-CL id 375 tid 375 eid 375 etid 375 c ApplPkt n wakeup pe 101 cid 380
-- Nexthop  :14-------------------- I am NODE ---------
-CM id 381 tid 381 eid 381 etid 381 c cMessage n wakeup k 1 pe -1
-MB sm 223 tm 220 m ""
-ME
-BS id 381 tid 381 eid 380 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 101
-CL id 381 tid 381 eid 380 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 101 cid 382
-SH sm 223 sg 11
-SH sm 222 sg 0
-ES t 5.000750686138
-- Nexthop  :0-------------------- I am NODE ---------
-CM id 383 tid 383 eid 383 etid 383 c cMessage n wakeup k 1 pe -1
-MB sm 223 tm 220 m ""
-ME
-BS id 383 tid 383 eid 375 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 101
-CL id 383 tid 383 eid 375 etid 375 c WiseRoutePkt n wakeup k 1 l 128 pe 101 cid 384
-SH sm 223 sg 11
-SH sm 222 sg 0
-ES t 5.000750686138
-
-E # 102 t 5.000750686138 m 229 ce 101 msg 378
-CM id 385 tid 385 eid 385 etid 385 c cMessage n wakeup pe -1
-BS id 160 tid 160 eid 160 etid 160 c cMessage n timer-backoff pe 0
-ES t 5.000750686138
-
-E # 103 t 5.000750686138 m 229 ce 101 msg 381
-CM id 386 tid 386 eid 386 etid 386 c cMessage n wakeup pe -1
-
-E # 104 t 5.000750686138 m 229 ce 101 msg 383
-CM id 387 tid 387 eid 387 etid 387 c cMessage n wakeup pe -1
-
-E # 105 t 5.000750686138 m 229 ce 102 msg 160
-BS id 161 tid 161 eid 161 etid 161 c cMessage n timer-cca pe 0
-ES t 5.003042686138
-MB sm 229 tm 230 m ""
-ME
+- In MatrixApplication::handleMessage
+MS id 17 d "b=,,,white;t= 99.26 % ;p=519,218;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 168 tid 168 eid 168 etid 168 c cMessage n app-delay-timer pe 105
+ES t 10.001225383643
 
 E # 106 t 5.000902348578 m 134 ce 0 msg 96
 MB sm 134 tm 127 m ""
@@ -6994,1003 +6990,57 @@ MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
 BS id 120 tid 120 eid 120 etid 120 c cMessage n app-delay-timer pe 108
 ES t 10.001128778654
 
-E # 109 t 5.002542686138 m 230 ce 100 msg 164
-CM id 388 tid 388 eid 388 etid 388 c cMessage n "Radio switching over" k 22001 pe -1
-BS id 388 tid 388 eid 388 etid 388 c cMessage n "Radio switching over" k 22001 pe 109
-CL id 388 tid 388 eid 388 etid 388 c cMessage n "Radio switching over" k 22001 pe 109 cid 389
-SH sm 230 sg 7
-ES t 5.002542686138
-MB sm 230 tm 217 m ""
-ME
-
-E # 110 t 5.002542686138 m 229 ce 109 msg 388
-DM id 388 tid 388 eid 388 etid 388 c cMessage n "Radio switching over" k 22001 pe 110
-
-E # 111 t 5.003042686138 m 229 ce 105 msg 161
-MB sm 229 tm 230 m ""
-ME
-MB sm 229 tm 230 m ""
-BS id 164 tid 164 eid 164 etid 164 c cMessage n "radio switching over" k 22001 pe 109
-ES t 5.003234686138
-MB sm 230 tm 217 m ""
-ME
-ME
-CL id 385 tid 385 eid 377 etid 375 c MacPkt n wakeup l 152 pe 102 cid 390
-BS id 390 tid 385 eid 377 etid 375 c MacPkt n wakeup l 152 pe 111
-CL id 390 tid 385 eid 377 etid 375 c MacPkt n wakeup l 152 pe 111 cid 391
-SH sm 229 sg 11
-ES t 5.003242686138
-
-E # 112 t 5.003234686138 m 230 ce 111 msg 164
-CM id 392 tid 392 eid 392 etid 392 c cMessage n "Radio switching over" k 22001 pe -1
-BS id 392 tid 392 eid 392 etid 392 c cMessage n "Radio switching over" k 22001 pe 112
-CL id 392 tid 392 eid 392 etid 392 c cMessage n "Radio switching over" k 22001 pe 112 cid 393
-SH sm 230 sg 7
-ES t 5.003234686138
-MB sm 230 tm 217 m ""
-ME
-
-E # 113 t 5.003234686138 m 229 ce 112 msg 392
-DM id 392 tid 392 eid 392 etid 392 c cMessage n "Radio switching over" k 22001 pe 113
-
-E # 114 t 5.003242686138 m 230 ce 111 msg 390
-CM id 394 tid 394 eid 394 etid 394 c cMessage n wakeup k 22003 pe -1
-BS id 165 tid 165 eid 165 etid 165 c cMessage n "transmission over" k 22000 pe 0
-ES t 5.016263519471
-CL id 394 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114 cid 395
-BS id 395 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114
-CL id 395 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114 cid 396
-SH sm 230 sg 15
-SH sm 222 sg 15
-SH sm 17 sg 7
-SH sm 4 sg 10
-SH sm 27 sg 18
-ES t 5.003242686138
-CL id 394 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114 cid 397
-BS id 397 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114
-CL id 397 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114 cid 398
-SH sm 230 sg 11
-SH sm 222 sg 11
-SH sm 17 sg 3
-SH sm 13 sg 6
-SH sm 162 sg 14
-ES t 5.003242686138
-BS id 394 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114
-CL id 394 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114 cid 399
-SH sm 230 sg 21
-SH sm 222 sg 21
-SH sm 17 sg 13
-SH sm 18 sg 4
-SH sm 237 sg 12
-ES t 5.003242686138
-
-E # 115 t 5.003242686138 m 35 ce 114 msg 395
--  t= 5.003242686138 xpos= 519 ypos=218 speed=0
-- visual position. x = 519 y = 218 z = 0
-MS id 17 d "b=,,,yellow;t=Dice: 2  ;p=519,218;bgb=447,450;i=dice/Dice2a"
-MS id 17 d "b=,,,yellow;t=Dice: 2  ;p=519,218;bgb=447,450;i=dice/Dice2a"
--  t= 5.003242686138 xpos= 408 ypos=218 speed=0
-- visual position. x = 408 y = 218 z = 0
-MS id 4 d "b=,,,white;t= 99.26 % ;p=408,218;bgb=447,450;i=block/ifcard"
-MS id 4 d "b=,,,white;t= 99.26 % ;p=408,218;bgb=447,450;i=block/ifcard"
-BS id 395 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 115
-ES t 5.016263519471
-
-E # 116 t 5.003242686138 m 170 ce 114 msg 397
--  t= 5.003242686138 xpos= 558 ypos=142 speed=0
-- visual position. x = 558 y = 142 z = 0
-MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
-MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
-BS id 397 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 116
-ES t 5.016263519471
-
-E # 117 t 5.003242686138 m 245 ce 114 msg 394
--  t= 5.003242686138 xpos= 589 ypos=328 speed=0
-- visual position. x = 589 y = 328 z = 0
-MS id 18 d "b=,,,white;t= 99.26 % ;p=589,328;bgb=447,450;i=block/ifcard"
-MS id 18 d "b=,,,white;t= 99.26 % ;p=589,328;bgb=447,450;i=block/ifcard"
-BS id 394 tid 394 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 117
-ES t 5.016263519471
-
-E # 118 t 5.016263519471 m 230 ce 114 msg 165
-CM id 400 tid 400 eid 400 etid 400 c cMessage n "Transmission over" k 22000 pe -1
-BS id 400 tid 400 eid 400 etid 400 c cMessage n "Transmission over" k 22000 pe 118
-CL id 400 tid 400 eid 400 etid 400 c cMessage n "Transmission over" k 22000 pe 118 cid 401
-SH sm 230 sg 7
-ES t 5.016263519471
-
-E # 119 t 5.016263519471 m 229 ce 118 msg 400
-MB sm 229 tm 230 m ""
-BS id 164 tid 164 eid 164 etid 164 c cMessage n "radio switching over" k 22001 pe 112
-ES t 5.016455519471
-MB sm 230 tm 217 m ""
-ME
-ME
-DM id 385 tid 385 eid 385 etid 385 c cMessage n wakeup pe 111
-BS id 160 tid 160 eid 160 etid 160 c cMessage n timer-backoff pe 105
-ES t 5.016263519471
-DM id 400 tid 400 eid 400 etid 400 c cMessage n "Transmission over" k 22000 pe 119
-
-E # 120 t 5.016263519471 m 229 ce 119 msg 160
-BS id 161 tid 161 eid 161 etid 161 c cMessage n timer-cca pe 111
-ES t 5.018555519471
-MB sm 229 tm 230 m ""
-ME
-
-E # 121 t 5.016263519471 m 35 ce 115 msg 395
-DM id 395 tid 394 eid 395 etid 394 c cMessage n wakeup k 22003 p 10 pe 121
-
-E # 122 t 5.016263519471 m 170 ce 116 msg 397
-DM id 397 tid 394 eid 397 etid 394 c cMessage n wakeup k 22003 p 10 pe 122
-
-E # 123 t 5.016263519471 m 245 ce 117 msg 394
-DM id 394 tid 394 eid 394 etid 394 c cMessage n wakeup k 22003 p 10 pe 123
-
-E # 124 t 5.016455519471 m 230 ce 119 msg 164
-CM id 402 tid 402 eid 402 etid 402 c cMessage n "Radio switching over" k 22001 pe -1
-BS id 402 tid 402 eid 402 etid 402 c cMessage n "Radio switching over" k 22001 pe 124
-CL id 402 tid 402 eid 402 etid 402 c cMessage n "Radio switching over" k 22001 pe 124 cid 403
-SH sm 230 sg 7
-ES t 5.016455519471
-MB sm 230 tm 217 m ""
-ME
-
-E # 125 t 5.016455519471 m 229 ce 124 msg 402
-DM id 402 tid 402 eid 402 etid 402 c cMessage n "Radio switching over" k 22001 pe 125
-
-E # 126 t 5.018555519471 m 229 ce 120 msg 161
-MB sm 229 tm 230 m ""
-ME
-MB sm 229 tm 230 m ""
-BS id 164 tid 164 eid 164 etid 164 c cMessage n "radio switching over" k 22001 pe 124
-ES t 5.018747519471
-MB sm 230 tm 217 m ""
-ME
-ME
-CL id 386 tid 386 eid 380 etid 375 c MacPkt n wakeup l 152 pe 103 cid 404
-BS id 404 tid 386 eid 380 etid 375 c MacPkt n wakeup l 152 pe 126
-CL id 404 tid 386 eid 380 etid 375 c MacPkt n wakeup l 152 pe 126 cid 405
-SH sm 229 sg 11
-ES t 5.018755519471
-
-E # 127 t 5.018747519471 m 230 ce 126 msg 164
-CM id 406 tid 406 eid 406 etid 406 c cMessage n "Radio switching over" k 22001 pe -1
-BS id 406 tid 406 eid 406 etid 406 c cMessage n "Radio switching over" k 22001 pe 127
-CL id 406 tid 406 eid 406 etid 406 c cMessage n "Radio switching over" k 22001 pe 127 cid 407
-SH sm 230 sg 7
-ES t 5.018747519471
-MB sm 230 tm 217 m ""
-ME
-
-E # 128 t 5.018747519471 m 229 ce 127 msg 406
-DM id 406 tid 406 eid 406 etid 406 c cMessage n "Radio switching over" k 22001 pe 128
-
-E # 129 t 5.018755519471 m 230 ce 126 msg 404
-CM id 408 tid 408 eid 408 etid 408 c cMessage n wakeup k 22003 pe -1
-BS id 165 tid 165 eid 165 etid 165 c cMessage n "transmission over" k 22000 pe 118
-ES t 5.031776352804
-CL id 408 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 129 cid 409
-BS id 409 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 129
-CL id 409 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 129 cid 410
-SH sm 230 sg 15
-SH sm 222 sg 15
-SH sm 17 sg 7
-SH sm 4 sg 10
-SH sm 27 sg 18
-ES t 5.018755519471
-CL id 408 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 129 cid 411
-BS id 411 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 129
-CL id 411 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 129 cid 412
-SH sm 230 sg 11
-SH sm 222 sg 11
-SH sm 17 sg 3
-SH sm 13 sg 6
-SH sm 162 sg 14
-ES t 5.018755519471
-BS id 408 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 129
-CL id 408 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 129 cid 413
-SH sm 230 sg 21
-SH sm 222 sg 21
-SH sm 17 sg 13
-SH sm 18 sg 4
-SH sm 237 sg 12
-ES t 5.018755519471
-
-E # 130 t 5.018755519471 m 35 ce 129 msg 409
--  t= 5.018755519471 xpos= 519 ypos=218 speed=0
-- visual position. x = 519 y = 218 z = 0
-MS id 17 d "b=,,,yellow;t=Dice: 2  ;p=519,218;bgb=447,450;i=dice/Dice2a"
-MS id 17 d "b=,,,yellow;t=Dice: 2  ;p=519,218;bgb=447,450;i=dice/Dice2a"
--  t= 5.018755519471 xpos= 408 ypos=218 speed=0
-- visual position. x = 408 y = 218 z = 0
-MS id 4 d "b=,,,white;t= 99.26 % ;p=408,218;bgb=447,450;i=block/ifcard"
-MS id 4 d "b=,,,white;t= 99.26 % ;p=408,218;bgb=447,450;i=block/ifcard"
-BS id 409 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 130
-ES t 5.031776352804
-
-E # 131 t 5.018755519471 m 170 ce 129 msg 411
--  t= 5.018755519471 xpos= 558 ypos=142 speed=0
-- visual position. x = 558 y = 142 z = 0
-MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
-MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
-BS id 411 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 131
-ES t 5.031776352804
-
-E # 132 t 5.018755519471 m 245 ce 129 msg 408
--  t= 5.018755519471 xpos= 589 ypos=328 speed=0
-- visual position. x = 589 y = 328 z = 0
-MS id 18 d "b=,,,white;t= 99.26 % ;p=589,328;bgb=447,450;i=block/ifcard"
-MS id 18 d "b=,,,white;t= 99.26 % ;p=589,328;bgb=447,450;i=block/ifcard"
-BS id 408 tid 408 eid 380 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 132
-ES t 5.031776352804
-
-E # 133 t 5.031776352804 m 230 ce 129 msg 165
-CM id 414 tid 414 eid 414 etid 414 c cMessage n "Transmission over" k 22000 pe -1
-BS id 414 tid 414 eid 414 etid 414 c cMessage n "Transmission over" k 22000 pe 133
-CL id 414 tid 414 eid 414 etid 414 c cMessage n "Transmission over" k 22000 pe 133 cid 415
-SH sm 230 sg 7
-ES t 5.031776352804
-
-E # 134 t 5.031776352804 m 229 ce 133 msg 414
-MB sm 229 tm 230 m ""
-BS id 164 tid 164 eid 164 etid 164 c cMessage n "radio switching over" k 22001 pe 127
-ES t 5.031968352804
-MB sm 230 tm 217 m ""
-ME
-ME
-DM id 386 tid 386 eid 386 etid 386 c cMessage n wakeup pe 126
-BS id 160 tid 160 eid 160 etid 160 c cMessage n timer-backoff pe 120
-ES t 5.031776352804
-DM id 414 tid 414 eid 414 etid 414 c cMessage n "Transmission over" k 22000 pe 134
-
-E # 135 t 5.031776352804 m 229 ce 134 msg 160
-BS id 161 tid 161 eid 161 etid 161 c cMessage n timer-cca pe 126
-ES t 5.034068352804
-MB sm 229 tm 230 m ""
-ME
-
-E # 136 t 5.031776352804 m 35 ce 130 msg 409
-DM id 409 tid 408 eid 409 etid 408 c cMessage n wakeup k 22003 p 10 pe 136
-
-E # 137 t 5.031776352804 m 170 ce 131 msg 411
-DM id 411 tid 408 eid 411 etid 408 c cMessage n wakeup k 22003 p 10 pe 137
-
-E # 138 t 5.031776352804 m 245 ce 132 msg 408
-DM id 408 tid 408 eid 408 etid 408 c cMessage n wakeup k 22003 p 10 pe 138
-
-E # 139 t 5.031968352804 m 230 ce 134 msg 164
-CM id 416 tid 416 eid 416 etid 416 c cMessage n "Radio switching over" k 22001 pe -1
-BS id 416 tid 416 eid 416 etid 416 c cMessage n "Radio switching over" k 22001 pe 139
-CL id 416 tid 416 eid 416 etid 416 c cMessage n "Radio switching over" k 22001 pe 139 cid 417
-SH sm 230 sg 7
-ES t 5.031968352804
-MB sm 230 tm 217 m ""
-ME
-
-E # 140 t 5.031968352804 m 229 ce 139 msg 416
-DM id 416 tid 416 eid 416 etid 416 c cMessage n "Radio switching over" k 22001 pe 140
-
-E # 141 t 5.034068352804 m 229 ce 135 msg 161
-MB sm 229 tm 230 m ""
-ME
-MB sm 229 tm 230 m ""
-BS id 164 tid 164 eid 164 etid 164 c cMessage n "radio switching over" k 22001 pe 139
-ES t 5.034260352804
-MB sm 230 tm 217 m ""
-ME
-ME
-CL id 387 tid 387 eid 375 etid 375 c MacPkt n wakeup l 152 pe 104 cid 418
-BS id 418 tid 387 eid 375 etid 375 c MacPkt n wakeup l 152 pe 141
-CL id 418 tid 387 eid 375 etid 375 c MacPkt n wakeup l 152 pe 141 cid 419
-SH sm 229 sg 11
-ES t 5.034268352804
-
-E # 142 t 5.034260352804 m 230 ce 141 msg 164
-CM id 420 tid 420 eid 420 etid 420 c cMessage n "Radio switching over" k 22001 pe -1
-BS id 420 tid 420 eid 420 etid 420 c cMessage n "Radio switching over" k 22001 pe 142
-CL id 420 tid 420 eid 420 etid 420 c cMessage n "Radio switching over" k 22001 pe 142 cid 421
-SH sm 230 sg 7
-ES t 5.034260352804
-MB sm 230 tm 217 m ""
-ME
-
-E # 143 t 5.034260352804 m 229 ce 142 msg 420
-DM id 420 tid 420 eid 420 etid 420 c cMessage n "Radio switching over" k 22001 pe 143
-
-E # 144 t 5.034268352804 m 230 ce 141 msg 418
-CM id 422 tid 422 eid 422 etid 422 c cMessage n wakeup k 22003 pe -1
-BS id 165 tid 165 eid 165 etid 165 c cMessage n "transmission over" k 22000 pe 133
-ES t 5.047289186137
-CL id 422 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 144 cid 423
-BS id 423 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 144
-CL id 423 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 144 cid 424
-SH sm 230 sg 15
-SH sm 222 sg 15
-SH sm 17 sg 7
-SH sm 4 sg 10
-SH sm 27 sg 18
-ES t 5.034268352804
-CL id 422 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 144 cid 425
-BS id 425 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 144
-CL id 425 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 144 cid 426
-SH sm 230 sg 11
-SH sm 222 sg 11
-SH sm 17 sg 3
-SH sm 13 sg 6
-SH sm 162 sg 14
-ES t 5.034268352804
-BS id 422 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 144
-CL id 422 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 144 cid 427
-SH sm 230 sg 21
-SH sm 222 sg 21
-SH sm 17 sg 13
-SH sm 18 sg 4
-SH sm 237 sg 12
-ES t 5.034268352804
-
-E # 145 t 5.034268352804 m 35 ce 144 msg 423
--  t= 5.034268352804 xpos= 519 ypos=218 speed=0
-- visual position. x = 519 y = 218 z = 0
-MS id 17 d "b=,,,yellow;t=Dice: 2  ;p=519,218;bgb=447,450;i=dice/Dice2a"
-MS id 17 d "b=,,,yellow;t=Dice: 2  ;p=519,218;bgb=447,450;i=dice/Dice2a"
--  t= 5.034268352804 xpos= 408 ypos=218 speed=0
-- visual position. x = 408 y = 218 z = 0
-MS id 4 d "b=,,,white;t= 99.26 % ;p=408,218;bgb=447,450;i=block/ifcard"
-MS id 4 d "b=,,,white;t= 99.26 % ;p=408,218;bgb=447,450;i=block/ifcard"
-BS id 423 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 145
-ES t 5.047289186137
-
-E # 146 t 5.034268352804 m 170 ce 144 msg 425
--  t= 5.034268352804 xpos= 558 ypos=142 speed=0
-- visual position. x = 558 y = 142 z = 0
-MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
-MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
-BS id 425 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 146
-ES t 5.047289186137
-
-E # 147 t 5.034268352804 m 245 ce 144 msg 422
--  t= 5.034268352804 xpos= 589 ypos=328 speed=0
-- visual position. x = 589 y = 328 z = 0
-MS id 18 d "b=,,,white;t= 99.26 % ;p=589,328;bgb=447,450;i=block/ifcard"
-MS id 18 d "b=,,,white;t= 99.26 % ;p=589,328;bgb=447,450;i=block/ifcard"
-BS id 422 tid 422 eid 375 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 147
-ES t 5.047289186137
-
-E # 148 t 5.047289186137 m 230 ce 144 msg 165
-CM id 428 tid 428 eid 428 etid 428 c cMessage n "Transmission over" k 22000 pe -1
-BS id 428 tid 428 eid 428 etid 428 c cMessage n "Transmission over" k 22000 pe 148
-CL id 428 tid 428 eid 428 etid 428 c cMessage n "Transmission over" k 22000 pe 148 cid 429
-SH sm 230 sg 7
-ES t 5.047289186137
-
-E # 149 t 5.047289186137 m 229 ce 148 msg 428
-MB sm 229 tm 230 m ""
-BS id 164 tid 164 eid 164 etid 164 c cMessage n "radio switching over" k 22001 pe 142
-ES t 5.047481186137
-MB sm 230 tm 217 m ""
-ME
-ME
-DM id 387 tid 387 eid 387 etid 387 c cMessage n wakeup pe 141
-DM id 428 tid 428 eid 428 etid 428 c cMessage n "Transmission over" k 22000 pe 149
-
-E # 150 t 5.047289186137 m 35 ce 145 msg 423
-DM id 423 tid 422 eid 423 etid 422 c cMessage n wakeup k 22003 p 10 pe 150
-
-E # 151 t 5.047289186137 m 170 ce 146 msg 425
-DM id 425 tid 422 eid 425 etid 422 c cMessage n wakeup k 22003 p 10 pe 151
-
-E # 152 t 5.047289186137 m 245 ce 147 msg 422
-DM id 422 tid 422 eid 422 etid 422 c cMessage n wakeup k 22003 p 10 pe 152
-
-E # 153 t 5.047481186137 m 230 ce 149 msg 164
-CM id 430 tid 430 eid 430 etid 430 c cMessage n "Radio switching over" k 22001 pe -1
-BS id 430 tid 430 eid 430 etid 430 c cMessage n "Radio switching over" k 22001 pe 153
-CL id 430 tid 430 eid 430 etid 430 c cMessage n "Radio switching over" k 22001 pe 153 cid 431
-SH sm 230 sg 7
-ES t 5.047481186137
-MB sm 230 tm 217 m ""
-ME
-
-E # 154 t 5.047481186137 m 229 ce 153 msg 430
-DM id 430 tid 430 eid 430 etid 430 c cMessage n "Radio switching over" k 22001 pe 154
-
-E # 155 t 5.05121699691 m 224 ce 100 msg 168
-CE id 167 tid 167 eid 167 etid 167 c cMessage n clusterApplicationSleepTimer pe 100
-BS id 167 tid 167 eid 167 etid 167 c cMessage n clusterApplicationSleepTimer pe 155
-ES t 5.151891749232
-MB sm 224 tm 230 m ""
-MB sm 230 tm 217 m ""
-ME
-MB sm 230 tm 217 m ""
-ME
-ME
-MS id 17 d "b=,,,yellow;t=Dice: 2  ;p=519,218;bgb=447,450;i=dice/Dice2a"
-CM id 432 tid 432 eid 432 etid 432 c cMessage n "" pe -1
-BS id 432 tid 432 eid 432 etid 432 c GenericPacket n "" l 224 pe 155
-ES t 5.06506699691
-CE id 167 tid 167 eid 167 etid 167 c cMessage n clusterApplicationSleepTimer pe 155
-BS id 167 tid 167 eid 167 etid 167 c cMessage n clusterApplicationSleepTimer pe 155
-ES t 5.151873326501
-BS id 168 tid 168 eid 168 etid 168 c cMessage n app-delay-timer pe 155
-ES t 35.051534198654
-
-E # 156 t 5.06506699691 m 224 ce 155 msg 432
-DM id 432 tid 432 eid 432 etid 432 c cMessage n "" pe 156
-
-E # 157 t 5.151873326501 m 224 ce 155 msg 167
-MS id 17 d "b=,,,white;t=Dice: 2  ;p=519,218;bgb=447,450;i=dice/Dice2a"
-MB sm 224 tm 230 m ""
-MB sm 230 tm 217 m ""
-ME
-MB sm 230 tm 217 m ""
-ME
-ME
-
-E # 158 t 10.000324366191 m 59 ce 91 msg 36
-MB sm 59 tm 52 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 6 d "b=,,,white;t= 99.26 % ;p=257,88;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 36 tid 36 eid 36 etid 36 c cMessage n app-delay-timer pe 158
-ES t 15.00046254914
-
-E # 159 t 10.000477026938 m 269 ce 87 msg 204
-MB sm 269 tm 262 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 20 d "b=,,,white;t= 99.26 % ;p=746,349;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 204 tid 204 eid 204 etid 204 c cMessage n app-delay-timer pe 159
-ES t 15.001255372419
-
-E # 160 t 10.000533923985 m 254 ce 93 msg 192
-MB sm 254 tm 247 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 19 d "b=,,,white;t= 99.26 % ;p=652,349;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 192 tid 192 eid 192 etid 192 c cMessage n app-delay-timer pe 160
-ES t 15.000730506341
-
-E # 161 t 10.000547798489 m 74 ce 95 msg 48
-MB sm 74 tm 67 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 7 d "b=,,,white;t= 99.26 % ;p=193,142;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 48 tid 48 eid 48 etid 48 c cMessage n app-delay-timer pe 161
-ES t 15.00149736954
-
-E # 162 t 10.000733554404 m 149 ce 88 msg 108
-MB sm 149 tm 142 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 12 d "b=,,,white;t= 99.26 % ;p=170,374;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 108 tid 108 eid 108 etid 108 c cMessage n app-delay-timer pe 162
-ES t 15.001102279569
-
-E # 163 t 10.000906431633 m 179 ce 99 msg 132
-MB sm 179 tm 172 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 14 d "b=,,,white;t= 99.26 % ;p=605,77;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 132 tid 132 eid 132 etid 132 c cMessage n app-delay-timer pe 163
-ES t 15.001568958501
-
-E # 164 t 10.000976931322 m 29 ce 92 msg 12
-MB sm 29 tm 22 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 4 d "b=,,,white;t= 99.26 % ;p=408,218;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 12 tid 12 eid 12 etid 12 c cMessage n app-delay-timer pe 164
-ES t 15.001797924552
-
-E # 165 t 10.000993211047 m 209 ce 94 msg 156
-MB sm 209 tm 202 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 16 d "b=,,,white;t= 99.26 % ;p=783,103;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 156 tid 156 eid 156 etid 156 c cMessage n app-delay-timer pe 165
-ES t 15.001006782688
-
-E # 166 t 10.001128778654 m 164 ce 108 msg 120
-MB sm 164 tm 157 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 120 tid 120 eid 120 etid 120 c cMessage n app-delay-timer pe 166
-ES t 15.001225879925
-
-E # 167 t 10.001129858855 m 194 ce 90 msg 144
-MB sm 194 tm 187 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 15 d "b=,,,white;t= 99.26 % ;p=707,77;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 144 tid 144 eid 144 etid 144 c cMessage n app-delay-timer pe 167
-ES t 15.001752704948
-
-E # 168 t 10.001138048694 m 44 ce 89 msg 24
-MB sm 44 tm 37 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 5 d "b=,,,white;t= 99.26 % ;p=377,116;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 24 tid 24 eid 24 etid 24 c cMessage n app-delay-timer pe 168
-ES t 15.0019759936
-
-E # 169 t 10.001146774166 m 134 ce 106 msg 96
-MB sm 134 tm 127 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 11 d "b=,,,white;t= 99.26 % ;p=240,280;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 96 tid 96 eid 96 etid 96 c cMessage n app-delay-timer pe 169
-ES t 15.001820433797
-
-E # 170 t 10.001194913793 m 119 ce 98 msg 84
-MB sm 119 tm 112 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 10 d "b=,,,white;t= 99.26 % ;p=296,367;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 84 tid 84 eid 84 etid 84 c cMessage n app-delay-timer pe 170
-ES t 15.001291012194
-
-E # 171 t 10.001260938988 m 239 ce 97 msg 180
-MB sm 239 tm 232 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 18 d "b=,,,white;t= 99.26 % ;p=589,328;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 180 tid 180 eid 180 etid 180 c cMessage n app-delay-timer pe 171
-ES t 15.002232883986
-
-E # 172 t 10.001445249554 m 104 ce 96 msg 72
-MB sm 104 tm 97 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 9 d "b=,,,white;t= 99.26 % ;p=401,328;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 72 tid 72 eid 72 etid 72 c cMessage n app-delay-timer pe 172
-ES t 15.002421709019
-
-E # 173 t 10.001526108577 m 89 ce 107 msg 60
-MB sm 89 tm 82 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 8 d "b=,,,white;t= 99.26 % ;p=91,103;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 60 tid 60 eid 60 etid 60 c cMessage n app-delay-timer pe 173
-ES t 15.002404302045
-
-E # 174 t 15.00046254914 m 59 ce 158 msg 36
-MB sm 59 tm 52 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 6 d "b=,,,white;t= 99.26 % ;p=257,88;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 36 tid 36 eid 36 etid 36 c cMessage n app-delay-timer pe 174
-ES t 20.000931200338
-
-E # 175 t 15.000730506341 m 254 ce 160 msg 192
-MB sm 254 tm 247 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 19 d "b=,,,white;t= 99.26 % ;p=652,349;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 192 tid 192 eid 192 etid 192 c cMessage n app-delay-timer pe 175
-ES t 20.001240130712
-
-E # 176 t 15.001006782688 m 209 ce 165 msg 156
-MB sm 209 tm 202 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 16 d "b=,,,white;t= 99.26 % ;p=783,103;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 156 tid 156 eid 156 etid 156 c cMessage n app-delay-timer pe 176
-ES t 20.001983543778
-
-E # 177 t 15.001102279569 m 149 ce 162 msg 108
-MB sm 149 tm 142 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 12 d "b=,,,white;t= 99.26 % ;p=170,374;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 108 tid 108 eid 108 etid 108 c cMessage n app-delay-timer pe 177
-ES t 20.001157994261
-
-E # 178 t 15.001225879925 m 164 ce 166 msg 120
-MB sm 164 tm 157 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 120 tid 120 eid 120 etid 120 c cMessage n app-delay-timer pe 178
-ES t 20.001830725443
-
-E # 179 t 15.001255372419 m 269 ce 159 msg 204
-MB sm 269 tm 262 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 20 d "b=,,,white;t= 99.26 % ;p=746,349;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 204 tid 204 eid 204 etid 204 c cMessage n app-delay-timer pe 179
-ES t 20.001706531632
-
-E # 180 t 15.001291012194 m 119 ce 170 msg 84
-MB sm 119 tm 112 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 10 d "b=,,,white;t= 99.26 % ;p=296,367;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 84 tid 84 eid 84 etid 84 c cMessage n app-delay-timer pe 180
-ES t 20.002030275775
-
-E # 181 t 15.00149736954 m 74 ce 161 msg 48
-MB sm 74 tm 67 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 7 d "b=,,,white;t= 99.26 % ;p=193,142;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 48 tid 48 eid 48 etid 48 c cMessage n app-delay-timer pe 181
-ES t 20.001517357212
-
-E # 182 t 15.001568958501 m 179 ce 163 msg 132
-MB sm 179 tm 172 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 14 d "b=,,,white;t= 99.26 % ;p=605,77;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 132 tid 132 eid 132 etid 132 c cMessage n app-delay-timer pe 182
-ES t 20.001608146289
-
-E # 183 t 15.001752704948 m 194 ce 167 msg 144
-MB sm 194 tm 187 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 15 d "b=,,,white;t= 99.26 % ;p=707,77;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 144 tid 144 eid 144 etid 144 c cMessage n app-delay-timer pe 183
-ES t 20.002194415869
-
-E # 184 t 15.001797924552 m 29 ce 164 msg 12
-MB sm 29 tm 22 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 4 d "b=,,,white;t= 99.26 % ;p=408,218;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 12 tid 12 eid 12 etid 12 c cMessage n app-delay-timer pe 184
-ES t 20.002080731511
-
-E # 185 t 15.001820433797 m 134 ce 169 msg 96
-MB sm 134 tm 127 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 11 d "b=,,,white;t= 99.26 % ;p=240,280;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 96 tid 96 eid 96 etid 96 c cMessage n app-delay-timer pe 185
-ES t 20.002800020527
-
-E # 186 t 15.0019759936 m 44 ce 168 msg 24
-MB sm 44 tm 37 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 5 d "b=,,,white;t= 99.26 % ;p=377,116;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 24 tid 24 eid 24 etid 24 c cMessage n app-delay-timer pe 186
-ES t 20.002096190164
-
-E # 187 t 15.002232883986 m 239 ce 171 msg 180
-MB sm 239 tm 232 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 18 d "b=,,,white;t= 99.26 % ;p=589,328;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 180 tid 180 eid 180 etid 180 c cMessage n app-delay-timer pe 187
-ES t 20.002592328454
-
-E # 188 t 15.002404302045 m 89 ce 173 msg 60
-MB sm 89 tm 82 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 8 d "b=,,,white;t= 99.26 % ;p=91,103;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 60 tid 60 eid 60 etid 60 c cMessage n app-delay-timer pe 188
-ES t 20.002700442244
-
-E # 189 t 15.002421709019 m 104 ce 172 msg 72
-MB sm 104 tm 97 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 9 d "b=,,,white;t= 99.26 % ;p=401,328;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 72 tid 72 eid 72 etid 72 c cMessage n app-delay-timer pe 189
-ES t 20.002902602555
-
-E # 190 t 20.000931200338 m 59 ce 174 msg 36
-MB sm 59 tm 52 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 6 d "b=,,,white;t= 99.26 % ;p=257,88;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 36 tid 36 eid 36 etid 36 c cMessage n app-delay-timer pe 190
-ES t 25.001049928052
-
-E # 191 t 20.001157994261 m 149 ce 177 msg 108
-MB sm 149 tm 142 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 12 d "b=,,,white;t= 99.26 % ;p=170,374;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 108 tid 108 eid 108 etid 108 c cMessage n app-delay-timer pe 191
-ES t 25.001846655447
-
-E # 192 t 20.001240130712 m 254 ce 175 msg 192
-MB sm 254 tm 247 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 19 d "b=,,,white;t= 99.26 % ;p=652,349;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 192 tid 192 eid 192 etid 192 c cMessage n app-delay-timer pe 192
-ES t 25.001558113885
-
-E # 193 t 20.001517357212 m 74 ce 181 msg 48
-MB sm 74 tm 67 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 7 d "b=,,,white;t= 99.26 % ;p=193,142;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 48 tid 48 eid 48 etid 48 c cMessage n app-delay-timer pe 193
-ES t 25.002397833105
-
-E # 194 t 20.001608146289 m 179 ce 182 msg 132
-MB sm 179 tm 172 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 14 d "b=,,,white;t= 99.26 % ;p=605,77;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 132 tid 132 eid 132 etid 132 c cMessage n app-delay-timer pe 194
-ES t 25.002022409277
-
-E # 195 t 20.001706531632 m 269 ce 179 msg 204
-MB sm 269 tm 262 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 20 d "b=,,,white;t= 99.26 % ;p=746,349;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 204 tid 204 eid 204 etid 204 c cMessage n app-delay-timer pe 195
-ES t 25.002624767104
-
-E # 196 t 20.001830725443 m 164 ce 178 msg 120
-MB sm 164 tm 157 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 120 tid 120 eid 120 etid 120 c cMessage n app-delay-timer pe 196
-ES t 25.001894872944
-
-E # 197 t 20.001983543778 m 209 ce 176 msg 156
-MB sm 209 tm 202 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 16 d "b=,,,white;t= 99.26 % ;p=783,103;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 156 tid 156 eid 156 etid 156 c cMessage n app-delay-timer pe 197
-ES t 25.002200365911
-
-E # 198 t 20.002030275775 m 119 ce 180 msg 84
-MB sm 119 tm 112 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 10 d "b=,,,white;t= 99.26 % ;p=296,367;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 84 tid 84 eid 84 etid 84 c cMessage n app-delay-timer pe 198
-ES t 25.002722747894
-
-E # 199 t 20.002080731511 m 29 ce 184 msg 12
-MB sm 29 tm 22 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 4 d "b=,,,white;t= 99.26 % ;p=408,218;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 12 tid 12 eid 12 etid 12 c cMessage n app-delay-timer pe 199
-ES t 25.002645920376
-
-E # 200 t 20.002096190164 m 44 ce 186 msg 24
-MB sm 44 tm 37 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 5 d "b=,,,white;t= 99.26 % ;p=377,116;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 24 tid 24 eid 24 etid 24 c cMessage n app-delay-timer pe 200
-ES t 25.002662791612
-
-E # 201 t 20.002194415869 m 194 ce 183 msg 144
-MB sm 194 tm 187 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 15 d "b=,,,white;t= 99.26 % ;p=707,77;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 144 tid 144 eid 144 etid 144 c cMessage n app-delay-timer pe 201
-ES t 25.003059518432
-
-E # 202 t 20.002592328454 m 239 ce 187 msg 180
-MB sm 239 tm 232 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 18 d "b=,,,white;t= 99.26 % ;p=589,328;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 180 tid 180 eid 180 etid 180 c cMessage n app-delay-timer pe 202
-ES t 25.002857717945
-
-E # 203 t 20.002700442244 m 89 ce 188 msg 60
-MB sm 89 tm 82 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 8 d "b=,,,white;t= 99.26 % ;p=91,103;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 60 tid 60 eid 60 etid 60 c cMessage n app-delay-timer pe 203
-ES t 25.003209411204
-
-E # 204 t 20.002800020527 m 134 ce 185 msg 96
-MB sm 134 tm 127 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 11 d "b=,,,white;t= 99.26 % ;p=240,280;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 96 tid 96 eid 96 etid 96 c cMessage n app-delay-timer pe 204
-ES t 25.003323268579
-
-E # 205 t 20.002902602555 m 104 ce 189 msg 72
-MB sm 104 tm 97 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 9 d "b=,,,white;t= 99.26 % ;p=401,328;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 72 tid 72 eid 72 etid 72 c cMessage n app-delay-timer pe 205
-ES t 25.003819325511
-
-E # 206 t 25.001049928052 m 59 ce 190 msg 36
-MB sm 59 tm 52 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 6 d "b=,,,white;t= 99.26 % ;p=257,88;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 36 tid 36 eid 36 etid 36 c cMessage n app-delay-timer pe 206
-ES t 30.001143868557
-
-E # 207 t 25.001558113885 m 254 ce 192 msg 192
-MB sm 254 tm 247 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 19 d "b=,,,white;t= 99.26 % ;p=652,349;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 192 tid 192 eid 192 etid 192 c cMessage n app-delay-timer pe 207
-ES t 30.002479271496
-
-E # 208 t 25.001846655447 m 149 ce 191 msg 108
-MB sm 149 tm 142 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 12 d "b=,,,white;t= 99.26 % ;p=170,374;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 108 tid 108 eid 108 etid 108 c cMessage n app-delay-timer pe 208
-ES t 30.002422601942
-
-E # 209 t 25.001894872944 m 164 ce 196 msg 120
-MB sm 164 tm 157 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 13 d "b=,,,white;t= 99.26 % ;p=558,142;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 120 tid 120 eid 120 etid 120 c cMessage n app-delay-timer pe 209
-ES t 30.00197798543
-
-E # 210 t 25.002022409277 m 179 ce 194 msg 132
-MB sm 179 tm 172 m ""
-ME
-- In MatrixApplication::handleMessage
-MS id 14 d "b=,,,white;t= 99.26 % ;p=605,77;bgb=447,450;i=block/ifcard"
--   processing application timer.
-BS id 132 tid 132 eid 132 etid 132 c cMessage n app-delay-timer pe 210
-ES t 30.002951705474
-SE e 0 c 9 m "The user has finished the simulation at event #211, t=25.002022409277."
-- Sent:     0
-- Received: 0
-- Hop count, min:    0
-- Hop count, max:    0
-- Hop count, mean:   0
-- Hop count, stddev: -nan
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 22 tm 21 m ""
-ME
-MB sm 22 tm 21 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 37 tm 36 m ""
-ME
-MB sm 37 tm 36 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 52 tm 51 m ""
-ME
-MB sm 52 tm 51 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 67 tm 66 m ""
-ME
-MB sm 67 tm 66 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 82 tm 81 m ""
-ME
-MB sm 82 tm 81 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 97 tm 96 m ""
-ME
-MB sm 97 tm 96 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 112 tm 111 m ""
-ME
-MB sm 112 tm 111 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 127 tm 126 m ""
-ME
-MB sm 127 tm 126 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 142 tm 141 m ""
-ME
-MB sm 142 tm 141 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 157 tm 156 m ""
-ME
-MB sm 157 tm 156 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 172 tm 171 m ""
-ME
-MB sm 172 tm 171 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 187 tm 186 m ""
-ME
-MB sm 187 tm 186 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 202 tm 201 m ""
-ME
-MB sm 202 tm 201 m ""
-ME
-- WARNING: device  total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 217 tm 216 m ""
-ME
-MB sm 217 tm 216 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 232 tm 231 m ""
-ME
-MB sm 232 tm 231 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 247 tm 246 m ""
-ME
-MB sm 247 tm 246 m ""
-ME
-- WARNING: device Sensornode total time 0s != sim time 25.002022409277s (may not matter)
-MB sm 262 tm 261 m ""
-ME
-MB sm 262 tm 261 m ""
-ME
+E # 109 t 5.002116141004 m 35 ce 92 msg 8
+CM id 389 tid 389 eid 389 etid 389 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 389 tid 389 eid 389 etid 389 c cMessage n "Radio switching over" k 22001 pe 109
+CL id 389 tid 389 eid 389 etid 389 c cMessage n "Radio switching over" k 22001 pe 109 cid 390
+SH sm 35 sg 7
+ES t 5.002116141004
+MB sm 35 tm 22 m ""
+ME
+
+E # 110 t 5.002116141004 m 34 ce 109 msg 389
+DM id 389 tid 389 eid 389 etid 389 c cMessage n "Radio switching over" k 22001 pe 110
+
+E # 111 t 5.002616141004 m 34 ce 97 msg 5
+MB sm 34 tm 35 m ""
+ME
+MB sm 34 tm 35 m ""
+BS id 8 tid 8 eid 8 etid 8 c cMessage n "radio switching over" k 22001 pe 109
+ES t 5.002808141004
+MB sm 35 tm 22 m ""
+ME
+ME
+CL id 386 tid 386 eid 377 etid 375 c MacPkt n wakeup l 152 pe 94 cid 391
+BS id 391 tid 386 eid 377 etid 375 c MacPkt n wakeup l 152 pe 111
+CL id 391 tid 386 eid 377 etid 375 c MacPkt n wakeup l 152 pe 111 cid 392
+SH sm 34 sg 11
+ES t 5.002816141004
+
+E # 112 t 5.002808141004 m 35 ce 111 msg 8
+CM id 393 tid 393 eid 393 etid 393 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 393 tid 393 eid 393 etid 393 c cMessage n "Radio switching over" k 22001 pe 112
+CL id 393 tid 393 eid 393 etid 393 c cMessage n "Radio switching over" k 22001 pe 112 cid 394
+SH sm 35 sg 7
+ES t 5.002808141004
+MB sm 35 tm 22 m ""
+ME
+
+E # 113 t 5.002808141004 m 34 ce 112 msg 393
+DM id 393 tid 393 eid 393 etid 393 c cMessage n "Radio switching over" k 22001 pe 113
+
+E # 114 t 5.002816141004 m 35 ce 111 msg 391
+CM id 395 tid 395 eid 395 etid 395 c cMessage n wakeup k 22003 pe -1
+BS id 9 tid 9 eid 9 etid 9 c cMessage n "transmission over" k 22000 pe 0
+ES t 5.015836974337
+CL id 395 tid 395 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114 cid 396
+BS id 396 tid 395 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114
+CL id 396 tid 395 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114 cid 397
+SH sm 35 sg 13
+SH sm 27 sg 13
+SH sm 4 sg 5
+SH sm 5 sg 4
+SH sm 42 sg 12
+ES t 5.002816141004
+CL id 395 tid 395 eid 377 etid 375 c MiximAirFrame n wakeup k 22003 p 10 l 200 pe 114 cid 398
+BS id 398 tid 395 eid 377 etid 375 c Mixim

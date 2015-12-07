@@ -210,6 +210,7 @@ $O/WakeupBaseDecider.o: WakeupBaseDecider.cc \
 	$(MIXIM_PROJ)/src/modules/phy/Decider802154Narrow.h \
 	WakeupBaseDecider.h
 $O/WakeupPhyLayerBattery.o: WakeupPhyLayerBattery.cc \
+	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/ChannelSenseRequest_m.h \
 	$(MIXIM_PROJ)/src/base/messages/MacPkt_m.h \
@@ -249,6 +250,7 @@ $O/WakeupPhyLayerBattery.o: WakeupPhyLayerBattery.cc \
 	$(MIXIM_PROJ)/src/modules/phy/Decider80211MultiChannel.h \
 	$(MIXIM_PROJ)/src/modules/phy/Decider802154Narrow.h \
 	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
+	$(MIXIM_PROJ)/src/modules/phy/SNRThresholdDecider.h \
 	WakeupBaseDecider.h \
 	WakeupPhyLayerBattery.h \
 	WakeupPhyUtils.h

@@ -30,6 +30,8 @@
 #include "exception"
 #include "GenericPacket_m.h"
 
+#include <ApplPkt_m.h>
+#include <NetwControlInfo.h>
 
 #include "exception"
 
@@ -462,10 +464,10 @@ void CustomWiseRoute::sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestA
         return;
     }
 
-    EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
-    if (nextHopAddr == 6 || nextHopAddr == 7 || nextHopAddr == 20) {
-        EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
-    }
+//    EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
+//    if (nextHopAddr == 6 || nextHopAddr == 7 || nextHopAddr == 20) {
+//        EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
+//    }
 
     LAddress::L2Type nextHopMacAddr;
     const char *name;
@@ -488,6 +490,7 @@ void CustomWiseRoute::sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestA
     assert(static_cast<cPacket*>(msg));
     pkt->encapsulate(static_cast<cPacket*>(msg));
     sendDown(pkt);
+    //sendDirect
     nbDataPacketsSent++;
 }
 

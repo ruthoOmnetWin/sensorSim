@@ -1,4 +1,4 @@
-file 7561 1437554793                                            
+file 7561 1449503266                                            
 version 2
 run General-0-20150722-10:45:36-5095
 attr configname General
@@ -15,34 +15,33 @@ attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-
 vector 3  SensorExample.TNode.Processor  "power mode"  ETV
-vector 4  SensorExample.TNode.Processor  "Sensor Modules Status"  ETV
-vector 5  SensorExample.TNode.Processor  Voltage  ETV
-vector 6  SensorExample.TNode.Processor  residualRelative  ETV
-vector 7  SensorExample.TNode.Processor  residualAbs  ETV
-vector 8  SensorExample.TNode.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 9  SensorExample.TNode.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 10  SensorExample.TNode.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 11  SensorExample.TNode.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 12  SensorExample.TNode.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 13  SensorExample.TNode.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 14  SensorExample.TNode.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 15  SensorExample.TNode.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 16  SensorExample.TNode.Memory  "Energy Consumptions"  ETV
-vector 17  SensorExample.TNode.Memory  "Current use over time"  ETV
 3	1543 180 0 968 0 27000 14 0 2 9 15
+vector 4  SensorExample.TNode.Processor  "Sensor Modules Status"  ETV
 4	1723 72 0 727 0 20000 6 0 1 2 2
+vector 5  SensorExample.TNode.Processor  Voltage  ETV
 5	1795 1036 0 977 0 27200 77 3 3 231 693
+vector 6  SensorExample.TNode.Processor  residualRelative  ETV
 6	2831 2138 0 977 0 27200 77 0.61606481481481 1 63.20262037037 52.850539496228
+vector 7  SensorExample.TNode.Processor  residualAbs  ETV
 7	4969 1517 0 977 0 27200 77 6653500 10800000 682588300 6.16448692684e+15
+vector 8  SensorExample.TNode.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
 8	6486 126 0 723 0 20000 9 100 100 900 90000
+vector 9  SensorExample.TNode.TemperatureSensor.SensingUnit  "Current use over time"  ETV
 9	6612 137 0 968 0 27000 10 0.3 3 21.9 63.27
+vector 10  SensorExample.TNode.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
 10	6749 56 0 724 0 20000 4 100 100 400 40000
+vector 11  SensorExample.TNode.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
 11	6805 147 0 968 0 27000 10 0.3 3 21.9 63.27
+vector 12  SensorExample.TNode.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
 12	6952 56 0 725 0 20000 4 100 100 400 40000
+vector 13  SensorExample.TNode.TemperatureSensor.SignalConverter  "Current use over time"  ETV
 13	7008 147 0 968 0 27000 10 0.3 3 21.9 63.27
+vector 14  SensorExample.TNode.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
 14	7155 56 0 726 0 20000 4 100 100 400 40000
+vector 15  SensorExample.TNode.TemperatureSensor.Transducer  "Current use over time"  ETV
 15	7211 147 0 968 0 27000 10 0.3 3 21.9 63.27
+vector 16  SensorExample.TNode.Memory  "Energy Consumptions"  ETV
 16	7358 56 0 728 0 20000 4 100 100 400 40000
+vector 17  SensorExample.TNode.Memory  "Current use over time"  ETV
 17	7414 147 0 968 0 27000 10 0.3 3 21.9 63.27

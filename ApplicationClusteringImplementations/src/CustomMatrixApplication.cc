@@ -36,6 +36,7 @@ void CustomMatrixApplication::handleMessage(cMessage * msg)
 
         MatrixApplication::handleMessage(msg);
 
+
     } else {
 
         //delete msg;
