@@ -28,7 +28,7 @@ network ApplicationClusteringImplementations extends BaseNetwork
 
     submodules:
         Node0: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=401,218");
+            @display("p=408,218");
             hasTemperatureSensor = true;
                     //@class(ApplicationClusteringImplementations);
         }
@@ -85,7 +85,7 @@ network ApplicationClusteringImplementations extends BaseNetwork
             hasTemperatureSensor = true;
         }
         Node14: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=558,296");
+            @display("p=589,328");
             hasTemperatureSensor = true;
         }
         Node15: Sensor_Wakeup_DicePhyMacHost {

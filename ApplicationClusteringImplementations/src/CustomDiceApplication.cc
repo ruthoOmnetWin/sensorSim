@@ -61,10 +61,15 @@ void CustomDiceApplication::handleMessage(cMessage * msg)
             clusterApp->otherNodesInSleepMode = false;
             //Send WakeUp-Packet
             debugEV << "  start wakeup" << endl;
-            WakeUpPacket* wuPacketP = new WakeUpPacket();
-            wuPacketP->setDestAddr(0xFFFF);
-            NetwControlInfo::setControlInfo(wuPacketP, LAddress::L2BROADCAST.getInt());
-            send(wuPacketP, dataOut);
+//            WakeUpPacket* wuPacketP = new WakeUpPacket();
+//            wuPacketP->setDestAddr(LAddress::L3BROADCAST);
+//            NetwControlInfo::setControlInfo(wuPacketP, LAddress::L3BROADCAST);
+//            send(wuPacketP, dataOut);
+            ApplPkt* gPacketP = new ApplPkt();
+            gPacketP->setName("wakeup");
+            gPacketP->setDestAddr(LAddress::L3BROADCAST);
+            NetwControlInfo::setControlInfo(gPacketP, LAddress::L3BROADCAST);
+            send(gPacketP, dataOut);
             //wait some ms
             scheduleAt(simTime() + 0.05 + uniform(0, 0.001), delayTimer);
         }
@@ -127,3 +132,15 @@ void CustomDiceApplication::handleMessage(cMessage * msg)
     }
 
 }
+
+void CustomDiceApplication::handleHostState(const HostState& state)
+{
+       if(notAffectedByHostState)
+           return;
+
+       if(state.get() != HostState::ACTIVE) {
+           active = false;
+       } else {
+           active = true;
+       }
+   }

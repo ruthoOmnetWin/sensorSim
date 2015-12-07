@@ -118,7 +118,7 @@ module Sensor_Wakeup_DicePhyMacHost
         string transportType = default("");       //type of the transport layer
         string sessionType = default("");                    //type of the session layer
         string presentationType = default("");               //type of the presentation layer
-        string applicationType = default("BurstApplLayer");  //type of the application layer
+        string applicationType = default("MatrixApplication");  //type of the application layer
         string mobilityType = default("StationaryMobility"); //type of the mobility module
         string arpType = default("ArpHost");                 //type of address resolution module
         //string nicType = default("Wakeup_Nic802154_TI_CC2420A");

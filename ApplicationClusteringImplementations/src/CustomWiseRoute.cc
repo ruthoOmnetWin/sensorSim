@@ -372,6 +372,14 @@ void CustomWiseRoute::forward(cMessage* msg, LAddress::L3Type srcAddr) {
 
     EV << "I am NODE " << myNetwAddr<< "-------------------- I am NODE ---------" << endl;
 
+    if (msg->getName() == NULL || msg->getName() == "" || msg->getName()[0] == '\0') {
+        EV << "          received msg without name. Renaming it to 'unnamed packet'." << endl;
+        msg->setName("unnamed packet");
+    } else {
+        EV << "          received msg with name: " << msg->getName() << endl;
+    }
+
+
     //sendDown(encapsMsg(check_and_cast<cPacket*>(msg)));
 
     LAddress::L3Type finalDestAddr;

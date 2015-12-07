@@ -1,14 +1,14 @@
 version 2
-run General-0-20151201-17:00:46-13941
+run General-0-20151207-16:45:09-10675
 attr configname General
-attr datetime 20151201-17:00:46
+attr datetime 20151207-16:45:09
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network ApplicationClusteringImplementations
-attr processid 13941
+attr processid 10675
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -32,11 +32,11 @@ bin	0	0
 bin	1	0
 scalar ApplicationClusteringImplementations.Node0.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node0.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node0.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node0.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node0.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node0.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node0.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node0.nic.mac 	nbRxFrames 	0
@@ -56,11 +56,11 @@ scalar ApplicationClusteringImplementations.Node0.nic.phy 	nbFramesWithInterfere
 scalar ApplicationClusteringImplementations.Node0.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node1.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node1.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node1.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node1.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node1.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node1.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node1.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node1.nic.mac 	nbRxFrames 	0
@@ -80,11 +80,11 @@ scalar ApplicationClusteringImplementations.Node1.nic.phy 	nbFramesWithInterfere
 scalar ApplicationClusteringImplementations.Node1.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node2.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node2.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node2.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node2.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node2.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node2.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node2.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node2.nic.mac 	nbRxFrames 	0
@@ -104,11 +104,11 @@ scalar ApplicationClusteringImplementations.Node2.nic.phy 	nbFramesWithInterfere
 scalar ApplicationClusteringImplementations.Node2.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node3.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node3.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node3.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node3.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node3.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node3.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node3.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node3.nic.mac 	nbRxFrames 	0
@@ -128,11 +128,11 @@ scalar ApplicationClusteringImplementations.Node3.nic.phy 	nbFramesWithInterfere
 scalar ApplicationClusteringImplementations.Node3.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node4.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node4.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node4.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node4.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node4.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node4.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node4.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node4.nic.mac 	nbRxFrames 	0
@@ -152,11 +152,11 @@ scalar ApplicationClusteringImplementations.Node4.nic.phy 	nbFramesWithInterfere
 scalar ApplicationClusteringImplementations.Node4.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node5.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node5.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node5.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node5.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node5.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node5.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node5.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node5.nic.mac 	nbRxFrames 	0
@@ -176,11 +176,11 @@ scalar ApplicationClusteringImplementations.Node5.nic.phy 	nbFramesWithInterfere
 scalar ApplicationClusteringImplementations.Node5.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node6.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node6.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node6.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node6.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node6.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node6.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node6.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node6.nic.mac 	nbRxFrames 	0
@@ -200,11 +200,11 @@ scalar ApplicationClusteringImplementations.Node6.nic.phy 	nbFramesWithInterfere
 scalar ApplicationClusteringImplementations.Node6.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node7.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node7.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node7.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node7.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node7.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node7.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node7.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node7.nic.mac 	nbRxFrames 	0
@@ -224,11 +224,11 @@ scalar ApplicationClusteringImplementations.Node7.nic.phy 	nbFramesWithInterfere
 scalar ApplicationClusteringImplementations.Node7.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node8.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node8.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node8.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node8.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node8.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node8.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node8.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node8.nic.mac 	nbRxFrames 	0
@@ -248,11 +248,11 @@ scalar ApplicationClusteringImplementations.Node8.nic.phy 	nbFramesWithInterfere
 scalar ApplicationClusteringImplementations.Node8.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node9.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node9.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node9.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node9.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node9.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node9.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node9.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node9.nic.mac 	nbRxFrames 	0
@@ -272,11 +272,11 @@ scalar ApplicationClusteringImplementations.Node9.nic.phy 	nbFramesWithInterfere
 scalar ApplicationClusteringImplementations.Node9.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node10.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node10.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node10.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node10.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node10.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node10.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node10.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node10.nic.mac 	nbRxFrames 	0
@@ -296,11 +296,11 @@ scalar ApplicationClusteringImplementations.Node10.nic.phy 	nbFramesWithInterfer
 scalar ApplicationClusteringImplementations.Node10.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node11.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node11.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node11.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node11.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node11.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node11.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node11.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node11.nic.mac 	nbRxFrames 	0
@@ -320,11 +320,11 @@ scalar ApplicationClusteringImplementations.Node11.nic.phy 	nbFramesWithInterfer
 scalar ApplicationClusteringImplementations.Node11.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node12.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node12.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node12.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node12.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node12.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node12.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node12.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node12.nic.mac 	nbRxFrames 	0
@@ -344,13 +344,13 @@ scalar ApplicationClusteringImplementations.Node12.nic.phy 	nbFramesWithInterfer
 scalar ApplicationClusteringImplementations.Node12.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node13.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node13.batteryStats 	total 	290034.97519872
+scalar ApplicationClusteringImplementations.Node13.batteryStats 	total 	342536.95208797
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node13.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node13.batteryStats 	"Mean power consumption" 	14500.32551014
+scalar ApplicationClusteringImplementations.Node13.batteryStats 	"Mean power consumption" 	13700.369773322
 attr unit  mW
-scalar ApplicationClusteringImplementations.Node13.nic.mac 	nbTxFrames 	0
+scalar ApplicationClusteringImplementations.Node13.nic.mac 	nbTxFrames 	3
 scalar ApplicationClusteringImplementations.Node13.nic.mac 	nbRxFrames 	0
 scalar ApplicationClusteringImplementations.Node13.nic.mac 	nbDroppedFrames 	0
 scalar ApplicationClusteringImplementations.Node13.nic.mac 	nbMissedAcks 	0
@@ -358,7 +358,7 @@ scalar ApplicationClusteringImplementations.Node13.nic.mac 	nbRecvdAcks 	0
 scalar ApplicationClusteringImplementations.Node13.nic.mac 	nbTxAcks 	0
 scalar ApplicationClusteringImplementations.Node13.nic.mac 	nbDuplicates 	0
 scalar ApplicationClusteringImplementations.Node13.nic.mac 	meanBackoff 	0
-scalar ApplicationClusteringImplementations.Node13.nic.mac 	nbBackoffs 	0
+scalar ApplicationClusteringImplementations.Node13.nic.mac 	nbBackoffs 	3
 scalar ApplicationClusteringImplementations.Node13.nic.mac 	backoffDurations 	0
 scalar ApplicationClusteringImplementations.Node13.nic.phy 	nbFramesWithInterference 	0
 scalar ApplicationClusteringImplementations.Node13.nic.phy 	nbFramesWithoutInterference 	0
@@ -368,11 +368,11 @@ scalar ApplicationClusteringImplementations.Node13.nic.phy 	nbFramesWithInterfer
 scalar ApplicationClusteringImplementations.Node13.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node14.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node14.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node14.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node14.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node14.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node14.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node14.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node14.nic.mac 	nbRxFrames 	0
@@ -392,11 +392,11 @@ scalar ApplicationClusteringImplementations.Node14.nic.phy 	nbFramesWithInterfer
 scalar ApplicationClusteringImplementations.Node14.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node15.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node15.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node15.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node15.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node15.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node15.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node15.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node15.nic.mac 	nbRxFrames 	0
@@ -416,11 +416,11 @@ scalar ApplicationClusteringImplementations.Node15.nic.phy 	nbFramesWithInterfer
 scalar ApplicationClusteringImplementations.Node15.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClusteringImplementations.Node16.batteryStats 	nominal 	10800000
 attr unit  mW-s
-scalar ApplicationClusteringImplementations.Node16.batteryStats 	total 	290026.61270944
+scalar ApplicationClusteringImplementations.Node16.batteryStats 	total 	342528.73590413
 attr unit  mW-s
 scalar ApplicationClusteringImplementations.Node16.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClusteringImplementations.Node16.batteryStats 	"Mean power consumption" 	14499.907426712
+scalar ApplicationClusteringImplementations.Node16.batteryStats 	"Mean power consumption" 	13700.041152553
 attr unit  mW
 scalar ApplicationClusteringImplementations.Node16.nic.mac 	nbTxFrames 	0
 scalar ApplicationClusteringImplementations.Node16.nic.mac 	nbRxFrames 	0

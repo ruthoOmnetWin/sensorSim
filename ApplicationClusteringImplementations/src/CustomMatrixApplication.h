@@ -13,21 +13,18 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef CUSTOMDICEAPPLICATION_H_
-#define CUSTOMDICEAPPLICATION_H_
+#ifndef CUSTOMMATRIXAPPLICATION_H_
+#define CUSTOMMATRIXAPPLICATION_H_
 
-#include <DiceApplication.h>
-#include <WakeUpPacket_m.h>
-#include <NetwControlInfo.h>
-#include <ApplPkt_m.h>
+#include <MatrixApplication.h>
 
-class CustomDiceApplication : public DiceApplication
+class CustomMatrixApplication : public MatrixApplication
 {
     bool active;
 public:
-    void handleMessage(cMessage * msg);
-
     void handleHostState(const HostState& state);
+    void handleMessage(cMessage * msg);
+    ~CustomMatrixApplication();
 };
 
-#endif /* CUSTOMDICEAPPLICATION_H_ */
+#endif /* CUSTOMMATRIXAPPLICATION_H_ */

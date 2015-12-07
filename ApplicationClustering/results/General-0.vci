@@ -1,4 +1,4 @@
-file 4421 1448282350                                            
+file 4421 1449503063                                            
 version 2
 run General-0-20151123-13:39:08-11689
 attr configname General
@@ -15,114 +15,113 @@ attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
-
 vector 6  ApplicationClustering.node1.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 7  ApplicationClustering.node1.batteryStats  capacity(relative)  ETV
-vector 8  ApplicationClustering.node1.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 9  ApplicationClustering.node1.batteryStats  estimate(relative)  ETV
-vector 17  ApplicationClustering.node2.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 18  ApplicationClustering.node2.batteryStats  capacity(relative)  ETV
-vector 19  ApplicationClustering.node2.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 20  ApplicationClustering.node2.batteryStats  estimate(relative)  ETV
-vector 28  ApplicationClustering.node3.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 29  ApplicationClustering.node3.batteryStats  capacity(relative)  ETV
-vector 30  ApplicationClustering.node3.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 31  ApplicationClustering.node3.batteryStats  estimate(relative)  ETV
-vector 39  ApplicationClustering.node4.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 40  ApplicationClustering.node4.batteryStats  capacity(relative)  ETV
-vector 41  ApplicationClustering.node4.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 42  ApplicationClustering.node4.batteryStats  estimate(relative)  ETV
-vector 50  ApplicationClustering.node5.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 51  ApplicationClustering.node5.batteryStats  capacity(relative)  ETV
-vector 52  ApplicationClustering.node5.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 53  ApplicationClustering.node5.batteryStats  estimate(relative)  ETV
-vector 61  ApplicationClustering.node6.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 62  ApplicationClustering.node6.batteryStats  capacity(relative)  ETV
-vector 63  ApplicationClustering.node6.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 64  ApplicationClustering.node6.batteryStats  estimate(relative)  ETV
-vector 72  ApplicationClustering.node7.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 73  ApplicationClustering.node7.batteryStats  capacity(relative)  ETV
-vector 74  ApplicationClustering.node7.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 75  ApplicationClustering.node7.batteryStats  estimate(relative)  ETV
-vector 83  ApplicationClustering.node8.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 84  ApplicationClustering.node8.batteryStats  capacity(relative)  ETV
-vector 85  ApplicationClustering.node8.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 86  ApplicationClustering.node8.batteryStats  estimate(relative)  ETV
-vector 94  ApplicationClustering.node9.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 95  ApplicationClustering.node9.batteryStats  capacity(relative)  ETV
-vector 96  ApplicationClustering.node9.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 97  ApplicationClustering.node9.batteryStats  estimate(relative)  ETV
-vector 105  ApplicationClustering.node10.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 106  ApplicationClustering.node10.batteryStats  capacity(relative)  ETV
-vector 107  ApplicationClustering.node10.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 108  ApplicationClustering.node10.batteryStats  estimate(relative)  ETV
-vector 116  ApplicationClustering.node11.batteryStats  capacity  ETV
-attr unit  mW-s
-vector 117  ApplicationClustering.node11.batteryStats  capacity(relative)  ETV
-vector 118  ApplicationClustering.node11.batteryStats  estimate  ETV
-attr unit  mW-s
-vector 119  ApplicationClustering.node11.batteryStats  estimate(relative)  ETV
+attr unit mW-s
 6	3911 13 0 0 0 0 1 594000 594000 594000 352836000000
+vector 7  ApplicationClustering.node1.batteryStats  capacity(relative)  ETV
 7	3924 8 0 0 0 0 1 1 1 1 1
+vector 8  ApplicationClustering.node1.batteryStats  estimate  ETV
+attr unit mW-s
 8	3932 13 0 0 0 0 1 594000 594000 594000 352836000000
+vector 9  ApplicationClustering.node1.batteryStats  estimate(relative)  ETV
 9	3945 8 0 0 0 0 1 1 1 1 1
+vector 17  ApplicationClustering.node2.batteryStats  capacity  ETV
+attr unit mW-s
 17	3953 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 18  ApplicationClustering.node2.batteryStats  capacity(relative)  ETV
 18	3967 9 0 0 0 0 1 1 1 1 1
+vector 19  ApplicationClustering.node2.batteryStats  estimate  ETV
+attr unit mW-s
 19	3976 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 20  ApplicationClustering.node2.batteryStats  estimate(relative)  ETV
 20	3990 9 0 0 0 0 1 1 1 1 1
+vector 28  ApplicationClustering.node3.batteryStats  capacity  ETV
+attr unit mW-s
 28	3999 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 29  ApplicationClustering.node3.batteryStats  capacity(relative)  ETV
 29	4013 9 0 0 0 0 1 1 1 1 1
+vector 30  ApplicationClustering.node3.batteryStats  estimate  ETV
+attr unit mW-s
 30	4022 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 31  ApplicationClustering.node3.batteryStats  estimate(relative)  ETV
 31	4036 9 0 0 0 0 1 1 1 1 1
+vector 39  ApplicationClustering.node4.batteryStats  capacity  ETV
+attr unit mW-s
 39	4045 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 40  ApplicationClustering.node4.batteryStats  capacity(relative)  ETV
 40	4059 9 0 0 0 0 1 1 1 1 1
+vector 41  ApplicationClustering.node4.batteryStats  estimate  ETV
+attr unit mW-s
 41	4068 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 42  ApplicationClustering.node4.batteryStats  estimate(relative)  ETV
 42	4082 9 0 0 0 0 1 1 1 1 1
+vector 50  ApplicationClustering.node5.batteryStats  capacity  ETV
+attr unit mW-s
 50	4091 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 51  ApplicationClustering.node5.batteryStats  capacity(relative)  ETV
 51	4105 9 0 0 0 0 1 1 1 1 1
+vector 52  ApplicationClustering.node5.batteryStats  estimate  ETV
+attr unit mW-s
 52	4114 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 53  ApplicationClustering.node5.batteryStats  estimate(relative)  ETV
 53	4128 9 0 0 0 0 1 1 1 1 1
+vector 61  ApplicationClustering.node6.batteryStats  capacity  ETV
+attr unit mW-s
 61	4137 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 62  ApplicationClustering.node6.batteryStats  capacity(relative)  ETV
 62	4151 9 0 0 0 0 1 1 1 1 1
+vector 63  ApplicationClustering.node6.batteryStats  estimate  ETV
+attr unit mW-s
 63	4160 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 64  ApplicationClustering.node6.batteryStats  estimate(relative)  ETV
 64	4174 9 0 0 0 0 1 1 1 1 1
+vector 72  ApplicationClustering.node7.batteryStats  capacity  ETV
+attr unit mW-s
 72	4183 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 73  ApplicationClustering.node7.batteryStats  capacity(relative)  ETV
 73	4197 9 0 0 0 0 1 1 1 1 1
+vector 74  ApplicationClustering.node7.batteryStats  estimate  ETV
+attr unit mW-s
 74	4206 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 75  ApplicationClustering.node7.batteryStats  estimate(relative)  ETV
 75	4220 9 0 0 0 0 1 1 1 1 1
+vector 83  ApplicationClustering.node8.batteryStats  capacity  ETV
+attr unit mW-s
 83	4229 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 84  ApplicationClustering.node8.batteryStats  capacity(relative)  ETV
 84	4243 9 0 0 0 0 1 1 1 1 1
+vector 85  ApplicationClustering.node8.batteryStats  estimate  ETV
+attr unit mW-s
 85	4252 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 86  ApplicationClustering.node8.batteryStats  estimate(relative)  ETV
 86	4266 9 0 0 0 0 1 1 1 1 1
+vector 94  ApplicationClustering.node9.batteryStats  capacity  ETV
+attr unit mW-s
 94	4275 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 95  ApplicationClustering.node9.batteryStats  capacity(relative)  ETV
 95	4289 9 0 0 0 0 1 1 1 1 1
+vector 96  ApplicationClustering.node9.batteryStats  estimate  ETV
+attr unit mW-s
 96	4298 14 0 0 0 0 1 594000 594000 594000 352836000000
+vector 97  ApplicationClustering.node9.batteryStats  estimate(relative)  ETV
 97	4312 9 0 0 0 0 1 1 1 1 1
+vector 105  ApplicationClustering.node10.batteryStats  capacity  ETV
+attr unit mW-s
 105	4321 15 0 0 0 0 1 594000 594000 594000 352836000000
+vector 106  ApplicationClustering.node10.batteryStats  capacity(relative)  ETV
 106	4336 10 0 0 0 0 1 1 1 1 1
+vector 107  ApplicationClustering.node10.batteryStats  estimate  ETV
+attr unit mW-s
 107	4346 15 0 0 0 0 1 594000 594000 594000 352836000000
+vector 108  ApplicationClustering.node10.batteryStats  estimate(relative)  ETV
 108	4361 10 0 0 0 0 1 1 1 1 1
+vector 116  ApplicationClustering.node11.batteryStats  capacity  ETV
+attr unit mW-s
 116	4371 15 0 0 0 0 1 594000 594000 594000 352836000000
+vector 117  ApplicationClustering.node11.batteryStats  capacity(relative)  ETV
 117	4386 10 0 0 0 0 1 1 1 1 1
+vector 118  ApplicationClustering.node11.batteryStats  estimate  ETV
+attr unit mW-s
 118	4396 15 0 0 0 0 1 594000 594000 594000 352836000000
+vector 119  ApplicationClustering.node11.batteryStats  estimate(relative)  ETV
 119	4411 10 0 0 0 0 1 1 1 1 1
