@@ -51,9 +51,44 @@ void WakeupPhyLayerBattery::initialize(int stage) {
         rxTxCurrent = pNic->par("rxTxCurrent");
         txRxCurrent = pNic->par("txRxCurrent");
     } else {
+
+        //radio = initializeRadio();
+
         registerWithBattery("physical layer", numActivities);
         setRadioCurrent(radio->getCurrentState());
     }
+}
+
+MiximRadio* WakeupPhyLayerBattery::initializeRadio() const {
+    int    initialRadioState   = par("initialRadioState").longValue();
+    double radioMinAtt         = par("radioMinAtt").doubleValue();
+    double radioMaxAtt         = par("radioMaxAtt").doubleValue();
+    int    nbRadioChannels     = readPar("nbRadioChannels",     1);
+    int    initialRadioChannel = readPar("initialRadioChannel", 0);
+
+    MiximRadio* radio = WakeupMiximRadio::createNewRadio(recordStats, initialRadioState,
+                                         radioMinAtt, radioMaxAtt,
+                                         initialRadioChannel, nbRadioChannels);
+
+    //  - switch times to TX
+    //if no RX to TX defined asume same time as sleep to TX
+    radio->setSwitchTime(MiximRadio::RX, MiximRadio::TX, (hasPar("timeRXToTX") ? par("timeRXToTX") : par("timeSleepToTX")).doubleValue());
+    //if no sleep to TX defined asume same time as RX to TX
+    radio->setSwitchTime(MiximRadio::SLEEP, MiximRadio::TX, (hasPar("timeSleepToTX") ? par("timeSleepToTX") : par("timeRXToTX")).doubleValue());
+
+    //  - switch times to RX
+    //if no TX to RX defined asume same time as sleep to RX
+    radio->setSwitchTime(MiximRadio::TX, MiximRadio::RX, (hasPar("timeTXToRX") ? par("timeTXToRX") : par("timeSleepToRX")).doubleValue());
+    //if no sleep to RX defined asume same time as TX to RX
+    radio->setSwitchTime(MiximRadio::SLEEP, MiximRadio::RX, (hasPar("timeSleepToRX") ? par("timeSleepToRX") : par("timeTXToRX")).doubleValue());
+
+    //  - switch times to sleep
+    //if no TX to sleep defined asume same time as RX to sleep
+    radio->setSwitchTime(MiximRadio::TX, MiximRadio::SLEEP, (hasPar("timeTXToSleep") ? par("timeTXToSleep") : par("timeRXToSleep")).doubleValue());
+    //if no RX to sleep defined asume same time as TX to sleep
+    radio->setSwitchTime(MiximRadio::RX, MiximRadio::SLEEP, (hasPar("timeRXToSleep") ? par("timeRXToSleep") : par("timeTXToSleep")).doubleValue());
+
+    return radio;
 }
 
 Decider* WakeupPhyLayerBattery::getDeciderFromName(const std::string& name,
@@ -278,6 +313,17 @@ void WakeupPhyLayerBattery::handleMessage(cMessage* msg) {
 
     //AirFrames
     } else if(msg->getKind() == AIR_FRAME){
+//        if (strcmp(msg->getName(), "wakeup") == 0) {
+//
+//            cMessage* msgDup = msg->dup();
+//
+//            MiximAirFrame* maf = static_cast<airframe_ptr_t>(msgDup);
+//
+//            cMessage* packet = maf->decapsulate();
+//            assert(packet);
+//    //        setUpControlInfo(packet, result);
+//            sendMacPktUp(packet);
+//        }
         handleAirFrame(static_cast<airframe_ptr_t>(msg));
 
     //unknown message

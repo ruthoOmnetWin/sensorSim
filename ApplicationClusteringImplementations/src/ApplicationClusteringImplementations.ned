@@ -27,43 +27,43 @@ network ApplicationClusteringImplementations extends BaseNetwork
         wuType = default("sensortechnology.src.WorldModel.CustomWorldUtility");
 
     submodules:
-        Node0: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=408,218");
-            hasTemperatureSensor = true;
-                    //@class(ApplicationClusteringImplementations);
-        }
-        Node1: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=377,116");
-            hasTemperatureSensor = true;
-        }
-        Node2: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=257,88");
-            hasTemperatureSensor = true;
-        }
-        Node3: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=193,142");
-            hasTemperatureSensor = true;
-        }
-        Node4: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=91,103");
-            hasTemperatureSensor = true;
-        }
-        Node5: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=401,328");
-            hasTemperatureSensor = true;
-        }
-        Node6: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=296,367");
-            hasTemperatureSensor = true;
-        }
-        Node7: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=240,280");
-            hasTemperatureSensor = true;
-        }
-        Node8: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=170,374");
-            hasTemperatureSensor = true;
-        }
+//        Node0: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=408,218");
+//            hasTemperatureSensor = true;
+//                    //@class(ApplicationClusteringImplementations);
+//        }
+//        Node1: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=377,116");
+//            hasTemperatureSensor = true;
+//        }
+//        Node2: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=257,88");
+//            hasTemperatureSensor = true;
+//        }
+//        Node3: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=193,142");
+//            hasTemperatureSensor = true;
+//        }
+//        Node4: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=91,103");
+//            hasTemperatureSensor = true;
+//        }
+//        Node5: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=401,328");
+//            hasTemperatureSensor = true;
+//        }
+//        Node6: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=296,367");
+//            hasTemperatureSensor = true;
+//        }
+//        Node7: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=240,280");
+//            hasTemperatureSensor = true;
+//        }
+//        Node8: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=170,374");
+//            hasTemperatureSensor = true;
+//        }
         Node9: Sensor_Wakeup_DicePhyMacHost {
             @display("p=558,142");
             hasTemperatureSensor = true;
@@ -84,18 +84,18 @@ network ApplicationClusteringImplementations extends BaseNetwork
             @display("p=519,218");
             hasTemperatureSensor = true;
         }
-        Node14: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=589,328");
-            hasTemperatureSensor = true;
-        }
-        Node15: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=652,349");
-            hasTemperatureSensor = true;
-        }
-        Node16: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=746,349");
-            hasTemperatureSensor = true;
-        }
+//        Node14: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=589,328");
+//            hasTemperatureSensor = true;
+//        }
+//        Node15: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=652,349");
+//            hasTemperatureSensor = true;
+//        }
+//        Node16: Sensor_Wakeup_DicePhyMacHost {
+//            @display("p=746,349");
+//            hasTemperatureSensor = true;
+//        }
         //        Node17: Sensor_Wakeup_DicePhyMacHost {
         //            @display("p=411,125");
         //            hasTemperatureSensor = true;

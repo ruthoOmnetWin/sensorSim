@@ -70,6 +70,7 @@ void CustomDiceApplication::handleMessage(cMessage * msg)
             gPacketP->setDestAddr(LAddress::L3BROADCAST);
             NetwControlInfo::setControlInfo(gPacketP, LAddress::L3BROADCAST);
             send(gPacketP, dataOut);
+            //sendDown(gPacketP);
             //wait some ms
             scheduleAt(simTime() + 0.05 + uniform(0, 0.001), delayTimer);
         }

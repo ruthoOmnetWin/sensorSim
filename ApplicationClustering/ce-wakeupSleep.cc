@@ -66,7 +66,8 @@ void MYCLASS wakeupSleepEnterSleep(void)
             0
     );
     */
-    myPhyLayerBattery->setRadioState(WakeupMiximRadio::SLEEP);
+    //TODO
+    //myPhyLayerBattery->setRadioState(WakeupMiximRadio::SLEEP);
 
 }
 
