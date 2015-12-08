@@ -21,7 +21,6 @@
 #include "WakeupPhyUtils.h"
 #include "WakeupBaseDecider.h"
 #include "SNRThresholdDecider.h"
-#include "WakeUpPacket_m.h"
 
 Define_Module(WakeupPhyLayerBattery);
 
@@ -52,12 +51,45 @@ void WakeupPhyLayerBattery::initialize(int stage) {
         rxTxCurrent = pNic->par("rxTxCurrent");
         txRxCurrent = pNic->par("txRxCurrent");
     } else {
+
+        //radio = initializeRadio();
+
         registerWithBattery("physical layer", numActivities);
         setRadioCurrent(radio->getCurrentState());
     }
 }
 
+MiximRadio* WakeupPhyLayerBattery::initializeRadio() const {
+    int    initialRadioState   = par("initialRadioState").longValue();
+    double radioMinAtt         = par("radioMinAtt").doubleValue();
+    double radioMaxAtt         = par("radioMaxAtt").doubleValue();
+    int    nbRadioChannels     = readPar("nbRadioChannels",     1);
+    int    initialRadioChannel = readPar("initialRadioChannel", 0);
 
+    MiximRadio* radio = WakeupMiximRadio::createNewRadio(recordStats, initialRadioState,
+                                         radioMinAtt, radioMaxAtt,
+                                         initialRadioChannel, nbRadioChannels);
+
+    //  - switch times to TX
+    //if no RX to TX defined asume same time as sleep to TX
+    radio->setSwitchTime(MiximRadio::RX, MiximRadio::TX, (hasPar("timeRXToTX") ? par("timeRXToTX") : par("timeSleepToTX")).doubleValue());
+    //if no sleep to TX defined asume same time as RX to TX
+    radio->setSwitchTime(MiximRadio::SLEEP, MiximRadio::TX, (hasPar("timeSleepToTX") ? par("timeSleepToTX") : par("timeRXToTX")).doubleValue());
+
+    //  - switch times to RX
+    //if no TX to RX defined asume same time as sleep to RX
+    radio->setSwitchTime(MiximRadio::TX, MiximRadio::RX, (hasPar("timeTXToRX") ? par("timeTXToRX") : par("timeSleepToRX")).doubleValue());
+    //if no sleep to RX defined asume same time as TX to RX
+    radio->setSwitchTime(MiximRadio::SLEEP, MiximRadio::RX, (hasPar("timeSleepToRX") ? par("timeSleepToRX") : par("timeTXToRX")).doubleValue());
+
+    //  - switch times to sleep
+    //if no TX to sleep defined asume same time as RX to sleep
+    radio->setSwitchTime(MiximRadio::TX, MiximRadio::SLEEP, (hasPar("timeTXToSleep") ? par("timeTXToSleep") : par("timeRXToSleep")).doubleValue());
+    //if no RX to sleep defined asume same time as TX to sleep
+    radio->setSwitchTime(MiximRadio::RX, MiximRadio::SLEEP, (hasPar("timeRXToSleep") ? par("timeRXToSleep") : par("timeTXToSleep")).doubleValue());
+
+    return radio;
+}
 
 Decider* WakeupPhyLayerBattery::getDeciderFromName(const std::string& name,
         ParameterMap& params) {
@@ -79,6 +111,11 @@ Decider* WakeupPhyLayerBattery::getDeciderFromName(const std::string& name,
     if (name == "WakeupBaseDecider") {
         protocolId = IEEE_802154_NARROW;
         WakeupBaseDecider *const pDecider = new WakeupBaseDecider(this, sensitivity, findHost()->getIndex(), coreDebug);
+
+        if (pDecider != NULL && !pDecider->initFromMap(params)) {
+            opp_warning("Decider from config.xml could not be initialized correctly!");
+        }
+
         return pDecider;
     }
 
@@ -126,6 +163,7 @@ void WakeupPhyLayerBattery::handleAirFrame(airframe_ptr_t frame) {
         delete frame;
         return;
     }
+    EV << "---------- AIRFRAME " << frame->getName() << endl;
     PhyLayer::handleAirFrame(frame);
 }
 
@@ -268,27 +306,25 @@ void WakeupPhyLayerBattery::handleMessage(cMessage* msg) {
     //MacPkts <- MacToPhyControlInfo
     } else if(msg->getArrivalGateId() == upperLayerIn) {
         handleUpperMessage(msg);
-        EV << "received Upper Message: " << msg->getName() << endl;
+
     //controlmessages
     } else if(msg->getArrivalGateId() == upperControlIn) {
         handleUpperControlMessage(msg);
-        EV << "received UpperControl Message: " << msg->getName() << endl;
+
     //AirFrames
     } else if(msg->getKind() == AIR_FRAME){
-
-        EV << "received air frame: " << msg->getName() << endl;
-        MiximAirFrame* maf = static_cast<airframe_ptr_t>(msg);
-
-        cMessage* packet = maf->decapsulate();
-        assert(packet);
-//        setUpControlInfo(packet, result);
-        sendMacPktUp(packet);
-
-        handleAirFrame(static_cast<airframe_ptr_t>(msg));
-        //TODO
-//        if (msg->getName() == "wakeup") {
-//            cMessage* copyPkt = msg->dup();
+//        if (strcmp(msg->getName(), "wakeup") == 0) {
+//
+//            cMessage* msgDup = msg->dup();
+//
+//            MiximAirFrame* maf = static_cast<airframe_ptr_t>(msgDup);
+//
+//            cMessage* packet = maf->decapsulate();
+//            assert(packet);
+//    //        setUpControlInfo(packet, result);
+//            sendMacPktUp(packet);
 //        }
+        handleAirFrame(static_cast<airframe_ptr_t>(msg));
 
     //unknown message
     } else {

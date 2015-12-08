@@ -53,7 +53,9 @@ void MatrixApplication::initialize(int stage)
     {
         int i = clusterApp->myNodeId+1;
         clusterApp->mySimpleBatteryId = clusterApp->mySimpleBattery->registerDevice("Sensornode", 2);  // Sensor + CPU
-        clusterApp->wakeupSleepEnterSleep();
+
+        //TODO
+        //clusterApp->wakeupSleepEnterSleep();
     }
 
 }

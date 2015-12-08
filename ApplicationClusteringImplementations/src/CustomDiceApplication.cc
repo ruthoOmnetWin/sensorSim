@@ -61,16 +61,16 @@ void CustomDiceApplication::handleMessage(cMessage * msg)
             clusterApp->otherNodesInSleepMode = false;
             //Send WakeUp-Packet
             debugEV << "  start wakeup" << endl;
-            WakeUpPacket* wuPacketP = new WakeUpPacket();
-            wuPacketP->setName("wakeup");
-            wuPacketP->setDestAddr(LAddress::L3BROADCAST);
-            NetwControlInfo::setControlInfo(wuPacketP, LAddress::L3BROADCAST);
-            send(wuPacketP, dataOut);
-//            ApplPkt* gPacketP = new ApplPkt();
-//            gPacketP->setName("wakeup");
-//            gPacketP->setDestAddr(LAddress::L3BROADCAST);
-//            NetwControlInfo::setControlInfo(gPacketP, LAddress::L3BROADCAST);
-//            send(gPacketP, dataOut);
+//            WakeUpPacket* wuPacketP = new WakeUpPacket();
+//            wuPacketP->setDestAddr(LAddress::L3BROADCAST);
+//            NetwControlInfo::setControlInfo(wuPacketP, LAddress::L3BROADCAST);
+//            send(wuPacketP, dataOut);
+            ApplPkt* gPacketP = new ApplPkt();
+            gPacketP->setName("wakeup");
+            gPacketP->setDestAddr(LAddress::L3BROADCAST);
+            NetwControlInfo::setControlInfo(gPacketP, LAddress::L3BROADCAST);
+            send(gPacketP, dataOut);
+            //sendDown(gPacketP);
             //wait some ms
             scheduleAt(simTime() + 0.05 + uniform(0, 0.001), delayTimer);
         }

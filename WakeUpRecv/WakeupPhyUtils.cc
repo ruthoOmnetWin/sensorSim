@@ -1,6 +1,7 @@
 #include "WakeupPhyUtils.h"
 
 #include "MiXiMAirFrame.h"
+#include "PhyUtils.h"
 
 using namespace std;
 
@@ -78,7 +79,12 @@ WakeupMiximRadio::WakeupMiximRadio(int numRadioStates,
 			 bool recordStats,
 			 int initialState,
 			 Argument::mapped_type_cref minAtt, Argument::mapped_type_cref maxAtt,
-			 int currentChannel, int nbChannels):
+			 int currentChannel, int nbChannels) :
+        MiximRadio::MiximRadio(numRadioStates,
+                recordStats,
+                 initialState,
+                minAtt, maxAtt,
+                currentChannel, nbChannels),
 	radioStates(), radioChannels(), state(initialState), nextState(initialState),
 	numRadioStates(numRadioStates),
 	swTimes(NULL),
@@ -131,7 +137,13 @@ WakeupMiximRadio::~WakeupMiximRadio()
 
 simtime_t WakeupMiximRadio::switchTo(int newState, simtime_t_cref now)
 {
-	// state to switch to must be in a valid range, i.e. 0 <= newState < numRadioStates
+    if (newState == 2) {
+        EV << ">>> WENT TO SLEEP." << endl;
+    } else {
+        EV << ">>> WOKE UP AGAIN." << endl;
+    }
+
+    // state to switch to must be in a valid range, i.e. 0 <= newState < numRadioStates
 	assert(0 <= newState && newState < numRadioStates);
 
 	// state to switch to must not be SWITCHING

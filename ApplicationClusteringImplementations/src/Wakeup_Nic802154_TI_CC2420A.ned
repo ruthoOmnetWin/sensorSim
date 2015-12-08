@@ -29,6 +29,7 @@ import org.mixim.base.phyLayer.IWirelessPhy;
 import org.mixim.base.modules.IWirelessMac;
 
 import wakeuprecv.WakeupPhyLayerBattery;
+import org.mixim.modules.phy.PhyLayerBattery;
 
 //
 // This NIC implements a Texas Instruments CC 2420 802.15.4 network interface card
@@ -97,7 +98,6 @@ module Wakeup_Nic802154_TI_CC2420A like IWirelessNicUpperCtrl
         phy: WakeupPhyLayerBattery {
             @display("p=52,125;i=block/process_s");
         }
-
     connections:
         mac.upperLayerOut --> { @display("ls=black;m=m,25,50,25,0"); } --> upperLayerOut;
         mac.upperLayerIn <-- { @display("ls=black;m=m,15,50,15,0"); } <-- upperLayerIn;

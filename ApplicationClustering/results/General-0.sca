@@ -1,14 +1,14 @@
 version 2
-run General-0-20151207-17:08:09-13409
+run General-0-20151208-08:47:42-3824
 attr configname General
-attr datetime 20151207-17:08:09
+attr datetime 20151208-08:47:42
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network ApplicationClustering
-attr processid 13409
+attr processid 3824
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -33,18 +33,18 @@ scalar ApplicationClustering.node1.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node1.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node1.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node1.batteryStats 	total 	0.00063000014051795
+scalar ApplicationClustering.node1.batteryStats 	total 	0.0003208153648302
 attr unit  mW-s
 scalar ApplicationClustering.node1.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node1.batteryStats 	"Mean power consumption" 	6.3000014051795e-05
+scalar ApplicationClustering.node1.batteryStats 	"Mean power consumption" 	6.3000001966875e-05
 attr unit  mW
 scalar ApplicationClustering.node1.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node1.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node1.batteryStats 	"device total (mWs)" 	0.00063
+scalar ApplicationClustering.node1.batteryStats 	"device total (mWs)" 	0.00032081535481426
 scalar ApplicationClustering.node1.batteryStats 	account 	0
-scalar ApplicationClustering.node1.batteryStats 	"energy (mWs)" 	0.00063
-scalar ApplicationClustering.node1.batteryStats 	"time (s)" 	10
+scalar ApplicationClustering.node1.batteryStats 	"energy (mWs)" 	0.00032081535481426
+scalar ApplicationClustering.node1.batteryStats 	"time (s)" 	5.092307219274
 scalar ApplicationClustering.node1.batteryStats 	account 	1
 scalar ApplicationClustering.node1.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node1.batteryStats 	"time (s)" 	0
@@ -87,18 +87,18 @@ scalar ApplicationClustering.node2.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node2.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node2.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node2.batteryStats 	total 	0.00063000014051795
+scalar ApplicationClustering.node2.batteryStats 	total 	0.0003208153648302
 attr unit  mW-s
 scalar ApplicationClustering.node2.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node2.batteryStats 	"Mean power consumption" 	6.3000014051795e-05
+scalar ApplicationClustering.node2.batteryStats 	"Mean power consumption" 	6.3000001966875e-05
 attr unit  mW
 scalar ApplicationClustering.node2.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node2.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node2.batteryStats 	"device total (mWs)" 	0.00063
+scalar ApplicationClustering.node2.batteryStats 	"device total (mWs)" 	0.00032081535481426
 scalar ApplicationClustering.node2.batteryStats 	account 	0
-scalar ApplicationClustering.node2.batteryStats 	"energy (mWs)" 	0.00063
-scalar ApplicationClustering.node2.batteryStats 	"time (s)" 	10
+scalar ApplicationClustering.node2.batteryStats 	"energy (mWs)" 	0.00032081535481426
+scalar ApplicationClustering.node2.batteryStats 	"time (s)" 	5.092307219274
 scalar ApplicationClustering.node2.batteryStats 	account 	1
 scalar ApplicationClustering.node2.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node2.batteryStats 	"time (s)" 	0
@@ -141,18 +141,18 @@ scalar ApplicationClustering.node3.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node3.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node3.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node3.batteryStats 	total 	0.00063000014051795
+scalar ApplicationClustering.node3.batteryStats 	total 	0.0003208153648302
 attr unit  mW-s
 scalar ApplicationClustering.node3.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node3.batteryStats 	"Mean power consumption" 	6.3000014051795e-05
+scalar ApplicationClustering.node3.batteryStats 	"Mean power consumption" 	6.3000001966875e-05
 attr unit  mW
 scalar ApplicationClustering.node3.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node3.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node3.batteryStats 	"device total (mWs)" 	0.00063
+scalar ApplicationClustering.node3.batteryStats 	"device total (mWs)" 	0.00032081535481426
 scalar ApplicationClustering.node3.batteryStats 	account 	0
-scalar ApplicationClustering.node3.batteryStats 	"energy (mWs)" 	0.00063
-scalar ApplicationClustering.node3.batteryStats 	"time (s)" 	10
+scalar ApplicationClustering.node3.batteryStats 	"energy (mWs)" 	0.00032081535481426
+scalar ApplicationClustering.node3.batteryStats 	"time (s)" 	5.092307219274
 scalar ApplicationClustering.node3.batteryStats 	account 	1
 scalar ApplicationClustering.node3.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node3.batteryStats 	"time (s)" 	0
@@ -195,18 +195,18 @@ scalar ApplicationClustering.node4.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node4.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node4.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node4.batteryStats 	total 	0.00063000014051795
+scalar ApplicationClustering.node4.batteryStats 	total 	0.0003208153648302
 attr unit  mW-s
 scalar ApplicationClustering.node4.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node4.batteryStats 	"Mean power consumption" 	6.3000014051795e-05
+scalar ApplicationClustering.node4.batteryStats 	"Mean power consumption" 	6.3000001966875e-05
 attr unit  mW
 scalar ApplicationClustering.node4.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node4.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node4.batteryStats 	"device total (mWs)" 	0.00063
+scalar ApplicationClustering.node4.batteryStats 	"device total (mWs)" 	0.00032081535481426
 scalar ApplicationClustering.node4.batteryStats 	account 	0
-scalar ApplicationClustering.node4.batteryStats 	"energy (mWs)" 	0.00063
-scalar ApplicationClustering.node4.batteryStats 	"time (s)" 	10
+scalar ApplicationClustering.node4.batteryStats 	"energy (mWs)" 	0.00032081535481426
+scalar ApplicationClustering.node4.batteryStats 	"time (s)" 	5.092307219274
 scalar ApplicationClustering.node4.batteryStats 	account 	1
 scalar ApplicationClustering.node4.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node4.batteryStats 	"time (s)" 	0
@@ -249,18 +249,18 @@ scalar ApplicationClustering.node5.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node5.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node5.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node5.batteryStats 	total 	0.00063000014051795
+scalar ApplicationClustering.node5.batteryStats 	total 	0.0003208153648302
 attr unit  mW-s
 scalar ApplicationClustering.node5.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node5.batteryStats 	"Mean power consumption" 	6.3000014051795e-05
+scalar ApplicationClustering.node5.batteryStats 	"Mean power consumption" 	6.3000001966875e-05
 attr unit  mW
 scalar ApplicationClustering.node5.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node5.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node5.batteryStats 	"device total (mWs)" 	0.00063
+scalar ApplicationClustering.node5.batteryStats 	"device total (mWs)" 	0.00032081535481426
 scalar ApplicationClustering.node5.batteryStats 	account 	0
-scalar ApplicationClustering.node5.batteryStats 	"energy (mWs)" 	0.00063
-scalar ApplicationClustering.node5.batteryStats 	"time (s)" 	10
+scalar ApplicationClustering.node5.batteryStats 	"energy (mWs)" 	0.00032081535481426
+scalar ApplicationClustering.node5.batteryStats 	"time (s)" 	5.092307219274
 scalar ApplicationClustering.node5.batteryStats 	account 	1
 scalar ApplicationClustering.node5.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node5.batteryStats 	"time (s)" 	0
@@ -303,18 +303,18 @@ scalar ApplicationClustering.node6.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node6.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node6.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node6.batteryStats 	total 	0.00063000014051795
+scalar ApplicationClustering.node6.batteryStats 	total 	0.0003208153648302
 attr unit  mW-s
 scalar ApplicationClustering.node6.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node6.batteryStats 	"Mean power consumption" 	6.3000014051795e-05
+scalar ApplicationClustering.node6.batteryStats 	"Mean power consumption" 	6.3000001966875e-05
 attr unit  mW
 scalar ApplicationClustering.node6.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node6.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node6.batteryStats 	"device total (mWs)" 	0.00063
+scalar ApplicationClustering.node6.batteryStats 	"device total (mWs)" 	0.00032081535481426
 scalar ApplicationClustering.node6.batteryStats 	account 	0
-scalar ApplicationClustering.node6.batteryStats 	"energy (mWs)" 	0.00063
-scalar ApplicationClustering.node6.batteryStats 	"time (s)" 	10
+scalar ApplicationClustering.node6.batteryStats 	"energy (mWs)" 	0.00032081535481426
+scalar ApplicationClustering.node6.batteryStats 	"time (s)" 	5.092307219274
 scalar ApplicationClustering.node6.batteryStats 	account 	1
 scalar ApplicationClustering.node6.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node6.batteryStats 	"time (s)" 	0
@@ -357,18 +357,18 @@ scalar ApplicationClustering.node7.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node7.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node7.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node7.batteryStats 	total 	0.00063000014051795
+scalar ApplicationClustering.node7.batteryStats 	total 	0.0003208153648302
 attr unit  mW-s
 scalar ApplicationClustering.node7.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node7.batteryStats 	"Mean power consumption" 	6.3000014051795e-05
+scalar ApplicationClustering.node7.batteryStats 	"Mean power consumption" 	6.3000001966875e-05
 attr unit  mW
 scalar ApplicationClustering.node7.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node7.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node7.batteryStats 	"device total (mWs)" 	0.00063
+scalar ApplicationClustering.node7.batteryStats 	"device total (mWs)" 	0.00032081535481426
 scalar ApplicationClustering.node7.batteryStats 	account 	0
-scalar ApplicationClustering.node7.batteryStats 	"energy (mWs)" 	0.00063
-scalar ApplicationClustering.node7.batteryStats 	"time (s)" 	10
+scalar ApplicationClustering.node7.batteryStats 	"energy (mWs)" 	0.00032081535481426
+scalar ApplicationClustering.node7.batteryStats 	"time (s)" 	5.092307219274
 scalar ApplicationClustering.node7.batteryStats 	account 	1
 scalar ApplicationClustering.node7.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node7.batteryStats 	"time (s)" 	0
@@ -411,18 +411,18 @@ scalar ApplicationClustering.node8.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node8.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node8.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node8.batteryStats 	total 	0.00063000014051795
+scalar ApplicationClustering.node8.batteryStats 	total 	0.0003208153648302
 attr unit  mW-s
 scalar ApplicationClustering.node8.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node8.batteryStats 	"Mean power consumption" 	6.3000014051795e-05
+scalar ApplicationClustering.node8.batteryStats 	"Mean power consumption" 	6.3000001966875e-05
 attr unit  mW
 scalar ApplicationClustering.node8.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node8.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node8.batteryStats 	"device total (mWs)" 	0.00063
+scalar ApplicationClustering.node8.batteryStats 	"device total (mWs)" 	0.00032081535481426
 scalar ApplicationClustering.node8.batteryStats 	account 	0
-scalar ApplicationClustering.node8.batteryStats 	"energy (mWs)" 	0.00063
-scalar ApplicationClustering.node8.batteryStats 	"time (s)" 	10
+scalar ApplicationClustering.node8.batteryStats 	"energy (mWs)" 	0.00032081535481426
+scalar ApplicationClustering.node8.batteryStats 	"time (s)" 	5.092307219274
 scalar ApplicationClustering.node8.batteryStats 	account 	1
 scalar ApplicationClustering.node8.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node8.batteryStats 	"time (s)" 	0
@@ -465,18 +465,18 @@ scalar ApplicationClustering.node9.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node9.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node9.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node9.batteryStats 	total 	0.00063000014051795
+scalar ApplicationClustering.node9.batteryStats 	total 	0.0003208153648302
 attr unit  mW-s
 scalar ApplicationClustering.node9.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node9.batteryStats 	"Mean power consumption" 	6.3000014051795e-05
+scalar ApplicationClustering.node9.batteryStats 	"Mean power consumption" 	6.3000001966875e-05
 attr unit  mW
 scalar ApplicationClustering.node9.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node9.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node9.batteryStats 	"device total (mWs)" 	0.00063
+scalar ApplicationClustering.node9.batteryStats 	"device total (mWs)" 	0.00032081535481426
 scalar ApplicationClustering.node9.batteryStats 	account 	0
-scalar ApplicationClustering.node9.batteryStats 	"energy (mWs)" 	0.00063
-scalar ApplicationClustering.node9.batteryStats 	"time (s)" 	10
+scalar ApplicationClustering.node9.batteryStats 	"energy (mWs)" 	0.00032081535481426
+scalar ApplicationClustering.node9.batteryStats 	"time (s)" 	5.092307219274
 scalar ApplicationClustering.node9.batteryStats 	account 	1
 scalar ApplicationClustering.node9.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node9.batteryStats 	"time (s)" 	0
@@ -519,18 +519,18 @@ scalar ApplicationClustering.node10.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node10.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node10.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node10.batteryStats 	total 	0.00063000014051795
+scalar ApplicationClustering.node10.batteryStats 	total 	0.0003208153648302
 attr unit  mW-s
 scalar ApplicationClustering.node10.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node10.batteryStats 	"Mean power consumption" 	6.3000014051795e-05
+scalar ApplicationClustering.node10.batteryStats 	"Mean power consumption" 	6.3000001966875e-05
 attr unit  mW
 scalar ApplicationClustering.node10.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node10.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node10.batteryStats 	"device total (mWs)" 	0.00063
+scalar ApplicationClustering.node10.batteryStats 	"device total (mWs)" 	0.00032081535481426
 scalar ApplicationClustering.node10.batteryStats 	account 	0
-scalar ApplicationClustering.node10.batteryStats 	"energy (mWs)" 	0.00063
-scalar ApplicationClustering.node10.batteryStats 	"time (s)" 	10
+scalar ApplicationClustering.node10.batteryStats 	"energy (mWs)" 	0.00032081535481426
+scalar ApplicationClustering.node10.batteryStats 	"time (s)" 	5.092307219274
 scalar ApplicationClustering.node10.batteryStats 	account 	1
 scalar ApplicationClustering.node10.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node10.batteryStats 	"time (s)" 	0
@@ -555,16 +555,16 @@ scalar ApplicationClustering.node10.batteryStats 	(unnamed) 	2
 scalar ApplicationClustering.node10.batteryStats 	"device total (mWs)" 	0
 scalar ApplicationClustering.node10.batteryStats 	(unnamed) 	3
 scalar ApplicationClustering.node10.batteryStats 	"device total (mWs)" 	0
-scalar ApplicationClustering.node11.nic.mac 	nbTxFrames 	6
+scalar ApplicationClustering.node11.nic.mac 	nbTxFrames 	4
 scalar ApplicationClustering.node11.nic.mac 	nbRxFrames 	0
 scalar ApplicationClustering.node11.nic.mac 	nbDroppedFrames 	0
-scalar ApplicationClustering.node11.nic.mac 	nbMissedAcks 	5
+scalar ApplicationClustering.node11.nic.mac 	nbMissedAcks 	2
 scalar ApplicationClustering.node11.nic.mac 	nbRecvdAcks 	0
 scalar ApplicationClustering.node11.nic.mac 	nbTxAcks 	0
 scalar ApplicationClustering.node11.nic.mac 	nbDuplicates 	0
-scalar ApplicationClustering.node11.nic.mac 	meanBackoff 	0.00096
-scalar ApplicationClustering.node11.nic.mac 	nbBackoffs 	6
-scalar ApplicationClustering.node11.nic.mac 	backoffDurations 	0.00576
+scalar ApplicationClustering.node11.nic.mac 	meanBackoff 	0.00104
+scalar ApplicationClustering.node11.nic.mac 	nbBackoffs 	4
+scalar ApplicationClustering.node11.nic.mac 	backoffDurations 	0.00416
 scalar ApplicationClustering.node11.nic.phy 	nbFramesWithInterference 	0
 scalar ApplicationClustering.node11.nic.phy 	nbFramesWithoutInterference 	0
 scalar ApplicationClustering.node11.nic.phy 	nbFramesWithInterferencePartial 	0
@@ -573,27 +573,27 @@ scalar ApplicationClustering.node11.nic.phy 	nbFramesWithInterferenceDropped 	0
 scalar ApplicationClustering.node11.nic.phy 	nbFramesWithoutInterferenceDropped 	0
 scalar ApplicationClustering.node11.batteryStats 	nominal 	594000
 attr unit  mW-s
-scalar ApplicationClustering.node11.batteryStats 	total 	8.3609577105381
+scalar ApplicationClustering.node11.batteryStats 	total 	5.0351011013845
 attr unit  mW-s
 scalar ApplicationClustering.node11.batteryStats 	lifetime 	-1
 attr unit  s
-scalar ApplicationClustering.node11.batteryStats 	"Mean power consumption" 	0.83609577105381
+scalar ApplicationClustering.node11.batteryStats 	"Mean power consumption" 	0.98876616915944
 attr unit  mW
 scalar ApplicationClustering.node11.batteryStats 	"num devices" 	4
 scalar ApplicationClustering.node11.batteryStats 	"physical layer" 	0
-scalar ApplicationClustering.node11.batteryStats 	"device total (mWs)" 	8.3609577102404
+scalar ApplicationClustering.node11.batteryStats 	"device total (mWs)" 	5.0351011011925
 scalar ApplicationClustering.node11.batteryStats 	account 	0
-scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	0.00062051593644432
-scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	9.84945930864
+scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	0.00031505951414183
+scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	5.000944668918
 scalar ApplicationClustering.node11.batteryStats 	account 	1
-scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	7.822718992704
-scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0.13870069136
+scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	4.7016478400784
+scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0.083362550356
 scalar ApplicationClustering.node11.batteryStats 	account 	2
-scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	0.4042368
-scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0.007744
+scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	0.2539008
+scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0.004864
 scalar ApplicationClustering.node11.batteryStats 	account 	3
-scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	0.1333814016
-scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0.004096
+scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	0.0792374016
+scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0.003136
 scalar ApplicationClustering.node11.batteryStats 	account 	4
 scalar ApplicationClustering.node11.batteryStats 	"energy (mWs)" 	0
 scalar ApplicationClustering.node11.batteryStats 	"time (s)" 	0
