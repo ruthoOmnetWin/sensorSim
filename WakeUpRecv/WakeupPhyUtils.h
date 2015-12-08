@@ -27,7 +27,7 @@
  *
  * @ingroup phyLayer
  */
-class WakeupMiximRadio : public MiximRadio
+class WakeupMiximRadio
 {
 public:
 	/**
