@@ -20,6 +20,7 @@
 #include "MiXiMMacPkt.h"
 #include "WakeupPhyUtils.h"
 #include "WakeupBaseDecider.h"
+#include "SNRThresholdDecider.h"
 
 Define_Module(WakeupPhyLayerBattery);
 
@@ -57,39 +58,33 @@ void WakeupPhyLayerBattery::initialize(int stage) {
 
 Decider* WakeupPhyLayerBattery::getDeciderFromName(const std::string& name,
         ParameterMap& params) {
-    WakeupBaseDecider *const pDecider = new WakeupBaseDecider(this, sensitivity, findHost()->getIndex(), coreDebug);
 
-    if (pDecider != NULL && !pDecider->initFromMap(params)) {
-        opp_warning("Decider from config.xml could not be initialized correctly!");
+    params["recordStats"] = cMsgPar("recordStats").setBoolValue(recordStats);
+
+    if(name == "Decider80211") {
+        protocolId = IEEE_80211;
+        return createDecider<Decider80211>(params);
     }
-
-    return pDecider;
-/*
-    params["decodingCurrentDelta"] =
-                cMsgPar("decodingCurrentDelta").setDoubleValue(
-                        decodingCurrentDelta);
-
-    if (name == "Decider80211Battery") {
-        return createDecider<Decider80211Battery>(params);
+    if(name == "SNRThresholdDecider"){
+        protocolId = GENERIC;
+        return createDecider<SNRThresholdDecider>(params);
     }
-    if (name == "Decider80211MultiChannel") {
-        return createDecider<Decider80211MultiChannel>(params);
+    if(name == "Decider802154Narrow") {
+        protocolId = IEEE_802154_NARROW;
+        return createDecider<Decider802154Narrow>(params);
     }
     if (name == "WakeupBaseDecider") {
-        return createDecider<WakeupBaseDecider>(params);
+        protocolId = IEEE_802154_NARROW;
+        WakeupBaseDecider *const pDecider = new WakeupBaseDecider(this, sensitivity, findHost()->getIndex(), coreDebug);
+
+        if (pDecider != NULL && !pDecider->initFromMap(params)) {
+            opp_warning("Decider from config.xml could not be initialized correctly!");
+        }
+
+        return pDecider;
     }
 
-*/
-
-    //always return WakeupBaseDecider when WakeupPhyLayer is in use
-    //return createDecider<WakeupBaseDecider>(params);
-    //return createDecider<Decider802154Narrow>(params);
-/*
-    WakeupBaseDecider *const pDecider = new WakeupBaseDecider(this, sensitivity, findHost()->getIndex(), coreDebug);
-    if (pDecider != NULL && !pDecider->initFromMap(params)) {
-        opp_warning("Decider from config.xml could not be initialized correctly!");
-    }
-    return pDecider;*/
+    return BasePhyLayer::getDeciderFromName(name, params);
 }
 
 void WakeupPhyLayerBattery::drawCurrent(double amount, int activity) {
@@ -133,6 +128,7 @@ void WakeupPhyLayerBattery::handleAirFrame(airframe_ptr_t frame) {
         delete frame;
         return;
     }
+    EV << "---------- AIRFRAME " << frame->getName() << endl;
     PhyLayer::handleAirFrame(frame);
 }
 

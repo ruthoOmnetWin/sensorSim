@@ -249,6 +249,7 @@ $O/WakeupPhyLayerBattery.o: WakeupPhyLayerBattery.cc \
 	$(MIXIM_PROJ)/src/modules/phy/Decider80211MultiChannel.h \
 	$(MIXIM_PROJ)/src/modules/phy/Decider802154Narrow.h \
 	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
+	$(MIXIM_PROJ)/src/modules/phy/SNRThresholdDecider.h \
 	WakeupBaseDecider.h \
 	WakeupPhyLayerBattery.h \
 	WakeupPhyUtils.h

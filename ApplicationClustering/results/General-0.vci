@@ -1,127 +1,128 @@
-file 4421 1449503063                                            
+file 6495 1449560868                                            
 version 2
-run General-0-20151123-13:39:08-11689
+run General-0-20151208-08:47:42-3824
 attr configname General
-attr datetime 20151123-13:39:08
+attr datetime 20151208-08:47:42
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network ApplicationClustering
-attr processid 11689
+attr processid 3824
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
+
 vector 6  ApplicationClustering.node1.batteryStats  capacity  ETV
-attr unit mW-s
-6	3911 13 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 7  ApplicationClustering.node1.batteryStats  capacity(relative)  ETV
-7	3924 8 0 0 0 0 1 1 1 1 1
 vector 8  ApplicationClustering.node1.batteryStats  estimate  ETV
-attr unit mW-s
-8	3932 13 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 9  ApplicationClustering.node1.batteryStats  estimate(relative)  ETV
-9	3945 8 0 0 0 0 1 1 1 1 1
 vector 17  ApplicationClustering.node2.batteryStats  capacity  ETV
-attr unit mW-s
-17	3953 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 18  ApplicationClustering.node2.batteryStats  capacity(relative)  ETV
-18	3967 9 0 0 0 0 1 1 1 1 1
 vector 19  ApplicationClustering.node2.batteryStats  estimate  ETV
-attr unit mW-s
-19	3976 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 20  ApplicationClustering.node2.batteryStats  estimate(relative)  ETV
-20	3990 9 0 0 0 0 1 1 1 1 1
 vector 28  ApplicationClustering.node3.batteryStats  capacity  ETV
-attr unit mW-s
-28	3999 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 29  ApplicationClustering.node3.batteryStats  capacity(relative)  ETV
-29	4013 9 0 0 0 0 1 1 1 1 1
 vector 30  ApplicationClustering.node3.batteryStats  estimate  ETV
-attr unit mW-s
-30	4022 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 31  ApplicationClustering.node3.batteryStats  estimate(relative)  ETV
-31	4036 9 0 0 0 0 1 1 1 1 1
 vector 39  ApplicationClustering.node4.batteryStats  capacity  ETV
-attr unit mW-s
-39	4045 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 40  ApplicationClustering.node4.batteryStats  capacity(relative)  ETV
-40	4059 9 0 0 0 0 1 1 1 1 1
 vector 41  ApplicationClustering.node4.batteryStats  estimate  ETV
-attr unit mW-s
-41	4068 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 42  ApplicationClustering.node4.batteryStats  estimate(relative)  ETV
-42	4082 9 0 0 0 0 1 1 1 1 1
 vector 50  ApplicationClustering.node5.batteryStats  capacity  ETV
-attr unit mW-s
-50	4091 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 51  ApplicationClustering.node5.batteryStats  capacity(relative)  ETV
-51	4105 9 0 0 0 0 1 1 1 1 1
 vector 52  ApplicationClustering.node5.batteryStats  estimate  ETV
-attr unit mW-s
-52	4114 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 53  ApplicationClustering.node5.batteryStats  estimate(relative)  ETV
-53	4128 9 0 0 0 0 1 1 1 1 1
 vector 61  ApplicationClustering.node6.batteryStats  capacity  ETV
-attr unit mW-s
-61	4137 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 62  ApplicationClustering.node6.batteryStats  capacity(relative)  ETV
-62	4151 9 0 0 0 0 1 1 1 1 1
 vector 63  ApplicationClustering.node6.batteryStats  estimate  ETV
-attr unit mW-s
-63	4160 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 64  ApplicationClustering.node6.batteryStats  estimate(relative)  ETV
-64	4174 9 0 0 0 0 1 1 1 1 1
 vector 72  ApplicationClustering.node7.batteryStats  capacity  ETV
-attr unit mW-s
-72	4183 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 73  ApplicationClustering.node7.batteryStats  capacity(relative)  ETV
-73	4197 9 0 0 0 0 1 1 1 1 1
 vector 74  ApplicationClustering.node7.batteryStats  estimate  ETV
-attr unit mW-s
-74	4206 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 75  ApplicationClustering.node7.batteryStats  estimate(relative)  ETV
-75	4220 9 0 0 0 0 1 1 1 1 1
 vector 83  ApplicationClustering.node8.batteryStats  capacity  ETV
-attr unit mW-s
-83	4229 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 84  ApplicationClustering.node8.batteryStats  capacity(relative)  ETV
-84	4243 9 0 0 0 0 1 1 1 1 1
 vector 85  ApplicationClustering.node8.batteryStats  estimate  ETV
-attr unit mW-s
-85	4252 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 86  ApplicationClustering.node8.batteryStats  estimate(relative)  ETV
-86	4266 9 0 0 0 0 1 1 1 1 1
 vector 94  ApplicationClustering.node9.batteryStats  capacity  ETV
-attr unit mW-s
-94	4275 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 95  ApplicationClustering.node9.batteryStats  capacity(relative)  ETV
-95	4289 9 0 0 0 0 1 1 1 1 1
 vector 96  ApplicationClustering.node9.batteryStats  estimate  ETV
-attr unit mW-s
-96	4298 14 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 97  ApplicationClustering.node9.batteryStats  estimate(relative)  ETV
-97	4312 9 0 0 0 0 1 1 1 1 1
 vector 105  ApplicationClustering.node10.batteryStats  capacity  ETV
-attr unit mW-s
-105	4321 15 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 106  ApplicationClustering.node10.batteryStats  capacity(relative)  ETV
-106	4336 10 0 0 0 0 1 1 1 1 1
 vector 107  ApplicationClustering.node10.batteryStats  estimate  ETV
-attr unit mW-s
-107	4346 15 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 108  ApplicationClustering.node10.batteryStats  estimate(relative)  ETV
-108	4361 10 0 0 0 0 1 1 1 1 1
 vector 116  ApplicationClustering.node11.batteryStats  capacity  ETV
-attr unit mW-s
-116	4371 15 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 117  ApplicationClustering.node11.batteryStats  capacity(relative)  ETV
-117	4386 10 0 0 0 0 1 1 1 1 1
 vector 118  ApplicationClustering.node11.batteryStats  estimate  ETV
-attr unit mW-s
-118	4396 15 0 0 0 0 1 594000 594000 594000 352836000000
+attr unit  mW-s
 vector 119  ApplicationClustering.node11.batteryStats  estimate(relative)  ETV
-119	4411 10 0 0 0 0 1 1 1 1 1
+6	3909 55 0 34 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+7	3964 56 0 34 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+8	4020 55 0 34 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+9	4075 56 0 34 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+17	4131 58 0 35 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+18	4189 59 0 35 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+19	4248 58 0 35 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+20	4306 59 0 35 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+28	4365 58 0 36 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+29	4423 59 0 36 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+30	4482 58 0 36 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+31	4540 59 0 36 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+39	4599 58 0 37 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+40	4657 59 0 37 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+41	4716 58 0 37 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+42	4774 59 0 37 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+50	4833 58 0 38 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+51	4891 59 0 38 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+52	4950 58 0 38 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+53	5008 59 0 38 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+61	5067 58 0 39 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+62	5125 59 0 39 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+63	5184 58 0 39 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+64	5242 59 0 39 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+72	5301 58 0 40 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+73	5359 59 0 40 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+74	5418 58 0 40 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+75	5476 59 0 40 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+83	5535 58 0 41 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+84	5593 59 0 41 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+85	5652 58 0 41 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+86	5710 59 0 41 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+94	5769 58 0 42 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+95	5827 59 0 42 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+96	5886 58 0 42 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+97	5944 59 0 42 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+105	6003 61 0 43 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+106	6064 62 0 43 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+107	6126 61 0 43 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+108	6187 62 0 43 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+116	6249 61 0 44 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+117	6310 62 0 44 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
+118	6372 61 0 44 0 4 3 593999.999748 594000 1781999.999622 1058507999550.9
+119	6433 62 0 44 0 4 3 0.99999999957576 1 2.9999999993636 2.9999999987273
