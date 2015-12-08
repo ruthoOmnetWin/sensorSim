@@ -1,92 +1,152 @@
 version 2
-run General-0-20151208-16:28:47-26722
+run General-0-20151208-17:41:57-3895
 attr configname General
-attr datetime 20151208-16:28:47
+attr datetime 20151208-17:41:57
 attr experiment General
-attr inifile omnetpp.ini
+attr inifile myTestApplicationNetw.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
-attr network ApplicationClusteringImplementations
-attr processid 26722
+attr network MyTestApplicationNetw
+attr processid 3895
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-vector 9  ApplicationClusteringImplementations.Node9.Processor  "power mode"  ETV
-vector 10  ApplicationClusteringImplementations.Node9.Processor  "Sensor Modules Status"  ETV
-vector 11  ApplicationClusteringImplementations.Node9.Processor  Voltage  ETV
-vector 12  ApplicationClusteringImplementations.Node9.Processor  residualRelative  ETV
-vector 13  ApplicationClusteringImplementations.Node9.Processor  residualAbs  ETV
-vector 23  ApplicationClusteringImplementations.Node10.Processor  "power mode"  ETV
-vector 24  ApplicationClusteringImplementations.Node10.Processor  "Sensor Modules Status"  ETV
-vector 25  ApplicationClusteringImplementations.Node10.Processor  Voltage  ETV
-vector 26  ApplicationClusteringImplementations.Node10.Processor  residualRelative  ETV
-vector 27  ApplicationClusteringImplementations.Node10.Processor  residualAbs  ETV
-vector 37  ApplicationClusteringImplementations.Node11.Processor  "power mode"  ETV
-vector 38  ApplicationClusteringImplementations.Node11.Processor  "Sensor Modules Status"  ETV
-vector 39  ApplicationClusteringImplementations.Node11.Processor  Voltage  ETV
-vector 40  ApplicationClusteringImplementations.Node11.Processor  residualRelative  ETV
-vector 41  ApplicationClusteringImplementations.Node11.Processor  residualAbs  ETV
-vector 51  ApplicationClusteringImplementations.Node12.Processor  "power mode"  ETV
-vector 52  ApplicationClusteringImplementations.Node12.Processor  "Sensor Modules Status"  ETV
-vector 53  ApplicationClusteringImplementations.Node12.Processor  Voltage  ETV
-vector 54  ApplicationClusteringImplementations.Node12.Processor  residualRelative  ETV
-vector 55  ApplicationClusteringImplementations.Node12.Processor  residualAbs  ETV
-vector 65  ApplicationClusteringImplementations.Node13.Processor  "power mode"  ETV
-vector 66  ApplicationClusteringImplementations.Node13.Processor  "Sensor Modules Status"  ETV
-vector 67  ApplicationClusteringImplementations.Node13.Processor  Voltage  ETV
-vector 68  ApplicationClusteringImplementations.Node13.Processor  residualRelative  ETV
-vector 69  ApplicationClusteringImplementations.Node13.Processor  residualAbs  ETV
-vector 70  ApplicationClusteringImplementations.Node9.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 71  ApplicationClusteringImplementations.Node9.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 72  ApplicationClusteringImplementations.Node9.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 73  ApplicationClusteringImplementations.Node9.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 74  ApplicationClusteringImplementations.Node9.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 75  ApplicationClusteringImplementations.Node9.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 76  ApplicationClusteringImplementations.Node9.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 77  ApplicationClusteringImplementations.Node9.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 78  ApplicationClusteringImplementations.Node9.Memory  "Energy Consumptions"  ETV
-vector 79  ApplicationClusteringImplementations.Node9.Memory  "Current use over time"  ETV
-vector 87  ApplicationClusteringImplementations.Node10.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 88  ApplicationClusteringImplementations.Node10.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 89  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 90  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 91  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 92  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 93  ApplicationClusteringImplementations.Node10.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 94  ApplicationClusteringImplementations.Node10.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 95  ApplicationClusteringImplementations.Node10.Memory  "Energy Consumptions"  ETV
-vector 96  ApplicationClusteringImplementations.Node10.Memory  "Current use over time"  ETV
-vector 104  ApplicationClusteringImplementations.Node11.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 105  ApplicationClusteringImplementations.Node11.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 106  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 107  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 108  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 109  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 110  ApplicationClusteringImplementations.Node11.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 111  ApplicationClusteringImplementations.Node11.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 112  ApplicationClusteringImplementations.Node11.Memory  "Energy Consumptions"  ETV
-vector 113  ApplicationClusteringImplementations.Node11.Memory  "Current use over time"  ETV
-vector 121  ApplicationClusteringImplementations.Node12.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 122  ApplicationClusteringImplementations.Node12.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 123  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 124  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 125  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 126  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 127  ApplicationClusteringImplementations.Node12.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 128  ApplicationClusteringImplementations.Node12.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 129  ApplicationClusteringImplementations.Node12.Memory  "Energy Consumptions"  ETV
-vector 130  ApplicationClusteringImplementations.Node12.Memory  "Current use over time"  ETV
-vector 138  ApplicationClusteringImplementations.Node13.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 139  ApplicationClusteringImplementations.Node13.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 140  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 141  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 142  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 143  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 144  ApplicationClusteringImplementations.Node13.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 145  ApplicationClusteringImplementations.Node13.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 146  ApplicationClusteringImplementations.Node13.Memory  "Energy Consumptions"  ETV
-vector 147  ApplicationClusteringImplementations.Node13.Memory  "Current use over time"  ETV
+vector 9  MyTestApplicationNetw.Node0.Processor  "power mode"  ETV
+vector 10  MyTestApplicationNetw.Node0.Processor  "Sensor Modules Status"  ETV
+vector 11  MyTestApplicationNetw.Node0.Processor  Voltage  ETV
+vector 12  MyTestApplicationNetw.Node0.Processor  residualRelative  ETV
+vector 13  MyTestApplicationNetw.Node0.Processor  residualAbs  ETV
+vector 23  MyTestApplicationNetw.Node1.Processor  "power mode"  ETV
+vector 24  MyTestApplicationNetw.Node1.Processor  "Sensor Modules Status"  ETV
+vector 25  MyTestApplicationNetw.Node1.Processor  Voltage  ETV
+vector 26  MyTestApplicationNetw.Node1.Processor  residualRelative  ETV
+vector 27  MyTestApplicationNetw.Node1.Processor  residualAbs  ETV
+vector 37  MyTestApplicationNetw.Node2.Processor  "power mode"  ETV
+vector 38  MyTestApplicationNetw.Node2.Processor  "Sensor Modules Status"  ETV
+vector 39  MyTestApplicationNetw.Node2.Processor  Voltage  ETV
+vector 40  MyTestApplicationNetw.Node2.Processor  residualRelative  ETV
+vector 41  MyTestApplicationNetw.Node2.Processor  residualAbs  ETV
+vector 51  MyTestApplicationNetw.Node3.Processor  "power mode"  ETV
+vector 52  MyTestApplicationNetw.Node3.Processor  "Sensor Modules Status"  ETV
+vector 53  MyTestApplicationNetw.Node3.Processor  Voltage  ETV
+vector 54  MyTestApplicationNetw.Node3.Processor  residualRelative  ETV
+vector 55  MyTestApplicationNetw.Node3.Processor  residualAbs  ETV
+vector 65  MyTestApplicationNetw.Node4.Processor  "power mode"  ETV
+vector 66  MyTestApplicationNetw.Node4.Processor  "Sensor Modules Status"  ETV
+vector 67  MyTestApplicationNetw.Node4.Processor  Voltage  ETV
+vector 68  MyTestApplicationNetw.Node4.Processor  residualRelative  ETV
+vector 69  MyTestApplicationNetw.Node4.Processor  residualAbs  ETV
+vector 79  MyTestApplicationNetw.Node5.Processor  "power mode"  ETV
+vector 80  MyTestApplicationNetw.Node5.Processor  "Sensor Modules Status"  ETV
+vector 81  MyTestApplicationNetw.Node5.Processor  Voltage  ETV
+vector 82  MyTestApplicationNetw.Node5.Processor  residualRelative  ETV
+vector 83  MyTestApplicationNetw.Node5.Processor  residualAbs  ETV
+vector 93  MyTestApplicationNetw.Node6.Processor  "power mode"  ETV
+vector 94  MyTestApplicationNetw.Node6.Processor  "Sensor Modules Status"  ETV
+vector 95  MyTestApplicationNetw.Node6.Processor  Voltage  ETV
+vector 96  MyTestApplicationNetw.Node6.Processor  residualRelative  ETV
+vector 97  MyTestApplicationNetw.Node6.Processor  residualAbs  ETV
+vector 107  MyTestApplicationNetw.Node7.Processor  "power mode"  ETV
+vector 108  MyTestApplicationNetw.Node7.Processor  "Sensor Modules Status"  ETV
+vector 109  MyTestApplicationNetw.Node7.Processor  Voltage  ETV
+vector 110  MyTestApplicationNetw.Node7.Processor  residualRelative  ETV
+vector 111  MyTestApplicationNetw.Node7.Processor  residualAbs  ETV
+vector 121  MyTestApplicationNetw.Node8.Processor  "power mode"  ETV
+vector 122  MyTestApplicationNetw.Node8.Processor  "Sensor Modules Status"  ETV
+vector 123  MyTestApplicationNetw.Node8.Processor  Voltage  ETV
+vector 124  MyTestApplicationNetw.Node8.Processor  residualRelative  ETV
+vector 125  MyTestApplicationNetw.Node8.Processor  residualAbs  ETV
+vector 126  MyTestApplicationNetw.Node0.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 127  MyTestApplicationNetw.Node0.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 128  MyTestApplicationNetw.Node0.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 129  MyTestApplicationNetw.Node0.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 130  MyTestApplicationNetw.Node0.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 131  MyTestApplicationNetw.Node0.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 132  MyTestApplicationNetw.Node0.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 133  MyTestApplicationNetw.Node0.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 134  MyTestApplicationNetw.Node0.Memory  "Energy Consumptions"  ETV
+vector 135  MyTestApplicationNetw.Node0.Memory  "Current use over time"  ETV
+vector 143  MyTestApplicationNetw.Node1.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 144  MyTestApplicationNetw.Node1.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 145  MyTestApplicationNetw.Node1.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 146  MyTestApplicationNetw.Node1.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 147  MyTestApplicationNetw.Node1.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 148  MyTestApplicationNetw.Node1.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 149  MyTestApplicationNetw.Node1.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 150  MyTestApplicationNetw.Node1.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 151  MyTestApplicationNetw.Node1.Memory  "Energy Consumptions"  ETV
+vector 152  MyTestApplicationNetw.Node1.Memory  "Current use over time"  ETV
+vector 160  MyTestApplicationNetw.Node2.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 161  MyTestApplicationNetw.Node2.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 162  MyTestApplicationNetw.Node2.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 163  MyTestApplicationNetw.Node2.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 164  MyTestApplicationNetw.Node2.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 165  MyTestApplicationNetw.Node2.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 166  MyTestApplicationNetw.Node2.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 167  MyTestApplicationNetw.Node2.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 168  MyTestApplicationNetw.Node2.Memory  "Energy Consumptions"  ETV
+vector 169  MyTestApplicationNetw.Node2.Memory  "Current use over time"  ETV
+vector 177  MyTestApplicationNetw.Node3.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 178  MyTestApplicationNetw.Node3.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 179  MyTestApplicationNetw.Node3.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 180  MyTestApplicationNetw.Node3.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 181  MyTestApplicationNetw.Node3.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 182  MyTestApplicationNetw.Node3.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 183  MyTestApplicationNetw.Node3.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 184  MyTestApplicationNetw.Node3.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 185  MyTestApplicationNetw.Node3.Memory  "Energy Consumptions"  ETV
+vector 186  MyTestApplicationNetw.Node3.Memory  "Current use over time"  ETV
+vector 194  MyTestApplicationNetw.Node4.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 195  MyTestApplicationNetw.Node4.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 196  MyTestApplicationNetw.Node4.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 197  MyTestApplicationNetw.Node4.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 198  MyTestApplicationNetw.Node4.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 199  MyTestApplicationNetw.Node4.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 200  MyTestApplicationNetw.Node4.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 201  MyTestApplicationNetw.Node4.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 202  MyTestApplicationNetw.Node4.Memory  "Energy Consumptions"  ETV
+vector 203  MyTestApplicationNetw.Node4.Memory  "Current use over time"  ETV
+vector 211  MyTestApplicationNetw.Node5.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 212  MyTestApplicationNetw.Node5.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 213  MyTestApplicationNetw.Node5.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 214  MyTestApplicationNetw.Node5.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 215  MyTestApplicationNetw.Node5.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 216  MyTestApplicationNetw.Node5.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 217  MyTestApplicationNetw.Node5.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 218  MyTestApplicationNetw.Node5.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 219  MyTestApplicationNetw.Node5.Memory  "Energy Consumptions"  ETV
+vector 220  MyTestApplicationNetw.Node5.Memory  "Current use over time"  ETV
+vector 228  MyTestApplicationNetw.Node6.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 229  MyTestApplicationNetw.Node6.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 230  MyTestApplicationNetw.Node6.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 231  MyTestApplicationNetw.Node6.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 232  MyTestApplicationNetw.Node6.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 233  MyTestApplicationNetw.Node6.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 234  MyTestApplicationNetw.Node6.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 235  MyTestApplicationNetw.Node6.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 236  MyTestApplicationNetw.Node6.Memory  "Energy Consumptions"  ETV
+vector 237  MyTestApplicationNetw.Node6.Memory  "Current use over time"  ETV
+vector 245  MyTestApplicationNetw.Node7.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 246  MyTestApplicationNetw.Node7.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 247  MyTestApplicationNetw.Node7.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 248  MyTestApplicationNetw.Node7.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 249  MyTestApplicationNetw.Node7.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 250  MyTestApplicationNetw.Node7.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 251  MyTestApplicationNetw.Node7.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 252  MyTestApplicationNetw.Node7.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 253  MyTestApplicationNetw.Node7.Memory  "Energy Consumptions"  ETV
+vector 254  MyTestApplicationNetw.Node7.Memory  "Current use over time"  ETV
+vector 262  MyTestApplicationNetw.Node8.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 263  MyTestApplicationNetw.Node8.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 264  MyTestApplicationNetw.Node8.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 265  MyTestApplicationNetw.Node8.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 266  MyTestApplicationNetw.Node8.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 267  MyTestApplicationNetw.Node8.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 268  MyTestApplicationNetw.Node8.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 269  MyTestApplicationNetw.Node8.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 270  MyTestApplicationNetw.Node8.Memory  "Energy Consumptions"  ETV
+vector 271  MyTestApplicationNetw.Node8.Memory  "Current use over time"  ETV

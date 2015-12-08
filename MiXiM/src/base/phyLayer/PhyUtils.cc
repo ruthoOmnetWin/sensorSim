@@ -201,9 +201,12 @@ RSAMConstMappingIterator::RSAMConstMappingIterator( const RadioStateAnalogueMode
 {
 	assert(rsam);
 
-	assert( !(signalStart < rsam->radioStateAttenuation.front().getTime()) );
+//	assert( !(signalStart < rsam->radioStateAttenuation.front().getTime()) );
+	if ( !(signalStart < rsam->radioStateAttenuation.front().getTime()) ) {
+	    jumpToBegin();
+	}
 
-	jumpToBegin();
+
 }
 
 void RSAMConstMappingIterator::jumpTo(const Argument& pos)
