@@ -82,9 +82,12 @@ void MYCLASS wakeupSleepLeaveSleep(void)
 
 
     //myPhyLayerBattery->setRadioState(0);
-    myPhyLayerBattery->setRadioState(WakeupMiximRadio::RX);
-    myBaseHost->getDisplayString().setTagArg("b", 3, "yellow");
-    isInSleepMode = true;
+    int radioState = myPhyLayerBattery->getRadioState();
+    if (radioState == WakeupMiximRadio::SLEEP) {
+        myPhyLayerBattery->setRadioState(WakeupMiximRadio::RX);
+        myBaseHost->getDisplayString().setTagArg("b", 3, "yellow");
+        isInSleepMode = true;
+    }
     //wakeupSleepUpdateTimer();
 
 }

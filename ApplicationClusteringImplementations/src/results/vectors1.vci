@@ -1,15 +1,15 @@
-                                                                
+file 10011 1449672277                                           
 version 2
-run General-0-20151208-18:15:03-8386
+run General-0-20151209-15:43:58-5209
 attr configname General
-attr datetime 20151208-18:15:03
+attr datetime 20151209-15:43:58
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network ApplicationClusteringImplementations
-attr processid 8386
+attr processid 5209
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -54,4 +54,115 @@ vector 69  ApplicationClusteringImplementations.Node9.Memory  "Current use over 
 vector 77  ApplicationClusteringImplementations.Node10.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
 vector 78  ApplicationClusteringImplementations.Node10.TemperatureSensor.SensingUnit  "Current use over time"  ETV
 vector 79  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 80  ApplicationClusteringImplementations.Node1
+vector 80  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 81  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 82  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 83  ApplicationClusteringImplementations.Node10.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 84  ApplicationClusteringImplementations.Node10.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 85  ApplicationClusteringImplementations.Node10.Memory  "Energy Consumptions"  ETV
+vector 86  ApplicationClusteringImplementations.Node10.Memory  "Current use over time"  ETV
+vector 94  ApplicationClusteringImplementations.Node11.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 95  ApplicationClusteringImplementations.Node11.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 96  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 97  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 98  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 99  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 100  ApplicationClusteringImplementations.Node11.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 101  ApplicationClusteringImplementations.Node11.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 102  ApplicationClusteringImplementations.Node11.Memory  "Energy Consumptions"  ETV
+vector 103  ApplicationClusteringImplementations.Node11.Memory  "Current use over time"  ETV
+vector 111  ApplicationClusteringImplementations.Node12.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 112  ApplicationClusteringImplementations.Node12.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 113  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 114  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 115  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 116  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 117  ApplicationClusteringImplementations.Node12.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 118  ApplicationClusteringImplementations.Node12.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 119  ApplicationClusteringImplementations.Node12.Memory  "Energy Consumptions"  ETV
+vector 120  ApplicationClusteringImplementations.Node12.Memory  "Current use over time"  ETV
+vector 128  ApplicationClusteringImplementations.Node13.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 129  ApplicationClusteringImplementations.Node13.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 130  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 131  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 132  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 133  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 134  ApplicationClusteringImplementations.Node13.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 135  ApplicationClusteringImplementations.Node13.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 136  ApplicationClusteringImplementations.Node13.Memory  "Energy Consumptions"  ETV
+vector 137  ApplicationClusteringImplementations.Node13.Memory  "Current use over time"  ETV
+7	8103 16 0 0 0 0 2 0 0 0 0
+8	8119 17 0 17 0 0 2 0 0 0 0
+9	8136 26 0 17 0 0 3 3 3 9 27
+10	8162 59 0 17 0 0 3 0.99351851851852 1 2.9888888888889 2.9778412208505
+11	8221 50 0 17 0 0 3 10730000 10800000 32280000 3.473354e+14
+19	8271 18 0 0 0 0 2 0 0 0 0
+20	8289 19 0 18 0 0 2 0 0 0 0
+21	8308 29 0 18 0 0 3 3 3 9 27
+22	8337 59 0 18 0 0 3 0.99351851851852 1 2.9888888888889 2.9778412208505
+23	8396 50 0 18 0 0 3 10730000 10800000 32280000 3.473354e+14
+31	8446 18 0 0 0 0 2 0 0 0 0
+32	8464 19 0 19 0 0 2 0 0 0 0
+33	8483 29 0 19 0 0 3 3 3 9 27
+34	8512 59 0 19 0 0 3 0.99351851851852 1 2.9888888888889 2.9778412208505
+35	8571 50 0 19 0 0 3 10730000 10800000 32280000 3.473354e+14
+43	8621 18 0 0 0 0 2 0 0 0 0
+44	8639 19 0 20 0 0 2 0 0 0 0
+45	8658 29 0 20 0 0 3 3 3 9 27
+46	8687 59 0 20 0 0 3 0.99351851851852 1 2.9888888888889 2.9778412208505
+47	8746 50 0 20 0 0 3 10730000 10800000 32280000 3.473354e+14
+55	8796 18 0 0 0 0 2 0 0 0 0
+56	8814 19 0 21 0 0 2 0 0 0 0
+57	8833 29 0 21 0 0 3 3 3 9 27
+58	8862 59 0 21 0 0 3 0.99351851851852 1 2.9888888888889 2.9778412208505
+59	8921 50 0 21 0 0 3 10730000 10800000 32280000 3.473354e+14
+60	8971 39 0 0 0 0 3 10000 10000 30000 300000000
+61	9010 11 0 0 0 0 1 300 300 300 90000
+62	9021 26 0 2 0 0 2 10000 10000 20000 200000000
+63	9047 11 0 0 0 0 1 300 300 300 90000
+64	9058 26 0 7 0 0 2 10000 10000 20000 200000000
+65	9084 11 0 0 0 0 1 300 300 300 90000
+66	9095 27 0 12 0 0 2 10000 10000 20000 200000000
+67	9122 11 0 0 0 0 1 300 300 300 90000
+68	9133 27 0 22 0 0 2 10000 10000 20000 200000000
+69	9160 11 0 0 0 0 1 300 300 300 90000
+77	9171 39 0 0 0 0 3 10000 10000 30000 300000000
+78	9210 11 0 0 0 0 1 300 300 300 90000
+79	9221 26 0 3 0 0 2 10000 10000 20000 200000000
+80	9247 11 0 0 0 0 1 300 300 300 90000
+81	9258 26 0 8 0 0 2 10000 10000 20000 200000000
+82	9284 11 0 0 0 0 1 300 300 300 90000
+83	9295 27 0 13 0 0 2 10000 10000 20000 200000000
+84	9322 11 0 0 0 0 1 300 300 300 90000
+85	9333 27 0 23 0 0 2 10000 10000 20000 200000000
+86	9360 11 0 0 0 0 1 300 300 300 90000
+94	9371 39 0 0 0 0 3 10000 10000 30000 300000000
+95	9410 11 0 0 0 0 1 300 300 300 90000
+96	9421 26 0 4 0 0 2 10000 10000 20000 200000000
+97	9447 11 0 0 0 0 1 300 300 300 90000
+98	9458 26 0 9 0 0 2 10000 10000 20000 200000000
+99	9484 11 0 0 0 0 1 300 300 300 90000
+100	9495 29 0 14 0 0 2 10000 10000 20000 200000000
+101	9524 12 0 0 0 0 1 300 300 300 90000
+102	9536 29 0 24 0 0 2 10000 10000 20000 200000000
+103	9565 12 0 0 0 0 1 300 300 300 90000
+111	9577 42 0 0 0 0 3 10000 10000 30000 300000000
+112	9619 12 0 0 0 0 1 300 300 300 90000
+113	9631 28 0 5 0 0 2 10000 10000 20000 200000000
+114	9659 12 0 0 0 0 1 300 300 300 90000
+115	9671 29 0 10 0 0 2 10000 10000 20000 200000000
+116	9700 12 0 0 0 0 1 300 300 300 90000
+117	9712 29 0 15 0 0 2 10000 10000 20000 200000000
+118	9741 12 0 0 0 0 1 300 300 300 90000
+119	9753 29 0 25 0 0 2 10000 10000 20000 200000000
+120	9782 12 0 0 0 0 1 300 300 300 90000
+128	9794 42 0 0 0 0 3 10000 10000 30000 300000000
+129	9836 12 0 0 0 0 1 300 300 300 90000
+130	9848 28 0 6 0 0 2 10000 10000 20000 200000000
+131	9876 12 0 0 0 0 1 300 300 300 90000
+132	9888 29 0 11 0 0 2 10000 10000 20000 200000000
+133	9917 12 0 0 0 0 1 300 300 300 90000
+134	9929 29 0 16 0 0 2 10000 10000 20000 200000000
+135	9958 12 0 0 0 0 1 300 300 300 90000
+136	9970 29 0 26 0 0 2 10000 10000 20000 200000000
+137	9999 12 0 0 0 0 1 300 300 300 90000
