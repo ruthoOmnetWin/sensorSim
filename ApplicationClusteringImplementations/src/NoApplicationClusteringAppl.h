@@ -22,11 +22,20 @@
 
 class NoApplicationClusteringAppl : public BaseModule
 {
+protected:
+    int dataOut;
+    int dataIn;
+    int ctrlOut;
+    int ctrlIn;
     int coordinatorNodeAddr;
     int sendSensorDataToMasterIntervall;
     Memory* memory;
 public:
+    NoApplicationClusteringAppl();
+    ~NoApplicationClusteringAppl();
+
     cMessage* sendToMaster;
+
     void initialize(int stage);
     void handleMessage(cMessage* msg);
 };

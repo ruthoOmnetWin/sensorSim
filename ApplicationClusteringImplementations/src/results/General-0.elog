@@ -1,5 +1,5 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20151214-16:37:13-32726 b 1000
+SB v 1029 rid General-0-20151214-18:20:19-13966 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t applicationclusteringimplementations.Szenario1 n Szenario1 cm 1
 MS id 1 d bgi=background/roomsBigger;bgb=867,430,white;bgp=0,0
@@ -2254,9 +2254,6 @@ ME
 MB sm 1 tm 27 m initialize(0)
 ME
 MB sm 1 tm 28 m initialize(0)
-CM id 10 tid 10 eid 10 etid 10 c cMessage n sendToMaster pe -1
-BS id 10 tid 10 eid 10 etid 10 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 313 m initialize(0)
 - Node0[0]::SimpleBattery: initialized device Processor as device 13 with 3 accounts
@@ -2297,13 +2294,13 @@ MB sm 1 tm 43 m initialize(0)
 - Node1[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 44 m initialize(0)
-CM id 11 tid 11 eid 11 etid 11 c cMessage n publish k 1 pe -1
-BS id 11 tid 11 eid 11 etid 11 c cMessage n publish k 1 p 2000 pe 0
+CM id 10 tid 10 eid 10 etid 10 c cMessage n publish k 1 pe -1
+BS id 10 tid 10 eid 10 etid 10 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node1[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node1[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 12 tid 12 eid 12 etid 12 c cMessage n auto-update pe -1
-BS id 12 tid 12 eid 12 etid 12 c cMessage n auto-update p 500 pe 0
+CM id 11 tid 11 eid 11 etid 11 c cMessage n auto-update pe -1
+BS id 11 tid 11 eid 11 etid 11 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 45 m initialize(0)
@@ -2343,7 +2340,7 @@ ME
 MB sm 1 tm 48 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 13 tid 13 eid 13 etid 13 c cMessage n move pe -1
+CM id 12 tid 12 eid 12 etid 12 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 49 m initialize(0)
@@ -2352,21 +2349,18 @@ MB sm 1 tm 56 m initialize(0)
 MB sm 56 tm 57 m ""
 ME
 - myMacAddr A:00-00-00-00-00-01 *** auto
-CM id 14 tid 14 eid 14 etid 14 c cMessage n timer-backoff pe -1
-CM id 15 tid 15 eid 15 etid 15 c cMessage n timer-cca pe -1
-CM id 16 tid 16 eid 16 etid 16 c cMessage n timer-sifs pe -1
-CM id 17 tid 17 eid 17 etid 17 c cMessage n timer-rxAck pe -1
+CM id 13 tid 13 eid 13 etid 13 c cMessage n timer-backoff pe -1
+CM id 14 tid 14 eid 14 etid 14 c cMessage n timer-cca pe -1
+CM id 15 tid 15 eid 15 etid 15 c cMessage n timer-sifs pe -1
+CM id 16 tid 16 eid 16 etid 16 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 57 m initialize(0)
-CM id 18 tid 18 eid 18 etid 18 c cMessage n "radio switching over" k 22001 pe -1
-CM id 19 tid 19 eid 19 etid 19 c cMessage n "transmission over" k 22000 pe -1
+CM id 17 tid 17 eid 17 etid 17 c cMessage n "radio switching over" k 22001 pe -1
+CM id 18 tid 18 eid 18 etid 18 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 50 m initialize(0)
 ME
 MB sm 1 tm 51 m initialize(0)
-CM id 20 tid 20 eid 20 etid 20 c cMessage n sendToMaster pe -1
-BS id 20 tid 20 eid 20 etid 20 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 314 m initialize(0)
 - Node1[0]::SimpleBattery: initialized device Processor as device 5 with 3 accounts
@@ -2406,13 +2400,13 @@ MB sm 1 tm 58 m initialize(0)
 - Node2[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 59 m initialize(0)
-CM id 21 tid 21 eid 21 etid 21 c cMessage n publish k 1 pe -1
-BS id 21 tid 21 eid 21 etid 21 c cMessage n publish k 1 p 2000 pe 0
+CM id 19 tid 19 eid 19 etid 19 c cMessage n publish k 1 pe -1
+BS id 19 tid 19 eid 19 etid 19 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node2[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node2[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 22 tid 22 eid 22 etid 22 c cMessage n auto-update pe -1
-BS id 22 tid 22 eid 22 etid 22 c cMessage n auto-update p 500 pe 0
+CM id 20 tid 20 eid 20 etid 20 c cMessage n auto-update pe -1
+BS id 20 tid 20 eid 20 etid 20 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 60 m initialize(0)
@@ -2478,7 +2472,7 @@ ME
 MB sm 1 tm 64 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 23 tid 23 eid 23 etid 23 c cMessage n move pe -1
+CM id 21 tid 21 eid 21 etid 21 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 65 m initialize(0)
@@ -2487,21 +2481,18 @@ MB sm 1 tm 76 m initialize(0)
 MB sm 76 tm 77 m ""
 ME
 - myMacAddr A:00-00-00-00-00-02 *** auto
-CM id 24 tid 24 eid 24 etid 24 c cMessage n timer-backoff pe -1
-CM id 25 tid 25 eid 25 etid 25 c cMessage n timer-cca pe -1
-CM id 26 tid 26 eid 26 etid 26 c cMessage n timer-sifs pe -1
-CM id 27 tid 27 eid 27 etid 27 c cMessage n timer-rxAck pe -1
+CM id 22 tid 22 eid 22 etid 22 c cMessage n timer-backoff pe -1
+CM id 23 tid 23 eid 23 etid 23 c cMessage n timer-cca pe -1
+CM id 24 tid 24 eid 24 etid 24 c cMessage n timer-sifs pe -1
+CM id 25 tid 25 eid 25 etid 25 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 77 m initialize(0)
-CM id 28 tid 28 eid 28 etid 28 c cMessage n "radio switching over" k 22001 pe -1
-CM id 29 tid 29 eid 29 etid 29 c cMessage n "transmission over" k 22000 pe -1
+CM id 26 tid 26 eid 26 etid 26 c cMessage n "radio switching over" k 22001 pe -1
+CM id 27 tid 27 eid 27 etid 27 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 66 m initialize(0)
 ME
 MB sm 1 tm 67 m initialize(0)
-CM id 30 tid 30 eid 30 etid 30 c cMessage n sendToMaster pe -1
-BS id 30 tid 30 eid 30 etid 30 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 315 m initialize(0)
 - Node2[0]::SimpleBattery: initialized device Processor as device 9 with 3 accounts
@@ -2523,14 +2514,20 @@ GC m 316 g 0 n fromTemperatureSensor o 0
 GC m 316 g 3 n toTemperatureSensor o 1
 CC sm 80 sg 1 dm 316 dg 0
 CC sm 316 sg 3 dm 80 dg 2
+BU id 7 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 316 g 4 n fromPressureSensor o 0
 GC m 316 g 7 n toPressureSensor o 1
 CC sm 81 sg 1 dm 316 dg 4
 CC sm 316 sg 7 dm 81 dg 2
+BU id 7 txt "Created connections from Pressure-sensor to the processor."
+- Created connections from Pressure-sensor to the processor.
 GC m 316 g 8 n fromLightSensor o 0
 GC m 316 g 11 n toLightSensor o 1
 CC sm 82 sg 1 dm 316 dg 8
 CC sm 316 sg 11 dm 82 dg 2
+BU id 7 txt "Created connections from Light-sensor to the processor."
+- Created connections from Light-sensor to the processor.
 GC m 83 g 0 n connectToProcessor$i o 0
 GC m 83 g 1 n connectToProcessor$o o 1
 GC m 316 g 12 n connectToMemory$i o 0
@@ -2539,19 +2536,22 @@ CC sm 83 sg 1 dm 316 dg 12
 CS sm 83 sg 1 d ""
 CC sm 316 sg 13 dm 83 dg 0
 CS sm 316 sg 13 d ""
+BU id 7 txt "Counted 3 Sensor(s) on the Node.\n"
+- Counted 3 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 78 m initialize(0)
 - Node3[0]::BatteryStats: show details = 0
 - Node3[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 79 m initialize(0)
-CM id 31 tid 31 eid 31 etid 31 c cMessage n publish k 1 pe -1
-BS id 31 tid 31 eid 31 etid 31 c cMessage n publish k 1 p 2000 pe 0
+CM id 28 tid 28 eid 28 etid 28 c cMessage n publish k 1 pe -1
+BS id 28 tid 28 eid 28 etid 28 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node3[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node3[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 32 tid 32 eid 32 etid 32 c cMessage n auto-update pe -1
-BS id 32 tid 32 eid 32 etid 32 c cMessage n auto-update p 500 pe 0
+CM id 29 tid 29 eid 29 etid 29 c cMessage n auto-update pe -1
+BS id 29 tid 29 eid 29 etid 29 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 80 m initialize(0)
@@ -2643,7 +2643,7 @@ ME
 MB sm 1 tm 85 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 33 tid 33 eid 33 etid 33 c cMessage n move pe -1
+CM id 30 tid 30 eid 30 etid 30 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 86 m initialize(0)
@@ -2652,21 +2652,18 @@ MB sm 1 tm 101 m initialize(0)
 MB sm 101 tm 102 m ""
 ME
 - myMacAddr A:00-00-00-00-00-03 *** auto
-CM id 34 tid 34 eid 34 etid 34 c cMessage n timer-backoff pe -1
-CM id 35 tid 35 eid 35 etid 35 c cMessage n timer-cca pe -1
-CM id 36 tid 36 eid 36 etid 36 c cMessage n timer-sifs pe -1
-CM id 37 tid 37 eid 37 etid 37 c cMessage n timer-rxAck pe -1
+CM id 31 tid 31 eid 31 etid 31 c cMessage n timer-backoff pe -1
+CM id 32 tid 32 eid 32 etid 32 c cMessage n timer-cca pe -1
+CM id 33 tid 33 eid 33 etid 33 c cMessage n timer-sifs pe -1
+CM id 34 tid 34 eid 34 etid 34 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 102 m initialize(0)
-CM id 38 tid 38 eid 38 etid 38 c cMessage n "radio switching over" k 22001 pe -1
-CM id 39 tid 39 eid 39 etid 39 c cMessage n "transmission over" k 22000 pe -1
+CM id 35 tid 35 eid 35 etid 35 c cMessage n "radio switching over" k 22001 pe -1
+CM id 36 tid 36 eid 36 etid 36 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 87 m initialize(0)
 ME
 MB sm 1 tm 88 m initialize(0)
-CM id 40 tid 40 eid 40 etid 40 c cMessage n sendToMaster pe -1
-BS id 40 tid 40 eid 40 etid 40 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 316 m initialize(0)
 - Node3[0]::SimpleBattery: initialized device Processor as device 13 with 3 accounts
@@ -2702,13 +2699,13 @@ MB sm 1 tm 103 m initialize(0)
 - Node4[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 104 m initialize(0)
-CM id 41 tid 41 eid 41 etid 41 c cMessage n publish k 1 pe -1
-BS id 41 tid 41 eid 41 etid 41 c cMessage n publish k 1 p 2000 pe 0
+CM id 37 tid 37 eid 37 etid 37 c cMessage n publish k 1 pe -1
+BS id 37 tid 37 eid 37 etid 37 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node4[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node4[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 42 tid 42 eid 42 etid 42 c cMessage n auto-update pe -1
-BS id 42 tid 42 eid 42 etid 42 c cMessage n auto-update p 500 pe 0
+CM id 38 tid 38 eid 38 etid 38 c cMessage n auto-update pe -1
+BS id 38 tid 38 eid 38 etid 38 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 105 m initialize(0)
@@ -2748,7 +2745,7 @@ ME
 MB sm 1 tm 108 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 43 tid 43 eid 43 etid 43 c cMessage n move pe -1
+CM id 39 tid 39 eid 39 etid 39 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 109 m initialize(0)
@@ -2757,21 +2754,18 @@ MB sm 1 tm 116 m initialize(0)
 MB sm 116 tm 117 m ""
 ME
 - myMacAddr A:00-00-00-00-00-04 *** auto
-CM id 44 tid 44 eid 44 etid 44 c cMessage n timer-backoff pe -1
-CM id 45 tid 45 eid 45 etid 45 c cMessage n timer-cca pe -1
-CM id 46 tid 46 eid 46 etid 46 c cMessage n timer-sifs pe -1
-CM id 47 tid 47 eid 47 etid 47 c cMessage n timer-rxAck pe -1
+CM id 40 tid 40 eid 40 etid 40 c cMessage n timer-backoff pe -1
+CM id 41 tid 41 eid 41 etid 41 c cMessage n timer-cca pe -1
+CM id 42 tid 42 eid 42 etid 42 c cMessage n timer-sifs pe -1
+CM id 43 tid 43 eid 43 etid 43 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 117 m initialize(0)
-CM id 48 tid 48 eid 48 etid 48 c cMessage n "radio switching over" k 22001 pe -1
-CM id 49 tid 49 eid 49 etid 49 c cMessage n "transmission over" k 22000 pe -1
+CM id 44 tid 44 eid 44 etid 44 c cMessage n "radio switching over" k 22001 pe -1
+CM id 45 tid 45 eid 45 etid 45 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 110 m initialize(0)
 ME
 MB sm 1 tm 111 m initialize(0)
-CM id 50 tid 50 eid 50 etid 50 c cMessage n sendToMaster pe -1
-BS id 50 tid 50 eid 50 etid 50 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 317 m initialize(0)
 - Node4[0]::SimpleBattery: initialized device Processor as device 5 with 3 accounts
@@ -2819,13 +2813,13 @@ MB sm 1 tm 118 m initialize(0)
 - Node5[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 119 m initialize(0)
-CM id 51 tid 51 eid 51 etid 51 c cMessage n publish k 1 pe -1
-BS id 51 tid 51 eid 51 etid 51 c cMessage n publish k 1 p 2000 pe 0
+CM id 46 tid 46 eid 46 etid 46 c cMessage n publish k 1 pe -1
+BS id 46 tid 46 eid 46 etid 46 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node5[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node5[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 52 tid 52 eid 52 etid 52 c cMessage n auto-update pe -1
-BS id 52 tid 52 eid 52 etid 52 c cMessage n auto-update p 500 pe 0
+CM id 47 tid 47 eid 47 etid 47 c cMessage n auto-update pe -1
+BS id 47 tid 47 eid 47 etid 47 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 120 m initialize(0)
@@ -2943,7 +2937,7 @@ ME
 MB sm 1 tm 126 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 53 tid 53 eid 53 etid 53 c cMessage n move pe -1
+CM id 48 tid 48 eid 48 etid 48 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 127 m initialize(0)
@@ -2952,21 +2946,18 @@ MB sm 1 tm 146 m initialize(0)
 MB sm 146 tm 147 m ""
 ME
 - myMacAddr A:00-00-00-00-00-05 *** auto
-CM id 54 tid 54 eid 54 etid 54 c cMessage n timer-backoff pe -1
-CM id 55 tid 55 eid 55 etid 55 c cMessage n timer-cca pe -1
-CM id 56 tid 56 eid 56 etid 56 c cMessage n timer-sifs pe -1
-CM id 57 tid 57 eid 57 etid 57 c cMessage n timer-rxAck pe -1
+CM id 49 tid 49 eid 49 etid 49 c cMessage n timer-backoff pe -1
+CM id 50 tid 50 eid 50 etid 50 c cMessage n timer-cca pe -1
+CM id 51 tid 51 eid 51 etid 51 c cMessage n timer-sifs pe -1
+CM id 52 tid 52 eid 52 etid 52 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 147 m initialize(0)
-CM id 58 tid 58 eid 58 etid 58 c cMessage n "radio switching over" k 22001 pe -1
-CM id 59 tid 59 eid 59 etid 59 c cMessage n "transmission over" k 22000 pe -1
+CM id 53 tid 53 eid 53 etid 53 c cMessage n "radio switching over" k 22001 pe -1
+CM id 54 tid 54 eid 54 etid 54 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 128 m initialize(0)
 ME
 MB sm 1 tm 129 m initialize(0)
-CM id 60 tid 60 eid 60 etid 60 c cMessage n sendToMaster pe -1
-BS id 60 tid 60 eid 60 etid 60 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 318 m initialize(0)
 - Node5[0]::SimpleBattery: initialized device Processor as device 17 with 3 accounts
@@ -2988,8 +2979,6 @@ GC m 319 g 0 n fromLightSensor o 0
 GC m 319 g 3 n toLightSensor o 1
 CC sm 150 sg 1 dm 319 dg 0
 CC sm 319 sg 3 dm 150 dg 2
-BU id 10 txt "Created connections from Light-sensor to the processor."
-- Created connections from Light-sensor to the processor.
 GC m 151 g 0 n connectToProcessor$i o 0
 GC m 151 g 1 n connectToProcessor$o o 1
 GC m 319 g 4 n connectToMemory$i o 0
@@ -2998,22 +2987,19 @@ CC sm 151 sg 1 dm 319 dg 4
 CS sm 151 sg 1 d ""
 CC sm 319 sg 5 dm 151 dg 0
 CS sm 319 sg 5 d ""
-BU id 10 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 148 m initialize(0)
 - Node6[0]::BatteryStats: show details = 0
 - Node6[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 149 m initialize(0)
-CM id 61 tid 61 eid 61 etid 61 c cMessage n publish k 1 pe -1
-BS id 61 tid 61 eid 61 etid 61 c cMessage n publish k 1 p 2000 pe 0
+CM id 55 tid 55 eid 55 etid 55 c cMessage n publish k 1 pe -1
+BS id 55 tid 55 eid 55 etid 55 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node6[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node6[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 62 tid 62 eid 62 etid 62 c cMessage n auto-update pe -1
-BS id 62 tid 62 eid 62 etid 62 c cMessage n auto-update p 500 pe 0
+CM id 56 tid 56 eid 56 etid 56 c cMessage n auto-update pe -1
+BS id 56 tid 56 eid 56 etid 56 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 150 m initialize(0)
@@ -3053,7 +3039,7 @@ ME
 MB sm 1 tm 153 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 63 tid 63 eid 63 etid 63 c cMessage n move pe -1
+CM id 57 tid 57 eid 57 etid 57 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 154 m initialize(0)
@@ -3062,21 +3048,18 @@ MB sm 1 tm 161 m initialize(0)
 MB sm 161 tm 162 m ""
 ME
 - myMacAddr A:00-00-00-00-00-06 *** auto
-CM id 64 tid 64 eid 64 etid 64 c cMessage n timer-backoff pe -1
-CM id 65 tid 65 eid 65 etid 65 c cMessage n timer-cca pe -1
-CM id 66 tid 66 eid 66 etid 66 c cMessage n timer-sifs pe -1
-CM id 67 tid 67 eid 67 etid 67 c cMessage n timer-rxAck pe -1
+CM id 58 tid 58 eid 58 etid 58 c cMessage n timer-backoff pe -1
+CM id 59 tid 59 eid 59 etid 59 c cMessage n timer-cca pe -1
+CM id 60 tid 60 eid 60 etid 60 c cMessage n timer-sifs pe -1
+CM id 61 tid 61 eid 61 etid 61 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 162 m initialize(0)
-CM id 68 tid 68 eid 68 etid 68 c cMessage n "radio switching over" k 22001 pe -1
-CM id 69 tid 69 eid 69 etid 69 c cMessage n "transmission over" k 22000 pe -1
+CM id 62 tid 62 eid 62 etid 62 c cMessage n "radio switching over" k 22001 pe -1
+CM id 63 tid 63 eid 63 etid 63 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 155 m initialize(0)
 ME
 MB sm 1 tm 156 m initialize(0)
-CM id 70 tid 70 eid 70 etid 70 c cMessage n sendToMaster pe -1
-BS id 70 tid 70 eid 70 etid 70 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 319 m initialize(0)
 - Node6[0]::SimpleBattery: initialized device Processor as device 5 with 3 accounts
@@ -3129,13 +3112,13 @@ MB sm 1 tm 163 m initialize(0)
 - Node7[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 164 m initialize(0)
-CM id 71 tid 71 eid 71 etid 71 c cMessage n publish k 1 pe -1
-BS id 71 tid 71 eid 71 etid 71 c cMessage n publish k 1 p 2000 pe 0
+CM id 64 tid 64 eid 64 etid 64 c cMessage n publish k 1 pe -1
+BS id 64 tid 64 eid 64 etid 64 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node7[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node7[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 72 tid 72 eid 72 etid 72 c cMessage n auto-update pe -1
-BS id 72 tid 72 eid 72 etid 72 c cMessage n auto-update p 500 pe 0
+CM id 65 tid 65 eid 65 etid 65 c cMessage n auto-update pe -1
+BS id 65 tid 65 eid 65 etid 65 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 165 m initialize(0)
@@ -3227,7 +3210,7 @@ ME
 MB sm 1 tm 170 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 73 tid 73 eid 73 etid 73 c cMessage n move pe -1
+CM id 66 tid 66 eid 66 etid 66 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 171 m initialize(0)
@@ -3236,21 +3219,18 @@ MB sm 1 tm 186 m initialize(0)
 MB sm 186 tm 187 m ""
 ME
 - myMacAddr A:00-00-00-00-00-07 *** auto
-CM id 74 tid 74 eid 74 etid 74 c cMessage n timer-backoff pe -1
-CM id 75 tid 75 eid 75 etid 75 c cMessage n timer-cca pe -1
-CM id 76 tid 76 eid 76 etid 76 c cMessage n timer-sifs pe -1
-CM id 77 tid 77 eid 77 etid 77 c cMessage n timer-rxAck pe -1
+CM id 67 tid 67 eid 67 etid 67 c cMessage n timer-backoff pe -1
+CM id 68 tid 68 eid 68 etid 68 c cMessage n timer-cca pe -1
+CM id 69 tid 69 eid 69 etid 69 c cMessage n timer-sifs pe -1
+CM id 70 tid 70 eid 70 etid 70 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 187 m initialize(0)
-CM id 78 tid 78 eid 78 etid 78 c cMessage n "radio switching over" k 22001 pe -1
-CM id 79 tid 79 eid 79 etid 79 c cMessage n "transmission over" k 22000 pe -1
+CM id 71 tid 71 eid 71 etid 71 c cMessage n "radio switching over" k 22001 pe -1
+CM id 72 tid 72 eid 72 etid 72 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 172 m initialize(0)
 ME
 MB sm 1 tm 173 m initialize(0)
-CM id 80 tid 80 eid 80 etid 80 c cMessage n sendToMaster pe -1
-BS id 80 tid 80 eid 80 etid 80 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 320 m initialize(0)
 - Node7[0]::SimpleBattery: initialized device Processor as device 13 with 3 accounts
@@ -3272,8 +3252,6 @@ GC m 321 g 0 n fromLightSensor o 0
 GC m 321 g 3 n toLightSensor o 1
 CC sm 190 sg 1 dm 321 dg 0
 CC sm 321 sg 3 dm 190 dg 2
-BU id 12 txt "Created connections from Light-sensor to the processor."
-- Created connections from Light-sensor to the processor.
 GC m 191 g 0 n connectToProcessor$i o 0
 GC m 191 g 1 n connectToProcessor$o o 1
 GC m 321 g 4 n connectToMemory$i o 0
@@ -3282,22 +3260,19 @@ CC sm 191 sg 1 dm 321 dg 4
 CS sm 191 sg 1 d ""
 CC sm 321 sg 5 dm 191 dg 0
 CS sm 321 sg 5 d ""
-BU id 12 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 188 m initialize(0)
 - Node8[0]::BatteryStats: show details = 0
 - Node8[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 189 m initialize(0)
-CM id 81 tid 81 eid 81 etid 81 c cMessage n publish k 1 pe -1
-BS id 81 tid 81 eid 81 etid 81 c cMessage n publish k 1 p 2000 pe 0
+CM id 73 tid 73 eid 73 etid 73 c cMessage n publish k 1 pe -1
+BS id 73 tid 73 eid 73 etid 73 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node8[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node8[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 82 tid 82 eid 82 etid 82 c cMessage n auto-update pe -1
-BS id 82 tid 82 eid 82 etid 82 c cMessage n auto-update p 500 pe 0
+CM id 74 tid 74 eid 74 etid 74 c cMessage n auto-update pe -1
+BS id 74 tid 74 eid 74 etid 74 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 190 m initialize(0)
@@ -3337,7 +3312,7 @@ ME
 MB sm 1 tm 193 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 83 tid 83 eid 83 etid 83 c cMessage n move pe -1
+CM id 75 tid 75 eid 75 etid 75 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 194 m initialize(0)
@@ -3346,21 +3321,18 @@ MB sm 1 tm 201 m initialize(0)
 MB sm 201 tm 202 m ""
 ME
 - myMacAddr A:00-00-00-00-00-08 *** auto
-CM id 84 tid 84 eid 84 etid 84 c cMessage n timer-backoff pe -1
-CM id 85 tid 85 eid 85 etid 85 c cMessage n timer-cca pe -1
-CM id 86 tid 86 eid 86 etid 86 c cMessage n timer-sifs pe -1
-CM id 87 tid 87 eid 87 etid 87 c cMessage n timer-rxAck pe -1
+CM id 76 tid 76 eid 76 etid 76 c cMessage n timer-backoff pe -1
+CM id 77 tid 77 eid 77 etid 77 c cMessage n timer-cca pe -1
+CM id 78 tid 78 eid 78 etid 78 c cMessage n timer-sifs pe -1
+CM id 79 tid 79 eid 79 etid 79 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 202 m initialize(0)
-CM id 88 tid 88 eid 88 etid 88 c cMessage n "radio switching over" k 22001 pe -1
-CM id 89 tid 89 eid 89 etid 89 c cMessage n "transmission over" k 22000 pe -1
+CM id 80 tid 80 eid 80 etid 80 c cMessage n "radio switching over" k 22001 pe -1
+CM id 81 tid 81 eid 81 etid 81 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 195 m initialize(0)
 ME
 MB sm 1 tm 196 m initialize(0)
-CM id 90 tid 90 eid 90 etid 90 c cMessage n sendToMaster pe -1
-BS id 90 tid 90 eid 90 etid 90 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 321 m initialize(0)
 - Node8[0]::SimpleBattery: initialized device Processor as device 5 with 3 accounts
@@ -3404,13 +3376,13 @@ MB sm 1 tm 203 m initialize(0)
 - Node9[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 204 m initialize(0)
-CM id 91 tid 91 eid 91 etid 91 c cMessage n publish k 1 pe -1
-BS id 91 tid 91 eid 91 etid 91 c cMessage n publish k 1 p 2000 pe 0
+CM id 82 tid 82 eid 82 etid 82 c cMessage n publish k 1 pe -1
+BS id 82 tid 82 eid 82 etid 82 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node9[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node9[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 92 tid 92 eid 92 etid 92 c cMessage n auto-update pe -1
-BS id 92 tid 92 eid 92 etid 92 c cMessage n auto-update p 500 pe 0
+CM id 83 tid 83 eid 83 etid 83 c cMessage n auto-update pe -1
+BS id 83 tid 83 eid 83 etid 83 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 205 m initialize(0)
@@ -3502,7 +3474,7 @@ ME
 MB sm 1 tm 210 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 93 tid 93 eid 93 etid 93 c cMessage n move pe -1
+CM id 84 tid 84 eid 84 etid 84 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 211 m initialize(0)
@@ -3511,21 +3483,18 @@ MB sm 1 tm 226 m initialize(0)
 MB sm 226 tm 227 m ""
 ME
 - myMacAddr A:00-00-00-00-00-09 *** auto
-CM id 94 tid 94 eid 94 etid 94 c cMessage n timer-backoff pe -1
-CM id 95 tid 95 eid 95 etid 95 c cMessage n timer-cca pe -1
-CM id 96 tid 96 eid 96 etid 96 c cMessage n timer-sifs pe -1
-CM id 97 tid 97 eid 97 etid 97 c cMessage n timer-rxAck pe -1
+CM id 85 tid 85 eid 85 etid 85 c cMessage n timer-backoff pe -1
+CM id 86 tid 86 eid 86 etid 86 c cMessage n timer-cca pe -1
+CM id 87 tid 87 eid 87 etid 87 c cMessage n timer-sifs pe -1
+CM id 88 tid 88 eid 88 etid 88 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 227 m initialize(0)
-CM id 98 tid 98 eid 98 etid 98 c cMessage n "radio switching over" k 22001 pe -1
-CM id 99 tid 99 eid 99 etid 99 c cMessage n "transmission over" k 22000 pe -1
+CM id 89 tid 89 eid 89 etid 89 c cMessage n "radio switching over" k 22001 pe -1
+CM id 90 tid 90 eid 90 etid 90 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 212 m initialize(0)
 ME
 MB sm 1 tm 213 m initialize(0)
-CM id 100 tid 100 eid 100 etid 100 c cMessage n sendToMaster pe -1
-BS id 100 tid 100 eid 100 etid 100 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 322 m initialize(0)
 - Node9[0]::SimpleBattery: initialized device Processor as device 13 with 3 accounts
@@ -3561,13 +3530,13 @@ MB sm 1 tm 228 m initialize(0)
 - Node10[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 229 m initialize(0)
-CM id 101 tid 101 eid 101 etid 101 c cMessage n publish k 1 pe -1
-BS id 101 tid 101 eid 101 etid 101 c cMessage n publish k 1 p 2000 pe 0
+CM id 91 tid 91 eid 91 etid 91 c cMessage n publish k 1 pe -1
+BS id 91 tid 91 eid 91 etid 91 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node10[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node10[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 102 tid 102 eid 102 etid 102 c cMessage n auto-update pe -1
-BS id 102 tid 102 eid 102 etid 102 c cMessage n auto-update p 500 pe 0
+CM id 92 tid 92 eid 92 etid 92 c cMessage n auto-update pe -1
+BS id 92 tid 92 eid 92 etid 92 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 230 m initialize(0)
@@ -3607,7 +3576,7 @@ ME
 MB sm 1 tm 233 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 103 tid 103 eid 103 etid 103 c cMessage n move pe -1
+CM id 93 tid 93 eid 93 etid 93 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 234 m initialize(0)
@@ -3616,21 +3585,18 @@ MB sm 1 tm 241 m initialize(0)
 MB sm 241 tm 242 m ""
 ME
 - myMacAddr A:00-00-00-00-00-0A *** auto
-CM id 104 tid 104 eid 104 etid 104 c cMessage n timer-backoff pe -1
-CM id 105 tid 105 eid 105 etid 105 c cMessage n timer-cca pe -1
-CM id 106 tid 106 eid 106 etid 106 c cMessage n timer-sifs pe -1
-CM id 107 tid 107 eid 107 etid 107 c cMessage n timer-rxAck pe -1
+CM id 94 tid 94 eid 94 etid 94 c cMessage n timer-backoff pe -1
+CM id 95 tid 95 eid 95 etid 95 c cMessage n timer-cca pe -1
+CM id 96 tid 96 eid 96 etid 96 c cMessage n timer-sifs pe -1
+CM id 97 tid 97 eid 97 etid 97 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 242 m initialize(0)
-CM id 108 tid 108 eid 108 etid 108 c cMessage n "radio switching over" k 22001 pe -1
-CM id 109 tid 109 eid 109 etid 109 c cMessage n "transmission over" k 22000 pe -1
+CM id 98 tid 98 eid 98 etid 98 c cMessage n "radio switching over" k 22001 pe -1
+CM id 99 tid 99 eid 99 etid 99 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 235 m initialize(0)
 ME
 MB sm 1 tm 236 m initialize(0)
-CM id 110 tid 110 eid 110 etid 110 c cMessage n sendToMaster pe -1
-BS id 110 tid 110 eid 110 etid 110 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 323 m initialize(0)
 - Node10[0]::SimpleBattery: initialized device Processor as device 5 with 3 accounts
@@ -3652,26 +3618,18 @@ GC m 324 g 0 n fromTemperatureSensor o 0
 GC m 324 g 3 n toTemperatureSensor o 1
 CC sm 245 sg 1 dm 324 dg 0
 CC sm 324 sg 3 dm 245 dg 2
-BU id 15 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 324 g 4 n fromHumiditySensor o 0
 GC m 324 g 7 n toHumiditySensor o 1
 CC sm 246 sg 1 dm 324 dg 4
 CC sm 324 sg 7 dm 246 dg 2
-BU id 15 txt "Created connections from Humidity-sensor to the processor."
-- Created connections from Humidity-sensor to the processor.
 GC m 324 g 8 n fromPressureSensor o 0
 GC m 324 g 11 n toPressureSensor o 1
 CC sm 247 sg 1 dm 324 dg 8
 CC sm 324 sg 11 dm 247 dg 2
-BU id 15 txt "Created connections from Pressure-sensor to the processor."
-- Created connections from Pressure-sensor to the processor.
 GC m 324 g 12 n fromLightSensor o 0
 GC m 324 g 15 n toLightSensor o 1
 CC sm 248 sg 1 dm 324 dg 12
 CC sm 324 sg 15 dm 248 dg 2
-BU id 15 txt "Created connections from Light-sensor to the processor."
-- Created connections from Light-sensor to the processor.
 GC m 249 g 0 n connectToProcessor$i o 0
 GC m 249 g 1 n connectToProcessor$o o 1
 GC m 324 g 16 n connectToMemory$i o 0
@@ -3680,22 +3638,19 @@ CC sm 249 sg 1 dm 324 dg 16
 CS sm 249 sg 1 d ""
 CC sm 324 sg 17 dm 249 dg 0
 CS sm 324 sg 17 d ""
-BU id 15 txt "Counted 4 Sensor(s) on the Node.\n"
-- Counted 4 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 243 m initialize(0)
 - Node11[0]::BatteryStats: show details = 0
 - Node11[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 244 m initialize(0)
-CM id 111 tid 111 eid 111 etid 111 c cMessage n publish k 1 pe -1
-BS id 111 tid 111 eid 111 etid 111 c cMessage n publish k 1 p 2000 pe 0
+CM id 100 tid 100 eid 100 etid 100 c cMessage n publish k 1 pe -1
+BS id 100 tid 100 eid 100 etid 100 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node11[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node11[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 112 tid 112 eid 112 etid 112 c cMessage n auto-update pe -1
-BS id 112 tid 112 eid 112 etid 112 c cMessage n auto-update p 500 pe 0
+CM id 101 tid 101 eid 101 etid 101 c cMessage n auto-update pe -1
+BS id 101 tid 101 eid 101 etid 101 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 245 m initialize(0)
@@ -3813,7 +3768,7 @@ ME
 MB sm 1 tm 251 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 113 tid 113 eid 113 etid 113 c cMessage n move pe -1
+CM id 102 tid 102 eid 102 etid 102 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 252 m initialize(0)
@@ -3822,21 +3777,18 @@ MB sm 1 tm 271 m initialize(0)
 MB sm 271 tm 272 m ""
 ME
 - myMacAddr A:00-00-00-00-00-0B *** auto
-CM id 114 tid 114 eid 114 etid 114 c cMessage n timer-backoff pe -1
-CM id 115 tid 115 eid 115 etid 115 c cMessage n timer-cca pe -1
-CM id 116 tid 116 eid 116 etid 116 c cMessage n timer-sifs pe -1
-CM id 117 tid 117 eid 117 etid 117 c cMessage n timer-rxAck pe -1
+CM id 103 tid 103 eid 103 etid 103 c cMessage n timer-backoff pe -1
+CM id 104 tid 104 eid 104 etid 104 c cMessage n timer-cca pe -1
+CM id 105 tid 105 eid 105 etid 105 c cMessage n timer-sifs pe -1
+CM id 106 tid 106 eid 106 etid 106 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 272 m initialize(0)
-CM id 118 tid 118 eid 118 etid 118 c cMessage n "radio switching over" k 22001 pe -1
-CM id 119 tid 119 eid 119 etid 119 c cMessage n "transmission over" k 22000 pe -1
+CM id 107 tid 107 eid 107 etid 107 c cMessage n "radio switching over" k 22001 pe -1
+CM id 108 tid 108 eid 108 etid 108 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 253 m initialize(0)
 ME
 MB sm 1 tm 254 m initialize(0)
-CM id 120 tid 120 eid 120 etid 120 c cMessage n sendToMaster pe -1
-BS id 120 tid 120 eid 120 etid 120 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 324 m initialize(0)
 - Node11[0]::SimpleBattery: initialized device Processor as device 17 with 3 accounts
@@ -3858,8 +3810,6 @@ GC m 325 g 0 n fromPressureSensor o 0
 GC m 325 g 3 n toPressureSensor o 1
 CC sm 275 sg 1 dm 325 dg 0
 CC sm 325 sg 3 dm 275 dg 2
-BU id 16 txt "Created connections from Pressure-sensor to the processor."
-- Created connections from Pressure-sensor to the processor.
 GC m 276 g 0 n connectToProcessor$i o 0
 GC m 276 g 1 n connectToProcessor$o o 1
 GC m 325 g 4 n connectToMemory$i o 0
@@ -3868,22 +3818,19 @@ CC sm 276 sg 1 dm 325 dg 4
 CS sm 276 sg 1 d ""
 CC sm 325 sg 5 dm 276 dg 0
 CS sm 325 sg 5 d ""
-BU id 16 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 273 m initialize(0)
 - Node12[0]::BatteryStats: show details = 0
 - Node12[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 274 m initialize(0)
-CM id 121 tid 121 eid 121 etid 121 c cMessage n publish k 1 pe -1
-BS id 121 tid 121 eid 121 etid 121 c cMessage n publish k 1 p 2000 pe 0
+CM id 109 tid 109 eid 109 etid 109 c cMessage n publish k 1 pe -1
+BS id 109 tid 109 eid 109 etid 109 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node12[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node12[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 122 tid 122 eid 122 etid 122 c cMessage n auto-update pe -1
-BS id 122 tid 122 eid 122 etid 122 c cMessage n auto-update p 500 pe 0
+CM id 110 tid 110 eid 110 etid 110 c cMessage n auto-update pe -1
+BS id 110 tid 110 eid 110 etid 110 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 275 m initialize(0)
@@ -3923,7 +3870,7 @@ ME
 MB sm 1 tm 278 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 123 tid 123 eid 123 etid 123 c cMessage n move pe -1
+CM id 111 tid 111 eid 111 etid 111 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 279 m initialize(0)
@@ -3932,21 +3879,18 @@ MB sm 1 tm 286 m initialize(0)
 MB sm 286 tm 287 m ""
 ME
 - myMacAddr A:00-00-00-00-00-0C *** auto
-CM id 124 tid 124 eid 124 etid 124 c cMessage n timer-backoff pe -1
-CM id 125 tid 125 eid 125 etid 125 c cMessage n timer-cca pe -1
-CM id 126 tid 126 eid 126 etid 126 c cMessage n timer-sifs pe -1
-CM id 127 tid 127 eid 127 etid 127 c cMessage n timer-rxAck pe -1
+CM id 112 tid 112 eid 112 etid 112 c cMessage n timer-backoff pe -1
+CM id 113 tid 113 eid 113 etid 113 c cMessage n timer-cca pe -1
+CM id 114 tid 114 eid 114 etid 114 c cMessage n timer-sifs pe -1
+CM id 115 tid 115 eid 115 etid 115 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 287 m initialize(0)
-CM id 128 tid 128 eid 128 etid 128 c cMessage n "radio switching over" k 22001 pe -1
-CM id 129 tid 129 eid 129 etid 129 c cMessage n "transmission over" k 22000 pe -1
+CM id 116 tid 116 eid 116 etid 116 c cMessage n "radio switching over" k 22001 pe -1
+CM id 117 tid 117 eid 117 etid 117 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 280 m initialize(0)
 ME
 MB sm 1 tm 281 m initialize(0)
-CM id 130 tid 130 eid 130 etid 130 c cMessage n sendToMaster pe -1
-BS id 130 tid 130 eid 130 etid 130 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 325 m initialize(0)
 - Node12[0]::SimpleBattery: initialized device Processor as device 5 with 3 accounts
@@ -3990,13 +3934,13 @@ MB sm 1 tm 288 m initialize(0)
 - Node13[0]::BatteryStats: show timeSeries = 0
 ME
 MB sm 1 tm 289 m initialize(0)
-CM id 131 tid 131 eid 131 etid 131 c cMessage n publish k 1 pe -1
-BS id 131 tid 131 eid 131 etid 131 c cMessage n publish k 1 p 2000 pe 0
+CM id 118 tid 118 eid 118 etid 118 c cMessage n publish k 1 pe -1
+BS id 118 tid 118 eid 118 etid 118 c cMessage n publish k 1 p 2000 pe 0
 ES t 60
 - Node13[0]::SimpleBattery: capacity = 1000mA-h (nominal = 1000) at 3V
 - Node13[0]::SimpleBattery: publishDelta = 100%, publishTime = 60s, resolution = 60sec
-CM id 132 tid 132 eid 132 etid 132 c cMessage n auto-update pe -1
-BS id 132 tid 132 eid 132 etid 132 c cMessage n auto-update p 500 pe 0
+CM id 119 tid 119 eid 119 etid 119 c cMessage n auto-update pe -1
+BS id 119 tid 119 eid 119 etid 119 c cMessage n auto-update p 500 pe 0
 ES t 60
 ME
 MB sm 1 tm 290 m initialize(0)
@@ -4088,7 +4032,7 @@ ME
 MB sm 1 tm 295 m initialize(0)
 - initializing MobilityBase stage 0
 - initializing MovingMobilityBase stage 0
-CM id 133 tid 133 eid 133 etid 133 c cMessage n move pe -1
+CM id 120 tid 120 eid 120 etid 120 c cMessage n move pe -1
 - initializing LinearMobility stage 0
 ME
 MB sm 1 tm 296 m initialize(0)
@@ -4097,21 +4041,18 @@ MB sm 1 tm 311 m initialize(0)
 MB sm 311 tm 312 m ""
 ME
 - myMacAddr A:00-00-00-00-00-0D *** auto
-CM id 134 tid 134 eid 134 etid 134 c cMessage n timer-backoff pe -1
-CM id 135 tid 135 eid 135 etid 135 c cMessage n timer-cca pe -1
-CM id 136 tid 136 eid 136 etid 136 c cMessage n timer-sifs pe -1
-CM id 137 tid 137 eid 137 etid 137 c cMessage n timer-rxAck pe -1
+CM id 121 tid 121 eid 121 etid 121 c cMessage n timer-backoff pe -1
+CM id 122 tid 122 eid 122 etid 122 c cMessage n timer-cca pe -1
+CM id 123 tid 123 eid 123 etid 123 c cMessage n timer-sifs pe -1
+CM id 124 tid 124 eid 124 etid 124 c cMessage n timer-rxAck pe -1
 ME
 MB sm 1 tm 312 m initialize(0)
-CM id 138 tid 138 eid 138 etid 138 c cMessage n "radio switching over" k 22001 pe -1
-CM id 139 tid 139 eid 139 etid 139 c cMessage n "transmission over" k 22000 pe -1
+CM id 125 tid 125 eid 125 etid 125 c cMessage n "radio switching over" k 22001 pe -1
+CM id 126 tid 126 eid 126 etid 126 c cMessage n "transmission over" k 22000 pe -1
 ME
 MB sm 1 tm 297 m initialize(0)
 ME
 MB sm 1 tm 298 m initialize(0)
-CM id 140 tid 140 eid 140 etid 140 c cMessage n sendToMaster pe -1
-BS id 140 tid 140 eid 140 etid 140 c cMessage n sendToMaster pe 0
-ES t 31
 ME
 MB sm 1 tm 326 m initialize(0)
 - Node13[0]::SimpleBattery: initialized device Processor as device 13 with 3 accounts
@@ -4172,12 +4113,12 @@ MB sm 1 tm 29 m initialize(1)
 - Node0[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 29 tm 19 m ""
 ME
-CM id 141 tid 141 eid 141 etid 141 c cMessage n Temperature pe -1
+CM id 127 tid 127 eid 127 etid 127 c cMessage n Temperature pe -1
 - Node0[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 29 tm 19 m ""
 ME
-BS id 141 tid 141 eid 141 etid 141 c ExtendedMessage n Temperature pe 0
-CL id 141 tid 141 eid 141 etid 141 c ExtendedMessage n Temperature pe 0 cid 142
+BS id 127 tid 127 eid 127 etid 127 c ExtendedMessage n Temperature pe 0
+CL id 127 tid 127 eid 127 etid 127 c ExtendedMessage n Temperature pe 0 cid 128
 SH sm 29 sg 1
 ES t 0
 ME
@@ -4191,12 +4132,12 @@ MB sm 1 tm 33 m initialize(1)
 - Node0[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 33 tm 19 m ""
 ME
-CM id 143 tid 143 eid 143 etid 143 c cMessage n Pressure pe -1
+CM id 129 tid 129 eid 129 etid 129 c cMessage n Pressure pe -1
 - Node0[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 33 tm 19 m ""
 ME
-BS id 143 tid 143 eid 143 etid 143 c ExtendedMessage n Pressure pe 0
-CL id 143 tid 143 eid 143 etid 143 c ExtendedMessage n Pressure pe 0 cid 144
+BS id 129 tid 129 eid 129 etid 129 c ExtendedMessage n Pressure pe 0
+CL id 129 tid 129 eid 129 etid 129 c ExtendedMessage n Pressure pe 0 cid 130
 SH sm 33 sg 1
 ES t 0
 ME
@@ -4210,12 +4151,12 @@ MB sm 1 tm 37 m initialize(1)
 - Node0[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 37 tm 19 m ""
 ME
-CM id 145 tid 145 eid 145 etid 145 c cMessage n Light pe -1
+CM id 131 tid 131 eid 131 etid 131 c cMessage n Light pe -1
 - Node0[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 37 tm 19 m ""
 ME
-BS id 145 tid 145 eid 145 etid 145 c ExtendedMessage n Light pe 0
-CL id 145 tid 145 eid 145 etid 145 c ExtendedMessage n Light pe 0 cid 146
+BS id 131 tid 131 eid 131 etid 131 c ExtendedMessage n Light pe 0
+CL id 131 tid 131 eid 131 etid 131 c ExtendedMessage n Light pe 0 cid 132
 SH sm 37 sg 1
 ES t 0
 ME
@@ -4257,7 +4198,7 @@ ME
 -   host macaddress=00-00-00-00-00-00
 MB sm 27 tm 24 m ""
 ME
-CM id 147 tid 147 eid 147 etid 147 c cMessage n route-flood-timer k 3 pe -1
+CM id 133 tid 133 eid 133 etid 133 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 0
 - target: 0, next: -1
 - target: 1, next: 1
@@ -4278,19 +4219,19 @@ CM id 147 tid 147 eid 147 etid 147 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 13
 ME
 MB sm 1 tm 28 m initialize(1)
-CM id 148 tid 148 eid 148 etid 148 c cMessage n sendToMaster pe -1
-BS id 148 tid 148 eid 148 etid 148 c cMessage n sendToMaster pe 0
+CM id 134 tid 134 eid 134 etid 134 c cMessage n sendToMaster pe -1
+BS id 134 tid 134 eid 134 etid 134 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 313 m initialize(1)
-CM id 149 tid 149 eid 149 etid 149 c cMessage n startSensingUnit pe -1
-BS id 149 tid 149 eid 149 etid 149 c cMessage n startSensingUnit pe 0
+CM id 135 tid 135 eid 135 etid 135 c cMessage n startSensingUnit pe -1
+BS id 135 tid 135 eid 135 etid 135 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 150 tid 150 eid 150 etid 150 c cMessage n shiftMode pe -1
-BS id 150 tid 150 eid 150 etid 150 c cMessage n shiftMode pe 0
+CM id 136 tid 136 eid 136 etid 136 c cMessage n shiftMode pe -1
+BS id 136 tid 136 eid 136 etid 136 c cMessage n shiftMode pe 0
 ES t 1
-CM id 151 tid 151 eid 151 etid 151 c cMessage n collectStatistics pe -1
-BS id 151 tid 151 eid 151 etid 151 c cMessage n collectStatistics pe 0
+CM id 137 tid 137 eid 137 etid 137 c cMessage n collectStatistics pe -1
+BS id 137 tid 137 eid 137 etid 137 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 4 d "t=mode: power saving;p=408,218;bgb=447,450;i=block/ifcard"
 ME
@@ -4322,12 +4263,12 @@ MB sm 1 tm 52 m initialize(1)
 - Node1[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 52 tm 44 m ""
 ME
-CM id 152 tid 152 eid 152 etid 152 c cMessage n Light pe -1
+CM id 138 tid 138 eid 138 etid 138 c cMessage n Light pe -1
 - Node1[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 52 tm 44 m ""
 ME
-BS id 152 tid 152 eid 152 etid 152 c ExtendedMessage n Light pe 0
-CL id 152 tid 152 eid 152 etid 152 c ExtendedMessage n Light pe 0 cid 153
+BS id 138 tid 138 eid 138 etid 138 c ExtendedMessage n Light pe 0
+CL id 138 tid 138 eid 138 etid 138 c ExtendedMessage n Light pe 0 cid 139
 SH sm 52 sg 1
 ES t 0
 ME
@@ -4391,7 +4332,7 @@ ME
 -   host macaddress=00-00-00-00-00-01
 MB sm 50 tm 47 m ""
 ME
-CM id 154 tid 154 eid 154 etid 154 c cMessage n route-flood-timer k 3 pe -1
+CM id 140 tid 140 eid 140 etid 140 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 1
 - target: 0, next: 0
 - target: 1, next: 1
@@ -4412,19 +4353,19 @@ CM id 154 tid 154 eid 154 etid 154 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 0
 ME
 MB sm 1 tm 51 m initialize(1)
-CM id 155 tid 155 eid 155 etid 155 c cMessage n sendToMaster pe -1
-BS id 155 tid 155 eid 155 etid 155 c cMessage n sendToMaster pe 0
+CM id 141 tid 141 eid 141 etid 141 c cMessage n sendToMaster pe -1
+BS id 141 tid 141 eid 141 etid 141 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 314 m initialize(1)
-CM id 156 tid 156 eid 156 etid 156 c cMessage n startSensingUnit pe -1
-BS id 156 tid 156 eid 156 etid 156 c cMessage n startSensingUnit pe 0
+CM id 142 tid 142 eid 142 etid 142 c cMessage n startSensingUnit pe -1
+BS id 142 tid 142 eid 142 etid 142 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 157 tid 157 eid 157 etid 157 c cMessage n shiftMode pe -1
-BS id 157 tid 157 eid 157 etid 157 c cMessage n shiftMode pe 0
+CM id 143 tid 143 eid 143 etid 143 c cMessage n shiftMode pe -1
+BS id 143 tid 143 eid 143 etid 143 c cMessage n shiftMode pe 0
 ES t 1
-CM id 158 tid 158 eid 158 etid 158 c cMessage n collectStatistics pe -1
-BS id 158 tid 158 eid 158 etid 158 c cMessage n collectStatistics pe 0
+CM id 144 tid 144 eid 144 etid 144 c cMessage n collectStatistics pe -1
+BS id 144 tid 144 eid 144 etid 144 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 5 d "t=mode: power saving;p=311,154;bgb=447,450;i=block/ifcard"
 ME
@@ -4464,12 +4405,12 @@ MB sm 1 tm 68 m initialize(1)
 - Node2[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 68 tm 59 m ""
 ME
-CM id 159 tid 159 eid 159 etid 159 c cMessage n Temperature pe -1
+CM id 145 tid 145 eid 145 etid 145 c cMessage n Temperature pe -1
 - Node2[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 68 tm 59 m ""
 ME
-BS id 159 tid 159 eid 159 etid 159 c ExtendedMessage n Temperature pe 0
-CL id 159 tid 159 eid 159 etid 159 c ExtendedMessage n Temperature pe 0 cid 160
+BS id 145 tid 145 eid 145 etid 145 c ExtendedMessage n Temperature pe 0
+CL id 145 tid 145 eid 145 etid 145 c ExtendedMessage n Temperature pe 0 cid 146
 SH sm 68 sg 1
 ES t 0
 ME
@@ -4483,12 +4424,12 @@ MB sm 1 tm 72 m initialize(1)
 - Node2[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 72 tm 59 m ""
 ME
-CM id 161 tid 161 eid 161 etid 161 c cMessage n Humidity pe -1
+CM id 147 tid 147 eid 147 etid 147 c cMessage n Humidity pe -1
 - Node2[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 72 tm 59 m ""
 ME
-BS id 161 tid 161 eid 161 etid 161 c ExtendedMessage n Humidity pe 0
-CL id 161 tid 161 eid 161 etid 161 c ExtendedMessage n Humidity pe 0 cid 162
+BS id 147 tid 147 eid 147 etid 147 c ExtendedMessage n Humidity pe 0
+CL id 147 tid 147 eid 147 etid 147 c ExtendedMessage n Humidity pe 0 cid 148
 SH sm 72 sg 1
 ES t 0
 ME
@@ -4552,7 +4493,7 @@ ME
 -   host macaddress=00-00-00-00-00-02
 MB sm 66 tm 63 m ""
 ME
-CM id 163 tid 163 eid 163 etid 163 c cMessage n route-flood-timer k 3 pe -1
+CM id 149 tid 149 eid 149 etid 149 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 2
 - target: 0, next: 1
 - target: 1, next: 1
@@ -4573,19 +4514,19 @@ CM id 163 tid 163 eid 163 etid 163 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 1
 ME
 MB sm 1 tm 67 m initialize(1)
-CM id 164 tid 164 eid 164 etid 164 c cMessage n sendToMaster pe -1
-BS id 164 tid 164 eid 164 etid 164 c cMessage n sendToMaster pe 0
+CM id 150 tid 150 eid 150 etid 150 c cMessage n sendToMaster pe -1
+BS id 150 tid 150 eid 150 etid 150 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 315 m initialize(1)
-CM id 165 tid 165 eid 165 etid 165 c cMessage n startSensingUnit pe -1
-BS id 165 tid 165 eid 165 etid 165 c cMessage n startSensingUnit pe 0
+CM id 151 tid 151 eid 151 etid 151 c cMessage n startSensingUnit pe -1
+BS id 151 tid 151 eid 151 etid 151 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 166 tid 166 eid 166 etid 166 c cMessage n shiftMode pe -1
-BS id 166 tid 166 eid 166 etid 166 c cMessage n shiftMode pe 0
+CM id 152 tid 152 eid 152 etid 152 c cMessage n shiftMode pe -1
+BS id 152 tid 152 eid 152 etid 152 c cMessage n shiftMode pe 0
 ES t 1
-CM id 167 tid 167 eid 167 etid 167 c cMessage n collectStatistics pe -1
-BS id 167 tid 167 eid 167 etid 167 c cMessage n collectStatistics pe 0
+CM id 153 tid 153 eid 153 etid 153 c cMessage n collectStatistics pe -1
+BS id 153 tid 153 eid 153 etid 153 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 6 d "t=mode: power saving;p=303,64;bgb=447,450;i=block/ifcard"
 ME
@@ -4633,12 +4574,12 @@ MB sm 1 tm 89 m initialize(1)
 - Node3[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 89 tm 79 m ""
 ME
-CM id 168 tid 168 eid 168 etid 168 c cMessage n Temperature pe -1
+CM id 154 tid 154 eid 154 etid 154 c cMessage n Temperature pe -1
 - Node3[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 89 tm 79 m ""
 ME
-BS id 168 tid 168 eid 168 etid 168 c ExtendedMessage n Temperature pe 0
-CL id 168 tid 168 eid 168 etid 168 c ExtendedMessage n Temperature pe 0 cid 169
+BS id 154 tid 154 eid 154 etid 154 c ExtendedMessage n Temperature pe 0
+CL id 154 tid 154 eid 154 etid 154 c ExtendedMessage n Temperature pe 0 cid 155
 SH sm 89 sg 1
 ES t 0
 ME
@@ -4652,12 +4593,12 @@ MB sm 1 tm 93 m initialize(1)
 - Node3[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 93 tm 79 m ""
 ME
-CM id 170 tid 170 eid 170 etid 170 c cMessage n Pressure pe -1
+CM id 156 tid 156 eid 156 etid 156 c cMessage n Pressure pe -1
 - Node3[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 93 tm 79 m ""
 ME
-BS id 170 tid 170 eid 170 etid 170 c ExtendedMessage n Pressure pe 0
-CL id 170 tid 170 eid 170 etid 170 c ExtendedMessage n Pressure pe 0 cid 171
+BS id 156 tid 156 eid 156 etid 156 c ExtendedMessage n Pressure pe 0
+CL id 156 tid 156 eid 156 etid 156 c ExtendedMessage n Pressure pe 0 cid 157
 SH sm 93 sg 1
 ES t 0
 ME
@@ -4671,12 +4612,12 @@ MB sm 1 tm 97 m initialize(1)
 - Node3[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 97 tm 79 m ""
 ME
-CM id 172 tid 172 eid 172 etid 172 c cMessage n Light pe -1
+CM id 158 tid 158 eid 158 etid 158 c cMessage n Light pe -1
 - Node3[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 97 tm 79 m ""
 ME
-BS id 172 tid 172 eid 172 etid 172 c ExtendedMessage n Light pe 0
-CL id 172 tid 172 eid 172 etid 172 c ExtendedMessage n Light pe 0 cid 173
+BS id 158 tid 158 eid 158 etid 158 c ExtendedMessage n Light pe 0
+CL id 158 tid 158 eid 158 etid 158 c ExtendedMessage n Light pe 0 cid 159
 SH sm 97 sg 1
 ES t 0
 ME
@@ -4762,7 +4703,7 @@ ME
 -   host macaddress=00-00-00-00-00-03
 MB sm 87 tm 84 m ""
 ME
-CM id 174 tid 174 eid 174 etid 174 c cMessage n route-flood-timer k 3 pe -1
+CM id 160 tid 160 eid 160 etid 160 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 3
 - target: 0, next: 1
 - target: 1, next: 1
@@ -4783,19 +4724,19 @@ CM id 174 tid 174 eid 174 etid 174 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 1
 ME
 MB sm 1 tm 88 m initialize(1)
-CM id 175 tid 175 eid 175 etid 175 c cMessage n sendToMaster pe -1
-BS id 175 tid 175 eid 175 etid 175 c cMessage n sendToMaster pe 0
+CM id 161 tid 161 eid 161 etid 161 c cMessage n sendToMaster pe -1
+BS id 161 tid 161 eid 161 etid 161 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 316 m initialize(1)
-CM id 176 tid 176 eid 176 etid 176 c cMessage n startSensingUnit pe -1
-BS id 176 tid 176 eid 176 etid 176 c cMessage n startSensingUnit pe 0
+CM id 162 tid 162 eid 162 etid 162 c cMessage n startSensingUnit pe -1
+BS id 162 tid 162 eid 162 etid 162 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 177 tid 177 eid 177 etid 177 c cMessage n shiftMode pe -1
-BS id 177 tid 177 eid 177 etid 177 c cMessage n shiftMode pe 0
+CM id 163 tid 163 eid 163 etid 163 c cMessage n shiftMode pe -1
+BS id 163 tid 163 eid 163 etid 163 c cMessage n shiftMode pe 0
 ES t 1
-CM id 178 tid 178 eid 178 etid 178 c cMessage n collectStatistics pe -1
-BS id 178 tid 178 eid 178 etid 178 c cMessage n collectStatistics pe 0
+CM id 164 tid 164 eid 164 etid 164 c cMessage n collectStatistics pe -1
+BS id 164 tid 164 eid 164 etid 164 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 7 d "t=mode: power saving;p=193,142;bgb=447,450;i=block/ifcard"
 ME
@@ -4827,12 +4768,12 @@ MB sm 1 tm 112 m initialize(1)
 - Node4[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 112 tm 104 m ""
 ME
-CM id 179 tid 179 eid 179 etid 179 c cMessage n Humidity pe -1
+CM id 165 tid 165 eid 165 etid 165 c cMessage n Humidity pe -1
 - Node4[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 112 tm 104 m ""
 ME
-BS id 179 tid 179 eid 179 etid 179 c ExtendedMessage n Humidity pe 0
-CL id 179 tid 179 eid 179 etid 179 c ExtendedMessage n Humidity pe 0 cid 180
+BS id 165 tid 165 eid 165 etid 165 c ExtendedMessage n Humidity pe 0
+CL id 165 tid 165 eid 165 etid 165 c ExtendedMessage n Humidity pe 0 cid 166
 SH sm 112 sg 1
 ES t 0
 ME
@@ -4940,7 +4881,7 @@ ME
 -   host macaddress=00-00-00-00-00-04
 MB sm 110 tm 107 m ""
 ME
-CM id 181 tid 181 eid 181 etid 181 c cMessage n route-flood-timer k 3 pe -1
+CM id 167 tid 167 eid 167 etid 167 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 4
 - target: 0, next: 1
 - target: 1, next: 1
@@ -4961,19 +4902,19 @@ CM id 181 tid 181 eid 181 etid 181 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 1
 ME
 MB sm 1 tm 111 m initialize(1)
-CM id 182 tid 182 eid 182 etid 182 c cMessage n sendToMaster pe -1
-BS id 182 tid 182 eid 182 etid 182 c cMessage n sendToMaster pe 0
+CM id 168 tid 168 eid 168 etid 168 c cMessage n sendToMaster pe -1
+BS id 168 tid 168 eid 168 etid 168 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 317 m initialize(1)
-CM id 183 tid 183 eid 183 etid 183 c cMessage n startSensingUnit pe -1
-BS id 183 tid 183 eid 183 etid 183 c cMessage n startSensingUnit pe 0
+CM id 169 tid 169 eid 169 etid 169 c cMessage n startSensingUnit pe -1
+BS id 169 tid 169 eid 169 etid 169 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 184 tid 184 eid 184 etid 184 c cMessage n shiftMode pe -1
-BS id 184 tid 184 eid 184 etid 184 c cMessage n shiftMode pe 0
+CM id 170 tid 170 eid 170 etid 170 c cMessage n shiftMode pe -1
+BS id 170 tid 170 eid 170 etid 170 c cMessage n shiftMode pe 0
 ES t 1
-CM id 185 tid 185 eid 185 etid 185 c cMessage n collectStatistics pe -1
-BS id 185 tid 185 eid 185 etid 185 c cMessage n collectStatistics pe 0
+CM id 171 tid 171 eid 171 etid 171 c cMessage n collectStatistics pe -1
+BS id 171 tid 171 eid 171 etid 171 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 8 d "t=mode: power saving;p=241,77;bgb=447,450;i=block/ifcard"
 ME
@@ -5029,12 +4970,12 @@ MB sm 1 tm 130 m initialize(1)
 - Node5[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 130 tm 119 m ""
 ME
-CM id 186 tid 186 eid 186 etid 186 c cMessage n Temperature pe -1
+CM id 172 tid 172 eid 172 etid 172 c cMessage n Temperature pe -1
 - Node5[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 130 tm 119 m ""
 ME
-BS id 186 tid 186 eid 186 etid 186 c ExtendedMessage n Temperature pe 0
-CL id 186 tid 186 eid 186 etid 186 c ExtendedMessage n Temperature pe 0 cid 187
+BS id 172 tid 172 eid 172 etid 172 c ExtendedMessage n Temperature pe 0
+CL id 172 tid 172 eid 172 etid 172 c ExtendedMessage n Temperature pe 0 cid 173
 SH sm 130 sg 1
 ES t 0
 ME
@@ -5048,12 +4989,12 @@ MB sm 1 tm 134 m initialize(1)
 - Node5[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 134 tm 119 m ""
 ME
-CM id 188 tid 188 eid 188 etid 188 c cMessage n Humidity pe -1
+CM id 174 tid 174 eid 174 etid 174 c cMessage n Humidity pe -1
 - Node5[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 134 tm 119 m ""
 ME
-BS id 188 tid 188 eid 188 etid 188 c ExtendedMessage n Humidity pe 0
-CL id 188 tid 188 eid 188 etid 188 c ExtendedMessage n Humidity pe 0 cid 189
+BS id 174 tid 174 eid 174 etid 174 c ExtendedMessage n Humidity pe 0
+CL id 174 tid 174 eid 174 etid 174 c ExtendedMessage n Humidity pe 0 cid 175
 SH sm 134 sg 1
 ES t 0
 ME
@@ -5067,12 +5008,12 @@ MB sm 1 tm 138 m initialize(1)
 - Node5[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 138 tm 119 m ""
 ME
-CM id 190 tid 190 eid 190 etid 190 c cMessage n Pressure pe -1
+CM id 176 tid 176 eid 176 etid 176 c cMessage n Pressure pe -1
 - Node5[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 138 tm 119 m ""
 ME
-BS id 190 tid 190 eid 190 etid 190 c ExtendedMessage n Pressure pe 0
-CL id 190 tid 190 eid 190 etid 190 c ExtendedMessage n Pressure pe 0 cid 191
+BS id 176 tid 176 eid 176 etid 176 c ExtendedMessage n Pressure pe 0
+CL id 176 tid 176 eid 176 etid 176 c ExtendedMessage n Pressure pe 0 cid 177
 SH sm 138 sg 1
 ES t 0
 ME
@@ -5086,12 +5027,12 @@ MB sm 1 tm 142 m initialize(1)
 - Node5[0]::SimpleBattery: 0 device 12 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 142 tm 119 m ""
 ME
-CM id 192 tid 192 eid 192 etid 192 c cMessage n Light pe -1
+CM id 178 tid 178 eid 178 etid 178 c cMessage n Light pe -1
 - Node5[0]::SimpleBattery: 0 device 12 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 142 tm 119 m ""
 ME
-BS id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Light pe 0
-CL id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Light pe 0 cid 193
+BS id 178 tid 178 eid 178 etid 178 c ExtendedMessage n Light pe 0
+CL id 178 tid 178 eid 178 etid 178 c ExtendedMessage n Light pe 0 cid 179
 SH sm 142 sg 1
 ES t 0
 ME
@@ -5155,7 +5096,7 @@ ME
 -   host macaddress=00-00-00-00-00-05
 MB sm 128 tm 125 m ""
 ME
-CM id 194 tid 194 eid 194 etid 194 c cMessage n route-flood-timer k 3 pe -1
+CM id 180 tid 180 eid 180 etid 180 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 5
 - target: 0, next: 0
 - target: 1, next: 0
@@ -5176,19 +5117,19 @@ CM id 194 tid 194 eid 194 etid 194 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 0
 ME
 MB sm 1 tm 129 m initialize(1)
-CM id 195 tid 195 eid 195 etid 195 c cMessage n sendToMaster pe -1
-BS id 195 tid 195 eid 195 etid 195 c cMessage n sendToMaster pe 0
+CM id 181 tid 181 eid 181 etid 181 c cMessage n sendToMaster pe -1
+BS id 181 tid 181 eid 181 etid 181 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 318 m initialize(1)
-CM id 196 tid 196 eid 196 etid 196 c cMessage n startSensingUnit pe -1
-BS id 196 tid 196 eid 196 etid 196 c cMessage n startSensingUnit pe 0
+CM id 182 tid 182 eid 182 etid 182 c cMessage n startSensingUnit pe -1
+BS id 182 tid 182 eid 182 etid 182 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 197 tid 197 eid 197 etid 197 c cMessage n shiftMode pe -1
-BS id 197 tid 197 eid 197 etid 197 c cMessage n shiftMode pe 0
+CM id 183 tid 183 eid 183 etid 183 c cMessage n shiftMode pe -1
+BS id 183 tid 183 eid 183 etid 183 c cMessage n shiftMode pe 0
 ES t 1
-CM id 198 tid 198 eid 198 etid 198 c cMessage n collectStatistics pe -1
-BS id 198 tid 198 eid 198 etid 198 c cMessage n collectStatistics pe 0
+CM id 184 tid 184 eid 184 etid 184 c cMessage n collectStatistics pe -1
+BS id 184 tid 184 eid 184 etid 184 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 9 d "t=mode: power saving;p=342,296;bgb=447,450;i=block/ifcard"
 ME
@@ -5220,12 +5161,12 @@ MB sm 1 tm 157 m initialize(1)
 - Node6[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 157 tm 149 m ""
 ME
-CM id 199 tid 199 eid 199 etid 199 c cMessage n Light pe -1
+CM id 185 tid 185 eid 185 etid 185 c cMessage n Light pe -1
 - Node6[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 157 tm 149 m ""
 ME
-BS id 199 tid 199 eid 199 etid 199 c ExtendedMessage n Light pe 0
-CL id 199 tid 199 eid 199 etid 199 c ExtendedMessage n Light pe 0 cid 200
+BS id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Light pe 0
+CL id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Light pe 0 cid 186
 SH sm 157 sg 1
 ES t 0
 ME
@@ -5289,7 +5230,7 @@ ME
 -   host macaddress=00-00-00-00-00-06
 MB sm 155 tm 152 m ""
 ME
-CM id 201 tid 201 eid 201 etid 201 c cMessage n route-flood-timer k 3 pe -1
+CM id 187 tid 187 eid 187 etid 187 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 6
 - target: 0, next: 5
 - target: 1, next: 5
@@ -5310,19 +5251,19 @@ CM id 201 tid 201 eid 201 etid 201 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 5
 ME
 MB sm 1 tm 156 m initialize(1)
-CM id 202 tid 202 eid 202 etid 202 c cMessage n sendToMaster pe -1
-BS id 202 tid 202 eid 202 etid 202 c cMessage n sendToMaster pe 0
+CM id 188 tid 188 eid 188 etid 188 c cMessage n sendToMaster pe -1
+BS id 188 tid 188 eid 188 etid 188 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 319 m initialize(1)
-CM id 203 tid 203 eid 203 etid 203 c cMessage n startSensingUnit pe -1
-BS id 203 tid 203 eid 203 etid 203 c cMessage n startSensingUnit pe 0
+CM id 189 tid 189 eid 189 etid 189 c cMessage n startSensingUnit pe -1
+BS id 189 tid 189 eid 189 etid 189 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 204 tid 204 eid 204 etid 204 c cMessage n shiftMode pe -1
-BS id 204 tid 204 eid 204 etid 204 c cMessage n shiftMode pe 0
+CM id 190 tid 190 eid 190 etid 190 c cMessage n shiftMode pe -1
+BS id 190 tid 190 eid 190 etid 190 c cMessage n shiftMode pe 0
 ES t 1
-CM id 205 tid 205 eid 205 etid 205 c cMessage n collectStatistics pe -1
-BS id 205 tid 205 eid 205 etid 205 c cMessage n collectStatistics pe 0
+CM id 191 tid 191 eid 191 etid 191 c cMessage n collectStatistics pe -1
+BS id 191 tid 191 eid 191 etid 191 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 10 d "t=mode: power saving;p=342,381;bgb=447,450;i=block/ifcard"
 ME
@@ -5370,12 +5311,12 @@ MB sm 1 tm 174 m initialize(1)
 - Node7[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 174 tm 164 m ""
 ME
-CM id 206 tid 206 eid 206 etid 206 c cMessage n Temperature pe -1
+CM id 192 tid 192 eid 192 etid 192 c cMessage n Temperature pe -1
 - Node7[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 174 tm 164 m ""
 ME
-BS id 206 tid 206 eid 206 etid 206 c ExtendedMessage n Temperature pe 0
-CL id 206 tid 206 eid 206 etid 206 c ExtendedMessage n Temperature pe 0 cid 207
+BS id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Temperature pe 0
+CL id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Temperature pe 0 cid 193
 SH sm 174 sg 1
 ES t 0
 ME
@@ -5389,12 +5330,12 @@ MB sm 1 tm 178 m initialize(1)
 - Node7[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 178 tm 164 m ""
 ME
-CM id 208 tid 208 eid 208 etid 208 c cMessage n Humidity pe -1
+CM id 194 tid 194 eid 194 etid 194 c cMessage n Humidity pe -1
 - Node7[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 178 tm 164 m ""
 ME
-BS id 208 tid 208 eid 208 etid 208 c ExtendedMessage n Humidity pe 0
-CL id 208 tid 208 eid 208 etid 208 c ExtendedMessage n Humidity pe 0 cid 209
+BS id 194 tid 194 eid 194 etid 194 c ExtendedMessage n Humidity pe 0
+CL id 194 tid 194 eid 194 etid 194 c ExtendedMessage n Humidity pe 0 cid 195
 SH sm 178 sg 1
 ES t 0
 ME
@@ -5408,12 +5349,12 @@ MB sm 1 tm 182 m initialize(1)
 - Node7[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 182 tm 164 m ""
 ME
-CM id 210 tid 210 eid 210 etid 210 c cMessage n Pressure pe -1
+CM id 196 tid 196 eid 196 etid 196 c cMessage n Pressure pe -1
 - Node7[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 182 tm 164 m ""
 ME
-BS id 210 tid 210 eid 210 etid 210 c ExtendedMessage n Pressure pe 0
-CL id 210 tid 210 eid 210 etid 210 c ExtendedMessage n Pressure pe 0 cid 211
+BS id 196 tid 196 eid 196 etid 196 c ExtendedMessage n Pressure pe 0
+CL id 196 tid 196 eid 196 etid 196 c ExtendedMessage n Pressure pe 0 cid 197
 SH sm 182 sg 1
 ES t 0
 ME
@@ -5477,7 +5418,7 @@ ME
 -   host macaddress=00-00-00-00-00-07
 MB sm 172 tm 169 m ""
 ME
-CM id 212 tid 212 eid 212 etid 212 c cMessage n route-flood-timer k 3 pe -1
+CM id 198 tid 198 eid 198 etid 198 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 7
 - target: 0, next: 5
 - target: 1, next: 5
@@ -5498,19 +5439,19 @@ CM id 212 tid 212 eid 212 etid 212 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 5
 ME
 MB sm 1 tm 173 m initialize(1)
-CM id 213 tid 213 eid 213 etid 213 c cMessage n sendToMaster pe -1
-BS id 213 tid 213 eid 213 etid 213 c cMessage n sendToMaster pe 0
+CM id 199 tid 199 eid 199 etid 199 c cMessage n sendToMaster pe -1
+BS id 199 tid 199 eid 199 etid 199 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 320 m initialize(1)
-CM id 214 tid 214 eid 214 etid 214 c cMessage n startSensingUnit pe -1
-BS id 214 tid 214 eid 214 etid 214 c cMessage n startSensingUnit pe 0
+CM id 200 tid 200 eid 200 etid 200 c cMessage n startSensingUnit pe -1
+BS id 200 tid 200 eid 200 etid 200 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 215 tid 215 eid 215 etid 215 c cMessage n shiftMode pe -1
-BS id 215 tid 215 eid 215 etid 215 c cMessage n shiftMode pe 0
+CM id 201 tid 201 eid 201 etid 201 c cMessage n shiftMode pe -1
+BS id 201 tid 201 eid 201 etid 201 c cMessage n shiftMode pe 0
 ES t 1
-CM id 216 tid 216 eid 216 etid 216 c cMessage n collectStatistics pe -1
-BS id 216 tid 216 eid 216 etid 216 c cMessage n collectStatistics pe 0
+CM id 202 tid 202 eid 202 etid 202 c cMessage n collectStatistics pe -1
+BS id 202 tid 202 eid 202 etid 202 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 11 d "t=mode: power saving;p=232,277;bgb=447,450;i=block/ifcard"
 ME
@@ -5542,12 +5483,12 @@ MB sm 1 tm 197 m initialize(1)
 - Node8[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 197 tm 189 m ""
 ME
-CM id 217 tid 217 eid 217 etid 217 c cMessage n Light pe -1
+CM id 203 tid 203 eid 203 etid 203 c cMessage n Light pe -1
 - Node8[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 197 tm 189 m ""
 ME
-BS id 217 tid 217 eid 217 etid 217 c ExtendedMessage n Light pe 0
-CL id 217 tid 217 eid 217 etid 217 c ExtendedMessage n Light pe 0 cid 218
+BS id 203 tid 203 eid 203 etid 203 c ExtendedMessage n Light pe 0
+CL id 203 tid 203 eid 203 etid 203 c ExtendedMessage n Light pe 0 cid 204
 SH sm 197 sg 1
 ES t 0
 ME
@@ -5655,7 +5596,7 @@ ME
 -   host macaddress=00-00-00-00-00-08
 MB sm 195 tm 192 m ""
 ME
-CM id 219 tid 219 eid 219 etid 219 c cMessage n route-flood-timer k 3 pe -1
+CM id 205 tid 205 eid 205 etid 205 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 8
 - target: 0, next: 5
 - target: 1, next: 5
@@ -5676,19 +5617,19 @@ CM id 219 tid 219 eid 219 etid 219 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 5
 ME
 MB sm 1 tm 196 m initialize(1)
-CM id 220 tid 220 eid 220 etid 220 c cMessage n sendToMaster pe -1
-BS id 220 tid 220 eid 220 etid 220 c cMessage n sendToMaster pe 0
+CM id 206 tid 206 eid 206 etid 206 c cMessage n sendToMaster pe -1
+BS id 206 tid 206 eid 206 etid 206 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 321 m initialize(1)
-CM id 221 tid 221 eid 221 etid 221 c cMessage n startSensingUnit pe -1
-BS id 221 tid 221 eid 221 etid 221 c cMessage n startSensingUnit pe 0
+CM id 207 tid 207 eid 207 etid 207 c cMessage n startSensingUnit pe -1
+BS id 207 tid 207 eid 207 etid 207 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 222 tid 222 eid 222 etid 222 c cMessage n shiftMode pe -1
-BS id 222 tid 222 eid 222 etid 222 c cMessage n shiftMode pe 0
+CM id 208 tid 208 eid 208 etid 208 c cMessage n shiftMode pe -1
+BS id 208 tid 208 eid 208 etid 208 c cMessage n shiftMode pe 0
 ES t 1
-CM id 223 tid 223 eid 223 etid 223 c cMessage n collectStatistics pe -1
-BS id 223 tid 223 eid 223 etid 223 c cMessage n collectStatistics pe 0
+CM id 209 tid 209 eid 209 etid 209 c cMessage n collectStatistics pe -1
+BS id 209 tid 209 eid 209 etid 209 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 12 d "t=mode: power saving;p=241,373;bgb=447,450;i=block/ifcard"
 ME
@@ -5736,12 +5677,12 @@ MB sm 1 tm 214 m initialize(1)
 - Node9[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 214 tm 204 m ""
 ME
-CM id 224 tid 224 eid 224 etid 224 c cMessage n Temperature pe -1
+CM id 210 tid 210 eid 210 etid 210 c cMessage n Temperature pe -1
 - Node9[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 214 tm 204 m ""
 ME
-BS id 224 tid 224 eid 224 etid 224 c ExtendedMessage n Temperature pe 0
-CL id 224 tid 224 eid 224 etid 224 c ExtendedMessage n Temperature pe 0 cid 225
+BS id 210 tid 210 eid 210 etid 210 c ExtendedMessage n Temperature pe 0
+CL id 210 tid 210 eid 210 etid 210 c ExtendedMessage n Temperature pe 0 cid 211
 SH sm 214 sg 1
 ES t 0
 ME
@@ -5755,12 +5696,12 @@ MB sm 1 tm 218 m initialize(1)
 - Node9[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 218 tm 204 m ""
 ME
-CM id 226 tid 226 eid 226 etid 226 c cMessage n Humidity pe -1
+CM id 212 tid 212 eid 212 etid 212 c cMessage n Humidity pe -1
 - Node9[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 218 tm 204 m ""
 ME
-BS id 226 tid 226 eid 226 etid 226 c ExtendedMessage n Humidity pe 0
-CL id 226 tid 226 eid 226 etid 226 c ExtendedMessage n Humidity pe 0 cid 227
+BS id 212 tid 212 eid 212 etid 212 c ExtendedMessage n Humidity pe 0
+CL id 212 tid 212 eid 212 etid 212 c ExtendedMessage n Humidity pe 0 cid 213
 SH sm 218 sg 1
 ES t 0
 ME
@@ -5774,12 +5715,12 @@ MB sm 1 tm 222 m initialize(1)
 - Node9[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 222 tm 204 m ""
 ME
-CM id 228 tid 228 eid 228 etid 228 c cMessage n Light pe -1
+CM id 214 tid 214 eid 214 etid 214 c cMessage n Light pe -1
 - Node9[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 222 tm 204 m ""
 ME
-BS id 228 tid 228 eid 228 etid 228 c ExtendedMessage n Light pe 0
-CL id 228 tid 228 eid 228 etid 228 c ExtendedMessage n Light pe 0 cid 229
+BS id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Light pe 0
+CL id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Light pe 0 cid 215
 SH sm 222 sg 1
 ES t 0
 ME
@@ -5821,7 +5762,7 @@ ME
 -   host macaddress=00-00-00-00-00-09
 MB sm 212 tm 209 m ""
 ME
-CM id 230 tid 230 eid 230 etid 230 c cMessage n route-flood-timer k 3 pe -1
+CM id 216 tid 216 eid 216 etid 216 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 9
 - target: 0, next: 13
 - target: 1, next: 13
@@ -5842,19 +5783,19 @@ CM id 230 tid 230 eid 230 etid 230 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 13
 ME
 MB sm 1 tm 213 m initialize(1)
-CM id 231 tid 231 eid 231 etid 231 c cMessage n sendToMaster pe -1
-BS id 231 tid 231 eid 231 etid 231 c cMessage n sendToMaster pe 0
+CM id 217 tid 217 eid 217 etid 217 c cMessage n sendToMaster pe -1
+BS id 217 tid 217 eid 217 etid 217 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 322 m initialize(1)
-CM id 232 tid 232 eid 232 etid 232 c cMessage n startSensingUnit pe -1
-BS id 232 tid 232 eid 232 etid 232 c cMessage n startSensingUnit pe 0
+CM id 218 tid 218 eid 218 etid 218 c cMessage n startSensingUnit pe -1
+BS id 218 tid 218 eid 218 etid 218 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 233 tid 233 eid 233 etid 233 c cMessage n shiftMode pe -1
-BS id 233 tid 233 eid 233 etid 233 c cMessage n shiftMode pe 0
+CM id 219 tid 219 eid 219 etid 219 c cMessage n shiftMode pe -1
+BS id 219 tid 219 eid 219 etid 219 c cMessage n shiftMode pe 0
 ES t 1
-CM id 234 tid 234 eid 234 etid 234 c cMessage n collectStatistics pe -1
-BS id 234 tid 234 eid 234 etid 234 c cMessage n collectStatistics pe 0
+CM id 220 tid 220 eid 220 etid 220 c cMessage n collectStatistics pe -1
+BS id 220 tid 220 eid 220 etid 220 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 13 d "t=mode: power saving;p=558,103;bgb=447,450;i=block/ifcard"
 ME
@@ -5886,12 +5827,12 @@ MB sm 1 tm 237 m initialize(1)
 - Node10[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 237 tm 229 m ""
 ME
-CM id 235 tid 235 eid 235 etid 235 c cMessage n Light pe -1
+CM id 221 tid 221 eid 221 etid 221 c cMessage n Light pe -1
 - Node10[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 237 tm 229 m ""
 ME
-BS id 235 tid 235 eid 235 etid 235 c ExtendedMessage n Light pe 0
-CL id 235 tid 235 eid 235 etid 235 c ExtendedMessage n Light pe 0 cid 236
+BS id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Light pe 0
+CL id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Light pe 0 cid 222
 SH sm 237 sg 1
 ES t 0
 ME
@@ -5955,7 +5896,7 @@ ME
 -   host macaddress=00-00-00-00-00-0A
 MB sm 235 tm 232 m ""
 ME
-CM id 237 tid 237 eid 237 etid 237 c cMessage n route-flood-timer k 3 pe -1
+CM id 223 tid 223 eid 223 etid 223 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 10
 - target: 0, next: 13
 - target: 1, next: 13
@@ -5976,19 +5917,19 @@ CM id 237 tid 237 eid 237 etid 237 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 13
 ME
 MB sm 1 tm 236 m initialize(1)
-CM id 238 tid 238 eid 238 etid 238 c cMessage n sendToMaster pe -1
-BS id 238 tid 238 eid 238 etid 238 c cMessage n sendToMaster pe 0
+CM id 224 tid 224 eid 224 etid 224 c cMessage n sendToMaster pe -1
+BS id 224 tid 224 eid 224 etid 224 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 323 m initialize(1)
-CM id 239 tid 239 eid 239 etid 239 c cMessage n startSensingUnit pe -1
-BS id 239 tid 239 eid 239 etid 239 c cMessage n startSensingUnit pe 0
+CM id 225 tid 225 eid 225 etid 225 c cMessage n startSensingUnit pe -1
+BS id 225 tid 225 eid 225 etid 225 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 240 tid 240 eid 240 etid 240 c cMessage n shiftMode pe -1
-BS id 240 tid 240 eid 240 etid 240 c cMessage n shiftMode pe 0
+CM id 226 tid 226 eid 226 etid 226 c cMessage n shiftMode pe -1
+BS id 226 tid 226 eid 226 etid 226 c cMessage n shiftMode pe 0
 ES t 1
-CM id 241 tid 241 eid 241 etid 241 c cMessage n collectStatistics pe -1
-BS id 241 tid 241 eid 241 etid 241 c cMessage n collectStatistics pe 0
+CM id 227 tid 227 eid 227 etid 227 c cMessage n collectStatistics pe -1
+BS id 227 tid 227 eid 227 etid 227 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 14 d "t=mode: power saving;p=619,172;bgb=447,450;i=block/ifcard"
 ME
@@ -6044,12 +5985,12 @@ MB sm 1 tm 255 m initialize(1)
 - Node11[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 255 tm 244 m ""
 ME
-CM id 242 tid 242 eid 242 etid 242 c cMessage n Temperature pe -1
+CM id 228 tid 228 eid 228 etid 228 c cMessage n Temperature pe -1
 - Node11[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 255 tm 244 m ""
 ME
-BS id 242 tid 242 eid 242 etid 242 c ExtendedMessage n Temperature pe 0
-CL id 242 tid 242 eid 242 etid 242 c ExtendedMessage n Temperature pe 0 cid 243
+BS id 228 tid 228 eid 228 etid 228 c ExtendedMessage n Temperature pe 0
+CL id 228 tid 228 eid 228 etid 228 c ExtendedMessage n Temperature pe 0 cid 229
 SH sm 255 sg 1
 ES t 0
 ME
@@ -6063,12 +6004,12 @@ MB sm 1 tm 259 m initialize(1)
 - Node11[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 259 tm 244 m ""
 ME
-CM id 244 tid 244 eid 244 etid 244 c cMessage n Humidity pe -1
+CM id 230 tid 230 eid 230 etid 230 c cMessage n Humidity pe -1
 - Node11[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 259 tm 244 m ""
 ME
-BS id 244 tid 244 eid 244 etid 244 c ExtendedMessage n Humidity pe 0
-CL id 244 tid 244 eid 244 etid 244 c ExtendedMessage n Humidity pe 0 cid 245
+BS id 230 tid 230 eid 230 etid 230 c ExtendedMessage n Humidity pe 0
+CL id 230 tid 230 eid 230 etid 230 c ExtendedMessage n Humidity pe 0 cid 231
 SH sm 259 sg 1
 ES t 0
 ME
@@ -6082,12 +6023,12 @@ MB sm 1 tm 263 m initialize(1)
 - Node11[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 263 tm 244 m ""
 ME
-CM id 246 tid 246 eid 246 etid 246 c cMessage n Pressure pe -1
+CM id 232 tid 232 eid 232 etid 232 c cMessage n Pressure pe -1
 - Node11[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 263 tm 244 m ""
 ME
-BS id 246 tid 246 eid 246 etid 246 c ExtendedMessage n Pressure pe 0
-CL id 246 tid 246 eid 246 etid 246 c ExtendedMessage n Pressure pe 0 cid 247
+BS id 232 tid 232 eid 232 etid 232 c ExtendedMessage n Pressure pe 0
+CL id 232 tid 232 eid 232 etid 232 c ExtendedMessage n Pressure pe 0 cid 233
 SH sm 263 sg 1
 ES t 0
 ME
@@ -6101,12 +6042,12 @@ MB sm 1 tm 267 m initialize(1)
 - Node11[0]::SimpleBattery: 0 device 12 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 267 tm 244 m ""
 ME
-CM id 248 tid 248 eid 248 etid 248 c cMessage n Light pe -1
+CM id 234 tid 234 eid 234 etid 234 c cMessage n Light pe -1
 - Node11[0]::SimpleBattery: 0 device 12 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 267 tm 244 m ""
 ME
-BS id 248 tid 248 eid 248 etid 248 c ExtendedMessage n Light pe 0
-CL id 248 tid 248 eid 248 etid 248 c ExtendedMessage n Light pe 0 cid 249
+BS id 234 tid 234 eid 234 etid 234 c ExtendedMessage n Light pe 0
+CL id 234 tid 234 eid 234 etid 234 c ExtendedMessage n Light pe 0 cid 235
 SH sm 267 sg 1
 ES t 0
 ME
@@ -6170,7 +6111,7 @@ ME
 -   host macaddress=00-00-00-00-00-0B
 MB sm 253 tm 250 m ""
 ME
-CM id 250 tid 250 eid 250 etid 250 c cMessage n route-flood-timer k 3 pe -1
+CM id 236 tid 236 eid 236 etid 236 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 11
 - target: 0, next: 13
 - target: 1, next: 13
@@ -6191,19 +6132,19 @@ CM id 250 tid 250 eid 250 etid 250 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 13
 ME
 MB sm 1 tm 254 m initialize(1)
-CM id 251 tid 251 eid 251 etid 251 c cMessage n sendToMaster pe -1
-BS id 251 tid 251 eid 251 etid 251 c cMessage n sendToMaster pe 0
+CM id 237 tid 237 eid 237 etid 237 c cMessage n sendToMaster pe -1
+BS id 237 tid 237 eid 237 etid 237 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 324 m initialize(1)
-CM id 252 tid 252 eid 252 etid 252 c cMessage n startSensingUnit pe -1
-BS id 252 tid 252 eid 252 etid 252 c cMessage n startSensingUnit pe 0
+CM id 238 tid 238 eid 238 etid 238 c cMessage n startSensingUnit pe -1
+BS id 238 tid 238 eid 238 etid 238 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 253 tid 253 eid 253 etid 253 c cMessage n shiftMode pe -1
-BS id 253 tid 253 eid 253 etid 253 c cMessage n shiftMode pe 0
+CM id 239 tid 239 eid 239 etid 239 c cMessage n shiftMode pe -1
+BS id 239 tid 239 eid 239 etid 239 c cMessage n shiftMode pe 0
 ES t 1
-CM id 254 tid 254 eid 254 etid 254 c cMessage n collectStatistics pe -1
-BS id 254 tid 254 eid 254 etid 254 c cMessage n collectStatistics pe 0
+CM id 240 tid 240 eid 240 etid 240 c cMessage n collectStatistics pe -1
+BS id 240 tid 240 eid 240 etid 240 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 15 d "t=mode: power saving;p=619,257;bgb=447,450;i=block/ifcard"
 ME
@@ -6235,12 +6176,12 @@ MB sm 1 tm 282 m initialize(1)
 - Node12[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 282 tm 274 m ""
 ME
-CM id 255 tid 255 eid 255 etid 255 c cMessage n Pressure pe -1
+CM id 241 tid 241 eid 241 etid 241 c cMessage n Pressure pe -1
 - Node12[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 282 tm 274 m ""
 ME
-BS id 255 tid 255 eid 255 etid 255 c ExtendedMessage n Pressure pe 0
-CL id 255 tid 255 eid 255 etid 255 c ExtendedMessage n Pressure pe 0 cid 256
+BS id 241 tid 241 eid 241 etid 241 c ExtendedMessage n Pressure pe 0
+CL id 241 tid 241 eid 241 etid 241 c ExtendedMessage n Pressure pe 0 cid 242
 SH sm 282 sg 1
 ES t 0
 ME
@@ -6304,7 +6245,7 @@ ME
 -   host macaddress=00-00-00-00-00-0C
 MB sm 280 tm 277 m ""
 ME
-CM id 257 tid 257 eid 257 etid 257 c cMessage n route-flood-timer k 3 pe -1
+CM id 243 tid 243 eid 243 etid 243 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 12
 - target: 0, next: 13
 - target: 1, next: 13
@@ -6325,19 +6266,19 @@ CM id 257 tid 257 eid 257 etid 257 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 13
 ME
 MB sm 1 tm 281 m initialize(1)
-CM id 258 tid 258 eid 258 etid 258 c cMessage n sendToMaster pe -1
-BS id 258 tid 258 eid 258 etid 258 c cMessage n sendToMaster pe 0
+CM id 244 tid 244 eid 244 etid 244 c cMessage n sendToMaster pe -1
+BS id 244 tid 244 eid 244 etid 244 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 325 m initialize(1)
-CM id 259 tid 259 eid 259 etid 259 c cMessage n startSensingUnit pe -1
-BS id 259 tid 259 eid 259 etid 259 c cMessage n startSensingUnit pe 0
+CM id 245 tid 245 eid 245 etid 245 c cMessage n startSensingUnit pe -1
+BS id 245 tid 245 eid 245 etid 245 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 260 tid 260 eid 260 etid 260 c cMessage n shiftMode pe -1
-BS id 260 tid 260 eid 260 etid 260 c cMessage n shiftMode pe 0
+CM id 246 tid 246 eid 246 etid 246 c cMessage n shiftMode pe -1
+BS id 246 tid 246 eid 246 etid 246 c cMessage n shiftMode pe 0
 ES t 1
-CM id 261 tid 261 eid 261 etid 261 c cMessage n collectStatistics pe -1
-BS id 261 tid 261 eid 261 etid 261 c cMessage n collectStatistics pe 0
+CM id 247 tid 247 eid 247 etid 247 c cMessage n collectStatistics pe -1
+BS id 247 tid 247 eid 247 etid 247 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 16 d "t=mode: power saving;p=558,334;bgb=447,450;i=block/ifcard"
 ME
@@ -6385,12 +6326,12 @@ MB sm 1 tm 299 m initialize(1)
 - Node13[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 299 tm 289 m ""
 ME
-CM id 262 tid 262 eid 262 etid 262 c cMessage n Temperature pe -1
+CM id 248 tid 248 eid 248 etid 248 c cMessage n Temperature pe -1
 - Node13[0]::SimpleBattery: 0 device 0 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 299 tm 289 m ""
 ME
-BS id 262 tid 262 eid 262 etid 262 c ExtendedMessage n Temperature pe 0
-CL id 262 tid 262 eid 262 etid 262 c ExtendedMessage n Temperature pe 0 cid 263
+BS id 248 tid 248 eid 248 etid 248 c ExtendedMessage n Temperature pe 0
+CL id 248 tid 248 eid 248 etid 248 c ExtendedMessage n Temperature pe 0 cid 249
 SH sm 299 sg 1
 ES t 0
 ME
@@ -6404,12 +6345,12 @@ MB sm 1 tm 303 m initialize(1)
 - Node13[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 303 tm 289 m ""
 ME
-CM id 264 tid 264 eid 264 etid 264 c cMessage n Humidity pe -1
+CM id 250 tid 250 eid 250 etid 250 c cMessage n Humidity pe -1
 - Node13[0]::SimpleBattery: 0 device 4 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 303 tm 289 m ""
 ME
-BS id 264 tid 264 eid 264 etid 264 c ExtendedMessage n Humidity pe 0
-CL id 264 tid 264 eid 264 etid 264 c ExtendedMessage n Humidity pe 0 cid 265
+BS id 250 tid 250 eid 250 etid 250 c ExtendedMessage n Humidity pe 0
+CL id 250 tid 250 eid 250 etid 250 c ExtendedMessage n Humidity pe 0 cid 251
 SH sm 303 sg 1
 ES t 0
 ME
@@ -6423,12 +6364,12 @@ MB sm 1 tm 307 m initialize(1)
 - Node13[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 307 tm 289 m ""
 ME
-CM id 266 tid 266 eid 266 etid 266 c cMessage n Light pe -1
+CM id 252 tid 252 eid 252 etid 252 c cMessage n Light pe -1
 - Node13[0]::SimpleBattery: 0 device 8 (SensingUnit) deduct 1000 mW-s, activity = 0
 MB sm 307 tm 289 m ""
 ME
-BS id 266 tid 266 eid 266 etid 266 c ExtendedMessage n Light pe 0
-CL id 266 tid 266 eid 266 etid 266 c ExtendedMessage n Light pe 0 cid 267
+BS id 252 tid 252 eid 252 etid 252 c ExtendedMessage n Light pe 0
+CL id 252 tid 252 eid 252 etid 252 c ExtendedMessage n Light pe 0 cid 253
 SH sm 307 sg 1
 ES t 0
 ME
@@ -6580,7 +6521,7 @@ ME
 -   host macaddress=00-00-00-00-00-0D
 MB sm 297 tm 294 m ""
 ME
-CM id 268 tid 268 eid 268 etid 268 c cMessage n route-flood-timer k 3 pe -1
+CM id 254 tid 254 eid 254 etid 254 c cMessage n route-flood-timer k 3 pe -1
 - Routing table for 13
 - target: 0, next: 0
 - target: 1, next: 0
@@ -6601,19 +6542,19 @@ CM id 268 tid 268 eid 268 etid 268 c cMessage n route-flood-timer k 3 pe -1
 - target: 16, next: 14
 ME
 MB sm 1 tm 298 m initialize(1)
-CM id 269 tid 269 eid 269 etid 269 c cMessage n sendToMaster pe -1
-BS id 269 tid 269 eid 269 etid 269 c cMessage n sendToMaster pe 0
+CM id 255 tid 255 eid 255 etid 255 c cMessage n sendToMaster pe -1
+BS id 255 tid 255 eid 255 etid 255 c cMessage n sendToMaster pe 0
 ES t 31
 ME
 MB sm 1 tm 326 m initialize(1)
-CM id 270 tid 270 eid 270 etid 270 c cMessage n startSensingUnit pe -1
-BS id 270 tid 270 eid 270 etid 270 c cMessage n startSensingUnit pe 0
+CM id 256 tid 256 eid 256 etid 256 c cMessage n startSensingUnit pe -1
+BS id 256 tid 256 eid 256 etid 256 c cMessage n startSensingUnit pe 0
 ES t 10
-CM id 271 tid 271 eid 271 etid 271 c cMessage n shiftMode pe -1
-BS id 271 tid 271 eid 271 etid 271 c cMessage n shiftMode pe 0
+CM id 257 tid 257 eid 257 etid 257 c cMessage n shiftMode pe -1
+BS id 257 tid 257 eid 257 etid 257 c cMessage n shiftMode pe 0
 ES t 1
-CM id 272 tid 272 eid 272 etid 272 c cMessage n collectStatistics pe -1
-BS id 272 tid 272 eid 272 etid 272 c cMessage n collectStatistics pe 0
+CM id 258 tid 258 eid 258 etid 258 c cMessage n collectStatistics pe -1
+BS id 258 tid 258 eid 258 etid 258 c cMessage n collectStatistics pe 0
 ES t 1000
 MS id 17 d "t=mode: power saving;p=519,218;bgb=447,450;i=block/ifcard"
 ME
@@ -6687,34 +6628,935 @@ MB sm 1 tm 295 m initialize(2)
 - initializing MovingMobilityBase stage 2
 - initializing LinearMobility stage 2
 ME
-DM id 141 tid 141 eid 141 etid 141 c cMessage n Temperature pe 0
-DM id 143 tid 143 eid 143 etid 143 c cMessage n Pressure pe 0
-DM id 145 tid 145 eid 145 etid 145 c cMessage n Light pe 0
-DM id 152 tid 152 eid 152 etid 152 c cMessage n Light pe 0
-DM id 159 tid 159 eid 159 etid 159 c cMessage n Temperature pe 0
-DM id 161 tid 161 eid 161 etid 161 c cMessage n Humidity pe 0
-DM id 168 tid 168 eid 168 etid 168 c cMessage n Temperature pe 0
-DM id 170 tid 170 eid 170 etid 170 c cMessage n Pressure pe 0
-DM id 172 tid 172 eid 172 etid 172 c cMessage n Light pe 0
-DM id 179 tid 179 eid 179 etid 179 c cMessage n Humidity pe 0
-DM id 186 tid 186 eid 186 etid 186 c cMessage n Temperature pe 0
-DM id 188 tid 188 eid 188 etid 188 c cMessage n Humidity pe 0
-DM id 190 tid 190 eid 190 etid 190 c cMessage n Pressure pe 0
-DM id 192 tid 192 eid 192 etid 192 c cMessage n Light pe 0
-DM id 199 tid 199 eid 199 etid 199 c cMessage n Light pe 0
-DM id 206 tid 206 eid 206 etid 206 c cMessage n Temperature pe 0
-DM id 208 tid 208 eid 208 etid 208 c cMessage n Humidity pe 0
-DM id 210 tid 210 eid 210 etid 210 c cMessage n Pressure pe 0
-DM id 217 tid 217 eid 217 etid 217 c cMessage n Light pe 0
-DM id 224 tid 224 eid 224 etid 224 c cMessage n Temperature pe 0
-DM id 226 tid 226 eid 226 etid 226 c cMessage n Humidity pe 0
-DM id 228 tid 228 eid 228 etid 228 c cMessage n Light pe 0
-DM id 235 tid 235 eid 235 etid 235 c cMessage n Light pe 0
-DM id 242 tid 242 eid 242 etid 242 c cMessage n Temperature pe 0
-DM id 244 tid 244 eid 244 etid 244 c cMessage n Humidity pe 0
-DM id 246 tid 246 eid 246 etid 246 c cMessage n Pressure pe 0
-DM id 248 tid 248 eid 248 etid 248 c cMessage n Light pe 0
-DM id 255 tid 255 eid 255 etid 255 c cMessage n Pressure pe 0
-DM id 262 tid 262 eid 262 etid 262 c cMessage n Temperature pe 0
-DM id 264 tid 264 eid 264 etid 264 c cMessage n Humidity pe 0
-DM id 266 tid 266 eid 266 etid 266 c cMessage n Light pe 0
+
+E # 1 t 0 m 3 ce 0 msg 0
+DM id 0 tid 0 eid 0 etid 0 c cMessage n updateData pe 1
+
+E # 2 t 0 m 30 ce 0 msg 127
+- Node0[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 30 tm 19 m ""
+ME
+BS id 127 tid 127 eid 127 etid 127 c ExtendedMessage n Temperature pe 2
+CL id 127 tid 127 eid 127 etid 127 c ExtendedMessage n Temperature pe 2 cid 259
+SH sm 30 sg 3
+ES t 0
+
+E # 3 t 0 m 34 ce 0 msg 129
+- Node0[0]::SimpleBattery: 0 device 5 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 34 tm 19 m ""
+ME
+BS id 129 tid 129 eid 129 etid 129 c ExtendedMessage n Pressure pe 3
+CL id 129 tid 129 eid 129 etid 129 c ExtendedMessage n Pressure pe 3 cid 260
+SH sm 34 sg 3
+ES t 0
+
+E # 4 t 0 m 38 ce 0 msg 131
+- Node0[0]::SimpleBattery: 0 device 9 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 38 tm 19 m ""
+ME
+BS id 131 tid 131 eid 131 etid 131 c ExtendedMessage n Light pe 4
+CL id 131 tid 131 eid 131 etid 131 c ExtendedMessage n Light pe 4 cid 261
+SH sm 38 sg 3
+ES t 0
+
+E # 5 t 0 m 53 ce 0 msg 138
+- Node1[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 53 tm 44 m ""
+ME
+BS id 138 tid 138 eid 138 etid 138 c ExtendedMessage n Light pe 5
+CL id 138 tid 138 eid 138 etid 138 c ExtendedMessage n Light pe 5 cid 262
+SH sm 53 sg 3
+ES t 0
+
+E # 6 t 0 m 69 ce 0 msg 145
+- Node2[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 69 tm 59 m ""
+ME
+BS id 145 tid 145 eid 145 etid 145 c ExtendedMessage n Temperature pe 6
+CL id 145 tid 145 eid 145 etid 145 c ExtendedMessage n Temperature pe 6 cid 263
+SH sm 69 sg 3
+ES t 0
+
+E # 7 t 0 m 73 ce 0 msg 147
+- Node2[0]::SimpleBattery: 0 device 5 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 73 tm 59 m ""
+ME
+BS id 147 tid 147 eid 147 etid 147 c ExtendedMessage n Humidity pe 7
+CL id 147 tid 147 eid 147 etid 147 c ExtendedMessage n Humidity pe 7 cid 264
+SH sm 73 sg 3
+ES t 0
+
+E # 8 t 0 m 90 ce 0 msg 154
+- Node3[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 90 tm 79 m ""
+ME
+BS id 154 tid 154 eid 154 etid 154 c ExtendedMessage n Temperature pe 8
+CL id 154 tid 154 eid 154 etid 154 c ExtendedMessage n Temperature pe 8 cid 265
+SH sm 90 sg 3
+ES t 0
+
+E # 9 t 0 m 94 ce 0 msg 156
+- Node3[0]::SimpleBattery: 0 device 5 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 94 tm 79 m ""
+ME
+BS id 156 tid 156 eid 156 etid 156 c ExtendedMessage n Pressure pe 9
+CL id 156 tid 156 eid 156 etid 156 c ExtendedMessage n Pressure pe 9 cid 266
+SH sm 94 sg 3
+ES t 0
+
+E # 10 t 0 m 98 ce 0 msg 158
+- Node3[0]::SimpleBattery: 0 device 9 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 98 tm 79 m ""
+ME
+BS id 158 tid 158 eid 158 etid 158 c ExtendedMessage n Light pe 10
+CL id 158 tid 158 eid 158 etid 158 c ExtendedMessage n Light pe 10 cid 267
+SH sm 98 sg 3
+ES t 0
+
+E # 11 t 0 m 113 ce 0 msg 165
+- Node4[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 113 tm 104 m ""
+ME
+BS id 165 tid 165 eid 165 etid 165 c ExtendedMessage n Humidity pe 11
+CL id 165 tid 165 eid 165 etid 165 c ExtendedMessage n Humidity pe 11 cid 268
+SH sm 113 sg 3
+ES t 0
+
+E # 12 t 0 m 131 ce 0 msg 172
+- Node5[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 131 tm 119 m ""
+ME
+BS id 172 tid 172 eid 172 etid 172 c ExtendedMessage n Temperature pe 12
+CL id 172 tid 172 eid 172 etid 172 c ExtendedMessage n Temperature pe 12 cid 269
+SH sm 131 sg 3
+ES t 0
+
+E # 13 t 0 m 135 ce 0 msg 174
+- Node5[0]::SimpleBattery: 0 device 5 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 135 tm 119 m ""
+ME
+BS id 174 tid 174 eid 174 etid 174 c ExtendedMessage n Humidity pe 13
+CL id 174 tid 174 eid 174 etid 174 c ExtendedMessage n Humidity pe 13 cid 270
+SH sm 135 sg 3
+ES t 0
+
+E # 14 t 0 m 139 ce 0 msg 176
+- Node5[0]::SimpleBattery: 0 device 9 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 139 tm 119 m ""
+ME
+BS id 176 tid 176 eid 176 etid 176 c ExtendedMessage n Pressure pe 14
+CL id 176 tid 176 eid 176 etid 176 c ExtendedMessage n Pressure pe 14 cid 271
+SH sm 139 sg 3
+ES t 0
+
+E # 15 t 0 m 143 ce 0 msg 178
+- Node5[0]::SimpleBattery: 0 device 13 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 143 tm 119 m ""
+ME
+BS id 178 tid 178 eid 178 etid 178 c ExtendedMessage n Light pe 15
+CL id 178 tid 178 eid 178 etid 178 c ExtendedMessage n Light pe 15 cid 272
+SH sm 143 sg 3
+ES t 0
+
+E # 16 t 0 m 158 ce 0 msg 185
+- Node6[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 158 tm 149 m ""
+ME
+BS id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Light pe 16
+CL id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Light pe 16 cid 273
+SH sm 158 sg 3
+ES t 0
+
+E # 17 t 0 m 175 ce 0 msg 192
+- Node7[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 175 tm 164 m ""
+ME
+BS id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Temperature pe 17
+CL id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Temperature pe 17 cid 274
+SH sm 175 sg 3
+ES t 0
+
+E # 18 t 0 m 179 ce 0 msg 194
+- Node7[0]::SimpleBattery: 0 device 5 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 179 tm 164 m ""
+ME
+BS id 194 tid 194 eid 194 etid 194 c ExtendedMessage n Humidity pe 18
+CL id 194 tid 194 eid 194 etid 194 c ExtendedMessage n Humidity pe 18 cid 275
+SH sm 179 sg 3
+ES t 0
+
+E # 19 t 0 m 183 ce 0 msg 196
+- Node7[0]::SimpleBattery: 0 device 9 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 183 tm 164 m ""
+ME
+BS id 196 tid 196 eid 196 etid 196 c ExtendedMessage n Pressure pe 19
+CL id 196 tid 196 eid 196 etid 196 c ExtendedMessage n Pressure pe 19 cid 276
+SH sm 183 sg 3
+ES t 0
+
+E # 20 t 0 m 198 ce 0 msg 203
+- Node8[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 198 tm 189 m ""
+ME
+BS id 203 tid 203 eid 203 etid 203 c ExtendedMessage n Light pe 20
+CL id 203 tid 203 eid 203 etid 203 c ExtendedMessage n Light pe 20 cid 277
+SH sm 198 sg 3
+ES t 0
+
+E # 21 t 0 m 215 ce 0 msg 210
+- Node9[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 215 tm 204 m ""
+ME
+BS id 210 tid 210 eid 210 etid 210 c ExtendedMessage n Temperature pe 21
+CL id 210 tid 210 eid 210 etid 210 c ExtendedMessage n Temperature pe 21 cid 278
+SH sm 215 sg 3
+ES t 0
+
+E # 22 t 0 m 219 ce 0 msg 212
+- Node9[0]::SimpleBattery: 0 device 5 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 219 tm 204 m ""
+ME
+BS id 212 tid 212 eid 212 etid 212 c ExtendedMessage n Humidity pe 22
+CL id 212 tid 212 eid 212 etid 212 c ExtendedMessage n Humidity pe 22 cid 279
+SH sm 219 sg 3
+ES t 0
+
+E # 23 t 0 m 223 ce 0 msg 214
+- Node9[0]::SimpleBattery: 0 device 9 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 223 tm 204 m ""
+ME
+BS id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Light pe 23
+CL id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Light pe 23 cid 280
+SH sm 223 sg 3
+ES t 0
+
+E # 24 t 0 m 238 ce 0 msg 221
+- Node10[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 238 tm 229 m ""
+ME
+BS id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Light pe 24
+CL id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Light pe 24 cid 281
+SH sm 238 sg 3
+ES t 0
+
+E # 25 t 0 m 256 ce 0 msg 228
+- Node11[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 256 tm 244 m ""
+ME
+BS id 228 tid 228 eid 228 etid 228 c ExtendedMessage n Temperature pe 25
+CL id 228 tid 228 eid 228 etid 228 c ExtendedMessage n Temperature pe 25 cid 282
+SH sm 256 sg 3
+ES t 0
+
+E # 26 t 0 m 260 ce 0 msg 230
+- Node11[0]::SimpleBattery: 0 device 5 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 260 tm 244 m ""
+ME
+BS id 230 tid 230 eid 230 etid 230 c ExtendedMessage n Humidity pe 26
+CL id 230 tid 230 eid 230 etid 230 c ExtendedMessage n Humidity pe 26 cid 283
+SH sm 260 sg 3
+ES t 0
+
+E # 27 t 0 m 264 ce 0 msg 232
+- Node11[0]::SimpleBattery: 0 device 9 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 264 tm 244 m ""
+ME
+BS id 232 tid 232 eid 232 etid 232 c ExtendedMessage n Pressure pe 27
+CL id 232 tid 232 eid 232 etid 232 c ExtendedMessage n Pressure pe 27 cid 284
+SH sm 264 sg 3
+ES t 0
+
+E # 28 t 0 m 268 ce 0 msg 234
+- Node11[0]::SimpleBattery: 0 device 13 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 268 tm 244 m ""
+ME
+BS id 234 tid 234 eid 234 etid 234 c ExtendedMessage n Light pe 28
+CL id 234 tid 234 eid 234 etid 234 c ExtendedMessage n Light pe 28 cid 285
+SH sm 268 sg 3
+ES t 0
+
+E # 29 t 0 m 283 ce 0 msg 241
+- Node12[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 283 tm 274 m ""
+ME
+BS id 241 tid 241 eid 241 etid 241 c ExtendedMessage n Pressure pe 29
+CL id 241 tid 241 eid 241 etid 241 c ExtendedMessage n Pressure pe 29 cid 286
+SH sm 283 sg 3
+ES t 0
+
+E # 30 t 0 m 300 ce 0 msg 248
+- Node13[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 300 tm 289 m ""
+ME
+BS id 248 tid 248 eid 248 etid 248 c ExtendedMessage n Temperature pe 30
+CL id 248 tid 248 eid 248 etid 248 c ExtendedMessage n Temperature pe 30 cid 287
+SH sm 300 sg 3
+ES t 0
+
+E # 31 t 0 m 304 ce 0 msg 250
+- Node13[0]::SimpleBattery: 0 device 5 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 304 tm 289 m ""
+ME
+BS id 250 tid 250 eid 250 etid 250 c ExtendedMessage n Humidity pe 31
+CL id 250 tid 250 eid 250 etid 250 c ExtendedMessage n Humidity pe 31 cid 288
+SH sm 304 sg 3
+ES t 0
+
+E # 32 t 0 m 308 ce 0 msg 252
+- Node13[0]::SimpleBattery: 0 device 9 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 308 tm 289 m ""
+ME
+BS id 252 tid 252 eid 252 etid 252 c ExtendedMessage n Light pe 32
+CL id 252 tid 252 eid 252 etid 252 c ExtendedMessage n Light pe 32 cid 289
+SH sm 308 sg 3
+ES t 0
+
+E # 33 t 0 m 31 ce 2 msg 127
+- Node0[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 31 tm 19 m ""
+ME
+BS id 127 tid 127 eid 127 etid 127 c ExtendedMessage n Temperature pe 33
+CL id 127 tid 127 eid 127 etid 127 c ExtendedMessage n Temperature pe 33 cid 290
+SH sm 31 sg 3
+ES t 0
+
+E # 34 t 0 m 35 ce 3 msg 129
+- Node0[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 35 tm 19 m ""
+ME
+BS id 129 tid 129 eid 129 etid 129 c ExtendedMessage n Pressure pe 34
+CL id 129 tid 129 eid 129 etid 129 c ExtendedMessage n Pressure pe 34 cid 291
+SH sm 35 sg 3
+ES t 0
+
+E # 35 t 0 m 39 ce 4 msg 131
+- Node0[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 39 tm 19 m ""
+ME
+BS id 131 tid 131 eid 131 etid 131 c ExtendedMessage n Light pe 35
+CL id 131 tid 131 eid 131 etid 131 c ExtendedMessage n Light pe 35 cid 292
+SH sm 39 sg 3
+ES t 0
+
+E # 36 t 0 m 54 ce 5 msg 138
+- Node1[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 54 tm 44 m ""
+ME
+BS id 138 tid 138 eid 138 etid 138 c ExtendedMessage n Light pe 36
+CL id 138 tid 138 eid 138 etid 138 c ExtendedMessage n Light pe 36 cid 293
+SH sm 54 sg 3
+ES t 0
+
+E # 37 t 0 m 70 ce 6 msg 145
+- Node2[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 70 tm 59 m ""
+ME
+BS id 145 tid 145 eid 145 etid 145 c ExtendedMessage n Temperature pe 37
+CL id 145 tid 145 eid 145 etid 145 c ExtendedMessage n Temperature pe 37 cid 294
+SH sm 70 sg 3
+ES t 0
+
+E # 38 t 0 m 74 ce 7 msg 147
+- Node2[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 74 tm 59 m ""
+ME
+BS id 147 tid 147 eid 147 etid 147 c ExtendedMessage n Humidity pe 38
+CL id 147 tid 147 eid 147 etid 147 c ExtendedMessage n Humidity pe 38 cid 295
+SH sm 74 sg 3
+ES t 0
+
+E # 39 t 0 m 91 ce 8 msg 154
+- Node3[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 91 tm 79 m ""
+ME
+BS id 154 tid 154 eid 154 etid 154 c ExtendedMessage n Temperature pe 39
+CL id 154 tid 154 eid 154 etid 154 c ExtendedMessage n Temperature pe 39 cid 296
+SH sm 91 sg 3
+ES t 0
+
+E # 40 t 0 m 95 ce 9 msg 156
+- Node3[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 95 tm 79 m ""
+ME
+BS id 156 tid 156 eid 156 etid 156 c ExtendedMessage n Pressure pe 40
+CL id 156 tid 156 eid 156 etid 156 c ExtendedMessage n Pressure pe 40 cid 297
+SH sm 95 sg 3
+ES t 0
+
+E # 41 t 0 m 99 ce 10 msg 158
+- Node3[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 99 tm 79 m ""
+ME
+BS id 158 tid 158 eid 158 etid 158 c ExtendedMessage n Light pe 41
+CL id 158 tid 158 eid 158 etid 158 c ExtendedMessage n Light pe 41 cid 298
+SH sm 99 sg 3
+ES t 0
+
+E # 42 t 0 m 114 ce 11 msg 165
+- Node4[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 114 tm 104 m ""
+ME
+BS id 165 tid 165 eid 165 etid 165 c ExtendedMessage n Humidity pe 42
+CL id 165 tid 165 eid 165 etid 165 c ExtendedMessage n Humidity pe 42 cid 299
+SH sm 114 sg 3
+ES t 0
+
+E # 43 t 0 m 132 ce 12 msg 172
+- Node5[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 132 tm 119 m ""
+ME
+BS id 172 tid 172 eid 172 etid 172 c ExtendedMessage n Temperature pe 43
+CL id 172 tid 172 eid 172 etid 172 c ExtendedMessage n Temperature pe 43 cid 300
+SH sm 132 sg 3
+ES t 0
+
+E # 44 t 0 m 136 ce 13 msg 174
+- Node5[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 136 tm 119 m ""
+ME
+BS id 174 tid 174 eid 174 etid 174 c ExtendedMessage n Humidity pe 44
+CL id 174 tid 174 eid 174 etid 174 c ExtendedMessage n Humidity pe 44 cid 301
+SH sm 136 sg 3
+ES t 0
+
+E # 45 t 0 m 140 ce 14 msg 176
+- Node5[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 140 tm 119 m ""
+ME
+BS id 176 tid 176 eid 176 etid 176 c ExtendedMessage n Pressure pe 45
+CL id 176 tid 176 eid 176 etid 176 c ExtendedMessage n Pressure pe 45 cid 302
+SH sm 140 sg 3
+ES t 0
+
+E # 46 t 0 m 144 ce 15 msg 178
+- Node5[0]::SimpleBattery: 0 device 14 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 144 tm 119 m ""
+ME
+BS id 178 tid 178 eid 178 etid 178 c ExtendedMessage n Light pe 46
+CL id 178 tid 178 eid 178 etid 178 c ExtendedMessage n Light pe 46 cid 303
+SH sm 144 sg 3
+ES t 0
+
+E # 47 t 0 m 159 ce 16 msg 185
+- Node6[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 159 tm 149 m ""
+ME
+BS id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Light pe 47
+CL id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Light pe 47 cid 304
+SH sm 159 sg 3
+ES t 0
+
+E # 48 t 0 m 176 ce 17 msg 192
+- Node7[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 176 tm 164 m ""
+ME
+BS id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Temperature pe 48
+CL id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Temperature pe 48 cid 305
+SH sm 176 sg 3
+ES t 0
+
+E # 49 t 0 m 180 ce 18 msg 194
+- Node7[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 180 tm 164 m ""
+ME
+BS id 194 tid 194 eid 194 etid 194 c ExtendedMessage n Humidity pe 49
+CL id 194 tid 194 eid 194 etid 194 c ExtendedMessage n Humidity pe 49 cid 306
+SH sm 180 sg 3
+ES t 0
+
+E # 50 t 0 m 184 ce 19 msg 196
+- Node7[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 184 tm 164 m ""
+ME
+BS id 196 tid 196 eid 196 etid 196 c ExtendedMessage n Pressure pe 50
+CL id 196 tid 196 eid 196 etid 196 c ExtendedMessage n Pressure pe 50 cid 307
+SH sm 184 sg 3
+ES t 0
+
+E # 51 t 0 m 199 ce 20 msg 203
+- Node8[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 199 tm 189 m ""
+ME
+BS id 203 tid 203 eid 203 etid 203 c ExtendedMessage n Light pe 51
+CL id 203 tid 203 eid 203 etid 203 c ExtendedMessage n Light pe 51 cid 308
+SH sm 199 sg 3
+ES t 0
+
+E # 52 t 0 m 216 ce 21 msg 210
+- Node9[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 216 tm 204 m ""
+ME
+BS id 210 tid 210 eid 210 etid 210 c ExtendedMessage n Temperature pe 52
+CL id 210 tid 210 eid 210 etid 210 c ExtendedMessage n Temperature pe 52 cid 309
+SH sm 216 sg 3
+ES t 0
+
+E # 53 t 0 m 220 ce 22 msg 212
+- Node9[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 220 tm 204 m ""
+ME
+BS id 212 tid 212 eid 212 etid 212 c ExtendedMessage n Humidity pe 53
+CL id 212 tid 212 eid 212 etid 212 c ExtendedMessage n Humidity pe 53 cid 310
+SH sm 220 sg 3
+ES t 0
+
+E # 54 t 0 m 224 ce 23 msg 214
+- Node9[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 224 tm 204 m ""
+ME
+BS id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Light pe 54
+CL id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Light pe 54 cid 311
+SH sm 224 sg 3
+ES t 0
+
+E # 55 t 0 m 239 ce 24 msg 221
+- Node10[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 239 tm 229 m ""
+ME
+BS id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Light pe 55
+CL id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Light pe 55 cid 312
+SH sm 239 sg 3
+ES t 0
+
+E # 56 t 0 m 257 ce 25 msg 228
+- Node11[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 257 tm 244 m ""
+ME
+BS id 228 tid 228 eid 228 etid 228 c ExtendedMessage n Temperature pe 56
+CL id 228 tid 228 eid 228 etid 228 c ExtendedMessage n Temperature pe 56 cid 313
+SH sm 257 sg 3
+ES t 0
+
+E # 57 t 0 m 261 ce 26 msg 230
+- Node11[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 261 tm 244 m ""
+ME
+BS id 230 tid 230 eid 230 etid 230 c ExtendedMessage n Humidity pe 57
+CL id 230 tid 230 eid 230 etid 230 c ExtendedMessage n Humidity pe 57 cid 314
+SH sm 261 sg 3
+ES t 0
+
+E # 58 t 0 m 265 ce 27 msg 232
+- Node11[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 265 tm 244 m ""
+ME
+BS id 232 tid 232 eid 232 etid 232 c ExtendedMessage n Pressure pe 58
+CL id 232 tid 232 eid 232 etid 232 c ExtendedMessage n Pressure pe 58 cid 315
+SH sm 265 sg 3
+ES t 0
+
+E # 59 t 0 m 269 ce 28 msg 234
+- Node11[0]::SimpleBattery: 0 device 14 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 269 tm 244 m ""
+ME
+BS id 234 tid 234 eid 234 etid 234 c ExtendedMessage n Light pe 59
+CL id 234 tid 234 eid 234 etid 234 c ExtendedMessage n Light pe 59 cid 316
+SH sm 269 sg 3
+ES t 0
+SE e 0 c 9 m "The user has finished the simulation at event #60, t=0."
+- Sent:     0
+- Received: 0
+- Hop count, min:    0
+- Hop count, max:    0
+- Hop count, mean:   0
+- Hop count, stddev: -nan
+- Node0[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node0[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node0[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node0[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node0[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
+- Node0[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node0[0]::SimpleBattery: device 6 (SignalConverter) consumed 1000 mW-s at 0s
+- Node0[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
+- Node0[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
+- Node0[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node0[0]::SimpleBattery: device 10 (SignalConverter) consumed 1000 mW-s at 0s
+- Node0[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
+- Node0[0]::SimpleBattery: device 12 (Memory) consumed 0 mW-s at 0s
+- Node0[0]::SimpleBattery: device 13 (Processor) consumed 0 mW-s at 0s
+- Node0[0]::SimpleBattery: device 13, activity 0: 0 mWs and 0s
+- Node0[0]::SimpleBattery: device 13, activity 1: 0 mWs and 0s
+- Node0[0]::SimpleBattery: device 13, activity 2: 0 mWs and 0s
+- Node0[0]::SimpleBattery: device 14 (physical layer) consumed 0 mW-s at 0s
+- Node0[0]::SimpleBattery: device 14, activity 0: 0 mWs and 0s
+- Node0[0]::SimpleBattery: device 14, activity 1: 0 mWs and 0s
+- Node0[0]::SimpleBattery: device 14, activity 2: 0 mWs and 0s
+- Node0[0]::SimpleBattery: device 14, activity 3: 0 mWs and 0s
+- Node0[0]::SimpleBattery: device 14, activity 4: 0 mWs and 0s
+- Node0[0]::SimpleBattery: device 14, activity 5: 0 mWs and 0s
+- Node0[0]::SimpleBattery: device 14, activity 6: 0 mWs and 0s
+- Node0[0]::SimpleBattery: device 15 () consumed 0 mW-s at 0s
+MB sm 19 tm 18 m ""
+ME
+MB sm 19 tm 18 m ""
+ME
+- Node1[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node1[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node1[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node1[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node1[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
+- Node1[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
+- Node1[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
+- Node1[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
+- Node1[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
+- Node1[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
+- Node1[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
+- Node1[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
+- Node1[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
+- Node1[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
+- Node1[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
+- Node1[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
+- Node1[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
+- Node1[0]::SimpleBattery: device 7 () consumed 0 mW-s at 0s
+- Node1[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
+- Node1[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
+- Node1[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
+- Node1[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
+MB sm 44 tm 43 m ""
+ME
+MB sm 44 tm 43 m ""
+ME
+- Node2[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node2[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node2[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node2[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node2[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
+- Node2[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node2[0]::SimpleBattery: device 6 (SignalConverter) consumed 1000 mW-s at 0s
+- Node2[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
+- Node2[0]::SimpleBattery: device 8 (Memory) consumed 0 mW-s at 0s
+- Node2[0]::SimpleBattery: device 9 (Processor) consumed 0 mW-s at 0s
+- Node2[0]::SimpleBattery: device 9, activity 0: 0 mWs and 0s
+- Node2[0]::SimpleBattery: device 9, activity 1: 0 mWs and 0s
+- Node2[0]::SimpleBattery: device 9, activity 2: 0 mWs and 0s
+- Node2[0]::SimpleBattery: device 10 (physical layer) consumed 0 mW-s at 0s
+- Node2[0]::SimpleBattery: device 10, activity 0: 0 mWs and 0s
+- Node2[0]::SimpleBattery: device 10, activity 1: 0 mWs and 0s
+- Node2[0]::SimpleBattery: device 10, activity 2: 0 mWs and 0s
+- Node2[0]::SimpleBattery: device 10, activity 3: 0 mWs and 0s
+- Node2[0]::SimpleBattery: device 10, activity 4: 0 mWs and 0s
+- Node2[0]::SimpleBattery: device 10, activity 5: 0 mWs and 0s
+- Node2[0]::SimpleBattery: device 10, activity 6: 0 mWs and 0s
+- Node2[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
+MB sm 59 tm 58 m ""
+ME
+MB sm 59 tm 58 m ""
+ME
+- Node3[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node3[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node3[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node3[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node3[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
+- Node3[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node3[0]::SimpleBattery: device 6 (SignalConverter) consumed 1000 mW-s at 0s
+- Node3[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
+- Node3[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
+- Node3[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node3[0]::SimpleBattery: device 10 (SignalConverter) consumed 1000 mW-s at 0s
+- Node3[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
+- Node3[0]::SimpleBattery: device 12 (Memory) consumed 0 mW-s at 0s
+- Node3[0]::SimpleBattery: device 13 (Processor) consumed 0 mW-s at 0s
+- Node3[0]::SimpleBattery: device 13, activity 0: 0 mWs and 0s
+- Node3[0]::SimpleBattery: device 13, activity 1: 0 mWs and 0s
+- Node3[0]::SimpleBattery: device 13, activity 2: 0 mWs and 0s
+- Node3[0]::SimpleBattery: device 14 (physical layer) consumed 0 mW-s at 0s
+- Node3[0]::SimpleBattery: device 14, activity 0: 0 mWs and 0s
+- Node3[0]::SimpleBattery: device 14, activity 1: 0 mWs and 0s
+- Node3[0]::SimpleBattery: device 14, activity 2: 0 mWs and 0s
+- Node3[0]::SimpleBattery: device 14, activity 3: 0 mWs and 0s
+- Node3[0]::SimpleBattery: device 14, activity 4: 0 mWs and 0s
+- Node3[0]::SimpleBattery: device 14, activity 5: 0 mWs and 0s
+- Node3[0]::SimpleBattery: device 14, activity 6: 0 mWs and 0s
+- Node3[0]::SimpleBattery: device 15 () consumed 0 mW-s at 0s
+MB sm 79 tm 78 m ""
+ME
+MB sm 79 tm 78 m ""
+ME
+- Node4[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node4[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node4[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node4[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node4[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
+- Node4[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
+- Node4[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
+- Node4[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
+- Node4[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
+- Node4[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
+- Node4[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
+- Node4[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
+- Node4[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
+- Node4[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
+- Node4[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
+- Node4[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
+- Node4[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
+- Node4[0]::SimpleBattery: device 7 () consumed 0 mW-s at 0s
+- Node4[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
+- Node4[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
+- Node4[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
+- Node4[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
+MB sm 104 tm 103 m ""
+ME
+MB sm 104 tm 103 m ""
+ME
+- Node5[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node5[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 6 (SignalConverter) consumed 1000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
+- Node5[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 10 (SignalConverter) consumed 1000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
+- Node5[0]::SimpleBattery: device 12 (SensingUnit) consumed 2000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 13 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 14 (SignalConverter) consumed 1000 mW-s at 0s
+- Node5[0]::SimpleBattery: device 15 (Transducer) consumed 0 mW-s at 0s
+- Node5[0]::SimpleBattery: device 16 (Memory) consumed 0 mW-s at 0s
+- Node5[0]::SimpleBattery: device 17 (Processor) consumed 0 mW-s at 0s
+- Node5[0]::SimpleBattery: device 17, activity 0: 0 mWs and 0s
+- Node5[0]::SimpleBattery: device 17, activity 1: 0 mWs and 0s
+- Node5[0]::SimpleBattery: device 17, activity 2: 0 mWs and 0s
+- Node5[0]::SimpleBattery: device 18 (physical layer) consumed 0 mW-s at 0s
+- Node5[0]::SimpleBattery: device 18, activity 0: 0 mWs and 0s
+- Node5[0]::SimpleBattery: device 18, activity 1: 0 mWs and 0s
+- Node5[0]::SimpleBattery: device 18, activity 2: 0 mWs and 0s
+- Node5[0]::SimpleBattery: device 18, activity 3: 0 mWs and 0s
+- Node5[0]::SimpleBattery: device 18, activity 4: 0 mWs and 0s
+- Node5[0]::SimpleBattery: device 18, activity 5: 0 mWs and 0s
+- Node5[0]::SimpleBattery: device 18, activity 6: 0 mWs and 0s
+- Node5[0]::SimpleBattery: device 19 () consumed 0 mW-s at 0s
+MB sm 119 tm 118 m ""
+ME
+MB sm 119 tm 118 m ""
+ME
+- Node6[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node6[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node6[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node6[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node6[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
+- Node6[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
+- Node6[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
+- Node6[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
+- Node6[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
+- Node6[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
+- Node6[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
+- Node6[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
+- Node6[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
+- Node6[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
+- Node6[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
+- Node6[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
+- Node6[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
+- Node6[0]::SimpleBattery: device 7 () consumed 0 mW-s at 0s
+- Node6[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
+- Node6[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
+- Node6[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
+- Node6[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
+MB sm 149 tm 148 m ""
+ME
+MB sm 149 tm 148 m ""
+ME
+- Node7[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node7[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node7[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node7[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node7[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
+- Node7[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node7[0]::SimpleBattery: device 6 (SignalConverter) consumed 1000 mW-s at 0s
+- Node7[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
+- Node7[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
+- Node7[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node7[0]::SimpleBattery: device 10 (SignalConverter) consumed 1000 mW-s at 0s
+- Node7[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
+- Node7[0]::SimpleBattery: device 12 (Memory) consumed 0 mW-s at 0s
+- Node7[0]::SimpleBattery: device 13 (Processor) consumed 0 mW-s at 0s
+- Node7[0]::SimpleBattery: device 13, activity 0: 0 mWs and 0s
+- Node7[0]::SimpleBattery: device 13, activity 1: 0 mWs and 0s
+- Node7[0]::SimpleBattery: device 13, activity 2: 0 mWs and 0s
+- Node7[0]::SimpleBattery: device 14 (physical layer) consumed 0 mW-s at 0s
+- Node7[0]::SimpleBattery: device 14, activity 0: 0 mWs and 0s
+- Node7[0]::SimpleBattery: device 14, activity 1: 0 mWs and 0s
+- Node7[0]::SimpleBattery: device 14, activity 2: 0 mWs and 0s
+- Node7[0]::SimpleBattery: device 14, activity 3: 0 mWs and 0s
+- Node7[0]::SimpleBattery: device 14, activity 4: 0 mWs and 0s
+- Node7[0]::SimpleBattery: device 14, activity 5: 0 mWs and 0s
+- Node7[0]::SimpleBattery: device 14, activity 6: 0 mWs and 0s
+- Node7[0]::SimpleBattery: device 15 () consumed 0 mW-s at 0s
+MB sm 164 tm 163 m ""
+ME
+MB sm 164 tm 163 m ""
+ME
+- Node8[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node8[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node8[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node8[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node8[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
+- Node8[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
+- Node8[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
+- Node8[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
+- Node8[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
+- Node8[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
+- Node8[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
+- Node8[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
+- Node8[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
+- Node8[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
+- Node8[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
+- Node8[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
+- Node8[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
+- Node8[0]::SimpleBattery: device 7 () consumed 0 mW-s at 0s
+- Node8[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
+- Node8[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
+- Node8[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
+- Node8[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
+MB sm 189 tm 188 m ""
+ME
+MB sm 189 tm 188 m ""
+ME
+- Node9[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node9[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node9[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node9[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node9[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
+- Node9[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node9[0]::SimpleBattery: device 6 (SignalConverter) consumed 1000 mW-s at 0s
+- Node9[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
+- Node9[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
+- Node9[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node9[0]::SimpleBattery: device 10 (SignalConverter) consumed 1000 mW-s at 0s
+- Node9[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
+- Node9[0]::SimpleBattery: device 12 (Memory) consumed 0 mW-s at 0s
+- Node9[0]::SimpleBattery: device 13 (Processor) consumed 0 mW-s at 0s
+- Node9[0]::SimpleBattery: device 13, activity 0: 0 mWs and 0s
+- Node9[0]::SimpleBattery: device 13, activity 1: 0 mWs and 0s
+- Node9[0]::SimpleBattery: device 13, activity 2: 0 mWs and 0s
+- Node9[0]::SimpleBattery: device 14 (physical layer) consumed 0 mW-s at 0s
+- Node9[0]::SimpleBattery: device 14, activity 0: 0 mWs and 0s
+- Node9[0]::SimpleBattery: device 14, activity 1: 0 mWs and 0s
+- Node9[0]::SimpleBattery: device 14, activity 2: 0 mWs and 0s
+- Node9[0]::SimpleBattery: device 14, activity 3: 0 mWs and 0s
+- Node9[0]::SimpleBattery: device 14, activity 4: 0 mWs and 0s
+- Node9[0]::SimpleBattery: device 14, activity 5: 0 mWs and 0s
+- Node9[0]::SimpleBattery: device 14, activity 6: 0 mWs and 0s
+- Node9[0]::SimpleBattery: device 15 () consumed 0 mW-s at 0s
+MB sm 204 tm 203 m ""
+ME
+MB sm 204 tm 203 m ""
+ME
+- Node10[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node10[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node10[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node10[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node10[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
+- Node10[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
+- Node10[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
+- Node10[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
+- Node10[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
+- Node10[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
+- Node10[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
+- Node10[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
+- Node10[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
+- Node10[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
+- Node10[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
+- Node10[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
+- Node10[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
+- Node10[0]::SimpleBattery: device 7 () consumed 0 mW-s at 0s
+- Node10[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
+- Node10[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
+- Node10[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
+- Node10[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
+MB sm 229 tm 228 m ""
+ME
+MB sm 229 tm 228 m ""
+ME
+- Node11[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 2 (SignalConverter) consumed 1000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node11[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 6 (SignalConverter) consumed 1000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
+- Node11[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 10 (SignalConverter) consumed 1000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
+- Node11[0]::SimpleBattery: device 12 (SensingUnit) consumed 2000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 13 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 14 (SignalConverter) consumed 1000 mW-s at 0s
+- Node11[0]::SimpleBattery: device 15 (Transducer) consumed 0 mW-s at 0s
+- Node11[0]::SimpleBattery: device 16 (Memory) consumed 0 mW-s at 0s
+- Node11[0]::SimpleBattery: device 17 (Processor) consumed 0 mW-s at 0s
+- Node11[0]::SimpleBattery: device 17, activity 0: 0 mWs and 0s
+- Node11[0]::SimpleBattery: device 17, activity 1: 0 mWs and 0s
+- Node11[0]::SimpleBattery: device 17, activity 2: 0 mWs and 0s
+- Node11[0]::SimpleBattery: device 18 (physical layer) consumed 0 mW-s at 0s
+- Node11[0]::SimpleBattery: device 18, activity 0: 0 mWs and 0s
+- Node11[0]::SimpleBattery: device 18, activity 1: 0 mWs and 0s
+- Node11[0]::SimpleBattery: device 18, activity 2: 0 mWs and 0s
+- Node11[0]::SimpleBattery: device 18, activity 3: 0 mWs and 0s
+- Node11[0]::SimpleBattery: device 18, activity 4: 0 mWs and 0s
+- Node11[0]::SimpleBattery: device 18, activity 5: 0 mWs and 0s
+- Node11[0]::SimpleBattery: device 18, activity 6: 0 mWs and 0s
+- Node11[0]::SimpleBattery: device 19 () consumed 0 mW-s at 0s
+MB sm 244 tm 243 m ""
+ME
+MB sm 244 tm 243 m ""
+ME
+- Node12[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node12[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node12[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
+- Node12[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node12[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
+- Node12[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
+- Node12[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
+- Node12[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
+- Node12[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
+- Node12[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
+- Node12[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
+- Node12[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
+- Node12[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
+- Node12[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
+- Node12[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
+- Node12[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
+- Node12[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
+- Node12[0]::SimpleBattery: device 7 () consumed 0 mW-s at 0s
+- Node12[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
+- Node12[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
+- Node12[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
+- Node12[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
+MB sm 274 tm 273 m ""
+ME
+MB sm 274 tm 273 m ""
+ME
+- Node13[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
+- Node13[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node13[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
+- Node13[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
+- Node13[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
+- Node13[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node13[0]::SimpleBattery: device 6 (SignalConverter) consumed 0 mW-s at 0s
+- Node13[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
+- Node13[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
+- Node13[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
+- Node13[0]::SimpleBattery: device 10 (SignalConverter) consumed 0 mW-s at 0s
+- Node13[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
+- Node13[0]::SimpleBattery: device 12 (Memory) consumed 0 mW-s at 0s
+- Node13[0]::SimpleBattery: device 13 (Processor) consumed 0 mW-s at 0s
+- Node13[0]::SimpleBattery: device 13, activity 0: 0 mWs and 0s
+- Node13[0]::SimpleBattery: device 13, activity 1: 0 mWs and 0s
+- Node13[0]::SimpleBattery: device 13, activity 2: 0 mWs and 0s
+- Node13[0]::SimpleBattery: device 14 (physical layer) consumed 0 mW-s at 0s
+- Node13[0]::SimpleBattery: device 14, activity 0: 0 mWs and 0s
+- Node13[0]::SimpleBattery: device 14, activity 1: 0 mWs and 0s
+- Node13[0]::SimpleBattery: device 14, activity 2: 0 mWs and 0s
+- Node13[0]::SimpleBattery: device 14, activity 3: 0 mWs and 0s
+- Node13[0]::SimpleBattery: device 14, activity 4: 0 mWs and 0s
+- Node13[0]::SimpleBattery: device 14, activity 5: 0 mWs and 0s
+- Node13[0]::SimpleBattery: device 14, activity 6: 0 mWs and 0s
+- Node13[0]::SimpleBattery: device 15 () consumed 0 mW-s at 0s
+MB sm 289 tm 288 m ""
+ME
+MB sm 289 tm 288 m ""
+ME

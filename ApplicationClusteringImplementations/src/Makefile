@@ -203,7 +203,6 @@ $O/CustomDiceApplication.o: CustomDiceApplication.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/typedefs.h \
 	CustomDiceApplication.h \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
-	$(MIXIM_PROJ)/src/base/messages/ApplPkt_m.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
 	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
 	$(MIXIM_PROJ)/src/base/messages/WakeUpPacket_m.h \
@@ -333,13 +332,17 @@ $O/CustomWiseRoute.o: CustomWiseRoute.cc \
 	$(WAKEUPRECV_PROJ)/WakeupPhyLayerBattery.h
 $O/NoApplicationClusteringAppl.o: NoApplicationClusteringAppl.cc \
 	NoApplicationClusteringAppl.h \
+	$(MIXIM_PROJ)/src/base/messages/ApplPkt_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
 	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
 	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/BatteryAccess.h \
 	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/Memory/Memory.h \
 	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h \
