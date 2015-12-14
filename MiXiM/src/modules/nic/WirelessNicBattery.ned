@@ -22,7 +22,8 @@ module WirelessNicBattery extends WirelessNic
 {
     parameters:
         phyType = default("org.mixim.modules.phy.PhyLayerBattery");
-
+		double wakeupCurrent @unit(mA);
+		double setupWakeupCurrent @unit(mA);
         double sleepCurrent @unit(mA);
         double rxCurrent @unit(mA);
         double decodingCurrentDelta @unit(mA);

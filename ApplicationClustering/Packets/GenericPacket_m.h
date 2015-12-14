@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgc 4.5 from Packets/GenericPacket.msg.
+// Generated file, do not edit! Created by opp_msgc 4.5 from ../../ApplicationClustering/Packets/GenericPacket.msg.
 //
 
 #ifndef _GENERICPACKET_M_H_
@@ -16,7 +16,7 @@
 
 
 /**
- * Class generated from <tt>Packets/GenericPacket.msg</tt> by opp_msgc.
+ * Class generated from <tt>../../ApplicationClustering/Packets/GenericPacket.msg</tt> by opp_msgc.
  * <pre>
  * packet GenericPacket {
  * 

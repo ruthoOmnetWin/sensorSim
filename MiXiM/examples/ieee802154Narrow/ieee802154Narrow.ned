@@ -90,7 +90,7 @@ network ieee802154Narrow extends BaseNetwork
         node[numHosts]: PhyMacHost {
             parameters:
                 numHosts = numHosts;
-                @display("b=42,42,rect,yellow;i=device/wifilaptop");
+                @display("p=147,100;b=42,42,rect,yellow;i=device/wifilaptop");
 
         }
     connections allowunconnected:

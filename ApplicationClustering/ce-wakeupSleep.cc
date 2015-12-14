@@ -52,6 +52,7 @@ void MYCLASS wakeupSleepUpdateTimer(void)
 
 void MYCLASS wakeupSleepEnterSleep(void)
 {
+    EV << "----------> Entering Sleep Mode" << endl;
     if (sleepTimer->isScheduled())
     {
         myBaseModule->cancelEvent(sleepTimer);
@@ -67,12 +68,13 @@ void MYCLASS wakeupSleepEnterSleep(void)
     );
     */
     //TODO
-    //myPhyLayerBattery->setRadioState(WakeupMiximRadio::SLEEP);
+    myPhyLayerBattery->setRadioState(WakeupMiximRadio::SLEEP);
 
 }
 
 void MYCLASS wakeupSleepLeaveSleep(void)
 {
+    EV << "----------> Leaving Sleep Mode" << endl;
     if (sleepTimer->isScheduled())
     {
         myBaseModule->cancelEvent(sleepTimer);
@@ -82,10 +84,12 @@ void MYCLASS wakeupSleepLeaveSleep(void)
 
 
     //myPhyLayerBattery->setRadioState(0);
-    myPhyLayerBattery->setRadioState(WakeupMiximRadio::RX);
-    myBaseHost->getDisplayString().setTagArg("b", 3, "yellow");
-    isInSleepMode = true;
-    //wakeupSleepUpdateTimer();
-
+    int radioState = myPhyLayerBattery->getRadioState();
+    if (radioState == WakeupMiximRadio::SLEEP) {
+        myPhyLayerBattery->setRadioState(WakeupMiximRadio::RX);
+        myBaseHost->getDisplayString().setTagArg("b", 3, "yellow");
+        isInSleepMode = true;
+        wakeupSleepUpdateTimer();
+    }
 }
 

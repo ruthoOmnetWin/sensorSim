@@ -1,93 +1,710 @@
-                                                                
+file 32680 1450107436                                           
 version 2
-run General-0-20151208-16:28:47-26722
+run General-0-20151214-16:37:13-32726
 attr configname General
-attr datetime 20151208-16:28:47
+attr datetime 20151214-16:37:13
 attr experiment General
-attr inifile omnetpp.ini
+attr inifile szenario1.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
-attr network ApplicationClusteringImplementations
-attr processid 26722
+attr network Szenario1
+attr processid 32726
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-vector 9  ApplicationClusteringImplementations.Node9.Processor  "power mode"  ETV
-vector 10  ApplicationClusteringImplementations.Node9.Processor  "Sensor Modules Status"  ETV
-vector 11  ApplicationClusteringImplementations.Node9.Processor  Voltage  ETV
-vector 12  ApplicationClusteringImplementations.Node9.Processor  residualRelative  ETV
-vector 13  ApplicationClusteringImplementations.Node9.Processor  residualAbs  ETV
-vector 23  ApplicationClusteringImplementations.Node10.Processor  "power mode"  ETV
-vector 24  ApplicationClusteringImplementations.Node10.Processor  "Sensor Modules Status"  ETV
-vector 25  ApplicationClusteringImplementations.Node10.Processor  Voltage  ETV
-vector 26  ApplicationClusteringImplementations.Node10.Processor  residualRelative  ETV
-vector 27  ApplicationClusteringImplementations.Node10.Processor  residualAbs  ETV
-vector 37  ApplicationClusteringImplementations.Node11.Processor  "power mode"  ETV
-vector 38  ApplicationClusteringImplementations.Node11.Processor  "Sensor Modules Status"  ETV
-vector 39  ApplicationClusteringImplementations.Node11.Processor  Voltage  ETV
-vector 40  ApplicationClusteringImplementations.Node11.Processor  residualRelative  ETV
-vector 41  ApplicationClusteringImplementations.Node11.Processor  residualAbs  ETV
-vector 51  ApplicationClusteringImplementations.Node12.Processor  "power mode"  ETV
-vector 52  ApplicationClusteringImplementations.Node12.Processor  "Sensor Modules Status"  ETV
-vector 53  ApplicationClusteringImplementations.Node12.Processor  Voltage  ETV
-vector 54  ApplicationClusteringImplementations.Node12.Processor  residualRelative  ETV
-vector 55  ApplicationClusteringImplementations.Node12.Processor  residualAbs  ETV
-vector 65  ApplicationClusteringImplementations.Node13.Processor  "power mode"  ETV
-vector 66  ApplicationClusteringImplementations.Node13.Processor  "Sensor Modules Status"  ETV
-vector 67  ApplicationClusteringImplementations.Node13.Processor  Voltage  ETV
-vector 68  ApplicationClusteringImplementations.Node13.Processor  residualRelative  ETV
-vector 69  ApplicationClusteringImplementations.Node13.Processor  residualAbs  ETV
-vector 70  ApplicationClusteringImplementations.Node9.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 71  ApplicationClusteringImplementations.Node9.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 72  ApplicationClusteringImplementations.Node9.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 73  ApplicationClusteringImplementations.Node9.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 74  ApplicationClusteringImplementations.Node9.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 75  ApplicationClusteringImplementations.Node9.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 76  ApplicationClusteringImplementations.Node9.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 77  ApplicationClusteringImplementations.Node9.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 78  ApplicationClusteringImplementations.Node9.Memory  "Energy Consumptions"  ETV
-vector 79  ApplicationClusteringImplementations.Node9.Memory  "Current use over time"  ETV
-vector 87  ApplicationClusteringImplementations.Node10.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 88  ApplicationClusteringImplementations.Node10.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 89  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 90  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 91  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 92  ApplicationClusteringImplementations.Node10.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 93  ApplicationClusteringImplementations.Node10.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 94  ApplicationClusteringImplementations.Node10.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 95  ApplicationClusteringImplementations.Node10.Memory  "Energy Consumptions"  ETV
-vector 96  ApplicationClusteringImplementations.Node10.Memory  "Current use over time"  ETV
-vector 104  ApplicationClusteringImplementations.Node11.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 105  ApplicationClusteringImplementations.Node11.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 106  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 107  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 108  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 109  ApplicationClusteringImplementations.Node11.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 110  ApplicationClusteringImplementations.Node11.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 111  ApplicationClusteringImplementations.Node11.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 112  ApplicationClusteringImplementations.Node11.Memory  "Energy Consumptions"  ETV
-vector 113  ApplicationClusteringImplementations.Node11.Memory  "Current use over time"  ETV
-vector 121  ApplicationClusteringImplementations.Node12.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 122  ApplicationClusteringImplementations.Node12.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 123  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 124  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 125  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 126  ApplicationClusteringImplementations.Node12.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 127  ApplicationClusteringImplementations.Node12.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 128  ApplicationClusteringImplementations.Node12.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 129  ApplicationClusteringImplementations.Node12.Memory  "Energy Consumptions"  ETV
-vector 130  ApplicationClusteringImplementations.Node12.Memory  "Current use over time"  ETV
-vector 138  ApplicationClusteringImplementations.Node13.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 139  ApplicationClusteringImplementations.Node13.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 140  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 141  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 142  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 143  ApplicationClusteringImplementations.Node13.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 144  ApplicationClusteringImplementations.Node13.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 145  ApplicationClusteringImplementations.Node13.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 146  ApplicationClusteringImplementations.Node13.Memory  "Energy Consumptions"  ETV
-vector 147  ApplicationClusteringImplementations.Node13.Memory  "Current use over time"  ETV
+vector 7  Szenario1.Node0.Processor  "power mode"  ETV
+vector 8  Szenario1.Node0.Processor  "Sensor Modules Status"  ETV
+vector 9  Szenario1.Node0.Processor  Voltage  ETV
+vector 10  Szenario1.Node0.Processor  residualRelative  ETV
+vector 11  Szenario1.Node0.Processor  residualAbs  ETV
+vector 19  Szenario1.Node1.Processor  "power mode"  ETV
+vector 20  Szenario1.Node1.Processor  "Sensor Modules Status"  ETV
+vector 21  Szenario1.Node1.Processor  Voltage  ETV
+vector 22  Szenario1.Node1.Processor  residualRelative  ETV
+vector 23  Szenario1.Node1.Processor  residualAbs  ETV
+vector 31  Szenario1.Node2.Processor  "power mode"  ETV
+vector 32  Szenario1.Node2.Processor  "Sensor Modules Status"  ETV
+vector 33  Szenario1.Node2.Processor  Voltage  ETV
+vector 34  Szenario1.Node2.Processor  residualRelative  ETV
+vector 35  Szenario1.Node2.Processor  residualAbs  ETV
+vector 43  Szenario1.Node3.Processor  "power mode"  ETV
+vector 44  Szenario1.Node3.Processor  "Sensor Modules Status"  ETV
+vector 45  Szenario1.Node3.Processor  Voltage  ETV
+vector 46  Szenario1.Node3.Processor  residualRelative  ETV
+vector 47  Szenario1.Node3.Processor  residualAbs  ETV
+vector 55  Szenario1.Node4.Processor  "power mode"  ETV
+vector 56  Szenario1.Node4.Processor  "Sensor Modules Status"  ETV
+vector 57  Szenario1.Node4.Processor  Voltage  ETV
+vector 58  Szenario1.Node4.Processor  residualRelative  ETV
+vector 59  Szenario1.Node4.Processor  residualAbs  ETV
+vector 67  Szenario1.Node5.Processor  "power mode"  ETV
+vector 68  Szenario1.Node5.Processor  "Sensor Modules Status"  ETV
+vector 69  Szenario1.Node5.Processor  Voltage  ETV
+vector 70  Szenario1.Node5.Processor  residualRelative  ETV
+vector 71  Szenario1.Node5.Processor  residualAbs  ETV
+vector 79  Szenario1.Node6.Processor  "power mode"  ETV
+vector 80  Szenario1.Node6.Processor  "Sensor Modules Status"  ETV
+vector 81  Szenario1.Node6.Processor  Voltage  ETV
+vector 82  Szenario1.Node6.Processor  residualRelative  ETV
+vector 83  Szenario1.Node6.Processor  residualAbs  ETV
+vector 91  Szenario1.Node7.Processor  "power mode"  ETV
+vector 92  Szenario1.Node7.Processor  "Sensor Modules Status"  ETV
+vector 93  Szenario1.Node7.Processor  Voltage  ETV
+vector 94  Szenario1.Node7.Processor  residualRelative  ETV
+vector 95  Szenario1.Node7.Processor  residualAbs  ETV
+vector 103  Szenario1.Node8.Processor  "power mode"  ETV
+vector 104  Szenario1.Node8.Processor  "Sensor Modules Status"  ETV
+vector 105  Szenario1.Node8.Processor  Voltage  ETV
+vector 106  Szenario1.Node8.Processor  residualRelative  ETV
+vector 107  Szenario1.Node8.Processor  residualAbs  ETV
+vector 115  Szenario1.Node9.Processor  "power mode"  ETV
+vector 116  Szenario1.Node9.Processor  "Sensor Modules Status"  ETV
+vector 117  Szenario1.Node9.Processor  Voltage  ETV
+vector 118  Szenario1.Node9.Processor  residualRelative  ETV
+vector 119  Szenario1.Node9.Processor  residualAbs  ETV
+vector 127  Szenario1.Node10.Processor  "power mode"  ETV
+vector 128  Szenario1.Node10.Processor  "Sensor Modules Status"  ETV
+vector 129  Szenario1.Node10.Processor  Voltage  ETV
+vector 130  Szenario1.Node10.Processor  residualRelative  ETV
+vector 131  Szenario1.Node10.Processor  residualAbs  ETV
+vector 139  Szenario1.Node11.Processor  "power mode"  ETV
+vector 140  Szenario1.Node11.Processor  "Sensor Modules Status"  ETV
+vector 141  Szenario1.Node11.Processor  Voltage  ETV
+vector 142  Szenario1.Node11.Processor  residualRelative  ETV
+vector 143  Szenario1.Node11.Processor  residualAbs  ETV
+vector 151  Szenario1.Node12.Processor  "power mode"  ETV
+vector 152  Szenario1.Node12.Processor  "Sensor Modules Status"  ETV
+vector 153  Szenario1.Node12.Processor  Voltage  ETV
+vector 154  Szenario1.Node12.Processor  residualRelative  ETV
+vector 155  Szenario1.Node12.Processor  residualAbs  ETV
+vector 163  Szenario1.Node13.Processor  "power mode"  ETV
+vector 164  Szenario1.Node13.Processor  "Sensor Modules Status"  ETV
+vector 165  Szenario1.Node13.Processor  Voltage  ETV
+vector 166  Szenario1.Node13.Processor  residualRelative  ETV
+vector 167  Szenario1.Node13.Processor  residualAbs  ETV
+vector 168  Szenario1.Node0.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 169  Szenario1.Node0.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 170  Szenario1.Node0.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 171  Szenario1.Node0.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 172  Szenario1.Node0.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 173  Szenario1.Node0.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 174  Szenario1.Node0.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 175  Szenario1.Node0.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 176  Szenario1.Node0.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 177  Szenario1.Node0.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 178  Szenario1.Node0.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 179  Szenario1.Node0.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 180  Szenario1.Node0.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 181  Szenario1.Node0.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 182  Szenario1.Node0.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 183  Szenario1.Node0.PressureSensor.Transducer  "Current use over time"  ETV
+vector 184  Szenario1.Node0.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 185  Szenario1.Node0.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 186  Szenario1.Node0.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 187  Szenario1.Node0.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 188  Szenario1.Node0.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 189  Szenario1.Node0.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 190  Szenario1.Node0.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 191  Szenario1.Node0.LightSensor.Transducer  "Current use over time"  ETV
+vector 192  Szenario1.Node0.Memory  "Energy Consumptions"  ETV
+vector 193  Szenario1.Node0.Memory  "Current use over time"  ETV
+vector 201  Szenario1.Node1.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 202  Szenario1.Node1.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 203  Szenario1.Node1.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 204  Szenario1.Node1.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 205  Szenario1.Node1.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 206  Szenario1.Node1.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 207  Szenario1.Node1.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 208  Szenario1.Node1.LightSensor.Transducer  "Current use over time"  ETV
+vector 209  Szenario1.Node1.Memory  "Energy Consumptions"  ETV
+vector 210  Szenario1.Node1.Memory  "Current use over time"  ETV
+vector 218  Szenario1.Node2.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 219  Szenario1.Node2.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 220  Szenario1.Node2.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 221  Szenario1.Node2.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 222  Szenario1.Node2.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 223  Szenario1.Node2.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 224  Szenario1.Node2.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 225  Szenario1.Node2.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 226  Szenario1.Node2.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 227  Szenario1.Node2.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 228  Szenario1.Node2.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 229  Szenario1.Node2.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 230  Szenario1.Node2.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 231  Szenario1.Node2.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 232  Szenario1.Node2.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 233  Szenario1.Node2.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 234  Szenario1.Node2.Memory  "Energy Consumptions"  ETV
+vector 235  Szenario1.Node2.Memory  "Current use over time"  ETV
+vector 243  Szenario1.Node3.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 244  Szenario1.Node3.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 245  Szenario1.Node3.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 246  Szenario1.Node3.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 247  Szenario1.Node3.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 248  Szenario1.Node3.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 249  Szenario1.Node3.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 250  Szenario1.Node3.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 251  Szenario1.Node3.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 252  Szenario1.Node3.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 253  Szenario1.Node3.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 254  Szenario1.Node3.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 255  Szenario1.Node3.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 256  Szenario1.Node3.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 257  Szenario1.Node3.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 258  Szenario1.Node3.PressureSensor.Transducer  "Current use over time"  ETV
+vector 259  Szenario1.Node3.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 260  Szenario1.Node3.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 261  Szenario1.Node3.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 262  Szenario1.Node3.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 263  Szenario1.Node3.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 264  Szenario1.Node3.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 265  Szenario1.Node3.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 266  Szenario1.Node3.LightSensor.Transducer  "Current use over time"  ETV
+vector 267  Szenario1.Node3.Memory  "Energy Consumptions"  ETV
+vector 268  Szenario1.Node3.Memory  "Current use over time"  ETV
+vector 276  Szenario1.Node4.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 277  Szenario1.Node4.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 278  Szenario1.Node4.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 279  Szenario1.Node4.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 280  Szenario1.Node4.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 281  Szenario1.Node4.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 282  Szenario1.Node4.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 283  Szenario1.Node4.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 284  Szenario1.Node4.Memory  "Energy Consumptions"  ETV
+vector 285  Szenario1.Node4.Memory  "Current use over time"  ETV
+vector 293  Szenario1.Node5.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 294  Szenario1.Node5.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 295  Szenario1.Node5.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 296  Szenario1.Node5.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 297  Szenario1.Node5.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 298  Szenario1.Node5.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 299  Szenario1.Node5.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 300  Szenario1.Node5.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 301  Szenario1.Node5.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 302  Szenario1.Node5.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 303  Szenario1.Node5.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 304  Szenario1.Node5.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 305  Szenario1.Node5.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 306  Szenario1.Node5.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 307  Szenario1.Node5.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 308  Szenario1.Node5.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 309  Szenario1.Node5.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 310  Szenario1.Node5.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 311  Szenario1.Node5.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 312  Szenario1.Node5.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 313  Szenario1.Node5.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 314  Szenario1.Node5.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 315  Szenario1.Node5.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 316  Szenario1.Node5.PressureSensor.Transducer  "Current use over time"  ETV
+vector 317  Szenario1.Node5.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 318  Szenario1.Node5.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 319  Szenario1.Node5.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 320  Szenario1.Node5.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 321  Szenario1.Node5.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 322  Szenario1.Node5.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 323  Szenario1.Node5.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 324  Szenario1.Node5.LightSensor.Transducer  "Current use over time"  ETV
+vector 325  Szenario1.Node5.Memory  "Energy Consumptions"  ETV
+vector 326  Szenario1.Node5.Memory  "Current use over time"  ETV
+vector 334  Szenario1.Node6.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 335  Szenario1.Node6.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 336  Szenario1.Node6.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 337  Szenario1.Node6.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 338  Szenario1.Node6.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 339  Szenario1.Node6.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 340  Szenario1.Node6.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 341  Szenario1.Node6.LightSensor.Transducer  "Current use over time"  ETV
+vector 342  Szenario1.Node6.Memory  "Energy Consumptions"  ETV
+vector 343  Szenario1.Node6.Memory  "Current use over time"  ETV
+vector 351  Szenario1.Node7.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 352  Szenario1.Node7.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 353  Szenario1.Node7.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 354  Szenario1.Node7.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 355  Szenario1.Node7.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 356  Szenario1.Node7.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 357  Szenario1.Node7.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 358  Szenario1.Node7.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 359  Szenario1.Node7.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 360  Szenario1.Node7.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 361  Szenario1.Node7.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 362  Szenario1.Node7.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 363  Szenario1.Node7.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 364  Szenario1.Node7.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 365  Szenario1.Node7.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 366  Szenario1.Node7.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 367  Szenario1.Node7.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 368  Szenario1.Node7.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 369  Szenario1.Node7.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 370  Szenario1.Node7.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 371  Szenario1.Node7.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 372  Szenario1.Node7.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 373  Szenario1.Node7.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 374  Szenario1.Node7.PressureSensor.Transducer  "Current use over time"  ETV
+vector 375  Szenario1.Node7.Memory  "Energy Consumptions"  ETV
+vector 376  Szenario1.Node7.Memory  "Current use over time"  ETV
+vector 384  Szenario1.Node8.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 385  Szenario1.Node8.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 386  Szenario1.Node8.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 387  Szenario1.Node8.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 388  Szenario1.Node8.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 389  Szenario1.Node8.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 390  Szenario1.Node8.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 391  Szenario1.Node8.LightSensor.Transducer  "Current use over time"  ETV
+vector 392  Szenario1.Node8.Memory  "Energy Consumptions"  ETV
+vector 393  Szenario1.Node8.Memory  "Current use over time"  ETV
+vector 401  Szenario1.Node9.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 402  Szenario1.Node9.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 403  Szenario1.Node9.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 404  Szenario1.Node9.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 405  Szenario1.Node9.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 406  Szenario1.Node9.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 407  Szenario1.Node9.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 408  Szenario1.Node9.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 409  Szenario1.Node9.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 410  Szenario1.Node9.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 411  Szenario1.Node9.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 412  Szenario1.Node9.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 413  Szenario1.Node9.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 414  Szenario1.Node9.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 415  Szenario1.Node9.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 416  Szenario1.Node9.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 417  Szenario1.Node9.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 418  Szenario1.Node9.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 419  Szenario1.Node9.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 420  Szenario1.Node9.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 421  Szenario1.Node9.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 422  Szenario1.Node9.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 423  Szenario1.Node9.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 424  Szenario1.Node9.LightSensor.Transducer  "Current use over time"  ETV
+vector 425  Szenario1.Node9.Memory  "Energy Consumptions"  ETV
+vector 426  Szenario1.Node9.Memory  "Current use over time"  ETV
+vector 434  Szenario1.Node10.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 435  Szenario1.Node10.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 436  Szenario1.Node10.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 437  Szenario1.Node10.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 438  Szenario1.Node10.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 439  Szenario1.Node10.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 440  Szenario1.Node10.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 441  Szenario1.Node10.LightSensor.Transducer  "Current use over time"  ETV
+vector 442  Szenario1.Node10.Memory  "Energy Consumptions"  ETV
+vector 443  Szenario1.Node10.Memory  "Current use over time"  ETV
+vector 451  Szenario1.Node11.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 452  Szenario1.Node11.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 453  Szenario1.Node11.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 454  Szenario1.Node11.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 455  Szenario1.Node11.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 456  Szenario1.Node11.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 457  Szenario1.Node11.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 458  Szenario1.Node11.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 459  Szenario1.Node11.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 460  Szenario1.Node11.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 461  Szenario1.Node11.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 462  Szenario1.Node11.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 463  Szenario1.Node11.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 464  Szenario1.Node11.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 465  Szenario1.Node11.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 466  Szenario1.Node11.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 467  Szenario1.Node11.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 468  Szenario1.Node11.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 469  Szenario1.Node11.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 470  Szenario1.Node11.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 471  Szenario1.Node11.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 472  Szenario1.Node11.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 473  Szenario1.Node11.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 474  Szenario1.Node11.PressureSensor.Transducer  "Current use over time"  ETV
+vector 475  Szenario1.Node11.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 476  Szenario1.Node11.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 477  Szenario1.Node11.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 478  Szenario1.Node11.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 479  Szenario1.Node11.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 480  Szenario1.Node11.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 481  Szenario1.Node11.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 482  Szenario1.Node11.LightSensor.Transducer  "Current use over time"  ETV
+vector 483  Szenario1.Node11.Memory  "Energy Consumptions"  ETV
+vector 484  Szenario1.Node11.Memory  "Current use over time"  ETV
+vector 492  Szenario1.Node12.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 493  Szenario1.Node12.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 494  Szenario1.Node12.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 495  Szenario1.Node12.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 496  Szenario1.Node12.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 497  Szenario1.Node12.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 498  Szenario1.Node12.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 499  Szenario1.Node12.PressureSensor.Transducer  "Current use over time"  ETV
+vector 500  Szenario1.Node12.Memory  "Energy Consumptions"  ETV
+vector 501  Szenario1.Node12.Memory  "Current use over time"  ETV
+vector 509  Szenario1.Node13.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 510  Szenario1.Node13.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 511  Szenario1.Node13.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 512  Szenario1.Node13.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 513  Szenario1.Node13.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 514  Szenario1.Node13.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 515  Szenario1.Node13.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 516  Szenario1.Node13.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 517  Szenario1.Node13.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 518  Szenario1.Node13.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 519  Szenario1.Node13.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 520  Szenario1.Node13.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 521  Szenario1.Node13.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 522  Szenario1.Node13.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 523  Szenario1.Node13.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 524  Szenario1.Node13.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 525  Szenario1.Node13.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 526  Szenario1.Node13.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 527  Szenario1.Node13.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 528  Szenario1.Node13.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 529  Szenario1.Node13.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 530  Szenario1.Node13.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 531  Szenario1.Node13.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 532  Szenario1.Node13.LightSensor.Transducer  "Current use over time"  ETV
+vector 533  Szenario1.Node13.Memory  "Energy Consumptions"  ETV
+vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
+7	27676 16 0 0 0 0 2 0 1 1 1
+8	27692 8 0 0 0 0 1 0 0 0 0
+9	27700 8 0 0 0 0 1 3 3 3 9
+10	27708 9 0 0 0 0 1 1 1 1 1
+11	27717 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+19	27733 18 0 0 0 0 2 0 1 1 1
+20	27751 9 0 0 0 0 1 0 0 0 0
+21	27760 9 0 0 0 0 1 3 3 3 9
+22	27769 9 0 0 0 0 1 1 1 1 1
+23	27778 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+31	27794 18 0 0 0 0 2 0 1 1 1
+32	27812 9 0 0 0 0 1 0 0 0 0
+33	27821 9 0 0 0 0 1 3 3 3 9
+34	27830 9 0 0 0 0 1 1 1 1 1
+35	27839 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+43	27855 18 0 0 0 0 2 0 1 1 1
+44	27873 9 0 0 0 0 1 0 0 0 0
+45	27882 9 0 0 0 0 1 3 3 3 9
+46	27891 9 0 0 0 0 1 1 1 1 1
+47	27900 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+55	27916 18 0 0 0 0 2 0 1 1 1
+56	27934 9 0 0 0 0 1 0 0 0 0
+57	27943 9 0 0 0 0 1 3 3 3 9
+58	27952 9 0 0 0 0 1 1 1 1 1
+59	27961 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+67	27977 18 0 0 0 0 2 0 1 1 1
+68	27995 9 0 0 0 0 1 0 0 0 0
+69	28004 9 0 0 0 0 1 3 3 3 9
+70	28013 9 0 0 0 0 1 1 1 1 1
+71	28022 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+79	28038 18 0 0 0 0 2 0 1 1 1
+80	28056 9 0 0 0 0 1 0 0 0 0
+81	28065 9 0 0 0 0 1 3 3 3 9
+82	28074 9 0 0 0 0 1 1 1 1 1
+83	28083 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+91	28099 18 0 0 0 0 2 0 1 1 1
+92	28117 9 0 0 0 0 1 0 0 0 0
+93	28126 9 0 0 0 0 1 3 3 3 9
+94	28135 9 0 0 0 0 1 1 1 1 1
+95	28144 16 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+103	28160 20 0 0 0 0 2 0 1 1 1
+104	28180 10 0 0 0 0 1 0 0 0 0
+105	28190 10 0 0 0 0 1 3 3 3 9
+106	28200 10 0 0 0 0 1 1 1 1 1
+107	28210 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+115	28227 20 0 0 0 0 2 0 1 1 1
+116	28247 10 0 0 0 0 1 0 0 0 0
+117	28257 10 0 0 0 0 1 3 3 3 9
+118	28267 10 0 0 0 0 1 1 1 1 1
+119	28277 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+127	28294 20 0 0 0 0 2 0 1 1 1
+128	28314 10 0 0 0 0 1 0 0 0 0
+129	28324 10 0 0 0 0 1 3 3 3 9
+130	28334 10 0 0 0 0 1 1 1 1 1
+131	28344 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+139	28361 20 0 0 0 0 2 0 1 1 1
+140	28381 10 0 0 0 0 1 0 0 0 0
+141	28391 10 0 0 0 0 1 3 3 3 9
+142	28401 10 0 0 0 0 1 1 1 1 1
+143	28411 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+151	28428 20 0 0 0 0 2 0 1 1 1
+152	28448 10 0 0 0 0 1 0 0 0 0
+153	28458 10 0 0 0 0 1 3 3 3 9
+154	28468 10 0 0 0 0 1 1 1 1 1
+155	28478 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+163	28495 20 0 0 0 0 2 0 1 1 1
+164	28515 10 0 0 0 0 1 0 0 0 0
+165	28525 10 0 0 0 0 1 3 3 3 9
+166	28535 10 0 0 0 0 1 1 1 1 1
+167	28545 17 0 0 0 0 1 10800000 10800000 10800000 1.1664e+14
+168	28562 39 0 0 0 0 3 1000 1000 3000 3000000
+169	28601 11 0 0 0 0 1 30 30 30 900
+170	28612 13 0 0 0 0 1 1000 1000 1000 1000000
+171	28625 11 0 0 0 0 1 30 30 30 900
+172	28636 13 0 0 0 0 1 1000 1000 1000 1000000
+173	28649 11 0 0 0 0 1 30 30 30 900
+174	28660 13 0 0 0 0 1 1000 1000 1000 1000000
+175	28673 11 0 0 0 0 1 30 30 30 900
+176	28684 39 0 0 0 0 3 1000 1000 3000 3000000
+177	28723 11 0 0 0 0 1 30 30 30 900
+178	28734 13 0 0 0 0 1 1000 1000 1000 1000000
+179	28747 11 0 0 0 0 1 30 30 30 900
+180	28758 13 0 0 0 0 1 1000 1000 1000 1000000
+181	28771 11 0 0 0 0 1 30 30 30 900
+182	28782 13 0 0 0 0 1 1000 1000 1000 1000000
+183	28795 11 0 0 0 0 1 30 30 30 900
+184	28806 39 0 0 0 0 3 1000 1000 3000 3000000
+185	28845 11 0 0 0 0 1 30 30 30 900
+186	28856 13 0 0 0 0 1 1000 1000 1000 1000000
+187	28869 11 0 0 0 0 1 30 30 30 900
+188	28880 13 0 0 0 0 1 1000 1000 1000 1000000
+189	28893 11 0 0 0 0 1 30 30 30 900
+190	28904 13 0 0 0 0 1 1000 1000 1000 1000000
+191	28917 11 0 0 0 0 1 30 30 30 900
+192	28928 13 0 0 0 0 1 1000 1000 1000 1000000
+193	28941 11 0 0 0 0 1 30 30 30 900
+201	28952 39 0 0 0 0 3 1000 1000 3000 3000000
+202	28991 11 0 0 0 0 1 30 30 30 900
+203	29002 13 0 0 0 0 1 1000 1000 1000 1000000
+204	29015 11 0 0 0 0 1 30 30 30 900
+205	29026 13 0 0 0 0 1 1000 1000 1000 1000000
+206	29039 11 0 0 0 0 1 30 30 30 900
+207	29050 13 0 0 0 0 1 1000 1000 1000 1000000
+208	29063 11 0 0 0 0 1 30 30 30 900
+209	29074 13 0 0 0 0 1 1000 1000 1000 1000000
+210	29087 11 0 0 0 0 1 30 30 30 900
+218	29098 39 0 0 0 0 3 1000 1000 3000 3000000
+219	29137 11 0 0 0 0 1 30 30 30 900
+220	29148 13 0 0 0 0 1 1000 1000 1000 1000000
+221	29161 11 0 0 0 0 1 30 30 30 900
+222	29172 13 0 0 0 0 1 1000 1000 1000 1000000
+223	29185 11 0 0 0 0 1 30 30 30 900
+224	29196 13 0 0 0 0 1 1000 1000 1000 1000000
+225	29209 11 0 0 0 0 1 30 30 30 900
+226	29220 39 0 0 0 0 3 1000 1000 3000 3000000
+227	29259 11 0 0 0 0 1 30 30 30 900
+228	29270 13 0 0 0 0 1 1000 1000 1000 1000000
+229	29283 11 0 0 0 0 1 30 30 30 900
+230	29294 13 0 0 0 0 1 1000 1000 1000 1000000
+231	29307 11 0 0 0 0 1 30 30 30 900
+232	29318 13 0 0 0 0 1 1000 1000 1000 1000000
+233	29331 11 0 0 0 0 1 30 30 30 900
+234	29342 13 0 0 0 0 1 1000 1000 1000 1000000
+235	29355 11 0 0 0 0 1 30 30 30 900
+243	29366 39 0 0 0 0 3 1000 1000 3000 3000000
+244	29405 11 0 0 0 0 1 30 30 30 900
+245	29416 13 0 0 0 0 1 1000 1000 1000 1000000
+246	29429 11 0 0 0 0 1 30 30 30 900
+247	29440 13 0 0 0 0 1 1000 1000 1000 1000000
+248	29453 11 0 0 0 0 1 30 30 30 900
+249	29464 13 0 0 0 0 1 1000 1000 1000 1000000
+250	29477 11 0 0 0 0 1 30 30 30 900
+251	29488 39 0 0 0 0 3 1000 1000 3000 3000000
+252	29527 11 0 0 0 0 1 30 30 30 900
+253	29538 13 0 0 0 0 1 1000 1000 1000 1000000
+254	29551 11 0 0 0 0 1 30 30 30 900
+255	29562 13 0 0 0 0 1 1000 1000 1000 1000000
+256	29575 11 0 0 0 0 1 30 30 30 900
+257	29586 13 0 0 0 0 1 1000 1000 1000 1000000
+258	29599 11 0 0 0 0 1 30 30 30 900
+259	29610 39 0 0 0 0 3 1000 1000 3000 3000000
+260	29649 11 0 0 0 0 1 30 30 30 900
+261	29660 13 0 0 0 0 1 1000 1000 1000 1000000
+262	29673 11 0 0 0 0 1 30 30 30 900
+263	29684 13 0 0 0 0 1 1000 1000 1000 1000000
+264	29697 11 0 0 0 0 1 30 30 30 900
+265	29708 13 0 0 0 0 1 1000 1000 1000 1000000
+266	29721 11 0 0 0 0 1 30 30 30 900
+267	29732 13 0 0 0 0 1 1000 1000 1000 1000000
+268	29745 11 0 0 0 0 1 30 30 30 900
+276	29756 39 0 0 0 0 3 1000 1000 3000 3000000
+277	29795 11 0 0 0 0 1 30 30 30 900
+278	29806 13 0 0 0 0 1 1000 1000 1000 1000000
+279	29819 11 0 0 0 0 1 30 30 30 900
+280	29830 13 0 0 0 0 1 1000 1000 1000 1000000
+281	29843 11 0 0 0 0 1 30 30 30 900
+282	29854 13 0 0 0 0 1 1000 1000 1000 1000000
+283	29867 11 0 0 0 0 1 30 30 30 900
+284	29878 13 0 0 0 0 1 1000 1000 1000 1000000
+285	29891 11 0 0 0 0 1 30 30 30 900
+293	29902 39 0 0 0 0 3 1000 1000 3000 3000000
+294	29941 11 0 0 0 0 1 30 30 30 900
+295	29952 13 0 0 0 0 1 1000 1000 1000 1000000
+296	29965 11 0 0 0 0 1 30 30 30 900
+297	29976 13 0 0 0 0 1 1000 1000 1000 1000000
+298	29989 11 0 0 0 0 1 30 30 30 900
+299	30000 13 0 0 0 0 1 1000 1000 1000 1000000
+300	30013 11 0 0 0 0 1 30 30 30 900
+301	30024 39 0 0 0 0 3 1000 1000 3000 3000000
+302	30063 11 0 0 0 0 1 30 30 30 900
+303	30074 13 0 0 0 0 1 1000 1000 1000 1000000
+304	30087 11 0 0 0 0 1 30 30 30 900
+305	30098 13 0 0 0 0 1 1000 1000 1000 1000000
+306	30111 11 0 0 0 0 1 30 30 30 900
+307	30122 13 0 0 0 0 1 1000 1000 1000 1000000
+308	30135 11 0 0 0 0 1 30 30 30 900
+309	30146 39 0 0 0 0 3 1000 1000 3000 3000000
+310	30185 11 0 0 0 0 1 30 30 30 900
+311	30196 13 0 0 0 0 1 1000 1000 1000 1000000
+312	30209 11 0 0 0 0 1 30 30 30 900
+313	30220 13 0 0 0 0 1 1000 1000 1000 1000000
+314	30233 11 0 0 0 0 1 30 30 30 900
+315	30244 13 0 0 0 0 1 1000 1000 1000 1000000
+316	30257 11 0 0 0 0 1 30 30 30 900
+317	30268 39 0 0 0 0 3 1000 1000 3000 3000000
+318	30307 11 0 0 0 0 1 30 30 30 900
+319	30318 13 0 0 0 0 1 1000 1000 1000 1000000
+320	30331 11 0 0 0 0 1 30 30 30 900
+321	30342 13 0 0 0 0 1 1000 1000 1000 1000000
+322	30355 11 0 0 0 0 1 30 30 30 900
+323	30366 13 0 0 0 0 1 1000 1000 1000 1000000
+324	30379 11 0 0 0 0 1 30 30 30 900
+325	30390 13 0 0 0 0 1 1000 1000 1000 1000000
+326	30403 11 0 0 0 0 1 30 30 30 900
+334	30414 39 0 0 0 0 3 1000 1000 3000 3000000
+335	30453 11 0 0 0 0 1 30 30 30 900
+336	30464 13 0 0 0 0 1 1000 1000 1000 1000000
+337	30477 11 0 0 0 0 1 30 30 30 900
+338	30488 13 0 0 0 0 1 1000 1000 1000 1000000
+339	30501 11 0 0 0 0 1 30 30 30 900
+340	30512 13 0 0 0 0 1 1000 1000 1000 1000000
+341	30525 11 0 0 0 0 1 30 30 30 900
+342	30536 13 0 0 0 0 1 1000 1000 1000 1000000
+343	30549 11 0 0 0 0 1 30 30 30 900
+351	30560 39 0 0 0 0 3 1000 1000 3000 3000000
+352	30599 11 0 0 0 0 1 30 30 30 900
+353	30610 13 0 0 0 0 1 1000 1000 1000 1000000
+354	30623 11 0 0 0 0 1 30 30 30 900
+355	30634 13 0 0 0 0 1 1000 1000 1000 1000000
+356	30647 11 0 0 0 0 1 30 30 30 900
+357	30658 13 0 0 0 0 1 1000 1000 1000 1000000
+358	30671 11 0 0 0 0 1 30 30 30 900
+359	30682 39 0 0 0 0 3 1000 1000 3000 3000000
+360	30721 11 0 0 0 0 1 30 30 30 900
+361	30732 13 0 0 0 0 1 1000 1000 1000 1000000
+362	30745 11 0 0 0 0 1 30 30 30 900
+363	30756 13 0 0 0 0 1 1000 1000 1000 1000000
+364	30769 11 0 0 0 0 1 30 30 30 900
+365	30780 13 0 0 0 0 1 1000 1000 1000 1000000
+366	30793 11 0 0 0 0 1 30 30 30 900
+367	30804 39 0 0 0 0 3 1000 1000 3000 3000000
+368	30843 11 0 0 0 0 1 30 30 30 900
+369	30854 13 0 0 0 0 1 1000 1000 1000 1000000
+370	30867 11 0 0 0 0 1 30 30 30 900
+371	30878 13 0 0 0 0 1 1000 1000 1000 1000000
+372	30891 11 0 0 0 0 1 30 30 30 900
+373	30902 13 0 0 0 0 1 1000 1000 1000 1000000
+374	30915 11 0 0 0 0 1 30 30 30 900
+375	30926 13 0 0 0 0 1 1000 1000 1000 1000000
+376	30939 11 0 0 0 0 1 30 30 30 900
+384	30950 39 0 0 0 0 3 1000 1000 3000 3000000
+385	30989 11 0 0 0 0 1 30 30 30 900
+386	31000 13 0 0 0 0 1 1000 1000 1000 1000000
+387	31013 11 0 0 0 0 1 30 30 30 900
+388	31024 13 0 0 0 0 1 1000 1000 1000 1000000
+389	31037 11 0 0 0 0 1 30 30 30 900
+390	31048 13 0 0 0 0 1 1000 1000 1000 1000000
+391	31061 11 0 0 0 0 1 30 30 30 900
+392	31072 13 0 0 0 0 1 1000 1000 1000 1000000
+393	31085 11 0 0 0 0 1 30 30 30 900
+401	31096 39 0 0 0 0 3 1000 1000 3000 3000000
+402	31135 11 0 0 0 0 1 30 30 30 900
+403	31146 13 0 0 0 0 1 1000 1000 1000 1000000
+404	31159 11 0 0 0 0 1 30 30 30 900
+405	31170 13 0 0 0 0 1 1000 1000 1000 1000000
+406	31183 11 0 0 0 0 1 30 30 30 900
+407	31194 13 0 0 0 0 1 1000 1000 1000 1000000
+408	31207 11 0 0 0 0 1 30 30 30 900
+409	31218 39 0 0 0 0 3 1000 1000 3000 3000000
+410	31257 11 0 0 0 0 1 30 30 30 900
+411	31268 13 0 0 0 0 1 1000 1000 1000 1000000
+412	31281 11 0 0 0 0 1 30 30 30 900
+413	31292 13 0 0 0 0 1 1000 1000 1000 1000000
+414	31305 11 0 0 0 0 1 30 30 30 900
+415	31316 13 0 0 0 0 1 1000 1000 1000 1000000
+416	31329 11 0 0 0 0 1 30 30 30 900
+417	31340 39 0 0 0 0 3 1000 1000 3000 3000000
+418	31379 11 0 0 0 0 1 30 30 30 900
+419	31390 13 0 0 0 0 1 1000 1000 1000 1000000
+420	31403 11 0 0 0 0 1 30 30 30 900
+421	31414 13 0 0 0 0 1 1000 1000 1000 1000000
+422	31427 11 0 0 0 0 1 30 30 30 900
+423	31438 13 0 0 0 0 1 1000 1000 1000 1000000
+424	31451 11 0 0 0 0 1 30 30 30 900
+425	31462 13 0 0 0 0 1 1000 1000 1000 1000000
+426	31475 11 0 0 0 0 1 30 30 30 900
+434	31486 39 0 0 0 0 3 1000 1000 3000 3000000
+435	31525 11 0 0 0 0 1 30 30 30 900
+436	31536 13 0 0 0 0 1 1000 1000 1000 1000000
+437	31549 11 0 0 0 0 1 30 30 30 900
+438	31560 13 0 0 0 0 1 1000 1000 1000 1000000
+439	31573 11 0 0 0 0 1 30 30 30 900
+440	31584 13 0 0 0 0 1 1000 1000 1000 1000000
+441	31597 11 0 0 0 0 1 30 30 30 900
+442	31608 13 0 0 0 0 1 1000 1000 1000 1000000
+443	31621 11 0 0 0 0 1 30 30 30 900
+451	31632 39 0 0 0 0 3 1000 1000 3000 3000000
+452	31671 11 0 0 0 0 1 30 30 30 900
+453	31682 13 0 0 0 0 1 1000 1000 1000 1000000
+454	31695 11 0 0 0 0 1 30 30 30 900
+455	31706 13 0 0 0 0 1 1000 1000 1000 1000000
+456	31719 11 0 0 0 0 1 30 30 30 900
+457	31730 13 0 0 0 0 1 1000 1000 1000 1000000
+458	31743 11 0 0 0 0 1 30 30 30 900
+459	31754 39 0 0 0 0 3 1000 1000 3000 3000000
+460	31793 11 0 0 0 0 1 30 30 30 900
+461	31804 13 0 0 0 0 1 1000 1000 1000 1000000
+462	31817 11 0 0 0 0 1 30 30 30 900
+463	31828 13 0 0 0 0 1 1000 1000 1000 1000000
+464	31841 11 0 0 0 0 1 30 30 30 900
+465	31852 13 0 0 0 0 1 1000 1000 1000 1000000
+466	31865 11 0 0 0 0 1 30 30 30 900
+467	31876 39 0 0 0 0 3 1000 1000 3000 3000000
+468	31915 11 0 0 0 0 1 30 30 30 900
+469	31926 13 0 0 0 0 1 1000 1000 1000 1000000
+470	31939 11 0 0 0 0 1 30 30 30 900
+471	31950 13 0 0 0 0 1 1000 1000 1000 1000000
+472	31963 11 0 0 0 0 1 30 30 30 900
+473	31974 13 0 0 0 0 1 1000 1000 1000 1000000
+474	31987 11 0 0 0 0 1 30 30 30 900
+475	31998 39 0 0 0 0 3 1000 1000 3000 3000000
+476	32037 11 0 0 0 0 1 30 30 30 900
+477	32048 13 0 0 0 0 1 1000 1000 1000 1000000
+478	32061 11 0 0 0 0 1 30 30 30 900
+479	32072 13 0 0 0 0 1 1000 1000 1000 1000000
+480	32085 11 0 0 0 0 1 30 30 30 900
+481	32096 13 0 0 0 0 1 1000 1000 1000 1000000
+482	32109 11 0 0 0 0 1 30 30 30 900
+483	32120 13 0 0 0 0 1 1000 1000 1000 1000000
+484	32133 11 0 0 0 0 1 30 30 30 900
+492	32144 39 0 0 0 0 3 1000 1000 3000 3000000
+493	32183 11 0 0 0 0 1 30 30 30 900
+494	32194 13 0 0 0 0 1 1000 1000 1000 1000000
+495	32207 11 0 0 0 0 1 30 30 30 900
+496	32218 13 0 0 0 0 1 1000 1000 1000 1000000
+497	32231 11 0 0 0 0 1 30 30 30 900
+498	32242 13 0 0 0 0 1 1000 1000 1000 1000000
+499	32255 11 0 0 0 0 1 30 30 30 900
+500	32266 13 0 0 0 0 1 1000 1000 1000 1000000
+501	32279 11 0 0 0 0 1 30 30 30 900
+509	32290 39 0 0 0 0 3 1000 1000 3000 3000000
+510	32329 11 0 0 0 0 1 30 30 30 900
+511	32340 13 0 0 0 0 1 1000 1000 1000 1000000
+512	32353 11 0 0 0 0 1 30 30 30 900
+513	32364 13 0 0 0 0 1 1000 1000 1000 1000000
+514	32377 11 0 0 0 0 1 30 30 30 900
+515	32388 13 0 0 0 0 1 1000 1000 1000 1000000
+516	32401 11 0 0 0 0 1 30 30 30 900
+517	32412 39 0 0 0 0 3 1000 1000 3000 3000000
+518	32451 11 0 0 0 0 1 30 30 30 900
+519	32462 13 0 0 0 0 1 1000 1000 1000 1000000
+520	32475 11 0 0 0 0 1 30 30 30 900
+521	32486 13 0 0 0 0 1 1000 1000 1000 1000000
+522	32499 11 0 0 0 0 1 30 30 30 900
+523	32510 13 0 0 0 0 1 1000 1000 1000 1000000
+524	32523 11 0 0 0 0 1 30 30 30 900
+525	32534 39 0 0 0 0 3 1000 1000 3000 3000000
+526	32573 11 0 0 0 0 1 30 30 30 900
+527	32584 13 0 0 0 0 1 1000 1000 1000 1000000
+528	32597 11 0 0 0 0 1 30 30 30 900
+529	32608 13 0 0 0 0 1 1000 1000 1000 1000000
+530	32621 11 0 0 0 0 1 30 30 30 900
+531	32632 13 0 0 0 0 1 1000 1000 1000 1000000
+532	32645 11 0 0 0 0 1 30 30 30 900
+533	32656 13 0 0 0 0 1 1000 1000 1000 1000000
+534	32669 11 0 0 0 0 1 30 30 30 900

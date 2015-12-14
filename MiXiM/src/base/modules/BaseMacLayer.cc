@@ -62,11 +62,25 @@ void BaseMacLayer::initialize(int stage)
         hasPar("coreDebug") ? coreDebug = par("coreDebug").boolValue() : coreDebug = false;
     }
     if (myMacAddr == LAddress::L2NULL) {
+        //const std::string addressString = par("address").stringValue();
+
         // see if there is an addressing module available
         // otherwise use NIC modules id as MAC address
         AddressingInterface* addrScheme = FindModule<AddressingInterface*>::findSubModule(findHost());
         if(addrScheme) {
+            const std::string addressString = par("address").stringValue();
+            // TODO: TUC limir
+            if (addressString.empty() || addressString == "auto")
+            {
             myMacAddr = addrScheme->myMacAddr(this);
+            ev << "myMacAddr A:"  << myMacAddr << " *** " << par("address").stringValue() << endl;
+            }
+            else
+            {
+                myMacAddr = LAddress::L2Type(addressString.c_str());
+
+            }
+
         } else {
             const std::string addressString = par("address").stringValue();
             if (addressString.empty() || addressString == "auto")
@@ -76,10 +90,13 @@ void BaseMacLayer::initialize(int stage)
             // use streaming operator for string conversion, this makes it more
             // independent from the myMacAddr type
             std::ostringstream oSS; oSS << myMacAddr;
+            // ev << "myMacAddr B:"  << myMacAddr << endl;
             par("address").setStringValue(oSS.str());
         }
         registerInterface();
     }
+    else
+        ev << "myMacAddr C:"  << myMacAddr << endl;
 }
 
 void BaseMacLayer::registerInterface()

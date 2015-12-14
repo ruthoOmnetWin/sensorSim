@@ -207,7 +207,11 @@ public:
 		/** @brief sleeping*/
 		SLEEP,
 		/** @brief switching between two states*/
+		//WAKEUP,
+		/** @brief sleep with wakeup receiver*/
 		SWITCHING,
+		POWERDOWN,
+//		OFF1,
 
 		/**
 		 * @brief No real radio state just a counter constant for the amount of states.
@@ -420,7 +424,7 @@ protected:
 	 */
 	virtual Argument::mapped_type_cref mapStateToAtt(int state)
 	{
-		if (state == RX) {
+		if ((state == RX) || (state == SLEEP)) {
 			return minAtt;
 		}
 		else {

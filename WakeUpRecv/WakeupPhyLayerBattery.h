@@ -87,7 +87,7 @@ protected:
 	};
 
 protected:
-    virtual MiximRadio* initializeRadio() const;
+    //virtual MiximRadio* initializeRadio() const;
 
 	void handleMessage(cMessage* msg);
 

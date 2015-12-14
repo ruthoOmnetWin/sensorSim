@@ -28,7 +28,7 @@ Processor::Processor() {
     selfMessageReadAndClear = NULL;
     activatedMode = 0;
 
-    hasTemperatureSensor = false;
+    hasTemperatureSensor = 0;
     hasHumiditySensor = false;
     hasPressureSensor = false;
     hasLightSensor = false;
@@ -41,7 +41,7 @@ Processor::~Processor() {
     selfMessageReadAndClear = NULL;
     activatedMode = 0;
 
-    hasTemperatureSensor = false;
+    hasTemperatureSensor = 0;
     hasHumiditySensor = false;
     hasPressureSensor = false;
     hasLightSensor = false;
@@ -168,7 +168,6 @@ void Processor::handleMessage(cMessage *msg)
             sensorUnitsActive.record(1);
         } else if (name == "shiftMode") {
             say("Processor: scheduling shiftMode");
-            activatedMode++;
             switchProcessorMode();
             switchPeripheryEnergyConsumption();
             schedulePeriodicSelfMessage(msg, shiftProcessorMode);
@@ -277,6 +276,7 @@ void Processor::startSensingUnit()
 {
     say("Processor: Initiating measuring");
     cModule* SensorNode = getParentModule();
+
     if (SensorNode->par("hasTemperatureSensor")) {
         cMessage* msg = new cMessage("startMeasuring");
         send(msg, "toTemperatureSensor");
@@ -293,6 +293,7 @@ void Processor::startSensingUnit()
         cMessage* msg = new cMessage("startMeasuring");
         send(msg, "toLightSensor");
     }
+
 }
 
 /**
@@ -363,13 +364,18 @@ void Processor::switchProcessorMode()
     //switch batteries power accounts
     if (getProcessorMode() == POWER_SAVING) {
         drawCurrent(currentOverTimePowerSaving, 1);
+        activatedMode++;
     } else if (getProcessorMode() == NORMAL) {
         drawCurrent(currentOverTimeNormal, 0);
+        activatedMode++;
     } else if (getProcessorMode() == HIGH_PERFORMANCE) {
         drawCurrent(currentOverTimeHighPerformance, 2);
+        activatedMode = 0;
     } else {
-        activatedMode=0;
-        switchProcessorMode();
+        EV << "Mode switching deactivated. Will draw normal current.";
+        drawCurrent(currentOverTimeNormal, 0);
+        //activatedMode=0;
+        //switchProcessorMode();
     }
     if (ev.isGUI()) {
         updateDisplay();

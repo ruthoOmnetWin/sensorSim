@@ -61,12 +61,12 @@ protected:
 
 	/** @name The different currents in mA.*/
 	/*@{*/
-	double sleepCurrent, rxCurrent, decodingCurrentDelta, txCurrent;
+	double sleepCurrent, rxCurrent, decodingCurrentDelta, txCurrent, wakeupCurrent;
 	/*@}*/
 
 	/** @name The different switching state currents in mA.*/
 	/*@{*/
-	double setupRxCurrent, setupTxCurrent, rxTxCurrent, txRxCurrent;
+	double setupRxCurrent, setupTxCurrent, rxTxCurrent, txRxCurrent,setupWakeupCurrent;
 	/*@}*/
 
 	/**
@@ -79,6 +79,8 @@ protected:
 		TX_ACCT,
 		SWITCHING_ACCT,
 		DECIDER_ACCT,
+		WAKE_UP_ACCT,
+		POWERDOWN_ACCT
 	};
 
 protected:
@@ -150,6 +152,7 @@ public:
 		, numActivities(0)
 		, sleepCurrent(0), rxCurrent(0), decodingCurrentDelta(0), txCurrent(0)
 		, setupRxCurrent(0), setupTxCurrent(0), rxTxCurrent(0), txRxCurrent(0)
+        , wakeupCurrent(0), setupWakeupCurrent (0)
 	{}
 	virtual void initialize(int stage);
 

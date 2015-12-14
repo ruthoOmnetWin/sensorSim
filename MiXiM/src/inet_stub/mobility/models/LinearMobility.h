@@ -21,6 +21,7 @@
 #define LINEAR_MOBILITY_H
 
 #include "INETDefs.h"
+
 #include "MovingMobilityBase.h"
 
 

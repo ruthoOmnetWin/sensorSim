@@ -15,6 +15,7 @@
 
 package org.mixim.examples.WSNRouting;
 
+
 import org.mixim.base.modules.BaseNetwork;
 import org.mixim.modules.node.Host802154_2400MHz;
 
@@ -35,7 +36,7 @@ network WSNRouting extends BaseNetwork
         node[numHosts]: Host802154_2400MHz {
             parameters:
                 numHosts = numHosts;
-                @display("p=158,99;b=42,42,rect,yellow;i=device/wifilaptop");
+                @display("p=78,90;b=42,42,rect,yellow;i=device/wifilaptop");
 
         }
     connections allowunconnected:

@@ -22,7 +22,7 @@
 #define NETWTOMACCONTROLINFO_H
 
 #include <omnetpp.h>
-
+#define MIXIM_INET
 #include "MiXiMDefs.h"
 #include "SimpleAddress.h"
 

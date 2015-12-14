@@ -23,6 +23,8 @@
 #ifndef CONNECTION_MANAGER_ACCESS_H
 #define CONNECTION_MANAGER_ACCESS_H
 
+#define MIXIM_INET
+
 #include <omnetpp.h>
 #include <vector>
 

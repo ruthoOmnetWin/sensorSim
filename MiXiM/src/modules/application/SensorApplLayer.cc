@@ -261,7 +261,7 @@ void SensorApplLayer::sendData() {
 	packet.setNbPacketsSent(1);
 	packet.setNbPacketsReceived(0);
 	packet.setHost(myAppAddr);
-	emit(BaseLayer::catPacketSignal, &packet);
+    emit(BaseLayer::catPacketSignal, &packet);
 	sentPackets++;
 	scheduleNextPacket();
 }

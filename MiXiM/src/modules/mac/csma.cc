@@ -750,7 +750,8 @@ void csma::handleLowerMsg(cMessage *msg) {
 	const LAddress::L2Type& dest       = macPkt->getDestAddr();
 	long                    ExpectedNr = 0;
 
-	debugEV<< "Received frame name= " << macPkt->getName()
+    //debugEV<< "Received frame name= " << macPkt->getName()
+	debugEV << "Received frame name= " << macPkt->getName()
 	<< ", myState=" << macState << " src=" << src
 	<< " dst=" << dest << " myAddr="
 	<< myMacAddr << endl;

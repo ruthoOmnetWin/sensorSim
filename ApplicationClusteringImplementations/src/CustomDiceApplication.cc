@@ -61,15 +61,16 @@ void CustomDiceApplication::handleMessage(cMessage * msg)
             clusterApp->otherNodesInSleepMode = false;
             //Send WakeUp-Packet
             debugEV << "  start wakeup" << endl;
-//            WakeUpPacket* wuPacketP = new WakeUpPacket();
-//            wuPacketP->setDestAddr(LAddress::L3BROADCAST);
-//            NetwControlInfo::setControlInfo(wuPacketP, LAddress::L3BROADCAST);
-//            send(wuPacketP, dataOut);
-            ApplPkt* gPacketP = new ApplPkt();
-            gPacketP->setName("wakeup");
-            gPacketP->setDestAddr(LAddress::L3BROADCAST);
-            NetwControlInfo::setControlInfo(gPacketP, LAddress::L3BROADCAST);
-            send(gPacketP, dataOut);
+            WakeUpPacket* wuPacketP = new WakeUpPacket();
+            wuPacketP->setDestAddr(LAddress::L3BROADCAST);
+            wuPacketP->setName("WakeUpReceiverPacket");
+            NetwControlInfo::setControlInfo(wuPacketP, LAddress::L3BROADCAST);
+            send(wuPacketP, dataOut);
+//            ApplPkt* gPacketP = new ApplPkt();
+//            gPacketP->setName("wakeup");
+//            gPacketP->setDestAddr(LAddress::L3BROADCAST);
+//            NetwControlInfo::setControlInfo(gPacketP, LAddress::L3BROADCAST);
+//            send(gPacketP, dataOut);
             //sendDown(gPacketP);
             //wait some ms
             scheduleAt(simTime() + 0.05 + uniform(0, 0.001), delayTimer);
@@ -87,48 +88,14 @@ void CustomDiceApplication::handleMessage(cMessage * msg)
     }
     else if (msg->getArrivalGateId() == dataIn)
     {
-
-//         // we received a data message from someone else !
-        //         ApplPkt* m = dynamic_cast<ApplPkt*>(msg);
-//         if (debug)
-//             debugEV << "I (" << nodeAddr << ") received a message from node "
-//                 << m->getSrcAddr() << " of size " << m->getBitLength() << "." << endl;
-//         nbPacketsReceived++;
-//
-//         if (stats) {
-//             simtime_t theLatency = msg->getArrivalTime() - msg->getCreationTime();
-//             latencies[m->getSrcAddr()].collect(SIMTIME_DBL(theLatency));
-//             testStat.collect(SIMTIME_DBL(theLatency));
-//         }
-//
-//         if (trace) {
-//             simtime_t theLatency = msg->getArrivalTime() - msg->getCreationTime();
-//             latenciesRaw.record(SIMTIME_DBL(theLatency));
-//         }
-//
         delete msg;
     }
     else if (msg->getArrivalGateId() == ctrlIn)
     {
-//         debugEV << "Received a control message." << endl;
-//         // msg announces end of transmission.
-//         if (msg->getKind() ==BaseMacLayer::TX_OVER)
-//         {
-//             isTransmitting = false;
-//             if (remainingPackets > 0 && flood && !delayTimer->isScheduled()) {
-//                 scheduleAt(simTime() + 0.001*001 + uniform(0, 0.001*0.001), delayTimer);
-//             }
-//         }
         delete msg;
     }
     else
     {
-        // default case
-//         if (debug) {
-//             ApplPkt* m = static_cast<ApplPkt*>(msg);
-//             debugEV << "I (" << nodeAddr << ") received a message from node "
-//                     << (static_cast<ApplPkt*>(msg))->getSrcAddr() << " of size " << m->getBitLength() << "." << endl;
-//         }
         delete msg;
     }
 
