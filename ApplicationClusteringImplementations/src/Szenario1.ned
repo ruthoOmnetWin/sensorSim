@@ -17,7 +17,7 @@ package applicationclusteringimplementations;
 
 import org.mixim.base.modules.BaseNetwork;
 
-network MyTestApplicationNetw extends BaseNetwork
+network Szenario1 extends BaseNetwork
 {
     parameters:
         int numNodes; // total number of hosts in the network
