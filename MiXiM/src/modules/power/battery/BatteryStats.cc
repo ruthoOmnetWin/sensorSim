@@ -27,7 +27,6 @@
  * capacity.)
  */
 #include "BatteryStats.h"
-
 #include <iostream>
 
 #include "BatteryState.h"

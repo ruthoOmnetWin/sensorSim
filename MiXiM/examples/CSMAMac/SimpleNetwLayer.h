@@ -20,6 +20,7 @@
 #include "BaseMacLayer.h"
 #include "FindModule.h"
 
+#define MIXIM_INET
 /**
  * @brief This is an implementation of a simple network layer
  * which provides only some simple routing (next hop) and
@@ -194,7 +195,7 @@ protected:
 		osBuff << "Babbling with " << it->first;
 		const_cast<cModule*>(getNode())->bubble(osBuff.str().c_str());
 		ev << osBuff.str() << std::endl;
-		sendDown(jabber);
+		//sendDown(jabber);
 
 		scheduleJabbering();
 	}

@@ -191,6 +191,7 @@ $O/WakeupBaseDecider.o: WakeupBaseDecider.cc \
 	$(MIXIM_PROJ)/src/base/messages/ChannelSenseRequest_m.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
 	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/messages/WakeUpPacket_m.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/BaseDecider.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
 	$(MIXIM_PROJ)/src/base/phyLayer/Decider.h \

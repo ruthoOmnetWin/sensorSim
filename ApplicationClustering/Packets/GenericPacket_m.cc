@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgc 4.5 from Packets/GenericPacket.msg.
+// Generated file, do not edit! Created by opp_msgc 4.5 from ../../ApplicationClustering/Packets/GenericPacket.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:

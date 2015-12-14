@@ -179,6 +179,7 @@ $O/DiceApplication.o: DiceApplication.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
 	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/messages/WakeUpPacket_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseLayer.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseMacLayer.h \
@@ -230,6 +231,7 @@ $O/MatrixApplication.o: MatrixApplication.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
 	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/messages/WakeUpPacket_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseLayer.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseMacLayer.h \
@@ -697,6 +699,7 @@ $O/Packets/NetworkPacket_m.o: Packets/NetworkPacket_m.cc \
 	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h
 $O/Packets/WakeUpPacket_m.o: Packets/WakeUpPacket_m.cc \
 	Packets/WakeUpPacket_m.h \
+	$(MIXIM_PROJ)/src/base/messages/WakeUpPacket_m.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \

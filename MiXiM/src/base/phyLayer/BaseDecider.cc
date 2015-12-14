@@ -12,7 +12,8 @@
 #include "MiXiMAirFrame.h"
 #include "PhyToMacControlInfo.h"
 #include "FWMath.h"
-
+#include "MacPkt_m.h"
+#include "WakeUpPacket_m.h"
 /** @brief Flag for channel sense (channel idle) handling.
  *
  * In the past we checked for IDLE channel state if we do not process a signal (frame).
@@ -147,8 +148,8 @@ simtime_t BaseDecider::processNewSignal(airframe_ptr_t frame) {
 	}
 
 	if (!phy->isRadioInRX()) {
-        frame->setBitError(true);
-        deciderEV << "AirFrame with ID " << frame->getId() << " (" << recvPower << ") received, while not receiving. Setting BitErrors to true." << endl;
+        //frame->setBitError(true);
+        //deciderEV << "AirFrame with ID " << frame->getId() << " (" << recvPower << ") received, while not receiving. Setting BitErrors to true." << endl;
 	}
 
 	currentSignal.startProcessing(frame, getNextSignalState(NEW));
@@ -156,13 +157,54 @@ simtime_t BaseDecider::processNewSignal(airframe_ptr_t frame) {
 	return getNextSignalHandleTime(frame);
 }
 
+
+// This function was changed for receiving packets in sleep mode.
+// limir@tuc
+
 simtime_t BaseDecider::processSignalEnd(airframe_ptr_t frame) {
     if (frame != currentSignal.first)
         return notAgain; // it is not the frame which we are processing
 
 	DeciderResult* pResult = createResult(frame);
 
-	if (pResult != NULL && pResult->isSignalCorrect() && !frame->hasBitError()) {
+    if (!phy->isRadioInRX())
+    {
+
+        if (pResult != NULL && pResult->isSignalCorrect() && !frame->hasBitError())
+        {
+//            int s = frame->getByteLength();
+//            airframe_ptr_t frame_cpy= new AirFrame();
+//            memcpy(&frame_cpy,frame,sieof(airframe_ptr_t));
+            airframe_ptr_t pAfDup = frame->dup();
+            cPacket* pMacPacket = pAfDup->decapsulate();
+            if (pMacPacket!=0)
+            {
+                cPacket* pDummyPacket = pMacPacket->decapsulate();
+                if (pDummyPacket!=0)
+                {
+                    cPacket* pWakeup = pDummyPacket->decapsulate();
+
+                    //->decapsulate()->decapsulate();
+                    //cPacket* pMacPacket = frame->decapsulate();
+                    WakeUpPacket* pkt = dynamic_cast<WakeUpPacket*>(pWakeup);
+                    if (pkt == 0)
+                    {
+                        cPacket* pMacPacket = frame->decapsulate();
+                        pMacPacket->setName("PHY-ERROR");
+                        pMacPacket->setKind(PACKET_DROPPED);
+                        phy->sendControlMsgToMac(pMacPacket);
+                    }
+                    else
+                    {
+                        phy->sendUp(frame, pResult);
+                    }
+                }
+            }
+        }
+
+    }
+
+	else if (pResult != NULL && pResult->isSignalCorrect() && !frame->hasBitError()) {
         deciderEV << "AirFrame was received correctly, it is now handed to upper layer..." << endl;
         // go on with processing this AirFrame, send it to the Mac-Layer
         if (currentSignal.getInterferenceCnt() > 0) {

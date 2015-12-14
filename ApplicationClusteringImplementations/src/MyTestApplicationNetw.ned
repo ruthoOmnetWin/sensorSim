@@ -30,47 +30,38 @@ network MyTestApplicationNetw extends BaseNetwork
     submodules:
         Node0: Sensor_Wakeup_DicePhyMacHost {
             @display("p=408,218");
-            hasTemperatureSensor = true;
 			applicationType = "MyTestApplication";
         }
         Node1: Sensor_Wakeup_DicePhyMacHost {
             @display("p=377,116");
-            hasTemperatureSensor = true;
             applicationType = "MyTestApplication";
         }
         Node2: Sensor_Wakeup_DicePhyMacHost {
             @display("p=257,88");
-            hasTemperatureSensor = true;
             applicationType = "MyTestApplication";
         }
         Node3: Sensor_Wakeup_DicePhyMacHost {
             @display("p=193,142");
-            hasTemperatureSensor = true;
             applicationType = "MyTestApplication";
         }
         Node4: Sensor_Wakeup_DicePhyMacHost {
             @display("p=91,103");
-            hasTemperatureSensor = true;
             applicationType = "MyTestApplication";
         }
         Node5: Sensor_Wakeup_DicePhyMacHost {
             @display("p=401,328");
-            hasTemperatureSensor = true;
             applicationType = "MyTestApplication";
         }
         Node6: Sensor_Wakeup_DicePhyMacHost {
             @display("p=296,367");
-            hasTemperatureSensor = true;
             applicationType = "MyTestApplication";
         }
         Node7: Sensor_Wakeup_DicePhyMacHost {
             @display("p=240,280");
-            hasTemperatureSensor = true;
             applicationType = "MyTestApplication";
         }
         Node8: Sensor_Wakeup_DicePhyMacHost {
             @display("p=170,374");
-            hasTemperatureSensor = true;
             applicationType = "MyTestApplication";
         }
         

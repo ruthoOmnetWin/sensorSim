@@ -69,10 +69,14 @@ module Sensor_Wakeup_DicePhyMacHost
         
         double dataBandwidth = default(0bps) @unit(bps);
         double controlBandwidth = default(0bps) @unit(bps);
+        
+        //set this and set it to true to generate all sensors randomly
+        bool allSensorsRandom = true;
         bool hasTemperatureSensor = default(false);
         bool hasHumiditySensor = default(false);
         bool hasPressureSensor = default(false);
         bool hasLightSensor = default(false);
+
         int numSensors = default(0);
         int numSensorModules = 4;
         //memory, processor

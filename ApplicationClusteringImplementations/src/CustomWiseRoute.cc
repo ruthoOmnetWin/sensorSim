@@ -29,7 +29,7 @@
 #include "SensorNode.h"
 #include "exception"
 #include "GenericPacket_m.h"
-
+#include "WakeUpPacket_m.h"
 
 #include "exception"
 
@@ -96,6 +96,8 @@ void CustomWiseRoute::initialize(int stage) {
 
 void CustomWiseRoute::handleMessage(cMessage* msg)
 {
+    EV << "Wiseroute received Message: " << msg->getName() << endl;
+
     if (msg->isSelfMessage()) {
         handleSelfMsg(msg);
     } else if(msg->getArrivalGateId()==upperLayerIn) {
@@ -305,27 +307,60 @@ void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
 
     if (active) {
 
+        if (strcmp(msg->getName(), "WakeUpReceiverPacket") == 0) {
 
-        WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+            WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+            WiseRoutePkt* copyPkt = pkt->dup();
 
-        //pkt->setFinalDestAddr(LAddress::L3BROADCAST);
-        WiseRoutePkt* copyPkt = pkt->dup();
-        sendUp(decapsMsg(pkt));
+            //pkt->setFinalDestAddr(LAddress::L3BROADCAST);
 
-        //forward broadcast
-        LAddress::L3Type finalDestAddr = copyPkt->getFinalDestAddr();
-        LAddress::L3Type initialSrcAddr = copyPkt->getInitialSrcAddr();
-        LAddress::L3Type destAddr = copyPkt->getDestAddr();
-        LAddress::L3Type srcAddr = copyPkt->getSrcAddr();
+            sendUp(decapsMsg(pkt));
 
-        if (LAddress::isL3Broadcast(finalDestAddr)) {
-            //pkt->setFinalDestAddr();
+            //forward broadcast
+            LAddress::L3Type finalDestAddr = copyPkt->getFinalDestAddr();
+            LAddress::L3Type initialSrcAddr = copyPkt->getInitialSrcAddr();
+            LAddress::L3Type destAddr = copyPkt->getDestAddr();
+            LAddress::L3Type srcAddr = copyPkt->getSrcAddr();
 
-            EV << "I am NODE " << myNetwAddr << " FORWARDING" << "-------------------- I am NODE ---------" << endl;
+            WakeUpPacket* wuPkt = new WakeUpPacket;
+            wuPkt->setDestAddr(LAddress::L3BROADCAST);
+            wuPkt->setSrcAddr(srcAddr);
+            wuPkt->setName("WakeUpReceiverPacket");
+            NetwControlInfo::setControlInfo(wuPkt, LAddress::L3BROADCAST);
 
-            NetwControlInfo::setControlInfo(copyPkt, LAddress::L3BROADCAST);
-            forward(copyPkt, srcAddr);
+            if (LAddress::isL3Broadcast(finalDestAddr)) {
+                //pkt->setFinalDestAddr();
+
+                EV << "I am NODE " << myNetwAddr << " FORWARDING" << "-------------------- I am NODE ---------" << endl;
+
+                //NetwControlInfo::setControlInfo(copyPkt, LAddress::L3BROADCAST);
+                forward(wuPkt, srcAddr);
+            }
+
+        } else {
+            WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+
+            //pkt->setFinalDestAddr(LAddress::L3BROADCAST);
+            WiseRoutePkt* copyPkt = pkt->dup();
+            sendUp(decapsMsg(pkt));
+
+            //forward broadcast
+            LAddress::L3Type finalDestAddr = copyPkt->getFinalDestAddr();
+            LAddress::L3Type initialSrcAddr = copyPkt->getInitialSrcAddr();
+            LAddress::L3Type destAddr = copyPkt->getDestAddr();
+            LAddress::L3Type srcAddr = copyPkt->getSrcAddr();
+
+            if (LAddress::isL3Broadcast(finalDestAddr)) {
+                //pkt->setFinalDestAddr();
+
+                EV << "I am NODE " << myNetwAddr << " FORWARDING" << "-------------------- I am NODE ---------" << endl;
+
+                NetwControlInfo::setControlInfo(copyPkt, LAddress::L3BROADCAST);
+                forward(copyPkt, srcAddr);
+            }
         }
+
+
 
     } else {
         delete msg;
@@ -405,8 +440,13 @@ void CustomWiseRoute::forward(cMessage* msg, LAddress::L3Type srcAddr) {
         //
 
         if (srcAddr != -2) {
-            WiseRoutePkt* wpkt = check_and_cast<WiseRoutePkt*>(msg);
-            initialSrc = wpkt->getInitialSrcAddr();
+            if (strcmp(msg->getName(), "WakeUpReceiverPacket") == 0) {
+                WakeUpPacket* wpkt = check_and_cast<WakeUpPacket*>(msg);
+                initialSrc = wpkt->getSrcAddr();
+            } else {
+                WiseRoutePkt* wpkt = check_and_cast<WiseRoutePkt*>(msg);
+                initialSrc = wpkt->getInitialSrcAddr();
+            }
         } else {
             initialSrc = L3myNetwAddr;
         }
@@ -462,10 +502,10 @@ void CustomWiseRoute::sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestA
         return;
     }
 
-    EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
-    if (nextHopAddr == 6 || nextHopAddr == 7 || nextHopAddr == 20) {
-        EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
-    }
+//    EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
+//    if (nextHopAddr == 6 || nextHopAddr == 7 || nextHopAddr == 20) {
+//        EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
+//    }
 
     LAddress::L2Type nextHopMacAddr;
     const char *name;

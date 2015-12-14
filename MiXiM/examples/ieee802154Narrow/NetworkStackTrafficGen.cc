@@ -28,7 +28,6 @@ Define_Module(NetworkStackTrafficGen);
 void NetworkStackTrafficGen::initialize(int stage)
 {
 	BaseLayer::initialize(stage);
-
 	if(stage == 0) {
 		world = FindModule<BaseWorldUtility*>::findGlobalModule();
 		delayTimer   = new cMessage("delay-timer", TRAFFIC_TIMER);

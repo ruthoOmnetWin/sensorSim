@@ -26,6 +26,6 @@ network BMACExampleNetwork extends BaseNetwork
     submodules:
         node[numNodes]: HostBMAC {
             parameters:
-                @display("p=170,50;i=device/wifilaptop");
+                @display("p=119,104;i=device/wifilaptop");
         }
 }

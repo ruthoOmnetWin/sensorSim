@@ -54,21 +54,17 @@ void NicEntryDebug::disconnectFrom(NicEntry* other)
 	//no need to check whether entry is valid; is already check by ConnectionManager isConnected
 	//get the hostGate
 	//order is phyGate->nicGate->hostGate
-	cGate* thisGate = 0;
-	thisGate = p->second->getNextGate();
-	if (thisGate) {
-	    cGate* hostGate = thisGate->getNextGate();
+	cGate* hostGate = p->second->getNextGate()->getNextGate();
 
-	    // release local out gate
-        freeOutGates.push_back(hostGate);
+	// release local out gate
+	freeOutGates.push_back(hostGate);
 
-        // release remote in gate
-        otherNic->freeInGates.push_back(hostGate->getNextGate());
+	// release remote in gate
+	otherNic->freeInGates.push_back(hostGate->getNextGate());
 
-        //reset gates
-        //hostGate->getNextGate()->connectTo(0);
-        hostGate->disconnect();
-	}
+	//reset gates
+	//hostGate->getNextGate()->connectTo(0);
+	hostGate->disconnect();
 
 	//delete the connection
 	outConns.erase(p);
