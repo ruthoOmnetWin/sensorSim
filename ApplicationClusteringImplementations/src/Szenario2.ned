@@ -5,26 +5,17 @@ import org.mixim.base.modules.BaseNetwork;
 //
 //some information about this szenario
 //
-//szenario.ini is the matching ini-file
+//szenario2.ini is the matching ini-file
 //
-//important data is:
+////most values are similar to szenario1
 //
-////**.*.appl.sendingIntervall (s) - sending intervall time/ how long will the nodes store their measured values before sending them to the master,
-////**.Node0.hasTemperatureSensor(etc) - define the sensors for each node,
-////**.Memory.storageSize - define how much data every nodes memory can store (integer - if e.g. a value 1 is chosen, the memory can store only one data set),
-////**.*.appl.coordinatorNodeAddr - defines the master node,
-////energy consumptions,
-////**.routeTree - define the routing table,
+//what happens in the szenario:
 //
-//routing:
-//
-////all nodes that are leaf nodes (defined inside routeTree) will measure (measure intervall is defined inside **.sensingIntervall),
-////all other nodes won't,
-////you can define one node as master (coordinatorNodeAddr),
-////after a specific time (defined inside sendingIntervall) all leaf nodes will send all their measured values to the master,
-////depending on the routingTree the master may not be reached in one step,
-////the messages will also be send if leaf nodes aren't direct children of the master, so for example you can define one father node for every room and connect all
-////room fathers to the master, the messages will then be transported via the defined connections
+////leaf nodes (that measure sensor data) will never send their data on their own.
+////leaf nodes will never use their sensors on their own.
+////the coordinator node will ask the nodes for their data instead.
+////the cluster master nodes will then search for the nodes with the highest battery power left (one for each sensor type).
+////for each type the chosen node will then make one measuring and send it to the cluster master which will forward it to the global master.
 //
 network Szenario2 extends BaseNetwork
 {
