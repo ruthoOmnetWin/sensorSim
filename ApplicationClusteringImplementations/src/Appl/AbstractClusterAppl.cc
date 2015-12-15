@@ -13,19 +13,14 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef CLUSTERMASTERCLUSTERAPPL_H_
-#define CLUSTERMASTERCLUSTERAPPL_H_
-
-#include <omnetpp.h>
-#include <BaseModule.h>
 #include <AbstractClusterAppl.h>
 
-class ClusterMasterClusterAppl : public BaseModule, public AbstractClusterAppl {
-public:
-    ClusterMasterClusterAppl();
-    virtual ~ClusterMasterClusterAppl();
-    void initialize(int stage);
-    void handleMessage(cMessage* msg);
-};
+AbstractClusterAppl::AbstractClusterAppl() {
+    // TODO Auto-generated constructor stub
 
-#endif /* CLUSTERMASTERCLUSTERAPPL_H_ */
+}
+
+AbstractClusterAppl::~AbstractClusterAppl() {
+    // TODO Auto-generated destructor stub
+}
+

@@ -19,8 +19,9 @@
 #include <omnetpp.h>
 #include <BaseModule.h>
 #include <SimpleBattery.h>
+#include <AbstractClusterAppl.h>
 
-class LeafClusterAppl : public BaseModule {
+class LeafClusterAppl : public BaseModule, public AbstractClusterAppl {
 protected:
     SimpleBattery* battery;
 public:

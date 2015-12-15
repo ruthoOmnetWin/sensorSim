@@ -17,14 +17,23 @@
 #define MASTERCLUSTERAPPL_H_
 
 #include <omnetpp.h>
-#include <BaseModule.h>
+#include <CustomDiceApplication.h>
+#include <AbstractClusterAppl.h>
+#include <ClusterApplWiseRoute.h>
 
-class MasterClusterAppl : public BaseModule {
+class MasterClusterAppl : public CustomDiceApplication, public AbstractClusterAppl {
+protected:
+    cMessage* measuringTimer;
+    int coordinatorNodeAddr;
+    int measureTimerIntervall;
+    ClusterApplWiseRoute* NetwLayer;
+
 public:
     MasterClusterAppl();
     virtual ~MasterClusterAppl();
     void initialize(int stage);
     void handleMessage(cMessage* msg);
+    void setNextEvent();
 };
 
 #endif /* MASTERCLUSTERAPPL_H_ */

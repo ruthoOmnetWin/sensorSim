@@ -22,8 +22,7 @@
 class ClusterApplWiseRoute : public CustomWiseRoute
 {
 public:
-    ClusterApplWiseRoute()  : CustomWiseRoute() {}
-    virtual ~ClusterApplWiseRoute();
+    LAddress::L3Type getMyNetworkAddress();
 };
 
 #endif /* CLUSTERAPPLWISEROUTE_H_ */

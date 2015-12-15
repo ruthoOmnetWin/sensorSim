@@ -17,7 +17,6 @@
 
 Define_Module(ClusterApplWiseRoute);
 
-ClusterApplWiseRoute::~ClusterApplWiseRoute() {
-    // TODO Auto-generated destructor stub
+LAddress::L3Type ClusterApplWiseRoute::getMyNetworkAddress() {
+    return myNetwAddr;
 }
-

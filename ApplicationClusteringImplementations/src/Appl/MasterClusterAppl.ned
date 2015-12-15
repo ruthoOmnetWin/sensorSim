@@ -24,6 +24,7 @@ simple MasterClusterAppl like IBaseApplLayer
     parameters:
         int headerLength @unit("bit"); // length of the application message header (in bits)
         int coordinatorNodeAddr;
+        int measureTimerIntervall @unit("s");
         
         @class(MasterClusterAppl);
     gates:
