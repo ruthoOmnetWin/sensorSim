@@ -66,11 +66,6 @@ void CustomDiceApplication::handleMessage(cMessage * msg)
             wuPacketP->setName("WakeUpReceiverPacket");
             NetwControlInfo::setControlInfo(wuPacketP, LAddress::L3BROADCAST);
             send(wuPacketP, dataOut);
-//            ApplPkt* gPacketP = new ApplPkt();
-//            gPacketP->setName("wakeup");
-//            gPacketP->setDestAddr(LAddress::L3BROADCAST);
-//            NetwControlInfo::setControlInfo(gPacketP, LAddress::L3BROADCAST);
-//            send(gPacketP, dataOut);
             //sendDown(gPacketP);
             //wait some ms
             scheduleAt(simTime() + 0.05 + uniform(0, 0.001), delayTimer);

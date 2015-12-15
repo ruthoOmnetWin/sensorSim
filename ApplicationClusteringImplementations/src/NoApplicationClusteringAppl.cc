@@ -15,30 +15,88 @@
 
 #include <NoApplicationClusteringAppl.h>
 #include <FindModule.h>
+#include <ApplPkt_m.h>
+#include <SimpleSensorData.h>
+#include <NetwControlInfo.h>
 
 Define_Module(NoApplicationClusteringAppl);
 
-void NoApplicationClusteringAppl::initialize(int stage) {
-    //params
-    coordinatorNodeAddr = par("coordinatorNodeAddr");
-    sendSensorDataToMasterIntervall = par("sendingIntervall");
-    //selfmessage sendToMaster init
-    sendToMaster = new cMessage("sendToMaster");
-    scheduleAt(simTime() + sendSensorDataToMasterIntervall + 1, sendToMaster);
+NoApplicationClusteringAppl::NoApplicationClusteringAppl() {
+    iAmLeafNode = false;
+    myNetworkAddr = 0;
+}
 
-    //memory
-    memory = FindModule<Memory*>::findSubModule(findHost());
+NoApplicationClusteringAppl::~NoApplicationClusteringAppl() {
+    iAmLeafNode = false;
+    myNetworkAddr = 0;
+}
+
+void NoApplicationClusteringAppl::initialize(int stage) {
+    if (stage == 1) {
+        //gates
+        dataOut = findGate("lowerLayerOut");
+        dataIn = findGate("lowerLayerIn");
+        ctrlOut = findGate("lowerControlOut");
+        ctrlIn = findGate("lowerControlIn");
+        //params
+        coordinatorNodeAddr = par("coordinatorNodeAddr");
+
+        if (iAmLeafNode) {
+            sendSensorDataToMasterIntervall = par("sendingIntervall");
+            //selfmessage sendToMaster init
+            sendToMaster = new cMessage("sendToMaster");
+            scheduleAt(simTime() + sendSensorDataToMasterIntervall + 1 + (0.02 * myNetworkAddr), sendToMaster);
+        }
+
+        //memory
+        memory = FindModule<Memory*>::findSubModule(findHost());
+    }
 }
 
 void NoApplicationClusteringAppl::handleMessage(cMessage* msg) {
     if (msg->isSelfMessage()) {
         if (strcmp(msg->getName(), sendToMaster->getName()) == 0) {
             //memory auslesen und leeren
+            int size = memory->getDataSizeCount();
             storage* sensorData = memory->readAllAndClear();
             //sende message an den coordinator node mit messungen
+            ApplPkt* dataMessage = new ApplPkt();
+            LAddress::L3Type dest = coordinatorNodeAddr;
+            dataMessage->setDestAddr(dest);
+            NetwControlInfo::setControlInfo(dataMessage, dest);
+            dataMessage->setName("sensor data");
+            //cArray parList = dataMessage->getParList();
 
+            for (int i = 0; i < size; i++) {
+                SimpleSensorData* tmp = new SimpleSensorData(sensorData[i].type.c_str(), sensorData[i].value);
+                dataMessage->getParList().add(tmp);
+            }
+
+            int i = 0;
+            while (dataMessage->getParList().exist(i)) {
+                //pkt->getParList().add(parlist->get(i));
+                i++;
+            }
+
+            send(dataMessage, dataOut);
             //forward selfmessage
             scheduleAt(simTime() + sendSensorDataToMasterIntervall, sendToMaster);
         }
+    } else {
+        if (myNetworkAddr == coordinatorNodeAddr) {
+            EV << "============= Coordinator: Received external Message" << endl;
+        } else {
+            EV << "============= Non-Coordinator: Received external Message" << endl;
+        }
+
+        cArray parList = msg->getParList();
+
+        int i = 0;
+        while(msg->getParList().exist(i)) {
+            cObject* tmp = parList.get(i);
+            i++;
+        }
+
+        //forEachChild
     }
 }

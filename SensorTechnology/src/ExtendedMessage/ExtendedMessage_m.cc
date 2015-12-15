@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgc 4.5 from src/ExtendedMessage/ExtendedMessage.msg.
+// Generated file, do not edit! Created by opp_msgc 4.5 from ExtendedMessage/ExtendedMessage.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:

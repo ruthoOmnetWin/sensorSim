@@ -19,7 +19,6 @@
 #include <DiceApplication.h>
 #include <WakeUpPacket_m.h>
 #include <NetwControlInfo.h>
-#include <ApplPkt_m.h>
 
 class CustomDiceApplication : public DiceApplication
 {
