@@ -1,366 +1,366 @@
 version 2
-run General-0-20151215-17:03:30-11873
+run General-0-20151215-17:35:14-19671
 attr configname General
-attr datetime 20151215-17:03:30
+attr datetime 20151215-17:35:14
 attr experiment General
-attr inifile szenario1.ini
+attr inifile szenario2.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
-attr network Szenario1
-attr processid 11873
+attr network Szenario2
+attr processid 19671
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-vector 7  Szenario1.Node0.Processor  "power mode"  ETV
-vector 8  Szenario1.Node0.Processor  "Sensor Modules Status"  ETV
-vector 9  Szenario1.Node0.Processor  Voltage  ETV
-vector 10  Szenario1.Node0.Processor  residualRelative  ETV
-vector 11  Szenario1.Node0.Processor  residualAbs  ETV
-vector 19  Szenario1.Node1.Processor  "power mode"  ETV
-vector 20  Szenario1.Node1.Processor  "Sensor Modules Status"  ETV
-vector 21  Szenario1.Node1.Processor  Voltage  ETV
-vector 22  Szenario1.Node1.Processor  residualRelative  ETV
-vector 23  Szenario1.Node1.Processor  residualAbs  ETV
-vector 31  Szenario1.Node2.Processor  "power mode"  ETV
-vector 32  Szenario1.Node2.Processor  "Sensor Modules Status"  ETV
-vector 33  Szenario1.Node2.Processor  Voltage  ETV
-vector 34  Szenario1.Node2.Processor  residualRelative  ETV
-vector 35  Szenario1.Node2.Processor  residualAbs  ETV
-vector 43  Szenario1.Node3.Processor  "power mode"  ETV
-vector 44  Szenario1.Node3.Processor  "Sensor Modules Status"  ETV
-vector 45  Szenario1.Node3.Processor  Voltage  ETV
-vector 46  Szenario1.Node3.Processor  residualRelative  ETV
-vector 47  Szenario1.Node3.Processor  residualAbs  ETV
-vector 55  Szenario1.Node4.Processor  "power mode"  ETV
-vector 56  Szenario1.Node4.Processor  "Sensor Modules Status"  ETV
-vector 57  Szenario1.Node4.Processor  Voltage  ETV
-vector 58  Szenario1.Node4.Processor  residualRelative  ETV
-vector 59  Szenario1.Node4.Processor  residualAbs  ETV
-vector 67  Szenario1.Node5.Processor  "power mode"  ETV
-vector 68  Szenario1.Node5.Processor  "Sensor Modules Status"  ETV
-vector 69  Szenario1.Node5.Processor  Voltage  ETV
-vector 70  Szenario1.Node5.Processor  residualRelative  ETV
-vector 71  Szenario1.Node5.Processor  residualAbs  ETV
-vector 79  Szenario1.Node6.Processor  "power mode"  ETV
-vector 80  Szenario1.Node6.Processor  "Sensor Modules Status"  ETV
-vector 81  Szenario1.Node6.Processor  Voltage  ETV
-vector 82  Szenario1.Node6.Processor  residualRelative  ETV
-vector 83  Szenario1.Node6.Processor  residualAbs  ETV
-vector 91  Szenario1.Node7.Processor  "power mode"  ETV
-vector 92  Szenario1.Node7.Processor  "Sensor Modules Status"  ETV
-vector 93  Szenario1.Node7.Processor  Voltage  ETV
-vector 94  Szenario1.Node7.Processor  residualRelative  ETV
-vector 95  Szenario1.Node7.Processor  residualAbs  ETV
-vector 103  Szenario1.Node8.Processor  "power mode"  ETV
-vector 104  Szenario1.Node8.Processor  "Sensor Modules Status"  ETV
-vector 105  Szenario1.Node8.Processor  Voltage  ETV
-vector 106  Szenario1.Node8.Processor  residualRelative  ETV
-vector 107  Szenario1.Node8.Processor  residualAbs  ETV
-vector 115  Szenario1.Node9.Processor  "power mode"  ETV
-vector 116  Szenario1.Node9.Processor  "Sensor Modules Status"  ETV
-vector 117  Szenario1.Node9.Processor  Voltage  ETV
-vector 118  Szenario1.Node9.Processor  residualRelative  ETV
-vector 119  Szenario1.Node9.Processor  residualAbs  ETV
-vector 127  Szenario1.Node10.Processor  "power mode"  ETV
-vector 128  Szenario1.Node10.Processor  "Sensor Modules Status"  ETV
-vector 129  Szenario1.Node10.Processor  Voltage  ETV
-vector 130  Szenario1.Node10.Processor  residualRelative  ETV
-vector 131  Szenario1.Node10.Processor  residualAbs  ETV
-vector 139  Szenario1.Node11.Processor  "power mode"  ETV
-vector 140  Szenario1.Node11.Processor  "Sensor Modules Status"  ETV
-vector 141  Szenario1.Node11.Processor  Voltage  ETV
-vector 142  Szenario1.Node11.Processor  residualRelative  ETV
-vector 143  Szenario1.Node11.Processor  residualAbs  ETV
-vector 151  Szenario1.Node12.Processor  "power mode"  ETV
-vector 152  Szenario1.Node12.Processor  "Sensor Modules Status"  ETV
-vector 153  Szenario1.Node12.Processor  Voltage  ETV
-vector 154  Szenario1.Node12.Processor  residualRelative  ETV
-vector 155  Szenario1.Node12.Processor  residualAbs  ETV
-vector 163  Szenario1.Node13.Processor  "power mode"  ETV
-vector 164  Szenario1.Node13.Processor  "Sensor Modules Status"  ETV
-vector 165  Szenario1.Node13.Processor  Voltage  ETV
-vector 166  Szenario1.Node13.Processor  residualRelative  ETV
-vector 167  Szenario1.Node13.Processor  residualAbs  ETV
-vector 168  Szenario1.Node0.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 169  Szenario1.Node0.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 170  Szenario1.Node0.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 171  Szenario1.Node0.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 172  Szenario1.Node0.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 173  Szenario1.Node0.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 174  Szenario1.Node0.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 175  Szenario1.Node0.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 176  Szenario1.Node0.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 177  Szenario1.Node0.PressureSensor.SensingUnit  "Current use over time"  ETV
-vector 178  Szenario1.Node0.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 179  Szenario1.Node0.PressureSensor.SignalConditioner  "Current use over time"  ETV
-vector 180  Szenario1.Node0.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 181  Szenario1.Node0.PressureSensor.SignalConverter  "Current use over time"  ETV
-vector 182  Szenario1.Node0.PressureSensor.Transducer  "Energy Consumptions"  ETV
-vector 183  Szenario1.Node0.PressureSensor.Transducer  "Current use over time"  ETV
-vector 184  Szenario1.Node0.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 185  Szenario1.Node0.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 186  Szenario1.Node0.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 187  Szenario1.Node0.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 188  Szenario1.Node0.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 189  Szenario1.Node0.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 190  Szenario1.Node0.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 191  Szenario1.Node0.LightSensor.Transducer  "Current use over time"  ETV
-vector 192  Szenario1.Node0.Memory  "Energy Consumptions"  ETV
-vector 193  Szenario1.Node0.Memory  "Current use over time"  ETV
-vector 201  Szenario1.Node1.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 202  Szenario1.Node1.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 203  Szenario1.Node1.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 204  Szenario1.Node1.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 205  Szenario1.Node1.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 206  Szenario1.Node1.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 207  Szenario1.Node1.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 208  Szenario1.Node1.LightSensor.Transducer  "Current use over time"  ETV
-vector 209  Szenario1.Node1.Memory  "Energy Consumptions"  ETV
-vector 210  Szenario1.Node1.Memory  "Current use over time"  ETV
-vector 218  Szenario1.Node2.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 219  Szenario1.Node2.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 220  Szenario1.Node2.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 221  Szenario1.Node2.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 222  Szenario1.Node2.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 223  Szenario1.Node2.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 224  Szenario1.Node2.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 225  Szenario1.Node2.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 226  Szenario1.Node2.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
-vector 227  Szenario1.Node2.HumiditySensor.SensingUnit  "Current use over time"  ETV
-vector 228  Szenario1.Node2.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 229  Szenario1.Node2.HumiditySensor.SignalConditioner  "Current use over time"  ETV
-vector 230  Szenario1.Node2.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
-vector 231  Szenario1.Node2.HumiditySensor.SignalConverter  "Current use over time"  ETV
-vector 232  Szenario1.Node2.HumiditySensor.Transducer  "Energy Consumptions"  ETV
-vector 233  Szenario1.Node2.HumiditySensor.Transducer  "Current use over time"  ETV
-vector 234  Szenario1.Node2.Memory  "Energy Consumptions"  ETV
-vector 235  Szenario1.Node2.Memory  "Current use over time"  ETV
-vector 243  Szenario1.Node3.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 244  Szenario1.Node3.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 245  Szenario1.Node3.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 246  Szenario1.Node3.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 247  Szenario1.Node3.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 248  Szenario1.Node3.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 249  Szenario1.Node3.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 250  Szenario1.Node3.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 251  Szenario1.Node3.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 252  Szenario1.Node3.PressureSensor.SensingUnit  "Current use over time"  ETV
-vector 253  Szenario1.Node3.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 254  Szenario1.Node3.PressureSensor.SignalConditioner  "Current use over time"  ETV
-vector 255  Szenario1.Node3.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 256  Szenario1.Node3.PressureSensor.SignalConverter  "Current use over time"  ETV
-vector 257  Szenario1.Node3.PressureSensor.Transducer  "Energy Consumptions"  ETV
-vector 258  Szenario1.Node3.PressureSensor.Transducer  "Current use over time"  ETV
-vector 259  Szenario1.Node3.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 260  Szenario1.Node3.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 261  Szenario1.Node3.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 262  Szenario1.Node3.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 263  Szenario1.Node3.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 264  Szenario1.Node3.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 265  Szenario1.Node3.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 266  Szenario1.Node3.LightSensor.Transducer  "Current use over time"  ETV
-vector 267  Szenario1.Node3.Memory  "Energy Consumptions"  ETV
-vector 268  Szenario1.Node3.Memory  "Current use over time"  ETV
-vector 276  Szenario1.Node4.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
-vector 277  Szenario1.Node4.HumiditySensor.SensingUnit  "Current use over time"  ETV
-vector 278  Szenario1.Node4.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 279  Szenario1.Node4.HumiditySensor.SignalConditioner  "Current use over time"  ETV
-vector 280  Szenario1.Node4.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
-vector 281  Szenario1.Node4.HumiditySensor.SignalConverter  "Current use over time"  ETV
-vector 282  Szenario1.Node4.HumiditySensor.Transducer  "Energy Consumptions"  ETV
-vector 283  Szenario1.Node4.HumiditySensor.Transducer  "Current use over time"  ETV
-vector 284  Szenario1.Node4.Memory  "Energy Consumptions"  ETV
-vector 285  Szenario1.Node4.Memory  "Current use over time"  ETV
-vector 293  Szenario1.Node5.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 294  Szenario1.Node5.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 295  Szenario1.Node5.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 296  Szenario1.Node5.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 297  Szenario1.Node5.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 298  Szenario1.Node5.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 299  Szenario1.Node5.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 300  Szenario1.Node5.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 301  Szenario1.Node5.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
-vector 302  Szenario1.Node5.HumiditySensor.SensingUnit  "Current use over time"  ETV
-vector 303  Szenario1.Node5.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 304  Szenario1.Node5.HumiditySensor.SignalConditioner  "Current use over time"  ETV
-vector 305  Szenario1.Node5.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
-vector 306  Szenario1.Node5.HumiditySensor.SignalConverter  "Current use over time"  ETV
-vector 307  Szenario1.Node5.HumiditySensor.Transducer  "Energy Consumptions"  ETV
-vector 308  Szenario1.Node5.HumiditySensor.Transducer  "Current use over time"  ETV
-vector 309  Szenario1.Node5.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 310  Szenario1.Node5.PressureSensor.SensingUnit  "Current use over time"  ETV
-vector 311  Szenario1.Node5.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 312  Szenario1.Node5.PressureSensor.SignalConditioner  "Current use over time"  ETV
-vector 313  Szenario1.Node5.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 314  Szenario1.Node5.PressureSensor.SignalConverter  "Current use over time"  ETV
-vector 315  Szenario1.Node5.PressureSensor.Transducer  "Energy Consumptions"  ETV
-vector 316  Szenario1.Node5.PressureSensor.Transducer  "Current use over time"  ETV
-vector 317  Szenario1.Node5.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 318  Szenario1.Node5.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 319  Szenario1.Node5.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 320  Szenario1.Node5.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 321  Szenario1.Node5.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 322  Szenario1.Node5.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 323  Szenario1.Node5.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 324  Szenario1.Node5.LightSensor.Transducer  "Current use over time"  ETV
-vector 325  Szenario1.Node5.Memory  "Energy Consumptions"  ETV
-vector 326  Szenario1.Node5.Memory  "Current use over time"  ETV
-vector 334  Szenario1.Node6.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 335  Szenario1.Node6.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 336  Szenario1.Node6.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 337  Szenario1.Node6.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 338  Szenario1.Node6.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 339  Szenario1.Node6.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 340  Szenario1.Node6.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 341  Szenario1.Node6.LightSensor.Transducer  "Current use over time"  ETV
-vector 342  Szenario1.Node6.Memory  "Energy Consumptions"  ETV
-vector 343  Szenario1.Node6.Memory  "Current use over time"  ETV
-vector 351  Szenario1.Node7.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 352  Szenario1.Node7.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 353  Szenario1.Node7.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 354  Szenario1.Node7.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 355  Szenario1.Node7.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 356  Szenario1.Node7.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 357  Szenario1.Node7.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 358  Szenario1.Node7.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 359  Szenario1.Node7.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
-vector 360  Szenario1.Node7.HumiditySensor.SensingUnit  "Current use over time"  ETV
-vector 361  Szenario1.Node7.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 362  Szenario1.Node7.HumiditySensor.SignalConditioner  "Current use over time"  ETV
-vector 363  Szenario1.Node7.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
-vector 364  Szenario1.Node7.HumiditySensor.SignalConverter  "Current use over time"  ETV
-vector 365  Szenario1.Node7.HumiditySensor.Transducer  "Energy Consumptions"  ETV
-vector 366  Szenario1.Node7.HumiditySensor.Transducer  "Current use over time"  ETV
-vector 367  Szenario1.Node7.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 368  Szenario1.Node7.PressureSensor.SensingUnit  "Current use over time"  ETV
-vector 369  Szenario1.Node7.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 370  Szenario1.Node7.PressureSensor.SignalConditioner  "Current use over time"  ETV
-vector 371  Szenario1.Node7.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 372  Szenario1.Node7.PressureSensor.SignalConverter  "Current use over time"  ETV
-vector 373  Szenario1.Node7.PressureSensor.Transducer  "Energy Consumptions"  ETV
-vector 374  Szenario1.Node7.PressureSensor.Transducer  "Current use over time"  ETV
-vector 375  Szenario1.Node7.Memory  "Energy Consumptions"  ETV
-vector 376  Szenario1.Node7.Memory  "Current use over time"  ETV
-vector 384  Szenario1.Node8.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 385  Szenario1.Node8.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 386  Szenario1.Node8.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 387  Szenario1.Node8.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 388  Szenario1.Node8.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 389  Szenario1.Node8.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 390  Szenario1.Node8.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 391  Szenario1.Node8.LightSensor.Transducer  "Current use over time"  ETV
-vector 392  Szenario1.Node8.Memory  "Energy Consumptions"  ETV
-vector 393  Szenario1.Node8.Memory  "Current use over time"  ETV
-vector 401  Szenario1.Node9.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 402  Szenario1.Node9.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 403  Szenario1.Node9.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 404  Szenario1.Node9.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 405  Szenario1.Node9.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 406  Szenario1.Node9.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 407  Szenario1.Node9.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 408  Szenario1.Node9.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 409  Szenario1.Node9.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
-vector 410  Szenario1.Node9.HumiditySensor.SensingUnit  "Current use over time"  ETV
-vector 411  Szenario1.Node9.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 412  Szenario1.Node9.HumiditySensor.SignalConditioner  "Current use over time"  ETV
-vector 413  Szenario1.Node9.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
-vector 414  Szenario1.Node9.HumiditySensor.SignalConverter  "Current use over time"  ETV
-vector 415  Szenario1.Node9.HumiditySensor.Transducer  "Energy Consumptions"  ETV
-vector 416  Szenario1.Node9.HumiditySensor.Transducer  "Current use over time"  ETV
-vector 417  Szenario1.Node9.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 418  Szenario1.Node9.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 419  Szenario1.Node9.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 420  Szenario1.Node9.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 421  Szenario1.Node9.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 422  Szenario1.Node9.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 423  Szenario1.Node9.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 424  Szenario1.Node9.LightSensor.Transducer  "Current use over time"  ETV
-vector 425  Szenario1.Node9.Memory  "Energy Consumptions"  ETV
-vector 426  Szenario1.Node9.Memory  "Current use over time"  ETV
-vector 434  Szenario1.Node10.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 435  Szenario1.Node10.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 436  Szenario1.Node10.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 437  Szenario1.Node10.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 438  Szenario1.Node10.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 439  Szenario1.Node10.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 440  Szenario1.Node10.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 441  Szenario1.Node10.LightSensor.Transducer  "Current use over time"  ETV
-vector 442  Szenario1.Node10.Memory  "Energy Consumptions"  ETV
-vector 443  Szenario1.Node10.Memory  "Current use over time"  ETV
-vector 451  Szenario1.Node11.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 452  Szenario1.Node11.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 453  Szenario1.Node11.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 454  Szenario1.Node11.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 455  Szenario1.Node11.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 456  Szenario1.Node11.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 457  Szenario1.Node11.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 458  Szenario1.Node11.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 459  Szenario1.Node11.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
-vector 460  Szenario1.Node11.HumiditySensor.SensingUnit  "Current use over time"  ETV
-vector 461  Szenario1.Node11.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 462  Szenario1.Node11.HumiditySensor.SignalConditioner  "Current use over time"  ETV
-vector 463  Szenario1.Node11.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
-vector 464  Szenario1.Node11.HumiditySensor.SignalConverter  "Current use over time"  ETV
-vector 465  Szenario1.Node11.HumiditySensor.Transducer  "Energy Consumptions"  ETV
-vector 466  Szenario1.Node11.HumiditySensor.Transducer  "Current use over time"  ETV
-vector 467  Szenario1.Node11.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 468  Szenario1.Node11.PressureSensor.SensingUnit  "Current use over time"  ETV
-vector 469  Szenario1.Node11.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 470  Szenario1.Node11.PressureSensor.SignalConditioner  "Current use over time"  ETV
-vector 471  Szenario1.Node11.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 472  Szenario1.Node11.PressureSensor.SignalConverter  "Current use over time"  ETV
-vector 473  Szenario1.Node11.PressureSensor.Transducer  "Energy Consumptions"  ETV
-vector 474  Szenario1.Node11.PressureSensor.Transducer  "Current use over time"  ETV
-vector 475  Szenario1.Node11.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 476  Szenario1.Node11.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 477  Szenario1.Node11.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 478  Szenario1.Node11.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 479  Szenario1.Node11.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 480  Szenario1.Node11.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 481  Szenario1.Node11.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 482  Szenario1.Node11.LightSensor.Transducer  "Current use over time"  ETV
-vector 483  Szenario1.Node11.Memory  "Energy Consumptions"  ETV
-vector 484  Szenario1.Node11.Memory  "Current use over time"  ETV
-vector 492  Szenario1.Node12.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 493  Szenario1.Node12.PressureSensor.SensingUnit  "Current use over time"  ETV
-vector 494  Szenario1.Node12.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 495  Szenario1.Node12.PressureSensor.SignalConditioner  "Current use over time"  ETV
-vector 496  Szenario1.Node12.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 497  Szenario1.Node12.PressureSensor.SignalConverter  "Current use over time"  ETV
-vector 498  Szenario1.Node12.PressureSensor.Transducer  "Energy Consumptions"  ETV
-vector 499  Szenario1.Node12.PressureSensor.Transducer  "Current use over time"  ETV
-vector 500  Szenario1.Node12.Memory  "Energy Consumptions"  ETV
-vector 501  Szenario1.Node12.Memory  "Current use over time"  ETV
-vector 509  Szenario1.Node13.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 510  Szenario1.Node13.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 511  Szenario1.Node13.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 512  Szenario1.Node13.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 513  Szenario1.Node13.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 514  Szenario1.Node13.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 515  Szenario1.Node13.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 516  Szenario1.Node13.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 517  Szenario1.Node13.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
-vector 518  Szenario1.Node13.HumiditySensor.SensingUnit  "Current use over time"  ETV
-vector 519  Szenario1.Node13.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 520  Szenario1.Node13.HumiditySensor.SignalConditioner  "Current use over time"  ETV
-vector 521  Szenario1.Node13.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
-vector 522  Szenario1.Node13.HumiditySensor.SignalConverter  "Current use over time"  ETV
-vector 523  Szenario1.Node13.HumiditySensor.Transducer  "Energy Consumptions"  ETV
-vector 524  Szenario1.Node13.HumiditySensor.Transducer  "Current use over time"  ETV
-vector 525  Szenario1.Node13.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 526  Szenario1.Node13.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 527  Szenario1.Node13.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 528  Szenario1.Node13.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 529  Szenario1.Node13.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 530  Szenario1.Node13.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 531  Szenario1.Node13.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 532  Szenario1.Node13.LightSensor.Transducer  "Current use over time"  ETV
-vector 533  Szenario1.Node13.Memory  "Energy Consumptions"  ETV
-vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
+vector 7  Szenario2.Node0.Processor  "power mode"  ETV
+vector 8  Szenario2.Node0.Processor  "Sensor Modules Status"  ETV
+vector 9  Szenario2.Node0.Processor  Voltage  ETV
+vector 10  Szenario2.Node0.Processor  residualRelative  ETV
+vector 11  Szenario2.Node0.Processor  residualAbs  ETV
+vector 19  Szenario2.Node1.Processor  "power mode"  ETV
+vector 20  Szenario2.Node1.Processor  "Sensor Modules Status"  ETV
+vector 21  Szenario2.Node1.Processor  Voltage  ETV
+vector 22  Szenario2.Node1.Processor  residualRelative  ETV
+vector 23  Szenario2.Node1.Processor  residualAbs  ETV
+vector 31  Szenario2.Node2.Processor  "power mode"  ETV
+vector 32  Szenario2.Node2.Processor  "Sensor Modules Status"  ETV
+vector 33  Szenario2.Node2.Processor  Voltage  ETV
+vector 34  Szenario2.Node2.Processor  residualRelative  ETV
+vector 35  Szenario2.Node2.Processor  residualAbs  ETV
+vector 43  Szenario2.Node3.Processor  "power mode"  ETV
+vector 44  Szenario2.Node3.Processor  "Sensor Modules Status"  ETV
+vector 45  Szenario2.Node3.Processor  Voltage  ETV
+vector 46  Szenario2.Node3.Processor  residualRelative  ETV
+vector 47  Szenario2.Node3.Processor  residualAbs  ETV
+vector 55  Szenario2.Node4.Processor  "power mode"  ETV
+vector 56  Szenario2.Node4.Processor  "Sensor Modules Status"  ETV
+vector 57  Szenario2.Node4.Processor  Voltage  ETV
+vector 58  Szenario2.Node4.Processor  residualRelative  ETV
+vector 59  Szenario2.Node4.Processor  residualAbs  ETV
+vector 67  Szenario2.Node5.Processor  "power mode"  ETV
+vector 68  Szenario2.Node5.Processor  "Sensor Modules Status"  ETV
+vector 69  Szenario2.Node5.Processor  Voltage  ETV
+vector 70  Szenario2.Node5.Processor  residualRelative  ETV
+vector 71  Szenario2.Node5.Processor  residualAbs  ETV
+vector 79  Szenario2.Node6.Processor  "power mode"  ETV
+vector 80  Szenario2.Node6.Processor  "Sensor Modules Status"  ETV
+vector 81  Szenario2.Node6.Processor  Voltage  ETV
+vector 82  Szenario2.Node6.Processor  residualRelative  ETV
+vector 83  Szenario2.Node6.Processor  residualAbs  ETV
+vector 91  Szenario2.Node7.Processor  "power mode"  ETV
+vector 92  Szenario2.Node7.Processor  "Sensor Modules Status"  ETV
+vector 93  Szenario2.Node7.Processor  Voltage  ETV
+vector 94  Szenario2.Node7.Processor  residualRelative  ETV
+vector 95  Szenario2.Node7.Processor  residualAbs  ETV
+vector 103  Szenario2.Node8.Processor  "power mode"  ETV
+vector 104  Szenario2.Node8.Processor  "Sensor Modules Status"  ETV
+vector 105  Szenario2.Node8.Processor  Voltage  ETV
+vector 106  Szenario2.Node8.Processor  residualRelative  ETV
+vector 107  Szenario2.Node8.Processor  residualAbs  ETV
+vector 115  Szenario2.Node9.Processor  "power mode"  ETV
+vector 116  Szenario2.Node9.Processor  "Sensor Modules Status"  ETV
+vector 117  Szenario2.Node9.Processor  Voltage  ETV
+vector 118  Szenario2.Node9.Processor  residualRelative  ETV
+vector 119  Szenario2.Node9.Processor  residualAbs  ETV
+vector 127  Szenario2.Node10.Processor  "power mode"  ETV
+vector 128  Szenario2.Node10.Processor  "Sensor Modules Status"  ETV
+vector 129  Szenario2.Node10.Processor  Voltage  ETV
+vector 130  Szenario2.Node10.Processor  residualRelative  ETV
+vector 131  Szenario2.Node10.Processor  residualAbs  ETV
+vector 139  Szenario2.Node11.Processor  "power mode"  ETV
+vector 140  Szenario2.Node11.Processor  "Sensor Modules Status"  ETV
+vector 141  Szenario2.Node11.Processor  Voltage  ETV
+vector 142  Szenario2.Node11.Processor  residualRelative  ETV
+vector 143  Szenario2.Node11.Processor  residualAbs  ETV
+vector 151  Szenario2.Node12.Processor  "power mode"  ETV
+vector 152  Szenario2.Node12.Processor  "Sensor Modules Status"  ETV
+vector 153  Szenario2.Node12.Processor  Voltage  ETV
+vector 154  Szenario2.Node12.Processor  residualRelative  ETV
+vector 155  Szenario2.Node12.Processor  residualAbs  ETV
+vector 163  Szenario2.Node13.Processor  "power mode"  ETV
+vector 164  Szenario2.Node13.Processor  "Sensor Modules Status"  ETV
+vector 165  Szenario2.Node13.Processor  Voltage  ETV
+vector 166  Szenario2.Node13.Processor  residualRelative  ETV
+vector 167  Szenario2.Node13.Processor  residualAbs  ETV
+vector 168  Szenario2.Node0.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 169  Szenario2.Node0.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 170  Szenario2.Node0.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 171  Szenario2.Node0.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 172  Szenario2.Node0.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 173  Szenario2.Node0.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 174  Szenario2.Node0.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 175  Szenario2.Node0.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 176  Szenario2.Node0.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 177  Szenario2.Node0.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 178  Szenario2.Node0.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 179  Szenario2.Node0.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 180  Szenario2.Node0.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 181  Szenario2.Node0.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 182  Szenario2.Node0.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 183  Szenario2.Node0.PressureSensor.Transducer  "Current use over time"  ETV
+vector 184  Szenario2.Node0.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 185  Szenario2.Node0.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 186  Szenario2.Node0.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 187  Szenario2.Node0.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 188  Szenario2.Node0.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 189  Szenario2.Node0.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 190  Szenario2.Node0.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 191  Szenario2.Node0.LightSensor.Transducer  "Current use over time"  ETV
+vector 192  Szenario2.Node0.Memory  "Energy Consumptions"  ETV
+vector 193  Szenario2.Node0.Memory  "Current use over time"  ETV
+vector 201  Szenario2.Node1.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 202  Szenario2.Node1.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 203  Szenario2.Node1.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 204  Szenario2.Node1.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 205  Szenario2.Node1.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 206  Szenario2.Node1.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 207  Szenario2.Node1.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 208  Szenario2.Node1.LightSensor.Transducer  "Current use over time"  ETV
+vector 209  Szenario2.Node1.Memory  "Energy Consumptions"  ETV
+vector 210  Szenario2.Node1.Memory  "Current use over time"  ETV
+vector 218  Szenario2.Node2.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 219  Szenario2.Node2.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 220  Szenario2.Node2.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 221  Szenario2.Node2.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 222  Szenario2.Node2.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 223  Szenario2.Node2.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 224  Szenario2.Node2.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 225  Szenario2.Node2.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 226  Szenario2.Node2.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 227  Szenario2.Node2.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 228  Szenario2.Node2.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 229  Szenario2.Node2.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 230  Szenario2.Node2.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 231  Szenario2.Node2.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 232  Szenario2.Node2.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 233  Szenario2.Node2.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 234  Szenario2.Node2.Memory  "Energy Consumptions"  ETV
+vector 235  Szenario2.Node2.Memory  "Current use over time"  ETV
+vector 243  Szenario2.Node3.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 244  Szenario2.Node3.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 245  Szenario2.Node3.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 246  Szenario2.Node3.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 247  Szenario2.Node3.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 248  Szenario2.Node3.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 249  Szenario2.Node3.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 250  Szenario2.Node3.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 251  Szenario2.Node3.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 252  Szenario2.Node3.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 253  Szenario2.Node3.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 254  Szenario2.Node3.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 255  Szenario2.Node3.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 256  Szenario2.Node3.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 257  Szenario2.Node3.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 258  Szenario2.Node3.PressureSensor.Transducer  "Current use over time"  ETV
+vector 259  Szenario2.Node3.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 260  Szenario2.Node3.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 261  Szenario2.Node3.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 262  Szenario2.Node3.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 263  Szenario2.Node3.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 264  Szenario2.Node3.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 265  Szenario2.Node3.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 266  Szenario2.Node3.LightSensor.Transducer  "Current use over time"  ETV
+vector 267  Szenario2.Node3.Memory  "Energy Consumptions"  ETV
+vector 268  Szenario2.Node3.Memory  "Current use over time"  ETV
+vector 276  Szenario2.Node4.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 277  Szenario2.Node4.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 278  Szenario2.Node4.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 279  Szenario2.Node4.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 280  Szenario2.Node4.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 281  Szenario2.Node4.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 282  Szenario2.Node4.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 283  Szenario2.Node4.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 284  Szenario2.Node4.Memory  "Energy Consumptions"  ETV
+vector 285  Szenario2.Node4.Memory  "Current use over time"  ETV
+vector 293  Szenario2.Node5.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 294  Szenario2.Node5.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 295  Szenario2.Node5.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 296  Szenario2.Node5.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 297  Szenario2.Node5.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 298  Szenario2.Node5.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 299  Szenario2.Node5.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 300  Szenario2.Node5.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 301  Szenario2.Node5.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 302  Szenario2.Node5.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 303  Szenario2.Node5.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 304  Szenario2.Node5.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 305  Szenario2.Node5.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 306  Szenario2.Node5.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 307  Szenario2.Node5.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 308  Szenario2.Node5.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 309  Szenario2.Node5.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 310  Szenario2.Node5.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 311  Szenario2.Node5.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 312  Szenario2.Node5.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 313  Szenario2.Node5.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 314  Szenario2.Node5.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 315  Szenario2.Node5.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 316  Szenario2.Node5.PressureSensor.Transducer  "Current use over time"  ETV
+vector 317  Szenario2.Node5.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 318  Szenario2.Node5.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 319  Szenario2.Node5.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 320  Szenario2.Node5.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 321  Szenario2.Node5.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 322  Szenario2.Node5.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 323  Szenario2.Node5.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 324  Szenario2.Node5.LightSensor.Transducer  "Current use over time"  ETV
+vector 325  Szenario2.Node5.Memory  "Energy Consumptions"  ETV
+vector 326  Szenario2.Node5.Memory  "Current use over time"  ETV
+vector 334  Szenario2.Node6.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 335  Szenario2.Node6.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 336  Szenario2.Node6.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 337  Szenario2.Node6.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 338  Szenario2.Node6.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 339  Szenario2.Node6.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 340  Szenario2.Node6.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 341  Szenario2.Node6.LightSensor.Transducer  "Current use over time"  ETV
+vector 342  Szenario2.Node6.Memory  "Energy Consumptions"  ETV
+vector 343  Szenario2.Node6.Memory  "Current use over time"  ETV
+vector 351  Szenario2.Node7.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 352  Szenario2.Node7.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 353  Szenario2.Node7.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 354  Szenario2.Node7.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 355  Szenario2.Node7.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 356  Szenario2.Node7.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 357  Szenario2.Node7.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 358  Szenario2.Node7.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 359  Szenario2.Node7.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 360  Szenario2.Node7.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 361  Szenario2.Node7.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 362  Szenario2.Node7.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 363  Szenario2.Node7.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 364  Szenario2.Node7.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 365  Szenario2.Node7.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 366  Szenario2.Node7.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 367  Szenario2.Node7.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 368  Szenario2.Node7.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 369  Szenario2.Node7.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 370  Szenario2.Node7.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 371  Szenario2.Node7.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 372  Szenario2.Node7.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 373  Szenario2.Node7.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 374  Szenario2.Node7.PressureSensor.Transducer  "Current use over time"  ETV
+vector 375  Szenario2.Node7.Memory  "Energy Consumptions"  ETV
+vector 376  Szenario2.Node7.Memory  "Current use over time"  ETV
+vector 384  Szenario2.Node8.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 385  Szenario2.Node8.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 386  Szenario2.Node8.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 387  Szenario2.Node8.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 388  Szenario2.Node8.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 389  Szenario2.Node8.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 390  Szenario2.Node8.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 391  Szenario2.Node8.LightSensor.Transducer  "Current use over time"  ETV
+vector 392  Szenario2.Node8.Memory  "Energy Consumptions"  ETV
+vector 393  Szenario2.Node8.Memory  "Current use over time"  ETV
+vector 401  Szenario2.Node9.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 402  Szenario2.Node9.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 403  Szenario2.Node9.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 404  Szenario2.Node9.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 405  Szenario2.Node9.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 406  Szenario2.Node9.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 407  Szenario2.Node9.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 408  Szenario2.Node9.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 409  Szenario2.Node9.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 410  Szenario2.Node9.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 411  Szenario2.Node9.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 412  Szenario2.Node9.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 413  Szenario2.Node9.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 414  Szenario2.Node9.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 415  Szenario2.Node9.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 416  Szenario2.Node9.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 417  Szenario2.Node9.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 418  Szenario2.Node9.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 419  Szenario2.Node9.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 420  Szenario2.Node9.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 421  Szenario2.Node9.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 422  Szenario2.Node9.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 423  Szenario2.Node9.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 424  Szenario2.Node9.LightSensor.Transducer  "Current use over time"  ETV
+vector 425  Szenario2.Node9.Memory  "Energy Consumptions"  ETV
+vector 426  Szenario2.Node9.Memory  "Current use over time"  ETV
+vector 434  Szenario2.Node10.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 435  Szenario2.Node10.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 436  Szenario2.Node10.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 437  Szenario2.Node10.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 438  Szenario2.Node10.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 439  Szenario2.Node10.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 440  Szenario2.Node10.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 441  Szenario2.Node10.LightSensor.Transducer  "Current use over time"  ETV
+vector 442  Szenario2.Node10.Memory  "Energy Consumptions"  ETV
+vector 443  Szenario2.Node10.Memory  "Current use over time"  ETV
+vector 451  Szenario2.Node11.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 452  Szenario2.Node11.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 453  Szenario2.Node11.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 454  Szenario2.Node11.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 455  Szenario2.Node11.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 456  Szenario2.Node11.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 457  Szenario2.Node11.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 458  Szenario2.Node11.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 459  Szenario2.Node11.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 460  Szenario2.Node11.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 461  Szenario2.Node11.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 462  Szenario2.Node11.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 463  Szenario2.Node11.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 464  Szenario2.Node11.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 465  Szenario2.Node11.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 466  Szenario2.Node11.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 467  Szenario2.Node11.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 468  Szenario2.Node11.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 469  Szenario2.Node11.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 470  Szenario2.Node11.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 471  Szenario2.Node11.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 472  Szenario2.Node11.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 473  Szenario2.Node11.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 474  Szenario2.Node11.PressureSensor.Transducer  "Current use over time"  ETV
+vector 475  Szenario2.Node11.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 476  Szenario2.Node11.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 477  Szenario2.Node11.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 478  Szenario2.Node11.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 479  Szenario2.Node11.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 480  Szenario2.Node11.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 481  Szenario2.Node11.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 482  Szenario2.Node11.LightSensor.Transducer  "Current use over time"  ETV
+vector 483  Szenario2.Node11.Memory  "Energy Consumptions"  ETV
+vector 484  Szenario2.Node11.Memory  "Current use over time"  ETV
+vector 492  Szenario2.Node12.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 493  Szenario2.Node12.PressureSensor.SensingUnit  "Current use over time"  ETV
+vector 494  Szenario2.Node12.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 495  Szenario2.Node12.PressureSensor.SignalConditioner  "Current use over time"  ETV
+vector 496  Szenario2.Node12.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 497  Szenario2.Node12.PressureSensor.SignalConverter  "Current use over time"  ETV
+vector 498  Szenario2.Node12.PressureSensor.Transducer  "Energy Consumptions"  ETV
+vector 499  Szenario2.Node12.PressureSensor.Transducer  "Current use over time"  ETV
+vector 500  Szenario2.Node12.Memory  "Energy Consumptions"  ETV
+vector 501  Szenario2.Node12.Memory  "Current use over time"  ETV
+vector 509  Szenario2.Node13.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 510  Szenario2.Node13.TemperatureSensor.SensingUnit  "Current use over time"  ETV
+vector 511  Szenario2.Node13.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 512  Szenario2.Node13.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
+vector 513  Szenario2.Node13.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 514  Szenario2.Node13.TemperatureSensor.SignalConverter  "Current use over time"  ETV
+vector 515  Szenario2.Node13.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
+vector 516  Szenario2.Node13.TemperatureSensor.Transducer  "Current use over time"  ETV
+vector 517  Szenario2.Node13.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
+vector 518  Szenario2.Node13.HumiditySensor.SensingUnit  "Current use over time"  ETV
+vector 519  Szenario2.Node13.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 520  Szenario2.Node13.HumiditySensor.SignalConditioner  "Current use over time"  ETV
+vector 521  Szenario2.Node13.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
+vector 522  Szenario2.Node13.HumiditySensor.SignalConverter  "Current use over time"  ETV
+vector 523  Szenario2.Node13.HumiditySensor.Transducer  "Energy Consumptions"  ETV
+vector 524  Szenario2.Node13.HumiditySensor.Transducer  "Current use over time"  ETV
+vector 525  Szenario2.Node13.LightSensor.SensingUnit  "Energy Consumptions"  ETV
+vector 526  Szenario2.Node13.LightSensor.SensingUnit  "Current use over time"  ETV
+vector 527  Szenario2.Node13.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
+vector 528  Szenario2.Node13.LightSensor.SignalConditioner  "Current use over time"  ETV
+vector 529  Szenario2.Node13.LightSensor.SignalConverter  "Energy Consumptions"  ETV
+vector 530  Szenario2.Node13.LightSensor.SignalConverter  "Current use over time"  ETV
+vector 531  Szenario2.Node13.LightSensor.Transducer  "Energy Consumptions"  ETV
+vector 532  Szenario2.Node13.LightSensor.Transducer  "Current use over time"  ETV
+vector 533  Szenario2.Node13.Memory  "Energy Consumptions"  ETV
+vector 534  Szenario2.Node13.Memory  "Current use over time"  ETV
 7	0	0	0
 7	0	0	1
 7	157	1	2
@@ -381,7 +381,27 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 8	723	30	0
 8	724	30	0
 8	725	30	0
-8	1390	40	1
+8	785	40	1
+8	923	40	0
+8	924	40	0
+8	925	40	0
+8	985	50	1
+8	1123	50	0
+8	1124	50	0
+8	1125	50	0
+8	1185	60	1
+8	1323	60	0
+8	1324	60	0
+8	1325	60	0
+8	1413	70	1
+8	1551	70	0
+8	1552	70	0
+8	1553	70	0
+8	1613	80	1
+8	1751	80	0
+8	1752	80	0
+8	1753	80	0
+8	1813	90	1
 9	0	0	3
 9	95	0	3
 9	95	0	3
@@ -417,8 +437,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 9	724	30	3
 9	725	30	3
 9	725	30	3
-9	1390	40	3
-9	1390	40	3
+9	785	40	3
+9	785	40	3
+9	923	40	3
+9	923	40	3
+9	924	40	3
+9	924	40	3
+9	925	40	3
+9	925	40	3
+9	985	50	3
+9	985	50	3
+9	1123	50	3
+9	1123	50	3
+9	1124	50	3
+9	1124	50	3
+9	1125	50	3
+9	1125	50	3
+9	1185	60	3
+9	1185	60	3
+9	1323	60	3
+9	1323	60	3
+9	1324	60	3
+9	1324	60	3
+9	1325	60	3
+9	1325	60	3
+9	1413	70	3
+9	1413	70	3
+9	1551	70	3
+9	1551	70	3
+9	1552	70	3
+9	1552	70	3
+9	1553	70	3
+9	1553	70	3
+9	1613	80	3
+9	1613	80	3
+9	1751	80	3
+9	1751	80	3
+9	1752	80	3
+9	1752	80	3
+9	1753	80	3
+9	1753	80	3
+9	1813	90	3
+9	1813	90	3
 10	0	0	1
 10	95	0	0.99861111111111
 10	95	0	0.99847222222222
@@ -454,8 +514,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 10	724	30	0.97866462962963
 10	725	30	0.97866462962963
 10	725	30	0.97847944444444
-10	1390	40	0.97820166666667
-10	1390	40	0.97410314814815
+10	785	40	0.97820166666667
+10	785	40	0.97410314814815
+10	923	40	0.97243648148148
+10	923	40	0.9722512962963
+10	924	40	0.9722512962963
+10	924	40	0.97206611111111
+10	925	40	0.97206611111111
+10	925	40	0.97188092592593
+10	985	50	0.97160314814815
+10	985	50	0.96750462962963
+10	1123	50	0.96583796296296
+10	1123	50	0.96565277777778
+10	1124	50	0.96565277777778
+10	1124	50	0.96546759259259
+10	1125	50	0.96546759259259
+10	1125	50	0.96528240740741
+10	1185	60	0.96500462962963
+10	1185	60	0.96090611111111
+10	1323	60	0.95923944444444
+10	1323	60	0.95905425925926
+10	1324	60	0.95905425925926
+10	1324	60	0.95886907407407
+10	1325	60	0.95886907407407
+10	1325	60	0.95868388888889
+10	1413	70	0.95840611111111
+10	1413	70	0.95430759259259
+10	1551	70	0.95264092592593
+10	1551	70	0.95245574074074
+10	1552	70	0.95245574074074
+10	1552	70	0.95227055555556
+10	1553	70	0.95227055555556
+10	1553	70	0.95208537037037
+10	1613	80	0.95180759259259
+10	1613	80	0.94770907407407
+10	1751	80	0.94604240740741
+10	1751	80	0.94585722222222
+10	1752	80	0.94585722222222
+10	1752	80	0.94567203703704
+10	1753	80	0.94567203703704
+10	1753	80	0.94548685185185
+10	1813	90	0.94520907407407
+10	1813	90	0.94111055555556
 11	0	0	10800000
 11	95	0	10785000
 11	95	0	10783500
@@ -491,8 +591,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 11	724	30	10569578
 11	725	30	10569578
 11	725	30	10567578
-11	1390	40	10564578
-11	1390	40	10520314
+11	785	40	10564578
+11	785	40	10520314
+11	923	40	10502314
+11	923	40	10500314
+11	924	40	10500314
+11	924	40	10498314
+11	925	40	10498314
+11	925	40	10496314
+11	985	50	10493314
+11	985	50	10449050
+11	1123	50	10431050
+11	1123	50	10429050
+11	1124	50	10429050
+11	1124	50	10427050
+11	1125	50	10427050
+11	1125	50	10425050
+11	1185	60	10422050
+11	1185	60	10377786
+11	1323	60	10359786
+11	1323	60	10357786
+11	1324	60	10357786
+11	1324	60	10355786
+11	1325	60	10355786
+11	1325	60	10353786
+11	1413	70	10350786
+11	1413	70	10306522
+11	1551	70	10288522
+11	1551	70	10286522
+11	1552	70	10286522
+11	1552	70	10284522
+11	1553	70	10284522
+11	1553	70	10282522
+11	1613	80	10279522
+11	1613	80	10235258
+11	1751	80	10217258
+11	1751	80	10215258
+11	1752	80	10215258
+11	1752	80	10213258
+11	1753	80	10213258
+11	1753	80	10211258
+11	1813	90	10208258
+11	1813	90	10163994
 19	0	0	0
 19	0	0	1
 19	158	1	2
@@ -505,7 +645,17 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 20	526	20	0
 20	586	30	1
 20	726	30	0
-20	1391	40	1
+20	786	40	1
+20	926	40	0
+20	986	50	1
+20	1126	50	0
+20	1186	60	1
+20	1326	60	0
+20	1414	70	1
+20	1554	70	0
+20	1614	80	1
+20	1754	80	0
+20	1814	90	1
 21	0	0	3
 21	98	0	3
 21	98	0	3
@@ -525,8 +675,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 21	586	30	3
 21	726	30	3
 21	726	30	3
-21	1391	40	3
-21	1391	40	3
+21	786	40	3
+21	786	40	3
+21	926	40	3
+21	926	40	3
+21	986	50	3
+21	986	50	3
+21	1126	50	3
+21	1126	50	3
+21	1186	60	3
+21	1186	60	3
+21	1326	60	3
+21	1326	60	3
+21	1414	70	3
+21	1414	70	3
+21	1554	70	3
+21	1554	70	3
+21	1614	80	3
+21	1614	80	3
+21	1754	80	3
+21	1754	80	3
+21	1814	90	3
+21	1814	90	3
 22	0	0	1
 22	98	0	0.99953703703704
 22	98	0	0.99939814814815
@@ -546,8 +716,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 22	586	30	0.98742388888889
 22	726	30	0.98686833333333
 22	726	30	0.98668314814815
-22	1391	40	0.9846012688092
-22	1391	40	0.98315872862623
+22	786	40	0.98659055555556
+22	786	40	0.9831587037037
+22	926	40	0.98260314814815
+22	926	40	0.98241796296296
+22	986	50	0.98232537037037
+22	986	50	0.97889351851852
+22	1126	50	0.97833796296296
+22	1126	50	0.97815277777778
+22	1186	60	0.97806018518519
+22	1186	60	0.97462833333333
+22	1326	60	0.97407277777778
+22	1326	60	0.97388759259259
+22	1414	70	0.973795
+22	1414	70	0.97036314814815
+22	1554	70	0.96980759259259
+22	1554	70	0.96962240740741
+22	1614	80	0.96952981481481
+22	1614	80	0.96609796296296
+22	1754	80	0.96554240740741
+22	1754	80	0.96535722222222
+22	1814	90	0.96526462962963
+22	1814	90	0.96183277777778
 23	0	0	10800000
 23	98	0	10795000
 23	98	0	10793500
@@ -567,8 +757,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 23	586	30	10664178
 23	726	30	10658178
 23	726	30	10656178
-23	1391	40	10633693.703139
-23	1391	40	10618114.269163
+23	786	40	10655178
+23	786	40	10618114
+23	926	40	10612114
+23	926	40	10610114
+23	986	50	10609114
+23	986	50	10572050
+23	1126	50	10566050
+23	1126	50	10564050
+23	1186	60	10563050
+23	1186	60	10525986
+23	1326	60	10519986
+23	1326	60	10517986
+23	1414	70	10516986
+23	1414	70	10479922
+23	1554	70	10473922
+23	1554	70	10471922
+23	1614	80	10470922
+23	1614	80	10433858
+23	1754	80	10427858
+23	1754	80	10425858
+23	1814	90	10424858
+23	1814	90	10387794
 31	0	0	0
 31	0	0	1
 31	159	1	2
@@ -585,7 +795,22 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 32	587	30	1
 32	727	30	0
 32	728	30	0
-32	1392	40	1
+32	787	40	1
+32	927	40	0
+32	928	40	0
+32	987	50	1
+32	1127	50	0
+32	1128	50	0
+32	1187	60	1
+32	1327	60	0
+32	1328	60	0
+32	1415	70	1
+32	1555	70	0
+32	1556	70	0
+32	1615	80	1
+32	1755	80	0
+32	1756	80	0
+32	1815	90	1
 33	0	0	3
 33	99	0	3
 33	99	0	3
@@ -613,8 +838,38 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 33	727	30	3
 33	728	30	3
 33	728	30	3
-33	1392	40	3
-33	1392	40	3
+33	787	40	3
+33	787	40	3
+33	927	40	3
+33	927	40	3
+33	928	40	3
+33	928	40	3
+33	987	50	3
+33	987	50	3
+33	1127	50	3
+33	1127	50	3
+33	1128	50	3
+33	1128	50	3
+33	1187	60	3
+33	1187	60	3
+33	1327	60	3
+33	1327	60	3
+33	1328	60	3
+33	1328	60	3
+33	1415	70	3
+33	1415	70	3
+33	1555	70	3
+33	1555	70	3
+33	1556	70	3
+33	1556	70	3
+33	1615	80	3
+33	1615	80	3
+33	1755	80	3
+33	1755	80	3
+33	1756	80	3
+33	1756	80	3
+33	1815	90	3
+33	1815	90	3
 34	0	0	1
 34	99	0	0.99907407407407
 34	99	0	0.99893518518519
@@ -642,8 +897,38 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 34	727	30	0.98276648148148
 34	728	30	0.98276648148148
 34	728	30	0.9825812962963
-34	1392	40	0.98201817384755
-34	1392	40	0.9786309309927
+34	787	40	0.98239611111111
+34	787	40	0.97863092592593
+34	927	40	0.97751981481481
+34	927	40	0.97733462962963
+34	928	40	0.97733462962963
+34	928	40	0.97714944444444
+34	987	50	0.97696425925926
+34	987	50	0.97319907407407
+34	1127	50	0.97208796296296
+34	1127	50	0.97190277777778
+34	1128	50	0.97190277777778
+34	1128	50	0.97171759259259
+34	1187	60	0.97153240740741
+34	1187	60	0.96776722222222
+34	1327	60	0.96665611111111
+34	1327	60	0.96647092592593
+34	1328	60	0.96647092592593
+34	1328	60	0.96628574074074
+34	1415	70	0.96610055555556
+34	1415	70	0.96233537037037
+34	1555	70	0.96122425925926
+34	1555	70	0.96103907407407
+34	1556	70	0.96103907407407
+34	1556	70	0.96085388888889
+34	1615	80	0.9606687037037
+34	1615	80	0.95690351851852
+34	1755	80	0.95579240740741
+34	1755	80	0.95560722222222
+34	1756	80	0.95560722222222
+34	1756	80	0.95542203703704
+34	1815	90	0.95523685185185
+34	1815	90	0.95147166666667
 35	0	0	10800000
 35	99	0	10790000
 35	99	0	10788500
@@ -671,8 +956,38 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 35	727	30	10613878
 35	728	30	10613878
 35	728	30	10611878
-35	1392	40	10605796.277554
-35	1392	40	10569214.054721
+35	787	40	10609878
+35	787	40	10569214
+35	927	40	10557214
+35	927	40	10555214
+35	928	40	10555214
+35	928	40	10553214
+35	987	50	10551214
+35	987	50	10510550
+35	1127	50	10498550
+35	1127	50	10496550
+35	1128	50	10496550
+35	1128	50	10494550
+35	1187	60	10492550
+35	1187	60	10451886
+35	1327	60	10439886
+35	1327	60	10437886
+35	1328	60	10437886
+35	1328	60	10435886
+35	1415	70	10433886
+35	1415	70	10393222
+35	1555	70	10381222
+35	1555	70	10379222
+35	1556	70	10379222
+35	1556	70	10377222
+35	1615	80	10375222
+35	1615	80	10334558
+35	1755	80	10322558
+35	1755	80	10320558
+35	1756	80	10320558
+35	1756	80	10318558
+35	1815	90	10316558
+35	1815	90	10275894
 43	0	0	0
 43	0	0	1
 43	160	1	2
@@ -693,7 +1008,27 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 44	729	30	0
 44	730	30	0
 44	731	30	0
-44	1393	40	1
+44	788	40	1
+44	929	40	0
+44	930	40	0
+44	931	40	0
+44	988	50	1
+44	1129	50	0
+44	1130	50	0
+44	1131	50	0
+44	1188	60	1
+44	1329	60	0
+44	1330	60	0
+44	1331	60	0
+44	1416	70	1
+44	1557	70	0
+44	1558	70	0
+44	1559	70	0
+44	1616	80	1
+44	1757	80	0
+44	1758	80	0
+44	1759	80	0
+44	1816	90	1
 45	0	0	3
 45	101	0	3
 45	101	0	3
@@ -729,8 +1064,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 45	730	30	3
 45	731	30	3
 45	731	30	3
-45	1393	40	3
-45	1393	40	3
+45	788	40	3
+45	788	40	3
+45	929	40	3
+45	929	40	3
+45	930	40	3
+45	930	40	3
+45	931	40	3
+45	931	40	3
+45	988	50	3
+45	988	50	3
+45	1129	50	3
+45	1129	50	3
+45	1130	50	3
+45	1130	50	3
+45	1131	50	3
+45	1131	50	3
+45	1188	60	3
+45	1188	60	3
+45	1329	60	3
+45	1329	60	3
+45	1330	60	3
+45	1330	60	3
+45	1331	60	3
+45	1331	60	3
+45	1416	70	3
+45	1416	70	3
+45	1557	70	3
+45	1557	70	3
+45	1558	70	3
+45	1558	70	3
+45	1559	70	3
+45	1559	70	3
+45	1616	80	3
+45	1616	80	3
+45	1757	80	3
+45	1757	80	3
+45	1758	80	3
+45	1758	80	3
+45	1759	80	3
+45	1759	80	3
+45	1816	90	3
+45	1816	90	3
 46	0	0	1
 46	101	0	0.99861111111111
 46	101	0	0.99847222222222
@@ -766,8 +1141,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 46	730	30	0.97866462962963
 46	731	30	0.97866462962963
 46	731	30	0.97847944444444
-46	1393	40	0.97778071257532
-46	1393	40	0.97410315321492
+46	788	40	0.97820166666667
+46	788	40	0.97410314814815
+46	929	40	0.97243648148148
+46	929	40	0.9722512962963
+46	930	40	0.9722512962963
+46	930	40	0.97206611111111
+46	931	40	0.97206611111111
+46	931	40	0.97188092592593
+46	988	50	0.97160314814815
+46	988	50	0.96750462962963
+46	1129	50	0.96583796296296
+46	1129	50	0.96565277777778
+46	1130	50	0.96565277777778
+46	1130	50	0.96546759259259
+46	1131	50	0.96546759259259
+46	1131	50	0.96528240740741
+46	1188	60	0.96500462962963
+46	1188	60	0.96090611111111
+46	1329	60	0.95923944444444
+46	1329	60	0.95905425925926
+46	1330	60	0.95905425925926
+46	1330	60	0.95886907407407
+46	1331	60	0.95886907407407
+46	1331	60	0.95868388888889
+46	1416	70	0.95840611111111
+46	1416	70	0.95430759259259
+46	1557	70	0.95264092592593
+46	1557	70	0.95245574074074
+46	1558	70	0.95245574074074
+46	1558	70	0.95227055555556
+46	1559	70	0.95227055555556
+46	1559	70	0.95208537037037
+46	1616	80	0.95180759259259
+46	1616	80	0.94770907407407
+46	1757	80	0.94604240740741
+46	1757	80	0.94585722222222
+46	1758	80	0.94585722222222
+46	1758	80	0.94567203703704
+46	1759	80	0.94567203703704
+46	1759	80	0.94548685185185
+46	1816	90	0.94520907407407
+46	1816	90	0.94111055555556
 47	0	0	10800000
 47	101	0	10785000
 47	101	0	10783500
@@ -803,8 +1218,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 47	730	30	10569578
 47	731	30	10569578
 47	731	30	10567578
-47	1393	40	10560031.695814
-47	1393	40	10520314.054721
+47	788	40	10564578
+47	788	40	10520314
+47	929	40	10502314
+47	929	40	10500314
+47	930	40	10500314
+47	930	40	10498314
+47	931	40	10498314
+47	931	40	10496314
+47	988	50	10493314
+47	988	50	10449050
+47	1129	50	10431050
+47	1129	50	10429050
+47	1130	50	10429050
+47	1130	50	10427050
+47	1131	50	10427050
+47	1131	50	10425050
+47	1188	60	10422050
+47	1188	60	10377786
+47	1329	60	10359786
+47	1329	60	10357786
+47	1330	60	10357786
+47	1330	60	10355786
+47	1331	60	10355786
+47	1331	60	10353786
+47	1416	70	10350786
+47	1416	70	10306522
+47	1557	70	10288522
+47	1557	70	10286522
+47	1558	70	10286522
+47	1558	70	10284522
+47	1559	70	10284522
+47	1559	70	10282522
+47	1616	80	10279522
+47	1616	80	10235258
+47	1757	80	10217258
+47	1757	80	10215258
+47	1758	80	10215258
+47	1758	80	10213258
+47	1759	80	10213258
+47	1759	80	10211258
+47	1816	90	10208258
+47	1816	90	10163994
 55	0	0	0
 55	0	0	1
 55	161	1	2
@@ -817,7 +1272,17 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 56	532	20	0
 56	589	30	1
 56	732	30	0
-56	1394	40	1
+56	789	40	1
+56	932	40	0
+56	989	50	1
+56	1132	50	0
+56	1189	60	1
+56	1332	60	0
+56	1417	70	1
+56	1560	70	0
+56	1617	80	1
+56	1760	80	0
+56	1817	90	1
 57	0	0	3
 57	104	0	3
 57	104	0	3
@@ -837,8 +1302,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 57	589	30	3
 57	732	30	3
 57	732	30	3
-57	1394	40	3
-57	1394	40	3
+57	789	40	3
+57	789	40	3
+57	932	40	3
+57	932	40	3
+57	989	50	3
+57	989	50	3
+57	1132	50	3
+57	1132	50	3
+57	1189	60	3
+57	1189	60	3
+57	1332	60	3
+57	1332	60	3
+57	1417	70	3
+57	1417	70	3
+57	1560	70	3
+57	1560	70	3
+57	1617	80	3
+57	1617	80	3
+57	1760	80	3
+57	1760	80	3
+57	1817	90	3
+57	1817	90	3
 58	0	0	1
 58	104	0	0.99953703703704
 58	104	0	0.99939814814815
@@ -858,8 +1343,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 58	589	30	0.98742388888889
 58	732	30	0.98686833333333
 58	732	30	0.98668314814815
-58	1394	40	0.98623482178644
-58	1394	40	0.98315870877047
+58	789	40	0.98659055555556
+58	789	40	0.9831587037037
+58	932	40	0.98260314814815
+58	932	40	0.98241796296296
+58	989	50	0.98232537037037
+58	989	50	0.97889351851852
+58	1132	50	0.97833796296296
+58	1132	50	0.97815277777778
+58	1189	60	0.97806018518519
+58	1189	60	0.97462833333333
+58	1332	60	0.97407277777778
+58	1332	60	0.97388759259259
+58	1417	70	0.973795
+58	1417	70	0.97036314814815
+58	1560	70	0.96980759259259
+58	1560	70	0.96962240740741
+58	1617	80	0.96952981481481
+58	1617	80	0.96609796296296
+58	1760	80	0.96554240740741
+58	1760	80	0.96535722222222
+58	1817	90	0.96526462962963
+58	1817	90	0.96183277777778
 59	0	0	10800000
 59	104	0	10795000
 59	104	0	10793500
@@ -879,8 +1384,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 59	589	30	10664178
 59	732	30	10658178
 59	732	30	10656178
-59	1394	40	10651336.075294
-59	1394	40	10618114.054721
+59	789	40	10655178
+59	789	40	10618114
+59	932	40	10612114
+59	932	40	10610114
+59	989	50	10609114
+59	989	50	10572050
+59	1132	50	10566050
+59	1132	50	10564050
+59	1189	60	10563050
+59	1189	60	10525986
+59	1332	60	10519986
+59	1332	60	10517986
+59	1417	70	10516986
+59	1417	70	10479922
+59	1560	70	10473922
+59	1560	70	10471922
+59	1617	80	10470922
+59	1617	80	10433858
+59	1760	80	10427858
+59	1760	80	10425858
+59	1817	90	10424858
+59	1817	90	10387794
 67	0	0	0
 67	0	0	1
 67	162	1	2
@@ -905,7 +1430,32 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 68	734	30	0
 68	735	30	0
 68	736	30	0
-68	1395	40	1
+68	790	40	1
+68	933	40	0
+68	934	40	0
+68	935	40	0
+68	936	40	0
+68	990	50	1
+68	1133	50	0
+68	1134	50	0
+68	1135	50	0
+68	1136	50	0
+68	1190	60	1
+68	1333	60	0
+68	1334	60	0
+68	1335	60	0
+68	1336	60	0
+68	1418	70	1
+68	1561	70	0
+68	1562	70	0
+68	1563	70	0
+68	1564	70	0
+68	1618	80	1
+68	1761	80	0
+68	1762	80	0
+68	1763	80	0
+68	1764	80	0
+68	1818	90	1
 69	0	0	3
 69	105	0	3
 69	105	0	3
@@ -949,8 +1499,58 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 69	735	30	3
 69	736	30	3
 69	736	30	3
-69	1395	40	3
-69	1395	40	3
+69	790	40	3
+69	790	40	3
+69	933	40	3
+69	933	40	3
+69	934	40	3
+69	934	40	3
+69	935	40	3
+69	935	40	3
+69	936	40	3
+69	936	40	3
+69	990	50	3
+69	990	50	3
+69	1133	50	3
+69	1133	50	3
+69	1134	50	3
+69	1134	50	3
+69	1135	50	3
+69	1135	50	3
+69	1136	50	3
+69	1136	50	3
+69	1190	60	3
+69	1190	60	3
+69	1333	60	3
+69	1333	60	3
+69	1334	60	3
+69	1334	60	3
+69	1335	60	3
+69	1335	60	3
+69	1336	60	3
+69	1336	60	3
+69	1418	70	3
+69	1418	70	3
+69	1561	70	3
+69	1561	70	3
+69	1562	70	3
+69	1562	70	3
+69	1563	70	3
+69	1563	70	3
+69	1564	70	3
+69	1564	70	3
+69	1618	80	3
+69	1618	80	3
+69	1761	80	3
+69	1761	80	3
+69	1762	80	3
+69	1762	80	3
+69	1763	80	3
+69	1763	80	3
+69	1764	80	3
+69	1764	80	3
+69	1818	90	3
+69	1818	90	3
 70	0	0	1
 70	105	0	0.99814814814815
 70	105	0	0.99800925925926
@@ -994,8 +1594,58 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 70	735	30	0.97456277777778
 70	736	30	0.97456277777778
 70	736	30	0.97437759259259
-70	1395	40	0.9713712378092
-70	1395	40	0.9695753952929
+70	790	40	0.97400722222222
+70	790	40	0.96957537037037
+70	933	40	0.96735314814815
+70	933	40	0.96716796296296
+70	934	40	0.96716796296296
+70	934	40	0.96698277777778
+70	935	40	0.96698277777778
+70	935	40	0.96679759259259
+70	936	40	0.96679759259259
+70	936	40	0.96661240740741
+70	990	50	0.96624203703704
+70	990	50	0.96181018518519
+70	1133	50	0.95958796296296
+70	1133	50	0.95940277777778
+70	1134	50	0.95940277777778
+70	1134	50	0.95921759259259
+70	1135	50	0.95921759259259
+70	1135	50	0.95903240740741
+70	1136	50	0.95903240740741
+70	1136	50	0.95884722222222
+70	1190	60	0.95847685185185
+70	1190	60	0.954045
+70	1333	60	0.95182277777778
+70	1333	60	0.95163759259259
+70	1334	60	0.95163759259259
+70	1334	60	0.95145240740741
+70	1335	60	0.95145240740741
+70	1335	60	0.95126722222222
+70	1336	60	0.95126722222222
+70	1336	60	0.95108203703704
+70	1418	70	0.95071166666667
+70	1418	70	0.94627981481481
+70	1561	70	0.94405759259259
+70	1561	70	0.94387240740741
+70	1562	70	0.94387240740741
+70	1562	70	0.94368722222222
+70	1563	70	0.94368722222222
+70	1563	70	0.94350203703704
+70	1564	70	0.94350203703704
+70	1564	70	0.94331685185185
+70	1618	80	0.94294648148148
+70	1618	80	0.93851462962963
+70	1761	80	0.93629240740741
+70	1761	80	0.93610722222222
+70	1762	80	0.93610722222222
+70	1762	80	0.93592203703704
+70	1763	80	0.93592203703704
+70	1763	80	0.93573685185185
+70	1764	80	0.93573685185185
+70	1764	80	0.93555166666667
+70	1818	90	0.9351812962963
+70	1818	90	0.93074944444444
 71	0	0	10800000
 71	105	0	10780000
 71	105	0	10778500
@@ -1039,8 +1689,58 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 71	735	30	10525278
 71	736	30	10525278
 71	736	30	10523278
-71	1395	40	10490809.368339
-71	1395	40	10471414.269163
+71	790	40	10519278
+71	790	40	10471414
+71	933	40	10447414
+71	933	40	10445414
+71	934	40	10445414
+71	934	40	10443414
+71	935	40	10443414
+71	935	40	10441414
+71	936	40	10441414
+71	936	40	10439414
+71	990	50	10435414
+71	990	50	10387550
+71	1133	50	10363550
+71	1133	50	10361550
+71	1134	50	10361550
+71	1134	50	10359550
+71	1135	50	10359550
+71	1135	50	10357550
+71	1136	50	10357550
+71	1136	50	10355550
+71	1190	60	10351550
+71	1190	60	10303686
+71	1333	60	10279686
+71	1333	60	10277686
+71	1334	60	10277686
+71	1334	60	10275686
+71	1335	60	10275686
+71	1335	60	10273686
+71	1336	60	10273686
+71	1336	60	10271686
+71	1418	70	10267686
+71	1418	70	10219822
+71	1561	70	10195822
+71	1561	70	10193822
+71	1562	70	10193822
+71	1562	70	10191822
+71	1563	70	10191822
+71	1563	70	10189822
+71	1564	70	10189822
+71	1564	70	10187822
+71	1618	80	10183822
+71	1618	80	10135958
+71	1761	80	10111958
+71	1761	80	10109958
+71	1762	80	10109958
+71	1762	80	10107958
+71	1763	80	10107958
+71	1763	80	10105958
+71	1764	80	10105958
+71	1764	80	10103958
+71	1818	90	10099958
+71	1818	90	10052094
 79	0	0	0
 79	0	0	1
 79	163	1	2
@@ -1053,7 +1753,17 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 80	537	20	0
 80	591	30	1
 80	737	30	0
-80	1396	40	1
+80	791	40	1
+80	937	40	0
+80	991	50	1
+80	1137	50	0
+80	1191	60	1
+80	1337	60	0
+80	1419	70	1
+80	1565	70	0
+80	1619	80	1
+80	1765	80	0
+80	1819	90	1
 81	0	0	3
 81	109	0	3
 81	109	0	3
@@ -1073,8 +1783,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 81	591	30	3
 81	737	30	3
 81	737	30	3
-81	1396	40	3
-81	1396	40	3
+81	791	40	3
+81	791	40	3
+81	937	40	3
+81	937	40	3
+81	991	50	3
+81	991	50	3
+81	1137	50	3
+81	1137	50	3
+81	1191	60	3
+81	1191	60	3
+81	1337	60	3
+81	1337	60	3
+81	1419	70	3
+81	1419	70	3
+81	1565	70	3
+81	1565	70	3
+81	1619	80	3
+81	1619	80	3
+81	1765	80	3
+81	1765	80	3
+81	1819	90	3
+81	1819	90	3
 82	0	0	1
 82	109	0	0.99953703703704
 82	109	0	0.99939814814815
@@ -1094,8 +1824,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 82	591	30	0.98742388888889
 82	737	30	0.98686833333333
 82	737	30	0.98668314814815
-82	1396	40	0.98622183511977
-82	1396	40	0.98315870877047
+82	791	40	0.98659055555556
+82	791	40	0.9831587037037
+82	937	40	0.98260314814815
+82	937	40	0.98241796296296
+82	991	50	0.98232537037037
+82	991	50	0.97889351851852
+82	1137	50	0.97833796296296
+82	1137	50	0.97815277777778
+82	1191	60	0.97806018518519
+82	1191	60	0.97462833333333
+82	1337	60	0.97407277777778
+82	1337	60	0.97388759259259
+82	1419	70	0.973795
+82	1419	70	0.97036314814815
+82	1565	70	0.96980759259259
+82	1565	70	0.96962240740741
+82	1619	80	0.96952981481481
+82	1619	80	0.96609796296296
+82	1765	80	0.96554240740741
+82	1765	80	0.96535722222222
+82	1819	90	0.96526462962963
+82	1819	90	0.96183277777778
 83	0	0	10800000
 83	109	0	10795000
 83	109	0	10793500
@@ -1115,8 +1865,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 83	591	30	10664178
 83	737	30	10658178
 83	737	30	10656178
-83	1396	40	10651195.819294
-83	1396	40	10618114.054721
+83	791	40	10655178
+83	791	40	10618114
+83	937	40	10612114
+83	937	40	10610114
+83	991	50	10609114
+83	991	50	10572050
+83	1137	50	10566050
+83	1137	50	10564050
+83	1191	60	10563050
+83	1191	60	10525986
+83	1337	60	10519986
+83	1337	60	10517986
+83	1419	70	10516986
+83	1419	70	10479922
+83	1565	70	10473922
+83	1565	70	10471922
+83	1619	80	10470922
+83	1619	80	10433858
+83	1765	80	10427858
+83	1765	80	10425858
+83	1819	90	10424858
+83	1819	90	10387794
 91	0	0	0
 91	0	0	1
 91	164	1	2
@@ -1137,7 +1907,27 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 92	738	30	0
 92	739	30	0
 92	740	30	0
-92	1397	40	1
+92	792	40	1
+92	938	40	0
+92	939	40	0
+92	940	40	0
+92	992	50	1
+92	1138	50	0
+92	1139	50	0
+92	1140	50	0
+92	1192	60	1
+92	1338	60	0
+92	1339	60	0
+92	1340	60	0
+92	1420	70	1
+92	1566	70	0
+92	1567	70	0
+92	1568	70	0
+92	1620	80	1
+92	1766	80	0
+92	1767	80	0
+92	1768	80	0
+92	1820	90	1
 93	0	0	3
 93	110	0	3
 93	110	0	3
@@ -1173,8 +1963,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 93	739	30	3
 93	740	30	3
 93	740	30	3
-93	1397	40	3
-93	1397	40	3
+93	792	40	3
+93	792	40	3
+93	938	40	3
+93	938	40	3
+93	939	40	3
+93	939	40	3
+93	940	40	3
+93	940	40	3
+93	992	50	3
+93	992	50	3
+93	1138	50	3
+93	1138	50	3
+93	1139	50	3
+93	1139	50	3
+93	1140	50	3
+93	1140	50	3
+93	1192	60	3
+93	1192	60	3
+93	1338	60	3
+93	1338	60	3
+93	1339	60	3
+93	1339	60	3
+93	1340	60	3
+93	1340	60	3
+93	1420	70	3
+93	1420	70	3
+93	1566	70	3
+93	1566	70	3
+93	1567	70	3
+93	1567	70	3
+93	1568	70	3
+93	1568	70	3
+93	1620	80	3
+93	1620	80	3
+93	1766	80	3
+93	1766	80	3
+93	1767	80	3
+93	1767	80	3
+93	1768	80	3
+93	1768	80	3
+93	1820	90	3
+93	1820	90	3
 94	0	0	1
 94	110	0	0.99861111111111
 94	110	0	0.99847222222222
@@ -1210,8 +2040,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 94	739	30	0.97866462962963
 94	740	30	0.97866462962963
 94	740	30	0.97847944444444
-94	1397	40	0.97774940590866
-94	1397	40	0.97410315321492
+94	792	40	0.97820166666667
+94	792	40	0.97410314814815
+94	938	40	0.97243648148148
+94	938	40	0.9722512962963
+94	939	40	0.9722512962963
+94	939	40	0.97206611111111
+94	940	40	0.97206611111111
+94	940	40	0.97188092592593
+94	992	50	0.97160314814815
+94	992	50	0.96750462962963
+94	1138	50	0.96583796296296
+94	1138	50	0.96565277777778
+94	1139	50	0.96565277777778
+94	1139	50	0.96546759259259
+94	1140	50	0.96546759259259
+94	1140	50	0.96528240740741
+94	1192	60	0.96500462962963
+94	1192	60	0.96090611111111
+94	1338	60	0.95923944444444
+94	1338	60	0.95905425925926
+94	1339	60	0.95905425925926
+94	1339	60	0.95886907407407
+94	1340	60	0.95886907407407
+94	1340	60	0.95868388888889
+94	1420	70	0.95840611111111
+94	1420	70	0.95430759259259
+94	1566	70	0.95264092592593
+94	1566	70	0.95245574074074
+94	1567	70	0.95245574074074
+94	1567	70	0.95227055555556
+94	1568	70	0.95227055555556
+94	1568	70	0.95208537037037
+94	1620	80	0.95180759259259
+94	1620	80	0.94770907407407
+94	1766	80	0.94604240740741
+94	1766	80	0.94585722222222
+94	1767	80	0.94585722222222
+94	1767	80	0.94567203703704
+94	1768	80	0.94567203703704
+94	1768	80	0.94548685185185
+94	1820	90	0.94520907407407
+94	1820	90	0.94111055555556
 95	0	0	10800000
 95	110	0	10785000
 95	110	0	10783500
@@ -1247,8 +2117,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 95	739	30	10569578
 95	740	30	10569578
 95	740	30	10567578
-95	1397	40	10559693.583814
-95	1397	40	10520314.054721
+95	792	40	10564578
+95	792	40	10520314
+95	938	40	10502314
+95	938	40	10500314
+95	939	40	10500314
+95	939	40	10498314
+95	940	40	10498314
+95	940	40	10496314
+95	992	50	10493314
+95	992	50	10449050
+95	1138	50	10431050
+95	1138	50	10429050
+95	1139	50	10429050
+95	1139	50	10427050
+95	1140	50	10427050
+95	1140	50	10425050
+95	1192	60	10422050
+95	1192	60	10377786
+95	1338	60	10359786
+95	1338	60	10357786
+95	1339	60	10357786
+95	1339	60	10355786
+95	1340	60	10355786
+95	1340	60	10353786
+95	1420	70	10350786
+95	1420	70	10306522
+95	1566	70	10288522
+95	1566	70	10286522
+95	1567	70	10286522
+95	1567	70	10284522
+95	1568	70	10284522
+95	1568	70	10282522
+95	1620	80	10279522
+95	1620	80	10235258
+95	1766	80	10217258
+95	1766	80	10215258
+95	1767	80	10215258
+95	1767	80	10213258
+95	1768	80	10213258
+95	1768	80	10211258
+95	1820	90	10208258
+95	1820	90	10163994
 103	0	0	0
 103	0	0	1
 103	165	1	2
@@ -1261,7 +2171,17 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 104	541	20	0
 104	593	30	1
 104	741	30	0
-104	1398	40	1
+104	793	40	1
+104	941	40	0
+104	993	50	1
+104	1141	50	0
+104	1193	60	1
+104	1341	60	0
+104	1421	70	1
+104	1569	70	0
+104	1621	80	1
+104	1769	80	0
+104	1821	90	1
 105	0	0	3
 105	113	0	3
 105	113	0	3
@@ -1281,8 +2201,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 105	593	30	3
 105	741	30	3
 105	741	30	3
-105	1398	40	3
-105	1398	40	3
+105	793	40	3
+105	793	40	3
+105	941	40	3
+105	941	40	3
+105	993	50	3
+105	993	50	3
+105	1141	50	3
+105	1141	50	3
+105	1193	60	3
+105	1193	60	3
+105	1341	60	3
+105	1341	60	3
+105	1421	70	3
+105	1421	70	3
+105	1569	70	3
+105	1569	70	3
+105	1621	80	3
+105	1621	80	3
+105	1769	80	3
+105	1769	80	3
+105	1821	90	3
+105	1821	90	3
 106	0	0	1
 106	113	0	0.99953703703704
 106	113	0	0.99939814814815
@@ -1302,8 +2242,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 106	593	30	0.98742388888889
 106	741	30	0.98686833333333
 106	741	30	0.98668314814815
-106	1398	40	0.9862088484531
-106	1398	40	0.98315870877047
+106	793	40	0.98659055555556
+106	793	40	0.9831587037037
+106	941	40	0.98260314814815
+106	941	40	0.98241796296296
+106	993	50	0.98232537037037
+106	993	50	0.97889351851852
+106	1141	50	0.97833796296296
+106	1141	50	0.97815277777778
+106	1193	60	0.97806018518519
+106	1193	60	0.97462833333333
+106	1341	60	0.97407277777778
+106	1341	60	0.97388759259259
+106	1421	70	0.973795
+106	1421	70	0.97036314814815
+106	1569	70	0.96980759259259
+106	1569	70	0.96962240740741
+106	1621	80	0.96952981481481
+106	1621	80	0.96609796296296
+106	1769	80	0.96554240740741
+106	1769	80	0.96535722222222
+106	1821	90	0.96526462962963
+106	1821	90	0.96183277777778
 107	0	0	10800000
 107	113	0	10795000
 107	113	0	10793500
@@ -1323,8 +2283,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 107	593	30	10664178
 107	741	30	10658178
 107	741	30	10656178
-107	1398	40	10651055.563294
-107	1398	40	10618114.054721
+107	793	40	10655178
+107	793	40	10618114
+107	941	40	10612114
+107	941	40	10610114
+107	993	50	10609114
+107	993	50	10572050
+107	1141	50	10566050
+107	1141	50	10564050
+107	1193	60	10563050
+107	1193	60	10525986
+107	1341	60	10519986
+107	1341	60	10517986
+107	1421	70	10516986
+107	1421	70	10479922
+107	1569	70	10473922
+107	1569	70	10471922
+107	1621	80	10470922
+107	1621	80	10433858
+107	1769	80	10427858
+107	1769	80	10425858
+107	1821	90	10424858
+107	1821	90	10387794
 115	0	0	0
 115	0	0	1
 115	166	1	2
@@ -1345,7 +2325,27 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 116	742	30	0
 116	743	30	0
 116	744	30	0
-116	1399	40	1
+116	794	40	1
+116	942	40	0
+116	943	40	0
+116	944	40	0
+116	994	50	1
+116	1142	50	0
+116	1143	50	0
+116	1144	50	0
+116	1194	60	1
+116	1342	60	0
+116	1343	60	0
+116	1344	60	0
+116	1422	70	1
+116	1570	70	0
+116	1571	70	0
+116	1572	70	0
+116	1622	80	1
+116	1770	80	0
+116	1771	80	0
+116	1772	80	0
+116	1822	90	1
 117	0	0	3
 117	114	0	3
 117	114	0	3
@@ -1381,8 +2381,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 117	743	30	3
 117	744	30	3
 117	744	30	3
-117	1399	40	3
-117	1399	40	3
+117	794	40	3
+117	794	40	3
+117	942	40	3
+117	942	40	3
+117	943	40	3
+117	943	40	3
+117	944	40	3
+117	944	40	3
+117	994	50	3
+117	994	50	3
+117	1142	50	3
+117	1142	50	3
+117	1143	50	3
+117	1143	50	3
+117	1144	50	3
+117	1144	50	3
+117	1194	60	3
+117	1194	60	3
+117	1342	60	3
+117	1342	60	3
+117	1343	60	3
+117	1343	60	3
+117	1344	60	3
+117	1344	60	3
+117	1422	70	3
+117	1422	70	3
+117	1570	70	3
+117	1570	70	3
+117	1571	70	3
+117	1571	70	3
+117	1572	70	3
+117	1572	70	3
+117	1622	80	3
+117	1622	80	3
+117	1770	80	3
+117	1770	80	3
+117	1771	80	3
+117	1771	80	3
+117	1772	80	3
+117	1772	80	3
+117	1822	90	3
+117	1822	90	3
 118	0	0	1
 118	114	0	0.99861111111111
 118	114	0	0.99847222222222
@@ -1418,8 +2458,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 118	743	30	0.97866462962963
 118	744	30	0.97866462962963
 118	744	30	0.97847944444444
-118	1399	40	0.97773375257533
-118	1399	40	0.97410315321492
+118	794	40	0.97820166666667
+118	794	40	0.97410314814815
+118	942	40	0.97243648148148
+118	942	40	0.9722512962963
+118	943	40	0.9722512962963
+118	943	40	0.97206611111111
+118	944	40	0.97206611111111
+118	944	40	0.97188092592593
+118	994	50	0.97160314814815
+118	994	50	0.96750462962963
+118	1142	50	0.96583796296296
+118	1142	50	0.96565277777778
+118	1143	50	0.96565277777778
+118	1143	50	0.96546759259259
+118	1144	50	0.96546759259259
+118	1144	50	0.96528240740741
+118	1194	60	0.96500462962963
+118	1194	60	0.96090611111111
+118	1342	60	0.95923944444444
+118	1342	60	0.95905425925926
+118	1343	60	0.95905425925926
+118	1343	60	0.95886907407407
+118	1344	60	0.95886907407407
+118	1344	60	0.95868388888889
+118	1422	70	0.95840611111111
+118	1422	70	0.95430759259259
+118	1570	70	0.95264092592593
+118	1570	70	0.95245574074074
+118	1571	70	0.95245574074074
+118	1571	70	0.95227055555556
+118	1572	70	0.95227055555556
+118	1572	70	0.95208537037037
+118	1622	80	0.95180759259259
+118	1622	80	0.94770907407407
+118	1770	80	0.94604240740741
+118	1770	80	0.94585722222222
+118	1771	80	0.94585722222222
+118	1771	80	0.94567203703704
+118	1772	80	0.94567203703704
+118	1772	80	0.94548685185185
+118	1822	90	0.94520907407407
+118	1822	90	0.94111055555556
 119	0	0	10800000
 119	114	0	10785000
 119	114	0	10783500
@@ -1455,8 +2535,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 119	743	30	10569578
 119	744	30	10569578
 119	744	30	10567578
-119	1399	40	10559524.527814
-119	1399	40	10520314.054721
+119	794	40	10564578
+119	794	40	10520314
+119	942	40	10502314
+119	942	40	10500314
+119	943	40	10500314
+119	943	40	10498314
+119	944	40	10498314
+119	944	40	10496314
+119	994	50	10493314
+119	994	50	10449050
+119	1142	50	10431050
+119	1142	50	10429050
+119	1143	50	10429050
+119	1143	50	10427050
+119	1144	50	10427050
+119	1144	50	10425050
+119	1194	60	10422050
+119	1194	60	10377786
+119	1342	60	10359786
+119	1342	60	10357786
+119	1343	60	10357786
+119	1343	60	10355786
+119	1344	60	10355786
+119	1344	60	10353786
+119	1422	70	10350786
+119	1422	70	10306522
+119	1570	70	10288522
+119	1570	70	10286522
+119	1571	70	10286522
+119	1571	70	10284522
+119	1572	70	10284522
+119	1572	70	10282522
+119	1622	80	10279522
+119	1622	80	10235258
+119	1770	80	10217258
+119	1770	80	10215258
+119	1771	80	10215258
+119	1771	80	10213258
+119	1772	80	10213258
+119	1772	80	10211258
+119	1822	90	10208258
+119	1822	90	10163994
 127	0	0	0
 127	0	0	1
 127	167	1	2
@@ -1469,7 +2589,17 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 128	545	20	0
 128	595	30	1
 128	745	30	0
-128	1400	40	1
+128	795	40	1
+128	945	40	0
+128	995	50	1
+128	1145	50	0
+128	1195	60	1
+128	1345	60	0
+128	1423	70	1
+128	1573	70	0
+128	1623	80	1
+128	1773	80	0
+128	1823	90	1
 129	0	0	3
 129	117	0	3
 129	117	0	3
@@ -1489,8 +2619,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 129	595	30	3
 129	745	30	3
 129	745	30	3
-129	1400	40	3
-129	1400	40	3
+129	795	40	3
+129	795	40	3
+129	945	40	3
+129	945	40	3
+129	995	50	3
+129	995	50	3
+129	1145	50	3
+129	1145	50	3
+129	1195	60	3
+129	1195	60	3
+129	1345	60	3
+129	1345	60	3
+129	1423	70	3
+129	1423	70	3
+129	1573	70	3
+129	1573	70	3
+129	1623	80	3
+129	1623	80	3
+129	1773	80	3
+129	1773	80	3
+129	1823	90	3
+129	1823	90	3
 130	0	0	1
 130	117	0	0.99953703703704
 130	117	0	0.99939814814815
@@ -1510,8 +2660,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 130	595	30	0.98742388888889
 130	745	30	0.98686833333333
 130	745	30	0.98668314814815
-130	1400	40	0.98619586178644
-130	1400	40	0.98315870877047
+130	795	40	0.98659055555556
+130	795	40	0.9831587037037
+130	945	40	0.98260314814815
+130	945	40	0.98241796296296
+130	995	50	0.98232537037037
+130	995	50	0.97889351851852
+130	1145	50	0.97833796296296
+130	1145	50	0.97815277777778
+130	1195	60	0.97806018518519
+130	1195	60	0.97462833333333
+130	1345	60	0.97407277777778
+130	1345	60	0.97388759259259
+130	1423	70	0.973795
+130	1423	70	0.97036314814815
+130	1573	70	0.96980759259259
+130	1573	70	0.96962240740741
+130	1623	80	0.96952981481481
+130	1623	80	0.96609796296296
+130	1773	80	0.96554240740741
+130	1773	80	0.96535722222222
+130	1823	90	0.96526462962963
+130	1823	90	0.96183277777778
 131	0	0	10800000
 131	117	0	10795000
 131	117	0	10793500
@@ -1531,8 +2701,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 131	595	30	10664178
 131	745	30	10658178
 131	745	30	10656178
-131	1400	40	10650915.307294
-131	1400	40	10618114.054721
+131	795	40	10655178
+131	795	40	10618114
+131	945	40	10612114
+131	945	40	10610114
+131	995	50	10609114
+131	995	50	10572050
+131	1145	50	10566050
+131	1145	50	10564050
+131	1195	60	10563050
+131	1195	60	10525986
+131	1345	60	10519986
+131	1345	60	10517986
+131	1423	70	10516986
+131	1423	70	10479922
+131	1573	70	10473922
+131	1573	70	10471922
+131	1623	80	10470922
+131	1623	80	10433858
+131	1773	80	10427858
+131	1773	80	10425858
+131	1823	90	10424858
+131	1823	90	10387794
 139	0	0	0
 139	0	0	1
 139	168	1	2
@@ -1557,7 +2747,32 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 140	747	30	0
 140	748	30	0
 140	749	30	0
-140	1401	40	1
+140	796	40	1
+140	946	40	0
+140	947	40	0
+140	948	40	0
+140	949	40	0
+140	996	50	1
+140	1146	50	0
+140	1147	50	0
+140	1148	50	0
+140	1149	50	0
+140	1196	60	1
+140	1346	60	0
+140	1347	60	0
+140	1348	60	0
+140	1349	60	0
+140	1424	70	1
+140	1574	70	0
+140	1575	70	0
+140	1576	70	0
+140	1577	70	0
+140	1624	80	1
+140	1774	80	0
+140	1775	80	0
+140	1776	80	0
+140	1777	80	0
+140	1824	90	1
 141	0	0	3
 141	118	0	3
 141	118	0	3
@@ -1601,8 +2816,58 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 141	748	30	3
 141	749	30	3
 141	749	30	3
-141	1401	40	3
-141	1401	40	3
+141	796	40	3
+141	796	40	3
+141	946	40	3
+141	946	40	3
+141	947	40	3
+141	947	40	3
+141	948	40	3
+141	948	40	3
+141	949	40	3
+141	949	40	3
+141	996	50	3
+141	996	50	3
+141	1146	50	3
+141	1146	50	3
+141	1147	50	3
+141	1147	50	3
+141	1148	50	3
+141	1148	50	3
+141	1149	50	3
+141	1149	50	3
+141	1196	60	3
+141	1196	60	3
+141	1346	60	3
+141	1346	60	3
+141	1347	60	3
+141	1347	60	3
+141	1348	60	3
+141	1348	60	3
+141	1349	60	3
+141	1349	60	3
+141	1424	70	3
+141	1424	70	3
+141	1574	70	3
+141	1574	70	3
+141	1575	70	3
+141	1575	70	3
+141	1576	70	3
+141	1576	70	3
+141	1577	70	3
+141	1577	70	3
+141	1624	80	3
+141	1624	80	3
+141	1774	80	3
+141	1774	80	3
+141	1775	80	3
+141	1775	80	3
+141	1776	80	3
+141	1776	80	3
+141	1777	80	3
+141	1777	80	3
+141	1824	90	3
+141	1824	90	3
 142	0	0	1
 142	118	0	0.99814814814815
 142	118	0	0.99800925925926
@@ -1646,8 +2911,58 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 142	748	30	0.97456277777778
 142	749	30	0.97456277777778
 142	749	30	0.97437759259259
-142	1401	40	0.97348246463644
-142	1401	40	0.96957537543714
+142	796	40	0.97400722222222
+142	796	40	0.96957537037037
+142	946	40	0.96735314814815
+142	946	40	0.96716796296296
+142	947	40	0.96716796296296
+142	947	40	0.96698277777778
+142	948	40	0.96698277777778
+142	948	40	0.96679759259259
+142	949	40	0.96679759259259
+142	949	40	0.96661240740741
+142	996	50	0.96624203703704
+142	996	50	0.96181018518519
+142	1146	50	0.95958796296296
+142	1146	50	0.95940277777778
+142	1147	50	0.95940277777778
+142	1147	50	0.95921759259259
+142	1148	50	0.95921759259259
+142	1148	50	0.95903240740741
+142	1149	50	0.95903240740741
+142	1149	50	0.95884722222222
+142	1196	60	0.95847685185185
+142	1196	60	0.954045
+142	1346	60	0.95182277777778
+142	1346	60	0.95163759259259
+142	1347	60	0.95163759259259
+142	1347	60	0.95145240740741
+142	1348	60	0.95145240740741
+142	1348	60	0.95126722222222
+142	1349	60	0.95126722222222
+142	1349	60	0.95108203703704
+142	1424	70	0.95071166666667
+142	1424	70	0.94627981481481
+142	1574	70	0.94405759259259
+142	1574	70	0.94387240740741
+142	1575	70	0.94387240740741
+142	1575	70	0.94368722222222
+142	1576	70	0.94368722222222
+142	1576	70	0.94350203703704
+142	1577	70	0.94350203703704
+142	1577	70	0.94331685185185
+142	1624	80	0.94294648148148
+142	1624	80	0.93851462962963
+142	1774	80	0.93629240740741
+142	1774	80	0.93610722222222
+142	1775	80	0.93610722222222
+142	1775	80	0.93592203703704
+142	1776	80	0.93592203703704
+142	1776	80	0.93573685185185
+142	1777	80	0.93573685185185
+142	1777	80	0.93555166666667
+142	1824	90	0.9351812962963
+142	1824	90	0.93074944444444
 143	0	0	10800000
 143	118	0	10780000
 143	118	0	10778500
@@ -1691,8 +3006,58 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 143	748	30	10525278
 143	749	30	10525278
 143	749	30	10523278
-143	1401	40	10513610.618074
-143	1401	40	10471414.054721
+143	796	40	10519278
+143	796	40	10471414
+143	946	40	10447414
+143	946	40	10445414
+143	947	40	10445414
+143	947	40	10443414
+143	948	40	10443414
+143	948	40	10441414
+143	949	40	10441414
+143	949	40	10439414
+143	996	50	10435414
+143	996	50	10387550
+143	1146	50	10363550
+143	1146	50	10361550
+143	1147	50	10361550
+143	1147	50	10359550
+143	1148	50	10359550
+143	1148	50	10357550
+143	1149	50	10357550
+143	1149	50	10355550
+143	1196	60	10351550
+143	1196	60	10303686
+143	1346	60	10279686
+143	1346	60	10277686
+143	1347	60	10277686
+143	1347	60	10275686
+143	1348	60	10275686
+143	1348	60	10273686
+143	1349	60	10273686
+143	1349	60	10271686
+143	1424	70	10267686
+143	1424	70	10219822
+143	1574	70	10195822
+143	1574	70	10193822
+143	1575	70	10193822
+143	1575	70	10191822
+143	1576	70	10191822
+143	1576	70	10189822
+143	1577	70	10189822
+143	1577	70	10187822
+143	1624	80	10183822
+143	1624	80	10135958
+143	1774	80	10111958
+143	1774	80	10109958
+143	1775	80	10109958
+143	1775	80	10107958
+143	1776	80	10107958
+143	1776	80	10105958
+143	1777	80	10105958
+143	1777	80	10103958
+143	1824	90	10099958
+143	1824	90	10052094
 151	0	0	0
 151	0	0	1
 151	169	1	2
@@ -1705,7 +3070,17 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 152	550	20	0
 152	597	30	1
 152	750	30	0
-152	1402	40	1
+152	797	40	1
+152	950	40	0
+152	997	50	1
+152	1150	50	0
+152	1197	60	1
+152	1350	60	0
+152	1425	70	1
+152	1578	70	0
+152	1625	80	1
+152	1778	80	0
+152	1825	90	1
 153	0	0	3
 153	122	0	3
 153	122	0	3
@@ -1725,8 +3100,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 153	597	30	3
 153	750	30	3
 153	750	30	3
-153	1402	40	3
-153	1402	40	3
+153	797	40	3
+153	797	40	3
+153	950	40	3
+153	950	40	3
+153	997	50	3
+153	997	50	3
+153	1150	50	3
+153	1150	50	3
+153	1197	60	3
+153	1197	60	3
+153	1350	60	3
+153	1350	60	3
+153	1425	70	3
+153	1425	70	3
+153	1578	70	3
+153	1578	70	3
+153	1625	80	3
+153	1625	80	3
+153	1778	80	3
+153	1778	80	3
+153	1825	90	3
+153	1825	90	3
 154	0	0	1
 154	122	0	0.99953703703704
 154	122	0	0.99939814814815
@@ -1746,8 +3141,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 154	597	30	0.98742388888889
 154	750	30	0.98686833333333
 154	750	30	0.98668314814815
-154	1402	40	0.98618287511977
-154	1402	40	0.98315870877047
+154	797	40	0.98659055555556
+154	797	40	0.9831587037037
+154	950	40	0.98260314814815
+154	950	40	0.98241796296296
+154	997	50	0.98232537037037
+154	997	50	0.97889351851852
+154	1150	50	0.97833796296296
+154	1150	50	0.97815277777778
+154	1197	60	0.97806018518519
+154	1197	60	0.97462833333333
+154	1350	60	0.97407277777778
+154	1350	60	0.97388759259259
+154	1425	70	0.973795
+154	1425	70	0.97036314814815
+154	1578	70	0.96980759259259
+154	1578	70	0.96962240740741
+154	1625	80	0.96952981481481
+154	1625	80	0.96609796296296
+154	1778	80	0.96554240740741
+154	1778	80	0.96535722222222
+154	1825	90	0.96526462962963
+154	1825	90	0.96183277777778
 155	0	0	10800000
 155	122	0	10795000
 155	122	0	10793500
@@ -1767,8 +3182,28 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 155	597	30	10664178
 155	750	30	10658178
 155	750	30	10656178
-155	1402	40	10650775.051294
-155	1402	40	10618114.054721
+155	797	40	10655178
+155	797	40	10618114
+155	950	40	10612114
+155	950	40	10610114
+155	997	50	10609114
+155	997	50	10572050
+155	1150	50	10566050
+155	1150	50	10564050
+155	1197	60	10563050
+155	1197	60	10525986
+155	1350	60	10519986
+155	1350	60	10517986
+155	1425	70	10516986
+155	1425	70	10479922
+155	1578	70	10473922
+155	1578	70	10471922
+155	1625	80	10470922
+155	1625	80	10433858
+155	1778	80	10427858
+155	1778	80	10425858
+155	1825	90	10424858
+155	1825	90	10387794
 163	0	0	0
 163	0	0	1
 163	170	1	2
@@ -1789,7 +3224,27 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 164	751	30	0
 164	752	30	0
 164	753	30	0
-164	1403	40	1
+164	798	40	1
+164	951	40	0
+164	952	40	0
+164	953	40	0
+164	998	50	1
+164	1151	50	0
+164	1152	50	0
+164	1153	50	0
+164	1198	60	1
+164	1351	60	0
+164	1352	60	0
+164	1353	60	0
+164	1426	70	1
+164	1579	70	0
+164	1580	70	0
+164	1581	70	0
+164	1626	80	1
+164	1779	80	0
+164	1780	80	0
+164	1781	80	0
+164	1826	90	1
 165	0	0	3
 165	123	0	3
 165	123	0	3
@@ -1825,8 +3280,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 165	752	30	3
 165	753	30	3
 165	753	30	3
-165	1403	40	3
-165	1403	40	3
+165	798	40	3
+165	798	40	3
+165	951	40	3
+165	951	40	3
+165	952	40	3
+165	952	40	3
+165	953	40	3
+165	953	40	3
+165	998	50	3
+165	998	50	3
+165	1151	50	3
+165	1151	50	3
+165	1152	50	3
+165	1152	50	3
+165	1153	50	3
+165	1153	50	3
+165	1198	60	3
+165	1198	60	3
+165	1351	60	3
+165	1351	60	3
+165	1352	60	3
+165	1352	60	3
+165	1353	60	3
+165	1353	60	3
+165	1426	70	3
+165	1426	70	3
+165	1579	70	3
+165	1579	70	3
+165	1580	70	3
+165	1580	70	3
+165	1581	70	3
+165	1581	70	3
+165	1626	80	3
+165	1626	80	3
+165	1779	80	3
+165	1779	80	3
+165	1780	80	3
+165	1780	80	3
+165	1781	80	3
+165	1781	80	3
+165	1826	90	3
+165	1826	90	3
 166	0	0	1
 166	123	0	0.99861111111111
 166	123	0	0.99847222222222
@@ -1862,8 +3357,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 166	752	30	0.97866462962963
 166	753	30	0.97866462962963
 166	753	30	0.97847944444444
-166	1403	40	0.97573978687238
-166	1403	40	0.97410318137819
+166	798	40	0.97820166666667
+166	798	40	0.97410314814815
+166	951	40	0.97243648148148
+166	951	40	0.9722512962963
+166	952	40	0.9722512962963
+166	952	40	0.97206611111111
+166	953	40	0.97206611111111
+166	953	40	0.97188092592593
+166	998	50	0.97160314814815
+166	998	50	0.96750462962963
+166	1151	50	0.96583796296296
+166	1151	50	0.96565277777778
+166	1152	50	0.96565277777778
+166	1152	50	0.96546759259259
+166	1153	50	0.96546759259259
+166	1153	50	0.96528240740741
+166	1198	60	0.96500462962963
+166	1198	60	0.96090611111111
+166	1351	60	0.95923944444444
+166	1351	60	0.95905425925926
+166	1352	60	0.95905425925926
+166	1352	60	0.95886907407407
+166	1353	60	0.95886907407407
+166	1353	60	0.95868388888889
+166	1426	70	0.95840611111111
+166	1426	70	0.95430759259259
+166	1579	70	0.95264092592593
+166	1579	70	0.95245574074074
+166	1580	70	0.95245574074074
+166	1580	70	0.95227055555556
+166	1581	70	0.95227055555556
+166	1581	70	0.95208537037037
+166	1626	80	0.95180759259259
+166	1626	80	0.94770907407407
+166	1779	80	0.94604240740741
+166	1779	80	0.94585722222222
+166	1780	80	0.94585722222222
+166	1780	80	0.94567203703704
+166	1781	80	0.94567203703704
+166	1781	80	0.94548685185185
+166	1826	90	0.94520907407407
+166	1826	90	0.94111055555556
 167	0	0	10800000
 167	123	0	10785000
 167	123	0	10783500
@@ -1899,8 +3434,48 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 167	752	30	10569578
 167	753	30	10569578
 167	753	30	10567578
-167	1403	40	10537989.698222
-167	1403	40	10520314.358884
+167	798	40	10564578
+167	798	40	10520314
+167	951	40	10502314
+167	951	40	10500314
+167	952	40	10500314
+167	952	40	10498314
+167	953	40	10498314
+167	953	40	10496314
+167	998	50	10493314
+167	998	50	10449050
+167	1151	50	10431050
+167	1151	50	10429050
+167	1152	50	10429050
+167	1152	50	10427050
+167	1153	50	10427050
+167	1153	50	10425050
+167	1198	60	10422050
+167	1198	60	10377786
+167	1351	60	10359786
+167	1351	60	10357786
+167	1352	60	10357786
+167	1352	60	10355786
+167	1353	60	10355786
+167	1353	60	10353786
+167	1426	70	10350786
+167	1426	70	10306522
+167	1579	70	10288522
+167	1579	70	10286522
+167	1580	70	10286522
+167	1580	70	10284522
+167	1581	70	10284522
+167	1581	70	10282522
+167	1626	80	10279522
+167	1626	80	10235258
+167	1779	80	10217258
+167	1779	80	10215258
+167	1780	80	10215258
+167	1780	80	10213258
+167	1781	80	10213258
+167	1781	80	10211258
+167	1826	90	10208258
+167	1826	90	10163994
 168	0	0	1000
 168	0	0	1000
 168	0	0	1000
@@ -1913,9 +3488,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 168	599	30	1000
 168	599	30	1000
 168	599	30	1000
-168	1404	40	1000
-168	1404	40	1000
-168	1404	40	1000
+168	799	40	1000
+168	799	40	1000
+168	799	40	1000
+168	999	50	1000
+168	999	50	1000
+168	999	50	1000
+168	1199	60	1000
+168	1199	60	1000
+168	1199	60	1000
+168	1427	70	1000
+168	1427	70	1000
+168	1427	70	1000
+168	1627	80	1000
+168	1627	80	1000
+168	1627	80	1000
+168	1827	90	1000
+168	1827	90	1000
+168	1827	90	1000
 169	0	0	30
 169	157	1	30
 169	171	2	30
@@ -1924,7 +3514,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 170	230	10	1000
 170	430	20	1000
 170	630	30	1000
-170	1435	40	1000
+170	830	40	1000
+170	1030	50	1000
+170	1230	60	1000
+170	1458	70	1000
+170	1658	80	1000
+170	1858	90	1000
 171	0	0	30
 171	157	1	30
 171	171	2	30
@@ -1933,6 +3528,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 172	261	10	1000
 172	461	20	1000
 172	661	30	1000
+172	861	40	1000
+172	1061	50	1000
+172	1261	60	1000
+172	1489	70	1000
+172	1689	80	1000
+172	1889	90	1000
 173	0	0	30
 173	157	1	30
 173	171	2	30
@@ -1941,6 +3542,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 174	292	10	1000
 174	492	20	1000
 174	692	30	1000
+174	892	40	1000
+174	1092	50	1000
+174	1292	60	1000
+174	1520	70	1000
+174	1720	80	1000
+174	1920	90	1000
 175	0	0	30
 175	157	1	30
 175	171	2	30
@@ -1956,9 +3563,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 176	600	30	1000
 176	600	30	1000
 176	600	30	1000
-176	1405	40	1000
-176	1405	40	1000
-176	1405	40	1000
+176	800	40	1000
+176	800	40	1000
+176	800	40	1000
+176	1000	50	1000
+176	1000	50	1000
+176	1000	50	1000
+176	1200	60	1000
+176	1200	60	1000
+176	1200	60	1000
+176	1428	70	1000
+176	1428	70	1000
+176	1428	70	1000
+176	1628	80	1000
+176	1628	80	1000
+176	1628	80	1000
+176	1828	90	1000
+176	1828	90	1000
+176	1828	90	1000
 177	0	0	30
 177	157	1	30
 177	171	2	30
@@ -1967,7 +3589,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 178	231	10	1000
 178	431	20	1000
 178	631	30	1000
-178	1436	40	1000
+178	831	40	1000
+178	1031	50	1000
+178	1231	60	1000
+178	1459	70	1000
+178	1659	80	1000
+178	1859	90	1000
 179	0	0	30
 179	157	1	30
 179	171	2	30
@@ -1976,6 +3603,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 180	262	10	1000
 180	462	20	1000
 180	662	30	1000
+180	862	40	1000
+180	1062	50	1000
+180	1262	60	1000
+180	1490	70	1000
+180	1690	80	1000
+180	1890	90	1000
 181	0	0	30
 181	157	1	30
 181	171	2	30
@@ -1984,6 +3617,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 182	293	10	1000
 182	493	20	1000
 182	693	30	1000
+182	893	40	1000
+182	1093	50	1000
+182	1293	60	1000
+182	1521	70	1000
+182	1721	80	1000
+182	1921	90	1000
 183	0	0	30
 183	157	1	30
 183	171	2	30
@@ -1999,9 +3638,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 184	601	30	1000
 184	601	30	1000
 184	601	30	1000
-184	1406	40	1000
-184	1406	40	1000
-184	1406	40	1000
+184	801	40	1000
+184	801	40	1000
+184	801	40	1000
+184	1001	50	1000
+184	1001	50	1000
+184	1001	50	1000
+184	1201	60	1000
+184	1201	60	1000
+184	1201	60	1000
+184	1429	70	1000
+184	1429	70	1000
+184	1429	70	1000
+184	1629	80	1000
+184	1629	80	1000
+184	1629	80	1000
+184	1829	90	1000
+184	1829	90	1000
+184	1829	90	1000
 185	0	0	30
 185	157	1	30
 185	171	2	30
@@ -2010,7 +3664,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 186	232	10	1000
 186	432	20	1000
 186	632	30	1000
-186	1437	40	1000
+186	832	40	1000
+186	1032	50	1000
+186	1232	60	1000
+186	1460	70	1000
+186	1660	80	1000
+186	1860	90	1000
 187	0	0	30
 187	157	1	30
 187	171	2	30
@@ -2019,6 +3678,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 188	263	10	1000
 188	463	20	1000
 188	663	30	1000
+188	863	40	1000
+188	1063	50	1000
+188	1263	60	1000
+188	1491	70	1000
+188	1691	80	1000
+188	1891	90	1000
 189	0	0	30
 189	157	1	30
 189	171	2	30
@@ -2027,6 +3692,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 190	294	10	1000
 190	494	20	1000
 190	694	30	1000
+190	894	40	1000
+190	1094	50	1000
+190	1294	60	1000
+190	1522	70	1000
+190	1722	80	1000
+190	1922	90	1000
 191	0	0	30
 191	157	1	30
 191	171	2	30
@@ -2043,6 +3714,21 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 192	754	30	1000
 192	755	30	1000
 192	756	30	1000
+192	954	40	1000
+192	955	40	1000
+192	956	40	1000
+192	1154	50	1000
+192	1155	50	1000
+192	1156	50	1000
+192	1354	60	1000
+192	1355	60	1000
+192	1356	60	1000
+192	1582	70	1000
+192	1583	70	1000
+192	1584	70	1000
+192	1782	80	1000
+192	1783	80	1000
+192	1784	80	1000
 193	0	0	30
 193	157	1	30
 193	171	2	30
@@ -2058,9 +3744,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 201	602	30	1000
 201	602	30	1000
 201	602	30	1000
-201	1407	40	1000
-201	1407	40	1000
-201	1407	40	1000
+201	802	40	1000
+201	802	40	1000
+201	802	40	1000
+201	1002	50	1000
+201	1002	50	1000
+201	1002	50	1000
+201	1202	60	1000
+201	1202	60	1000
+201	1202	60	1000
+201	1430	70	1000
+201	1430	70	1000
+201	1430	70	1000
+201	1630	80	1000
+201	1630	80	1000
+201	1630	80	1000
+201	1830	90	1000
+201	1830	90	1000
+201	1830	90	1000
 202	0	0	30
 202	158	1	30
 202	172	2	30
@@ -2069,7 +3770,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 203	233	10	1000
 203	433	20	1000
 203	633	30	1000
-203	1438	40	1000
+203	833	40	1000
+203	1033	50	1000
+203	1233	60	1000
+203	1461	70	1000
+203	1661	80	1000
+203	1861	90	1000
 204	0	0	30
 204	158	1	30
 204	172	2	30
@@ -2078,6 +3784,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 205	264	10	1000
 205	464	20	1000
 205	664	30	1000
+205	864	40	1000
+205	1064	50	1000
+205	1264	60	1000
+205	1492	70	1000
+205	1692	80	1000
+205	1892	90	1000
 206	0	0	30
 206	158	1	30
 206	172	2	30
@@ -2086,6 +3798,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 207	295	10	1000
 207	495	20	1000
 207	695	30	1000
+207	895	40	1000
+207	1095	50	1000
+207	1295	60	1000
+207	1523	70	1000
+207	1723	80	1000
+207	1923	90	1000
 208	0	0	30
 208	158	1	30
 208	172	2	30
@@ -2094,6 +3812,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 209	357	10	1000
 209	557	20	1000
 209	757	30	1000
+209	957	40	1000
+209	1157	50	1000
+209	1357	60	1000
+209	1585	70	1000
+209	1785	80	1000
 210	0	0	30
 210	158	1	30
 210	172	2	30
@@ -2109,9 +3832,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 218	603	30	1000
 218	603	30	1000
 218	603	30	1000
-218	1408	40	1000
-218	1408	40	1000
-218	1408	40	1000
+218	803	40	1000
+218	803	40	1000
+218	803	40	1000
+218	1003	50	1000
+218	1003	50	1000
+218	1003	50	1000
+218	1203	60	1000
+218	1203	60	1000
+218	1203	60	1000
+218	1431	70	1000
+218	1431	70	1000
+218	1431	70	1000
+218	1631	80	1000
+218	1631	80	1000
+218	1631	80	1000
+218	1831	90	1000
+218	1831	90	1000
+218	1831	90	1000
 219	0	0	30
 219	159	1	30
 219	173	2	30
@@ -2120,7 +3858,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 220	234	10	1000
 220	434	20	1000
 220	634	30	1000
-220	1439	40	1000
+220	834	40	1000
+220	1034	50	1000
+220	1234	60	1000
+220	1462	70	1000
+220	1662	80	1000
+220	1862	90	1000
 221	0	0	30
 221	159	1	30
 221	173	2	30
@@ -2129,6 +3872,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 222	265	10	1000
 222	465	20	1000
 222	665	30	1000
+222	865	40	1000
+222	1065	50	1000
+222	1265	60	1000
+222	1493	70	1000
+222	1693	80	1000
+222	1893	90	1000
 223	0	0	30
 223	159	1	30
 223	173	2	30
@@ -2137,6 +3886,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 224	296	10	1000
 224	496	20	1000
 224	696	30	1000
+224	896	40	1000
+224	1096	50	1000
+224	1296	60	1000
+224	1524	70	1000
+224	1724	80	1000
+224	1924	90	1000
 225	0	0	30
 225	159	1	30
 225	173	2	30
@@ -2152,9 +3907,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 226	604	30	1000
 226	604	30	1000
 226	604	30	1000
-226	1409	40	1000
-226	1409	40	1000
-226	1409	40	1000
+226	804	40	1000
+226	804	40	1000
+226	804	40	1000
+226	1004	50	1000
+226	1004	50	1000
+226	1004	50	1000
+226	1204	60	1000
+226	1204	60	1000
+226	1204	60	1000
+226	1432	70	1000
+226	1432	70	1000
+226	1432	70	1000
+226	1632	80	1000
+226	1632	80	1000
+226	1632	80	1000
+226	1832	90	1000
+226	1832	90	1000
+226	1832	90	1000
 227	0	0	30
 227	159	1	30
 227	173	2	30
@@ -2163,7 +3933,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 228	235	10	1000
 228	435	20	1000
 228	635	30	1000
-228	1440	40	1000
+228	835	40	1000
+228	1035	50	1000
+228	1235	60	1000
+228	1463	70	1000
+228	1663	80	1000
+228	1863	90	1000
 229	0	0	30
 229	159	1	30
 229	173	2	30
@@ -2172,6 +3947,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 230	266	10	1000
 230	466	20	1000
 230	666	30	1000
+230	866	40	1000
+230	1066	50	1000
+230	1266	60	1000
+230	1494	70	1000
+230	1694	80	1000
+230	1894	90	1000
 231	0	0	30
 231	159	1	30
 231	173	2	30
@@ -2180,6 +3961,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 232	297	10	1000
 232	497	20	1000
 232	697	30	1000
+232	897	40	1000
+232	1097	50	1000
+232	1297	60	1000
+232	1525	70	1000
+232	1725	80	1000
+232	1925	90	1000
 233	0	0	30
 233	159	1	30
 233	173	2	30
@@ -2192,6 +3979,16 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 234	559	20	1000
 234	758	30	1000
 234	759	30	1000
+234	958	40	1000
+234	959	40	1000
+234	1158	50	1000
+234	1159	50	1000
+234	1358	60	1000
+234	1359	60	1000
+234	1586	70	1000
+234	1587	70	1000
+234	1786	80	1000
+234	1787	80	1000
 235	0	0	30
 235	159	1	30
 235	173	2	30
@@ -2207,9 +4004,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 243	605	30	1000
 243	605	30	1000
 243	605	30	1000
-243	1410	40	1000
-243	1410	40	1000
-243	1410	40	1000
+243	805	40	1000
+243	805	40	1000
+243	805	40	1000
+243	1005	50	1000
+243	1005	50	1000
+243	1005	50	1000
+243	1205	60	1000
+243	1205	60	1000
+243	1205	60	1000
+243	1433	70	1000
+243	1433	70	1000
+243	1433	70	1000
+243	1633	80	1000
+243	1633	80	1000
+243	1633	80	1000
+243	1833	90	1000
+243	1833	90	1000
+243	1833	90	1000
 244	0	0	30
 244	160	1	30
 244	174	2	30
@@ -2218,7 +4030,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 245	236	10	1000
 245	436	20	1000
 245	636	30	1000
-245	1441	40	1000
+245	836	40	1000
+245	1036	50	1000
+245	1236	60	1000
+245	1464	70	1000
+245	1664	80	1000
+245	1864	90	1000
 246	0	0	30
 246	160	1	30
 246	174	2	30
@@ -2227,6 +4044,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 247	267	10	1000
 247	467	20	1000
 247	667	30	1000
+247	867	40	1000
+247	1067	50	1000
+247	1267	60	1000
+247	1495	70	1000
+247	1695	80	1000
+247	1895	90	1000
 248	0	0	30
 248	160	1	30
 248	174	2	30
@@ -2235,6 +4058,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 249	298	10	1000
 249	498	20	1000
 249	698	30	1000
+249	898	40	1000
+249	1098	50	1000
+249	1298	60	1000
+249	1526	70	1000
+249	1726	80	1000
+249	1926	90	1000
 250	0	0	30
 250	160	1	30
 250	174	2	30
@@ -2250,9 +4079,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 251	606	30	1000
 251	606	30	1000
 251	606	30	1000
-251	1411	40	1000
-251	1411	40	1000
-251	1411	40	1000
+251	806	40	1000
+251	806	40	1000
+251	806	40	1000
+251	1006	50	1000
+251	1006	50	1000
+251	1006	50	1000
+251	1206	60	1000
+251	1206	60	1000
+251	1206	60	1000
+251	1434	70	1000
+251	1434	70	1000
+251	1434	70	1000
+251	1634	80	1000
+251	1634	80	1000
+251	1634	80	1000
+251	1834	90	1000
+251	1834	90	1000
+251	1834	90	1000
 252	0	0	30
 252	160	1	30
 252	174	2	30
@@ -2261,7 +4105,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 253	237	10	1000
 253	437	20	1000
 253	637	30	1000
-253	1442	40	1000
+253	837	40	1000
+253	1037	50	1000
+253	1237	60	1000
+253	1465	70	1000
+253	1665	80	1000
+253	1865	90	1000
 254	0	0	30
 254	160	1	30
 254	174	2	30
@@ -2270,6 +4119,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 255	268	10	1000
 255	468	20	1000
 255	668	30	1000
+255	868	40	1000
+255	1068	50	1000
+255	1268	60	1000
+255	1496	70	1000
+255	1696	80	1000
+255	1896	90	1000
 256	0	0	30
 256	160	1	30
 256	174	2	30
@@ -2278,6 +4133,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 257	299	10	1000
 257	499	20	1000
 257	699	30	1000
+257	899	40	1000
+257	1099	50	1000
+257	1299	60	1000
+257	1527	70	1000
+257	1727	80	1000
+257	1927	90	1000
 258	0	0	30
 258	160	1	30
 258	174	2	30
@@ -2293,9 +4154,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 259	607	30	1000
 259	607	30	1000
 259	607	30	1000
-259	1412	40	1000
-259	1412	40	1000
-259	1412	40	1000
+259	807	40	1000
+259	807	40	1000
+259	807	40	1000
+259	1007	50	1000
+259	1007	50	1000
+259	1007	50	1000
+259	1207	60	1000
+259	1207	60	1000
+259	1207	60	1000
+259	1435	70	1000
+259	1435	70	1000
+259	1435	70	1000
+259	1635	80	1000
+259	1635	80	1000
+259	1635	80	1000
+259	1835	90	1000
+259	1835	90	1000
+259	1835	90	1000
 260	0	0	30
 260	160	1	30
 260	174	2	30
@@ -2304,7 +4180,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 261	238	10	1000
 261	438	20	1000
 261	638	30	1000
-261	1443	40	1000
+261	838	40	1000
+261	1038	50	1000
+261	1238	60	1000
+261	1466	70	1000
+261	1666	80	1000
+261	1866	90	1000
 262	0	0	30
 262	160	1	30
 262	174	2	30
@@ -2313,6 +4194,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 263	269	10	1000
 263	469	20	1000
 263	669	30	1000
+263	869	40	1000
+263	1069	50	1000
+263	1269	60	1000
+263	1497	70	1000
+263	1697	80	1000
+263	1897	90	1000
 264	0	0	30
 264	160	1	30
 264	174	2	30
@@ -2321,6 +4208,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 265	300	10	1000
 265	500	20	1000
 265	700	30	1000
+265	900	40	1000
+265	1100	50	1000
+265	1300	60	1000
+265	1528	70	1000
+265	1728	80	1000
+265	1928	90	1000
 266	0	0	30
 266	160	1	30
 266	174	2	30
@@ -2337,6 +4230,21 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 267	760	30	1000
 267	761	30	1000
 267	762	30	1000
+267	960	40	1000
+267	961	40	1000
+267	962	40	1000
+267	1160	50	1000
+267	1161	50	1000
+267	1162	50	1000
+267	1360	60	1000
+267	1361	60	1000
+267	1362	60	1000
+267	1588	70	1000
+267	1589	70	1000
+267	1590	70	1000
+267	1788	80	1000
+267	1789	80	1000
+267	1790	80	1000
 268	0	0	30
 268	160	1	30
 268	174	2	30
@@ -2352,9 +4260,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 276	608	30	1000
 276	608	30	1000
 276	608	30	1000
-276	1413	40	1000
-276	1413	40	1000
-276	1413	40	1000
+276	808	40	1000
+276	808	40	1000
+276	808	40	1000
+276	1008	50	1000
+276	1008	50	1000
+276	1008	50	1000
+276	1208	60	1000
+276	1208	60	1000
+276	1208	60	1000
+276	1436	70	1000
+276	1436	70	1000
+276	1436	70	1000
+276	1636	80	1000
+276	1636	80	1000
+276	1636	80	1000
+276	1836	90	1000
+276	1836	90	1000
+276	1836	90	1000
 277	0	0	30
 277	161	1	30
 277	175	2	30
@@ -2363,7 +4286,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 278	239	10	1000
 278	439	20	1000
 278	639	30	1000
-278	1444	40	1000
+278	839	40	1000
+278	1039	50	1000
+278	1239	60	1000
+278	1467	70	1000
+278	1667	80	1000
+278	1867	90	1000
 279	0	0	30
 279	161	1	30
 279	175	2	30
@@ -2372,6 +4300,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 280	270	10	1000
 280	470	20	1000
 280	670	30	1000
+280	870	40	1000
+280	1070	50	1000
+280	1270	60	1000
+280	1498	70	1000
+280	1698	80	1000
+280	1898	90	1000
 281	0	0	30
 281	161	1	30
 281	175	2	30
@@ -2380,6 +4314,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 282	301	10	1000
 282	501	20	1000
 282	701	30	1000
+282	901	40	1000
+282	1101	50	1000
+282	1301	60	1000
+282	1529	70	1000
+282	1729	80	1000
+282	1929	90	1000
 283	0	0	30
 283	161	1	30
 283	175	2	30
@@ -2388,6 +4328,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 284	363	10	1000
 284	563	20	1000
 284	763	30	1000
+284	963	40	1000
+284	1163	50	1000
+284	1363	60	1000
+284	1591	70	1000
+284	1791	80	1000
 285	0	0	30
 285	161	1	30
 285	175	2	30
@@ -2403,9 +4348,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 293	609	30	1000
 293	609	30	1000
 293	609	30	1000
-293	1414	40	1000
-293	1414	40	1000
-293	1414	40	1000
+293	809	40	1000
+293	809	40	1000
+293	809	40	1000
+293	1009	50	1000
+293	1009	50	1000
+293	1009	50	1000
+293	1209	60	1000
+293	1209	60	1000
+293	1209	60	1000
+293	1437	70	1000
+293	1437	70	1000
+293	1437	70	1000
+293	1637	80	1000
+293	1637	80	1000
+293	1637	80	1000
+293	1837	90	1000
+293	1837	90	1000
+293	1837	90	1000
 294	0	0	30
 294	162	1	30
 294	176	2	30
@@ -2414,7 +4374,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 295	240	10	1000
 295	440	20	1000
 295	640	30	1000
-295	1445	40	1000
+295	840	40	1000
+295	1040	50	1000
+295	1240	60	1000
+295	1468	70	1000
+295	1668	80	1000
+295	1868	90	1000
 296	0	0	30
 296	162	1	30
 296	176	2	30
@@ -2423,6 +4388,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 297	271	10	1000
 297	471	20	1000
 297	671	30	1000
+297	871	40	1000
+297	1071	50	1000
+297	1271	60	1000
+297	1499	70	1000
+297	1699	80	1000
+297	1899	90	1000
 298	0	0	30
 298	162	1	30
 298	176	2	30
@@ -2431,6 +4402,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 299	302	10	1000
 299	502	20	1000
 299	702	30	1000
+299	902	40	1000
+299	1102	50	1000
+299	1302	60	1000
+299	1530	70	1000
+299	1730	80	1000
+299	1930	90	1000
 300	0	0	30
 300	162	1	30
 300	176	2	30
@@ -2446,9 +4423,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 301	610	30	1000
 301	610	30	1000
 301	610	30	1000
-301	1415	40	1000
-301	1415	40	1000
-301	1415	40	1000
+301	810	40	1000
+301	810	40	1000
+301	810	40	1000
+301	1010	50	1000
+301	1010	50	1000
+301	1010	50	1000
+301	1210	60	1000
+301	1210	60	1000
+301	1210	60	1000
+301	1438	70	1000
+301	1438	70	1000
+301	1438	70	1000
+301	1638	80	1000
+301	1638	80	1000
+301	1638	80	1000
+301	1838	90	1000
+301	1838	90	1000
+301	1838	90	1000
 302	0	0	30
 302	162	1	30
 302	176	2	30
@@ -2457,7 +4449,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 303	241	10	1000
 303	441	20	1000
 303	641	30	1000
-303	1446	40	1000
+303	841	40	1000
+303	1041	50	1000
+303	1241	60	1000
+303	1469	70	1000
+303	1669	80	1000
+303	1869	90	1000
 304	0	0	30
 304	162	1	30
 304	176	2	30
@@ -2466,6 +4463,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 305	272	10	1000
 305	472	20	1000
 305	672	30	1000
+305	872	40	1000
+305	1072	50	1000
+305	1272	60	1000
+305	1500	70	1000
+305	1700	80	1000
+305	1900	90	1000
 306	0	0	30
 306	162	1	30
 306	176	2	30
@@ -2474,6 +4477,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 307	303	10	1000
 307	503	20	1000
 307	703	30	1000
+307	903	40	1000
+307	1103	50	1000
+307	1303	60	1000
+307	1531	70	1000
+307	1731	80	1000
+307	1931	90	1000
 308	0	0	30
 308	162	1	30
 308	176	2	30
@@ -2489,9 +4498,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 309	611	30	1000
 309	611	30	1000
 309	611	30	1000
-309	1416	40	1000
-309	1416	40	1000
-309	1416	40	1000
+309	811	40	1000
+309	811	40	1000
+309	811	40	1000
+309	1011	50	1000
+309	1011	50	1000
+309	1011	50	1000
+309	1211	60	1000
+309	1211	60	1000
+309	1211	60	1000
+309	1439	70	1000
+309	1439	70	1000
+309	1439	70	1000
+309	1639	80	1000
+309	1639	80	1000
+309	1639	80	1000
+309	1839	90	1000
+309	1839	90	1000
+309	1839	90	1000
 310	0	0	30
 310	162	1	30
 310	176	2	30
@@ -2500,7 +4524,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 311	242	10	1000
 311	442	20	1000
 311	642	30	1000
-311	1447	40	1000
+311	842	40	1000
+311	1042	50	1000
+311	1242	60	1000
+311	1470	70	1000
+311	1670	80	1000
+311	1870	90	1000
 312	0	0	30
 312	162	1	30
 312	176	2	30
@@ -2509,6 +4538,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 313	273	10	1000
 313	473	20	1000
 313	673	30	1000
+313	873	40	1000
+313	1073	50	1000
+313	1273	60	1000
+313	1501	70	1000
+313	1701	80	1000
+313	1901	90	1000
 314	0	0	30
 314	162	1	30
 314	176	2	30
@@ -2517,6 +4552,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 315	304	10	1000
 315	504	20	1000
 315	704	30	1000
+315	904	40	1000
+315	1104	50	1000
+315	1304	60	1000
+315	1532	70	1000
+315	1732	80	1000
+315	1932	90	1000
 316	0	0	30
 316	162	1	30
 316	176	2	30
@@ -2532,9 +4573,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 317	612	30	1000
 317	612	30	1000
 317	612	30	1000
-317	1417	40	1000
-317	1417	40	1000
-317	1417	40	1000
+317	812	40	1000
+317	812	40	1000
+317	812	40	1000
+317	1012	50	1000
+317	1012	50	1000
+317	1012	50	1000
+317	1212	60	1000
+317	1212	60	1000
+317	1212	60	1000
+317	1440	70	1000
+317	1440	70	1000
+317	1440	70	1000
+317	1640	80	1000
+317	1640	80	1000
+317	1640	80	1000
+317	1840	90	1000
+317	1840	90	1000
+317	1840	90	1000
 318	0	0	30
 318	162	1	30
 318	176	2	30
@@ -2543,7 +4599,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 319	243	10	1000
 319	443	20	1000
 319	643	30	1000
-319	1448	40	1000
+319	843	40	1000
+319	1043	50	1000
+319	1243	60	1000
+319	1471	70	1000
+319	1671	80	1000
+319	1871	90	1000
 320	0	0	30
 320	162	1	30
 320	176	2	30
@@ -2552,6 +4613,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 321	274	10	1000
 321	474	20	1000
 321	674	30	1000
+321	874	40	1000
+321	1074	50	1000
+321	1274	60	1000
+321	1502	70	1000
+321	1702	80	1000
+321	1902	90	1000
 322	0	0	30
 322	162	1	30
 322	176	2	30
@@ -2560,6 +4627,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 323	305	10	1000
 323	505	20	1000
 323	705	30	1000
+323	905	40	1000
+323	1105	50	1000
+323	1305	60	1000
+323	1533	70	1000
+323	1733	80	1000
+323	1933	90	1000
 324	0	0	30
 324	162	1	30
 324	176	2	30
@@ -2580,6 +4653,26 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 325	765	30	1000
 325	766	30	1000
 325	767	30	1000
+325	964	40	1000
+325	965	40	1000
+325	966	40	1000
+325	967	40	1000
+325	1164	50	1000
+325	1165	50	1000
+325	1166	50	1000
+325	1167	50	1000
+325	1364	60	1000
+325	1365	60	1000
+325	1366	60	1000
+325	1367	60	1000
+325	1592	70	1000
+325	1593	70	1000
+325	1594	70	1000
+325	1595	70	1000
+325	1792	80	1000
+325	1793	80	1000
+325	1794	80	1000
+325	1795	80	1000
 326	0	0	30
 326	162	1	30
 326	176	2	30
@@ -2595,9 +4688,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 334	613	30	1000
 334	613	30	1000
 334	613	30	1000
-334	1418	40	1000
-334	1418	40	1000
-334	1418	40	1000
+334	813	40	1000
+334	813	40	1000
+334	813	40	1000
+334	1013	50	1000
+334	1013	50	1000
+334	1013	50	1000
+334	1213	60	1000
+334	1213	60	1000
+334	1213	60	1000
+334	1441	70	1000
+334	1441	70	1000
+334	1441	70	1000
+334	1641	80	1000
+334	1641	80	1000
+334	1641	80	1000
+334	1841	90	1000
+334	1841	90	1000
+334	1841	90	1000
 335	0	0	30
 335	163	1	30
 335	177	2	30
@@ -2606,6 +4714,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 336	244	10	1000
 336	444	20	1000
 336	644	30	1000
+336	844	40	1000
+336	1044	50	1000
+336	1244	60	1000
+336	1472	70	1000
+336	1672	80	1000
+336	1872	90	1000
 337	0	0	30
 337	163	1	30
 337	177	2	30
@@ -2614,6 +4728,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 338	275	10	1000
 338	475	20	1000
 338	675	30	1000
+338	875	40	1000
+338	1075	50	1000
+338	1275	60	1000
+338	1503	70	1000
+338	1703	80	1000
+338	1903	90	1000
 339	0	0	30
 339	163	1	30
 339	177	2	30
@@ -2622,6 +4742,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 340	306	10	1000
 340	506	20	1000
 340	706	30	1000
+340	906	40	1000
+340	1106	50	1000
+340	1306	60	1000
+340	1534	70	1000
+340	1734	80	1000
+340	1934	90	1000
 341	0	0	30
 341	163	1	30
 341	177	2	30
@@ -2630,6 +4756,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 342	368	10	1000
 342	568	20	1000
 342	768	30	1000
+342	968	40	1000
+342	1168	50	1000
+342	1368	60	1000
+342	1596	70	1000
+342	1796	80	1000
 343	0	0	30
 343	163	1	30
 343	177	2	30
@@ -2645,9 +4776,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 351	614	30	1000
 351	614	30	1000
 351	614	30	1000
-351	1419	40	1000
-351	1419	40	1000
-351	1419	40	1000
+351	814	40	1000
+351	814	40	1000
+351	814	40	1000
+351	1014	50	1000
+351	1014	50	1000
+351	1014	50	1000
+351	1214	60	1000
+351	1214	60	1000
+351	1214	60	1000
+351	1442	70	1000
+351	1442	70	1000
+351	1442	70	1000
+351	1642	80	1000
+351	1642	80	1000
+351	1642	80	1000
+351	1842	90	1000
+351	1842	90	1000
+351	1842	90	1000
 352	0	0	30
 352	164	1	30
 352	178	2	30
@@ -2656,6 +4802,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 353	245	10	1000
 353	445	20	1000
 353	645	30	1000
+353	845	40	1000
+353	1045	50	1000
+353	1245	60	1000
+353	1473	70	1000
+353	1673	80	1000
+353	1873	90	1000
 354	0	0	30
 354	164	1	30
 354	178	2	30
@@ -2664,6 +4816,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 355	276	10	1000
 355	476	20	1000
 355	676	30	1000
+355	876	40	1000
+355	1076	50	1000
+355	1276	60	1000
+355	1504	70	1000
+355	1704	80	1000
+355	1904	90	1000
 356	0	0	30
 356	164	1	30
 356	178	2	30
@@ -2672,6 +4830,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 357	307	10	1000
 357	507	20	1000
 357	707	30	1000
+357	907	40	1000
+357	1107	50	1000
+357	1307	60	1000
+357	1535	70	1000
+357	1735	80	1000
+357	1935	90	1000
 358	0	0	30
 358	164	1	30
 358	178	2	30
@@ -2687,9 +4851,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 359	615	30	1000
 359	615	30	1000
 359	615	30	1000
-359	1420	40	1000
-359	1420	40	1000
-359	1420	40	1000
+359	815	40	1000
+359	815	40	1000
+359	815	40	1000
+359	1015	50	1000
+359	1015	50	1000
+359	1015	50	1000
+359	1215	60	1000
+359	1215	60	1000
+359	1215	60	1000
+359	1443	70	1000
+359	1443	70	1000
+359	1443	70	1000
+359	1643	80	1000
+359	1643	80	1000
+359	1643	80	1000
+359	1843	90	1000
+359	1843	90	1000
+359	1843	90	1000
 360	0	0	30
 360	164	1	30
 360	178	2	30
@@ -2698,6 +4877,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 361	246	10	1000
 361	446	20	1000
 361	646	30	1000
+361	846	40	1000
+361	1046	50	1000
+361	1246	60	1000
+361	1474	70	1000
+361	1674	80	1000
+361	1874	90	1000
 362	0	0	30
 362	164	1	30
 362	178	2	30
@@ -2706,6 +4891,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 363	277	10	1000
 363	477	20	1000
 363	677	30	1000
+363	877	40	1000
+363	1077	50	1000
+363	1277	60	1000
+363	1505	70	1000
+363	1705	80	1000
+363	1905	90	1000
 364	0	0	30
 364	164	1	30
 364	178	2	30
@@ -2714,6 +4905,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 365	308	10	1000
 365	508	20	1000
 365	708	30	1000
+365	908	40	1000
+365	1108	50	1000
+365	1308	60	1000
+365	1536	70	1000
+365	1736	80	1000
+365	1936	90	1000
 366	0	0	30
 366	164	1	30
 366	178	2	30
@@ -2729,9 +4926,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 367	616	30	1000
 367	616	30	1000
 367	616	30	1000
-367	1421	40	1000
-367	1421	40	1000
-367	1421	40	1000
+367	816	40	1000
+367	816	40	1000
+367	816	40	1000
+367	1016	50	1000
+367	1016	50	1000
+367	1016	50	1000
+367	1216	60	1000
+367	1216	60	1000
+367	1216	60	1000
+367	1444	70	1000
+367	1444	70	1000
+367	1444	70	1000
+367	1644	80	1000
+367	1644	80	1000
+367	1644	80	1000
+367	1844	90	1000
+367	1844	90	1000
+367	1844	90	1000
 368	0	0	30
 368	164	1	30
 368	178	2	30
@@ -2740,6 +4952,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 369	247	10	1000
 369	447	20	1000
 369	647	30	1000
+369	847	40	1000
+369	1047	50	1000
+369	1247	60	1000
+369	1475	70	1000
+369	1675	80	1000
+369	1875	90	1000
 370	0	0	30
 370	164	1	30
 370	178	2	30
@@ -2748,6 +4966,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 371	278	10	1000
 371	478	20	1000
 371	678	30	1000
+371	878	40	1000
+371	1078	50	1000
+371	1278	60	1000
+371	1506	70	1000
+371	1706	80	1000
+371	1906	90	1000
 372	0	0	30
 372	164	1	30
 372	178	2	30
@@ -2756,6 +4980,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 373	309	10	1000
 373	509	20	1000
 373	709	30	1000
+373	909	40	1000
+373	1109	50	1000
+373	1309	60	1000
+373	1537	70	1000
+373	1737	80	1000
+373	1937	90	1000
 374	0	0	30
 374	164	1	30
 374	178	2	30
@@ -2772,6 +5002,21 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 375	769	30	1000
 375	770	30	1000
 375	771	30	1000
+375	969	40	1000
+375	970	40	1000
+375	971	40	1000
+375	1169	50	1000
+375	1170	50	1000
+375	1171	50	1000
+375	1369	60	1000
+375	1370	60	1000
+375	1371	60	1000
+375	1597	70	1000
+375	1598	70	1000
+375	1599	70	1000
+375	1797	80	1000
+375	1798	80	1000
+375	1799	80	1000
 376	0	0	30
 376	164	1	30
 376	178	2	30
@@ -2787,9 +5032,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 384	617	30	1000
 384	617	30	1000
 384	617	30	1000
-384	1422	40	1000
-384	1422	40	1000
-384	1422	40	1000
+384	817	40	1000
+384	817	40	1000
+384	817	40	1000
+384	1017	50	1000
+384	1017	50	1000
+384	1017	50	1000
+384	1217	60	1000
+384	1217	60	1000
+384	1217	60	1000
+384	1445	70	1000
+384	1445	70	1000
+384	1445	70	1000
+384	1645	80	1000
+384	1645	80	1000
+384	1645	80	1000
+384	1845	90	1000
+384	1845	90	1000
+384	1845	90	1000
 385	0	0	30
 385	165	1	30
 385	179	2	30
@@ -2798,6 +5058,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 386	248	10	1000
 386	448	20	1000
 386	648	30	1000
+386	848	40	1000
+386	1048	50	1000
+386	1248	60	1000
+386	1476	70	1000
+386	1676	80	1000
+386	1876	90	1000
 387	0	0	30
 387	165	1	30
 387	179	2	30
@@ -2806,6 +5072,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 388	279	10	1000
 388	479	20	1000
 388	679	30	1000
+388	879	40	1000
+388	1079	50	1000
+388	1279	60	1000
+388	1507	70	1000
+388	1707	80	1000
+388	1907	90	1000
 389	0	0	30
 389	165	1	30
 389	179	2	30
@@ -2814,6 +5086,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 390	310	10	1000
 390	510	20	1000
 390	710	30	1000
+390	910	40	1000
+390	1110	50	1000
+390	1310	60	1000
+390	1538	70	1000
+390	1738	80	1000
+390	1938	90	1000
 391	0	0	30
 391	165	1	30
 391	179	2	30
@@ -2822,6 +5100,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 392	372	10	1000
 392	572	20	1000
 392	772	30	1000
+392	972	40	1000
+392	1172	50	1000
+392	1372	60	1000
+392	1600	70	1000
+392	1800	80	1000
 393	0	0	30
 393	165	1	30
 393	179	2	30
@@ -2837,9 +5120,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 401	618	30	1000
 401	618	30	1000
 401	618	30	1000
-401	1423	40	1000
-401	1423	40	1000
-401	1423	40	1000
+401	818	40	1000
+401	818	40	1000
+401	818	40	1000
+401	1018	50	1000
+401	1018	50	1000
+401	1018	50	1000
+401	1218	60	1000
+401	1218	60	1000
+401	1218	60	1000
+401	1446	70	1000
+401	1446	70	1000
+401	1446	70	1000
+401	1646	80	1000
+401	1646	80	1000
+401	1646	80	1000
+401	1846	90	1000
+401	1846	90	1000
+401	1846	90	1000
 402	0	0	30
 402	166	1	30
 402	180	2	30
@@ -2848,6 +5146,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 403	249	10	1000
 403	449	20	1000
 403	649	30	1000
+403	849	40	1000
+403	1049	50	1000
+403	1249	60	1000
+403	1477	70	1000
+403	1677	80	1000
+403	1877	90	1000
 404	0	0	30
 404	166	1	30
 404	180	2	30
@@ -2856,6 +5160,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 405	280	10	1000
 405	480	20	1000
 405	680	30	1000
+405	880	40	1000
+405	1080	50	1000
+405	1280	60	1000
+405	1508	70	1000
+405	1708	80	1000
+405	1908	90	1000
 406	0	0	30
 406	166	1	30
 406	180	2	30
@@ -2864,6 +5174,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 407	311	10	1000
 407	511	20	1000
 407	711	30	1000
+407	911	40	1000
+407	1111	50	1000
+407	1311	60	1000
+407	1539	70	1000
+407	1739	80	1000
+407	1939	90	1000
 408	0	0	30
 408	166	1	30
 408	180	2	30
@@ -2879,9 +5195,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 409	619	30	1000
 409	619	30	1000
 409	619	30	1000
-409	1424	40	1000
-409	1424	40	1000
-409	1424	40	1000
+409	819	40	1000
+409	819	40	1000
+409	819	40	1000
+409	1019	50	1000
+409	1019	50	1000
+409	1019	50	1000
+409	1219	60	1000
+409	1219	60	1000
+409	1219	60	1000
+409	1447	70	1000
+409	1447	70	1000
+409	1447	70	1000
+409	1647	80	1000
+409	1647	80	1000
+409	1647	80	1000
+409	1847	90	1000
+409	1847	90	1000
+409	1847	90	1000
 410	0	0	30
 410	166	1	30
 410	180	2	30
@@ -2890,6 +5221,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 411	250	10	1000
 411	450	20	1000
 411	650	30	1000
+411	850	40	1000
+411	1050	50	1000
+411	1250	60	1000
+411	1478	70	1000
+411	1678	80	1000
+411	1878	90	1000
 412	0	0	30
 412	166	1	30
 412	180	2	30
@@ -2898,6 +5235,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 413	281	10	1000
 413	481	20	1000
 413	681	30	1000
+413	881	40	1000
+413	1081	50	1000
+413	1281	60	1000
+413	1509	70	1000
+413	1709	80	1000
+413	1909	90	1000
 414	0	0	30
 414	166	1	30
 414	180	2	30
@@ -2906,6 +5249,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 415	312	10	1000
 415	512	20	1000
 415	712	30	1000
+415	912	40	1000
+415	1112	50	1000
+415	1312	60	1000
+415	1540	70	1000
+415	1740	80	1000
+415	1940	90	1000
 416	0	0	30
 416	166	1	30
 416	180	2	30
@@ -2921,9 +5270,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 417	620	30	1000
 417	620	30	1000
 417	620	30	1000
-417	1425	40	1000
-417	1425	40	1000
-417	1425	40	1000
+417	820	40	1000
+417	820	40	1000
+417	820	40	1000
+417	1020	50	1000
+417	1020	50	1000
+417	1020	50	1000
+417	1220	60	1000
+417	1220	60	1000
+417	1220	60	1000
+417	1448	70	1000
+417	1448	70	1000
+417	1448	70	1000
+417	1648	80	1000
+417	1648	80	1000
+417	1648	80	1000
+417	1848	90	1000
+417	1848	90	1000
+417	1848	90	1000
 418	0	0	30
 418	166	1	30
 418	180	2	30
@@ -2932,6 +5296,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 419	251	10	1000
 419	451	20	1000
 419	651	30	1000
+419	851	40	1000
+419	1051	50	1000
+419	1251	60	1000
+419	1479	70	1000
+419	1679	80	1000
+419	1879	90	1000
 420	0	0	30
 420	166	1	30
 420	180	2	30
@@ -2940,6 +5310,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 421	282	10	1000
 421	482	20	1000
 421	682	30	1000
+421	882	40	1000
+421	1082	50	1000
+421	1282	60	1000
+421	1510	70	1000
+421	1710	80	1000
+421	1910	90	1000
 422	0	0	30
 422	166	1	30
 422	180	2	30
@@ -2948,6 +5324,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 423	313	10	1000
 423	513	20	1000
 423	713	30	1000
+423	913	40	1000
+423	1113	50	1000
+423	1313	60	1000
+423	1541	70	1000
+423	1741	80	1000
 424	0	0	30
 424	166	1	30
 424	180	2	30
@@ -2964,6 +5345,21 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 425	773	30	1000
 425	774	30	1000
 425	775	30	1000
+425	973	40	1000
+425	974	40	1000
+425	975	40	1000
+425	1173	50	1000
+425	1174	50	1000
+425	1175	50	1000
+425	1373	60	1000
+425	1374	60	1000
+425	1375	60	1000
+425	1601	70	1000
+425	1602	70	1000
+425	1603	70	1000
+425	1801	80	1000
+425	1802	80	1000
+425	1803	80	1000
 426	0	0	30
 426	166	1	30
 426	180	2	30
@@ -2979,9 +5375,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 434	621	30	1000
 434	621	30	1000
 434	621	30	1000
-434	1426	40	1000
-434	1426	40	1000
-434	1426	40	1000
+434	821	40	1000
+434	821	40	1000
+434	821	40	1000
+434	1021	50	1000
+434	1021	50	1000
+434	1021	50	1000
+434	1221	60	1000
+434	1221	60	1000
+434	1221	60	1000
+434	1449	70	1000
+434	1449	70	1000
+434	1449	70	1000
+434	1649	80	1000
+434	1649	80	1000
+434	1649	80	1000
+434	1849	90	1000
+434	1849	90	1000
+434	1849	90	1000
 435	0	0	30
 435	167	1	30
 435	181	2	30
@@ -2990,6 +5401,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 436	252	10	1000
 436	452	20	1000
 436	652	30	1000
+436	852	40	1000
+436	1052	50	1000
+436	1252	60	1000
+436	1480	70	1000
+436	1680	80	1000
+436	1880	90	1000
 437	0	0	30
 437	167	1	30
 437	181	2	30
@@ -2998,6 +5415,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 438	283	10	1000
 438	483	20	1000
 438	683	30	1000
+438	883	40	1000
+438	1083	50	1000
+438	1283	60	1000
+438	1511	70	1000
+438	1711	80	1000
+438	1911	90	1000
 439	0	0	30
 439	167	1	30
 439	181	2	30
@@ -3006,6 +5429,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 440	314	10	1000
 440	514	20	1000
 440	714	30	1000
+440	914	40	1000
+440	1114	50	1000
+440	1314	60	1000
+440	1542	70	1000
+440	1742	80	1000
 441	0	0	30
 441	167	1	30
 441	181	2	30
@@ -3014,6 +5442,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 442	376	10	1000
 442	576	20	1000
 442	776	30	1000
+442	976	40	1000
+442	1176	50	1000
+442	1376	60	1000
+442	1604	70	1000
+442	1804	80	1000
 443	0	0	30
 443	167	1	30
 443	181	2	30
@@ -3029,9 +5462,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 451	622	30	1000
 451	622	30	1000
 451	622	30	1000
-451	1427	40	1000
-451	1427	40	1000
-451	1427	40	1000
+451	822	40	1000
+451	822	40	1000
+451	822	40	1000
+451	1022	50	1000
+451	1022	50	1000
+451	1022	50	1000
+451	1222	60	1000
+451	1222	60	1000
+451	1222	60	1000
+451	1450	70	1000
+451	1450	70	1000
+451	1450	70	1000
+451	1650	80	1000
+451	1650	80	1000
+451	1650	80	1000
+451	1850	90	1000
+451	1850	90	1000
+451	1850	90	1000
 452	0	0	30
 452	168	1	30
 452	182	2	30
@@ -3040,6 +5488,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 453	253	10	1000
 453	453	20	1000
 453	653	30	1000
+453	853	40	1000
+453	1053	50	1000
+453	1253	60	1000
+453	1481	70	1000
+453	1681	80	1000
+453	1881	90	1000
 454	0	0	30
 454	168	1	30
 454	182	2	30
@@ -3048,6 +5502,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 455	284	10	1000
 455	484	20	1000
 455	684	30	1000
+455	884	40	1000
+455	1084	50	1000
+455	1284	60	1000
+455	1512	70	1000
+455	1712	80	1000
+455	1912	90	1000
 456	0	0	30
 456	168	1	30
 456	182	2	30
@@ -3056,6 +5516,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 457	315	10	1000
 457	515	20	1000
 457	715	30	1000
+457	915	40	1000
+457	1115	50	1000
+457	1315	60	1000
+457	1543	70	1000
+457	1743	80	1000
 458	0	0	30
 458	168	1	30
 458	182	2	30
@@ -3071,9 +5536,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 459	623	30	1000
 459	623	30	1000
 459	623	30	1000
-459	1428	40	1000
-459	1428	40	1000
-459	1428	40	1000
+459	823	40	1000
+459	823	40	1000
+459	823	40	1000
+459	1023	50	1000
+459	1023	50	1000
+459	1023	50	1000
+459	1223	60	1000
+459	1223	60	1000
+459	1223	60	1000
+459	1451	70	1000
+459	1451	70	1000
+459	1451	70	1000
+459	1651	80	1000
+459	1651	80	1000
+459	1651	80	1000
+459	1851	90	1000
+459	1851	90	1000
+459	1851	90	1000
 460	0	0	30
 460	168	1	30
 460	182	2	30
@@ -3082,6 +5562,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 461	254	10	1000
 461	454	20	1000
 461	654	30	1000
+461	854	40	1000
+461	1054	50	1000
+461	1254	60	1000
+461	1482	70	1000
+461	1682	80	1000
+461	1882	90	1000
 462	0	0	30
 462	168	1	30
 462	182	2	30
@@ -3090,6 +5576,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 463	285	10	1000
 463	485	20	1000
 463	685	30	1000
+463	885	40	1000
+463	1085	50	1000
+463	1285	60	1000
+463	1513	70	1000
+463	1713	80	1000
+463	1913	90	1000
 464	0	0	30
 464	168	1	30
 464	182	2	30
@@ -3098,6 +5590,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 465	316	10	1000
 465	516	20	1000
 465	716	30	1000
+465	916	40	1000
+465	1116	50	1000
+465	1316	60	1000
+465	1544	70	1000
+465	1744	80	1000
 466	0	0	30
 466	168	1	30
 466	182	2	30
@@ -3113,9 +5610,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 467	624	30	1000
 467	624	30	1000
 467	624	30	1000
-467	1429	40	1000
-467	1429	40	1000
-467	1429	40	1000
+467	824	40	1000
+467	824	40	1000
+467	824	40	1000
+467	1024	50	1000
+467	1024	50	1000
+467	1024	50	1000
+467	1224	60	1000
+467	1224	60	1000
+467	1224	60	1000
+467	1452	70	1000
+467	1452	70	1000
+467	1452	70	1000
+467	1652	80	1000
+467	1652	80	1000
+467	1652	80	1000
+467	1852	90	1000
+467	1852	90	1000
+467	1852	90	1000
 468	0	0	30
 468	168	1	30
 468	182	2	30
@@ -3124,6 +5636,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 469	255	10	1000
 469	455	20	1000
 469	655	30	1000
+469	855	40	1000
+469	1055	50	1000
+469	1255	60	1000
+469	1483	70	1000
+469	1683	80	1000
+469	1883	90	1000
 470	0	0	30
 470	168	1	30
 470	182	2	30
@@ -3132,6 +5650,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 471	286	10	1000
 471	486	20	1000
 471	686	30	1000
+471	886	40	1000
+471	1086	50	1000
+471	1286	60	1000
+471	1514	70	1000
+471	1714	80	1000
+471	1914	90	1000
 472	0	0	30
 472	168	1	30
 472	182	2	30
@@ -3140,6 +5664,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 473	317	10	1000
 473	517	20	1000
 473	717	30	1000
+473	917	40	1000
+473	1117	50	1000
+473	1317	60	1000
+473	1545	70	1000
+473	1745	80	1000
 474	0	0	30
 474	168	1	30
 474	182	2	30
@@ -3155,9 +5684,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 475	625	30	1000
 475	625	30	1000
 475	625	30	1000
-475	1430	40	1000
-475	1430	40	1000
-475	1430	40	1000
+475	825	40	1000
+475	825	40	1000
+475	825	40	1000
+475	1025	50	1000
+475	1025	50	1000
+475	1025	50	1000
+475	1225	60	1000
+475	1225	60	1000
+475	1225	60	1000
+475	1453	70	1000
+475	1453	70	1000
+475	1453	70	1000
+475	1653	80	1000
+475	1653	80	1000
+475	1653	80	1000
+475	1853	90	1000
+475	1853	90	1000
+475	1853	90	1000
 476	0	0	30
 476	168	1	30
 476	182	2	30
@@ -3166,6 +5710,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 477	256	10	1000
 477	456	20	1000
 477	656	30	1000
+477	856	40	1000
+477	1056	50	1000
+477	1256	60	1000
+477	1484	70	1000
+477	1684	80	1000
+477	1884	90	1000
 478	0	0	30
 478	168	1	30
 478	182	2	30
@@ -3174,6 +5724,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 479	287	10	1000
 479	487	20	1000
 479	687	30	1000
+479	887	40	1000
+479	1087	50	1000
+479	1287	60	1000
+479	1515	70	1000
+479	1715	80	1000
+479	1915	90	1000
 480	0	0	30
 480	168	1	30
 480	182	2	30
@@ -3182,6 +5738,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 481	318	10	1000
 481	518	20	1000
 481	718	30	1000
+481	918	40	1000
+481	1118	50	1000
+481	1318	60	1000
+481	1546	70	1000
+481	1746	80	1000
 482	0	0	30
 482	168	1	30
 482	182	2	30
@@ -3202,6 +5763,26 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 483	778	30	1000
 483	779	30	1000
 483	780	30	1000
+483	977	40	1000
+483	978	40	1000
+483	979	40	1000
+483	980	40	1000
+483	1177	50	1000
+483	1178	50	1000
+483	1179	50	1000
+483	1180	50	1000
+483	1377	60	1000
+483	1378	60	1000
+483	1379	60	1000
+483	1380	60	1000
+483	1605	70	1000
+483	1606	70	1000
+483	1607	70	1000
+483	1608	70	1000
+483	1805	80	1000
+483	1806	80	1000
+483	1807	80	1000
+483	1808	80	1000
 484	0	0	30
 484	168	1	30
 484	182	2	30
@@ -3217,9 +5798,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 492	626	30	1000
 492	626	30	1000
 492	626	30	1000
-492	1431	40	1000
-492	1431	40	1000
-492	1431	40	1000
+492	826	40	1000
+492	826	40	1000
+492	826	40	1000
+492	1026	50	1000
+492	1026	50	1000
+492	1026	50	1000
+492	1226	60	1000
+492	1226	60	1000
+492	1226	60	1000
+492	1454	70	1000
+492	1454	70	1000
+492	1454	70	1000
+492	1654	80	1000
+492	1654	80	1000
+492	1654	80	1000
+492	1854	90	1000
+492	1854	90	1000
+492	1854	90	1000
 493	0	0	30
 493	169	1	30
 493	183	2	30
@@ -3228,6 +5824,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 494	257	10	1000
 494	457	20	1000
 494	657	30	1000
+494	857	40	1000
+494	1057	50	1000
+494	1257	60	1000
+494	1485	70	1000
+494	1685	80	1000
+494	1885	90	1000
 495	0	0	30
 495	169	1	30
 495	183	2	30
@@ -3236,6 +5838,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 496	288	10	1000
 496	488	20	1000
 496	688	30	1000
+496	888	40	1000
+496	1088	50	1000
+496	1288	60	1000
+496	1516	70	1000
+496	1716	80	1000
+496	1916	90	1000
 497	0	0	30
 497	169	1	30
 497	183	2	30
@@ -3244,6 +5852,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 498	319	10	1000
 498	519	20	1000
 498	719	30	1000
+498	919	40	1000
+498	1119	50	1000
+498	1319	60	1000
+498	1547	70	1000
+498	1747	80	1000
 499	0	0	30
 499	169	1	30
 499	183	2	30
@@ -3252,6 +5865,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 500	381	10	1000
 500	581	20	1000
 500	781	30	1000
+500	981	40	1000
+500	1181	50	1000
+500	1381	60	1000
+500	1609	70	1000
+500	1809	80	1000
 501	0	0	30
 501	169	1	30
 501	183	2	30
@@ -3267,9 +5885,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 509	627	30	1000
 509	627	30	1000
 509	627	30	1000
-509	1432	40	1000
-509	1432	40	1000
-509	1432	40	1000
+509	827	40	1000
+509	827	40	1000
+509	827	40	1000
+509	1027	50	1000
+509	1027	50	1000
+509	1027	50	1000
+509	1227	60	1000
+509	1227	60	1000
+509	1227	60	1000
+509	1455	70	1000
+509	1455	70	1000
+509	1455	70	1000
+509	1655	80	1000
+509	1655	80	1000
+509	1655	80	1000
+509	1855	90	1000
+509	1855	90	1000
+509	1855	90	1000
 510	0	0	30
 510	170	1	30
 510	184	2	30
@@ -3278,6 +5911,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 511	258	10	1000
 511	458	20	1000
 511	658	30	1000
+511	858	40	1000
+511	1058	50	1000
+511	1258	60	1000
+511	1486	70	1000
+511	1686	80	1000
+511	1886	90	1000
 512	0	0	30
 512	170	1	30
 512	184	2	30
@@ -3286,6 +5925,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 513	289	10	1000
 513	489	20	1000
 513	689	30	1000
+513	889	40	1000
+513	1089	50	1000
+513	1289	60	1000
+513	1517	70	1000
+513	1717	80	1000
+513	1917	90	1000
 514	0	0	30
 514	170	1	30
 514	184	2	30
@@ -3294,6 +5939,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 515	320	10	1000
 515	520	20	1000
 515	720	30	1000
+515	920	40	1000
+515	1120	50	1000
+515	1320	60	1000
+515	1548	70	1000
+515	1748	80	1000
 516	0	0	30
 516	170	1	30
 516	184	2	30
@@ -3309,9 +5959,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 517	628	30	1000
 517	628	30	1000
 517	628	30	1000
-517	1433	40	1000
-517	1433	40	1000
-517	1433	40	1000
+517	828	40	1000
+517	828	40	1000
+517	828	40	1000
+517	1028	50	1000
+517	1028	50	1000
+517	1028	50	1000
+517	1228	60	1000
+517	1228	60	1000
+517	1228	60	1000
+517	1456	70	1000
+517	1456	70	1000
+517	1456	70	1000
+517	1656	80	1000
+517	1656	80	1000
+517	1656	80	1000
+517	1856	90	1000
+517	1856	90	1000
+517	1856	90	1000
 518	0	0	30
 518	170	1	30
 518	184	2	30
@@ -3320,6 +5985,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 519	259	10	1000
 519	459	20	1000
 519	659	30	1000
+519	859	40	1000
+519	1059	50	1000
+519	1259	60	1000
+519	1487	70	1000
+519	1687	80	1000
+519	1887	90	1000
 520	0	0	30
 520	170	1	30
 520	184	2	30
@@ -3328,6 +5999,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 521	290	10	1000
 521	490	20	1000
 521	690	30	1000
+521	890	40	1000
+521	1090	50	1000
+521	1290	60	1000
+521	1518	70	1000
+521	1718	80	1000
+521	1918	90	1000
 522	0	0	30
 522	170	1	30
 522	184	2	30
@@ -3336,6 +6013,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 523	321	10	1000
 523	521	20	1000
 523	721	30	1000
+523	921	40	1000
+523	1121	50	1000
+523	1321	60	1000
+523	1549	70	1000
+523	1749	80	1000
 524	0	0	30
 524	170	1	30
 524	184	2	30
@@ -3351,9 +6033,24 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 525	629	30	1000
 525	629	30	1000
 525	629	30	1000
-525	1434	40	1000
-525	1434	40	1000
-525	1434	40	1000
+525	829	40	1000
+525	829	40	1000
+525	829	40	1000
+525	1029	50	1000
+525	1029	50	1000
+525	1029	50	1000
+525	1229	60	1000
+525	1229	60	1000
+525	1229	60	1000
+525	1457	70	1000
+525	1457	70	1000
+525	1457	70	1000
+525	1657	80	1000
+525	1657	80	1000
+525	1657	80	1000
+525	1857	90	1000
+525	1857	90	1000
+525	1857	90	1000
 526	0	0	30
 526	170	1	30
 526	184	2	30
@@ -3362,6 +6059,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 527	260	10	1000
 527	460	20	1000
 527	660	30	1000
+527	860	40	1000
+527	1060	50	1000
+527	1260	60	1000
+527	1488	70	1000
+527	1688	80	1000
+527	1888	90	1000
 528	0	0	30
 528	170	1	30
 528	184	2	30
@@ -3370,6 +6073,12 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 529	291	10	1000
 529	491	20	1000
 529	691	30	1000
+529	891	40	1000
+529	1091	50	1000
+529	1291	60	1000
+529	1519	70	1000
+529	1719	80	1000
+529	1919	90	1000
 530	0	0	30
 530	170	1	30
 530	184	2	30
@@ -3378,6 +6087,11 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 531	322	10	1000
 531	522	20	1000
 531	722	30	1000
+531	922	40	1000
+531	1122	50	1000
+531	1322	60	1000
+531	1550	70	1000
+531	1750	80	1000
 532	0	0	30
 532	170	1	30
 532	184	2	30
@@ -3394,6 +6108,21 @@ vector 534  Szenario1.Node13.Memory  "Current use over time"  ETV
 533	782	30	1000
 533	783	30	1000
 533	784	30	1000
+533	982	40	1000
+533	983	40	1000
+533	984	40	1000
+533	1182	50	1000
+533	1183	50	1000
+533	1184	50	1000
+533	1382	60	1000
+533	1383	60	1000
+533	1384	60	1000
+533	1610	70	1000
+533	1611	70	1000
+533	1612	70	1000
+533	1810	80	1000
+533	1811	80	1000
+533	1812	80	1000
 534	0	0	30
 534	170	1	30
 534	184	2	30
