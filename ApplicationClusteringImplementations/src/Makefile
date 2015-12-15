@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for ApplicationClusteringImplementations
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I../../MiXiM/src/base/phyLayer -I../../MiXiM/src -I../../MiXiM/src/modules/analogueModel -I../../MiXiM/src/base -I../../MiXiM/src/inet_stub/mobility -I../../SensorTechnology/src/SensorNode/Memory -I../../WakeUpRecv -I../../MiXiM/src/base/modules -I../../MiXiM/src/inet_stub/base -I../../ApplicationClustering/Packets -I../../MiXiM/src/base/messages -I../../SensorTechnology/src/SensorNode/Processor -I../../ApplicationClustering -I../../SensorTechnology/src -I../../MiXiM/src/modules/mac -I../../MiXiM/src/modules/messages -I../../MiXiM/src/modules/netw -I../../MiXiM/src/modules/utility -I../../SensorTechnology/src/SensorNode -I../../SensorTechnology/src/ExtendedMessage -I../../MiXiM/src/base/utils -I../../ApplicationClustering/includes -I../../MiXiM/src/modules -I../../MiXiM/src/modules/phy -I../../MiXiM/src/inet_stub/util -I../../MiXiM/src/modules/power/battery -I../../MiXiM/src/inet_stub/linklayer/contract -I../../MiXiM/src/base/connectionManager -I../../MiXiM/src/inet_stub/mobility/models -I../../SensorTechnology/src/SimpleSensorData -I../../MiXiM/src/inet_stub/networklayer/common -L../../ApplicationClustering/out/$$\(CONFIGNAME\) -L../../MiXiM/out/$$\(CONFIGNAME\)/src -L../../SensorTechnology/out/$$\(CONFIGNAME\)/src -lApplicationClustering -lmixim -lSensorTechnology -DMIXIM_INET=1 -KAPPLICATIONCLUSTERING_PROJ=../../ApplicationClustering -KMIXIM_PROJ=../../MiXiM -KSENSORTECHNOLOGY_PROJ=../../SensorTechnology -KWAKEUPRECV_PROJ=../../WakeUpRecv
+#  opp_makemake -f --deep -O out -I../../MiXiM/src/base/phyLayer -I../../MiXiM/src -I../../MiXiM/src/modules/analogueModel -I../../MiXiM/src/base -I../../MiXiM/src/inet_stub/mobility -I../../SensorTechnology/src/SensorNode/Memory -I../../WakeUpRecv -I../../MiXiM/src/base/modules -I../../MiXiM/src/inet_stub/base -I../../ApplicationClustering/Packets -I../../MiXiM/src/base/messages -I../../SensorTechnology/src/SensorNode/Processor -I../../ApplicationClustering -I../../SensorTechnology/src -I../../MiXiM/src/modules/mac -I../../MiXiM/src/modules/messages -I../../MiXiM/src/modules/netw -I../../MiXiM/src/modules/utility -I../../SensorTechnology/src/SensorNode -I../../SensorTechnology/src/ExtendedMessage -I../../MiXiM/src/base/utils -I../../ApplicationClustering/includes -I../../MiXiM/src/modules -I../../MiXiM/src/modules/phy -I../../MiXiM/src/modules/power/battery -I../../MiXiM/src/inet_stub/util -I../../MiXiM/src/inet_stub/linklayer/contract -I../../MiXiM/src/base/connectionManager -I../../MiXiM/src/inet_stub/mobility/models -I../../SensorTechnology/src/SimpleSensorData -I../../MiXiM/src/inet_stub/networklayer/common -L../../ApplicationClustering/out/$$\(CONFIGNAME\) -L../../MiXiM/out/$$\(CONFIGNAME\)/src -L../../SensorTechnology/out/$$\(CONFIGNAME\)/src -lApplicationClustering -lmixim -lSensorTechnology -DMIXIM_INET=1 -KAPPLICATIONCLUSTERING_PROJ=../../ApplicationClustering -KMIXIM_PROJ=../../MiXiM -KSENSORTECHNOLOGY_PROJ=../../SensorTechnology -KWAKEUPRECV_PROJ=../../WakeUpRecv
 #
 
 # Name of target to be created (-o option)
@@ -39,8 +39,8 @@ INCLUDE_PATH = \
     -I../../ApplicationClustering/includes \
     -I../../MiXiM/src/modules \
     -I../../MiXiM/src/modules/phy \
-    -I../../MiXiM/src/inet_stub/util \
     -I../../MiXiM/src/modules/power/battery \
+    -I../../MiXiM/src/inet_stub/util \
     -I../../MiXiM/src/inet_stub/linklayer/contract \
     -I../../MiXiM/src/base/connectionManager \
     -I../../MiXiM/src/inet_stub/mobility/models \
@@ -65,10 +65,10 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 # Object files for local .cc and .msg files
 OBJS = \
     $O/ClusterApplWiseRoute.o \
-    $O/ClusterAppl.o \
     $O/CustomDiceApplication.o \
     $O/CustomWiseRoute.o \
     $O/CustomMatrixApplication.o \
+    $O/LeafClusterAppl.o \
     $O/NoApplicationClusteringAppl.o \
     $O/ApplicationClusteringImplementations.o \
     $O/CSMA802154HostStateHandled.o
@@ -191,12 +191,6 @@ $O/CSMA802154HostStateHandled.o: CSMA802154HostStateHandled.cc \
 	$(MIXIM_PROJ)/src/modules/mac/csma.h \
 	$(MIXIM_PROJ)/src/modules/messages/WiseRoutePkt_m.h \
 	$(MIXIM_PROJ)/src/modules/utility/DroppedPacket.h
-$O/ClusterAppl.o: ClusterAppl.cc \
-	ClusterAppl.h \
-	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
-	$(MIXIM_PROJ)/src/base/utils/HostState.h \
-	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
-	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h
 $O/ClusterApplWiseRoute.o: ClusterApplWiseRoute.cc \
 	ClusterApplWiseRoute.h \
 	CustomWiseRoute.h \
@@ -361,6 +355,17 @@ $O/CustomWiseRoute.o: CustomWiseRoute.cc \
 	$(SENSORTECHNOLOGY_PROJ)/src/SimpleSensorData/SimpleSensorData.h \
 	$(WAKEUPRECV_PROJ)/MyTestApplication.h \
 	$(WAKEUPRECV_PROJ)/WakeupPhyLayerBattery.h
+$O/LeafClusterAppl.o: LeafClusterAppl.cc \
+	LeafClusterAppl.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
+	$(MIXIM_PROJ)/src/base/utils/HostState.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h
 $O/NoApplicationClusteringAppl.o: NoApplicationClusteringAppl.cc \
 	NoApplicationClusteringAppl.h \
 	$(MIXIM_PROJ)/src/base/messages/ApplPkt_m.h \

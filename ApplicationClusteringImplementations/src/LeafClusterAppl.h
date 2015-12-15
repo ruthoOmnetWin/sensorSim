@@ -13,22 +13,21 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package applicationclusteringimplementations;
-import org.mixim.base.modules.IBaseApplLayer;
+#ifndef LEAFCLUSTERAPPL_H_
+#define LEAFCLUSTERAPPL_H_
 
-//
-// TODO auto-generated type
-//
-simple ClusterAppl like IBaseApplLayer
-{
-    parameters:
-        int headerLength @unit("bit"); // length of the application message header (in bits)
-        int coordinatorNodeAddr;
-        
-        @class(ClusterAppl);
-    gates:
-        input lowerLayerIn; // from network layer
-        output lowerLayerOut; // to network layer
-        input lowerControlIn; // control from network layer
-        output lowerControlOut; // control to network layer
-}
+#include <omnetpp.h>
+#include <BaseModule.h>
+#include <SimpleBattery.h>
+
+class LeafClusterAppl  : public BaseModule {
+protected:
+    SimpleBattery* battery;
+public:
+    LeafClusterAppl();
+    virtual ~LeafClusterAppl();
+    void initialize(int stage);
+    void handleMessage(cMessage* msg);
+};
+
+#endif /* LEAFCLUSTERAPPL_H_ */

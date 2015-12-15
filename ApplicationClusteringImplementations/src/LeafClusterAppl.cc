@@ -13,16 +13,32 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#include <ClusterAppl.h>
+#include <LeafClusterAppl.h>
+#include <FindModule.h>
 
-Define_Module(ClusterAppl);
 
-ClusterAppl::ClusterAppl() {
+Define_Module(LeafClusterAppl);
+
+LeafClusterAppl::LeafClusterAppl() {
     // TODO Auto-generated constructor stub
 
 }
 
-ClusterAppl::~ClusterAppl() {
+LeafClusterAppl::~LeafClusterAppl() {
     // TODO Auto-generated destructor stub
 }
 
+void LeafClusterAppl::initialize(int stage) {
+    if (stage == 1) {
+        battery = FindModule<SimpleBattery*>::findSubModule(findHost());
+//        double volt = battery->getVoltage();
+//        double rel = battery->estimateResidualRelative();
+//        double abs = battery->estimateResidualAbs();
+    }
+}
+
+void LeafClusterAppl::handleMessage(cMessage* msg) {
+    if (msg) {
+        double rel = battery->estimateResidualRelative();
+    }
+}
