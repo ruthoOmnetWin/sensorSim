@@ -17,6 +17,12 @@ import org.mixim.base.modules.BaseNetwork;
 ////the cluster master nodes will then search for the nodes with the highest battery power left (one for each sensor type).
 ////for each type the chosen node will then make one measuring and send it to the cluster master which will forward it to the global master.
 //
+//module types
+//
+////there must be one coordinator/master node (coordinatorNodeAddr), this node must use the appl layer MasterClusterAppl.
+////direct childs of the master are ClusterMaster. they must use the appl layer ClusterMasterClusterAppl.
+////the leaf nodes in the routing tree should connect directly to a clusterMaster. they must use the appl layer LeafClusterAppl.
+//
 network Szenario2 extends BaseNetwork
 {
     parameters:

@@ -180,7 +180,11 @@ $O/ACI/ApplicationClusteringImplementations.o: ACI/ApplicationClusteringImplemen
 	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h
 $O/Appl/ClusterMasterClusterAppl.o: Appl/ClusterMasterClusterAppl.cc \
-	Appl/ClusterMasterClusterAppl.h
+	Appl/ClusterMasterClusterAppl.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/utils/HostState.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h
 $O/Appl/CustomDiceApplication.o: Appl/CustomDiceApplication.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/GenericPacket_m.h \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \
@@ -278,7 +282,11 @@ $O/Appl/LeafClusterAppl.o: Appl/LeafClusterAppl.cc \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h
 $O/Appl/MasterClusterAppl.o: Appl/MasterClusterAppl.cc \
-	Appl/MasterClusterAppl.h
+	Appl/MasterClusterAppl.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/utils/HostState.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h
 $O/Appl/NoApplicationClusteringAppl.o: Appl/NoApplicationClusteringAppl.cc \
 	Appl/NoApplicationClusteringAppl.h \
 	$(MIXIM_PROJ)/src/base/messages/ApplPkt_m.h \

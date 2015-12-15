@@ -20,7 +20,7 @@
 #include <BaseModule.h>
 #include <SimpleBattery.h>
 
-class LeafClusterAppl  : public BaseModule {
+class LeafClusterAppl : public BaseModule {
 protected:
     SimpleBattery* battery;
 public:

@@ -15,6 +15,8 @@
 
 #include <ClusterMasterClusterAppl.h>
 
+Define_Module(ClusterMasterClusterAppl);
+
 ClusterMasterClusterAppl::ClusterMasterClusterAppl() {
     // TODO Auto-generated constructor stub
 
@@ -24,3 +26,10 @@ ClusterMasterClusterAppl::~ClusterMasterClusterAppl() {
     // TODO Auto-generated destructor stub
 }
 
+void ClusterMasterClusterAppl::initialize(int stage) {
+
+}
+
+void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
+
+}

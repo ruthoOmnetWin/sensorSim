@@ -16,10 +16,15 @@
 #ifndef CLUSTERMASTERCLUSTERAPPL_H_
 #define CLUSTERMASTERCLUSTERAPPL_H_
 
-class ClusterMasterClusterAppl {
+#include <omnetpp.h>
+#include <BaseModule.h>
+
+class ClusterMasterClusterAppl : public BaseModule {
 public:
     ClusterMasterClusterAppl();
     virtual ~ClusterMasterClusterAppl();
+    void initialize(int stage);
+    void handleMessage(cMessage* msg);
 };
 
 #endif /* CLUSTERMASTERCLUSTERAPPL_H_ */
