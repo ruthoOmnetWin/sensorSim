@@ -224,3 +224,7 @@ void Memory::printStorage()
         say(ss.str().c_str());
     }
 }
+
+int Memory::getDataSizeCount() {
+    return storageDataSets;
+}

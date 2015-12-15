@@ -56,6 +56,8 @@ public:
     storage* readAllAndClear();
 
     void printStorage();
+
+    int getDataSizeCount();
 };
 
 Define_Module(Memory);

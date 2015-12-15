@@ -20,6 +20,7 @@
 #include <cassert>
 #include <MyTestApplication.h>
 #include <FindModule.h>
+#include <NoApplicationClusteringAppl.h>
 
 #include "NetwControlInfo.h"
 #include "MacToNetwControlInfo.h"
@@ -190,6 +191,8 @@ void CustomWiseRoute::convertTreeToRouteTable() {
     //routeTree;
     //routeTable;
     //myNetwAddr;
+    NoApplicationClusteringAppl* appl = FindModule<NoApplicationClusteringAppl*>::findSubModule(findHost());
+    appl->myNetworkAddr = myNetwAddr;
 
     //list of childs of the node i are inside routeTreeAdjList[i]
     int fatherAddr = routeTree[myNetwAddr];
@@ -198,6 +201,9 @@ void CustomWiseRoute::convertTreeToRouteTable() {
         //no children
         //this means all other nodes can be accessed through the father
         isLeaf = true;
+        if (appl != NULL) {
+            appl->iAmLeafNode = true;
+        }
     } else {
         //proccess the children
         AdjListElement* currentElement = &routeTreeAdjList[myNetwAddr];
@@ -491,6 +497,10 @@ void CustomWiseRoute::forward(cMessage* msg, LAddress::L3Type srcAddr) {
 
     } else {
         nextHopAddr = getRoute(finalDestAddr, true);
+        if (srcAddr == -2) {
+            initialSrc = myNetwAddr;
+        }
+        sendToNeighbor(msg, finalDestAddr, nextHopAddr, initialSrc, srcAddr);
     }
 }
 
@@ -502,10 +512,7 @@ void CustomWiseRoute::sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestA
         return;
     }
 
-//    EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
-//    if (nextHopAddr == 6 || nextHopAddr == 7 || nextHopAddr == 20) {
-//        EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
-//    }
+    EV << "Nexthop  :" << nextHopAddr << "-------------------- I am NODE ---------" << endl;
 
     LAddress::L2Type nextHopMacAddr;
     const char *name;
@@ -527,6 +534,14 @@ void CustomWiseRoute::sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestA
     setDownControlInfo(pkt, nextHopMacAddr);
     assert(static_cast<cPacket*>(msg));
     pkt->encapsulate(static_cast<cPacket*>(msg));
+    cArray *parlist = msg->getParList().dup();
+
+    int i = 0;
+    while (parlist->exist(i)) {
+        pkt->getParList().add(parlist->get(i));
+        i++;
+    }
+
     sendDown(pkt);
     nbDataPacketsSent++;
 }

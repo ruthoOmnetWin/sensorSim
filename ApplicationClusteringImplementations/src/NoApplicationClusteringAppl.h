@@ -31,6 +31,9 @@ protected:
     int sendSensorDataToMasterIntervall;
     Memory* memory;
 public:
+    bool iAmLeafNode;
+    int myNetworkAddr;
+
     NoApplicationClusteringAppl();
     ~NoApplicationClusteringAppl();
 
