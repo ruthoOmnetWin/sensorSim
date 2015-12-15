@@ -1,14 +1,14 @@
 version 2
-run General-0-20151215-11:08:48-15900
+run General-0-20151215-13:21:14-26914
 attr configname General
-attr datetime 20151215-11:08:48
+attr datetime 20151215-13:21:14
 attr experiment General
 attr inifile szenario1.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network Szenario1
-attr processid 15900
+attr processid 26914
 attr repetition 0
 attr replication #0
 attr resultdir results

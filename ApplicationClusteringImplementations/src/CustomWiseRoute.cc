@@ -31,6 +31,7 @@
 #include "exception"
 #include "GenericPacket_m.h"
 #include "WakeUpPacket_m.h"
+#include <string>
 
 #include "exception"
 
@@ -45,7 +46,9 @@ CustomWiseRoute::CustomWiseRoute() : WiseRoute()
         , networkID(-1)
         , ip(-1)
 {
-
+    MessagesToBeForwarded = new cArray;
+    forwardMessagesSelfMsg = NULL;
+    sendingIntervall = 0;
 }
 
 void CustomWiseRoute::initialize(int stage) {
@@ -58,6 +61,16 @@ void CustomWiseRoute::initialize(int stage) {
 
         trace = par("trace");
         networkID = par("networkID");
+
+        forwardMessagesSelfMsg = new cMessage;
+        forwardMessagesSelfMsg->setKind(FORWARD_DELAYED);
+        NoApplicationClusteringAppl* appl = FindModule<NoApplicationClusteringAppl*>::findSubModule(findHost());
+        if (appl != NULL) {
+            sendingIntervall = appl->par("sendingIntervall");
+        }
+        if (appl != NULL) {
+            //scheduleAt(simTime() + sendingIntervall + 5 + (myNetwAddr*0.1), forwardMessagesSelfMsg);
+        }
     }
     if (stage == 1) {
         SensorNode* node = (SensorNode*) this->getParentModule();
@@ -192,7 +205,9 @@ void CustomWiseRoute::convertTreeToRouteTable() {
     //routeTable;
     //myNetwAddr;
     NoApplicationClusteringAppl* appl = FindModule<NoApplicationClusteringAppl*>::findSubModule(findHost());
-    appl->myNetworkAddr = myNetwAddr;
+    if (appl != NULL) {
+        appl->myNetworkAddr = myNetwAddr;
+    }
 
     //list of childs of the node i are inside routeTreeAdjList[i]
     int fatherAddr = routeTree[myNetwAddr];
@@ -263,46 +278,65 @@ CustomWiseRoute::AdjListElement* CustomWiseRoute::getChildNodes(int nodeId) {
 }
 
 void CustomWiseRoute::finish() {
-/*
-    if (myNetwAddr == 1) {
 
-        tRouteTableEntry toFive;
-        toFive.nextHop = 5;
-        routeTable.insert(make_pair(5, toFive));
-
-        LAddress::L3Type next = getRoute(5, true);
-        EV << "next: " << next << endl;
-    }
-
-    tFloodTable::iterator pos = floodTable.begin();
-    tFloodTable::iterator posEnd = floodTable.end();
-
-    EV << "my number is: " << this->floodSeqNumber << endl;
-    EV << "my mac is: " << this->macaddress << endl;
-    EV << "my sink is: " << this->sinkAddress << endl;
-    EV << "my networkaddress is: " << myNetwAddr << endl;
-
-    while (pos != posEnd) {
-        EV << " " << pos->first << "," << pos->second << endl;
-        ++pos;
-    }
-
-    this->routeTable[0];
-*/
     WiseRoute::finish();
 }
 
-//from NetworkLayer2
+void CustomWiseRoute::handleSelfMsg(cMessage* msg)
+{
+    if (msg->getKind() == SEND_ROUTE_FLOOD_TIMER) {
+        // Send route flood packet and restart the timer
+        WiseRoutePkt* pkt = new WiseRoutePkt("route-flood", ROUTE_FLOOD);
+        pkt->setByteLength(headerLength);
+        pkt->setInitialSrcAddr(myNetwAddr);
+        pkt->setFinalDestAddr(LAddress::L3BROADCAST);
+        pkt->setSrcAddr(myNetwAddr);
+        pkt->setDestAddr(LAddress::L3BROADCAST);
+        pkt->setNbHops(0);
+        floodTable.insert(make_pair(myNetwAddr, floodSeqNumber));
+        pkt->setSeqNum(floodSeqNumber);
+        floodSeqNumber++;
+        pkt->setIsFlood(1);
+        setDownControlInfo(pkt, LAddress::L2BROADCAST);
+        sendDown(pkt);
+        nbFloodsSent++;
+        nbRouteFloodsSent++;
+        scheduleAt(simTime() + routeFloodsInterval + uniform(0, 1), routeFloodTimer);
+    } else if (msg->getKind() == FORWARD_DELAYED) {
 
-/*
-void NetworkLayer2::initialize(int stage) {
-    BaseNetwLayer::initialize(stage);
-    if (stage == 0) {
-        trace = par("trace");
-        networkID = par("networkID");
+        int index = atoi(msg->getName());
+        if (MessagesToBeForwarded->exist(index)) {
+            cMessage* forwardMessage = check_and_cast<cMessage*>(MessagesToBeForwarded->remove(index));
+
+            if (forwardMessage != NULL) {
+
+                WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(forwardMessage);
+
+                //pkt->setFinalDestAddr(LAddress::L3BROADCAST);
+                WiseRoutePkt* copyPkt = pkt->dup();
+                //sendUp(decapsMsg(pkt));
+
+                //forward broadcast
+                LAddress::L3Type finalDestAddr = copyPkt->getFinalDestAddr();
+                LAddress::L3Type initialSrcAddr = copyPkt->getInitialSrcAddr();
+                LAddress::L3Type destAddr = copyPkt->getDestAddr();
+                LAddress::L3Type srcAddr = copyPkt->getSrcAddr();
+
+                EV << "-------------------- I am NODE " << myNetwAddr << ". FORWARDING" << " message." << endl;
+
+                //pkt->setFinalDestAddr();
+                NetwControlInfo::setControlInfo(copyPkt, finalDestAddr);
+                forward(copyPkt, -2);
+            }
+        }
+    }
+    else {
+        EV << "WiseRoute - handleSelfMessage: got unexpected message of kind " << msg->getKind() << endl;
+        delete msg;
     }
 }
-*/
+
+//from NetworkLayer2
 
 /**
  * handle messages in different ways (and restore final destination)
@@ -334,15 +368,40 @@ void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
             wuPkt->setName("WakeUpReceiverPacket");
             NetwControlInfo::setControlInfo(wuPkt, LAddress::L3BROADCAST);
 
+            EV << "-------------------- I am NODE " << myNetwAddr << ". FORWARDING WakeUpReceiverPacket." << endl;
+
             if (LAddress::isL3Broadcast(finalDestAddr)) {
                 //pkt->setFinalDestAddr();
-
-                EV << "I am NODE " << myNetwAddr << " FORWARDING" << "-------------------- I am NODE ---------" << endl;
-
                 //NetwControlInfo::setControlInfo(copyPkt, LAddress::L3BROADCAST);
                 forward(wuPkt, srcAddr);
             }
 
+        } else if (strcmp(msg->getName(), "sensor data") == 0) {
+            //only store the message
+            //it will be forwarded later (triggered by self message forwardMessagesSelfMsg)
+            WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+            LAddress::L3Type finalDestAddr = pkt->getFinalDestAddr();
+            if (myNetwAddr == finalDestAddr) {
+                sendUp(decapsMsg(pkt));
+                EV << "-------------------- I am NODE " << myNetwAddr << ". GOT FORWARDED MESSAGES AND I AM FINAL RECEIVER." << endl;
+            } else {
+                int index = MessagesToBeForwarded->add(msg);
+                NoApplicationClusteringAppl* appl = FindModule<NoApplicationClusteringAppl*>::findSubModule(findHost());
+                if (appl != NULL) {
+                    cMessage* forwardMsgEvent = new cMessage;
+                    forwardMsgEvent->setKind(FORWARD_DELAYED);
+
+                    std::stringstream strs;
+                    strs << index;
+                    std::string temp_str = strs.str();
+                    char const* char_type = temp_str.c_str();
+
+                    forwardMsgEvent->setName(char_type);
+
+                    scheduleAt(simTime() + 5, forwardMsgEvent);
+                }
+                EV << "-------------------- I am NODE " << myNetwAddr << ". GOT MESSAGE TO BE FORWARDED LATER. WAITING FOR MORE MESSAGES FIRST." << endl;
+            }
         } else {
             WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
 
@@ -356,11 +415,10 @@ void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
             LAddress::L3Type destAddr = copyPkt->getDestAddr();
             LAddress::L3Type srcAddr = copyPkt->getSrcAddr();
 
+            EV << "-------------------- I am NODE " << myNetwAddr << ". FORWARDING" << " message." << endl;
+
             if (LAddress::isL3Broadcast(finalDestAddr)) {
                 //pkt->setFinalDestAddr();
-
-                EV << "I am NODE " << myNetwAddr << " FORWARDING" << "-------------------- I am NODE ---------" << endl;
-
                 NetwControlInfo::setControlInfo(copyPkt, LAddress::L3BROADCAST);
                 forward(copyPkt, srcAddr);
             }

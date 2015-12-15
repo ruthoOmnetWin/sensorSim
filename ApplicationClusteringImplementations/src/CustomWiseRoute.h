@@ -59,6 +59,18 @@ public:
     const char* bcName;
 
 protected:
+    enum messagesTypes {
+        UNKNOWN=0,
+        DATA,
+        ROUTE_FLOOD,
+        SEND_ROUTE_FLOOD_TIMER,
+        //added
+        FORWARD_DELAYED
+    };
+
+    cArray* MessagesToBeForwarded;
+    cMessage* forwardMessagesSelfMsg;
+    int sendingIntervall;
 
     void sendToNeighbor(cMessage* msg, LAddress::L3Type &finalDestAddr, LAddress::L3Type &nextHopAddr, LAddress::L3Type &initialSrcAddr, LAddress::L3Type &srcAddr);
     void forward(ApplPkt* msg, LAddress::L3Type);
@@ -70,6 +82,7 @@ protected:
     int networkID;  // the network to which we belong
     int ip;  // the network to which we belong
 
+    void handleSelfMsg(cMessage* msg);
     void handleLowerMsg(cMessage* msg);
     void handleUpperControl(cMessage *msg);
     void handleLowerControl(cMessage *msg);

@@ -32,7 +32,7 @@ NoApplicationClusteringAppl::~NoApplicationClusteringAppl() {
 }
 
 void NoApplicationClusteringAppl::initialize(int stage) {
-    if (stage == 1) {
+    if (stage == 0) {
         //gates
         dataOut = findGate("lowerLayerOut");
         dataIn = findGate("lowerLayerIn");
@@ -40,11 +40,14 @@ void NoApplicationClusteringAppl::initialize(int stage) {
         ctrlIn = findGate("lowerControlIn");
         //params
         coordinatorNodeAddr = par("coordinatorNodeAddr");
+        sendSensorDataToMasterIntervall = par("sendingIntervall");
+    }
+    if (stage == 1) {
 
         if (iAmLeafNode) {
-            sendSensorDataToMasterIntervall = par("sendingIntervall");
             //selfmessage sendToMaster init
             sendToMaster = new cMessage("sendToMaster");
+            //nodes should send one after another and all at the same time so the receiver can receive all messages correctly
             scheduleAt(simTime() + sendSensorDataToMasterIntervall + 1 + (0.02 * myNetworkAddr), sendToMaster);
         }
 
