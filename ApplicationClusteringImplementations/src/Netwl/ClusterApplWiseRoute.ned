@@ -13,7 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package applicationclusteringimplementations;
+package applicationclusteringimplementations.Netwl;
 
 //
 // TODO auto-generated type

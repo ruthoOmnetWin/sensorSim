@@ -1,4 +1,4 @@
-package applicationclusteringimplementations;
+package applicationclusteringimplementations.MacLayer;
 import org.mixim.modules.mac.csma;
 
 

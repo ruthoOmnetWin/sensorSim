@@ -1,4 +1,4 @@
-package applicationclusteringimplementations;
+package applicationclusteringimplementations.Appl;
 
 import org.mixim.base.modules.IBaseApplLayer;
 

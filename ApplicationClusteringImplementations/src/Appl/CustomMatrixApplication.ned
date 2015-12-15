@@ -13,7 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package applicationclusteringimplementations;
+package applicationclusteringimplementations.Appl;
 
 import org.mixim.base.modules.IBaseApplLayer;
 

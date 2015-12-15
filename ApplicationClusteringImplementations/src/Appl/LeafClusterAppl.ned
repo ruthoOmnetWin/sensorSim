@@ -13,16 +13,22 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package applicationclusteringimplementations;
-import org.mixim.modules.netw.WiseRoute;
+package applicationclusteringimplementations.Appl;
+import org.mixim.base.modules.IBaseApplLayer;
 
-simple CustomWiseRoute extends WiseRoute 
-{    
+//
+// TODO auto-generated type
+//
+simple LeafClusterAppl like IBaseApplLayer
+{
     parameters:
-        // debug switch
-        trace = default(false);
-        stats = default(true);
-        headerLength = default(0);
-        int networkID = default(0);  // network ID, allows coexistence tests
-    	@class("CustomWiseRoute");
+        int headerLength @unit("bit"); // length of the application message header (in bits)
+        int coordinatorNodeAddr;
+        
+        @class(LeafClusterAppl);
+    gates:
+        input lowerLayerIn; // from network layer
+        output lowerLayerOut; // to network layer
+        input lowerControlIn; // control from network layer
+        output lowerControlOut; // control to network layer
 }
