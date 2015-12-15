@@ -1,22 +1,31 @@
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-// 
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-// 
-// You should have received a copy of the GNU Lesser General Public License
-// along with this program.  If not, see http://www.gnu.org/licenses/.
-// 
-
 package applicationclusteringimplementations;
 
 import org.mixim.base.modules.BaseNetwork;
 
+//
+//some information about this szenario
+//
+//szenario.ini is the matching ini-file
+//
+//important data is:
+//
+////**.*.appl.sendingIntervall (s) - sending intervall time/ how long will the nodes store their measured values before sending them to the master,
+////**.Node0.hasTemperatureSensor(etc) - define the sensors for each node,
+////**.Memory.storageSize - define how much data every nodes memory can store (integer - if e.g. a value 1 is chosen, the memory can store only one data set),
+////**.*.appl.coordinatorNodeAddr - defines the master node,
+////energy consumptions,
+////**.routeTree - define the routing table,
+//
+//routing:
+//
+////all nodes that are leaf nodes (defined inside routeTree) will measure (measure intervall is defined inside **.sensingIntervall),
+////all other nodes won't,
+////you can define one node as master (coordinatorNodeAddr),
+////after a specific time (defined inside sendingIntervall) all leaf nodes will send all their measured values to the master,
+////depending on the routingTree the master may not be reached in one step,
+////the messages will also be send if leaf nodes aren't direct children of the master, so for example you can define one father node for every room and connect all
+////room fathers to the master, the messages will then be transported via the defined connections
+//
 network Szenario1 extends BaseNetwork
 {
     parameters:
