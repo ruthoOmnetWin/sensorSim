@@ -32,15 +32,25 @@ void ClusterMasterClusterAppl::initialize(int stage) {
         NetwLayer = FindModule<ClusterApplWiseRoute*>::findSubModule(findHost());
         childNodes = NetwLayer->getChildNodes(NetwLayer->getMyNetworkAddress());
 
-        //find
-        //findModuleWherever("Szenario2.Node0");
-
         do {
             if (childNodes->value != -1) {
 
                 std::stringstream ss;
                 ss << "Node" << childNodes->value;
-                cModule* node3 = findModuleWherever(ss.str().c_str(), findHost()->getParentModule());
+                cModule* node = findModuleWherever(ss.str().c_str(), findHost()->getParentModule());
+
+                SensorNode* sNode = dynamic_cast<SensorNode*>(node);
+                if (sNode != NULL) {
+                    SensorTypeInformation* sti = new SensorTypeInformation;
+                    sti->nodeNetwAddr = childNodes->value;
+                    sti->nodeObject = sNode;
+
+                    sti->hasTemperatureSensor = sNode->par("hasTemperatureSensor");
+                    sti->hasHumiditySensor = sNode->par("hasHumiditySensor");
+                    sti->hasPressureSensor = sNode->par("hasPressureSensor");
+                    sti->hasLightSensor = sNode->par("hasLightSensor");
+                    SensorTypeInformationVector.push_back(*sti);
+                }
 
             }
             childNodes = childNodes->next;

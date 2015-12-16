@@ -1,5 +1,5 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20151216-09:28:04-16192 b 1000
+SB v 1029 rid General-0-20151216-09:47:36-22701 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t applicationclusteringimplementations.Szenario2 n Szenario2 cm 1
 MS id 1 d bgi=background/roomsBigger;bgb=867,430,white;bgp=0,0
@@ -2283,6 +2283,8 @@ GC m 314 g 0 n fromLightSensor o 0
 GC m 314 g 3 n toLightSensor o 1
 CC sm 45 sg 1 dm 314 dg 0
 CC sm 314 sg 3 dm 45 dg 2
+BU id 5 txt "Created connections from Light-sensor to the processor."
+- Created connections from Light-sensor to the processor.
 GC m 46 g 0 n connectToProcessor$i o 0
 GC m 46 g 1 n connectToProcessor$o o 1
 GC m 314 g 4 n connectToMemory$i o 0
@@ -2291,6 +2293,9 @@ CC sm 46 sg 1 dm 314 dg 4
 CS sm 46 sg 1 d ""
 CC sm 314 sg 5 dm 46 dg 0
 CS sm 314 sg 5 d ""
+BU id 5 txt "Counted 1 Sensor(s) on the Node.\n"
+- Counted 1 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 43 m initialize(0)
 - Node1[0]::BatteryStats: show details = 0
@@ -2526,14 +2531,20 @@ GC m 316 g 0 n fromTemperatureSensor o 0
 GC m 316 g 3 n toTemperatureSensor o 1
 CC sm 80 sg 1 dm 316 dg 0
 CC sm 316 sg 3 dm 80 dg 2
+BU id 7 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 316 g 4 n fromPressureSensor o 0
 GC m 316 g 7 n toPressureSensor o 1
 CC sm 81 sg 1 dm 316 dg 4
 CC sm 316 sg 7 dm 81 dg 2
+BU id 7 txt "Created connections from Pressure-sensor to the processor."
+- Created connections from Pressure-sensor to the processor.
 GC m 316 g 8 n fromLightSensor o 0
 GC m 316 g 11 n toLightSensor o 1
 CC sm 82 sg 1 dm 316 dg 8
 CC sm 316 sg 11 dm 82 dg 2
+BU id 7 txt "Created connections from Light-sensor to the processor."
+- Created connections from Light-sensor to the processor.
 GC m 83 g 0 n connectToProcessor$i o 0
 GC m 83 g 1 n connectToProcessor$o o 1
 GC m 316 g 12 n connectToMemory$i o 0
@@ -2542,6 +2553,9 @@ CC sm 83 sg 1 dm 316 dg 12
 CS sm 83 sg 1 d ""
 CC sm 316 sg 13 dm 83 dg 0
 CS sm 316 sg 13 d ""
+BU id 7 txt "Counted 3 Sensor(s) on the Node.\n"
+- Counted 3 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 78 m initialize(0)
 - Node3[0]::BatteryStats: show details = 0
@@ -3088,14 +3102,20 @@ GC m 320 g 0 n fromTemperatureSensor o 0
 GC m 320 g 3 n toTemperatureSensor o 1
 CC sm 165 sg 1 dm 320 dg 0
 CC sm 320 sg 3 dm 165 dg 2
+BU id 11 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 320 g 4 n fromHumiditySensor o 0
 GC m 320 g 7 n toHumiditySensor o 1
 CC sm 166 sg 1 dm 320 dg 4
 CC sm 320 sg 7 dm 166 dg 2
+BU id 11 txt "Created connections from Humidity-sensor to the processor."
+- Created connections from Humidity-sensor to the processor.
 GC m 320 g 8 n fromPressureSensor o 0
 GC m 320 g 11 n toPressureSensor o 1
 CC sm 167 sg 1 dm 320 dg 8
 CC sm 320 sg 11 dm 167 dg 2
+BU id 11 txt "Created connections from Pressure-sensor to the processor."
+- Created connections from Pressure-sensor to the processor.
 GC m 168 g 0 n connectToProcessor$i o 0
 GC m 168 g 1 n connectToProcessor$o o 1
 GC m 320 g 12 n connectToMemory$i o 0
@@ -3104,6 +3124,9 @@ CC sm 168 sg 1 dm 320 dg 12
 CS sm 168 sg 1 d ""
 CC sm 320 sg 13 dm 168 dg 0
 CS sm 320 sg 13 d ""
+BU id 11 txt "Counted 3 Sensor(s) on the Node.\n"
+- Counted 3 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 163 m initialize(0)
 - Node7[0]::BatteryStats: show details = 0
@@ -3517,8 +3540,6 @@ GC m 323 g 0 n fromLightSensor o 0
 GC m 323 g 3 n toLightSensor o 1
 CC sm 230 sg 1 dm 323 dg 0
 CC sm 323 sg 3 dm 230 dg 2
-BU id 14 txt "Created connections from Light-sensor to the processor."
-- Created connections from Light-sensor to the processor.
 GC m 231 g 0 n connectToProcessor$i o 0
 GC m 231 g 1 n connectToProcessor$o o 1
 GC m 323 g 4 n connectToMemory$i o 0
@@ -3527,9 +3548,6 @@ CC sm 231 sg 1 dm 323 dg 4
 CS sm 231 sg 1 d ""
 CC sm 323 sg 5 dm 231 dg 0
 CS sm 323 sg 5 d ""
-BU id 14 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 228 m initialize(0)
 - Node10[0]::BatteryStats: show details = 0
@@ -3926,14 +3944,20 @@ GC m 326 g 0 n fromTemperatureSensor o 0
 GC m 326 g 3 n toTemperatureSensor o 1
 CC sm 290 sg 1 dm 326 dg 0
 CC sm 326 sg 3 dm 290 dg 2
+BU id 17 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 326 g 4 n fromHumiditySensor o 0
 GC m 326 g 7 n toHumiditySensor o 1
 CC sm 291 sg 1 dm 326 dg 4
 CC sm 326 sg 7 dm 291 dg 2
+BU id 17 txt "Created connections from Humidity-sensor to the processor."
+- Created connections from Humidity-sensor to the processor.
 GC m 326 g 8 n fromLightSensor o 0
 GC m 326 g 11 n toLightSensor o 1
 CC sm 292 sg 1 dm 326 dg 8
 CC sm 326 sg 11 dm 292 dg 2
+BU id 17 txt "Created connections from Light-sensor to the processor."
+- Created connections from Light-sensor to the processor.
 GC m 293 g 0 n connectToProcessor$i o 0
 GC m 293 g 1 n connectToProcessor$o o 1
 GC m 326 g 12 n connectToMemory$i o 0
@@ -3942,6 +3966,9 @@ CC sm 293 sg 1 dm 326 dg 12
 CS sm 293 sg 1 d ""
 CC sm 326 sg 13 dm 293 dg 0
 CS sm 326 sg 13 d ""
+BU id 17 txt "Counted 3 Sensor(s) on the Node.\n"
+- Counted 3 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 288 m initialize(0)
 - Node13[0]::BatteryStats: show details = 0
@@ -4317,52 +4344,4 @@ GC m 4 g 2 n in26-1 o 0
 GC m 26 g 10 n in26-1 o 0
 CC sm 4 sg 2 dm 26 dg 10
 GC m 42 g 10 n in26-1 o 0
-CC sm 26 sg 10 dm 42 dg 10
-CC sm 5 sg 3 dm 4 dg 2
-GC m 4 g 5 n out26-1 o 1
-GC m 26 g 13 n out26-1 o 1
-CC sm 26 sg 13 dm 4 dg 5
-GC m 42 g 13 n out26-1 o 1
-CC sm 42 sg 13 dm 26 dg 13
-GC m 5 g 4 n in49-1 o 0
-GC m 49 g 12 n in49-1 o 0
-CC sm 5 sg 4 dm 49 dg 12
-GC m 57 g 12 n in49-1 o 0
-CC sm 49 sg 12 dm 57 dg 12
-CC sm 4 sg 5 dm 5 dg 4
-- visual position. x = 311 y = 154 z = 0
-MS id 5 d "t=mode: power saving;p=311,154;bgb=447,450;i=block/ifcard"
-MS id 5 d "t=mode: power saving;p=311,154;bgb=447,450;i=block/ifcard"
-- initializing MovingMobilityBase stage 1
-- initializing LinearMobility stage 1
-ME
-MB sm 1 tm 56 m initialize(1)
-- myMacAddr C:00-00-00-00-00-01
-- Node1[0]::CSMA802154HostStateHandled: queueLength = 5 bitrate = 15360 backoff method = exponential
-- Node1[0]::CSMA802154HostStateHandled: finished csma init stage 1.
-ME
-MB sm 1 tm 57 m initialize(1)
-- Node1[0]::SimpleBattery: initialized device physical layer as device 6 with 7 accounts
-- Node1[0]::SimpleBattery: 0 device 6 (physical layer) draw current 18.8mA, activity = 1
-MB sm 57 tm 44 m ""
-ME
-ME
-MB sm 1 tm 50 m initialize(1)
-- Host index=0, Id=5
--   host IP address=1
-MB sm 50 tm 47 m ""
-ME
--   host macaddress=00-00-00-00-00-01
-MB sm 50 tm 47 m ""
-ME
-CM id 156 tid 156 eid 156 etid 156 c cMessage n route-flood-timer k 3 pe -1
-- Routing table for 1
-- target: 0, next: 0
-- target: 1, next: 1
-- target: 2, next: 2
-- target: 3, next: 3
-- target: 4, next: 4
-- target: 5, next: 0
-- target: 6, next: 0
-- target: 7, next: 0
-- ta
+CC sm 26 sg 

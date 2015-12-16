@@ -20,6 +20,8 @@
 #include <BaseModule.h>
 #include <AbstractClusterAppl.h>
 #include <ClusterApplWiseRoute.h>
+#include <SensorNode.h>
+#include <vector>
 
 class ClusterMasterClusterAppl : public BaseModule, public AbstractClusterAppl {
 protected:
@@ -32,6 +34,18 @@ public:
     virtual ~ClusterMasterClusterAppl();
     void initialize(int stage);
     void handleMessage(cMessage* msg);
+
+    struct SensorTypeInformation {
+        int nodeNetwAddr = -1;
+        SensorNode* nodeObject = NULL;
+        bool hasTemperatureSensor = false;
+        bool hasHumiditySensor = false;
+        bool hasPressureSensor = false;
+        bool hasLightSensor = false;
+    };
+
+    std::vector<SensorTypeInformation> SensorTypeInformationVector;
+
 };
 
 #endif /* CLUSTERMASTERCLUSTERAPPL_H_ */

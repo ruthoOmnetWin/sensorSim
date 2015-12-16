@@ -204,7 +204,8 @@ $O/Appl/ClusterMasterClusterAppl.o: Appl/ClusterMasterClusterAppl.cc \
 	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
 	$(MIXIM_PROJ)/src/modules/messages/DummyRoutePkt_m.h \
-	$(MIXIM_PROJ)/src/modules/netw/WiseRoute.h
+	$(MIXIM_PROJ)/src/modules/netw/WiseRoute.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h
 $O/Appl/CustomDiceApplication.o: Appl/CustomDiceApplication.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/GenericPacket_m.h \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \
