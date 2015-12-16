@@ -20,10 +20,19 @@
 #include <BaseModule.h>
 #include <SimpleBattery.h>
 #include <AbstractClusterAppl.h>
+#include <Memory.h>
+#include <Processor.h>
 
 class LeafClusterAppl : public BaseModule, public AbstractClusterAppl {
 protected:
     SimpleBattery* battery;
+    Processor* processor;
+    Memory* memory;
+
+    bool hasTemperatureSensor;
+    bool hasHumiditySensor;
+    bool hasPressureSensor;
+    bool hasLightSensor;
 public:
     LeafClusterAppl();
     virtual ~LeafClusterAppl();

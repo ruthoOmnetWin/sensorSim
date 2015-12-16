@@ -1,14 +1,14 @@
 version 2
-run General-0-20151216-08:09:17-7592
+run General-0-20151216-09:28:04-16192
 attr configname General
-attr datetime 20151216-08:09:17
+attr datetime 20151216-09:28:04
 attr experiment General
 attr inifile szenario2.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network Szenario2
-attr processid 7592
+attr processid 16192
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -78,55 +78,4 @@ vector 143  Szenario2.Node11.Processor  residualAbs  ETV
 vector 151  Szenario2.Node12.Processor  "power mode"  ETV
 vector 152  Szenario2.Node12.Processor  "Sensor Modules Status"  ETV
 vector 153  Szenario2.Node12.Processor  Voltage  ETV
-vector 154  Szenario2.Node12.Processor  residualRelative  ETV
-vector 155  Szenario2.Node12.Processor  residualAbs  ETV
-vector 163  Szenario2.Node13.Processor  "power mode"  ETV
-vector 164  Szenario2.Node13.Processor  "Sensor Modules Status"  ETV
-vector 165  Szenario2.Node13.Processor  Voltage  ETV
-vector 166  Szenario2.Node13.Processor  residualRelative  ETV
-vector 167  Szenario2.Node13.Processor  residualAbs  ETV
-vector 168  Szenario2.Node0.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 169  Szenario2.Node0.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 170  Szenario2.Node0.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 171  Szenario2.Node0.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 172  Szenario2.Node0.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 173  Szenario2.Node0.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 174  Szenario2.Node0.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 175  Szenario2.Node0.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 176  Szenario2.Node0.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 177  Szenario2.Node0.PressureSensor.SensingUnit  "Current use over time"  ETV
-vector 178  Szenario2.Node0.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 179  Szenario2.Node0.PressureSensor.SignalConditioner  "Current use over time"  ETV
-vector 180  Szenario2.Node0.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 181  Szenario2.Node0.PressureSensor.SignalConverter  "Current use over time"  ETV
-vector 182  Szenario2.Node0.PressureSensor.Transducer  "Energy Consumptions"  ETV
-vector 183  Szenario2.Node0.PressureSensor.Transducer  "Current use over time"  ETV
-vector 184  Szenario2.Node0.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 185  Szenario2.Node0.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 186  Szenario2.Node0.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 187  Szenario2.Node0.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 188  Szenario2.Node0.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 189  Szenario2.Node0.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 190  Szenario2.Node0.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 191  Szenario2.Node0.LightSensor.Transducer  "Current use over time"  ETV
-vector 192  Szenario2.Node0.Memory  "Energy Consumptions"  ETV
-vector 193  Szenario2.Node0.Memory  "Current use over time"  ETV
-vector 201  Szenario2.Node1.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 202  Szenario2.Node1.LightSensor.SensingUnit  "Current use over time"  ETV
-vector 203  Szenario2.Node1.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 204  Szenario2.Node1.LightSensor.SignalConditioner  "Current use over time"  ETV
-vector 205  Szenario2.Node1.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 206  Szenario2.Node1.LightSensor.SignalConverter  "Current use over time"  ETV
-vector 207  Szenario2.Node1.LightSensor.Transducer  "Energy Consumptions"  ETV
-vector 208  Szenario2.Node1.LightSensor.Transducer  "Current use over time"  ETV
-vector 209  Szenario2.Node1.Memory  "Energy Consumptions"  ETV
-vector 210  Szenario2.Node1.Memory  "Current use over time"  ETV
-vector 218  Szenario2.Node2.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-vector 219  Szenario2.Node2.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-vector 220  Szenario2.Node2.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-vector 221  Szenario2.Node2.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-vector 222  Szenario2.Node2.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-vector 223  Szenario2.Node2.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-vector 224  Szenario2.Node2.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-vector 225  Szenario2.Node2.TemperatureSensor.Transducer  "Current use over time"  ETV
-vector 226  Szenario2.Node
+vector 154  Szenario2.Node12.Processor  residualRela

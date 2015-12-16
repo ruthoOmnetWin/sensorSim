@@ -14,22 +14,42 @@
 // 
 
 #include <ClusterMasterClusterAppl.h>
+#include <FindModule.h>
+#include "ModuleAccess.h"
+#include <string.h>
 
 Define_Module(ClusterMasterClusterAppl);
 
 ClusterMasterClusterAppl::ClusterMasterClusterAppl() {
-    // TODO Auto-generated constructor stub
-
 }
 
 ClusterMasterClusterAppl::~ClusterMasterClusterAppl() {
-    // TODO Auto-generated destructor stub
 }
 
 void ClusterMasterClusterAppl::initialize(int stage) {
+    //todo get nodes and their sensor types
+    if (stage == 1) {
+        NetwLayer = FindModule<ClusterApplWiseRoute*>::findSubModule(findHost());
+        childNodes = NetwLayer->getChildNodes(NetwLayer->getMyNetworkAddress());
 
+        //find
+        //findModuleWherever("Szenario2.Node0");
+
+        do {
+            if (childNodes->value != -1) {
+
+                std::stringstream ss;
+                ss << "Node" << childNodes->value;
+                cModule* node3 = findModuleWherever(ss.str().c_str(), findHost()->getParentModule());
+
+            }
+            childNodes = childNodes->next;
+        } while (childNodes != NULL);
+
+        EV<<endl;
+    }
 }
 
 void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
-
+    //todo get battery status of all my leafs
 }

@@ -22,7 +22,7 @@ public:
     virtual ~AbstractClusterAppl();
 
     //all events inside the application layers
-    enum {
+    enum ApplClusteringEvents {
         //this event will be the main event used every time sensor should start action
         GET_SENSOR_DATA,
         //types are constant so this should only be called once
@@ -31,6 +31,14 @@ public:
         GET_BATTERY_RES,
         //this will return the count of events, it is no actual event
         COUNT_EVENTS
+    };
+
+    //sensor type enum for communication between the different appl layers
+    enum SensorTypes {
+        TEMPERATURE_SENSOR_TYPE,
+        PRESSURE_SENSOR_TYPE,
+        HUMIDITY_SENSOR_TYPE,
+        LIGHT_SENSOR_TYPE,
     };
 
 };

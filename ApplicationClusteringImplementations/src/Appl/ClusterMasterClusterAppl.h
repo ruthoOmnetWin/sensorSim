@@ -19,8 +19,14 @@
 #include <omnetpp.h>
 #include <BaseModule.h>
 #include <AbstractClusterAppl.h>
+#include <ClusterApplWiseRoute.h>
 
 class ClusterMasterClusterAppl : public BaseModule, public AbstractClusterAppl {
+protected:
+    ClusterApplWiseRoute* NetwLayer;
+
+    CustomWiseRoute::AdjListElement* childNodes;
+
 public:
     ClusterMasterClusterAppl();
     virtual ~ClusterMasterClusterAppl();

@@ -185,10 +185,26 @@ $O/Appl/AbstractClusterAppl.o: Appl/AbstractClusterAppl.cc \
 $O/Appl/ClusterMasterClusterAppl.o: Appl/ClusterMasterClusterAppl.cc \
 	Appl/AbstractClusterAppl.h \
 	Appl/ClusterMasterClusterAppl.h \
+	Netwl/ClusterApplWiseRoute.h \
+	Netwl/CustomWiseRoute.h \
+	$(MIXIM_PROJ)/src/base/messages/ApplPkt_m.h \
+	$(MIXIM_PROJ)/src/base/messages/NetwPkt_m.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseLayer.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/BaseNetwLayer.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
-	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h
+	$(MIXIM_PROJ)/src/base/utils/PassedMessage.h \
+	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
+	$(MIXIM_PROJ)/src/modules/messages/DummyRoutePkt_m.h \
+	$(MIXIM_PROJ)/src/modules/netw/WiseRoute.h
 $O/Appl/CustomDiceApplication.o: Appl/CustomDiceApplication.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/GenericPacket_m.h \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \
@@ -279,13 +295,19 @@ $O/Appl/LeafClusterAppl.o: Appl/LeafClusterAppl.cc \
 	Appl/LeafClusterAppl.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
+	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
 	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
-	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h
+	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/BatteryAccess.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/Memory/Memory.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/Processor/Processor.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SimpleSensorData/SimpleSensorData.h
 $O/Appl/MasterClusterAppl.o: Appl/MasterClusterAppl.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/GenericPacket_m.h \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \
@@ -447,7 +469,12 @@ $O/Netwl/ClusterApplWiseRoute.o: Netwl/ClusterApplWiseRoute.cc \
 	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
-	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h
+	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/BatteryAccess.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/Memory/Memory.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/Processor/Processor.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SimpleSensorData/SimpleSensorData.h
 $O/Netwl/CustomWiseRoute.o: Netwl/CustomWiseRoute.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/GenericPacket_m.h \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \

@@ -16,29 +16,37 @@
 #include <LeafClusterAppl.h>
 #include <FindModule.h>
 
-
 Define_Module(LeafClusterAppl);
 
 LeafClusterAppl::LeafClusterAppl() {
-    // TODO Auto-generated constructor stub
 
 }
 
 LeafClusterAppl::~LeafClusterAppl() {
-    // TODO Auto-generated destructor stub
 }
 
 void LeafClusterAppl::initialize(int stage) {
     if (stage == 1) {
         battery = FindModule<SimpleBattery*>::findSubModule(findHost());
+        processor = FindModule<Processor*>::findSubModule(findHost());
+        memory = FindModule<Memory*>::findSubModule(findHost());
+
+        hasTemperatureSensor = processor->hasTemperatureSensor;
+        hasHumiditySensor = processor->hasHumiditySensor;
+        hasPressureSensor = processor->hasPressureSensor;
+        hasLightSensor = processor->hasLightSensor;
+
 //        double volt = battery->getVoltage();
 //        double rel = battery->estimateResidualRelative();
 //        double abs = battery->estimateResidualAbs();
+
+        //todo get my sensor types
     }
 }
 
 void LeafClusterAppl::handleMessage(cMessage* msg) {
     if (msg) {
-        double rel = battery->estimateResidualRelative();
+        //double rel = battery->estimateResidualRelative();
+        //processor->startSensingUnit()
     }
 }

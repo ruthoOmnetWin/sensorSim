@@ -7,6 +7,10 @@ import org.mixim.base.modules.BaseNetwork;
 //
 //szenario2.ini is the matching ini-file
 //
+//it is important to name all nodes like this: Node{myNetwAddr} where myNetwAddr == arp.offset.
+////for example if arp.offset = 3 then the netwl.myNetwAddr will 3, too.
+////in this case you must name the node Node3
+//
 ////most values are similar to szenario1
 //
 //what happens in the szenario:
