@@ -14,9 +14,34 @@
 // 
 
 #include <ClusterApplWiseRoute.h>
+#include <FindModule.h>
+#include <LeafClusterAppl.h>
+#include <ClusterMasterClusterAppl.h>
+#include <MasterClusterAppl.h>
 
 Define_Module(ClusterApplWiseRoute);
 
 LAddress::L3Type ClusterApplWiseRoute::getMyNetworkAddress() {
     return myNetwAddr;
+}
+
+void ClusterApplWiseRoute::initialize(int stage) {
+    CustomWiseRoute::initialize(stage);
+    if (stage == 1){
+
+        isMasterClusterAppl = false;
+        isLeafClusterAppl = false;
+        isClusterMasterClusterAppl = false;
+
+        appl = FindModule<AbstractClusterAppl*>::findSubModule(findHost());
+        if (dynamic_cast<LeafClusterAppl*>(appl) != NULL) {
+            isLeafClusterAppl = true;
+        } else if (dynamic_cast<ClusterMasterClusterAppl*>(appl) != NULL) {
+            isClusterMasterClusterAppl = true;
+        } else if (dynamic_cast<MasterClusterAppl*>(appl) != NULL) {
+            isMasterClusterAppl = true;
+        } else {
+            opp_error("Inside ClusterApplWiseRoute::initialize(): Could not get the type of the Application Layer. There was an invalid type given.");
+        }
+    }
 }

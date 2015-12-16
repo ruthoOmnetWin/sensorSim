@@ -73,6 +73,7 @@ void CustomWiseRoute::initialize(int stage) {
         }
     }
     if (stage == 1) {
+
         SensorNode* node = (SensorNode*) this->getParentModule();
         const char *vstr = node->par("routeTree").stringValue();
         std::vector<std::string> v = cStringTokenizer(vstr).asVector();

@@ -18,11 +18,19 @@
 
 #include <CustomWiseRoute.h>
 #include <omnetpp.h>
+#include <AbstractClusterAppl.h>
 
 class ClusterApplWiseRoute : public CustomWiseRoute
 {
+protected:
+    AbstractClusterAppl* appl;
+    bool isMasterClusterAppl;
+    bool isLeafClusterAppl;
+    bool isClusterMasterClusterAppl;
+
 public:
     LAddress::L3Type getMyNetworkAddress();
+    void initialize(int stage);
 };
 
 #endif /* CLUSTERAPPLWISEROUTE_H_ */
