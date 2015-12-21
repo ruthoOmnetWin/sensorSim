@@ -13,16 +13,31 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package applicationclusteringimplementations;
-import org.mixim.modules.netw.WiseRoute;
+#ifndef LEAFCLUSTERAPPL_H_
+#define LEAFCLUSTERAPPL_H_
 
-simple CustomWiseRoute extends WiseRoute 
-{    
-    parameters:
-        // debug switch
-        trace = default(false);
-        stats = default(true);
-        headerLength = default(0);
-        int networkID = default(0);  // network ID, allows coexistence tests
-    	@class("CustomWiseRoute");
-}
+#include <omnetpp.h>
+#include <BaseModule.h>
+#include <SimpleBattery.h>
+#include <AbstractClusterAppl.h>
+#include <Memory.h>
+#include <Processor.h>
+
+class LeafClusterAppl : public BaseModule, public AbstractClusterAppl {
+protected:
+    SimpleBattery* battery;
+    Processor* processor;
+    Memory* memory;
+
+    bool hasTemperatureSensor;
+    bool hasHumiditySensor;
+    bool hasPressureSensor;
+    bool hasLightSensor;
+public:
+    LeafClusterAppl();
+    virtual ~LeafClusterAppl();
+    void initialize(int stage);
+    void handleMessage(cMessage* msg);
+};
+
+#endif /* LEAFCLUSTERAPPL_H_ */

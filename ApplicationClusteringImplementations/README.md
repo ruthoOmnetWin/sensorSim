@@ -10,7 +10,9 @@
 
 ## Szenario2
 
-* coming next
+* Szenario contains the second example
+* detailed informations will be added to the Szenario2.ned file
+* matching ini file is szenario2.ned
 
 ## others
 

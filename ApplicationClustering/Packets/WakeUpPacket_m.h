@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgc 4.5 from ../../ApplicationClustering/Packets/WakeUpPacket.msg.
+// Generated file, do not edit! Created by opp_msgc 4.5 from Packets/WakeUpPacket.msg.
 //
 
 #ifndef _WAKEUPPACKET_M_H_
@@ -20,7 +20,7 @@
 
 
 /**
- * Class generated from <tt>../../ApplicationClustering/Packets/WakeUpPacket.msg</tt> by opp_msgc.
+ * Class generated from <tt>Packets/WakeUpPacket.msg</tt> by opp_msgc.
  * <pre>
  * packet WakeUpPacket
  * {

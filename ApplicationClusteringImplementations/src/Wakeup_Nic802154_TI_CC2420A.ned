@@ -31,6 +31,8 @@ import org.mixim.base.modules.IWirelessMac;
 import wakeuprecv.WakeupPhyLayerBattery;
 import org.mixim.modules.phy.PhyLayerBattery;
 
+import applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled;
+
 //
 // This NIC implements a Texas Instruments CC 2420 802.15.4 network interface card
 // using the CSMA protocol as specified in IEEE 802.15.4-2006.

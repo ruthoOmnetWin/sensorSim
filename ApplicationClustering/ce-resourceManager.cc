@@ -122,7 +122,7 @@ void MYCLASS resourceManagerSendResponsePacket(PACKET_RESOURCE_REQUEST* myReques
 void MYCLASS resourceManagerInit(void)
 {
 
-    resourcesLocation = UNKNOWN;
+    resourcesLocation = UNKNOWN2;
     resourcesHardwareUsed = 0;
     resourcesHardwareFree = 0xFFFF;
 

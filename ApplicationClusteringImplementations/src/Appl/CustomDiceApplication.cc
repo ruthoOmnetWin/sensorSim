@@ -44,7 +44,7 @@ void CustomDiceApplication::handleMessage(cMessage * msg)
             INITIAL_DELAY = 30;
 
 
-            //setPositions();
+            //setPositions(); -> in this examples positions must be kept
             nextDice = rand() % 6 + 1;
             ev<< "DiceEvent: " << nextDice << endl;
             sprintf(bubblestr,"dice/Dice%ia",nextDice);
