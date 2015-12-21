@@ -27,7 +27,6 @@ ClusterMasterClusterAppl::~ClusterMasterClusterAppl() {
 }
 
 void ClusterMasterClusterAppl::initialize(int stage) {
-    //todo get nodes and their sensor types
     if (stage == 1) {
         NetwLayer = FindModule<ClusterApplWiseRoute*>::findSubModule(findHost());
         childNodes = NetwLayer->getChildNodes(NetwLayer->getMyNetworkAddress());
@@ -55,11 +54,9 @@ void ClusterMasterClusterAppl::initialize(int stage) {
             }
             childNodes = childNodes->next;
         } while (childNodes != NULL);
-
-        EV<<endl;
     }
 }
 
 void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
-    //todo get battery status of all my leafs
+    //todo get battery status of all my leafs -> this must be done per message
 }
