@@ -22,8 +22,9 @@
 #include <ClusterApplWiseRoute.h>
 #include <SensorNode.h>
 #include <vector>
+#include <CustomMatrixApplication.h>
 
-class ClusterMasterClusterAppl : public BaseModule, public AbstractClusterAppl {
+class ClusterMasterClusterAppl : public CustomMatrixApplication, public AbstractClusterAppl {
 protected:
     ClusterApplWiseRoute* NetwLayer;
 

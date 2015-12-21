@@ -183,28 +183,64 @@ $O/ACI/ApplicationClusteringImplementations.o: ACI/ApplicationClusteringImplemen
 $O/Appl/AbstractClusterAppl.o: Appl/AbstractClusterAppl.cc \
 	Appl/AbstractClusterAppl.h
 $O/Appl/ClusterMasterClusterAppl.o: Appl/ClusterMasterClusterAppl.cc \
+	$(APPLICATIONCLUSTERING_PROJ)/Packets/GenericPacket_m.h \
+	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \
+	$(APPLICATIONCLUSTERING_PROJ)/ce-appscheduler.h \
+	$(APPLICATIONCLUSTERING_PROJ)/ce-appstructs.h \
+	$(APPLICATIONCLUSTERING_PROJ)/ce-clusterApplication.h \
+	$(APPLICATIONCLUSTERING_PROJ)/ce-coordinator.h \
+	$(APPLICATIONCLUSTERING_PROJ)/ce-resourcemanager.h \
+	$(APPLICATIONCLUSTERING_PROJ)/includes/MatrixApplication.h \
+	$(APPLICATIONCLUSTERING_PROJ)/includes/ce-packetstructs.h \
+	$(APPLICATIONCLUSTERING_PROJ)/typedefs.h \
 	Appl/AbstractClusterAppl.h \
 	Appl/ClusterMasterClusterAppl.h \
+	Appl/CustomMatrixApplication.h \
 	Netwl/ClusterApplWiseRoute.h \
 	Netwl/CustomWiseRoute.h \
+	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/ApplPkt_m.h \
+	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
+	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
 	$(MIXIM_PROJ)/src/base/messages/NetwPkt_m.h \
+	$(MIXIM_PROJ)/src/base/messages/WakeUpPacket_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseLayer.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseNetwLayer.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/AnalogueModel.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/BasePhyLayer.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelInfo.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/ChannelState.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/DeciderToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Interpolation.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MacToPhyInterface.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Mapping.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingBase.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/MappingUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/PhyUtils.h \
+	$(MIXIM_PROJ)/src/base/phyLayer/Signal_.h \
 	$(MIXIM_PROJ)/src/base/utils/FindModule.h \
 	$(MIXIM_PROJ)/src/base/utils/HostState.h \
 	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
 	$(MIXIM_PROJ)/src/base/utils/PassedMessage.h \
 	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
 	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/Coord.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
 	$(MIXIM_PROJ)/src/inet_stub/base/ModuleAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/IMobility.h \
+	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
+	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	$(MIXIM_PROJ)/src/modules/messages/DummyRoutePkt_m.h \
 	$(MIXIM_PROJ)/src/modules/netw/WiseRoute.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
+	$(MIXIM_PROJ)/src/modules/phy/PhyLayerBattery.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
+	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
 	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h
 $O/Appl/CustomDiceApplication.o: Appl/CustomDiceApplication.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/GenericPacket_m.h \
@@ -419,11 +455,13 @@ $O/Netwl/ClusterApplWiseRoute.o: Netwl/ClusterApplWiseRoute.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/ce-network.h \
 	$(APPLICATIONCLUSTERING_PROJ)/ce-resourcemanager.h \
 	$(APPLICATIONCLUSTERING_PROJ)/includes/DiceApplication.h \
+	$(APPLICATIONCLUSTERING_PROJ)/includes/MatrixApplication.h \
 	$(APPLICATIONCLUSTERING_PROJ)/includes/ce-packetstructs.h \
 	$(APPLICATIONCLUSTERING_PROJ)/typedefs.h \
 	Appl/AbstractClusterAppl.h \
 	Appl/ClusterMasterClusterAppl.h \
 	Appl/CustomDiceApplication.h \
+	Appl/CustomMatrixApplication.h \
 	Appl/LeafClusterAppl.h \
 	Appl/MasterClusterAppl.h \
 	Netwl/ClusterApplWiseRoute.h \

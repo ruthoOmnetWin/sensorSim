@@ -27,6 +27,7 @@ protected:
     int coordinatorNodeAddr;
     int measureTimerIntervall;
     ClusterApplWiseRoute* NetwLayer;
+    void sendDiceEvent(void);
 
 public:
     MasterClusterAppl();

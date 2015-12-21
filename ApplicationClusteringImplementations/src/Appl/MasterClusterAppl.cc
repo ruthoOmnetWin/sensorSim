@@ -61,13 +61,14 @@ void MasterClusterAppl::initialize(int stage) {
     }
     else  if (stage == 1)
     {
-        nextDice=0;
+        //nextDice=0;
         clusterApp->wakeupSleepEnterSleep();
     }
     if (stage == 0) {
         measureTimerIntervall = par("measureTimerIntervall").longValue();
         coordinatorNodeAddr = par("coordinatorNodeAddr").longValue();
         nextDice = GET_SENSOR_TYPES;
+
     } else if (stage == 1) {
 
     }
@@ -82,7 +83,10 @@ void MasterClusterAppl::handleMessage(cMessage * msg)
 
     debugEV << "In DiceApplication::handleMessage" << endl;
 
-    if (msg == clusterApp->sleepTimer)
+    if (msg == measuringTimer) {
+
+    }
+    else if (msg == clusterApp->sleepTimer)
     {
         clusterApp->wakeupSleepEnterSleep();
     }
@@ -112,6 +116,7 @@ void MasterClusterAppl::handleMessage(cMessage * msg)
         else
         {
             sendDiceEvent();
+
             //nextDice = 0;
             debugEV << "  processing application timer." << endl;
             if (!delayTimer->isScheduled())
@@ -132,5 +137,36 @@ void MasterClusterAppl::handleMessage(cMessage * msg)
     {
         delete msg;
     }
+
+}
+
+void MasterClusterAppl::sendDiceEvent(void)
+{
+
+
+    PACKET_EVENT* eventPacketP = (PACKET_EVENT*) &(clusterApp->txPacketPrepare.genericPacket);
+    //sprintf(bubblestr,"Dicing: %i",i);
+    //getParentModule()->bubble(bubblestr);
+    //myBaseModule->getParentModule()->bubble(
+
+
+    eventPacketP->srcId = clusterApp->myNodeId;
+    eventPacketP->dstId = LAddress::L3BROADCAST;
+    eventPacketP->ttl = DEFAULT_TTL;
+    eventPacketP->packetType = PACKET_TYPE_EVENT;
+    eventPacketP->payloadsize = sizeof(PACKET_EVENT) - HEADERSIZE;
+    eventPacketP->event = nextDice;
+    eventPacketP->timestamp = 01234;
+    eventPacketP->random = rand() & 0xFFFF;
+
+    clusterApp->networkSendPacket((GENERIC_PACKET*) eventPacketP);
+    clusterApp->wakeupSleepUpdateTimer();
+    nextDice = 0;
+    //networkSendPacketSim((GENERIC_PACKET*) eventPacketP,send,dataOut);
+
+//    if (i % 2 == 0)
+//        clusterApp->myBaseHost->getDisplayString().setTagArg("b", 3, "yellow");
+//    else
+//        clusterApp->myBaseHost->getDisplayString().setTagArg("b", 3, "red");
 
 }
