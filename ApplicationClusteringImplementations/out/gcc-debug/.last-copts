@@ -1,1 +1,1 @@
--g -Wall -fPIC  -fno-stack-protector -DHAVE_SWAPCONTEXT  -DHAVE_PCAP -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER -DMIXIM_INET=1 -I. -I/home/rutho/BA/omnetpp-4.5/include
+-g -Wall   -I/usr/include -fno-stack-protector -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER -DMIXIM_INET=1 -I. -Ic:/Development/omnetpp-4.5-src-windows/omnetpp-4.5/include

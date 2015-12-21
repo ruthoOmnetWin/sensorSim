@@ -1,4 +1,4 @@
-file 66742 1432894822                                           
+file 70232 1450184224                                           
 version 2
 run General-0-20150522-10:52:50-6162
 attr configname General
@@ -16,158 +16,158 @@ attr resultdir results
 attr runnumber 0
 attr seedset 0
 vector 3  SleepVsNoSleep.SleepNode.Processor  "power mode"  ETV
-3	7431 672 0 4057 0 66000 47 0 2 34 56
+3	7526 719 0 4057 0 66000 47 0 2 34 56
 vector 4  SleepVsNoSleep.SleepNode.Processor  "Sensor Modules Status"  ETV
-4	8103 489 0 3749 0 60000 35 0 1 6 6
+4	8245 524 0 3749 0 60000 35 0 1 6 6
 vector 5  SleepVsNoSleep.SleepNode.Processor  Voltage  ETV
-5	8592 2534 0 4057 0 66000 176 3 3 528 1584
+5	8769 2710 0 4057 0 66000 176 3 3 528 1584
 vector 6  SleepVsNoSleep.SleepNode.Processor  residualRelative  ETV
-6	11126 5096 0 4057 0 66000 176 0.44232407407407 1 129.07637240741 99.58153601198
+6	11479 5272 0 4057 0 66000 176 0.44232407407407 1 129.07637240741 99.58153601198
 vector 7  SleepVsNoSleep.SleepNode.Processor  residualAbs  ETV
-7	16222 3625 0 4057 0 66000 176 4777100 10800000 1394024822 1.1615190360437e+16
+7	16751 3801 0 4057 0 66000 176 4777100 10800000 1394024822 1.1615190360437e+016
 vector 11  SleepVsNoSleep.NoSleepNode.Processor  "power mode"  ETV
-11	19847 1426 0 1763 0 23000 96 0 2 72 120
+11	20552 1522 0 1763 0 23000 96 0 2 72 120
 vector 12  SleepVsNoSleep.NoSleepNode.Processor  "Sensor Modules Status"  ETV
-12	21273 204 0 1545 0 20000 15 0 1 2 2
+12	22074 219 0 1545 0 20000 15 0 1 2 2
 vector 13  SleepVsNoSleep.NoSleepNode.Processor  Voltage  ETV
-13	21477 2704 0 1763 0 23000 183 3 3 549 1647
+13	22293 2887 0 1763 0 23000 183 3 3 549 1647
 vector 14  SleepVsNoSleep.NoSleepNode.Processor  residualRelative  ETV
-14	24181 5306 0 1763 0 23000 183 0.032805555555556 1 94.443255555556 64.571067183248
+14	25180 5489 0 1763 0 23000 183 0.032805555555556 1 94.443255555556 64.571067183248
 vector 15  SleepVsNoSleep.NoSleepNode.Processor  residualAbs  ETV
-15	29487 3809 0 1763 0 23000 183 354300 10800000 1019987160 7.531569276254e+15
+15	30669 3992 0 1763 0 23000 183 354300 10800000 1019987160 7.531569276254e+015
 vector 17  SleepVsNoSleep.SleepNode.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-17	33296 354 0 3729 0 60000 21 100 100 2100 210000
+17	34661 375 0 3729 0 60000 21 100 100 2100 210000
 vector 18  SleepVsNoSleep.SleepNode.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-18	33650 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+18	35036 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 19  SleepVsNoSleep.SleepNode.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-19	34211 129 0 3734 0 60000 8 100 100 800 80000
+19	35632 137 0 3734 0 60000 8 100 100 800 80000
 vector 20  SleepVsNoSleep.SleepNode.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-20	34340 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+20	35769 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 21  SleepVsNoSleep.SleepNode.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-21	34901 130 0 3738 0 60000 8 100 100 800 80000
+21	36365 138 0 3738 0 60000 8 100 100 800 80000
 vector 22  SleepVsNoSleep.SleepNode.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-22	35031 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+22	36503 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 23  SleepVsNoSleep.SleepNode.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-23	35592 130 0 3742 0 60000 8 100 100 800 80000
+23	37099 138 0 3742 0 60000 8 100 100 800 80000
 vector 24  SleepVsNoSleep.SleepNode.TemperatureSensor.Transducer  "Current use over time"  ETV
-24	35722 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+24	37237 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 25  SleepVsNoSleep.SleepNode.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
-25	36283 354 0 3730 0 60000 21 100 100 2100 210000
+25	37833 375 0 3730 0 60000 21 100 100 2100 210000
 vector 26  SleepVsNoSleep.SleepNode.HumiditySensor.SensingUnit  "Current use over time"  ETV
-26	36637 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+26	38208 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 27  SleepVsNoSleep.SleepNode.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
-27	37198 129 0 3735 0 60000 8 100 100 800 80000
+27	38804 137 0 3735 0 60000 8 100 100 800 80000
 vector 28  SleepVsNoSleep.SleepNode.HumiditySensor.SignalConditioner  "Current use over time"  ETV
-28	37327 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+28	38941 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 29  SleepVsNoSleep.SleepNode.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
-29	37888 130 0 3739 0 60000 8 100 100 800 80000
+29	39537 138 0 3739 0 60000 8 100 100 800 80000
 vector 30  SleepVsNoSleep.SleepNode.HumiditySensor.SignalConverter  "Current use over time"  ETV
-30	38018 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+30	39675 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 31  SleepVsNoSleep.SleepNode.HumiditySensor.Transducer  "Energy Consumptions"  ETV
-31	38579 130 0 3743 0 60000 8 100 100 800 80000
+31	40271 138 0 3743 0 60000 8 100 100 800 80000
 vector 32  SleepVsNoSleep.SleepNode.HumiditySensor.Transducer  "Current use over time"  ETV
-32	38709 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+32	40409 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 33  SleepVsNoSleep.SleepNode.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
-33	39270 354 0 3731 0 60000 21 100 100 2100 210000
+33	41005 375 0 3731 0 60000 21 100 100 2100 210000
 vector 34  SleepVsNoSleep.SleepNode.PressureSensor.SensingUnit  "Current use over time"  ETV
-34	39624 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+34	41380 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 35  SleepVsNoSleep.SleepNode.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
-35	40185 129 0 3736 0 60000 8 100 100 800 80000
+35	41976 137 0 3736 0 60000 8 100 100 800 80000
 vector 36  SleepVsNoSleep.SleepNode.PressureSensor.SignalConditioner  "Current use over time"  ETV
-36	40314 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+36	42113 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 37  SleepVsNoSleep.SleepNode.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
-37	40875 130 0 3740 0 60000 8 100 100 800 80000
+37	42709 138 0 3740 0 60000 8 100 100 800 80000
 vector 38  SleepVsNoSleep.SleepNode.PressureSensor.SignalConverter  "Current use over time"  ETV
-38	41005 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+38	42847 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 39  SleepVsNoSleep.SleepNode.PressureSensor.Transducer  "Energy Consumptions"  ETV
-39	41566 130 0 3744 0 60000 8 100 100 800 80000
+39	43443 138 0 3744 0 60000 8 100 100 800 80000
 vector 40  SleepVsNoSleep.SleepNode.PressureSensor.Transducer  "Current use over time"  ETV
-40	41696 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+40	43581 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 41  SleepVsNoSleep.SleepNode.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-41	42257 354 0 3732 0 60000 21 100 100 2100 210000
+41	44177 375 0 3732 0 60000 21 100 100 2100 210000
 vector 42  SleepVsNoSleep.SleepNode.LightSensor.SensingUnit  "Current use over time"  ETV
-42	42611 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+42	44552 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 43  SleepVsNoSleep.SleepNode.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-43	43172 129 0 3737 0 60000 8 100 100 800 80000
+43	45148 137 0 3737 0 60000 8 100 100 800 80000
 vector 44  SleepVsNoSleep.SleepNode.LightSensor.SignalConditioner  "Current use over time"  ETV
-44	43301 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+44	45285 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 45  SleepVsNoSleep.SleepNode.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-45	43862 130 0 3741 0 60000 8 100 100 800 80000
+45	45881 138 0 3741 0 60000 8 100 100 800 80000
 vector 46  SleepVsNoSleep.SleepNode.LightSensor.SignalConverter  "Current use over time"  ETV
-46	43992 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+46	46019 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 47  SleepVsNoSleep.SleepNode.LightSensor.Transducer  "Energy Consumptions"  ETV
-47	44553 130 0 3745 0 60000 8 100 100 800 80000
+47	46615 138 0 3745 0 60000 8 100 100 800 80000
 vector 48  SleepVsNoSleep.SleepNode.LightSensor.Transducer  "Current use over time"  ETV
-48	44683 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+48	46753 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 49  SleepVsNoSleep.SleepNode.Memory  "Energy Consumptions"  ETV
-49	45244 487 0 3753 0 60000 29 100 100 2900 290000
+49	47349 516 0 3753 0 60000 29 100 100 2900 290000
 vector 50  SleepVsNoSleep.SleepNode.Memory  "Current use over time"  ETV
-50	45731 561 0 4057 0 66000 35 0.3 3 72.6 208.08
+50	47865 596 0 4057 0 66000 35 0.3 3 72.6 208.08
 vector 52  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SensingUnit  "Energy Consumptions"  ETV
-52	46292 138 0 1508 0 20000 9 100 100 900 90000
+52	48461 147 0 1508 0 20000 9 100 100 900 90000
 vector 53  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SensingUnit  "Current use over time"  ETV
-53	46430 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+53	48608 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 54  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SignalConditioner  "Energy Consumptions"  ETV
-54	47548 57 0 1517 0 20000 4 100 100 400 40000
+54	49798 61 0 1517 0 20000 4 100 100 400 40000
 vector 55  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SignalConditioner  "Current use over time"  ETV
-55	47605 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+55	49859 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 56  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SignalConverter  "Energy Consumptions"  ETV
-56	48723 58 0 1526 0 20000 4 100 100 400 40000
+56	51049 62 0 1526 0 20000 4 100 100 400 40000
 vector 57  SleepVsNoSleep.NoSleepNode.TemperatureSensor.SignalConverter  "Current use over time"  ETV
-57	48781 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+57	51111 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 58  SleepVsNoSleep.NoSleepNode.TemperatureSensor.Transducer  "Energy Consumptions"  ETV
-58	49899 58 0 1534 0 20000 4 100 100 400 40000
+58	52301 62 0 1534 0 20000 4 100 100 400 40000
 vector 59  SleepVsNoSleep.NoSleepNode.TemperatureSensor.Transducer  "Current use over time"  ETV
-59	49957 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+59	52363 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 60  SleepVsNoSleep.NoSleepNode.HumiditySensor.SensingUnit  "Energy Consumptions"  ETV
-60	51075 138 0 1509 0 20000 9 100 100 900 90000
+60	53553 147 0 1509 0 20000 9 100 100 900 90000
 vector 61  SleepVsNoSleep.NoSleepNode.HumiditySensor.SensingUnit  "Current use over time"  ETV
-61	51213 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+61	53700 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 62  SleepVsNoSleep.NoSleepNode.HumiditySensor.SignalConditioner  "Energy Consumptions"  ETV
-62	52331 57 0 1518 0 20000 4 100 100 400 40000
+62	54890 61 0 1518 0 20000 4 100 100 400 40000
 vector 63  SleepVsNoSleep.NoSleepNode.HumiditySensor.SignalConditioner  "Current use over time"  ETV
-63	52388 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+63	54951 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 64  SleepVsNoSleep.NoSleepNode.HumiditySensor.SignalConverter  "Energy Consumptions"  ETV
-64	53506 58 0 1527 0 20000 4 100 100 400 40000
+64	56141 62 0 1527 0 20000 4 100 100 400 40000
 vector 65  SleepVsNoSleep.NoSleepNode.HumiditySensor.SignalConverter  "Current use over time"  ETV
-65	53564 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+65	56203 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 66  SleepVsNoSleep.NoSleepNode.HumiditySensor.Transducer  "Energy Consumptions"  ETV
-66	54682 58 0 1535 0 20000 4 100 100 400 40000
+66	57393 62 0 1535 0 20000 4 100 100 400 40000
 vector 67  SleepVsNoSleep.NoSleepNode.HumiditySensor.Transducer  "Current use over time"  ETV
-67	54740 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+67	57455 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 68  SleepVsNoSleep.NoSleepNode.PressureSensor.SensingUnit  "Energy Consumptions"  ETV
-68	55858 138 0 1510 0 20000 9 100 100 900 90000
+68	58645 147 0 1510 0 20000 9 100 100 900 90000
 vector 69  SleepVsNoSleep.NoSleepNode.PressureSensor.SensingUnit  "Current use over time"  ETV
-69	55996 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+69	58792 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 70  SleepVsNoSleep.NoSleepNode.PressureSensor.SignalConditioner  "Energy Consumptions"  ETV
-70	57114 57 0 1519 0 20000 4 100 100 400 40000
+70	59982 61 0 1519 0 20000 4 100 100 400 40000
 vector 71  SleepVsNoSleep.NoSleepNode.PressureSensor.SignalConditioner  "Current use over time"  ETV
-71	57171 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+71	60043 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 72  SleepVsNoSleep.NoSleepNode.PressureSensor.SignalConverter  "Energy Consumptions"  ETV
-72	58289 58 0 1528 0 20000 4 100 100 400 40000
+72	61233 62 0 1528 0 20000 4 100 100 400 40000
 vector 73  SleepVsNoSleep.NoSleepNode.PressureSensor.SignalConverter  "Current use over time"  ETV
-73	58347 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+73	61295 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 74  SleepVsNoSleep.NoSleepNode.PressureSensor.Transducer  "Energy Consumptions"  ETV
-74	59465 58 0 1536 0 20000 4 100 100 400 40000
+74	62485 62 0 1536 0 20000 4 100 100 400 40000
 vector 75  SleepVsNoSleep.NoSleepNode.PressureSensor.Transducer  "Current use over time"  ETV
-75	59523 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+75	62547 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 76  SleepVsNoSleep.NoSleepNode.LightSensor.SensingUnit  "Energy Consumptions"  ETV
-76	60641 138 0 1511 0 20000 9 100 100 900 90000
+76	63737 147 0 1511 0 20000 9 100 100 900 90000
 vector 77  SleepVsNoSleep.NoSleepNode.LightSensor.SensingUnit  "Current use over time"  ETV
-77	60779 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+77	63884 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 78  SleepVsNoSleep.NoSleepNode.LightSensor.SignalConditioner  "Energy Consumptions"  ETV
-78	61897 58 0 1520 0 20000 4 100 100 400 40000
+78	65074 62 0 1520 0 20000 4 100 100 400 40000
 vector 79  SleepVsNoSleep.NoSleepNode.LightSensor.SignalConditioner  "Current use over time"  ETV
-79	61955 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+79	65136 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 80  SleepVsNoSleep.NoSleepNode.LightSensor.SignalConverter  "Energy Consumptions"  ETV
-80	63073 58 0 1529 0 20000 4 100 100 400 40000
+80	66326 62 0 1529 0 20000 4 100 100 400 40000
 vector 81  SleepVsNoSleep.NoSleepNode.LightSensor.SignalConverter  "Current use over time"  ETV
-81	63131 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+81	66388 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 82  SleepVsNoSleep.NoSleepNode.LightSensor.Transducer  "Energy Consumptions"  ETV
-82	64249 58 0 1537 0 20000 4 100 100 400 40000
+82	67578 62 0 1537 0 20000 4 100 100 400 40000
 vector 83  SleepVsNoSleep.NoSleepNode.LightSensor.Transducer  "Current use over time"  ETV
-83	64307 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+83	67640 1190 0 1763 0 23000 72 0.3 3 151.2 434.16
 vector 84  SleepVsNoSleep.NoSleepNode.Memory  "Energy Consumptions"  ETV
-84	65425 199 0 1553 0 20000 13 100 100 1300 130000
+84	68830 212 0 1553 0 20000 13 100 100 1300 130000
 vector 85  SleepVsNoSleep.NoSleepNode.Memory  "Current use over time"  ETV
-85	65624 1118 0 1763 0 23000 72 0.3 3 151.2 434.16
+85	69042 1190 0 1763 0 23000 72 0.3 3 151.2 434.16

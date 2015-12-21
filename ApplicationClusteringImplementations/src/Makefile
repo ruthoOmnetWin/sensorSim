@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for ApplicationClusteringImplementations
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I../../MiXiM/src/base/phyLayer -I../../MiXiM/src -I../../MiXiM/src/modules/analogueModel -I../../MiXiM/src/base -I../../MiXiM/src/inet_stub/mobility -I../../SensorTechnology/src/SensorNode/Memory -I../../WakeUpRecv -I../../MiXiM/src/base/modules -I../../MiXiM/src/inet_stub/base -I../../ApplicationClustering/Packets -I../../MiXiM/src/base/messages -I../../SensorTechnology/src/SensorNode/Processor -I../../ApplicationClustering -I../../SensorTechnology/src -I../../MiXiM/src/modules/mac -I../../MiXiM/src/modules/messages -I../../MiXiM/src/modules/netw -I../../MiXiM/src/modules/utility -I../../SensorTechnology/src/SensorNode -I../../SensorTechnology/src/ExtendedMessage -I../../MiXiM/src/base/utils -I../../ApplicationClustering/includes -I../../MiXiM/src/modules -I../../MiXiM/src/modules/phy -I../../MiXiM/src/inet_stub/util -I../../MiXiM/src/modules/power/battery -I../../MiXiM/src/inet_stub/linklayer/contract -I../../MiXiM/src/base/connectionManager -I../../MiXiM/src/inet_stub/mobility/models -I../../SensorTechnology/src/SimpleSensorData -I../../MiXiM/src/inet_stub/networklayer/common -L../../ApplicationClustering/out/$$\(CONFIGNAME\) -L../../MiXiM/out/$$\(CONFIGNAME\)/src -L../../SensorTechnology/out/$$\(CONFIGNAME\)/src -lApplicationClustering -lmixim -lSensorTechnology -DMIXIM_INET=1 -KAPPLICATIONCLUSTERING_PROJ=../../ApplicationClustering -KMIXIM_PROJ=../../MiXiM -KSENSORTECHNOLOGY_PROJ=../../SensorTechnology -KWAKEUPRECV_PROJ=../../WakeUpRecv
+#  opp_makemake -f --deep -O out -I../../MiXiM/src/base/modules -I../../SensorTechnology/src/SensorNode/Processor -I../../MiXiM/src -I../../MiXiM/src/base/utils -I../../MiXiM/src/modules/power/battery -I../../MiXiM/src/modules/phy -I../../MiXiM/src/inet_stub/mobility/models -I../../MiXiM/src/base -I../../SensorTechnology/src/SensorNode -I../../MiXiM/src/inet_stub/mobility -I../../ApplicationClustering/Packets -I../../SensorTechnology/src/ExtendedMessage -I../../MiXiM/src/modules/mac -I../../MiXiM/src/base/connectionManager -I../../MiXiM/src/inet_stub/base -I../../ApplicationClustering/includes -I../../SensorTechnology/src -I../../SensorTechnology/src/SimpleSensorData -I../../MiXiM/src/modules/netw -I../../MiXiM/src/inet_stub/networklayer/common -I../../MiXiM/src/modules/utility -I../../MiXiM/src/base/phyLayer -I../../MiXiM/src/modules/analogueModel -I../../MiXiM/src/inet_stub/util -I../../MiXiM/src/modules/messages -I../../ApplicationClustering -I../../MiXiM/src/inet_stub/linklayer/contract -I../../MiXiM/src/base/messages -I../../WakeUpRecv -I../../SensorTechnology/src/SensorNode/Memory -I../../MiXiM/src/modules -L../../ApplicationClustering/out/$$\(CONFIGNAME\) -L../../MiXiM/out/$$\(CONFIGNAME\)/src -L../../SensorTechnology/out/$$\(CONFIGNAME\)/src -lApplicationClustering -lmixim -lSensorTechnology -DMIXIM_INET=1 -KAPPLICATIONCLUSTERING_PROJ=../../ApplicationClustering -KMIXIM_PROJ=../../MiXiM -KSENSORTECHNOLOGY_PROJ=../../SensorTechnology -KWAKEUPRECV_PROJ=../../WakeUpRecv
 #
 
 # Name of target to be created (-o option)
@@ -15,37 +15,37 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 
 # C++ include paths (with -I)
 INCLUDE_PATH = \
-    -I../../MiXiM/src/base/phyLayer \
-    -I../../MiXiM/src \
-    -I../../MiXiM/src/modules/analogueModel \
-    -I../../MiXiM/src/base \
-    -I../../MiXiM/src/inet_stub/mobility \
-    -I../../SensorTechnology/src/SensorNode/Memory \
-    -I../../WakeUpRecv \
     -I../../MiXiM/src/base/modules \
-    -I../../MiXiM/src/inet_stub/base \
-    -I../../ApplicationClustering/Packets \
-    -I../../MiXiM/src/base/messages \
     -I../../SensorTechnology/src/SensorNode/Processor \
-    -I../../ApplicationClustering \
-    -I../../SensorTechnology/src \
-    -I../../MiXiM/src/modules/mac \
-    -I../../MiXiM/src/modules/messages \
-    -I../../MiXiM/src/modules/netw \
-    -I../../MiXiM/src/modules/utility \
-    -I../../SensorTechnology/src/SensorNode \
-    -I../../SensorTechnology/src/ExtendedMessage \
+    -I../../MiXiM/src \
     -I../../MiXiM/src/base/utils \
-    -I../../ApplicationClustering/includes \
-    -I../../MiXiM/src/modules \
-    -I../../MiXiM/src/modules/phy \
-    -I../../MiXiM/src/inet_stub/util \
     -I../../MiXiM/src/modules/power/battery \
-    -I../../MiXiM/src/inet_stub/linklayer/contract \
-    -I../../MiXiM/src/base/connectionManager \
+    -I../../MiXiM/src/modules/phy \
     -I../../MiXiM/src/inet_stub/mobility/models \
+    -I../../MiXiM/src/base \
+    -I../../SensorTechnology/src/SensorNode \
+    -I../../MiXiM/src/inet_stub/mobility \
+    -I../../ApplicationClustering/Packets \
+    -I../../SensorTechnology/src/ExtendedMessage \
+    -I../../MiXiM/src/modules/mac \
+    -I../../MiXiM/src/base/connectionManager \
+    -I../../MiXiM/src/inet_stub/base \
+    -I../../ApplicationClustering/includes \
+    -I../../SensorTechnology/src \
     -I../../SensorTechnology/src/SimpleSensorData \
+    -I../../MiXiM/src/modules/netw \
     -I../../MiXiM/src/inet_stub/networklayer/common \
+    -I../../MiXiM/src/modules/utility \
+    -I../../MiXiM/src/base/phyLayer \
+    -I../../MiXiM/src/modules/analogueModel \
+    -I../../MiXiM/src/inet_stub/util \
+    -I../../MiXiM/src/modules/messages \
+    -I../../ApplicationClustering \
+    -I../../MiXiM/src/inet_stub/linklayer/contract \
+    -I../../MiXiM/src/base/messages \
+    -I../../WakeUpRecv \
+    -I../../SensorTechnology/src/SensorNode/Memory \
+    -I../../MiXiM/src/modules \
     -I. \
     -Idata \
     -Iresults
@@ -64,12 +64,12 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
 OBJS = \
-    $O/CustomDiceApplication.o \
-    $O/CustomWiseRoute.o \
-    $O/CustomMatrixApplication.o \
-    $O/NoApplicationClusteringAppl.o \
     $O/ApplicationClusteringImplementations.o \
-    $O/CSMA802154HostStateHandled.o
+    $O/CSMA802154HostStateHandled.o \
+    $O/CustomDiceApplication.o \
+    $O/CustomMatrixApplication.o \
+    $O/CustomWiseRoute.o \
+    $O/NoApplicationClusteringAppl.o
 
 # Message files
 MSGFILES =
