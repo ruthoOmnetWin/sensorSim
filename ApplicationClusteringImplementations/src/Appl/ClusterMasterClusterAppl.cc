@@ -59,6 +59,10 @@ void ClusterMasterClusterAppl::initialize(int stage) {
             }
             childNodes = childNodes->next;
         } while (childNodes != NULL);
+
+        clusterApp->sleepTimeout = 2000;
+        clusterApp->wakeupSleepEnterSleep();
+        findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
     }
 }
 

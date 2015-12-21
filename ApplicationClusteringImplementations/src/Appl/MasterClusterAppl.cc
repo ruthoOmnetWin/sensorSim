@@ -53,7 +53,7 @@ void MasterClusterAppl::initialize(int stage) {
         INITIAL_DELAY = 5; // initial delay before sending first packet
 
         delayTimer = new cMessage("app-delay-timer");
-        clusterApp->sleepTimeout = 100;
+        clusterApp->sleepTimeout = 1000;
         clusterApp->myNodeId = NetwLayer->getMyNetworkAddress();
         clusterApp->coordinatorNodeId = LAddress::L3Type(par("coordinatorNodeAddr").longValue());
 
@@ -63,6 +63,7 @@ void MasterClusterAppl::initialize(int stage) {
     {
         //nextDice=0;
         clusterApp->wakeupSleepEnterSleep();
+        findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
     }
     if (stage == 0) {
         measureTimerIntervall = par("measureTimerIntervall").longValue();
@@ -89,6 +90,7 @@ void MasterClusterAppl::handleMessage(cMessage * msg)
     else if (msg == clusterApp->sleepTimer)
     {
         clusterApp->wakeupSleepEnterSleep();
+        findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
     }
     else if (msg == clusterApp->sysTimer)
     {
@@ -98,6 +100,7 @@ void MasterClusterAppl::handleMessage(cMessage * msg)
     else if (msg == delayTimer)
     {
         clusterApp->wakeupSleepLeaveSleep();
+        findHost()->getDisplayString().setTagArg("i2", 0, "status/green");
 
         if (clusterApp->otherNodesInSleepMode)
         {

@@ -328,6 +328,8 @@ $O/Appl/CustomMatrixApplication.o: Appl/CustomMatrixApplication.cc \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h
 $O/Appl/LeafClusterAppl.o: Appl/LeafClusterAppl.cc \
+	$(APPLICATIONCLUSTERING_PROJ)/Packets/GenericPacket_m.h \
+	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \
 	$(APPLICATIONCLUSTERING_PROJ)/ce-appscheduler.h \
 	$(APPLICATIONCLUSTERING_PROJ)/ce-appstructs.h \
 	$(APPLICATIONCLUSTERING_PROJ)/ce-clusterApplication.h \
@@ -342,6 +344,7 @@ $O/Appl/LeafClusterAppl.o: Appl/LeafClusterAppl.cc \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
 	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
+	$(MIXIM_PROJ)/src/base/messages/WakeUpPacket_m.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \
 	$(MIXIM_PROJ)/src/base/modules/MiximBatteryAccess.h \
