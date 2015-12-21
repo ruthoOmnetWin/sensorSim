@@ -112,6 +112,7 @@ void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
     if (msg == clusterApp->sleepTimer)
     {
         clusterApp->wakeupSleepEnterSleep();
+        findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
     }
     else if (msg == clusterApp->sysTimer)
     {
@@ -134,6 +135,7 @@ void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
         WakeUpPacket* w =  dynamic_cast<WakeUpPacket*>(msg);
         if (w!=0)
         {
+            findHost()->getDisplayString().setTagArg("i2", 0, "status/green");
             if (clusterApp->isInSleepMode) clusterApp->wakeupSleepLeaveSleep();
         }
         GenericPacket* m = dynamic_cast<GenericPacket*>(msg);

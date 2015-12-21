@@ -17,13 +17,13 @@
 #define LEAFCLUSTERAPPL_H_
 
 #include <omnetpp.h>
-#include <BaseModule.h>
 #include <SimpleBattery.h>
 #include <AbstractClusterAppl.h>
 #include <Memory.h>
 #include <Processor.h>
+#include <CustomMatrixApplication.h>
 
-class LeafClusterAppl : public BaseModule, public AbstractClusterAppl {
+class LeafClusterAppl : public CustomMatrixApplication, public AbstractClusterAppl {
 protected:
     SimpleBattery* battery;
     Processor* processor;

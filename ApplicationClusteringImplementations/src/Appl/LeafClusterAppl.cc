@@ -48,5 +48,7 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
     if (msg) {
         //double rel = battery->estimateResidualRelative();
         //processor->startSensingUnit()
+    } else {
+        CustomMatrixApplication::handleMessage(msg);
     }
 }

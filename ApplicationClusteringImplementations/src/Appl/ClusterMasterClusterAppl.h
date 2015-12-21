@@ -17,7 +17,6 @@
 #define CLUSTERMASTERCLUSTERAPPL_H_
 
 #include <omnetpp.h>
-#include <BaseModule.h>
 #include <AbstractClusterAppl.h>
 #include <ClusterApplWiseRoute.h>
 #include <SensorNode.h>

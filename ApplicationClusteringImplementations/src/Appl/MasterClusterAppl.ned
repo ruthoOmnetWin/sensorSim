@@ -23,8 +23,8 @@ simple MasterClusterAppl like IBaseApplLayer
 {
     parameters:
         int headerLength @unit("bit"); // length of the application message header (in bits)
-        double nodeAddr;        // node address
-		double coordinatorNodeAddr;		// packet destination node address
+        int nodeAddr;        // node address
+		int coordinatorNodeAddr;		// packet destination node address
         int measureTimerIntervall @unit("s");
         
         @class(MasterClusterAppl);
