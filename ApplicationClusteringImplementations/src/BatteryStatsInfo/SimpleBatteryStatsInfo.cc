@@ -13,26 +13,18 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef CLUSTERAPPLWISEROUTE_H_
-#define CLUSTERAPPLWISEROUTE_H_
+#include <SimpleBatteryStatsInfo.h>
 
-#include <CustomWiseRoute.h>
-#include <omnetpp.h>
-#include <AbstractClusterAppl.h>
+SimpleBatteryStatsInfo::SimpleBatteryStatsInfo() {
+    residualRelative = 0;
+}
 
-class ClusterApplWiseRoute : public CustomWiseRoute
+SimpleBatteryStatsInfo::~SimpleBatteryStatsInfo()
 {
-protected:
-    AbstractClusterAppl* appl;
-    bool isMasterClusterAppl;
-    bool isLeafClusterAppl;
-    bool isClusterMasterClusterAppl;
-    void handleLowerMsg(cMessage* msg);
+}
 
-public:
-    LAddress::L3Type getMyNetworkAddress();
-    void initialize(int stage);
 
-};
-
-#endif /* CLUSTERAPPLWISEROUTE_H_ */
+SimpleBatteryStatsInfo::SimpleBatteryStatsInfo(const char *name, int residualRelative, bool namepooling) : cNamedObject(name, namepooling)
+{
+    this->residualRelative = residualRelative;
+}

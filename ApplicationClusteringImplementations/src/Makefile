@@ -49,6 +49,7 @@ INCLUDE_PATH = \
     -I. \
     -IACI \
     -IAppl \
+    -IBatteryStatsInfo \
     -IMacLayer \
     -INetwl \
     -Idata \
@@ -76,12 +77,17 @@ OBJS = \
     $O/Appl/NoApplicationClusteringAppl.o \
     $O/Appl/MasterClusterAppl.o \
     $O/Appl/AbstractClusterAppl.o \
+    $O/BatteryStatsInfo/SimpleBatteryStatsInfo.o \
     $O/MacLayer/CSMA802154HostStateHandled.o \
     $O/Netwl/ClusterApplWiseRoute.o \
-    $O/Netwl/CustomWiseRoute.o
+    $O/Netwl/CustomWiseRoute.o \
+    $O/BatteryStatsInfo/BatteryStatsInfo_m.o \
+    $O/BatteryStatsInfo/BatteryStatsInfoPkt_m.o
 
 # Message files
-MSGFILES =
+MSGFILES = \
+    BatteryStatsInfo/BatteryStatsInfo.msg \
+    BatteryStatsInfo/BatteryStatsInfoPkt.msg
 
 # Other makefile variables (-K)
 APPLICATIONCLUSTERING_PROJ=../../ApplicationClustering
@@ -163,6 +169,7 @@ clean:
 	$(Q)-rm -f ./*_m.cc ./*_m.h
 	$(Q)-rm -f ACI/*_m.cc ACI/*_m.h
 	$(Q)-rm -f Appl/*_m.cc Appl/*_m.h
+	$(Q)-rm -f BatteryStatsInfo/*_m.cc BatteryStatsInfo/*_m.h
 	$(Q)-rm -f MacLayer/*_m.cc MacLayer/*_m.h
 	$(Q)-rm -f Netwl/*_m.cc Netwl/*_m.h
 	$(Q)-rm -f data/*_m.cc data/*_m.h
@@ -173,7 +180,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ACI/*.cc Appl/*.cc MacLayer/*.cc Netwl/*.cc data/*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ACI/*.cc Appl/*.cc BatteryStatsInfo/*.cc MacLayer/*.cc Netwl/*.cc data/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/ACI/ApplicationClusteringImplementations.o: ACI/ApplicationClusteringImplementations.cc \
@@ -341,7 +348,10 @@ $O/Appl/LeafClusterAppl.o: Appl/LeafClusterAppl.cc \
 	Appl/AbstractClusterAppl.h \
 	Appl/CustomMatrixApplication.h \
 	Appl/LeafClusterAppl.h \
+	BatteryStatsInfo/BatteryStatsInfo_m.h \
+	BatteryStatsInfo/SimpleBatteryStatsInfo.h \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
+	$(MIXIM_PROJ)/src/base/messages/ApplPkt_m.h \
 	$(MIXIM_PROJ)/src/base/messages/MiXiMAirFrame.h \
 	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
 	$(MIXIM_PROJ)/src/base/messages/WakeUpPacket_m.h \
@@ -459,6 +469,17 @@ $O/Appl/NoApplicationClusteringAppl.o: Appl/NoApplicationClusteringAppl.cc \
 	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/Memory/Memory.h \
 	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h \
 	$(SENSORTECHNOLOGY_PROJ)/src/SimpleSensorData/SimpleSensorData.h
+$O/BatteryStatsInfo/BatteryStatsInfoPkt_m.o: BatteryStatsInfo/BatteryStatsInfoPkt_m.cc \
+	BatteryStatsInfo/BatteryStatsInfoPkt_m.h \
+	$(MIXIM_PROJ)/src/base/utils/MiXiMDefs.h \
+	$(MIXIM_PROJ)/src/base/utils/SimpleAddress.h \
+	$(MIXIM_PROJ)/src/base/utils/miximkerneldefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/base/INETDefs.h \
+	$(MIXIM_PROJ)/src/inet_stub/linklayer/contract/MACAddress.h
+$O/BatteryStatsInfo/BatteryStatsInfo_m.o: BatteryStatsInfo/BatteryStatsInfo_m.cc \
+	BatteryStatsInfo/BatteryStatsInfo_m.h
+$O/BatteryStatsInfo/SimpleBatteryStatsInfo.o: BatteryStatsInfo/SimpleBatteryStatsInfo.cc \
+	BatteryStatsInfo/SimpleBatteryStatsInfo.h
 $O/MacLayer/CSMA802154HostStateHandled.o: MacLayer/CSMA802154HostStateHandled.cc \
 	MacLayer/CSMA802154HostStateHandled.h \
 	$(MIXIM_PROJ)/src/base/messages/MacPkt_m.h \
@@ -540,6 +561,7 @@ $O/Netwl/ClusterApplWiseRoute.o: Netwl/ClusterApplWiseRoute.cc \
 	$(MIXIM_PROJ)/src/inet_stub/mobility/models/MobilityAccess.h \
 	$(MIXIM_PROJ)/src/inet_stub/util/FWMath.h \
 	$(MIXIM_PROJ)/src/modules/messages/DummyRoutePkt_m.h \
+	$(MIXIM_PROJ)/src/modules/messages/WiseRoutePkt_m.h \
 	$(MIXIM_PROJ)/src/modules/netw/WiseRoute.h \
 	$(MIXIM_PROJ)/src/modules/phy/PhyLayer.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \

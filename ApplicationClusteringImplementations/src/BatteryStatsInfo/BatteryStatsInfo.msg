@@ -13,26 +13,11 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef CLUSTERAPPLWISEROUTE_H_
-#define CLUSTERAPPLWISEROUTE_H_
-
-#include <CustomWiseRoute.h>
-#include <omnetpp.h>
-#include <AbstractClusterAppl.h>
-
-class ClusterApplWiseRoute : public CustomWiseRoute
-{
-protected:
-    AbstractClusterAppl* appl;
-    bool isMasterClusterAppl;
-    bool isLeafClusterAppl;
-    bool isClusterMasterClusterAppl;
-    void handleLowerMsg(cMessage* msg);
-
-public:
-    LAddress::L3Type getMyNetworkAddress();
-    void initialize(int stage);
-
-};
-
-#endif /* CLUSTERAPPLWISEROUTE_H_ */
+//
+// TODO generated message class
+//
+message BatteryStatsInfo extends cMessage {
+	int source;
+    int destination;
+    double residualRelative;
+}

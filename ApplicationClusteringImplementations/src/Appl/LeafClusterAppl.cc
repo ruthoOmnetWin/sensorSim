@@ -17,6 +17,9 @@
 #include <FindModule.h>
 #include <WakeUpPacket_m.h>
 #include <GenericPacket_m.h>
+#include <BatteryStatsInfo_m.h>
+#include <ApplPkt_m.h>
+#include <SimpleBatteryStatsInfo.h>
 
 Define_Module(LeafClusterAppl);
 
@@ -134,7 +137,7 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
             }
             else
             {
-                ev<< "I (" << clusterApp->myNodeId << ") received a message from node "  << m->getSrcId() << "." << endl;
+                EV<< "I (" << clusterApp->myNodeId << ") received a message from node "  << m->getSrcId() << "." << endl;
 
         //        if (debug)
         //            ev<< "I (" << nodeAddr << ") received a message from node "
@@ -155,6 +158,21 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
 
                 clusterApp->packetsProcessIncommingPacket(&clusterApp->rxPacketWork);
 
+                //double rel = battery->estimateResidualRelative();
+
+                //TODO create packet and send my battery state to my father
+//                BatteryStatsInfo *bsMsg = new BatteryStatsInfo();
+//                bsMsg->setDestination();
+//                bsMsg->setSource();
+//                bsMsg->setResidualRelative(rel);
+
+                SimpleBatteryStatsInfo* sbfi = new SimpleBatteryStatsInfo("estimateResidualRelative", battery->estimateResidualRelative());
+                ApplPkt* aPkt = new ApplPkt;
+                aPkt->getParList().add(sbfi);
+                aPkt->setSrcAddr(nodeAddr);
+                aPkt->setDestAddr(LAddress::L3BROADCAST);
+                aPkt->setName("estimateResidualRelative");
+                sendDelayed(aPkt, 0.05 * clusterApp->myNodeId, dataOut);
 
             }
         }
@@ -169,4 +187,36 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
     {
         delete msg;
     }
+}
+
+void LeafClusterAppl::sendBatteryStatus(int target)
+{
+
+
+    PACKET_EVENT* eventPacketP = (PACKET_EVENT*) &(clusterApp->txPacketPrepare.genericPacket);
+    //sprintf(bubblestr,"Dicing: %i",i);
+    //getParentModule()->bubble(bubblestr);
+    //myBaseModule->getParentModule()->bubble(
+
+
+
+    eventPacketP->srcId = clusterApp->myNodeId;
+    eventPacketP->dstId = target;
+    eventPacketP->ttl = DEFAULT_TTL;
+    eventPacketP->packetType = PACKET_TYPE_EVENT;
+    eventPacketP->payloadsize = sizeof(PACKET_EVENT) - HEADERSIZE;
+    //eventPacketP->event = nextDice;
+    eventPacketP->timestamp = 01234;
+    eventPacketP->random = rand() & 0xFFFF;
+
+    clusterApp->networkSendPacket((GENERIC_PACKET*) eventPacketP);
+    clusterApp->wakeupSleepUpdateTimer();
+    //nextDice = 0;
+    //networkSendPacketSim((GENERIC_PACKET*) eventPacketP,send,dataOut);
+
+//    if (i % 2 == 0)
+//        clusterApp->myBaseHost->getDisplayString().setTagArg("b", 3, "yellow");
+//    else
+//        clusterApp->myBaseHost->getDisplayString().setTagArg("b", 3, "red");
+
 }

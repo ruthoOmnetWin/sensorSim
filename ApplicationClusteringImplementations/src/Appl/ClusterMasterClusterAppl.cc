@@ -69,6 +69,13 @@ void ClusterMasterClusterAppl::initialize(int stage) {
 void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
     //todo get battery status of all my leafs -> this must be done per message
 
+    if (strcmp(msg->getName(), "estimateResidualRelative") == 0) {
+        EV << "Received message not to be forwarded" << endl;
+        //WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+        //sendUp(decapsMsg(pkt));
+        return;
+    }
+
     char bubblestr[16];
     double energy = clusterApp->mySimpleBattery->estimateResidualRelative() * 100;
     if (clusterApp->nodeIsDown)

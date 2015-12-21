@@ -33,6 +33,8 @@ protected:
     bool hasHumiditySensor;
     bool hasPressureSensor;
     bool hasLightSensor;
+
+    void sendBatteryStatus(int target);
 public:
     LeafClusterAppl();
     virtual ~LeafClusterAppl();

@@ -18,6 +18,7 @@
 #include <LeafClusterAppl.h>
 #include <ClusterMasterClusterAppl.h>
 #include <MasterClusterAppl.h>
+#include <WiseRoutePkt_m.h>
 
 Define_Module(ClusterApplWiseRoute);
 
@@ -43,5 +44,15 @@ void ClusterApplWiseRoute::initialize(int stage) {
         } else {
             opp_error("Inside ClusterApplWiseRoute::initialize(): Could not get the type of the Application Layer. There was an invalid type given.");
         }
+    }
+}
+
+void ClusterApplWiseRoute::handleLowerMsg(cMessage* msg) {
+    if (strcmp(msg->getName(), "estimateResidualRelative") == 0) {
+        EV << "Received message not to be forwarded" << endl;
+        WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+        sendUp(decapsMsg(pkt));
+    } else {
+        CustomWiseRoute::handleLowerMsg(msg);
     }
 }

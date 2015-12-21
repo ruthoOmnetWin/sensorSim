@@ -35,8 +35,8 @@ network Szenario2 extends BaseNetwork
 
         @display("bgi=background/roomsBigger;bgb=867,430");
         wuType = default("sensortechnology.src.WorldModel.CustomWorldUtility");
-		cmType = default("org.mixim.base.connectionManager.ConnectionManager");
-		
+        cmType = default("org.mixim.base.connectionManager.ConnectionManager");
+
     submodules:
         Node0: Sensor_Wakeup_DicePhyMacHost {
             @display("p=408,218");
@@ -88,14 +88,14 @@ network Szenario2 extends BaseNetwork
             //hasTemperatureSensor = true;
         }
         Node12: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=558,334");
+            @display("p=558,326");
             //hasTemperatureSensor = true;
         }
         Node13: Sensor_Wakeup_DicePhyMacHost {
             @display("p=519,218");
             //hasTemperatureSensor = true;
         }
-        
+
     connections allowunconnected:
 
     // all connections and gates are to be generated dynamically
