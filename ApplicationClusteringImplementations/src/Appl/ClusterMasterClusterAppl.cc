@@ -23,6 +23,7 @@
 #include <PhyLayerBattery.h>
 #include <SimpleBatteryStatsInfo.h>
 #include <LeafClusterAppl.h>
+#include <NetwControlInfo.h>
 
 Define_Module(ClusterMasterClusterAppl);
 
@@ -131,6 +132,35 @@ void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
                     highestHumidityBatteryId = SensorTypeInformationVector.at(i).nodeNetwAddr;
                 }
             }
+        }
+
+        if (highestTemperatureBatteryId > -1) {
+            ApplPkt* aPkt = new ApplPkt();
+            aPkt->setName("measure temperature");
+            aPkt->setDestAddr(highestTemperatureBatteryId);
+            NetwControlInfo::setControlInfo(aPkt, highestTemperatureBatteryId);
+            send(aPkt, dataOut);
+        }
+        if (highestPressureBatteryId > -1) {
+            ApplPkt* aPkt = new ApplPkt();
+            aPkt->setName("measure pressure");
+            aPkt->setDestAddr(highestPressureBatteryId);
+            NetwControlInfo::setControlInfo(aPkt, highestPressureBatteryId);
+            sendDelayed(aPkt, 0.05, dataOut);
+        }
+        if (highestLightBatteryId > -1) {
+            ApplPkt* aPkt = new ApplPkt();
+            aPkt->setName("measure light");
+            aPkt->setDestAddr(highestPressureBatteryId);
+            NetwControlInfo::setControlInfo(aPkt, highestPressureBatteryId);
+            sendDelayed(aPkt, 0.10, dataOut);
+        }
+        if (highestHumidityBatteryId > -1) {
+            ApplPkt* aPkt = new ApplPkt();
+            aPkt->setName("measure humidity");
+            aPkt->setDestAddr(highestPressureBatteryId);
+            NetwControlInfo::setControlInfo(aPkt, highestPressureBatteryId);
+            sendDelayed(aPkt, 0.15, dataOut);
         }
 
         return;

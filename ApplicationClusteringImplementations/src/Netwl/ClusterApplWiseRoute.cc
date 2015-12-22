@@ -109,7 +109,7 @@ void ClusterApplWiseRoute::handleLowerMsg(cMessage* msg) {
         sendUp(decapsMsg(pkt));
     } else {
         if (strcmp(msg->getName(), "") != 0) {
-            opp_error("ClusterApplWiseRoute::handleLowerMsg() got an unknown message type.");
+            //opp_error("ClusterApplWiseRoute::handleLowerMsg() got an unknown message name.");
         }
         CustomWiseRoute::handleLowerMsg(msg);
     }

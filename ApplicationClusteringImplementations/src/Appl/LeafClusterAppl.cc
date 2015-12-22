@@ -20,6 +20,7 @@
 #include <BatteryStatsInfo_m.h>
 #include <ApplPkt_m.h>
 #include <SimpleBatteryStatsInfo.h>
+#include <string.h>
 
 Define_Module(LeafClusterAppl);
 
@@ -55,6 +56,7 @@ void LeafClusterAppl::initialize(int stage) {
 }
 
 void LeafClusterAppl::handleMessage(cMessage* msg) {
+
     char bubblestr[16];
     double energy = clusterApp->mySimpleBattery->estimateResidualRelative() * 100;
     if (clusterApp->nodeIsDown)
@@ -174,6 +176,25 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
                 aPkt->setName("estimateResidualRelative");
                 sendDelayed(aPkt, 0.05 * roomId, dataOut);
 
+            }
+        }
+        ApplPkt* aPkt = dynamic_cast<ApplPkt*>(msg);
+        if (aPkt) {
+            const char* name = msg->getName();
+            std::string nameString = name;
+            //measure
+            std::string nameBeginning = nameString.substr(0,7);
+            if (strcmp(nameBeginning.c_str(), "measure") == 0) {
+                std::string nameEnding = nameString.substr(8);
+                if (strcmp(nameEnding.c_str(), "temperature") == 0) {
+
+                } else if (strcmp(nameEnding.c_str(), "pressure") == 0) {
+
+                } else if (strcmp(nameEnding.c_str(), "humidity") == 0) {
+
+                } else if (strcmp(nameEnding.c_str(), "light") == 0) {
+
+                }
             }
         }
         delete msg;
