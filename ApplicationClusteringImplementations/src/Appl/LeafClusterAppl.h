@@ -40,6 +40,8 @@ public:
     virtual ~LeafClusterAppl();
     void initialize(int stage);
     void handleMessage(cMessage* msg);
+
+    int roomNumber;
 };
 
 #endif /* LEAFCLUSTERAPPL_H_ */

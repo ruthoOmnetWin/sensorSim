@@ -6,22 +6,26 @@
    <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
 <h2 class="comptitle">Network <i>Szenario2</i></h2>
 <b>Package:</b> applicationclusteringimplementations<br/><b>File: <a href="src-Szenario2.ned.html">src/Szenario2.ned</a></b><br/>
-<p>some information about this szenario</p>
+<p>some information about this szenario
+<hr/></p>
 <p>szenario2.ini is the matching ini-file</p>
 <p>it is important to name all nodes like this: Node{myNetwAddr} where myNetwAddr == arp.offset.
 for example if arp.offset = 3 then the netwl.myNetwAddr will 3, too.
 in this case you must name the node Node3</p>
-<p>most values are similar to szenario1</p>
+<p>most values are similar to szenario1
+<hr/></p>
 <p>what happens in the szenario:</p>
 <p>leaf nodes (that measure sensor data) will never send their data on their own.
 leaf nodes will never use their sensors on their own.
 the coordinator node will ask the nodes for their data instead.
 the cluster master nodes will then search for the nodes with the highest battery power left (one for each sensor type).
-for each type the chosen node will then make one measuring and send it to the cluster master which will forward it to the global master.</p>
+for each type the chosen node will then make one measuring and send it to the cluster master which will forward it to the global master.
+<hr/></p>
 <p>module types</p>
 <p>there must be one coordinator/master node (coordinatorNodeAddr), this node must use the appl layer <a href="applicationclusteringimplementations.Appl.MasterClusterAppl.html">MasterClusterAppl</a>.
 direct childs of the master are ClusterMaster. they must use the appl layer <a href="applicationclusteringimplementations.Appl.ClusterMasterClusterAppl.html">ClusterMasterClusterAppl</a>.
-the leaf nodes in the routing tree should connect directly to a clusterMaster. they must use the appl layer <a href="applicationclusteringimplementations.Appl.LeafClusterAppl.html">LeafClusterAppl</a>.</p>
+the leaf nodes in the routing tree should connect directly to a clusterMaster. they must use the appl layer <a href="applicationclusteringimplementations.Appl.LeafClusterAppl.html">LeafClusterAppl</a>.
+<hr/></p>
 <p>organize cluster</p>
 <p>use the given module types to define one Master and muliple clusters with one ClusterMaster and multiple Leafs for each
 define special cluster information inside the ClusterMaster, is will be transferred to the Leafs automatically
@@ -14312,6 +14316,7 @@ than the default 5 activities (sleep, rx, tx, switching, decoding)</p>
 <h3 class="subtitle">Source code:</h3>
 <pre class="src"><span style="color: #808080; font-style: italic; ">//
 //some information about this szenario
+//---------------------------------------
 //
 //szenario2.ini is the matching ini-file
 //
@@ -14320,6 +14325,7 @@ than the default 5 activities (sleep, rx, tx, switching, decoding)</p>
 ////in this case you must name the node Node3
 //
 ////most values are similar to szenario1
+//---------------------------------------
 //
 //what happens in the szenario:
 //
@@ -14328,12 +14334,14 @@ than the default 5 activities (sleep, rx, tx, switching, decoding)</p>
 ////the coordinator node will ask the nodes for their data instead.
 ////the cluster master nodes will then search for the nodes with the highest battery power left (one for each sensor type).
 ////for each type the chosen node will then make one measuring and send it to the cluster master which will forward it to the global master.
+//---------------------------------------
 //
 //module types
 //
 ////there must be one coordinator/master node (coordinatorNodeAddr), this node must use the appl layer MasterClusterAppl.
 ////direct childs of the master are ClusterMaster. they must use the appl layer ClusterMasterClusterAppl.
 ////the leaf nodes in the routing tree should connect directly to a clusterMaster. they must use the appl layer LeafClusterAppl.
+//---------------------------------------
 //
 //organize cluster
 //

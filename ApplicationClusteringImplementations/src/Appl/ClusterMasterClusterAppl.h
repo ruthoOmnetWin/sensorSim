@@ -27,10 +27,9 @@
 class ClusterMasterClusterAppl : public CustomMatrixApplication, public AbstractClusterAppl {
 protected:
     ClusterApplWiseRoute* NetwLayer;
-
     CustomWiseRoute::AdjListElement* childNodes;
-
     cMessage* InitMeasuringEvent;
+    int roomNumber;
 
 public:
     ClusterMasterClusterAppl();

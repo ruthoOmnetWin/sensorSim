@@ -203,6 +203,7 @@ $O/Appl/ClusterMasterClusterAppl.o: Appl/ClusterMasterClusterAppl.cc \
 	Appl/AbstractClusterAppl.h \
 	Appl/ClusterMasterClusterAppl.h \
 	Appl/CustomMatrixApplication.h \
+	Appl/LeafClusterAppl.h \
 	BatteryStatsInfo/SimpleBatteryStatsInfo.h \
 	Netwl/ClusterApplWiseRoute.h \
 	Netwl/CustomWiseRoute.h \
@@ -249,7 +250,11 @@ $O/Appl/ClusterMasterClusterAppl.o: Appl/ClusterMasterClusterAppl.cc \
 	$(MIXIM_PROJ)/src/modules/power/battery/BatteryState.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/DeviceEntry.h \
 	$(MIXIM_PROJ)/src/modules/power/battery/SimpleBattery.h \
-	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/BatteryAccess.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/Memory/Memory.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/Processor/Processor.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SensorNode/SensorNode.h \
+	$(SENSORTECHNOLOGY_PROJ)/src/SimpleSensorData/SimpleSensorData.h
 $O/Appl/CustomDiceApplication.o: Appl/CustomDiceApplication.cc \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/GenericPacket_m.h \
 	$(APPLICATIONCLUSTERING_PROJ)/Packets/WakeUpPacket_m.h \

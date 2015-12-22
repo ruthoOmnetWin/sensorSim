@@ -22,6 +22,7 @@
 #include <SimpleBattery.h>
 #include <PhyLayerBattery.h>
 #include <SimpleBatteryStatsInfo.h>
+#include <LeafClusterAppl.h>
 
 Define_Module(ClusterMasterClusterAppl);
 
@@ -39,6 +40,11 @@ void ClusterMasterClusterAppl::initialize(int stage) {
         NetwLayer = FindModule<ClusterApplWiseRoute*>::findSubModule(findHost());
         childNodes = NetwLayer->getChildNodes(NetwLayer->getMyNetworkAddress());
 
+        roomNumber = par("roomNumber");
+        if (roomNumber == -1) {
+            opp_error("No roomNumber was defined for this Cluster Masters Applayer. Every ClusterMasterClusterAppl must define a room number");
+        }
+
         do {
             if (childNodes->value != -1) {
 
@@ -48,6 +54,13 @@ void ClusterMasterClusterAppl::initialize(int stage) {
 
                 SensorNode* sNode = dynamic_cast<SensorNode*>(node);
                 if (sNode != NULL) {
+                    LeafClusterAppl* appl = FindModule<LeafClusterAppl*>::findSubModule(sNode);
+                    if (appl == NULL) {
+                        opp_error("All Child nodes of ClusterMaster must be Leaf Nodes.");
+                    }
+
+                    appl->roomNumber = roomNumber;
+
                     SensorTypeInformation* sti = new SensorTypeInformation;
                     sti->nodeNetwAddr = childNodes->value;
                     sti->nodeObject = sNode;

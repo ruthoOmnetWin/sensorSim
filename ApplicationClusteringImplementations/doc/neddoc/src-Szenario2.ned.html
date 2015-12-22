@@ -20,7 +20,8 @@
    </td>
    <td>
 
-<p>some information about this szenario</p>
+<p>some information about this szenario
+<hr/></p>
 
    </td>
 </tr>
@@ -32,6 +33,7 @@
 
 </span><span style="color: #808080; font-style: italic; ">//
 //some information about this szenario
+//---------------------------------------
 //
 //szenario2.ini is the matching ini-file
 //
@@ -40,6 +42,7 @@
 ////in this case you must name the node Node3
 //
 ////most values are similar to szenario1
+//---------------------------------------
 //
 //what happens in the szenario:
 //
@@ -48,12 +51,14 @@
 ////the coordinator node will ask the nodes for their data instead.
 ////the cluster master nodes will then search for the nodes with the highest battery power left (one for each sensor type).
 ////for each type the chosen node will then make one measuring and send it to the cluster master which will forward it to the global master.
+//---------------------------------------
 //
 //module types
 //
 ////there must be one coordinator/master node (coordinatorNodeAddr), this node must use the appl layer MasterClusterAppl.
 ////direct childs of the master are ClusterMaster. they must use the appl layer ClusterMasterClusterAppl.
 ////the leaf nodes in the routing tree should connect directly to a clusterMaster. they must use the appl layer LeafClusterAppl.
+//---------------------------------------
 //
 //organize cluster
 //

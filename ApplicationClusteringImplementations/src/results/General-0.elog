@@ -1,5 +1,5 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1029 rid General-0-20151222-15:20:04-2672 b 1000
+SB v 1029 rid General-0-20151222-16:01:58-13008 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t applicationclusteringimplementations.Szenario2 n Szenario2 cm 1
 MS id 1 d bgi=background/roomsBigger;bgb=867,430,white;bgp=0,0
@@ -2292,8 +2292,6 @@ GC m 314 g 0 n fromLightSensor o 0
 GC m 314 g 3 n toLightSensor o 1
 CC sm 45 sg 1 dm 314 dg 0
 CC sm 314 sg 3 dm 45 dg 2
-BU id 5 txt "Created connections from Light-sensor to the processor."
-- Created connections from Light-sensor to the processor.
 GC m 46 g 0 n connectToProcessor$i o 0
 GC m 46 g 1 n connectToProcessor$o o 1
 GC m 314 g 4 n connectToMemory$i o 0
@@ -2302,9 +2300,6 @@ CC sm 46 sg 1 dm 314 dg 4
 CS sm 46 sg 1 d ""
 CC sm 314 sg 5 dm 46 dg 0
 CS sm 314 sg 5 d ""
-BU id 5 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 43 m initialize(0)
 - Node1[0]::BatteryStats: show details = 0
@@ -2547,14 +2542,20 @@ GC m 316 g 0 n fromTemperatureSensor o 0
 GC m 316 g 3 n toTemperatureSensor o 1
 CC sm 80 sg 1 dm 316 dg 0
 CC sm 316 sg 3 dm 80 dg 2
+BU id 7 txt "Created connections from Temperature-sensor to the processor."
+- Created connections from Temperature-sensor to the processor.
 GC m 316 g 4 n fromPressureSensor o 0
 GC m 316 g 7 n toPressureSensor o 1
 CC sm 81 sg 1 dm 316 dg 4
 CC sm 316 sg 7 dm 81 dg 2
+BU id 7 txt "Created connections from Pressure-sensor to the processor."
+- Created connections from Pressure-sensor to the processor.
 GC m 316 g 8 n fromLightSensor o 0
 GC m 316 g 11 n toLightSensor o 1
 CC sm 82 sg 1 dm 316 dg 8
 CC sm 316 sg 11 dm 82 dg 2
+BU id 7 txt "Created connections from Light-sensor to the processor."
+- Created connections from Light-sensor to the processor.
 GC m 83 g 0 n connectToProcessor$i o 0
 GC m 83 g 1 n connectToProcessor$o o 1
 GC m 316 g 12 n connectToMemory$i o 0
@@ -2563,6 +2564,9 @@ CC sm 83 sg 1 dm 316 dg 12
 CS sm 83 sg 1 d ""
 CC sm 316 sg 13 dm 83 dg 0
 CS sm 316 sg 13 d ""
+BU id 7 txt "Counted 3 Sensor(s) on the Node.\n"
+- Counted 3 Sensor(s) on the Node.
+- 
 ME
 MB sm 1 tm 78 m initialize(0)
 - Node3[0]::BatteryStats: show details = 0
@@ -2717,8 +2721,6 @@ GC m 317 g 0 n fromHumiditySensor o 0
 GC m 317 g 3 n toHumiditySensor o 1
 CC sm 105 sg 1 dm 317 dg 0
 CC sm 317 sg 3 dm 105 dg 2
-BU id 8 txt "Created connections from Humidity-sensor to the processor."
-- Created connections from Humidity-sensor to the processor.
 GC m 106 g 0 n connectToProcessor$i o 0
 GC m 106 g 1 n connectToProcessor$o o 1
 GC m 317 g 4 n connectToMemory$i o 0
@@ -2727,9 +2729,6 @@ CC sm 106 sg 1 dm 317 dg 4
 CS sm 106 sg 1 d ""
 CC sm 317 sg 5 dm 106 dg 0
 CS sm 317 sg 5 d ""
-BU id 8 txt "Counted 1 Sensor(s) on the Node.\n"
-- Counted 1 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 103 m initialize(0)
 - Node4[0]::BatteryStats: show details = 0
@@ -2832,26 +2831,18 @@ GC m 318 g 0 n fromTemperatureSensor o 0
 GC m 318 g 3 n toTemperatureSensor o 1
 CC sm 120 sg 1 dm 318 dg 0
 CC sm 318 sg 3 dm 120 dg 2
-BU id 9 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 318 g 4 n fromHumiditySensor o 0
 GC m 318 g 7 n toHumiditySensor o 1
 CC sm 121 sg 1 dm 318 dg 4
 CC sm 318 sg 7 dm 121 dg 2
-BU id 9 txt "Created connections from Humidity-sensor to the processor."
-- Created connections from Humidity-sensor to the processor.
 GC m 318 g 8 n fromPressureSensor o 0
 GC m 318 g 11 n toPressureSensor o 1
 CC sm 122 sg 1 dm 318 dg 8
 CC sm 318 sg 11 dm 122 dg 2
-BU id 9 txt "Created connections from Pressure-sensor to the processor."
-- Created connections from Pressure-sensor to the processor.
 GC m 318 g 12 n fromLightSensor o 0
 GC m 318 g 15 n toLightSensor o 1
 CC sm 123 sg 1 dm 318 dg 12
 CC sm 318 sg 15 dm 123 dg 2
-BU id 9 txt "Created connections from Light-sensor to the processor."
-- Created connections from Light-sensor to the processor.
 GC m 124 g 0 n connectToProcessor$i o 0
 GC m 124 g 1 n connectToProcessor$o o 1
 GC m 318 g 16 n connectToMemory$i o 0
@@ -2860,9 +2851,6 @@ CC sm 124 sg 1 dm 318 dg 16
 CS sm 124 sg 1 d ""
 CC sm 318 sg 17 dm 124 dg 0
 CS sm 318 sg 17 d ""
-BU id 9 txt "Counted 4 Sensor(s) on the Node.\n"
-- Counted 4 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 118 m initialize(0)
 - Node5[0]::BatteryStats: show details = 0
@@ -3433,20 +3421,14 @@ GC m 322 g 0 n fromTemperatureSensor o 0
 GC m 322 g 3 n toTemperatureSensor o 1
 CC sm 205 sg 1 dm 322 dg 0
 CC sm 322 sg 3 dm 205 dg 2
-BU id 13 txt "Created connections from Temperature-sensor to the processor."
-- Created connections from Temperature-sensor to the processor.
 GC m 322 g 4 n fromHumiditySensor o 0
 GC m 322 g 7 n toHumiditySensor o 1
 CC sm 206 sg 1 dm 322 dg 4
 CC sm 322 sg 7 dm 206 dg 2
-BU id 13 txt "Created connections from Humidity-sensor to the processor."
-- Created connections from Humidity-sensor to the processor.
 GC m 322 g 8 n fromLightSensor o 0
 GC m 322 g 11 n toLightSensor o 1
 CC sm 207 sg 1 dm 322 dg 8
 CC sm 322 sg 11 dm 207 dg 2
-BU id 13 txt "Created connections from Light-sensor to the processor."
-- Created connections from Light-sensor to the processor.
 GC m 208 g 0 n connectToProcessor$i o 0
 GC m 208 g 1 n connectToProcessor$o o 1
 GC m 322 g 12 n connectToMemory$i o 0
@@ -3455,9 +3437,6 @@ CC sm 208 sg 1 dm 322 dg 12
 CS sm 208 sg 1 d ""
 CC sm 322 sg 13 dm 208 dg 0
 CS sm 322 sg 13 d ""
-BU id 13 txt "Counted 3 Sensor(s) on the Node.\n"
-- Counted 3 Sensor(s) on the Node.
-- 
 ME
 MB sm 1 tm 203 m initialize(0)
 - Node9[0]::BatteryStats: show details = 0
@@ -7110,436 +7089,4282 @@ BS id 266 tid 266 eid 266 etid 266 c ExtendedMessage n Humidity pe 26
 CL id 266 tid 266 eid 266 etid 266 c ExtendedMessage n Humidity pe 26 cid 314
 SH sm 260 sg 3
 ES t 0
-SE e 0 c 9 m "The user has finished the simulation at event #27, t=0."
-- Sent:     0
-- Received: 0
-- Hop count, min:    0
-- Hop count, max:    0
-- Hop count, mean:   0
-- Hop count, stddev: -nan
-- Node0[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node0[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node0[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node0[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node0[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
-- Node0[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node0[0]::SimpleBattery: device 6 (SignalConverter) consumed 0 mW-s at 0s
-- Node0[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
-- Node0[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
-- Node0[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node0[0]::SimpleBattery: device 10 (SignalConverter) consumed 0 mW-s at 0s
-- Node0[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
-- Node0[0]::SimpleBattery: device 12 (Memory) consumed 0 mW-s at 0s
-- Node0[0]::SimpleBattery: device 13 (Processor) consumed 0 mW-s at 0s
-- Node0[0]::SimpleBattery: device 13, activity 0: 0 mWs and 0s
-- Node0[0]::SimpleBattery: device 13, activity 1: 0 mWs and 0s
-- Node0[0]::SimpleBattery: device 13, activity 2: 0 mWs and 0s
-- Node0[0]::SimpleBattery: device 14 (physical layer) consumed 0 mW-s at 0s
-- Node0[0]::SimpleBattery: device 14, activity 0: 0 mWs and 0s
-- Node0[0]::SimpleBattery: device 14, activity 1: 0 mWs and 0s
-- Node0[0]::SimpleBattery: device 14, activity 2: 0 mWs and 0s
-- Node0[0]::SimpleBattery: device 14, activity 3: 0 mWs and 0s
-- Node0[0]::SimpleBattery: device 14, activity 4: 0 mWs and 0s
-- Node0[0]::SimpleBattery: device 14, activity 5: 0 mWs and 0s
-- Node0[0]::SimpleBattery: device 14, activity 6: 0 mWs and 0s
-- Node0[0]::SimpleBattery: device 15 () consumed 0 mW-s at 0s
-MB sm 19 tm 18 m ""
+
+E # 27 t 0 m 264 ce 0 msg 268
+- Node11[0]::SimpleBattery: 0 device 9 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 264 tm 244 m ""
 ME
-MB sm 19 tm 18 m ""
+BS id 268 tid 268 eid 268 etid 268 c ExtendedMessage n Pressure pe 27
+CL id 268 tid 268 eid 268 etid 268 c ExtendedMessage n Pressure pe 27 cid 315
+SH sm 264 sg 3
+ES t 0
+
+E # 28 t 0 m 268 ce 0 msg 270
+- Node11[0]::SimpleBattery: 0 device 13 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 268 tm 244 m ""
 ME
-- Node1[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node1[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node1[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node1[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node1[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
-- Node1[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
-- Node1[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
-- Node1[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 7 (Sensornode) consumed 0 mW-s at 0s
-- Node1[0]::SimpleBattery: device 7, activity 0: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 7, activity 1: 0 mWs and 0s
-- Node1[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
-- Node1[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
-- Node1[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
-- Node1[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
-MB sm 44 tm 43 m ""
+BS id 270 tid 270 eid 270 etid 270 c ExtendedMessage n Light pe 28
+CL id 270 tid 270 eid 270 etid 270 c ExtendedMessage n Light pe 28 cid 316
+SH sm 268 sg 3
+ES t 0
+
+E # 29 t 0 m 283 ce 0 msg 275
+- Node12[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 283 tm 274 m ""
 ME
-MB sm 44 tm 43 m ""
+BS id 275 tid 275 eid 275 etid 275 c ExtendedMessage n Pressure pe 29
+CL id 275 tid 275 eid 275 etid 275 c ExtendedMessage n Pressure pe 29 cid 317
+SH sm 283 sg 3
+ES t 0
+
+E # 30 t 0 m 300 ce 0 msg 280
+- Node13[0]::SimpleBattery: 0 device 1 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 300 tm 289 m ""
 ME
-- Node2[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node2[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node2[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node2[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node2[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
-- Node2[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node2[0]::SimpleBattery: device 6 (SignalConverter) consumed 0 mW-s at 0s
-- Node2[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
-- Node2[0]::SimpleBattery: device 8 (Memory) consumed 0 mW-s at 0s
-- Node2[0]::SimpleBattery: device 9 (Processor) consumed 0 mW-s at 0s
-- Node2[0]::SimpleBattery: device 9, activity 0: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 9, activity 1: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 9, activity 2: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 10 (physical layer) consumed 0 mW-s at 0s
-- Node2[0]::SimpleBattery: device 10, activity 0: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 10, activity 1: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 10, activity 2: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 10, activity 3: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 10, activity 4: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 10, activity 5: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 10, activity 6: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 11 (Sensornode) consumed 0 mW-s at 0s
-- Node2[0]::SimpleBattery: device 11, activity 0: 0 mWs and 0s
-- Node2[0]::SimpleBattery: device 11, activity 1: 0 mWs and 0s
-MB sm 59 tm 58 m ""
+BS id 280 tid 280 eid 280 etid 280 c ExtendedMessage n Temperature pe 30
+CL id 280 tid 280 eid 280 etid 280 c ExtendedMessage n Temperature pe 30 cid 318
+SH sm 300 sg 3
+ES t 0
+
+E # 31 t 0 m 304 ce 0 msg 282
+- Node13[0]::SimpleBattery: 0 device 5 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 304 tm 289 m ""
 ME
-MB sm 59 tm 58 m ""
+BS id 282 tid 282 eid 282 etid 282 c ExtendedMessage n Humidity pe 31
+CL id 282 tid 282 eid 282 etid 282 c ExtendedMessage n Humidity pe 31 cid 319
+SH sm 304 sg 3
+ES t 0
+
+E # 32 t 0 m 308 ce 0 msg 284
+- Node13[0]::SimpleBattery: 0 device 9 (SignalConditioner) deduct 1000 mW-s, activity = 0
+MB sm 308 tm 289 m ""
 ME
-- Node3[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node3[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node3[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node3[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node3[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
-- Node3[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node3[0]::SimpleBattery: device 6 (SignalConverter) consumed 0 mW-s at 0s
-- Node3[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
-- Node3[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
-- Node3[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node3[0]::SimpleBattery: device 10 (SignalConverter) consumed 0 mW-s at 0s
-- Node3[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
-- Node3[0]::SimpleBattery: device 12 (Memory) consumed 0 mW-s at 0s
-- Node3[0]::SimpleBattery: device 13 (Processor) consumed 0 mW-s at 0s
-- Node3[0]::SimpleBattery: device 13, activity 0: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 13, activity 1: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 13, activity 2: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 14 (physical layer) consumed 0 mW-s at 0s
-- Node3[0]::SimpleBattery: device 14, activity 0: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 14, activity 1: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 14, activity 2: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 14, activity 3: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 14, activity 4: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 14, activity 5: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 14, activity 6: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 15 (Sensornode) consumed 0 mW-s at 0s
-- Node3[0]::SimpleBattery: device 15, activity 0: 0 mWs and 0s
-- Node3[0]::SimpleBattery: device 15, activity 1: 0 mWs and 0s
-MB sm 79 tm 78 m ""
+BS id 284 tid 284 eid 284 etid 284 c ExtendedMessage n Light pe 32
+CL id 284 tid 284 eid 284 etid 284 c ExtendedMessage n Light pe 32 cid 320
+SH sm 308 sg 3
+ES t 0
+
+E # 33 t 0 m 31 ce 2 msg 183
+- Node0[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 31 tm 19 m ""
 ME
-MB sm 79 tm 78 m ""
+BS id 183 tid 183 eid 183 etid 183 c ExtendedMessage n Temperature pe 33
+CL id 183 tid 183 eid 183 etid 183 c ExtendedMessage n Temperature pe 33 cid 321
+SH sm 31 sg 3
+ES t 0
+
+E # 34 t 0 m 35 ce 3 msg 185
+- Node0[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 35 tm 19 m ""
 ME
-- Node4[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node4[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node4[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node4[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node4[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
-- Node4[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
-- Node4[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
-- Node4[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 7 (Sensornode) consumed 0 mW-s at 0s
-- Node4[0]::SimpleBattery: device 7, activity 0: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 7, activity 1: 0 mWs and 0s
-- Node4[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
-- Node4[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
-- Node4[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
-- Node4[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
-MB sm 104 tm 103 m ""
+BS id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Pressure pe 34
+CL id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Pressure pe 34 cid 322
+SH sm 35 sg 3
+ES t 0
+
+E # 35 t 0 m 39 ce 4 msg 187
+- Node0[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 39 tm 19 m ""
 ME
-MB sm 104 tm 103 m ""
+BS id 187 tid 187 eid 187 etid 187 c ExtendedMessage n Light pe 35
+CL id 187 tid 187 eid 187 etid 187 c ExtendedMessage n Light pe 35 cid 323
+SH sm 39 sg 3
+ES t 0
+
+E # 36 t 0 m 54 ce 5 msg 192
+- Node1[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 54 tm 44 m ""
 ME
-- Node5[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node5[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node5[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
-- Node5[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node5[0]::SimpleBattery: device 6 (SignalConverter) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
-- Node5[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node5[0]::SimpleBattery: device 10 (SignalConverter) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 12 (SensingUnit) consumed 2000 mW-s at 0s
-- Node5[0]::SimpleBattery: device 13 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node5[0]::SimpleBattery: device 14 (SignalConverter) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 15 (Transducer) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 16 (Memory) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 17 (Processor) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 17, activity 0: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 17, activity 1: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 17, activity 2: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 18 (physical layer) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 18, activity 0: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 18, activity 1: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 18, activity 2: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 18, activity 3: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 18, activity 4: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 18, activity 5: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 18, activity 6: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 19 (Sensornode) consumed 0 mW-s at 0s
-- Node5[0]::SimpleBattery: device 19, activity 0: 0 mWs and 0s
-- Node5[0]::SimpleBattery: device 19, activity 1: 0 mWs and 0s
-MB sm 119 tm 118 m ""
+BS id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Light pe 36
+CL id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Light pe 36 cid 324
+SH sm 54 sg 3
+ES t 0
+
+E # 37 t 0 m 70 ce 6 msg 198
+- Node2[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 70 tm 59 m ""
 ME
-MB sm 119 tm 118 m ""
+BS id 198 tid 198 eid 198 etid 198 c ExtendedMessage n Temperature pe 37
+CL id 198 tid 198 eid 198 etid 198 c ExtendedMessage n Temperature pe 37 cid 325
+SH sm 70 sg 3
+ES t 0
+
+E # 38 t 0 m 74 ce 7 msg 200
+- Node2[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 74 tm 59 m ""
 ME
-- Node6[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node6[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node6[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node6[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node6[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
-- Node6[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
-- Node6[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
-- Node6[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 7 (Sensornode) consumed 0 mW-s at 0s
-- Node6[0]::SimpleBattery: device 7, activity 0: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 7, activity 1: 0 mWs and 0s
-- Node6[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
-- Node6[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
-- Node6[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
-- Node6[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
-MB sm 149 tm 148 m ""
+BS id 200 tid 200 eid 200 etid 200 c ExtendedMessage n Humidity pe 38
+CL id 200 tid 200 eid 200 etid 200 c ExtendedMessage n Humidity pe 38 cid 326
+SH sm 74 sg 3
+ES t 0
+
+E # 39 t 0 m 91 ce 8 msg 205
+- Node3[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 91 tm 79 m ""
 ME
-MB sm 149 tm 148 m ""
+BS id 205 tid 205 eid 205 etid 205 c ExtendedMessage n Temperature pe 39
+CL id 205 tid 205 eid 205 etid 205 c ExtendedMessage n Temperature pe 39 cid 327
+SH sm 91 sg 3
+ES t 0
+
+E # 40 t 0 m 95 ce 9 msg 207
+- Node3[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 95 tm 79 m ""
 ME
-- Node7[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node7[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node7[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node7[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node7[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
-- Node7[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node7[0]::SimpleBattery: device 6 (SignalConverter) consumed 0 mW-s at 0s
-- Node7[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
-- Node7[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
-- Node7[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node7[0]::SimpleBattery: device 10 (SignalConverter) consumed 0 mW-s at 0s
-- Node7[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
-- Node7[0]::SimpleBattery: device 12 (Memory) consumed 0 mW-s at 0s
-- Node7[0]::SimpleBattery: device 13 (Processor) consumed 0 mW-s at 0s
-- Node7[0]::SimpleBattery: device 13, activity 0: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 13, activity 1: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 13, activity 2: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 14 (physical layer) consumed 0 mW-s at 0s
-- Node7[0]::SimpleBattery: device 14, activity 0: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 14, activity 1: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 14, activity 2: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 14, activity 3: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 14, activity 4: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 14, activity 5: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 14, activity 6: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 15 (Sensornode) consumed 0 mW-s at 0s
-- Node7[0]::SimpleBattery: device 15, activity 0: 0 mWs and 0s
-- Node7[0]::SimpleBattery: device 15, activity 1: 0 mWs and 0s
-MB sm 164 tm 163 m ""
+BS id 207 tid 207 eid 207 etid 207 c ExtendedMessage n Pressure pe 40
+CL id 207 tid 207 eid 207 etid 207 c ExtendedMessage n Pressure pe 40 cid 328
+SH sm 95 sg 3
+ES t 0
+
+E # 41 t 0 m 99 ce 10 msg 209
+- Node3[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 99 tm 79 m ""
 ME
-MB sm 164 tm 163 m ""
+BS id 209 tid 209 eid 209 etid 209 c ExtendedMessage n Light pe 41
+CL id 209 tid 209 eid 209 etid 209 c ExtendedMessage n Light pe 41 cid 329
+SH sm 99 sg 3
+ES t 0
+
+E # 42 t 0 m 114 ce 11 msg 214
+- Node4[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 114 tm 104 m ""
 ME
-- Node8[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node8[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node8[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node8[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node8[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
-- Node8[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
-- Node8[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
-- Node8[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 7 (Sensornode) consumed 0 mW-s at 0s
-- Node8[0]::SimpleBattery: device 7, activity 0: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 7, activity 1: 0 mWs and 0s
-- Node8[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
-- Node8[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
-- Node8[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
-- Node8[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
-MB sm 189 tm 188 m ""
+BS id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Humidity pe 42
+CL id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Humidity pe 42 cid 330
+SH sm 114 sg 3
+ES t 0
+
+E # 43 t 0 m 132 ce 12 msg 219
+- Node5[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 132 tm 119 m ""
 ME
-MB sm 189 tm 188 m ""
+BS id 219 tid 219 eid 219 etid 219 c ExtendedMessage n Temperature pe 43
+CL id 219 tid 219 eid 219 etid 219 c ExtendedMessage n Temperature pe 43 cid 331
+SH sm 132 sg 3
+ES t 0
+
+E # 44 t 0 m 136 ce 13 msg 221
+- Node5[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 136 tm 119 m ""
 ME
-- Node9[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node9[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node9[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node9[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node9[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
-- Node9[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node9[0]::SimpleBattery: device 6 (SignalConverter) consumed 0 mW-s at 0s
-- Node9[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
-- Node9[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
-- Node9[0]::SimpleBattery: device 9 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node9[0]::SimpleBattery: device 10 (SignalConverter) consumed 0 mW-s at 0s
-- Node9[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
-- Node9[0]::SimpleBattery: device 12 (Memory) consumed 0 mW-s at 0s
-- Node9[0]::SimpleBattery: device 13 (Processor) consumed 0 mW-s at 0s
-- Node9[0]::SimpleBattery: device 13, activity 0: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 13, activity 1: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 13, activity 2: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 14 (physical layer) consumed 0 mW-s at 0s
-- Node9[0]::SimpleBattery: device 14, activity 0: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 14, activity 1: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 14, activity 2: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 14, activity 3: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 14, activity 4: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 14, activity 5: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 14, activity 6: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 15 (Sensornode) consumed 0 mW-s at 0s
-- Node9[0]::SimpleBattery: device 15, activity 0: 0 mWs and 0s
-- Node9[0]::SimpleBattery: device 15, activity 1: 0 mWs and 0s
-MB sm 204 tm 203 m ""
+BS id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Humidity pe 44
+CL id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Humidity pe 44 cid 332
+SH sm 136 sg 3
+ES t 0
+
+E # 45 t 0 m 140 ce 14 msg 223
+- Node5[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 140 tm 119 m ""
 ME
-MB sm 204 tm 203 m ""
+BS id 223 tid 223 eid 223 etid 223 c ExtendedMessage n Pressure pe 45
+CL id 223 tid 223 eid 223 etid 223 c ExtendedMessage n Pressure pe 45 cid 333
+SH sm 140 sg 3
+ES t 0
+
+E # 46 t 0 m 144 ce 15 msg 225
+- Node5[0]::SimpleBattery: 0 device 14 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 144 tm 119 m ""
 ME
-- Node10[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node10[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node10[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node10[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node10[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
-- Node10[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
-- Node10[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
-- Node10[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 7 (Sensornode) consumed 0 mW-s at 0s
-- Node10[0]::SimpleBattery: device 7, activity 0: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 7, activity 1: 0 mWs and 0s
-- Node10[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
-- Node10[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
-- Node10[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
-- Node10[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
-MB sm 229 tm 228 m ""
+BS id 225 tid 225 eid 225 etid 225 c ExtendedMessage n Light pe 46
+CL id 225 tid 225 eid 225 etid 225 c ExtendedMessage n Light pe 46 cid 334
+SH sm 144 sg 3
+ES t 0
+
+E # 47 t 0 m 159 ce 16 msg 231
+- Node6[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 159 tm 149 m ""
 ME
-MB sm 229 tm 228 m ""
+BS id 231 tid 231 eid 231 etid 231 c ExtendedMessage n Light pe 47
+CL id 231 tid 231 eid 231 etid 231 c ExtendedMessage n Light pe 47 cid 335
+SH sm 159 sg 3
+ES t 0
+
+E # 48 t 0 m 176 ce 17 msg 236
+- Node7[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 176 tm 164 m ""
 ME
-- Node11[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node11[0]::SimpleBattery: device 1 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node11[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
-- Node11[0]::SimpleBattery: device 5 (SignalConditioner) consumed 1000 mW-s at 0s
-- Node11[0]::SimpleBattery: device 6 (SignalConverter) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
-- Node11[0]::SimpleBattery: device 9 (SignalConditioner) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 10 (SignalConverter) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 12 (SensingUnit) consumed 2000 mW-s at 0s
-- Node11[0]::SimpleBattery: device 13 (SignalConditioner) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 14 (SignalConverter) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 15 (Transducer) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 16 (Memory) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 17 (Processor) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 17, activity 0: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 17, activity 1: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 17, activity 2: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 18 (physical layer) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 18, activity 0: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 18, activity 1: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 18, activity 2: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 18, activity 3: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 18, activity 4: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 18, activity 5: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 18, activity 6: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 19 (Sensornode) consumed 0 mW-s at 0s
-- Node11[0]::SimpleBattery: device 19, activity 0: 0 mWs and 0s
-- Node11[0]::SimpleBattery: device 19, activity 1: 0 mWs and 0s
-MB sm 244 tm 243 m ""
+BS id 236 tid 236 eid 236 etid 236 c ExtendedMessage n Temperature pe 48
+CL id 236 tid 236 eid 236 etid 236 c ExtendedMessage n Temperature pe 48 cid 336
+SH sm 176 sg 3
+ES t 0
+
+E # 49 t 0 m 180 ce 18 msg 238
+- Node7[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 180 tm 164 m ""
 ME
-MB sm 244 tm 243 m ""
+BS id 238 tid 238 eid 238 etid 238 c ExtendedMessage n Humidity pe 49
+CL id 238 tid 238 eid 238 etid 238 c ExtendedMessage n Humidity pe 49 cid 337
+SH sm 180 sg 3
+ES t 0
+
+E # 50 t 0 m 184 ce 19 msg 240
+- Node7[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 184 tm 164 m ""
 ME
-- Node12[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node12[0]::SimpleBattery: device 1 (SignalConditioner) consumed 0 mW-s at 0s
-- Node12[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node12[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node12[0]::SimpleBattery: device 4 (Memory) consumed 0 mW-s at 0s
-- Node12[0]::SimpleBattery: device 5 (Processor) consumed 0 mW-s at 0s
-- Node12[0]::SimpleBattery: device 5, activity 0: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 5, activity 1: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 5, activity 2: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 6 (physical layer) consumed 0 mW-s at 0s
-- Node12[0]::SimpleBattery: device 6, activity 0: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 6, activity 1: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 6, activity 2: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 6, activity 3: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 6, activity 4: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 6, activity 5: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 6, activity 6: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 7 (Sensornode) consumed 0 mW-s at 0s
-- Node12[0]::SimpleBattery: device 7, activity 0: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 7, activity 1: 0 mWs and 0s
-- Node12[0]::SimpleBattery: device 8 () consumed 0 mW-s at 0s
-- Node12[0]::SimpleBattery: device 9 () consumed 0 mW-s at 0s
-- Node12[0]::SimpleBattery: device 10 () consumed 0 mW-s at 0s
-- Node12[0]::SimpleBattery: device 11 () consumed 0 mW-s at 0s
-MB sm 274 tm 273 m ""
+BS id 240 tid 240 eid 240 etid 240 c ExtendedMessage n Pressure pe 50
+CL id 240 tid 240 eid 240 etid 240 c ExtendedMessage n Pressure pe 50 cid 338
+SH sm 184 sg 3
+ES t 0
+
+E # 51 t 0 m 199 ce 20 msg 245
+- Node8[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 199 tm 189 m ""
 ME
-MB sm 274 tm 273 m ""
+BS id 245 tid 245 eid 245 etid 245 c ExtendedMessage n Light pe 51
+CL id 245 tid 245 eid 245 etid 245 c ExtendedMessage n Light pe 51 cid 339
+SH sm 199 sg 3
+ES t 0
+
+E # 52 t 0 m 216 ce 21 msg 250
+- Node9[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 216 tm 204 m ""
 ME
-- Node13[0]::SimpleBattery: device 0 (SensingUnit) consumed 2000 mW-s at 0s
-- Node13[0]::SimpleBattery: device 1 (SignalConditioner) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 2 (SignalConverter) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 3 (Transducer) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 4 (SensingUnit) consumed 2000 mW-s at 0s
-- Node13[0]::SimpleBattery: device 5 (SignalConditioner) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 6 (SignalConverter) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 7 (Transducer) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 8 (SensingUnit) consumed 2000 mW-s at 0s
-- Node13[0]::SimpleBattery: device 9 (SignalConditioner) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 10 (SignalConverter) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 11 (Transducer) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 12 (Memory) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 13 (Processor) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 13, activity 0: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 13, activity 1: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 13, activity 2: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 14 (physical layer) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 14, activity 0: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 14, activity 1: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 14, activity 2: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 14, activity 3: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 14, activity 4: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 14, activity 5: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 14, activity 6: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 15 (Sensornode) consumed 0 mW-s at 0s
-- Node13[0]::SimpleBattery: device 15, activity 0: 0 mWs and 0s
-- Node13[0]::SimpleBattery: device 15, activity 1: 0 mWs and 0s
-MB sm 289 tm 288 m ""
+BS id 250 tid 250 eid 250 etid 250 c ExtendedMessage n Temperature pe 52
+CL id 250 tid 250 eid 250 etid 250 c ExtendedMessage n Temperature pe 52 cid 340
+SH sm 216 sg 3
+ES t 0
+
+E # 53 t 0 m 220 ce 22 msg 252
+- Node9[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 220 tm 204 m ""
 ME
-MB sm 289 tm 288 m ""
+BS id 252 tid 252 eid 252 etid 252 c ExtendedMessage n Humidity pe 53
+CL id 252 tid 252 eid 252 etid 252 c ExtendedMessage n Humidity pe 53 cid 341
+SH sm 220 sg 3
+ES t 0
+
+E # 54 t 0 m 224 ce 23 msg 254
+- Node9[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 224 tm 204 m ""
 ME
+BS id 254 tid 254 eid 254 etid 254 c ExtendedMessage n Light pe 54
+CL id 254 tid 254 eid 254 etid 254 c ExtendedMessage n Light pe 54 cid 342
+SH sm 224 sg 3
+ES t 0
+
+E # 55 t 0 m 239 ce 24 msg 259
+- Node10[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 239 tm 229 m ""
+ME
+BS id 259 tid 259 eid 259 etid 259 c ExtendedMessage n Light pe 55
+CL id 259 tid 259 eid 259 etid 259 c ExtendedMessage n Light pe 55 cid 343
+SH sm 239 sg 3
+ES t 0
+
+E # 56 t 0 m 257 ce 25 msg 264
+- Node11[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 257 tm 244 m ""
+ME
+BS id 264 tid 264 eid 264 etid 264 c ExtendedMessage n Temperature pe 56
+CL id 264 tid 264 eid 264 etid 264 c ExtendedMessage n Temperature pe 56 cid 344
+SH sm 257 sg 3
+ES t 0
+
+E # 57 t 0 m 261 ce 26 msg 266
+- Node11[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 261 tm 244 m ""
+ME
+BS id 266 tid 266 eid 266 etid 266 c ExtendedMessage n Humidity pe 57
+CL id 266 tid 266 eid 266 etid 266 c ExtendedMessage n Humidity pe 57 cid 345
+SH sm 261 sg 3
+ES t 0
+
+E # 58 t 0 m 265 ce 27 msg 268
+- Node11[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 265 tm 244 m ""
+ME
+BS id 268 tid 268 eid 268 etid 268 c ExtendedMessage n Pressure pe 58
+CL id 268 tid 268 eid 268 etid 268 c ExtendedMessage n Pressure pe 58 cid 346
+SH sm 265 sg 3
+ES t 0
+
+E # 59 t 0 m 269 ce 28 msg 270
+- Node11[0]::SimpleBattery: 0 device 14 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 269 tm 244 m ""
+ME
+BS id 270 tid 270 eid 270 etid 270 c ExtendedMessage n Light pe 59
+CL id 270 tid 270 eid 270 etid 270 c ExtendedMessage n Light pe 59 cid 347
+SH sm 269 sg 3
+ES t 0
+
+E # 60 t 0 m 284 ce 29 msg 275
+- Node12[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 284 tm 274 m ""
+ME
+BS id 275 tid 275 eid 275 etid 275 c ExtendedMessage n Pressure pe 60
+CL id 275 tid 275 eid 275 etid 275 c ExtendedMessage n Pressure pe 60 cid 348
+SH sm 284 sg 3
+ES t 0
+
+E # 61 t 0 m 301 ce 30 msg 280
+- Node13[0]::SimpleBattery: 0 device 2 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 301 tm 289 m ""
+ME
+BS id 280 tid 280 eid 280 etid 280 c ExtendedMessage n Temperature pe 61
+CL id 280 tid 280 eid 280 etid 280 c ExtendedMessage n Temperature pe 61 cid 349
+SH sm 301 sg 3
+ES t 0
+
+E # 62 t 0 m 305 ce 31 msg 282
+- Node13[0]::SimpleBattery: 0 device 6 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 305 tm 289 m ""
+ME
+BS id 282 tid 282 eid 282 etid 282 c ExtendedMessage n Humidity pe 62
+CL id 282 tid 282 eid 282 etid 282 c ExtendedMessage n Humidity pe 62 cid 350
+SH sm 305 sg 3
+ES t 0
+
+E # 63 t 0 m 309 ce 32 msg 284
+- Node13[0]::SimpleBattery: 0 device 10 (SignalConverter) deduct 1000 mW-s, activity = 0
+MB sm 309 tm 289 m ""
+ME
+BS id 284 tid 284 eid 284 etid 284 c ExtendedMessage n Light pe 63
+CL id 284 tid 284 eid 284 etid 284 c ExtendedMessage n Light pe 63 cid 351
+SH sm 309 sg 3
+ES t 0
+
+E # 64 t 0 m 32 ce 33 msg 183
+- Node0[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 32 tm 19 m ""
+ME
+BS id 183 tid 183 eid 183 etid 183 c ExtendedMessage n Temperature pe 64
+CL id 183 tid 183 eid 183 etid 183 c ExtendedMessage n Temperature pe 64 cid 352
+SH sm 32 sg 3
+SH sm 20 sg 1
+ES t 0
+
+E # 65 t 0 m 36 ce 34 msg 185
+- Node0[0]::SimpleBattery: 0 device 7 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 36 tm 19 m ""
+ME
+BS id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Pressure pe 65
+CL id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Pressure pe 65 cid 353
+SH sm 36 sg 3
+SH sm 21 sg 1
+ES t 0
+
+E # 66 t 0 m 40 ce 35 msg 187
+- Node0[0]::SimpleBattery: 0 device 11 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 40 tm 19 m ""
+ME
+BS id 187 tid 187 eid 187 etid 187 c ExtendedMessage n Light pe 66
+CL id 187 tid 187 eid 187 etid 187 c ExtendedMessage n Light pe 66 cid 354
+SH sm 40 sg 3
+SH sm 22 sg 1
+ES t 0
+
+E # 67 t 0 m 55 ce 36 msg 192
+- Node1[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 55 tm 44 m ""
+ME
+BS id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Light pe 67
+CL id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Light pe 67 cid 355
+SH sm 55 sg 3
+SH sm 45 sg 1
+ES t 0
+
+E # 68 t 0 m 71 ce 37 msg 198
+- Node2[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 71 tm 59 m ""
+ME
+BS id 198 tid 198 eid 198 etid 198 c ExtendedMessage n Temperature pe 68
+CL id 198 tid 198 eid 198 etid 198 c ExtendedMessage n Temperature pe 68 cid 356
+SH sm 71 sg 3
+SH sm 60 sg 1
+ES t 0
+
+E # 69 t 0 m 75 ce 38 msg 200
+- Node2[0]::SimpleBattery: 0 device 7 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 75 tm 59 m ""
+ME
+BS id 200 tid 200 eid 200 etid 200 c ExtendedMessage n Humidity pe 69
+CL id 200 tid 200 eid 200 etid 200 c ExtendedMessage n Humidity pe 69 cid 357
+SH sm 75 sg 3
+SH sm 61 sg 1
+ES t 0
+
+E # 70 t 0 m 92 ce 39 msg 205
+- Node3[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 92 tm 79 m ""
+ME
+BS id 205 tid 205 eid 205 etid 205 c ExtendedMessage n Temperature pe 70
+CL id 205 tid 205 eid 205 etid 205 c ExtendedMessage n Temperature pe 70 cid 358
+SH sm 92 sg 3
+SH sm 80 sg 1
+ES t 0
+
+E # 71 t 0 m 96 ce 40 msg 207
+- Node3[0]::SimpleBattery: 0 device 7 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 96 tm 79 m ""
+ME
+BS id 207 tid 207 eid 207 etid 207 c ExtendedMessage n Pressure pe 71
+CL id 207 tid 207 eid 207 etid 207 c ExtendedMessage n Pressure pe 71 cid 359
+SH sm 96 sg 3
+SH sm 81 sg 1
+ES t 0
+
+E # 72 t 0 m 100 ce 41 msg 209
+- Node3[0]::SimpleBattery: 0 device 11 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 100 tm 79 m ""
+ME
+BS id 209 tid 209 eid 209 etid 209 c ExtendedMessage n Light pe 72
+CL id 209 tid 209 eid 209 etid 209 c ExtendedMessage n Light pe 72 cid 360
+SH sm 100 sg 3
+SH sm 82 sg 1
+ES t 0
+
+E # 73 t 0 m 115 ce 42 msg 214
+- Node4[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 115 tm 104 m ""
+ME
+BS id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Humidity pe 73
+CL id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Humidity pe 73 cid 361
+SH sm 115 sg 3
+SH sm 105 sg 1
+ES t 0
+
+E # 74 t 0 m 133 ce 43 msg 219
+- Node5[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 133 tm 119 m ""
+ME
+BS id 219 tid 219 eid 219 etid 219 c ExtendedMessage n Temperature pe 74
+CL id 219 tid 219 eid 219 etid 219 c ExtendedMessage n Temperature pe 74 cid 362
+SH sm 133 sg 3
+SH sm 120 sg 1
+ES t 0
+
+E # 75 t 0 m 137 ce 44 msg 221
+- Node5[0]::SimpleBattery: 0 device 7 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 137 tm 119 m ""
+ME
+BS id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Humidity pe 75
+CL id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Humidity pe 75 cid 363
+SH sm 137 sg 3
+SH sm 121 sg 1
+ES t 0
+
+E # 76 t 0 m 141 ce 45 msg 223
+- Node5[0]::SimpleBattery: 0 device 11 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 141 tm 119 m ""
+ME
+BS id 223 tid 223 eid 223 etid 223 c ExtendedMessage n Pressure pe 76
+CL id 223 tid 223 eid 223 etid 223 c ExtendedMessage n Pressure pe 76 cid 364
+SH sm 141 sg 3
+SH sm 122 sg 1
+ES t 0
+
+E # 77 t 0 m 145 ce 46 msg 225
+- Node5[0]::SimpleBattery: 0 device 15 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 145 tm 119 m ""
+ME
+BS id 225 tid 225 eid 225 etid 225 c ExtendedMessage n Light pe 77
+CL id 225 tid 225 eid 225 etid 225 c ExtendedMessage n Light pe 77 cid 365
+SH sm 145 sg 3
+SH sm 123 sg 1
+ES t 0
+
+E # 78 t 0 m 160 ce 47 msg 231
+- Node6[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 160 tm 149 m ""
+ME
+BS id 231 tid 231 eid 231 etid 231 c ExtendedMessage n Light pe 78
+CL id 231 tid 231 eid 231 etid 231 c ExtendedMessage n Light pe 78 cid 366
+SH sm 160 sg 3
+SH sm 150 sg 1
+ES t 0
+
+E # 79 t 0 m 177 ce 48 msg 236
+- Node7[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 177 tm 164 m ""
+ME
+BS id 236 tid 236 eid 236 etid 236 c ExtendedMessage n Temperature pe 79
+CL id 236 tid 236 eid 236 etid 236 c ExtendedMessage n Temperature pe 79 cid 367
+SH sm 177 sg 3
+SH sm 165 sg 1
+ES t 0
+
+E # 80 t 0 m 181 ce 49 msg 238
+- Node7[0]::SimpleBattery: 0 device 7 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 181 tm 164 m ""
+ME
+BS id 238 tid 238 eid 238 etid 238 c ExtendedMessage n Humidity pe 80
+CL id 238 tid 238 eid 238 etid 238 c ExtendedMessage n Humidity pe 80 cid 368
+SH sm 181 sg 3
+SH sm 166 sg 1
+ES t 0
+
+E # 81 t 0 m 185 ce 50 msg 240
+- Node7[0]::SimpleBattery: 0 device 11 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 185 tm 164 m ""
+ME
+BS id 240 tid 240 eid 240 etid 240 c ExtendedMessage n Pressure pe 81
+CL id 240 tid 240 eid 240 etid 240 c ExtendedMessage n Pressure pe 81 cid 369
+SH sm 185 sg 3
+SH sm 167 sg 1
+ES t 0
+
+E # 82 t 0 m 200 ce 51 msg 245
+- Node8[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 200 tm 189 m ""
+ME
+BS id 245 tid 245 eid 245 etid 245 c ExtendedMessage n Light pe 82
+CL id 245 tid 245 eid 245 etid 245 c ExtendedMessage n Light pe 82 cid 370
+SH sm 200 sg 3
+SH sm 190 sg 1
+ES t 0
+
+E # 83 t 0 m 217 ce 52 msg 250
+- Node9[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 217 tm 204 m ""
+ME
+BS id 250 tid 250 eid 250 etid 250 c ExtendedMessage n Temperature pe 83
+CL id 250 tid 250 eid 250 etid 250 c ExtendedMessage n Temperature pe 83 cid 371
+SH sm 217 sg 3
+SH sm 205 sg 1
+ES t 0
+
+E # 84 t 0 m 221 ce 53 msg 252
+- Node9[0]::SimpleBattery: 0 device 7 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 221 tm 204 m ""
+ME
+BS id 252 tid 252 eid 252 etid 252 c ExtendedMessage n Humidity pe 84
+CL id 252 tid 252 eid 252 etid 252 c ExtendedMessage n Humidity pe 84 cid 372
+SH sm 221 sg 3
+SH sm 206 sg 1
+ES t 0
+
+E # 85 t 0 m 225 ce 54 msg 254
+- Node9[0]::SimpleBattery: 0 device 11 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 225 tm 204 m ""
+ME
+BS id 254 tid 254 eid 254 etid 254 c ExtendedMessage n Light pe 85
+CL id 254 tid 254 eid 254 etid 254 c ExtendedMessage n Light pe 85 cid 373
+SH sm 225 sg 3
+SH sm 207 sg 1
+ES t 0
+
+E # 86 t 0 m 240 ce 55 msg 259
+- Node10[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 240 tm 229 m ""
+ME
+BS id 259 tid 259 eid 259 etid 259 c ExtendedMessage n Light pe 86
+CL id 259 tid 259 eid 259 etid 259 c ExtendedMessage n Light pe 86 cid 374
+SH sm 240 sg 3
+SH sm 230 sg 1
+ES t 0
+
+E # 87 t 0 m 258 ce 56 msg 264
+- Node11[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 258 tm 244 m ""
+ME
+BS id 264 tid 264 eid 264 etid 264 c ExtendedMessage n Temperature pe 87
+CL id 264 tid 264 eid 264 etid 264 c ExtendedMessage n Temperature pe 87 cid 375
+SH sm 258 sg 3
+SH sm 245 sg 1
+ES t 0
+
+E # 88 t 0 m 262 ce 57 msg 266
+- Node11[0]::SimpleBattery: 0 device 7 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 262 tm 244 m ""
+ME
+BS id 266 tid 266 eid 266 etid 266 c ExtendedMessage n Humidity pe 88
+CL id 266 tid 266 eid 266 etid 266 c ExtendedMessage n Humidity pe 88 cid 376
+SH sm 262 sg 3
+SH sm 246 sg 1
+ES t 0
+
+E # 89 t 0 m 266 ce 58 msg 268
+- Node11[0]::SimpleBattery: 0 device 11 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 266 tm 244 m ""
+ME
+BS id 268 tid 268 eid 268 etid 268 c ExtendedMessage n Pressure pe 89
+CL id 268 tid 268 eid 268 etid 268 c ExtendedMessage n Pressure pe 89 cid 377
+SH sm 266 sg 3
+SH sm 247 sg 1
+ES t 0
+
+E # 90 t 0 m 270 ce 59 msg 270
+- Node11[0]::SimpleBattery: 0 device 15 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 270 tm 244 m ""
+ME
+BS id 270 tid 270 eid 270 etid 270 c ExtendedMessage n Light pe 90
+CL id 270 tid 270 eid 270 etid 270 c ExtendedMessage n Light pe 90 cid 378
+SH sm 270 sg 3
+SH sm 248 sg 1
+ES t 0
+
+E # 91 t 0 m 285 ce 60 msg 275
+- Node12[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 285 tm 274 m ""
+ME
+BS id 275 tid 275 eid 275 etid 275 c ExtendedMessage n Pressure pe 91
+CL id 275 tid 275 eid 275 etid 275 c ExtendedMessage n Pressure pe 91 cid 379
+SH sm 285 sg 3
+SH sm 275 sg 1
+ES t 0
+
+E # 92 t 0 m 302 ce 61 msg 280
+- Node13[0]::SimpleBattery: 0 device 3 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 302 tm 289 m ""
+ME
+BS id 280 tid 280 eid 280 etid 280 c ExtendedMessage n Temperature pe 92
+CL id 280 tid 280 eid 280 etid 280 c ExtendedMessage n Temperature pe 92 cid 380
+SH sm 302 sg 3
+SH sm 290 sg 1
+ES t 0
+
+E # 93 t 0 m 306 ce 62 msg 282
+- Node13[0]::SimpleBattery: 0 device 7 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 306 tm 289 m ""
+ME
+BS id 282 tid 282 eid 282 etid 282 c ExtendedMessage n Humidity pe 93
+CL id 282 tid 282 eid 282 etid 282 c ExtendedMessage n Humidity pe 93 cid 381
+SH sm 306 sg 3
+SH sm 291 sg 1
+ES t 0
+
+E # 94 t 0 m 310 ce 63 msg 284
+- Node13[0]::SimpleBattery: 0 device 11 (Transducer) deduct 1000 mW-s, activity = 0
+MB sm 310 tm 289 m ""
+ME
+BS id 284 tid 284 eid 284 etid 284 c ExtendedMessage n Light pe 94
+CL id 284 tid 284 eid 284 etid 284 c ExtendedMessage n Light pe 94 cid 382
+SH sm 310 sg 3
+SH sm 292 sg 1
+ES t 0
+
+E # 95 t 0 m 313 ce 64 msg 183
+BS id 183 tid 183 eid 183 etid 183 c ExtendedMessage n Temperature pe 95
+CL id 183 tid 183 eid 183 etid 183 c ExtendedMessage n Temperature pe 95 cid 383
+SH sm 313 sg 13
+ES t 0
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+
+E # 96 t 0 m 313 ce 65 msg 185
+BS id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Pressure pe 96
+CL id 185 tid 185 eid 185 etid 185 c ExtendedMessage n Pressure pe 96 cid 384
+SH sm 313 sg 13
+ES t 0
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+
+E # 97 t 0 m 313 ce 66 msg 187
+BS id 187 tid 187 eid 187 etid 187 c ExtendedMessage n Light pe 97
+CL id 187 tid 187 eid 187 etid 187 c ExtendedMessage n Light pe 97 cid 385
+SH sm 313 sg 13
+ES t 0
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+
+E # 98 t 0 m 314 ce 67 msg 192
+BS id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Light pe 98
+CL id 192 tid 192 eid 192 etid 192 c ExtendedMessage n Light pe 98 cid 386
+SH sm 314 sg 5
+ES t 0
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 0 device 5 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+
+E # 99 t 0 m 315 ce 68 msg 198
+BS id 198 tid 198 eid 198 etid 198 c ExtendedMessage n Temperature pe 99
+CL id 198 tid 198 eid 198 etid 198 c ExtendedMessage n Temperature pe 99 cid 387
+SH sm 315 sg 9
+ES t 0
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 0 device 9 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+
+E # 100 t 0 m 315 ce 69 msg 200
+BS id 200 tid 200 eid 200 etid 200 c ExtendedMessage n Humidity pe 100
+CL id 200 tid 200 eid 200 etid 200 c ExtendedMessage n Humidity pe 100 cid 388
+SH sm 315 sg 9
+ES t 0
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 0 device 9 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+
+E # 101 t 0 m 316 ce 70 msg 205
+BS id 205 tid 205 eid 205 etid 205 c ExtendedMessage n Temperature pe 101
+CL id 205 tid 205 eid 205 etid 205 c ExtendedMessage n Temperature pe 101 cid 389
+SH sm 316 sg 13
+ES t 0
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+
+E # 102 t 0 m 316 ce 71 msg 207
+BS id 207 tid 207 eid 207 etid 207 c ExtendedMessage n Pressure pe 102
+CL id 207 tid 207 eid 207 etid 207 c ExtendedMessage n Pressure pe 102 cid 390
+SH sm 316 sg 13
+ES t 0
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+
+E # 103 t 0 m 316 ce 72 msg 209
+BS id 209 tid 209 eid 209 etid 209 c ExtendedMessage n Light pe 103
+CL id 209 tid 209 eid 209 etid 209 c ExtendedMessage n Light pe 103 cid 391
+SH sm 316 sg 13
+ES t 0
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+
+E # 104 t 0 m 317 ce 73 msg 214
+BS id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Humidity pe 104
+CL id 214 tid 214 eid 214 etid 214 c ExtendedMessage n Humidity pe 104 cid 392
+SH sm 317 sg 5
+ES t 0
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 0 device 5 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+
+E # 105 t 0 m 318 ce 74 msg 219
+BS id 219 tid 219 eid 219 etid 219 c ExtendedMessage n Temperature pe 105
+CL id 219 tid 219 eid 219 etid 219 c ExtendedMessage n Temperature pe 105 cid 393
+SH sm 318 sg 17
+ES t 0
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 0 device 17 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+
+E # 106 t 0 m 318 ce 75 msg 221
+BS id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Humidity pe 106
+CL id 221 tid 221 eid 221 etid 221 c ExtendedMessage n Humidity pe 106 cid 394
+SH sm 318 sg 17
+ES t 0
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 0 device 17 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+
+E # 107 t 0 m 318 ce 76 msg 223
+BS id 223 tid 223 eid 223 etid 223 c ExtendedMessage n Pressure pe 107
+CL id 223 tid 223 eid 223 etid 223 c ExtendedMessage n Pressure pe 107 cid 395
+SH sm 318 sg 17
+ES t 0
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 0 device 17 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+
+E # 108 t 0 m 318 ce 77 msg 225
+BS id 225 tid 225 eid 225 etid 225 c ExtendedMessage n Light pe 108
+CL id 225 tid 225 eid 225 etid 225 c ExtendedMessage n Light pe 108 cid 396
+SH sm 318 sg 17
+ES t 0
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 0 device 17 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+
+E # 109 t 0 m 319 ce 78 msg 231
+BS id 231 tid 231 eid 231 etid 231 c ExtendedMessage n Light pe 109
+CL id 231 tid 231 eid 231 etid 231 c ExtendedMessage n Light pe 109 cid 397
+SH sm 319 sg 5
+ES t 0
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 0 device 5 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+
+E # 110 t 0 m 320 ce 79 msg 236
+BS id 236 tid 236 eid 236 etid 236 c ExtendedMessage n Temperature pe 110
+CL id 236 tid 236 eid 236 etid 236 c ExtendedMessage n Temperature pe 110 cid 398
+SH sm 320 sg 13
+ES t 0
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+
+E # 111 t 0 m 320 ce 80 msg 238
+BS id 238 tid 238 eid 238 etid 238 c ExtendedMessage n Humidity pe 111
+CL id 238 tid 238 eid 238 etid 238 c ExtendedMessage n Humidity pe 111 cid 399
+SH sm 320 sg 13
+ES t 0
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+
+E # 112 t 0 m 320 ce 81 msg 240
+BS id 240 tid 240 eid 240 etid 240 c ExtendedMessage n Pressure pe 112
+CL id 240 tid 240 eid 240 etid 240 c ExtendedMessage n Pressure pe 112 cid 400
+SH sm 320 sg 13
+ES t 0
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+
+E # 113 t 0 m 321 ce 82 msg 245
+BS id 245 tid 245 eid 245 etid 245 c ExtendedMessage n Light pe 113
+CL id 245 tid 245 eid 245 etid 245 c ExtendedMessage n Light pe 113 cid 401
+SH sm 321 sg 5
+ES t 0
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 0 device 5 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+
+E # 114 t 0 m 322 ce 83 msg 250
+BS id 250 tid 250 eid 250 etid 250 c ExtendedMessage n Temperature pe 114
+CL id 250 tid 250 eid 250 etid 250 c ExtendedMessage n Temperature pe 114 cid 402
+SH sm 322 sg 13
+ES t 0
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+
+E # 115 t 0 m 322 ce 84 msg 252
+BS id 252 tid 252 eid 252 etid 252 c ExtendedMessage n Humidity pe 115
+CL id 252 tid 252 eid 252 etid 252 c ExtendedMessage n Humidity pe 115 cid 403
+SH sm 322 sg 13
+ES t 0
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+
+E # 116 t 0 m 322 ce 85 msg 254
+BS id 254 tid 254 eid 254 etid 254 c ExtendedMessage n Light pe 116
+CL id 254 tid 254 eid 254 etid 254 c ExtendedMessage n Light pe 116 cid 404
+SH sm 322 sg 13
+ES t 0
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+
+E # 117 t 0 m 323 ce 86 msg 259
+BS id 259 tid 259 eid 259 etid 259 c ExtendedMessage n Light pe 117
+CL id 259 tid 259 eid 259 etid 259 c ExtendedMessage n Light pe 117 cid 405
+SH sm 323 sg 5
+ES t 0
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 0 device 5 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+
+E # 118 t 0 m 324 ce 87 msg 264
+BS id 264 tid 264 eid 264 etid 264 c ExtendedMessage n Temperature pe 118
+CL id 264 tid 264 eid 264 etid 264 c ExtendedMessage n Temperature pe 118 cid 406
+SH sm 324 sg 17
+ES t 0
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 0 device 17 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+
+E # 119 t 0 m 324 ce 88 msg 266
+BS id 266 tid 266 eid 266 etid 266 c ExtendedMessage n Humidity pe 119
+CL id 266 tid 266 eid 266 etid 266 c ExtendedMessage n Humidity pe 119 cid 407
+SH sm 324 sg 17
+ES t 0
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 0 device 17 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+
+E # 120 t 0 m 324 ce 89 msg 268
+BS id 268 tid 268 eid 268 etid 268 c ExtendedMessage n Pressure pe 120
+CL id 268 tid 268 eid 268 etid 268 c ExtendedMessage n Pressure pe 120 cid 408
+SH sm 324 sg 17
+ES t 0
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 0 device 17 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+
+E # 121 t 0 m 324 ce 90 msg 270
+BS id 270 tid 270 eid 270 etid 270 c ExtendedMessage n Light pe 121
+CL id 270 tid 270 eid 270 etid 270 c ExtendedMessage n Light pe 121 cid 409
+SH sm 324 sg 17
+ES t 0
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 0 device 17 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+
+E # 122 t 0 m 325 ce 91 msg 275
+BS id 275 tid 275 eid 275 etid 275 c ExtendedMessage n Pressure pe 122
+CL id 275 tid 275 eid 275 etid 275 c ExtendedMessage n Pressure pe 122 cid 410
+SH sm 325 sg 5
+ES t 0
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 0 device 5 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+
+E # 123 t 0 m 326 ce 92 msg 280
+BS id 280 tid 280 eid 280 etid 280 c ExtendedMessage n Temperature pe 123
+CL id 280 tid 280 eid 280 etid 280 c ExtendedMessage n Temperature pe 123 cid 411
+SH sm 326 sg 13
+ES t 0
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+
+E # 124 t 0 m 326 ce 93 msg 282
+BS id 282 tid 282 eid 282 etid 282 c ExtendedMessage n Humidity pe 124
+CL id 282 tid 282 eid 282 etid 282 c ExtendedMessage n Humidity pe 124 cid 412
+SH sm 326 sg 13
+ES t 0
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+
+E # 125 t 0 m 326 ce 94 msg 284
+BS id 284 tid 284 eid 284 etid 284 c ExtendedMessage n Light pe 125
+CL id 284 tid 284 eid 284 etid 284 c ExtendedMessage n Light pe 125 cid 413
+SH sm 326 sg 13
+ES t 0
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 0 device 13 (Processor) deduct 1500 mW-s, activity = 1
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+
+E # 126 t 0 m 23 ce 95 msg 183
+DM id 183 tid 183 eid 183 etid 183 c cMessage n Temperature pe 126
+- Node0[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 23 tm 19 m ""
+ME
+
+E # 127 t 0 m 23 ce 96 msg 185
+DM id 185 tid 185 eid 185 etid 185 c cMessage n Pressure pe 127
+- Node0[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 23 tm 19 m ""
+ME
+
+E # 128 t 0 m 23 ce 97 msg 187
+DM id 187 tid 187 eid 187 etid 187 c cMessage n Light pe 128
+- Node0[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 23 tm 19 m ""
+ME
+
+E # 129 t 0 m 46 ce 98 msg 192
+DM id 192 tid 192 eid 192 etid 192 c cMessage n Light pe 129
+- Node1[0]::SimpleBattery: 0 device 4 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 46 tm 44 m ""
+ME
+
+E # 130 t 0 m 62 ce 99 msg 198
+DM id 198 tid 198 eid 198 etid 198 c cMessage n Temperature pe 130
+- Node2[0]::SimpleBattery: 0 device 8 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 62 tm 59 m ""
+ME
+
+E # 131 t 0 m 62 ce 100 msg 200
+DM id 200 tid 200 eid 200 etid 200 c cMessage n Humidity pe 131
+- Node2[0]::SimpleBattery: 0 device 8 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 62 tm 59 m ""
+ME
+
+E # 132 t 0 m 83 ce 101 msg 205
+DM id 205 tid 205 eid 205 etid 205 c cMessage n Temperature pe 132
+- Node3[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 83 tm 79 m ""
+ME
+
+E # 133 t 0 m 83 ce 102 msg 207
+DM id 207 tid 207 eid 207 etid 207 c cMessage n Pressure pe 133
+- Node3[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 83 tm 79 m ""
+ME
+
+E # 134 t 0 m 83 ce 103 msg 209
+DM id 209 tid 209 eid 209 etid 209 c cMessage n Light pe 134
+- Node3[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 83 tm 79 m ""
+ME
+
+E # 135 t 0 m 106 ce 104 msg 214
+DM id 214 tid 214 eid 214 etid 214 c cMessage n Humidity pe 135
+- Node4[0]::SimpleBattery: 0 device 4 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 106 tm 104 m ""
+ME
+
+E # 136 t 0 m 124 ce 105 msg 219
+DM id 219 tid 219 eid 219 etid 219 c cMessage n Temperature pe 136
+- Node5[0]::SimpleBattery: 0 device 16 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 124 tm 119 m ""
+ME
+
+E # 137 t 0 m 124 ce 106 msg 221
+DM id 221 tid 221 eid 221 etid 221 c cMessage n Humidity pe 137
+- Node5[0]::SimpleBattery: 0 device 16 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 124 tm 119 m ""
+ME
+
+E # 138 t 0 m 124 ce 107 msg 223
+DM id 223 tid 223 eid 223 etid 223 c cMessage n Pressure pe 138
+- Node5[0]::SimpleBattery: 0 device 16 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 124 tm 119 m ""
+ME
+
+E # 139 t 0 m 124 ce 108 msg 225
+DM id 225 tid 225 eid 225 etid 225 c cMessage n Light pe 139
+- Node5[0]::SimpleBattery: 0 device 16 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 124 tm 119 m ""
+ME
+
+E # 140 t 0 m 151 ce 109 msg 231
+DM id 231 tid 231 eid 231 etid 231 c cMessage n Light pe 140
+- Node6[0]::SimpleBattery: 0 device 4 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 151 tm 149 m ""
+ME
+
+E # 141 t 0 m 168 ce 110 msg 236
+DM id 236 tid 236 eid 236 etid 236 c cMessage n Temperature pe 141
+- Node7[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 168 tm 164 m ""
+ME
+
+E # 142 t 0 m 168 ce 111 msg 238
+DM id 238 tid 238 eid 238 etid 238 c cMessage n Humidity pe 142
+- Node7[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 168 tm 164 m ""
+ME
+
+E # 143 t 0 m 168 ce 112 msg 240
+DM id 240 tid 240 eid 240 etid 240 c cMessage n Pressure pe 143
+- Node7[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 168 tm 164 m ""
+ME
+
+E # 144 t 0 m 191 ce 113 msg 245
+DM id 245 tid 245 eid 245 etid 245 c cMessage n Light pe 144
+- Node8[0]::SimpleBattery: 0 device 4 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 191 tm 189 m ""
+ME
+
+E # 145 t 0 m 208 ce 114 msg 250
+DM id 250 tid 250 eid 250 etid 250 c cMessage n Temperature pe 145
+- Node9[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 208 tm 204 m ""
+ME
+
+E # 146 t 0 m 208 ce 115 msg 252
+DM id 252 tid 252 eid 252 etid 252 c cMessage n Humidity pe 146
+- Node9[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 208 tm 204 m ""
+ME
+
+E # 147 t 0 m 208 ce 116 msg 254
+DM id 254 tid 254 eid 254 etid 254 c cMessage n Light pe 147
+- Node9[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 208 tm 204 m ""
+ME
+
+E # 148 t 0 m 231 ce 117 msg 259
+DM id 259 tid 259 eid 259 etid 259 c cMessage n Light pe 148
+- Node10[0]::SimpleBattery: 0 device 4 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 231 tm 229 m ""
+ME
+
+E # 149 t 0 m 249 ce 118 msg 264
+DM id 264 tid 264 eid 264 etid 264 c cMessage n Temperature pe 149
+- Node11[0]::SimpleBattery: 0 device 16 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 249 tm 244 m ""
+ME
+
+E # 150 t 0 m 249 ce 119 msg 266
+DM id 266 tid 266 eid 266 etid 266 c cMessage n Humidity pe 150
+- Node11[0]::SimpleBattery: 0 device 16 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 249 tm 244 m ""
+ME
+
+E # 151 t 0 m 249 ce 120 msg 268
+DM id 268 tid 268 eid 268 etid 268 c cMessage n Pressure pe 151
+- Node11[0]::SimpleBattery: 0 device 16 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 249 tm 244 m ""
+ME
+
+E # 152 t 0 m 249 ce 121 msg 270
+DM id 270 tid 270 eid 270 etid 270 c cMessage n Light pe 152
+- Node11[0]::SimpleBattery: 0 device 16 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 249 tm 244 m ""
+ME
+
+E # 153 t 0 m 276 ce 122 msg 275
+DM id 275 tid 275 eid 275 etid 275 c cMessage n Pressure pe 153
+- Node12[0]::SimpleBattery: 0 device 4 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 276 tm 274 m ""
+ME
+
+E # 154 t 0 m 293 ce 123 msg 280
+DM id 280 tid 280 eid 280 etid 280 c cMessage n Temperature pe 154
+- Node13[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 293 tm 289 m ""
+ME
+
+E # 155 t 0 m 293 ce 124 msg 282
+DM id 282 tid 282 eid 282 etid 282 c cMessage n Humidity pe 155
+- Node13[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 293 tm 289 m ""
+ME
+
+E # 156 t 0 m 293 ce 125 msg 284
+DM id 284 tid 284 eid 284 etid 284 c cMessage n Light pe 156
+- Node13[0]::SimpleBattery: 0 device 12 (Memory) deduct 1000 mW-s, activity = 0
+MB sm 293 tm 289 m ""
+ME
+
+E # 157 t 1 m 313 ce 0 msg 190
+- Node0[0]::SimpleBattery: 1 device 13 (Processor) draw current 10mA, activity = 1
+MB sm 313 tm 19 m ""
+- Node0[0]::SimpleBattery: 1 residual capacity = 1.07757e+07 fill state is 99.7753%
+ME
+MS id 4 d "i2=status/red;b=,,,white;t=mode: high performance;p=408,218;bgb=447,450;i=block/ifcard"
+- Node0[0]::SimpleBattery: 1 device 12 (Memory) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+BS id 190 tid 190 eid 190 etid 190 c cMessage n shiftMode pe 157
+ES t 2
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 1 device 13 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+
+E # 158 t 1 m 314 ce 0 msg 196
+- Node1[0]::SimpleBattery: 1 device 5 (Processor) draw current 10mA, activity = 1
+MB sm 314 tm 44 m ""
+- Node1[0]::SimpleBattery: 1 residual capacity = 1.07914e+07 fill state is 99.9208%
+ME
+MS id 5 d "i2=status/red;b=,,,white;t=mode: high performance;p=311,154;bgb=447,450;i=block/ifcard"
+- Node1[0]::SimpleBattery: 1 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 314 tm 44 m ""
+ME
+BS id 196 tid 196 eid 196 etid 196 c cMessage n shiftMode pe 158
+ES t 2
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 1 device 5 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+
+E # 159 t 1 m 315 ce 0 msg 203
+- Node2[0]::SimpleBattery: 1 device 9 (Processor) draw current 10mA, activity = 1
+MB sm 315 tm 59 m ""
+- Node2[0]::SimpleBattery: 1 residual capacity = 1.07836e+07 fill state is 99.8481%
+ME
+MS id 6 d "i2=status/red;b=,,,white;t=mode: high performance;p=303,64;bgb=447,450;i=block/ifcard"
+- Node2[0]::SimpleBattery: 1 device 8 (Memory) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 1 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 1 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 1 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 1 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+BS id 203 tid 203 eid 203 etid 203 c cMessage n shiftMode pe 159
+ES t 2
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 1 device 9 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+
+E # 160 t 1 m 316 ce 0 msg 212
+- Node3[0]::SimpleBattery: 1 device 13 (Processor) draw current 10mA, activity = 1
+MB sm 316 tm 79 m ""
+- Node3[0]::SimpleBattery: 1 residual capacity = 1.07757e+07 fill state is 99.7753%
+ME
+MS id 7 d "i2=status/red;b=,,,white;t=mode: high performance;p=193,142;bgb=447,450;i=block/ifcard"
+- Node3[0]::SimpleBattery: 1 device 12 (Memory) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+BS id 212 tid 212 eid 212 etid 212 c cMessage n shiftMode pe 160
+ES t 2
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 1 device 13 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+
+E # 161 t 1 m 317 ce 0 msg 217
+- Node4[0]::SimpleBattery: 1 device 5 (Processor) draw current 10mA, activity = 1
+MB sm 317 tm 104 m ""
+- Node4[0]::SimpleBattery: 1 residual capacity = 1.07914e+07 fill state is 99.9208%
+ME
+MS id 8 d "i2=status/red;b=,,,white;t=mode: high performance;p=241,77;bgb=447,450;i=block/ifcard"
+- Node4[0]::SimpleBattery: 1 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 317 tm 104 m ""
+ME
+BS id 217 tid 217 eid 217 etid 217 c cMessage n shiftMode pe 161
+ES t 2
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 1 device 5 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+
+E # 162 t 1 m 318 ce 0 msg 229
+- Node5[0]::SimpleBattery: 1 device 17 (Processor) draw current 10mA, activity = 1
+MB sm 318 tm 119 m ""
+- Node5[0]::SimpleBattery: 1 residual capacity = 1.07679e+07 fill state is 99.7025%
+ME
+MS id 9 d "i2=status/red;b=,,,white;t=mode: high performance;p=342,296;bgb=447,450;i=block/ifcard"
+- Node5[0]::SimpleBattery: 1 device 16 (Memory) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 12 (SensingUnit) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 13 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 14 (SignalConverter) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 15 (Transducer) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+BS id 229 tid 229 eid 229 etid 229 c cMessage n shiftMode pe 162
+ES t 2
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 1 device 17 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+
+E # 163 t 1 m 319 ce 0 msg 234
+- Node6[0]::SimpleBattery: 1 device 5 (Processor) draw current 10mA, activity = 1
+MB sm 319 tm 149 m ""
+- Node6[0]::SimpleBattery: 1 residual capacity = 1.07914e+07 fill state is 99.9208%
+ME
+MS id 10 d "i2=status/red;b=,,,white;t=mode: high performance;p=342,381;bgb=447,450;i=block/ifcard"
+- Node6[0]::SimpleBattery: 1 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 319 tm 149 m ""
+ME
+BS id 234 tid 234 eid 234 etid 234 c cMessage n shiftMode pe 163
+ES t 2
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 1 device 5 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+
+E # 164 t 1 m 320 ce 0 msg 243
+- Node7[0]::SimpleBattery: 1 device 13 (Processor) draw current 10mA, activity = 1
+MB sm 320 tm 164 m ""
+- Node7[0]::SimpleBattery: 1 residual capacity = 1.07757e+07 fill state is 99.7753%
+ME
+MS id 11 d "i2=status/red;b=,,,white;t=mode: high performance;p=232,277;bgb=447,450;i=block/ifcard"
+- Node7[0]::SimpleBattery: 1 device 12 (Memory) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+BS id 243 tid 243 eid 243 etid 243 c cMessage n shiftMode pe 164
+ES t 2
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 1 device 13 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+
+E # 165 t 1 m 321 ce 0 msg 248
+- Node8[0]::SimpleBattery: 1 device 5 (Processor) draw current 10mA, activity = 1
+MB sm 321 tm 189 m ""
+- Node8[0]::SimpleBattery: 1 residual capacity = 1.07914e+07 fill state is 99.9208%
+ME
+MS id 12 d "i2=status/red;b=,,,white;t=mode: high performance;p=241,373;bgb=447,450;i=block/ifcard"
+- Node8[0]::SimpleBattery: 1 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 321 tm 189 m ""
+ME
+BS id 248 tid 248 eid 248 etid 248 c cMessage n shiftMode pe 165
+ES t 2
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 1 device 5 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+
+E # 166 t 1 m 322 ce 0 msg 257
+- Node9[0]::SimpleBattery: 1 device 13 (Processor) draw current 10mA, activity = 1
+MB sm 322 tm 204 m ""
+- Node9[0]::SimpleBattery: 1 residual capacity = 1.07757e+07 fill state is 99.7753%
+ME
+MS id 13 d "i2=status/red;b=,,,white;t=mode: high performance;p=558,103;bgb=447,450;i=block/ifcard"
+- Node9[0]::SimpleBattery: 1 device 12 (Memory) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+BS id 257 tid 257 eid 257 etid 257 c cMessage n shiftMode pe 166
+ES t 2
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 1 device 13 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+
+E # 167 t 1 m 323 ce 0 msg 262
+- Node10[0]::SimpleBattery: 1 device 5 (Processor) draw current 10mA, activity = 1
+MB sm 323 tm 229 m ""
+- Node10[0]::SimpleBattery: 1 residual capacity = 1.07914e+07 fill state is 99.9208%
+ME
+MS id 14 d "i2=status/red;b=,,,white;t=mode: high performance;p=619,172;bgb=447,450;i=block/ifcard"
+- Node10[0]::SimpleBattery: 1 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 323 tm 229 m ""
+ME
+BS id 262 tid 262 eid 262 etid 262 c cMessage n shiftMode pe 167
+ES t 2
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 1 device 5 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+
+E # 168 t 1 m 324 ce 0 msg 273
+- Node11[0]::SimpleBattery: 1 device 17 (Processor) draw current 10mA, activity = 1
+MB sm 324 tm 244 m ""
+- Node11[0]::SimpleBattery: 1 residual capacity = 1.07679e+07 fill state is 99.7025%
+ME
+MS id 15 d "i2=status/red;b=,,,white;t=mode: high performance;p=619,257;bgb=447,450;i=block/ifcard"
+- Node11[0]::SimpleBattery: 1 device 16 (Memory) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 12 (SensingUnit) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 13 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 14 (SignalConverter) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 15 (Transducer) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+BS id 273 tid 273 eid 273 etid 273 c cMessage n shiftMode pe 168
+ES t 2
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 1 device 17 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+
+E # 169 t 1 m 325 ce 0 msg 278
+- Node12[0]::SimpleBattery: 1 device 5 (Processor) draw current 10mA, activity = 1
+MB sm 325 tm 274 m ""
+- Node12[0]::SimpleBattery: 1 residual capacity = 1.07914e+07 fill state is 99.9208%
+ME
+MS id 16 d "i2=status/red;b=,,,white;t=mode: high performance;p=558,326;bgb=447,450;i=block/ifcard"
+- Node12[0]::SimpleBattery: 1 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 325 tm 274 m ""
+ME
+BS id 278 tid 278 eid 278 etid 278 c cMessage n shiftMode pe 169
+ES t 2
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 1 device 5 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+
+E # 170 t 1 m 326 ce 0 msg 288
+- Node13[0]::SimpleBattery: 1 device 13 (Processor) draw current 10mA, activity = 1
+MB sm 326 tm 289 m ""
+- Node13[0]::SimpleBattery: 1 residual capacity = 1.07757e+07 fill state is 99.7753%
+ME
+MS id 17 d "i2=status/red;b=,,,white;t=mode: high performance;p=519,218;bgb=447,450;i=block/ifcard"
+- Node13[0]::SimpleBattery: 1 device 12 (Memory) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+BS id 288 tid 288 eid 288 etid 288 c cMessage n shiftMode pe 170
+ES t 2
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 1 device 13 (Processor) deduct 2500 mW-s, activity = 2
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+
+E # 171 t 2 m 313 ce 157 msg 190
+- Node0[0]::SimpleBattery: 2 device 13 (Processor) draw current 1000mA, activity = 2
+MB sm 313 tm 19 m ""
+- Node0[0]::SimpleBattery: 2 residual capacity = 1.0772e+07 fill state is 99.741%
+ME
+MS id 4 d "i2=status/red;b=,,,white;t=mode: normal;p=408,218;bgb=447,450;i=block/ifcard"
+- Node0[0]::SimpleBattery: 2 device 12 (Memory) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 313 tm 19 m ""
+ME
+BS id 190 tid 190 eid 190 etid 190 c cMessage n shiftMode pe 171
+ES t 500002
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+- Node0[0]::SimpleBattery: 2 device 13 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+MB sm 313 tm 19 m ""
+ME
+
+E # 172 t 2 m 314 ce 158 msg 196
+- Node1[0]::SimpleBattery: 2 device 5 (Processor) draw current 1000mA, activity = 2
+MB sm 314 tm 44 m ""
+- Node1[0]::SimpleBattery: 2 residual capacity = 1.07885e+07 fill state is 99.8932%
+ME
+MS id 5 d "i2=status/red;b=,,,white;t=mode: normal;p=311,154;bgb=447,450;i=block/ifcard"
+- Node1[0]::SimpleBattery: 2 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 314 tm 44 m ""
+ME
+BS id 196 tid 196 eid 196 etid 196 c cMessage n shiftMode pe 172
+ES t 500002
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+- Node1[0]::SimpleBattery: 2 device 5 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+MB sm 314 tm 44 m ""
+ME
+
+E # 173 t 2 m 315 ce 159 msg 203
+- Node2[0]::SimpleBattery: 2 device 9 (Processor) draw current 1000mA, activity = 2
+MB sm 315 tm 59 m ""
+- Node2[0]::SimpleBattery: 2 residual capacity = 1.07802e+07 fill state is 99.8171%
+ME
+MS id 6 d "i2=status/red;b=,,,white;t=mode: normal;p=303,64;bgb=447,450;i=block/ifcard"
+- Node2[0]::SimpleBattery: 2 device 8 (Memory) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 2 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 2 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 2 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 2 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 315 tm 59 m ""
+ME
+BS id 203 tid 203 eid 203 etid 203 c cMessage n shiftMode pe 173
+ES t 500002
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+- Node2[0]::SimpleBattery: 2 device 9 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+MB sm 315 tm 59 m ""
+ME
+
+E # 174 t 2 m 316 ce 160 msg 212
+- Node3[0]::SimpleBattery: 2 device 13 (Processor) draw current 1000mA, activity = 2
+MB sm 316 tm 79 m ""
+- Node3[0]::SimpleBattery: 2 residual capacity = 1.0772e+07 fill state is 99.741%
+ME
+MS id 7 d "i2=status/red;b=,,,white;t=mode: normal;p=193,142;bgb=447,450;i=block/ifcard"
+- Node3[0]::SimpleBattery: 2 device 12 (Memory) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 316 tm 79 m ""
+ME
+BS id 212 tid 212 eid 212 etid 212 c cMessage n shiftMode pe 174
+ES t 500002
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+- Node3[0]::SimpleBattery: 2 device 13 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+MB sm 316 tm 79 m ""
+ME
+
+E # 175 t 2 m 317 ce 161 msg 217
+- Node4[0]::SimpleBattery: 2 device 5 (Processor) draw current 1000mA, activity = 2
+MB sm 317 tm 104 m ""
+- Node4[0]::SimpleBattery: 2 residual capacity = 1.07885e+07 fill state is 99.8932%
+ME
+MS id 8 d "i2=status/red;b=,,,white;t=mode: normal;p=241,77;bgb=447,450;i=block/ifcard"
+- Node4[0]::SimpleBattery: 2 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 317 tm 104 m ""
+ME
+BS id 217 tid 217 eid 217 etid 217 c cMessage n shiftMode pe 175
+ES t 500002
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+- Node4[0]::SimpleBattery: 2 device 5 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+MB sm 317 tm 104 m ""
+ME
+
+E # 176 t 2 m 318 ce 162 msg 229
+- Node5[0]::SimpleBattery: 2 device 17 (Processor) draw current 1000mA, activity = 2
+MB sm 318 tm 119 m ""
+- Node5[0]::SimpleBattery: 2 residual capacity = 1.07638e+07 fill state is 99.6649%
+ME
+MS id 9 d "i2=status/red;b=,,,white;t=mode: normal;p=342,296;bgb=447,450;i=block/ifcard"
+- Node5[0]::SimpleBattery: 2 device 16 (Memory) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 12 (SensingUnit) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 13 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 14 (SignalConverter) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 15 (Transducer) draw current 30mA, activity = 0
+MB sm 318 tm 119 m ""
+ME
+BS id 229 tid 229 eid 229 etid 229 c cMessage n shiftMode pe 176
+ES t 500002
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+- Node5[0]::SimpleBattery: 2 device 17 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+MB sm 318 tm 119 m ""
+ME
+
+E # 177 t 2 m 319 ce 163 msg 234
+- Node6[0]::SimpleBattery: 2 device 5 (Processor) draw current 1000mA, activity = 2
+MB sm 319 tm 149 m ""
+- Node6[0]::SimpleBattery: 2 residual capacity = 1.07885e+07 fill state is 99.8932%
+ME
+MS id 10 d "i2=status/red;b=,,,white;t=mode: normal;p=342,381;bgb=447,450;i=block/ifcard"
+- Node6[0]::SimpleBattery: 2 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 319 tm 149 m ""
+ME
+BS id 234 tid 234 eid 234 etid 234 c cMessage n shiftMode pe 177
+ES t 500002
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+- Node6[0]::SimpleBattery: 2 device 5 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+MB sm 319 tm 149 m ""
+ME
+
+E # 178 t 2 m 320 ce 164 msg 243
+- Node7[0]::SimpleBattery: 2 device 13 (Processor) draw current 1000mA, activity = 2
+MB sm 320 tm 164 m ""
+- Node7[0]::SimpleBattery: 2 residual capacity = 1.0772e+07 fill state is 99.741%
+ME
+MS id 11 d "i2=status/red;b=,,,white;t=mode: normal;p=232,277;bgb=447,450;i=block/ifcard"
+- Node7[0]::SimpleBattery: 2 device 12 (Memory) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 320 tm 164 m ""
+ME
+BS id 243 tid 243 eid 243 etid 243 c cMessage n shiftMode pe 178
+ES t 500002
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+- Node7[0]::SimpleBattery: 2 device 13 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+MB sm 320 tm 164 m ""
+ME
+
+E # 179 t 2 m 321 ce 165 msg 248
+- Node8[0]::SimpleBattery: 2 device 5 (Processor) draw current 1000mA, activity = 2
+MB sm 321 tm 189 m ""
+- Node8[0]::SimpleBattery: 2 residual capacity = 1.07885e+07 fill state is 99.8932%
+ME
+MS id 12 d "i2=status/red;b=,,,white;t=mode: normal;p=241,373;bgb=447,450;i=block/ifcard"
+- Node8[0]::SimpleBattery: 2 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 321 tm 189 m ""
+ME
+BS id 248 tid 248 eid 248 etid 248 c cMessage n shiftMode pe 179
+ES t 500002
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+- Node8[0]::SimpleBattery: 2 device 5 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+MB sm 321 tm 189 m ""
+ME
+
+E # 180 t 2 m 322 ce 166 msg 257
+- Node9[0]::SimpleBattery: 2 device 13 (Processor) draw current 1000mA, activity = 2
+MB sm 322 tm 204 m ""
+- Node9[0]::SimpleBattery: 2 residual capacity = 1.0772e+07 fill state is 99.741%
+ME
+MS id 13 d "i2=status/red;b=,,,white;t=mode: normal;p=558,103;bgb=447,450;i=block/ifcard"
+- Node9[0]::SimpleBattery: 2 device 12 (Memory) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 322 tm 204 m ""
+ME
+BS id 257 tid 257 eid 257 etid 257 c cMessage n shiftMode pe 180
+ES t 500002
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+- Node9[0]::SimpleBattery: 2 device 13 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+MB sm 322 tm 204 m ""
+ME
+
+E # 181 t 2 m 323 ce 167 msg 262
+- Node10[0]::SimpleBattery: 2 device 5 (Processor) draw current 1000mA, activity = 2
+MB sm 323 tm 229 m ""
+- Node10[0]::SimpleBattery: 2 residual capacity = 1.07885e+07 fill state is 99.8932%
+ME
+MS id 14 d "i2=status/red;b=,,,white;t=mode: normal;p=619,172;bgb=447,450;i=block/ifcard"
+- Node10[0]::SimpleBattery: 2 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 323 tm 229 m ""
+ME
+BS id 262 tid 262 eid 262 etid 262 c cMessage n shiftMode pe 181
+ES t 500002
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+- Node10[0]::SimpleBattery: 2 device 5 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+MB sm 323 tm 229 m ""
+ME
+
+E # 182 t 2 m 324 ce 168 msg 273
+- Node11[0]::SimpleBattery: 2 device 17 (Processor) draw current 1000mA, activity = 2
+MB sm 324 tm 244 m ""
+- Node11[0]::SimpleBattery: 2 residual capacity = 1.07638e+07 fill state is 99.6649%
+ME
+MS id 15 d "i2=status/red;b=,,,white;t=mode: normal;p=619,257;bgb=447,450;i=block/ifcard"
+- Node11[0]::SimpleBattery: 2 device 16 (Memory) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 12 (SensingUnit) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 13 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 14 (SignalConverter) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 15 (Transducer) draw current 30mA, activity = 0
+MB sm 324 tm 244 m ""
+ME
+BS id 273 tid 273 eid 273 etid 273 c cMessage n shiftMode pe 182
+ES t 500002
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+- Node11[0]::SimpleBattery: 2 device 17 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+MB sm 324 tm 244 m ""
+ME
+
+E # 183 t 2 m 325 ce 169 msg 278
+- Node12[0]::SimpleBattery: 2 device 5 (Processor) draw current 1000mA, activity = 2
+MB sm 325 tm 274 m ""
+- Node12[0]::SimpleBattery: 2 residual capacity = 1.07885e+07 fill state is 99.8932%
+ME
+MS id 16 d "i2=status/red;b=,,,white;t=mode: normal;p=558,326;bgb=447,450;i=block/ifcard"
+- Node12[0]::SimpleBattery: 2 device 4 (Memory) draw current 30mA, activity = 0
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 325 tm 274 m ""
+ME
+BS id 278 tid 278 eid 278 etid 278 c cMessage n shiftMode pe 183
+ES t 500002
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+- Node12[0]::SimpleBattery: 2 device 5 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+MB sm 325 tm 274 m ""
+ME
+
+E # 184 t 2 m 326 ce 170 msg 288
+- Node13[0]::SimpleBattery: 2 device 13 (Processor) draw current 1000mA, activity = 2
+MB sm 326 tm 289 m ""
+- Node13[0]::SimpleBattery: 2 residual capacity = 1.0772e+07 fill state is 99.741%
+ME
+MS id 17 d "i2=status/red;b=,,,white;t=mode: normal;p=519,218;bgb=447,450;i=block/ifcard"
+- Node13[0]::SimpleBattery: 2 device 12 (Memory) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 0 (SensingUnit) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 1 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 2 (SignalConverter) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 3 (Transducer) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 4 (SensingUnit) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 5 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 6 (SignalConverter) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 7 (Transducer) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 8 (SensingUnit) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 9 (SignalConditioner) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 10 (SignalConverter) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 11 (Transducer) draw current 30mA, activity = 0
+MB sm 326 tm 289 m ""
+ME
+BS id 288 tid 288 eid 288 etid 288 c cMessage n shiftMode pe 184
+ES t 500002
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+- Node13[0]::SimpleBattery: 2 device 13 (Processor) deduct 2000 mW-s, activity = 0
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+MB sm 326 tm 289 m ""
+ME
+
+E # 185 t 5.000105907606 m 28 ce 0 msg 13
+- ----------> Leaving Sleep Mode
+BS id 12 tid 12 eid 12 etid 12 c cMessage n clusterApplicationSleepTimer pe 0
+ES t 6.000803538801
+MB sm 28 tm 42 m ""
+ME
+MB sm 28 tm 42 m ""
+BS id 8 tid 8 eid 8 etid 8 c cMessage n "radio switching over" k 22001 pe 0
+ES t 5.001897907606
+- Node0[0]::SimpleBattery: 5.000105907606 device 14 (physical layer) draw current 0.6391mA, activity = 3
+MB sm 42 tm 19 m ""
+- Node0[0]::SimpleBattery: 5.000105907606 residual capacity = 1.07575e+07 fill state is 99.6066%
+ME
+ME
+MS id 4 d "i2=status/red;b=,,,yellow;t=mode: normal;p=408,218;bgb=447,450;i=block/ifcard"
+CE id 12 tid 12 eid 12 etid 12 c cMessage n clusterApplicationSleepTimer pe 185
+BS id 12 tid 12 eid 12 etid 12 c cMessage n clusterApplicationSleepTimer pe 185
+ES t 6.000205187957
+MS id 4 d "i2=status/green;b=,,,yellow;t=mode: normal;p=408,218;bgb=447,450;i=block/ifcard"
+CM id 414 tid 414 eid 414 etid 414 c cMessage n "" pe -1
+BS id 414 tid 414 eid 414 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 185
+CL id 414 tid 414 eid 414 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 185 cid 415
+SH sm 28 sg 3
+ES t 5.000105907606
+BS id 13 tid 13 eid 13 etid 13 c cMessage n app-delay-timer pe 185
+ES t 5.050166133072
+
+E # 186 t 5.000105907606 m 27 ce 185 msg 414
+- Wiseroute received Message: WakeUpReceiverPacket
+CM id 416 tid 416 eid 416 etid 416 c cMessage n WakeUpReceiverPacket k 1 pe -1
+- WiseRoute: CInfo removed, netw addr=-1
+BS id 416 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 186
+CL id 416 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 186 cid 417
+SH sm 27 sg 11
+SH sm 26 sg 0
+ES t 5.000105907606
+
+E # 187 t 5.000105907606 m 41 ce 186 msg 416
+CM id 418 tid 418 eid 418 etid 418 c cMessage n WakeUpReceiverPacket pe -1
+- Node0[0]::CSMA802154HostStateHandled: CSMA received a message from upper layer, name is WakeUpReceiverPacket, CInfo removed, mac addr=FF-FF-FF-FF-FF-FF
+- Node0[0]::CSMA802154HostStateHandled: pkt encapsulated, length: 152
+- Node0[0]::CSMA802154HostStateHandled: In executeMac
+- Node0[0]::CSMA802154HostStateHandled: (1) FSM State IDLE_1, EV_SEND_REQUEST and [TxBuff avail]: startTimerBackOff -> BACKOFF.
+- Node0[0]::CSMA802154HostStateHandled: (startTimer) backoffTimer value=0 (BE=0, 2^BE-1= 0r=0)
+BS id 4 tid 4 eid 4 etid 4 c cMessage n timer-backoff pe 0
+ES t 5.000105907606
+
+E # 188 t 5.000105907606 m 41 ce 187 msg 4
+- Node0[0]::CSMA802154HostStateHandled: timer routine.
+- Node0[0]::CSMA802154HostStateHandled: In executeMac
+- Node0[0]::CSMA802154HostStateHandled: (2) FSM State BACKOFF, EV_TIMER_BACKOFF: starting CCA timer.
+- Node0[0]::CSMA802154HostStateHandled: (startTimer) ccaTimer value=0.002292(rxSetupTime,ccaDetectionTime:0.001792,0.0005).
+BS id 5 tid 5 eid 5 etid 5 c cMessage n timer-cca pe 0
+ES t 5.002397907606
+MB sm 41 tm 42 m ""
+ME
+
+E # 189 t 5.000135218173 m 129 ce 0 msg 78
+MB sm 129 tm 119 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 9 d "i2=status/red;b=,,,white;t= 99.65 % ;p=342,296;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 78 tid 78 eid 78 etid 78 c cMessage n app-delay-timer pe 189
+ES t 10.000801984884
+
+E # 190 t 5.000149674863 m 173 ce 0 msg 104
+MB sm 173 tm 164 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 11 d "i2=status/red;b=,,,white;t= 99.72 % ;p=232,277;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 104 tid 104 eid 104 etid 104 c cMessage n app-delay-timer pe 190
+ES t 10.000802814895
+
+E # 191 t 5.000186332344 m 67 ce 0 msg 39
+MB sm 67 tm 59 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 6 d "i2=status/red;b=,,,white;t= 99.80 % ;p=303,64;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 39 tid 39 eid 39 etid 39 c cMessage n app-delay-timer pe 191
+ES t 10.000856970217
+
+E # 192 t 5.000216550356 m 111 ce 0 msg 65
+MB sm 111 tm 104 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 8 d "i2=status/red;b=,,,white;t= 99.87 % ;p=241,77;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 65 tid 65 eid 65 etid 65 c cMessage n app-delay-timer pe 192
+ES t 10.000387459942
+
+E # 193 t 5.000222321385 m 196 ce 0 msg 117
+MB sm 196 tm 189 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 12 d "i2=status/red;b=,,,white;t= 99.87 % ;p=241,373;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 117 tid 117 eid 117 etid 117 c cMessage n app-delay-timer pe 193
+ES t 10.000432703946
+
+E # 194 t 5.000324141004 m 156 ce 0 msg 91
+MB sm 156 tm 149 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 10 d "i2=status/red;b=,,,white;t= 99.87 % ;p=342,381;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 91 tid 91 eid 91 etid 91 c cMessage n app-delay-timer pe 194
+ES t 10.000682293174
+
+E # 195 t 5.000386488978 m 213 ce 0 msg 130
+MB sm 213 tm 204 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 13 d "i2=status/red;b=,,,white;t= 99.72 % ;p=558,103;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 130 tid 130 eid 130 etid 130 c cMessage n app-delay-timer pe 195
+ES t 10.000515415276
+
+E # 196 t 5.000449949989 m 254 ce 0 msg 156
+MB sm 254 tm 244 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 15 d "i2=status/red;b=,,,white;t= 99.65 % ;p=619,257;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 156 tid 156 eid 156 etid 156 c cMessage n app-delay-timer pe 196
+ES t 10.001200636127
+
+E # 197 t 5.000473600422 m 51 ce 0 msg 26
+MB sm 51 tm 44 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 5 d "i2=status/red;b=,,,white;t= 99.87 % ;p=311,154;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 26 tid 26 eid 26 etid 26 c cMessage n app-delay-timer pe 197
+ES t 10.000789028771
+
+E # 198 t 5.000613063461 m 281 ce 0 msg 169
+MB sm 281 tm 274 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 16 d "i2=status/red;b=,,,white;t= 99.87 % ;p=558,326;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 169 tid 169 eid 169 etid 169 c cMessage n app-delay-timer pe 198
+ES t 10.001220894127
+
+E # 199 t 5.000736918177 m 88 ce 0 msg 52
+MB sm 88 tm 79 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 7 d "i2=status/red;b=,,,white;t= 99.72 % ;p=193,142;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 52 tid 52 eid 52 etid 52 c cMessage n app-delay-timer pe 199
+ES t 10.00110062895
+
+E # 200 t 5.000902348578 m 298 ce 0 msg 182
+MB sm 298 tm 289 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 17 d "i2=status/red;b=,,,white;t= 99.72 % ;p=519,218;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 182 tid 182 eid 182 etid 182 c cMessage n app-delay-timer pe 200
+ES t 10.001227395805
+
+E # 201 t 5.000902598471 m 236 ce 0 msg 143
+MB sm 236 tm 229 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 14 d "i2=status/red;b=,,,white;t= 99.87 % ;p=619,172;bgb=447,450;i=block/ifcard"
+-   processing application timer.
+BS id 143 tid 143 eid 143 etid 143 c cMessage n app-delay-timer pe 201
+ES t 10.001472795246
+
+E # 202 t 5.001897907606 m 42 ce 185 msg 8
+CM id 419 tid 419 eid 419 etid 419 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 419 tid 419 eid 419 etid 419 c cMessage n "Radio switching over" k 22001 pe 202
+CL id 419 tid 419 eid 419 etid 419 c cMessage n "Radio switching over" k 22001 pe 202 cid 420
+SH sm 42 sg 7
+ES t 5.001897907606
+- Node0[0]::SimpleBattery: 5.001897907606 device 14 (physical layer) draw current 18.8mA, activity = 1
+MB sm 42 tm 19 m ""
+- Node0[0]::SimpleBattery: 5.001897907606 residual capacity = 1.07575e+07 fill state is 99.6066%
+ME
+
+E # 203 t 5.001897907606 m 41 ce 202 msg 419
+- Node0[0]::CSMA802154HostStateHandled: control message: RADIO_SWITCHING_OVER
+DM id 419 tid 419 eid 419 etid 419 c cMessage n "Radio switching over" k 22001 pe 203
+
+E # 204 t 5.002397907606 m 41 ce 188 msg 5
+- Node0[0]::CSMA802154HostStateHandled: timer routine.
+- Node0[0]::CSMA802154HostStateHandled: In executeMac
+- Node0[0]::CSMA802154HostStateHandled: (25) FSM State CCA_3, EV_TIMER_CCA
+MB sm 41 tm 42 m ""
+ME
+- Node0[0]::CSMA802154HostStateHandled: (3) FSM State CCA_3, EV_TIMER_CCA, [Channel Idle]: -> TRANSMITFRAME_4.
+MB sm 41 tm 42 m ""
+BS id 8 tid 8 eid 8 etid 8 c cMessage n "radio switching over" k 22001 pe 202
+ES t 5.002589907606
+- Node0[0]::SimpleBattery: 5.002397907606 device 14 (physical layer) draw current 18.8mA, activity = 3
+MB sm 42 tm 19 m ""
+- Node0[0]::SimpleBattery: 5.002397907606 residual capacity = 1.07575e+07 fill state is 99.6066%
+ME
+ME
+CL id 418 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 187 cid 421
+BS id 421 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 204
+CL id 421 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 204 cid 422
+SH sm 41 sg 11
+ES t 5.002597907606
+
+E # 205 t 5.002589907606 m 42 ce 204 msg 8
+CM id 423 tid 423 eid 423 etid 423 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 423 tid 423 eid 423 etid 423 c cMessage n "Radio switching over" k 22001 pe 205
+CL id 423 tid 423 eid 423 etid 423 c cMessage n "Radio switching over" k 22001 pe 205 cid 424
+SH sm 42 sg 7
+ES t 5.002589907606
+- Node0[0]::SimpleBattery: 5.002589907606 device 14 (physical layer) draw current 17.4mA, activity = 2
+MB sm 42 tm 19 m ""
+- Node0[0]::SimpleBattery: 5.002589907606 residual capacity = 1.07575e+07 fill state is 99.6066%
+ME
+
+E # 206 t 5.002589907606 m 41 ce 205 msg 423
+- Node0[0]::CSMA802154HostStateHandled: control message: RADIO_SWITCHING_OVER
+DM id 423 tid 423 eid 423 etid 423 c cMessage n "Radio switching over" k 22001 pe 206
+
+E # 207 t 5.002597907606 m 42 ce 204 msg 421
+CM id 425 tid 425 eid 425 etid 425 c cMessage n WakeUpReceiverPacket k 22003 pe -1
+BS id 9 tid 9 eid 9 etid 9 c cMessage n "transmission over" k 22000 pe 0
+ES t 5.015618740939
+CL id 425 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 207 cid 426
+BS id 426 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 207
+CL id 426 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 207 cid 427
+SH sm 42 sg 13
+SH sm 26 sg 13
+SH sm 4 sg 5
+SH sm 5 sg 4
+SH sm 49 sg 12
+ES t 5.002597907606
+CL id 425 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 207 cid 428
+BS id 428 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 207
+CL id 428 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 207 cid 429
+SH sm 42 sg 17
+SH sm 26 sg 17
+SH sm 4 sg 9
+SH sm 9 sg 4
+SH sm 127 sg 12
+ES t 5.002597907606
+BS id 425 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 207
+CL id 425 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 207 cid 430
+SH sm 42 sg 21
+SH sm 26 sg 21
+SH sm 4 sg 13
+SH sm 17 sg 12
+SH sm 296 sg 20
+ES t 5.002597907606
+
+E # 208 t 5.002597907606 m 57 ce 207 msg 426
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.002597907606 xpos= 408 ypos=218 speed=0
+- visual position. x = 408 y = 218 z = 0
+MS id 4 d "i2=status/green;b=,,,yellow;t=mode: normal;p=408,218;bgb=447,450;i=block/ifcard"
+MS id 4 d "i2=status/green;b=,,,yellow;t=mode: normal;p=408,218;bgb=447,450;i=block/ifcard"
+-  t= 5.002597907606 xpos= 311 ypos=154 speed=0
+- visual position. x = 311 y = 154 z = 0
+MS id 5 d "i2=status/red;b=,,,white;t= 99.87 % ;p=311,154;bgb=447,450;i=block/ifcard"
+MS id 5 d "i2=status/red;b=,,,white;t= 99.87 % ;p=311,154;bgb=447,450;i=block/ifcard"
+BS id 426 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 208
+ES t 5.005722907606
+
+E # 209 t 5.002597907606 m 147 ce 207 msg 428
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.002597907606 xpos= 342 ypos=296 speed=0
+- visual position. x = 342 y = 296 z = 0
+MS id 9 d "i2=status/red;b=,,,white;t= 99.65 % ;p=342,296;bgb=447,450;i=block/ifcard"
+MS id 9 d "i2=status/red;b=,,,white;t= 99.65 % ;p=342,296;bgb=447,450;i=block/ifcard"
+BS id 428 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 209
+ES t 5.005722907606
+
+E # 210 t 5.002597907606 m 312 ce 207 msg 425
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.002597907606 xpos= 519 ypos=218 speed=0
+- visual position. x = 519 y = 218 z = 0
+MS id 17 d "i2=status/red;b=,,,white;t= 99.72 % ;p=519,218;bgb=447,450;i=block/ifcard"
+MS id 17 d "i2=status/red;b=,,,white;t= 99.72 % ;p=519,218;bgb=447,450;i=block/ifcard"
+BS id 425 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 210
+ES t 5.005722907606
+
+E # 211 t 5.005722907606 m 57 ce 208 msg 426
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 431 tid 431 eid 431 etid 431 c cMessage n start_rx k 22101 pe -1
+BS id 431 tid 431 eid 431 etid 431 c cMessage n start_rx k 22101 pe 211
+CL id 431 tid 431 eid 431 etid 431 c cMessage n start_rx k 22101 pe 211 cid 432
+SH sm 57 sg 7
+ES t 5.005722907606
+BS id 426 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 211
+ES t 5.015618740939
+
+E # 212 t 5.005722907606 m 56 ce 211 msg 431
+- Node1[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 431 tid 431 eid 431 etid 431 c cMessage n start_rx k 22101 pe 212
+
+E # 213 t 5.005722907606 m 147 ce 209 msg 428
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 433 tid 433 eid 433 etid 433 c cMessage n start_rx k 22101 pe -1
+BS id 433 tid 433 eid 433 etid 433 c cMessage n start_rx k 22101 pe 213
+CL id 433 tid 433 eid 433 etid 433 c cMessage n start_rx k 22101 pe 213 cid 434
+SH sm 147 sg 7
+ES t 5.005722907606
+BS id 428 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 213
+ES t 5.015618740939
+
+E # 214 t 5.005722907606 m 146 ce 213 msg 433
+- Node5[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 433 tid 433 eid 433 etid 433 c cMessage n start_rx k 22101 pe 214
+
+E # 215 t 5.005722907606 m 312 ce 210 msg 425
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 435 tid 435 eid 435 etid 435 c cMessage n start_rx k 22101 pe -1
+BS id 435 tid 435 eid 435 etid 435 c cMessage n start_rx k 22101 pe 215
+CL id 435 tid 435 eid 435 etid 435 c cMessage n start_rx k 22101 pe 215 cid 436
+SH sm 312 sg 7
+ES t 5.005722907606
+BS id 425 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 215
+ES t 5.015618740939
+
+E # 216 t 5.005722907606 m 311 ce 215 msg 435
+- Node13[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 435 tid 435 eid 435 etid 435 c cMessage n start_rx k 22101 pe 216
+
+E # 217 t 5.015618740939 m 42 ce 207 msg 9
+CM id 437 tid 437 eid 437 etid 437 c cMessage n "Transmission over" k 22000 pe -1
+BS id 437 tid 437 eid 437 etid 437 c cMessage n "Transmission over" k 22000 pe 217
+CL id 437 tid 437 eid 437 etid 437 c cMessage n "Transmission over" k 22000 pe 217 cid 438
+SH sm 42 sg 7
+ES t 5.015618740939
+
+E # 218 t 5.015618740939 m 41 ce 217 msg 437
+- Node0[0]::CSMA802154HostStateHandled: In executeMac
+MB sm 41 tm 42 m ""
+BS id 8 tid 8 eid 8 etid 8 c cMessage n "radio switching over" k 22001 pe 205
+ES t 5.015810740939
+- Node0[0]::SimpleBattery: 5.015618740939 device 14 (physical layer) draw current 18.8mA, activity = 3
+MB sm 42 tm 19 m ""
+- Node0[0]::SimpleBattery: 5.015618740939 residual capacity = 1.07575e+07 fill state is 99.606%
+ME
+ME
+- Node0[0]::CSMA802154HostStateHandled: (27) FSM State TRANSMITFRAME_4, EV_FRAME_TRANSMITTED  [Broadcast]Node0[0]::CSMA802154HostStateHandled: : RadioSetupRx, manageQueue...
+DM id 418 tid 418 eid 418 etid 418 c cMessage n WakeUpReceiverPacket pe 204
+- Node0[0]::CSMA802154HostStateHandled: (manageQueue) no packets to send, entering IDLE state.
+DM id 437 tid 437 eid 437 etid 437 c cMessage n "Transmission over" k 22000 pe 218
+
+E # 219 t 5.015618740939 m 57 ce 211 msg 426
+- ---------- AIRFRAME WakeUpReceiverPacket
+CL id 426 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 219 cid 439
+CL id 421 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 207 cid 440
+CL id 416 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 187 cid 441
+CL id 414 tid 414 eid 414 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 186 cid 442
+CL id 421 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 219 cid 443
+BS id 443 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 219
+CL id 443 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 219 cid 444
+SH sm 57 sg 3
+ES t 5.015618740939
+DM id 426 tid 425 eid 426 etid 425 c cMessage n WakeUpReceiverPacket k 22003 p 10 pe 219
+
+E # 220 t 5.015618740939 m 56 ce 219 msg 443
+- Node1[0]::CSMA802154HostStateHandled: Received frame name= WakeUpReceiverPacket, myState=1 src=00-00-00-00-00-00 dst=FF-FF-FF-FF-FF-FF myAddr=00-00-00-00-00-01
+- Node1[0]::CSMA802154HostStateHandled: In executeMac
+- Node1[0]::CSMA802154HostStateHandled: (23) FSM State IDLE_1, EV_BROADCAST_RECEIVED: Nothing to do.
+CL id 416 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 219 cid 445
+BS id 445 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 220
+CL id 445 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 220 cid 446
+SH sm 56 sg 3
+SH sm 49 sg 3
+ES t 5.015618740939
+DM id 443 tid 418 eid 443 etid 418 c cMessage n WakeUpReceiverPacket pe 220
+
+E # 221 t 5.015618740939 m 50 ce 220 msg 445
+- Wiseroute received Message: WakeUpReceiverPacket
+CL id 445 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 221 cid 447
+CL id 414 tid 414 eid 414 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 219 cid 448
+DM id 445 tid 416 eid 445 etid 416 c cMessage n WakeUpReceiverPacket k 1 pe 221
+BS id 448 tid 414 eid 448 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 221
+CL id 448 tid 414 eid 448 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 221 cid 449
+SH sm 50 sg 3
+ES t 5.015618740939
+CM id 450 tid 450 eid 450 etid 450 c cMessage n "" pe -1
+- -------------------- I am NODE 1. FORWARDING WakeUpReceiverPacket.
+CM id 451 tid 451 eid 451 etid 451 c cMessage n WakeUpReceiverPacket k 1 pe -1
+- WiseRoute: CInfo removed, netw addr=-1
+BS id 451 tid 451 eid 450 etid 450 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 221
+CL id 451 tid 451 eid 450 etid 450 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 221 cid 452
+SH sm 50 sg 11
+SH sm 49 sg 0
+ES t 5.015618740939
+
+E # 222 t 5.015618740939 m 51 ce 221 msg 448
+MB sm 51 tm 44 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 5 d "i2=status/red;b=,,,white;t= 99.87 % ;p=311,154;bgb=447,450;i=block/ifcard"
+BS id 25 tid 25 eid 25 etid 25 c cMessage n clusterApplicationSleepTimer pe 0
+ES t 7.015720785745
+MS id 5 d "i2=status/green;b=,,,white;t= 99.87 % ;p=311,154;bgb=447,450;i=block/ifcard"
+- ----------> Leaving Sleep Mode
+CE id 25 tid 25 eid 25 etid 25 c cMessage n clusterApplicationSleepTimer pe 222
+BS id 25 tid 25 eid 25 etid 25 c cMessage n clusterApplicationSleepTimer pe 222
+ES t 7.016271531257
+MB sm 51 tm 57 m ""
+ME
+MB sm 51 tm 57 m ""
+BS id 21 tid 21 eid 21 etid 21 c cMessage n "radio switching over" k 22001 pe 0
+ES t 5.017410740939
+- Node1[0]::SimpleBattery: 5.015618740939 device 6 (physical layer) draw current 0.6391mA, activity = 3
+MB sm 57 tm 44 m ""
+- Node1[0]::SimpleBattery: 5.015618740939 residual capacity = 1.07761e+07 fill state is 99.7784%
+ME
+ME
+MS id 5 d "i2=status/green;b=,,,yellow;t= 99.87 % ;p=311,154;bgb=447,450;i=block/ifcard"
+CE id 25 tid 25 eid 25 etid 25 c cMessage n clusterApplicationSleepTimer pe 222
+BS id 25 tid 25 eid 25 etid 25 c cMessage n clusterApplicationSleepTimer pe 222
+ES t 7.015827617697
+DM id 448 tid 414 eid 448 etid 414 c cMessage n WakeUpReceiverPacket pe 222
+
+E # 223 t 5.015618740939 m 56 ce 221 msg 451
+CM id 453 tid 453 eid 453 etid 453 c cMessage n WakeUpReceiverPacket pe -1
+- Node1[0]::CSMA802154HostStateHandled: CSMA received a message from upper layer, name is WakeUpReceiverPacket, CInfo removed, mac addr=FF-FF-FF-FF-FF-FF
+- Node1[0]::CSMA802154HostStateHandled: pkt encapsulated, length: 152
+- Node1[0]::CSMA802154HostStateHandled: In executeMac
+- Node1[0]::CSMA802154HostStateHandled: (1) FSM State IDLE_1, EV_SEND_REQUEST and [TxBuff avail]: startTimerBackOff -> BACKOFF.
+- Node1[0]::CSMA802154HostStateHandled: (startTimer) backoffTimer value=0 (BE=0, 2^BE-1= 0r=0)
+BS id 17 tid 17 eid 17 etid 17 c cMessage n timer-backoff pe 0
+ES t 5.015618740939
+
+E # 224 t 5.015618740939 m 56 ce 223 msg 17
+- Node1[0]::CSMA802154HostStateHandled: timer routine.
+- Node1[0]::CSMA802154HostStateHandled: In executeMac
+- Node1[0]::CSMA802154HostStateHandled: (2) FSM State BACKOFF, EV_TIMER_BACKOFF: starting CCA timer.
+- Node1[0]::CSMA802154HostStateHandled: (startTimer) ccaTimer value=0.002292(rxSetupTime,ccaDetectionTime:0.001792,0.0005).
+BS id 18 tid 18 eid 18 etid 18 c cMessage n timer-cca pe 0
+ES t 5.017910740939
+MB sm 56 tm 57 m ""
+ME
+
+E # 225 t 5.015618740939 m 147 ce 213 msg 428
+- ---------- AIRFRAME WakeUpReceiverPacket
+CL id 428 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 225 cid 454
+CL id 421 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 219 cid 455
+CL id 416 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 220 cid 456
+CL id 414 tid 414 eid 414 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 221 cid 457
+CL id 421 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 225 cid 458
+BS id 458 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 225
+CL id 458 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 225 cid 459
+SH sm 147 sg 3
+ES t 5.015618740939
+DM id 428 tid 425 eid 428 etid 425 c cMessage n WakeUpReceiverPacket k 22003 p 10 pe 225
+
+E # 226 t 5.015618740939 m 146 ce 225 msg 458
+- Node5[0]::CSMA802154HostStateHandled: Received frame name= WakeUpReceiverPacket, myState=1 src=00-00-00-00-00-00 dst=FF-FF-FF-FF-FF-FF myAddr=00-00-00-00-00-05
+- Node5[0]::CSMA802154HostStateHandled: In executeMac
+- Node5[0]::CSMA802154HostStateHandled: (23) FSM State IDLE_1, EV_BROADCAST_RECEIVED: Nothing to do.
+CL id 416 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 225 cid 460
+BS id 460 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 226
+CL id 460 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 226 cid 461
+SH sm 146 sg 3
+SH sm 127 sg 3
+ES t 5.015618740939
+DM id 458 tid 418 eid 458 etid 418 c cMessage n WakeUpReceiverPacket pe 226
+
+E # 227 t 5.015618740939 m 128 ce 226 msg 460
+- Wiseroute received Message: WakeUpReceiverPacket
+CL id 460 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 227 cid 462
+CL id 414 tid 414 eid 414 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 225 cid 463
+DM id 460 tid 416 eid 460 etid 416 c cMessage n WakeUpReceiverPacket k 1 pe 227
+BS id 463 tid 414 eid 463 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 227
+CL id 463 tid 414 eid 463 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 227 cid 464
+SH sm 128 sg 3
+ES t 5.015618740939
+CM id 465 tid 465 eid 465 etid 465 c cMessage n "" pe -1
+- -------------------- I am NODE 5. FORWARDING WakeUpReceiverPacket.
+CM id 466 tid 466 eid 466 etid 466 c cMessage n WakeUpReceiverPacket k 1 pe -1
+- WiseRoute: CInfo removed, netw addr=-1
+BS id 466 tid 466 eid 465 etid 465 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 227
+CL id 466 tid 466 eid 465 etid 465 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 227 cid 467
+SH sm 128 sg 11
+SH sm 127 sg 0
+ES t 5.015618740939
+
+E # 228 t 5.015618740939 m 129 ce 227 msg 463
+MB sm 129 tm 119 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 9 d "i2=status/red;b=,,,white;t= 99.65 % ;p=342,296;bgb=447,450;i=block/ifcard"
+BS id 77 tid 77 eid 77 etid 77 c cMessage n clusterApplicationSleepTimer pe 0
+ES t 7.016271849261
+MS id 9 d "i2=status/green;b=,,,white;t= 99.65 % ;p=342,296;bgb=447,450;i=block/ifcard"
+- ----------> Leaving Sleep Mode
+CE id 77 tid 77 eid 77 etid 77 c cMessage n clusterApplicationSleepTimer pe 228
+BS id 77 tid 77 eid 77 etid 77 c cMessage n clusterApplicationSleepTimer pe 228
+ES t 7.016200591271
+MB sm 129 tm 147 m ""
+ME
+MB sm 129 tm 147 m ""
+BS id 73 tid 73 eid 73 etid 73 c cMessage n "radio switching over" k 22001 pe 0
+ES t 5.017410740939
+- Node5[0]::SimpleBattery: 5.015618740939 device 18 (physical layer) draw current 0.6391mA, activity = 3
+MB sm 147 tm 119 m ""
+- Node5[0]::SimpleBattery: 5.015618740939 residual capacity = 1.07481e+07 fill state is 99.5199%
+ME
+ME
+MS id 9 d "i2=status/green;b=,,,yellow;t= 99.65 % ;p=342,296;bgb=447,450;i=block/ifcard"
+CE id 77 tid 77 eid 77 etid 77 c cMessage n clusterApplicationSleepTimer pe 228
+BS id 77 tid 77 eid 77 etid 77 c cMessage n clusterApplicationSleepTimer pe 228
+ES t 7.01587203254
+DM id 463 tid 414 eid 463 etid 414 c cMessage n WakeUpReceiverPacket pe 228
+
+E # 229 t 5.015618740939 m 146 ce 227 msg 466
+CM id 468 tid 468 eid 468 etid 468 c cMessage n WakeUpReceiverPacket pe -1
+- Node5[0]::CSMA802154HostStateHandled: CSMA received a message from upper layer, name is WakeUpReceiverPacket, CInfo removed, mac addr=FF-FF-FF-FF-FF-FF
+- Node5[0]::CSMA802154HostStateHandled: pkt encapsulated, length: 152
+- Node5[0]::CSMA802154HostStateHandled: In executeMac
+- Node5[0]::CSMA802154HostStateHandled: (1) FSM State IDLE_1, EV_SEND_REQUEST and [TxBuff avail]: startTimerBackOff -> BACKOFF.
+- Node5[0]::CSMA802154HostStateHandled: (startTimer) backoffTimer value=0 (BE=0, 2^BE-1= 0r=0)
+BS id 69 tid 69 eid 69 etid 69 c cMessage n timer-backoff pe 0
+ES t 5.015618740939
+
+E # 230 t 5.015618740939 m 146 ce 229 msg 69
+- Node5[0]::CSMA802154HostStateHandled: timer routine.
+- Node5[0]::CSMA802154HostStateHandled: In executeMac
+- Node5[0]::CSMA802154HostStateHandled: (2) FSM State BACKOFF, EV_TIMER_BACKOFF: starting CCA timer.
+- Node5[0]::CSMA802154HostStateHandled: (startTimer) ccaTimer value=0.002292(rxSetupTime,ccaDetectionTime:0.001792,0.0005).
+BS id 70 tid 70 eid 70 etid 70 c cMessage n timer-cca pe 0
+ES t 5.017910740939
+MB sm 146 tm 147 m ""
+ME
+
+E # 231 t 5.015618740939 m 312 ce 215 msg 425
+- ---------- AIRFRAME WakeUpReceiverPacket
+CL id 425 tid 425 eid 414 etid 414 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 231 cid 469
+CL id 421 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 225 cid 470
+CL id 416 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 226 cid 471
+CL id 414 tid 414 eid 414 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 227 cid 472
+CL id 421 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 231 cid 473
+BS id 473 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 231
+CL id 473 tid 418 eid 414 etid 414 c MacPkt n WakeUpReceiverPacket l 152 pe 231 cid 474
+SH sm 312 sg 3
+ES t 5.015618740939
+DM id 425 tid 425 eid 425 etid 425 c cMessage n WakeUpReceiverPacket k 22003 p 10 pe 231
+
+E # 232 t 5.015618740939 m 311 ce 231 msg 473
+- Node13[0]::CSMA802154HostStateHandled: Received frame name= WakeUpReceiverPacket, myState=1 src=00-00-00-00-00-00 dst=FF-FF-FF-FF-FF-FF myAddr=00-00-00-00-00-0D
+- Node13[0]::CSMA802154HostStateHandled: In executeMac
+- Node13[0]::CSMA802154HostStateHandled: (23) FSM State IDLE_1, EV_BROADCAST_RECEIVED: Nothing to do.
+CL id 416 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 231 cid 475
+BS id 475 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 232
+CL id 475 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 232 cid 476
+SH sm 311 sg 3
+SH sm 296 sg 3
+ES t 5.015618740939
+DM id 473 tid 418 eid 473 etid 418 c cMessage n WakeUpReceiverPacket pe 232
+
+E # 233 t 5.015618740939 m 297 ce 232 msg 475
+- Wiseroute received Message: WakeUpReceiverPacket
+CL id 475 tid 416 eid 414 etid 414 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 233 cid 477
+CL id 414 tid 414 eid 414 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 231 cid 478
+DM id 475 tid 416 eid 475 etid 416 c cMessage n WakeUpReceiverPacket k 1 pe 233
+BS id 478 tid 414 eid 478 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 233
+CL id 478 tid 414 eid 478 etid 414 c WakeUpPacket n WakeUpReceiverPacket pe 233 cid 479
+SH sm 297 sg 3
+ES t 5.015618740939
+CM id 480 tid 480 eid 480 etid 480 c cMessage n "" pe -1
+- -------------------- I am NODE 13. FORWARDING WakeUpReceiverPacket.
+CM id 481 tid 481 eid 481 etid 481 c cMessage n WakeUpReceiverPacket k 1 pe -1
+- WiseRoute: CInfo removed, netw addr=-1
+BS id 481 tid 481 eid 480 etid 480 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 233
+CL id 481 tid 481 eid 480 etid 480 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 233 cid 482
+SH sm 297 sg 11
+SH sm 296 sg 0
+ES t 5.015618740939
+
+E # 234 t 5.015618740939 m 298 ce 233 msg 478
+MB sm 298 tm 289 m ""
+ME
+- In MatrixApplication::handleMessage
+MS id 17 d "i2=status/red;b=,,,white;t= 99.72 % ;p=519,218;bgb=447,450;i=block/ifcard"
+BS id 181 tid 181 eid 181 etid 181 c cMessage n clusterApplicationSleepTimer pe 0
+ES t 7.015863166527
+MS id 17 d "i2=status/green;b=,,,white;t= 99.72 % ;p=519,218;bgb=447,450;i=block/ifcard"
+- ----------> Leaving Sleep Mode
+CE id 181 tid 181 eid 181 etid 181 c cMessage n clusterApplicationSleepTimer pe 234
+BS id 181 tid 181 eid 181 etid 181 c cMessage n clusterApplicationSleepTimer pe 234
+ES t 7.016242251045
+MB sm 298 tm 312 m ""
+ME
+MB sm 298 tm 312 m ""
+BS id 177 tid 177 eid 177 etid 177 c cMessage n "radio switching over" k 22001 pe 0
+ES t 5.017410740939
+- Node13[0]::SimpleBattery: 5.015618740939 device 14 (physical layer) draw current 0.6391mA, activity = 3
+MB sm 312 tm 289 m ""
+- Node13[0]::SimpleBattery: 5.015618740939 residual capacity = 1.07575e+07 fill state is 99.606%
+ME
+ME
+MS id 17 d "i2=status/green;b=,,,yellow;t= 99.72 % ;p=519,218;bgb=447,450;i=block/ifcard"
+CE id 181 tid 181 eid 181 etid 181 c cMessage n clusterApplicationSleepTimer pe 234
+BS id 181 tid 181 eid 181 etid 181 c cMessage n clusterApplicationSleepTimer pe 234
+ES t 7.015777710525
+DM id 478 tid 414 eid 478 etid 414 c cMessage n WakeUpReceiverPacket pe 234
+
+E # 235 t 5.015618740939 m 311 ce 233 msg 481
+CM id 483 tid 483 eid 483 etid 483 c cMessage n WakeUpReceiverPacket pe -1
+- Node13[0]::CSMA802154HostStateHandled: CSMA received a message from upper layer, name is WakeUpReceiverPacket, CInfo removed, mac addr=FF-FF-FF-FF-FF-FF
+- Node13[0]::CSMA802154HostStateHandled: pkt encapsulated, length: 152
+- Node13[0]::CSMA802154HostStateHandled: In executeMac
+- Node13[0]::CSMA802154HostStateHandled: (1) FSM State IDLE_1, EV_SEND_REQUEST and [TxBuff avail]: startTimerBackOff -> BACKOFF.
+- Node13[0]::CSMA802154HostStateHandled: (startTimer) backoffTimer value=0 (BE=0, 2^BE-1= 0r=0)
+BS id 173 tid 173 eid 173 etid 173 c cMessage n timer-backoff pe 0
+ES t 5.015618740939
+
+E # 236 t 5.015618740939 m 311 ce 235 msg 173
+- Node13[0]::CSMA802154HostStateHandled: timer routine.
+- Node13[0]::CSMA802154HostStateHandled: In executeMac
+- Node13[0]::CSMA802154HostStateHandled: (2) FSM State BACKOFF, EV_TIMER_BACKOFF: starting CCA timer.
+- Node13[0]::CSMA802154HostStateHandled: (startTimer) ccaTimer value=0.002292(rxSetupTime,ccaDetectionTime:0.001792,0.0005).
+BS id 174 tid 174 eid 174 etid 174 c cMessage n timer-cca pe 0
+ES t 5.017910740939
+MB sm 311 tm 312 m ""
+ME
+
+E # 237 t 5.015810740939 m 42 ce 218 msg 8
+CM id 484 tid 484 eid 484 etid 484 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 484 tid 484 eid 484 etid 484 c cMessage n "Radio switching over" k 22001 pe 237
+CL id 484 tid 484 eid 484 etid 484 c cMessage n "Radio switching over" k 22001 pe 237 cid 485
+SH sm 42 sg 7
+ES t 5.015810740939
+- Node0[0]::SimpleBattery: 5.015810740939 device 14 (physical layer) draw current 18.8mA, activity = 1
+MB sm 42 tm 19 m ""
+- Node0[0]::SimpleBattery: 5.015810740939 residual capacity = 1.07575e+07 fill state is 99.606%
+ME
+
+E # 238 t 5.015810740939 m 41 ce 237 msg 484
+- Node0[0]::CSMA802154HostStateHandled: control message: RADIO_SWITCHING_OVER
+DM id 484 tid 484 eid 484 etid 484 c cMessage n "Radio switching over" k 22001 pe 238
+
+E # 239 t 5.017410740939 m 57 ce 222 msg 21
+CM id 486 tid 486 eid 486 etid 486 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 486 tid 486 eid 486 etid 486 c cMessage n "Radio switching over" k 22001 pe 239
+CL id 486 tid 486 eid 486 etid 486 c cMessage n "Radio switching over" k 22001 pe 239 cid 487
+SH sm 57 sg 7
+ES t 5.017410740939
+- Node1[0]::SimpleBattery: 5.017410740939 device 6 (physical layer) draw current 18.8mA, activity = 1
+MB sm 57 tm 44 m ""
+- Node1[0]::SimpleBattery: 5.017410740939 residual capacity = 1.07761e+07 fill state is 99.7783%
+ME
+
+E # 240 t 5.017410740939 m 147 ce 228 msg 73
+CM id 488 tid 488 eid 488 etid 488 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 488 tid 488 eid 488 etid 488 c cMessage n "Radio switching over" k 22001 pe 240
+CL id 488 tid 488 eid 488 etid 488 c cMessage n "Radio switching over" k 22001 pe 240 cid 489
+SH sm 147 sg 7
+ES t 5.017410740939
+- Node5[0]::SimpleBattery: 5.017410740939 device 18 (physical layer) draw current 18.8mA, activity = 1
+MB sm 147 tm 119 m ""
+- Node5[0]::SimpleBattery: 5.017410740939 residual capacity = 1.07481e+07 fill state is 99.5198%
+ME
+
+E # 241 t 5.017410740939 m 312 ce 234 msg 177
+CM id 490 tid 490 eid 490 etid 490 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 490 tid 490 eid 490 etid 490 c cMessage n "Radio switching over" k 22001 pe 241
+CL id 490 tid 490 eid 490 etid 490 c cMessage n "Radio switching over" k 22001 pe 241 cid 491
+SH sm 312 sg 7
+ES t 5.017410740939
+- Node13[0]::SimpleBattery: 5.017410740939 device 14 (physical layer) draw current 18.8mA, activity = 1
+MB sm 312 tm 289 m ""
+- Node13[0]::SimpleBattery: 5.017410740939 residual capacity = 1.07574e+07 fill state is 99.606%
+ME
+
+E # 242 t 5.017410740939 m 56 ce 239 msg 486
+- Node1[0]::CSMA802154HostStateHandled: control message: RADIO_SWITCHING_OVER
+DM id 486 tid 486 eid 486 etid 486 c cMessage n "Radio switching over" k 22001 pe 242
+
+E # 243 t 5.017410740939 m 146 ce 240 msg 488
+- Node5[0]::CSMA802154HostStateHandled: control message: RADIO_SWITCHING_OVER
+DM id 488 tid 488 eid 488 etid 488 c cMessage n "Radio switching over" k 22001 pe 243
+
+E # 244 t 5.017410740939 m 311 ce 241 msg 490
+- Node13[0]::CSMA802154HostStateHandled: control message: RADIO_SWITCHING_OVER
+DM id 490 tid 490 eid 490 etid 490 c cMessage n "Radio switching over" k 22001 pe 244
+
+E # 245 t 5.017910740939 m 56 ce 224 msg 18
+- Node1[0]::CSMA802154HostStateHandled: timer routine.
+- Node1[0]::CSMA802154HostStateHandled: In executeMac
+- Node1[0]::CSMA802154HostStateHandled: (25) FSM State CCA_3, EV_TIMER_CCA
+MB sm 56 tm 57 m ""
+ME
+- Node1[0]::CSMA802154HostStateHandled: (3) FSM State CCA_3, EV_TIMER_CCA, [Channel Idle]: -> TRANSMITFRAME_4.
+MB sm 56 tm 57 m ""
+BS id 21 tid 21 eid 21 etid 21 c cMessage n "radio switching over" k 22001 pe 239
+ES t 5.018102740939
+- Node1[0]::SimpleBattery: 5.017910740939 device 6 (physical layer) draw current 18.8mA, activity = 3
+MB sm 57 tm 44 m ""
+- Node1[0]::SimpleBattery: 5.017910740939 residual capacity = 1.07761e+07 fill state is 99.7783%
+ME
+ME
+CL id 453 tid 453 eid 450 etid 450 c MacPkt n WakeUpReceiverPacket l 152 pe 223 cid 492
+BS id 492 tid 453 eid 450 etid 450 c MacPkt n WakeUpReceiverPacket l 152 pe 245
+CL id 492 tid 453 eid 450 etid 450 c MacPkt n WakeUpReceiverPacket l 152 pe 245 cid 493
+SH sm 56 sg 11
+ES t 5.018110740939
+
+E # 246 t 5.017910740939 m 146 ce 230 msg 70
+- Node5[0]::CSMA802154HostStateHandled: timer routine.
+- Node5[0]::CSMA802154HostStateHandled: In executeMac
+- Node5[0]::CSMA802154HostStateHandled: (25) FSM State CCA_3, EV_TIMER_CCA
+MB sm 146 tm 147 m ""
+ME
+- Node5[0]::CSMA802154HostStateHandled: (3) FSM State CCA_3, EV_TIMER_CCA, [Channel Idle]: -> TRANSMITFRAME_4.
+MB sm 146 tm 147 m ""
+BS id 73 tid 73 eid 73 etid 73 c cMessage n "radio switching over" k 22001 pe 240
+ES t 5.018102740939
+- Node5[0]::SimpleBattery: 5.017910740939 device 18 (physical layer) draw current 18.8mA, activity = 3
+MB sm 147 tm 119 m ""
+- Node5[0]::SimpleBattery: 5.017910740939 residual capacity = 1.07481e+07 fill state is 99.5198%
+ME
+ME
+CL id 468 tid 468 eid 465 etid 465 c MacPkt n WakeUpReceiverPacket l 152 pe 229 cid 494
+BS id 494 tid 468 eid 465 etid 465 c MacPkt n WakeUpReceiverPacket l 152 pe 246
+CL id 494 tid 468 eid 465 etid 465 c MacPkt n WakeUpReceiverPacket l 152 pe 246 cid 495
+SH sm 146 sg 11
+ES t 5.018110740939
+
+E # 247 t 5.017910740939 m 311 ce 236 msg 174
+- Node13[0]::CSMA802154HostStateHandled: timer routine.
+- Node13[0]::CSMA802154HostStateHandled: In executeMac
+- Node13[0]::CSMA802154HostStateHandled: (25) FSM State CCA_3, EV_TIMER_CCA
+MB sm 311 tm 312 m ""
+ME
+- Node13[0]::CSMA802154HostStateHandled: (3) FSM State CCA_3, EV_TIMER_CCA, [Channel Idle]: -> TRANSMITFRAME_4.
+MB sm 311 tm 312 m ""
+BS id 177 tid 177 eid 177 etid 177 c cMessage n "radio switching over" k 22001 pe 241
+ES t 5.018102740939
+- Node13[0]::SimpleBattery: 5.017910740939 device 14 (physical layer) draw current 18.8mA, activity = 3
+MB sm 312 tm 289 m ""
+- Node13[0]::SimpleBattery: 5.017910740939 residual capacity = 1.07574e+07 fill state is 99.606%
+ME
+ME
+CL id 483 tid 483 eid 480 etid 480 c MacPkt n WakeUpReceiverPacket l 152 pe 235 cid 496
+BS id 496 tid 483 eid 480 etid 480 c MacPkt n WakeUpReceiverPacket l 152 pe 247
+CL id 496 tid 483 eid 480 etid 480 c MacPkt n WakeUpReceiverPacket l 152 pe 247 cid 497
+SH sm 311 sg 11
+ES t 5.018110740939
+
+E # 248 t 5.018102740939 m 57 ce 245 msg 21
+CM id 498 tid 498 eid 498 etid 498 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 498 tid 498 eid 498 etid 498 c cMessage n "Radio switching over" k 22001 pe 248
+CL id 498 tid 498 eid 498 etid 498 c cMessage n "Radio switching over" k 22001 pe 248 cid 499
+SH sm 57 sg 7
+ES t 5.018102740939
+- Node1[0]::SimpleBattery: 5.018102740939 device 6 (physical layer) draw current 17.4mA, activity = 2
+MB sm 57 tm 44 m ""
+- Node1[0]::SimpleBattery: 5.018102740939 residual capacity = 1.07761e+07 fill state is 99.7783%
+ME
+
+E # 249 t 5.018102740939 m 147 ce 246 msg 73
+CM id 500 tid 500 eid 500 etid 500 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 500 tid 500 eid 500 etid 500 c cMessage n "Radio switching over" k 22001 pe 249
+CL id 500 tid 500 eid 500 etid 500 c cMessage n "Radio switching over" k 22001 pe 249 cid 501
+SH sm 147 sg 7
+ES t 5.018102740939
+- Node5[0]::SimpleBattery: 5.018102740939 device 18 (physical layer) draw current 17.4mA, activity = 2
+MB sm 147 tm 119 m ""
+- Node5[0]::SimpleBattery: 5.018102740939 residual capacity = 1.07481e+07 fill state is 99.5198%
+ME
+
+E # 250 t 5.018102740939 m 312 ce 247 msg 177
+CM id 502 tid 502 eid 502 etid 502 c cMessage n "Radio switching over" k 22001 pe -1
+BS id 502 tid 502 eid 502 etid 502 c cMessage n "Radio switching over" k 22001 pe 250
+CL id 502 tid 502 eid 502 etid 502 c cMessage n "Radio switching over" k 22001 pe 250 cid 503
+SH sm 312 sg 7
+ES t 5.018102740939
+- Node13[0]::SimpleBattery: 5.018102740939 device 14 (physical layer) draw current 17.4mA, activity = 2
+MB sm 312 tm 289 m ""
+- Node13[0]::SimpleBattery: 5.018102740939 residual capacity = 1.07574e+07 fill state is 99.606%
+ME
+
+E # 251 t 5.018102740939 m 56 ce 248 msg 498
+- Node1[0]::CSMA802154HostStateHandled: control message: RADIO_SWITCHING_OVER
+DM id 498 tid 498 eid 498 etid 498 c cMessage n "Radio switching over" k 22001 pe 251
+
+E # 252 t 5.018102740939 m 146 ce 249 msg 500
+- Node5[0]::CSMA802154HostStateHandled: control message: RADIO_SWITCHING_OVER
+DM id 500 tid 500 eid 500 etid 500 c cMessage n "Radio switching over" k 22001 pe 252
+
+E # 253 t 5.018102740939 m 311 ce 250 msg 502
+- Node13[0]::CSMA802154HostStateHandled: control message: RADIO_SWITCHING_OVER
+DM id 502 tid 502 eid 502 etid 502 c cMessage n "Radio switching over" k 22001 pe 253
+
+E # 254 t 5.018110740939 m 57 ce 245 msg 492
+CM id 504 tid 504 eid 504 etid 504 c cMessage n WakeUpReceiverPacket k 22003 pe -1
+BS id 22 tid 22 eid 22 etid 22 c cMessage n "transmission over" k 22000 pe 0
+ES t 5.031131574272
+CL id 504 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254 cid 505
+BS id 505 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254
+CL id 505 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254 cid 506
+SH sm 57 sg 11
+SH sm 49 sg 11
+SH sm 5 sg 3
+SH sm 4 sg 2
+SH sm 26 sg 10
+ES t 5.018110740939
+CL id 504 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254 cid 507
+BS id 507 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254
+CL id 507 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254 cid 508
+SH sm 57 sg 17
+SH sm 49 sg 17
+SH sm 5 sg 9
+SH sm 6 sg 4
+SH sm 65 sg 12
+ES t 5.018110740939
+CL id 504 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254 cid 509
+BS id 509 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254
+CL id 509 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254 cid 510
+SH sm 57 sg 21
+SH sm 49 sg 21
+SH sm 5 sg 13
+SH sm 7 sg 4
+SH sm 86 sg 12
+ES t 5.018110740939
+BS id 504 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254
+CL id 504 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 254 cid 511
+SH sm 57 sg 25
+SH sm 49 sg 25
+SH sm 5 sg 17
+SH sm 8 sg 4
+SH sm 109 sg 12
+ES t 5.018110740939
+
+E # 255 t 5.018110740939 m 147 ce 246 msg 494
+CM id 512 tid 512 eid 512 etid 512 c cMessage n WakeUpReceiverPacket k 22003 pe -1
+BS id 74 tid 74 eid 74 etid 74 c cMessage n "transmission over" k 22000 pe 0
+ES t 5.031131574272
+CL id 512 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255 cid 513
+BS id 513 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255
+CL id 513 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255 cid 514
+SH sm 147 sg 11
+SH sm 127 sg 11
+SH sm 9 sg 3
+SH sm 4 sg 6
+SH sm 26 sg 14
+ES t 5.018110740939
+CL id 512 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255 cid 515
+BS id 515 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255
+CL id 515 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255 cid 516
+SH sm 147 sg 17
+SH sm 127 sg 17
+SH sm 9 sg 9
+SH sm 10 sg 4
+SH sm 154 sg 12
+ES t 5.018110740939
+CL id 512 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255 cid 517
+BS id 517 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255
+CL id 517 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255 cid 518
+SH sm 147 sg 21
+SH sm 127 sg 21
+SH sm 9 sg 13
+SH sm 11 sg 4
+SH sm 171 sg 12
+ES t 5.018110740939
+BS id 512 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255
+CL id 512 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 255 cid 519
+SH sm 147 sg 25
+SH sm 127 sg 25
+SH sm 9 sg 17
+SH sm 12 sg 8
+SH sm 194 sg 16
+ES t 5.018110740939
+
+E # 256 t 5.018110740939 m 312 ce 247 msg 496
+CM id 520 tid 520 eid 520 etid 520 c cMessage n WakeUpReceiverPacket k 22003 pe -1
+BS id 178 tid 178 eid 178 etid 178 c cMessage n "transmission over" k 22000 pe 0
+ES t 5.031131574272
+CL id 520 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256 cid 521
+BS id 521 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256
+CL id 521 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256 cid 522
+SH sm 312 sg 19
+SH sm 296 sg 19
+SH sm 17 sg 11
+SH sm 4 sg 10
+SH sm 26 sg 18
+ES t 5.018110740939
+CL id 520 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256 cid 523
+BS id 523 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256
+CL id 523 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256 cid 524
+SH sm 312 sg 11
+SH sm 296 sg 11
+SH sm 17 sg 3
+SH sm 13 sg 6
+SH sm 211 sg 14
+ES t 5.018110740939
+CL id 520 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256 cid 525
+BS id 525 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256
+CL id 525 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256 cid 526
+SH sm 312 sg 15
+SH sm 296 sg 15
+SH sm 17 sg 7
+SH sm 14 sg 10
+SH sm 234 sg 18
+ES t 5.018110740939
+CL id 520 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256 cid 527
+BS id 527 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256
+CL id 527 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256 cid 528
+SH sm 312 sg 23
+SH sm 296 sg 23
+SH sm 17 sg 15
+SH sm 15 sg 10
+SH sm 252 sg 18
+ES t 5.018110740939
+BS id 520 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256
+CL id 520 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 256 cid 529
+SH sm 312 sg 27
+SH sm 296 sg 27
+SH sm 17 sg 19
+SH sm 16 sg 6
+SH sm 279 sg 14
+ES t 5.018110740939
+
+E # 257 t 5.018110740939 m 42 ce 254 msg 505
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 311 ypos=154 speed=0
+- visual position. x = 311 y = 154 z = 0
+MS id 5 d "i2=status/green;b=,,,yellow;t= 99.87 % ;p=311,154;bgb=447,450;i=block/ifcard"
+MS id 5 d "i2=status/green;b=,,,yellow;t= 99.87 % ;p=311,154;bgb=447,450;i=block/ifcard"
+-  t= 5.018110740939 xpos= 408 ypos=218 speed=0
+- visual position. x = 408 y = 218 z = 0
+MS id 4 d "i2=status/green;b=,,,yellow;t=mode: normal;p=408,218;bgb=447,450;i=block/ifcard"
+MS id 4 d "i2=status/green;b=,,,yellow;t=mode: normal;p=408,218;bgb=447,450;i=block/ifcard"
+BS id 505 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 257
+ES t 5.021235740939
+
+E # 258 t 5.018110740939 m 77 ce 254 msg 507
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 303 ypos=64 speed=0
+- visual position. x = 303 y = 64 z = 0
+MS id 6 d "i2=status/red;b=,,,white;t= 99.80 % ;p=303,64;bgb=447,450;i=block/ifcard"
+MS id 6 d "i2=status/red;b=,,,white;t= 99.80 % ;p=303,64;bgb=447,450;i=block/ifcard"
+BS id 507 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 258
+ES t 5.021235740939
+
+E # 259 t 5.018110740939 m 102 ce 254 msg 509
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 193 ypos=142 speed=0
+- visual position. x = 193 y = 142 z = 0
+MS id 7 d "i2=status/red;b=,,,white;t= 99.72 % ;p=193,142;bgb=447,450;i=block/ifcard"
+MS id 7 d "i2=status/red;b=,,,white;t= 99.72 % ;p=193,142;bgb=447,450;i=block/ifcard"
+BS id 509 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 259
+ES t 5.021235740939
+
+E # 260 t 5.018110740939 m 117 ce 254 msg 504
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 241 ypos=77 speed=0
+- visual position. x = 241 y = 77 z = 0
+MS id 8 d "i2=status/red;b=,,,white;t= 99.87 % ;p=241,77;bgb=447,450;i=block/ifcard"
+MS id 8 d "i2=status/red;b=,,,white;t= 99.87 % ;p=241,77;bgb=447,450;i=block/ifcard"
+BS id 504 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 260
+ES t 5.021235740939
+
+E # 261 t 5.018110740939 m 42 ce 255 msg 513
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 342 ypos=296 speed=0
+- visual position. x = 342 y = 296 z = 0
+MS id 9 d "i2=status/green;b=,,,yellow;t= 99.65 % ;p=342,296;bgb=447,450;i=block/ifcard"
+MS id 9 d "i2=status/green;b=,,,yellow;t= 99.65 % ;p=342,296;bgb=447,450;i=block/ifcard"
+BS id 513 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 261
+ES t 5.031131574272
+
+E # 262 t 5.018110740939 m 162 ce 255 msg 515
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 342 ypos=381 speed=0
+- visual position. x = 342 y = 381 z = 0
+MS id 10 d "i2=status/red;b=,,,white;t= 99.87 % ;p=342,381;bgb=447,450;i=block/ifcard"
+MS id 10 d "i2=status/red;b=,,,white;t= 99.87 % ;p=342,381;bgb=447,450;i=block/ifcard"
+BS id 515 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 262
+ES t 5.021235740939
+
+E # 263 t 5.018110740939 m 187 ce 255 msg 517
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 232 ypos=277 speed=0
+- visual position. x = 232 y = 277 z = 0
+MS id 11 d "i2=status/red;b=,,,white;t= 99.72 % ;p=232,277;bgb=447,450;i=block/ifcard"
+MS id 11 d "i2=status/red;b=,,,white;t= 99.72 % ;p=232,277;bgb=447,450;i=block/ifcard"
+BS id 517 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 263
+ES t 5.021235740939
+
+E # 264 t 5.018110740939 m 202 ce 255 msg 512
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 241 ypos=373 speed=0
+- visual position. x = 241 y = 373 z = 0
+MS id 12 d "i2=status/red;b=,,,white;t= 99.87 % ;p=241,373;bgb=447,450;i=block/ifcard"
+MS id 12 d "i2=status/red;b=,,,white;t= 99.87 % ;p=241,373;bgb=447,450;i=block/ifcard"
+BS id 512 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 264
+ES t 5.021235740939
+
+E # 265 t 5.018110740939 m 42 ce 256 msg 521
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 519 ypos=218 speed=0
+- visual position. x = 519 y = 218 z = 0
+MS id 17 d "i2=status/green;b=,,,yellow;t= 99.72 % ;p=519,218;bgb=447,450;i=block/ifcard"
+MS id 17 d "i2=status/green;b=,,,yellow;t= 99.72 % ;p=519,218;bgb=447,450;i=block/ifcard"
+BS id 521 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 265
+ES t 5.031131574272
+
+E # 266 t 5.018110740939 m 227 ce 256 msg 523
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 558 ypos=103 speed=0
+- visual position. x = 558 y = 103 z = 0
+MS id 13 d "i2=status/red;b=,,,white;t= 99.72 % ;p=558,103;bgb=447,450;i=block/ifcard"
+MS id 13 d "i2=status/red;b=,,,white;t= 99.72 % ;p=558,103;bgb=447,450;i=block/ifcard"
+BS id 523 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 266
+ES t 5.021235740939
+
+E # 267 t 5.018110740939 m 242 ce 256 msg 525
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 619 ypos=172 speed=0
+- visual position. x = 619 y = 172 z = 0
+MS id 14 d "i2=status/red;b=,,,white;t= 99.87 % ;p=619,172;bgb=447,450;i=block/ifcard"
+MS id 14 d "i2=status/red;b=,,,white;t= 99.87 % ;p=619,172;bgb=447,450;i=block/ifcard"
+BS id 525 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 267
+ES t 5.021235740939
+
+E # 268 t 5.018110740939 m 272 ce 256 msg 527
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 619 ypos=257 speed=0
+- visual position. x = 619 y = 257 z = 0
+MS id 15 d "i2=status/red;b=,,,white;t= 99.65 % ;p=619,257;bgb=447,450;i=block/ifcard"
+MS id 15 d "i2=status/red;b=,,,white;t= 99.65 % ;p=619,257;bgb=447,450;i=block/ifcard"
+BS id 527 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 268
+ES t 5.021235740939
+
+E # 269 t 5.018110740939 m 287 ce 256 msg 520
+- ---------- AIRFRAME WakeUpReceiverPacket
+-  t= 5.018110740939 xpos= 558 ypos=326 speed=0
+- visual position. x = 558 y = 326 z = 0
+MS id 16 d "i2=status/red;b=,,,white;t= 99.87 % ;p=558,326;bgb=447,450;i=block/ifcard"
+MS id 16 d "i2=status/red;b=,,,white;t= 99.87 % ;p=558,326;bgb=447,450;i=block/ifcard"
+BS id 520 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 269
+ES t 5.021235740939
+
+E # 270 t 5.021235740939 m 42 ce 257 msg 505
+- ---------- AIRFRAME WakeUpReceiverPacket
+BS id 505 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 270
+ES t 5.031131574272
+
+E # 271 t 5.021235740939 m 77 ce 258 msg 507
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 530 tid 530 eid 530 etid 530 c cMessage n start_rx k 22101 pe -1
+BS id 530 tid 530 eid 530 etid 530 c cMessage n start_rx k 22101 pe 271
+CL id 530 tid 530 eid 530 etid 530 c cMessage n start_rx k 22101 pe 271 cid 531
+SH sm 77 sg 7
+ES t 5.021235740939
+BS id 507 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 271
+ES t 5.031131574272
+
+E # 272 t 5.021235740939 m 76 ce 271 msg 530
+- Node2[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 530 tid 530 eid 530 etid 530 c cMessage n start_rx k 22101 pe 272
+
+E # 273 t 5.021235740939 m 102 ce 259 msg 509
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 532 tid 532 eid 532 etid 532 c cMessage n start_rx k 22101 pe -1
+BS id 532 tid 532 eid 532 etid 532 c cMessage n start_rx k 22101 pe 273
+CL id 532 tid 532 eid 532 etid 532 c cMessage n start_rx k 22101 pe 273 cid 533
+SH sm 102 sg 7
+ES t 5.021235740939
+BS id 509 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 273
+ES t 5.031131574272
+
+E # 274 t 5.021235740939 m 101 ce 273 msg 532
+- Node3[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 532 tid 532 eid 532 etid 532 c cMessage n start_rx k 22101 pe 274
+
+E # 275 t 5.021235740939 m 117 ce 260 msg 504
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 534 tid 534 eid 534 etid 534 c cMessage n start_rx k 22101 pe -1
+BS id 534 tid 534 eid 534 etid 534 c cMessage n start_rx k 22101 pe 275
+CL id 534 tid 534 eid 534 etid 534 c cMessage n start_rx k 22101 pe 275 cid 535
+SH sm 117 sg 7
+ES t 5.021235740939
+BS id 504 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 275
+ES t 5.031131574272
+
+E # 276 t 5.021235740939 m 116 ce 275 msg 534
+- Node4[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 534 tid 534 eid 534 etid 534 c cMessage n start_rx k 22101 pe 276
+
+E # 277 t 5.021235740939 m 162 ce 262 msg 515
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 536 tid 536 eid 536 etid 536 c cMessage n start_rx k 22101 pe -1
+BS id 536 tid 536 eid 536 etid 536 c cMessage n start_rx k 22101 pe 277
+CL id 536 tid 536 eid 536 etid 536 c cMessage n start_rx k 22101 pe 277 cid 537
+SH sm 162 sg 7
+ES t 5.021235740939
+BS id 515 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 277
+ES t 5.031131574272
+
+E # 278 t 5.021235740939 m 161 ce 277 msg 536
+- Node6[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 536 tid 536 eid 536 etid 536 c cMessage n start_rx k 22101 pe 278
+
+E # 279 t 5.021235740939 m 187 ce 263 msg 517
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 538 tid 538 eid 538 etid 538 c cMessage n start_rx k 22101 pe -1
+BS id 538 tid 538 eid 538 etid 538 c cMessage n start_rx k 22101 pe 279
+CL id 538 tid 538 eid 538 etid 538 c cMessage n start_rx k 22101 pe 279 cid 539
+SH sm 187 sg 7
+ES t 5.021235740939
+BS id 517 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 279
+ES t 5.031131574272
+
+E # 280 t 5.021235740939 m 186 ce 279 msg 538
+- Node7[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 538 tid 538 eid 538 etid 538 c cMessage n start_rx k 22101 pe 280
+
+E # 281 t 5.021235740939 m 202 ce 264 msg 512
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 540 tid 540 eid 540 etid 540 c cMessage n start_rx k 22101 pe -1
+BS id 540 tid 540 eid 540 etid 540 c cMessage n start_rx k 22101 pe 281
+CL id 540 tid 540 eid 540 etid 540 c cMessage n start_rx k 22101 pe 281 cid 541
+SH sm 202 sg 7
+ES t 5.021235740939
+BS id 512 tid 512 eid 465 etid 465 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 281
+ES t 5.031131574272
+
+E # 282 t 5.021235740939 m 201 ce 281 msg 540
+- Node8[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 540 tid 540 eid 540 etid 540 c cMessage n start_rx k 22101 pe 282
+
+E # 283 t 5.021235740939 m 227 ce 266 msg 523
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 542 tid 542 eid 542 etid 542 c cMessage n start_rx k 22101 pe -1
+BS id 542 tid 542 eid 542 etid 542 c cMessage n start_rx k 22101 pe 283
+CL id 542 tid 542 eid 542 etid 542 c cMessage n start_rx k 22101 pe 283 cid 543
+SH sm 227 sg 7
+ES t 5.021235740939
+BS id 523 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 283
+ES t 5.031131574272
+
+E # 284 t 5.021235740939 m 226 ce 283 msg 542
+- Node9[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 542 tid 542 eid 542 etid 542 c cMessage n start_rx k 22101 pe 284
+
+E # 285 t 5.021235740939 m 242 ce 267 msg 525
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 544 tid 544 eid 544 etid 544 c cMessage n start_rx k 22101 pe -1
+BS id 544 tid 544 eid 544 etid 544 c cMessage n start_rx k 22101 pe 285
+CL id 544 tid 544 eid 544 etid 544 c cMessage n start_rx k 22101 pe 285 cid 545
+SH sm 242 sg 7
+ES t 5.021235740939
+BS id 525 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 285
+ES t 5.031131574272
+
+E # 286 t 5.021235740939 m 241 ce 285 msg 544
+- Node10[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 544 tid 544 eid 544 etid 544 c cMessage n start_rx k 22101 pe 286
+
+E # 287 t 5.021235740939 m 272 ce 268 msg 527
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 546 tid 546 eid 546 etid 546 c cMessage n start_rx k 22101 pe -1
+BS id 546 tid 546 eid 546 etid 546 c cMessage n start_rx k 22101 pe 287
+CL id 546 tid 546 eid 546 etid 546 c cMessage n start_rx k 22101 pe 287 cid 547
+SH sm 272 sg 7
+ES t 5.021235740939
+BS id 527 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 287
+ES t 5.031131574272
+
+E # 288 t 5.021235740939 m 271 ce 287 msg 546
+- Node11[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 546 tid 546 eid 546 etid 546 c cMessage n start_rx k 22101 pe 288
+
+E # 289 t 5.021235740939 m 287 ce 269 msg 520
+- ---------- AIRFRAME WakeUpReceiverPacket
+CM id 548 tid 548 eid 548 etid 548 c cMessage n start_rx k 22101 pe -1
+BS id 548 tid 548 eid 548 etid 548 c cMessage n start_rx k 22101 pe 289
+CL id 548 tid 548 eid 548 etid 548 c cMessage n start_rx k 22101 pe 289 cid 549
+SH sm 287 sg 7
+ES t 5.021235740939
+BS id 520 tid 520 eid 480 etid 480 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 289
+ES t 5.031131574272
+
+E # 290 t 5.021235740939 m 286 ce 289 msg 548
+- Node12[0]::CSMA802154HostStateHandled: control message: RECEIVING AirFrame
+DM id 548 tid 548 eid 548 etid 548 c cMessage n start_rx k 22101 pe 290
+
+E # 291 t 5.031131574272 m 57 ce 254 msg 22
+CM id 550 tid 550 eid 550 etid 550 c cMessage n "Transmission over" k 22000 pe -1
+BS id 550 tid 550 eid 550 etid 550 c cMessage n "Transmission over" k 22000 pe 291
+CL id 550 tid 550 eid 550 etid 550 c cMessage n "Transmission over" k 22000 pe 291 cid 551
+SH sm 57 sg 7
+ES t 5.031131574272
+
+E # 292 t 5.031131574272 m 147 ce 255 msg 74
+CM id 552 tid 552 eid 552 etid 552 c cMessage n "Transmission over" k 22000 pe -1
+BS id 552 tid 552 eid 552 etid 552 c cMessage n "Transmission over" k 22000 pe 292
+CL id 552 tid 552 eid 552 etid 552 c cMessage n "Transmission over" k 22000 pe 292 cid 553
+SH sm 147 sg 7
+ES t 5.031131574272
+
+E # 293 t 5.031131574272 m 312 ce 256 msg 178
+CM id 554 tid 554 eid 554 etid 554 c cMessage n "Transmission over" k 22000 pe -1
+BS id 554 tid 554 eid 554 etid 554 c cMessage n "Transmission over" k 22000 pe 293
+CL id 554 tid 554 eid 554 etid 554 c cMessage n "Transmission over" k 22000 pe 293 cid 555
+SH sm 312 sg 7
+ES t 5.031131574272
+
+E # 294 t 5.031131574272 m 56 ce 291 msg 550
+- Node1[0]::CSMA802154HostStateHandled: In executeMac
+MB sm 56 tm 57 m ""
+BS id 21 tid 21 eid 21 etid 21 c cMessage n "radio switching over" k 22001 pe 248
+ES t 5.031323574272
+- Node1[0]::SimpleBattery: 5.031131574272 device 6 (physical layer) draw current 18.8mA, activity = 3
+MB sm 57 tm 44 m ""
+- Node1[0]::SimpleBattery: 5.031131574272 residual capacity = 1.0776e+07 fill state is 99.7779%
+ME
+ME
+- Node1[0]::CSMA802154HostStateHandled: (27) FSM State TRANSMITFRAME_4, EV_FRAME_TRANSMITTED  [Broadcast]Node1[0]::CSMA802154HostStateHandled: : RadioSetupRx, manageQueue...
+DM id 453 tid 453 eid 453 etid 453 c cMessage n WakeUpReceiverPacket pe 245
+- Node1[0]::CSMA802154HostStateHandled: (manageQueue) no packets to send, entering IDLE state.
+DM id 550 tid 550 eid 550 etid 550 c cMessage n "Transmission over" k 22000 pe 294
+
+E # 295 t 5.031131574272 m 146 ce 292 msg 552
+- Node5[0]::CSMA802154HostStateHandled: In executeMac
+MB sm 146 tm 147 m ""
+BS id 73 tid 73 eid 73 etid 73 c cMessage n "radio switching over" k 22001 pe 249
+ES t 5.031323574272
+- Node5[0]::SimpleBattery: 5.031131574272 device 18 (physical layer) draw current 18.8mA, activity = 3
+MB sm 147 tm 119 m ""
+- Node5[0]::SimpleBattery: 5.031131574272 residual capacity = 1.07481e+07 fill state is 99.5192%
+ME
+ME
+- Node5[0]::CSMA802154HostStateHandled: (27) FSM State TRANSMITFRAME_4, EV_FRAME_TRANSMITTED  [Broadcast]Node5[0]::CSMA802154HostStateHandled: : RadioSetupRx, manageQueue...
+DM id 468 tid 468 eid 468 etid 468 c cMessage n WakeUpReceiverPacket pe 246
+- Node5[0]::CSMA802154HostStateHandled: (manageQueue) no packets to send, entering IDLE state.
+DM id 552 tid 552 eid 552 etid 552 c cMessage n "Transmission over" k 22000 pe 295
+
+E # 296 t 5.031131574272 m 311 ce 293 msg 554
+- Node13[0]::CSMA802154HostStateHandled: In executeMac
+MB sm 311 tm 312 m ""
+BS id 177 tid 177 eid 177 etid 177 c cMessage n "radio switching over" k 22001 pe 250
+ES t 5.031323574272
+- Node13[0]::SimpleBattery: 5.031131574272 device 14 (physical layer) draw current 18.8mA, activity = 3
+MB sm 312 tm 289 m ""
+- Node13[0]::SimpleBattery: 5.031131574272 residual capacity = 1.07574e+07 fill state is 99.6054%
+ME
+ME
+- Node13[0]::CSMA802154HostStateHandled: (27) FSM State TRANSMITFRAME_4, EV_FRAME_TRANSMITTED  [Broadcast]Node13[0]::CSMA802154HostStateHandled: : RadioSetupRx, manageQueue...
+DM id 483 tid 483 eid 483 etid 483 c cMessage n WakeUpReceiverPacket pe 247
+- Node13[0]::CSMA802154HostStateHandled: (manageQueue) no packets to send, entering IDLE state.
+DM id 554 tid 554 eid 554 etid 554 c cMessage n "Transmission over" k 22000 pe 296
+
+E # 297 t 5.031131574272 m 42 ce 261 msg 513
+- ---------- AIRFRAME WakeUpReceiverPacket
+
+E # 298 t 5.031131574272 m 42 ce 265 msg 521
+- ---------- AIRFRAME WakeUpReceiverPacket
+
+E # 299 t 5.031131574272 m 42 ce 270 msg 505
+- ---------- AIRFRAME WakeUpReceiverPacket
+DM id 513 tid 512 eid 513 etid 512 c cMessage n WakeUpReceiverPacket k 22003 p 10 pe 297
+DM id 521 tid 520 eid 521 etid 520 c cMessage n WakeUpReceiverPacket k 22003 p 10 pe 298
+DM id 505 tid 504 eid 505 etid 504 c cMessage n WakeUpReceiverPacket k 22003 p 10 pe 299
+
+E # 300 t 5.031131574272 m 77 ce 271 msg 507
+- ---------- AIRFRAME WakeUpReceiverPacket
+CL id 507 tid 504 eid 450 etid 450 c MiximAirFrame n WakeUpReceiverPacket k 22003 p 10 l 200 pe 300 cid 556
+CL id 492 tid 453 eid 450 etid 450 c MacPkt n WakeUpReceiverPacket l 152 pe 254 cid 557
+CL id 451 tid 451 eid 450 etid 450 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 223 cid 558
+CL id 450 tid 450 eid 450 etid 450 c WakeUpPacket n WakeUpReceiverPacket pe 221 cid 559
+CL id 492 tid 453 eid 450 etid 450 c MacPkt n WakeUpReceiverPacket l 152 pe 300 cid 560
+BS id 560 tid 453 eid 450 etid 450 c MacPkt n WakeUpReceiverPacket l 152 pe 300
+CL id 560 tid 453 eid 450 etid 450 c MacPkt n WakeUpReceiverPacket l 152 pe 300 cid 561
+SH sm 77 sg 3
+ES t 5.031131574272
+DM id 507 tid 504 eid 507 etid 504 c cMessage n WakeUpReceiverPacket k 22003 p 10 pe 300
+
+E # 301 t 5.031131574272 m 76 ce 300 msg 560
+- Node2[0]::CSMA802154HostStateHandled: Received frame name= WakeUpReceiverPacket, myState=1 src=00-00-00-00-00-01 dst=FF-FF-FF-FF-FF-FF myAddr=00-00-00-00-00-02
+- Node2[0]::CSMA802154HostStateHandled: In executeMac
+- Node2[0]::CSMA802154HostStateHandled: (23) FSM State IDLE_1, EV_BROADCAST_RECEIVED: Nothing to do.
+CL id 451 tid 451 eid 450 etid 450 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 300 cid 562
+BS id 562 tid 451 eid 450 etid 450 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 301
+CL id 562 tid 451 eid 450 etid 450 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 301 cid 563
+SH sm 76 sg 3
+SH sm 65 sg 3
+ES t 5.031131574272
+DM id 560 tid 453 eid 560 etid 453 c cMessage n WakeUpReceiverPacket pe 301
+
+E # 302 t 5.031131574272 m 66 ce 301 msg 562
+- Wiseroute received Message: WakeUpReceiverPacket
+CL id 562 tid 451 eid 450 etid 450 c WiseRoutePkt n WakeUpReceiverPacket k 1 l 128 pe 302 cid 564
+CL id 450 tid 450 eid 450 etid 450 c WakeUpPacket n WakeUpReceiverPacket pe 300 cid 565
+DM 

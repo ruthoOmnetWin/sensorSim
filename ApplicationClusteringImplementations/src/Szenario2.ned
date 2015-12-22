@@ -4,6 +4,7 @@ import org.mixim.base.modules.BaseNetwork;
 
 //
 //some information about this szenario
+//---------------------------------------
 //
 //szenario2.ini is the matching ini-file
 //
@@ -12,6 +13,7 @@ import org.mixim.base.modules.BaseNetwork;
 ////in this case you must name the node Node3
 //
 ////most values are similar to szenario1
+//---------------------------------------
 //
 //what happens in the szenario:
 //
@@ -20,12 +22,14 @@ import org.mixim.base.modules.BaseNetwork;
 ////the coordinator node will ask the nodes for their data instead.
 ////the cluster master nodes will then search for the nodes with the highest battery power left (one for each sensor type).
 ////for each type the chosen node will then make one measuring and send it to the cluster master which will forward it to the global master.
+//---------------------------------------
 //
 //module types
 //
 ////there must be one coordinator/master node (coordinatorNodeAddr), this node must use the appl layer MasterClusterAppl.
 ////direct childs of the master are ClusterMaster. they must use the appl layer ClusterMasterClusterAppl.
 ////the leaf nodes in the routing tree should connect directly to a clusterMaster. they must use the appl layer LeafClusterAppl.
+//---------------------------------------
 //
 //organize cluster
 //
@@ -51,6 +55,7 @@ network Szenario2 extends BaseNetwork
         Node1: Sensor_Wakeup_DicePhyMacHost {
             @display("p=311,154");
             //hasTemperatureSensor = true;
+            appl.roomNumber = 0;
         }
         Node2: Sensor_Wakeup_DicePhyMacHost {
             @display("p=303,64");
@@ -67,6 +72,7 @@ network Szenario2 extends BaseNetwork
         Node5: Sensor_Wakeup_DicePhyMacHost {
             @display("p=342,296");
             //hasTemperatureSensor = true;
+            appl.roomNumber = 2;
         }
         Node6: Sensor_Wakeup_DicePhyMacHost {
             @display("p=342,381");
@@ -99,6 +105,7 @@ network Szenario2 extends BaseNetwork
         Node13: Sensor_Wakeup_DicePhyMacHost {
             @display("p=519,218");
             //hasTemperatureSensor = true;
+            appl.roomNumber = 1;
         }
 
     connections allowunconnected:
