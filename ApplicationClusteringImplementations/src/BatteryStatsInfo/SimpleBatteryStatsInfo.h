@@ -23,10 +23,10 @@ class SimpleBatteryStatsInfo : public cNamedObject {
 public:
     virtual SimpleBatteryStatsInfo *dup() const {return new SimpleBatteryStatsInfo(*this);}
 public:
-    int residualRelative;
+    double residualRelative;
     SimpleBatteryStatsInfo();
     virtual ~SimpleBatteryStatsInfo();
-    explicit SimpleBatteryStatsInfo(const char *name, int sensorData, bool namepooling=true);
+    explicit SimpleBatteryStatsInfo(const char *name, double residualRelative, bool namepooling=true);
 
 };
 

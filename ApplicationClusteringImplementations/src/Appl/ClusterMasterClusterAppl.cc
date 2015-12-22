@@ -21,10 +21,13 @@
 #include <GenericPacket_m.h>
 #include <SimpleBattery.h>
 #include <PhyLayerBattery.h>
+#include <SimpleBatteryStatsInfo.h>
 
 Define_Module(ClusterMasterClusterAppl);
 
 ClusterMasterClusterAppl::ClusterMasterClusterAppl() {
+    counterSensorNodeAnswers = 0;
+    numChildNodes = 0;
 }
 
 ClusterMasterClusterAppl::~ClusterMasterClusterAppl() {
@@ -53,6 +56,7 @@ void ClusterMasterClusterAppl::initialize(int stage) {
                     sti->hasHumiditySensor = sNode->par("hasHumiditySensor");
                     sti->hasPressureSensor = sNode->par("hasPressureSensor");
                     sti->hasLightSensor = sNode->par("hasLightSensor");
+                    numChildNodes ++;
                     SensorTypeInformationVector.push_back(*sti);
                 }
 
@@ -63,16 +67,34 @@ void ClusterMasterClusterAppl::initialize(int stage) {
         clusterApp->sleepTimeout = 2000;
         clusterApp->wakeupSleepEnterSleep();
         findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
+
+        InitMeasuringEvent = new cMessage();
+        InitMeasuringEvent->setName("InitMeasuringEvent");
     }
 }
 
 void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
     //todo get battery status of all my leafs -> this must be done per message
 
+    if (msg == InitMeasuringEvent
+            || strcmp(InitMeasuringEvent->getName(), msg->getName()) == 0 ) {
+        EV << "InitMeasuringEvent" << endl;
+    }
+
     if (strcmp(msg->getName(), "estimateResidualRelative") == 0) {
         EV << "Received message not to be forwarded" << endl;
-        //WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
-        //sendUp(decapsMsg(pkt));
+        ApplPkt* Apkt = dynamic_cast<ApplPkt*>(msg);
+        if (Apkt != NULL) {
+            int srcId = Apkt->getSrcAddr();
+            SensorTypeInformation* sti = findNodeById(srcId);
+            if (sti != NULL) {
+                SimpleBatteryStatsInfo* battStats = dynamic_cast<SimpleBatteryStatsInfo*>(Apkt->getParList().get(0));
+                if (battStats != NULL) {
+                    sti->residualRelative = battStats->residualRelative;
+                }
+            }
+            incrementCounterSensorNodeAnswers();
+        }
         return;
     }
 
@@ -192,5 +214,22 @@ void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
     else
     {
         delete msg;
+    }
+}
+
+ClusterMasterClusterAppl::SensorTypeInformation* ClusterMasterClusterAppl::findNodeById(int nodeNetwAddr) {
+    int size = SensorTypeInformationVector.size();
+    for (int i = 0; i < size; i++) {
+        if (SensorTypeInformationVector.at(i).nodeNetwAddr == nodeNetwAddr) {
+            return &SensorTypeInformationVector.at(i);
+        }
+    }
+    return NULL;
+}
+
+void ClusterMasterClusterAppl::incrementCounterSensorNodeAnswers() {
+    counterSensorNodeAnswers++;
+    if (counterSensorNodeAnswers == numChildNodes) {
+        scheduleAt(simTime() + 0.0001, InitMeasuringEvent);
     }
 }

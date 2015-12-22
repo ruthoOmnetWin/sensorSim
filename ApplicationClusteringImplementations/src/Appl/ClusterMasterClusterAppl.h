@@ -22,12 +22,15 @@
 #include <SensorNode.h>
 #include <vector>
 #include <CustomMatrixApplication.h>
+#include <ApplPkt_m.h>
 
 class ClusterMasterClusterAppl : public CustomMatrixApplication, public AbstractClusterAppl {
 protected:
     ClusterApplWiseRoute* NetwLayer;
 
     CustomWiseRoute::AdjListElement* childNodes;
+
+    cMessage* InitMeasuringEvent;
 
 public:
     ClusterMasterClusterAppl();
@@ -42,9 +45,14 @@ public:
         bool hasHumiditySensor = false;
         bool hasPressureSensor = false;
         bool hasLightSensor = false;
+        double residualRelative = 0;
     };
 
     std::vector<SensorTypeInformation> SensorTypeInformationVector;
+    SensorTypeInformation* findNodeById(int nodeNetwAddr);
+    int numChildNodes;
+    int counterSensorNodeAnswers;
+    void incrementCounterSensorNodeAnswers();
 
 };
 

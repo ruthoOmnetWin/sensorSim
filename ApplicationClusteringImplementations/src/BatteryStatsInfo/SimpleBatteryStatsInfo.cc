@@ -24,7 +24,7 @@ SimpleBatteryStatsInfo::~SimpleBatteryStatsInfo()
 }
 
 
-SimpleBatteryStatsInfo::SimpleBatteryStatsInfo(const char *name, int residualRelative, bool namepooling) : cNamedObject(name, namepooling)
+SimpleBatteryStatsInfo::SimpleBatteryStatsInfo(const char *name, double residualRelative, bool namepooling) : cNamedObject(name, namepooling)
 {
     this->residualRelative = residualRelative;
 }

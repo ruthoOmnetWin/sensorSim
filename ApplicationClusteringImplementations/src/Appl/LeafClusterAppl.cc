@@ -169,7 +169,7 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
                 SimpleBatteryStatsInfo* sbfi = new SimpleBatteryStatsInfo("estimateResidualRelative", battery->estimateResidualRelative());
                 ApplPkt* aPkt = new ApplPkt;
                 aPkt->getParList().add(sbfi);
-                aPkt->setSrcAddr(nodeAddr);
+                aPkt->setSrcAddr(clusterApp->myNodeId);
                 aPkt->setDestAddr(LAddress::L3BROADCAST);
                 aPkt->setName("estimateResidualRelative");
                 sendDelayed(aPkt, 0.05 * clusterApp->myNodeId, dataOut);

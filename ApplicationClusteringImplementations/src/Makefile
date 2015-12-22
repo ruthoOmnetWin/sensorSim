@@ -203,6 +203,7 @@ $O/Appl/ClusterMasterClusterAppl.o: Appl/ClusterMasterClusterAppl.cc \
 	Appl/AbstractClusterAppl.h \
 	Appl/ClusterMasterClusterAppl.h \
 	Appl/CustomMatrixApplication.h \
+	BatteryStatsInfo/SimpleBatteryStatsInfo.h \
 	Netwl/ClusterApplWiseRoute.h \
 	Netwl/CustomWiseRoute.h \
 	$(MIXIM_PROJ)/src/base/connectionManager/ConnectionManagerAccess.h \
