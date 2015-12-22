@@ -172,7 +172,7 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
                 aPkt->setSrcAddr(clusterApp->myNodeId);
                 aPkt->setDestAddr(LAddress::L3BROADCAST);
                 aPkt->setName("estimateResidualRelative");
-                sendDelayed(aPkt, 0.05 * clusterApp->myNodeId, dataOut);
+                sendDelayed(aPkt, 0.05 * roomId, dataOut);
 
             }
         }

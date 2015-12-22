@@ -45,6 +45,7 @@ void ClusterMasterClusterAppl::initialize(int stage) {
             opp_error("No roomNumber was defined for this Cluster Masters Applayer. Every ClusterMasterClusterAppl must define a room number");
         }
 
+        int roomId = 0;
         do {
             if (childNodes->value != -1) {
 
@@ -53,6 +54,7 @@ void ClusterMasterClusterAppl::initialize(int stage) {
                 cModule* node = findModuleWherever(ss.str().c_str(), findHost()->getParentModule());
 
                 SensorNode* sNode = dynamic_cast<SensorNode*>(node);
+
                 if (sNode != NULL) {
                     LeafClusterAppl* appl = FindModule<LeafClusterAppl*>::findSubModule(sNode);
                     if (appl == NULL) {
@@ -60,6 +62,8 @@ void ClusterMasterClusterAppl::initialize(int stage) {
                     }
 
                     appl->roomNumber = roomNumber;
+                    appl->roomId = roomId;
+                    roomId++;
 
                     SensorTypeInformation* sti = new SensorTypeInformation;
                     sti->nodeNetwAddr = childNodes->value;

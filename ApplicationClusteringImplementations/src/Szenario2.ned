@@ -35,7 +35,7 @@ import org.mixim.base.modules.BaseNetwork;
 //
 ////use the given module types to define one Master and muliple clusters with one ClusterMaster and multiple Leafs for each
 ////define special cluster information inside the ClusterMaster, is will be transferred to the Leafs automatically
-////these informations can be: room number
+////these informations can be: room number, room id (every leaf gets a second id that is only unique inside its room)
 network Szenario2 extends BaseNetwork
 {
     parameters:

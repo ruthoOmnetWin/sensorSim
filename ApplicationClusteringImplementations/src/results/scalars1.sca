@@ -1,0 +1,368 @@
+version 2
+run General-0-20151222-16:26:47-19018
+attr configname General
+attr datetime 20151222-16:26:47
+attr experiment General
+attr inifile szenario2.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Szenario2
+attr processid 19018
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar Szenario2.world 	#sent 	0
+scalar Szenario2.world 	#received 	0
+statistic Szenario2.world 	"hop count"
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr type  int
+bin	-INF	0
+bin	-1	0
+bin	0	0
+bin	1	0
+scalar Szenario2.Node0.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node0.batteryStats 	total 	188572.75256846
+attr unit  mW-s
+scalar Szenario2.Node0.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node0.batteryStats 	"Mean power consumption" 	4713.9405266303
+attr unit  mW
+scalar Szenario2.Node0.nic.mac 	nbTxFrames 	4
+scalar Szenario2.Node0.nic.mac 	nbRxFrames 	0
+scalar Szenario2.Node0.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node0.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node0.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node0.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node0.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node0.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node0.nic.mac 	nbBackoffs 	4
+scalar Szenario2.Node0.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node0.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node0.nic.phy 	nbFramesWithoutInterference 	0
+scalar Szenario2.Node0.nic.phy 	nbFramesWithInterferencePartial 	1
+scalar Szenario2.Node0.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node0.nic.phy 	nbFramesWithInterferenceDropped 	3
+scalar Szenario2.Node0.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node1.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node1.batteryStats 	total 	144885.41238468
+attr unit  mW-s
+scalar Szenario2.Node1.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node1.batteryStats 	"Mean power consumption" 	3621.8446613052
+attr unit  mW
+scalar Szenario2.Node1.nic.mac 	nbTxFrames 	4
+scalar Szenario2.Node1.nic.mac 	nbRxFrames 	10
+scalar Szenario2.Node1.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node1.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node1.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node1.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node1.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node1.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node1.nic.mac 	nbBackoffs 	4
+scalar Szenario2.Node1.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node1.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node1.nic.phy 	nbFramesWithoutInterference 	8
+scalar Szenario2.Node1.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node1.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node1.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node1.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node2.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node2.batteryStats 	total 	166905.65223458
+attr unit  mW-s
+scalar Szenario2.Node2.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node2.batteryStats 	"Mean power consumption" 	4172.306483709
+attr unit  mW
+scalar Szenario2.Node2.nic.mac 	nbTxFrames 	2
+scalar Szenario2.Node2.nic.mac 	nbRxFrames 	8
+scalar Szenario2.Node2.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node2.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node2.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node2.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node2.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node2.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node2.nic.mac 	nbBackoffs 	2
+scalar Szenario2.Node2.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node2.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node2.nic.phy 	nbFramesWithoutInterference 	6
+scalar Szenario2.Node2.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node2.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node2.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node2.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node3.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node3.batteryStats 	total 	188806.79854927
+attr unit  mW-s
+scalar Szenario2.Node3.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node3.batteryStats 	"Mean power consumption" 	4719.791206641
+attr unit  mW
+scalar Szenario2.Node3.nic.mac 	nbTxFrames 	2
+scalar Szenario2.Node3.nic.mac 	nbRxFrames 	8
+scalar Szenario2.Node3.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node3.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node3.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node3.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node3.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node3.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node3.nic.mac 	nbBackoffs 	2
+scalar Szenario2.Node3.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node3.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node3.nic.phy 	nbFramesWithoutInterference 	6
+scalar Szenario2.Node3.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node3.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node3.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node3.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node4.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node4.batteryStats 	total 	145004.49211624
+attr unit  mW-s
+scalar Szenario2.Node4.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node4.batteryStats 	"Mean power consumption" 	3624.8214157133
+attr unit  mW
+scalar Szenario2.Node4.nic.mac 	nbTxFrames 	2
+scalar Szenario2.Node4.nic.mac 	nbRxFrames 	8
+scalar Szenario2.Node4.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node4.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node4.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node4.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node4.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node4.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node4.nic.mac 	nbBackoffs 	2
+scalar Szenario2.Node4.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node4.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node4.nic.phy 	nbFramesWithoutInterference 	6
+scalar Szenario2.Node4.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node4.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node4.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node4.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node5.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node5.batteryStats 	total 	210588.90564507
+attr unit  mW-s
+scalar Szenario2.Node5.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node5.batteryStats 	"Mean power consumption" 	5264.3001879004
+attr unit  mW
+scalar Szenario2.Node5.nic.mac 	nbTxFrames 	4
+scalar Szenario2.Node5.nic.mac 	nbRxFrames 	10
+scalar Szenario2.Node5.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node5.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node5.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node5.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node5.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node5.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node5.nic.mac 	nbBackoffs 	4
+scalar Szenario2.Node5.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node5.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node5.nic.phy 	nbFramesWithoutInterference 	8
+scalar Szenario2.Node5.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node5.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node5.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node5.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node6.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node6.batteryStats 	total 	145006.16764285
+attr unit  mW-s
+scalar Szenario2.Node6.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node6.batteryStats 	"Mean power consumption" 	3624.8633005174
+attr unit  mW
+scalar Szenario2.Node6.nic.mac 	nbTxFrames 	2
+scalar Szenario2.Node6.nic.mac 	nbRxFrames 	6
+scalar Szenario2.Node6.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node6.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node6.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node6.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node6.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node6.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node6.nic.mac 	nbBackoffs 	2
+scalar Szenario2.Node6.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node6.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node6.nic.phy 	nbFramesWithoutInterference 	4
+scalar Szenario2.Node6.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node6.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node6.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node6.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node7.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node7.batteryStats 	total 	188808.40107053
+attr unit  mW-s
+scalar Szenario2.Node7.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node7.batteryStats 	"Mean power consumption" 	4719.8312664579
+attr unit  mW
+scalar Szenario2.Node7.nic.mac 	nbTxFrames 	2
+scalar Szenario2.Node7.nic.mac 	nbRxFrames 	6
+scalar Szenario2.Node7.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node7.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node7.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node7.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node7.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node7.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node7.nic.mac 	nbBackoffs 	2
+scalar Szenario2.Node7.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node7.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node7.nic.phy 	nbFramesWithoutInterference 	4
+scalar Szenario2.Node7.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node7.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node7.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node7.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node8.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node8.batteryStats 	total 	145006.14945363
+attr unit  mW-s
+scalar Szenario2.Node8.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node8.batteryStats 	"Mean power consumption" 	3624.8628458235
+attr unit  mW
+scalar Szenario2.Node8.nic.mac 	nbTxFrames 	2
+scalar Szenario2.Node8.nic.mac 	nbRxFrames 	8
+scalar Szenario2.Node8.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node8.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node8.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node8.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node8.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node8.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node8.nic.mac 	nbBackoffs 	2
+scalar Szenario2.Node8.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node8.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node8.nic.phy 	nbFramesWithoutInterference 	6
+scalar Szenario2.Node8.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node8.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node8.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node8.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node9.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node9.batteryStats 	total 	188807.57525706
+attr unit  mW-s
+scalar Szenario2.Node9.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node9.batteryStats 	"Mean power consumption" 	4719.8106227776
+attr unit  mW
+scalar Szenario2.Node9.nic.mac 	nbTxFrames 	2
+scalar Szenario2.Node9.nic.mac 	nbRxFrames 	6
+scalar Szenario2.Node9.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node9.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node9.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node9.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node9.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node9.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node9.nic.mac 	nbBackoffs 	2
+scalar Szenario2.Node9.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node9.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node9.nic.phy 	nbFramesWithoutInterference 	4
+scalar Szenario2.Node9.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node9.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node9.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node9.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node10.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node10.batteryStats 	total 	145005.25080503
+attr unit  mW-s
+scalar Szenario2.Node10.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node10.batteryStats 	"Mean power consumption" 	3624.8403814111
+attr unit  mW
+scalar Szenario2.Node10.nic.mac 	nbTxFrames 	2
+scalar Szenario2.Node10.nic.mac 	nbRxFrames 	8
+scalar Szenario2.Node10.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node10.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node10.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node10.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node10.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node10.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node10.nic.mac 	nbBackoffs 	2
+scalar Szenario2.Node10.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node10.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node10.nic.phy 	nbFramesWithoutInterference 	6
+scalar Szenario2.Node10.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node10.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node10.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node10.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node11.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node11.batteryStats 	total 	210708.69252045
+attr unit  mW-s
+scalar Szenario2.Node11.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node11.batteryStats 	"Mean power consumption" 	5267.2946194856
+attr unit  mW
+scalar Szenario2.Node11.nic.mac 	nbTxFrames 	2
+scalar Szenario2.Node11.nic.mac 	nbRxFrames 	8
+scalar Szenario2.Node11.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node11.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node11.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node11.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node11.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node11.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node11.nic.mac 	nbBackoffs 	2
+scalar Szenario2.Node11.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node11.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node11.nic.phy 	nbFramesWithoutInterference 	6
+scalar Szenario2.Node11.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node11.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node11.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node11.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node12.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node12.batteryStats 	total 	145005.19364262
+attr unit  mW-s
+scalar Szenario2.Node12.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node12.batteryStats 	"Mean power consumption" 	3624.8389524656
+attr unit  mW
+scalar Szenario2.Node12.nic.mac 	nbTxFrames 	2
+scalar Szenario2.Node12.nic.mac 	nbRxFrames 	6
+scalar Szenario2.Node12.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node12.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node12.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node12.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node12.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node12.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node12.nic.mac 	nbBackoffs 	2
+scalar Szenario2.Node12.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node12.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node12.nic.phy 	nbFramesWithoutInterference 	4
+scalar Szenario2.Node12.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node12.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node12.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node12.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Szenario2.Node13.batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Szenario2.Node13.batteryStats 	total 	188687.70371717
+attr unit  mW-s
+scalar Szenario2.Node13.batteryStats 	lifetime 	-1
+attr unit  s
+scalar Szenario2.Node13.batteryStats 	"Mean power consumption" 	4716.8140747495
+attr unit  mW
+scalar Szenario2.Node13.nic.mac 	nbTxFrames 	4
+scalar Szenario2.Node13.nic.mac 	nbRxFrames 	12
+scalar Szenario2.Node13.nic.mac 	nbDroppedFrames 	0
+scalar Szenario2.Node13.nic.mac 	nbMissedAcks 	0
+scalar Szenario2.Node13.nic.mac 	nbRecvdAcks 	0
+scalar Szenario2.Node13.nic.mac 	nbTxAcks 	0
+scalar Szenario2.Node13.nic.mac 	nbDuplicates 	0
+scalar Szenario2.Node13.nic.mac 	meanBackoff 	0
+scalar Szenario2.Node13.nic.mac 	nbBackoffs 	4
+scalar Szenario2.Node13.nic.mac 	backoffDurations 	0
+scalar Szenario2.Node13.nic.phy 	nbFramesWithInterference 	0
+scalar Szenario2.Node13.nic.phy 	nbFramesWithoutInterference 	10
+scalar Szenario2.Node13.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Szenario2.Node13.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Szenario2.Node13.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Szenario2.Node13.nic.phy 	nbFramesWithoutInterferenceDropped 	0

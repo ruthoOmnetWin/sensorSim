@@ -42,6 +42,7 @@ public:
     void handleMessage(cMessage* msg);
 
     int roomNumber;
+    int roomId;
 };
 
 #endif /* LEAFCLUSTERAPPL_H_ */
