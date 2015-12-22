@@ -24,6 +24,12 @@
 
 Define_Module(LeafClusterAppl);
 
+#define ALL 0
+#define TEMPERATURE 1
+#define PRESSURE 2
+#define HUMIDITY 3
+#define LIGHT 4
+
 LeafClusterAppl::LeafClusterAppl() {
 
 }
@@ -187,13 +193,13 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
             if (strcmp(nameBeginning.c_str(), "measure") == 0) {
                 std::string nameEnding = nameString.substr(8);
                 if (strcmp(nameEnding.c_str(), "temperature") == 0) {
-
+                    processor->startSensingUnit(TEMPERATURE);
                 } else if (strcmp(nameEnding.c_str(), "pressure") == 0) {
-
+                    processor->startSensingUnit(PRESSURE);
                 } else if (strcmp(nameEnding.c_str(), "humidity") == 0) {
-
+                    processor->startSensingUnit(HUMIDITY);
                 } else if (strcmp(nameEnding.c_str(), "light") == 0) {
-
+                    processor->startSensingUnit(LIGHT);
                 }
             }
         }

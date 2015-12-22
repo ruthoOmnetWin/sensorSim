@@ -42,7 +42,7 @@ void AbstractSensingUnit::initialize(int stage) {
         say("CustomWorldUtility found");
 
     } else if (stage == 1) {
-        readAndForward();
+        //readAndForward();
     }
 }
 
