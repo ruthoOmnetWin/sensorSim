@@ -1,0 +1,1712 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Compound Module <i>Sensor_Wakeup_DicePhyMacHost</i></h2>
+<b>Package:</b> applicationclusteringimplementations<br/><b>File: <a href="src-Sensor_Wakeup_DicePhyMacHost.ned.html">src/Sensor_Wakeup_DicePhyMacHost.ned</a></b><br/>
+<p>compound module for a sensor node with wakeup receiver using the DicePhyMacHost
+this module is similar to the DicePhyMacHost (but wakeup and sensor functionality is added)</p>
+<h3 class="subtitle">Networks:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="applicationclusteringimplementations.ApplicationClusteringImplementations.html">ApplicationClusteringImplementations</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="applicationclusteringimplementations.MyTestApplicationNetw.html">MyTestApplicationNetw</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="applicationclusteringimplementations.Szenario1.html">Szenario1</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+
+<p>some information about this szenario</p>
+
+   </td>
+</tr>
+<tr>
+   <td>
+<a href="applicationclusteringimplementations.Szenario2.html">Szenario2</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+
+<p>some information about this szenario</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>routeTree</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td></td>
+   <td>
+<p>route tree builds the networks routing as a tree, but stored as an array
+the position in the array refers to the id of the node and the value at
+this position must be the father of the node inside the routing tree
+the root node inside the tree has it's own id as father value</p>
+<p>for example:
+routeTree = 2 2 2
+builds the following tree:
+    2
+  /  \
+ 0   1</p>
+<p><b>See also:</b> <a href="applicationclusteringimplementations.Netwl.CustomWiseRoute.html">CustomWiseRoute</a>::convertTreeToRouteTable() for more information about how
+the conversion is done</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>sensingIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0s</td>
+   <td>
+<p>these parameters are generated automatically, from parent module, or via ini-file</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>shiftProcessorModeNormalIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0s</td>
+   <td>
+   </td>
+</tr>
+<tr class="local">
+   <td>shiftProcessorModePowerSavingIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0s</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>shiftProcessorModeHighPerformanceIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0s</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>collectStatisticsIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0s</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>readAndClearStorageIntervall</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0s</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>noisy</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+   </td>
+</tr>
+<tr class="local">
+   <td>dataBandwidth</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0bps</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>controlBandwidth</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0bps</td>
+   <td>
+   </td>
+</tr>
+<tr class="local">
+   <td>allSensorsRandom</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>set this and set it to true to generate all sensors randomly</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>hasTemperatureSensor</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>hasHumiditySensor</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>hasPressureSensor</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>hasLightSensor</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+   </td>
+</tr>
+<tr class="local">
+   <td>numSensors</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>numSensorModules</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>numDevices</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>(
+        		 (hasTemperatureSensor ? 1 : 1) 
+            	+(hasHumiditySensor ? 1 : 0)
+            	+(hasPressureSensor ? 1 : 0)
+            	+(hasLightSensor ? 1 : 0)
+        	) * numSensorModules //calculate number of energie accounts from sensor 
+        	+ 2 //memory, processor
+        	+ 2</td>
+   <td>
+<p>memory, processor
+calculate number of energie accounts from sensor</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>numHosts</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>fakeProcessor</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>these are used to draw the overview of the model</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>normalRatio</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>powerSavingRatio</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>highPerformanceRatio</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+--------------- END SENSOR ---------------
+--------------- BEGIN DICE ---------------        
+--------------- END DICE ---------------
+--------------- BEGIN WAKEUP ---------------
+--------------- END WAKEUP ---------------
+   </td>
+</tr>
+<tr class="local">
+   <td>networkType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"CustomWiseRoute"</td>
+   <td>
+--------------- BEGIN WIRELESSNODE ---------------
+   </td>
+</tr>
+<tr class="local">
+   <td>transportType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>type of the transport layer</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>sessionType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>type of the session layer</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>presentationType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>type of the presentation layer</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>applicationType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"MatrixApplication"</td>
+   <td>
+<p>type of the application layer</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>mobilityType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"StationaryMobility"</td>
+   <td>
+<p>type of the mobility module</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>arpType</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"ArpHost"</td>
+   <td>
+<p>type of address resolution module</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>class</td>
+   <td><i>SensorNode</i></td>
+   <td>
+<p>@class("SensorNode");</p>
+</td>
+</tr>
+<tr>
+   <td>display</td>
+   <td><i>bgb=447,450;i=block/ifcard</i></td>
+   <td>
+</td>
+</tr>
+<tr>
+   <td>node</td>
+   <td><i></i></td>
+   <td>
+<p>string nicType = default("<a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">Wakeup_Nic802154_TI_CC2420A</a>");</p>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>radioIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>gate for sendDirect</p>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.notAffectedByHostState</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>write per-activity and per-device statistics to omnetpp.sca
+(if false, only total energy and lifetime are written)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.detail</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>subscribe to battery status and record time series
+data in omnetpp.vec (resolution depends on battery's 
+publishDelta)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.BatteryStats.html">batteryStats</a>.timeSeries</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.nominal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>nominal battery capacity</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.capacity</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>battery capacity</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.voltage</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>nominal voltage</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.resolution</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>capacity is updated at least every resolution time</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.publishDelta</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>if &gt; 0, capacity is published to the BB each publishTime 
+interval</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.modules.power.battery.SimpleBattery.html">battery</a>.publishTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>number of modules that will draw energy from the 
+battery</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.TemperatureSensor.html">TemperatureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.HumiditySensor.html">HumiditySensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.PressureSensor.html">PressureSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SensingUnit.SensingUnitInterface.html">SensingUnit</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConditioner.SignalConditionerInterface.html">SignalConditioner</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.SignalConverter.SignalConverterInterface.html">SignalConverter</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.LightSensor.html">LightSensor</a>.<a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Sensor.Transducer.TransducerInterface.html">Transducer</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.storageSize</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.currentConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Memory.Memory.html">Memory</a>.energyConsumption</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.numGates</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.currentConsumptionNormal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>NORMAL mode</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.energyConsumptionNormal</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.currentConsumptionPowerSaving</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>POWER_SAVING mode</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.energyConsumptionPowerSaving</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.currentConsumptionHighPerformance</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>HIGH_PERFORMANCE mode</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../SensorTechnology/doc/neddoc/sensortechnology.src.SensorNode.Processor.ExampleProcessor.html">Processor</a>.energyConsumptionHighPerformance</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.notAffectedByHostState</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>72 bit</td>
+   <td>
+<p>length of the MAC packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.address</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"auto"</td>
+   <td>
+<p>MAC address as hex string (12 hex digits), or
+"auto". "auto" values will be replaced by
+a generated MAC address in init stage 1.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.trace</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.queueLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100</td>
+   <td>
+<p>size of the MAC queue (maximum number of packets in Tx buffer)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.bitrate</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>250000 bps</td>
+   <td>
+<p>bit rate</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.ccaDetectionTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.000128 s</td>
+   <td>
+<p>Clear Channel Assessment detection time</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.rxSetupTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>Time to setup radio to reception state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.aTurnaroundTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.000192 s</td>
+   <td>
+<p>Time to switch radio from Rx to Tx state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.txPower</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>tx power [mW]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.useMACAcks</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>Send/Expect MAC acks for unicast traffic?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.macMaxFrameRetries</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>3</td>
+   <td>
+<p>Maximum number of frame retransmission,
+only used when usage of MAC acks is enabled.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.macAckWaitDuration</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.00056 s</td>
+   <td>
+<p>Time to wait for an acknowledgement after transmitting a unicast frame.
+Only used when usage of MAC acks is enabled.
+Value is calculated from 1+12+10+12 symbols, which is defined for nonbeacon-enabled PAN.
+In the non-beacon-enabled case, the receiver responds at aTurnaroundTime 
+(i.e. the time for the sender and receiver to both be guaranteed to have 
+switched from Tx to Rx and vice verse).  This gives the value 192us + 
+352us = 544us (there's been some discussion about the "extra" 1 symbol == 16us) 
+[section 7.5.6.4.2 of the specification].</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.ackLength</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>40 bit</td>
+   <td>
+<p>Complete MAC ack message length (in bits) 
+(! headerLength is not added to this),
+only used when usage of MAC acks is enabled.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.sifs</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.000192 s</td>
+   <td>
+<p>Simple interframe space (12 symbols). Time to wait between receiving a frame and acknowledging it.
+Should be bigger than the maximum time for switching between Tx and Rx at the receiver.
+Only used when usage of MAC acks is enabled.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.macMaxCSMABackoffs</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>
+<p>maximum backoffs</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.aUnitBackoffPeriod</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.00032 s</td>
+   <td>
+<p>base unit for all backoff calculations</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.contentionWindow</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p># of backoff periods of the initial contention window
+(for linear and constant backoff method only)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.macMinBE</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>3</td>
+   <td>
+<p>minimum backoff exponent (for exponential backoff method only)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.macMaxBE</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>5</td>
+   <td>
+<p>maximum backoff exponent (for exponential backoff method only)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch for core framework</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.recordStats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>enable/disable tracking of statistics (eg. cOutvectors)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>defines the length of the phy header (/preamble)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.usePropagationDelay</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>Should transmission delay be simulated?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.thermalNoise</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>the strength of the thermal noise [dBm]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.useThermalNoise</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>should thermal noise be considered?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.analogueModels</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>
+<p>Specification of the analogue models to use and their parameters</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.decider</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>
+<p>Specification of the decider to use and its parameters</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.sensitivity</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>The sensitivity of the physical layer [dBm]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.maxTXPower</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>The maximum transimission power of the physical layer [mW]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeRXToTX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeRXToSleep</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Elapsed time to switch from receive to sleep state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeTXToRX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Elapsed time to switch from send to receive state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeTXToSleep</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Elapsed time to switch from send to sleep state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeSleepToRX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Elapsed time to switch from sleep to receive state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeSleepToTX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Elapsed time to switch from sleep to send state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.initialRadioState</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>State the radio is initially in (0=RX, 1=TX, 2=Sleep)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.radioMinAtt</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1.0</td>
+   <td>
+<p>radios gain factor (attenuation) while receiving</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.radioMaxAtt</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.0</td>
+   <td>
+<p>radios gain factor (attenuation) while not receiving</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.nbRadioChannels</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1</td>
+   <td>
+<p>Number of available radio channels. Defaults to single channel radio.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.initialRadioChannel</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Initial radio channel.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">nic</a>.<a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.numActivities</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>7</td>
+   <td>
+<p>the number of different power consuming activities the phy layer has
+change this parameter if your decider or physical layer uses more
+than the default 5 activities (sleep, rx, tx, switching, decoding)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">netwl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">netwl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">tranl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">tranl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">sessl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">sessl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">presl</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>stats switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseNetwLayer.html">presl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the network packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../MiXiM/doc/neddoc/org.mixim.base.modules.IBaseApplLayer.html">appl</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td></td>
+   <td>
+<p>length of the application message header (in bits)</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// compound module for a sensor node with wakeup receiver using the DicePhyMacHost
+// this module is similar to the DicePhyMacHost (but wakeup and sensor functionality is added)
+//
+</span><span style="color: #800000; font-weight: bold; ">module</span><span style="color: #000000; "> </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #808080; font-style: italic; ">//route tree builds the networks routing as a tree, but stored as an array
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//the position in the array refers to the id of the node and the value at
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//this position must be the father of the node inside the routing tree
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//the root node inside the tree has it's own id as father value
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//for example:
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//routeTree = 2 2 2
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//builds the following tree:
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//     2
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//   /  \
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//  0   1
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//</span><span style="color: #000080; ">@see</span><span style="color: #808080; font-style: italic; "> CustomWiseRoute::convertTreeToRouteTable() for more information about how
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//the conversion is done
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">routeTree</span><span style="color: #000000; ">;
+
+		</span><span style="color: #808080; font-style: italic; ">//--------------- BEGIN SENSOR ---------------
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//these parameters are generated automatically, from parent module, or via ini-file
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">sensingIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">shiftProcessorModeNormalIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">shiftProcessorModePowerSavingIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">shiftProcessorModeHighPerformanceIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">collectStatisticsIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">readAndClearStorageIntervall</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">s</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">noisy</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">bps</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">//set this and set it to true to generate all sensors randomly
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">allSensorsRandom</span><span style="color: #000000; "> = </span><span style="color: #008000; ">true</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasHumiditySensor</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasPressureSensor</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasLightSensor</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numSensors</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">0</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numSensorModules</span><span style="color: #000000; "> = </span><span style="color: #008000; ">4</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">//memory, processor
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//calculate number of energie accounts from sensor 
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//physical layer, sensornode
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//memory, processor
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//calculate number of energie accounts from sensor 
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numDevices</span><span style="color: #000000; "> = (
+        		 (</span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> ? </span><span style="color: #008000; ">1</span><span style="color: #000000; "> : </span><span style="color: #008000; ">1</span><span style="color: #000000; ">) 
+            	+(</span><span style="color: #000000; ">hasHumiditySensor</span><span style="color: #000000; "> ? </span><span style="color: #008000; ">1</span><span style="color: #000000; "> : </span><span style="color: #008000; ">0</span><span style="color: #000000; ">)
+            	+(</span><span style="color: #000000; ">hasPressureSensor</span><span style="color: #000000; "> ? </span><span style="color: #008000; ">1</span><span style="color: #000000; "> : </span><span style="color: #008000; ">0</span><span style="color: #000000; ">)
+            	+(</span><span style="color: #000000; ">hasLightSensor</span><span style="color: #000000; "> ? </span><span style="color: #008000; ">1</span><span style="color: #000000; "> : </span><span style="color: #008000; ">0</span><span style="color: #000000; ">)
+        	) * </span><span style="color: #000000; ">numSensorModules</span><span style="color: #000000; "> </span><span style="color: #808080; font-style: italic; ">//calculate number of energie accounts from sensor 
+</span><span style="color: #000000; ">        	+ </span><span style="color: #008000; ">2</span><span style="color: #000000; "> </span><span style="color: #808080; font-style: italic; ">//memory, processor
+</span><span style="color: #000000; ">        	+ </span><span style="color: #008000; ">2</span><span style="color: #000000; ">;</span><span style="color: #808080; font-style: italic; ">//physical layer, sensornode
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numHosts</span><span style="color: #000000; ">;
+        </span><span style="color: #808080; font-style: italic; ">//@class(&quot;SensorNode&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #000000; font-weight: bold; ">@class</span><span style="color: #000000; ">(</span><span style="color: #000000; ">SensorNode</span><span style="color: #000000; ">);
+        </span><span style="color: #808080; font-style: italic; ">//these are used to draw the overview of the model
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">bool</span><span style="color: #000000; "> </span><span style="color: #000000; ">fakeProcessor</span><span style="color: #000000; "> = </span><span style="color: #008000; ">false</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bgb=447,450;i=block/ifcard&quot;</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000000; ">batteryStats</span><span style="color: #000000; ">.</span><span style="color: #000000; ">detail</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">batteryStats</span><span style="color: #000000; ">.</span><span style="color: #000000; ">timeSeries</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">false</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">nominal</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1000</span><span style="color: #000000; "> </span><span style="color: #000000; ">mAh</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">capacity</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">nominal</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">voltage</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">3</span><span style="color: #000000; "> </span><span style="color: #000000; ">V</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">resolution</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">60</span><span style="color: #000000; "> </span><span style="color: #000000; ">s</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">publishDelta</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">publishTime</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #000000; ">battery</span><span style="color: #000000; ">.</span><span style="color: #000000; ">resolution</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">normalRatio</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">powerSavingRatio</span><span style="color: #000000; ">;
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">highPerformanceRatio</span><span style="color: #000000; ">;
+		</span><span style="color: #808080; font-style: italic; ">//--------------- END SENSOR ---------------
+</span><span style="color: #000000; ">
+		</span><span style="color: #808080; font-style: italic; ">//--------------- BEGIN DICE ---------------        
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//--------------- END DICE ---------------
+</span><span style="color: #000000; ">
+        </span><span style="color: #808080; font-style: italic; ">//--------------- BEGIN WAKEUP ---------------
+</span><span style="color: #000000; ">		</span><span style="color: #808080; font-style: italic; ">//--------------- END WAKEUP ---------------
+</span><span style="color: #000000; ">
+        </span><span style="color: #808080; font-style: italic; ">//--------------- BEGIN WIRELESSNODE ---------------
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">networkType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;CustomWiseRoute&quot;</span><span style="color: #000000; ">);       </span><span style="color: #808080; font-style: italic; ">//type of the network layer
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">);       </span><span style="color: #808080; font-style: italic; ">//type of the transport layer
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">sessionType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">);                    </span><span style="color: #808080; font-style: italic; ">//type of the session layer
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">presentationType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">);               </span><span style="color: #808080; font-style: italic; ">//type of the presentation layer
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">applicationType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;MatrixApplication&quot;</span><span style="color: #000000; ">);  </span><span style="color: #808080; font-style: italic; ">//type of the application layer
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">mobilityType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;StationaryMobility&quot;</span><span style="color: #000000; ">); </span><span style="color: #808080; font-style: italic; ">//type of the mobility module
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">arpType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ArpHost&quot;</span><span style="color: #000000; ">);                 </span><span style="color: #808080; font-style: italic; ">//type of address resolution module
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//string nicType = default(&quot;Wakeup_Nic802154_TI_CC2420A&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #000000; font-weight: bold; ">@node</span><span style="color: #000000; ">();
+		</span><span style="color: #808080; font-style: italic; ">//--------------- END WIRELESSNODE ---------------
+</span><span style="color: #000000; ">
+        </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">nodeAddr</span><span style="color: #000000; "> = </span><span style="color: #000000; ">arp</span><span style="color: #000000; ">.</span><span style="color: #000000; ">offset</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">nodeAddr</span><span style="color: #000000; "> = </span><span style="color: #000000; ">arp</span><span style="color: #000000; ">.</span><span style="color: #000000; ">offset</span><span style="color: #000000; ">;
+
+    </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">input</span><span style="color: #000000; "> </span><span style="color: #000000; ">radioIn</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// gate for sendDirect
+</span><span style="color: #000000; ">
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #808080; font-style: italic; ">//--------------- BEGIN DICE ---------------
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">batteryStats</span><span style="color: #000000; ">: </span><span style="color: #000000; ">BatteryStats</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=140,240;i=block/table,#FF8040&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">battery</span><span style="color: #000000; ">: </span><span style="color: #000000; ">SimpleBattery</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=140,170;i=block/plug,#FF8000&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #000000; ">numDevices</span><span style="color: #000000; "> = </span><span style="color: #000000; ">numDevices</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #808080; font-style: italic; ">//--------------- END DICE ---------------
+</span><span style="color: #000000; ">
+        </span><span style="color: #808080; font-style: italic; ">//--------------- BEGIN SENSOR ---------------
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">TemperatureSensor</span><span style="color: #000000; ">: </span><span style="color: #000000; ">TemperatureSensor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasTemperatureSensor</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=275,51&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; "> = </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; "> = </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #000000; ">HumiditySensor</span><span style="color: #000000; ">: </span><span style="color: #000000; ">HumiditySensor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasHumiditySensor</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=275,120&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; "> = </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; "> = </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #000000; ">PressureSensor</span><span style="color: #000000; ">: </span><span style="color: #000000; ">PressureSensor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasPressureSensor</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=275,190&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; "> = </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; "> = </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #000000; ">LightSensor</span><span style="color: #000000; ">: </span><span style="color: #000000; ">LightSensor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">hasLightSensor</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=275,260&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; "> = </span><span style="color: #000000; ">dataBandwidth</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; "> = </span><span style="color: #000000; ">controlBandwidth</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #000000; ">Memory</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Memory</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=400,51&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #808080; font-style: italic; ">//Processor is created inside the C++-Class in order to create the gates to the
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//different sensors dynamically by the input
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">Processor</span><span style="color: #000000; ">: </span><span style="color: #000000; ">ExampleProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">fakeProcessor</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=400,159&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #808080; font-style: italic; ">//--------------- END SENSOR ---------------
+</span><span style="color: #000000; ">
+        </span><span style="color: #808080; font-style: italic; ">//--------------- BEGIN WAKEUP ---------------
+</span><span style="color: #000000; ">		</span><span style="color: #808080; font-style: italic; ">//--------------- END WAKEUP ---------------
+</span><span style="color: #000000; ">
+		</span><span style="color: #808080; font-style: italic; ">//--------------- BEGIN WIRELESSNODE ---------------
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">arp</span><span style="color: #000000; ">: &lt;</span><span style="color: #000000; ">arpType</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">IBaseArp</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=140,100;i=block/network2&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">mobility</span><span style="color: #000000; ">: &lt;</span><span style="color: #000000; ">mobilityType</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">inet</span><span style="color: #000000; ">.</span><span style="color: #000000; ">mobility</span><span style="color: #000000; ">.</span><span style="color: #000000; ">IMobility</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=140,30;i=block/cogwheel&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">nic</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Wakeup_Nic802154_TI_CC2420A</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=70,380;i=block/wrxtx,#008000&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #808080; font-style: italic; ">// OSI network layer
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">: &lt;</span><span style="color: #000000; ">networkType</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">IBaseNetwLayer</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=70,310;i=block/layer&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #808080; font-style: italic; ">// OSI transport layer if defined
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">: &lt;</span><span style="color: #000000; ">transportType</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">IBaseNetwLayer</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=70,240;i=block/layer&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #808080; font-style: italic; ">// OSI session layer if defined
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">: &lt;</span><span style="color: #000000; ">sessionType</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">IBaseNetwLayer</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">sessionType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=70,170;i=block/layer&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #808080; font-style: italic; ">// OSI presentation layer if defined
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">: &lt;</span><span style="color: #000000; ">presentationType</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">IBaseNetwLayer</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">presentationType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=70,100;i=block/layer&quot;</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">: &lt;</span><span style="color: #000000; ">applicationType</span><span style="color: #000000; ">&gt; </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">IBaseApplLayer</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">applicationType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> {
+            </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+                </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=70,30;i=app&quot;</span><span style="color: #000000; ">);
+        }
+		</span><span style="color: #808080; font-style: italic; ">//--------------- END WIRELESSNODE ---------------
+</span><span style="color: #000000; ">
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; ">:
+
+        </span><span style="color: #000000; ">nic</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">nic</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">nic</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,70,0,70,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">nic</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,70,0,70,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+
+        </span><span style="color: #0000ff; font-style: italic; ">//# connections of transport, session, and presentation layer depending of the
+</span><span style="color: #000000; ">        </span><span style="color: #0000ff; font-style: italic; ">//# existence
+</span><span style="color: #000000; ">        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> (</span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">) {
+            </span><span style="color: #0000ff; font-style: italic; ">//# transport layer exists, so we can connect netwl &lt;--&gt; tranl
+</span><span style="color: #000000; ">            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> (</span><span style="color: #000000; ">sessionType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> == </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">) {
+            </span><span style="color: #0000ff; font-style: italic; ">//# session layer exists but no transport layer, so we can connect netwl &lt;--&gt; sessl
+</span><span style="color: #000000; ">            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> (</span><span style="color: #000000; ">sessionType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">) {
+            </span><span style="color: #0000ff; font-style: italic; ">//# session layer and transport layer exists, so we can connect tranl &lt;--&gt; sessl
+</span><span style="color: #000000; ">            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> (</span><span style="color: #000000; ">presentationType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">sessionType</span><span style="color: #000000; "> == </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> == </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">) {
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> (</span><span style="color: #000000; ">presentationType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">sessionType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">) {
+            </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> (</span><span style="color: #000000; ">presentationType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">sessionType</span><span style="color: #000000; "> == </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">) {
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+        }
+
+        </span><span style="color: #0000ff; font-style: italic; ">//# finaly we connect the highest existing layer of transport, session, or presentation to
+</span><span style="color: #000000; ">        </span><span style="color: #0000ff; font-style: italic; ">//# the application layer if specified
+</span><span style="color: #000000; ">        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> (</span><span style="color: #000000; ">applicationType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">presentationType</span><span style="color: #000000; "> == </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">sessionType</span><span style="color: #000000; "> == </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> == </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">) {
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,70,0,70,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">netwl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,70,0,70,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> (</span><span style="color: #000000; ">applicationType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">presentationType</span><span style="color: #000000; "> == </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">sessionType</span><span style="color: #000000; "> == </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">transportType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">) {
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,70,0,70,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">tranl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,70,0,70,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> (</span><span style="color: #000000; ">applicationType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">presentationType</span><span style="color: #000000; "> == </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">sessionType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">) {
+            </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,70,0,70,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">sessl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,70,0,70,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+        }
+        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> (</span><span style="color: #000000; ">applicationType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; "> &amp;&amp; </span><span style="color: #000000; ">presentationType</span><span style="color: #000000; "> != </span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">) {
+            </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,70,0,70,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">presl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,70,0,70,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">appl</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+        }
+
+        </span><span style="color: #000000; ">radioIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">nic</span><span style="color: #000000; ">.</span><span style="color: #000000; ">radioIn</span><span style="color: #000000; ">;
+
+
+        </span><span style="color: #808080; font-style: italic; ">//just for drawing the generated connections
+</span><span style="color: #000000; ">        </span><span style="color: #800000; font-weight: bold; ">if</span><span style="color: #000000; "> </span><span style="color: #000000; ">fakeProcessor</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; ">HumiditySensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromTransducerToNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">Processor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromHumiditySensor</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">TemperatureSensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromTransducerToNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">Processor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromTemperatureSensor</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">PressureSensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromTransducerToNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">Processor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromPressureSensor</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">LightSensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromTransducerToNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">Processor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">fromLightSensor</span><span style="color: #000000; ">;
+
+            </span><span style="color: #000000; ">HumiditySensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toSensingUnitFromNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">Processor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toHumiditySensor</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">TemperatureSensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toSensingUnitFromNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">Processor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toTemperatureSensor</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">PressureSensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toSensingUnitFromNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">Processor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toPressureSensor</span><span style="color: #000000; ">;
+            </span><span style="color: #000000; ">LightSensor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toSensingUnitFromNodeProcessor</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">ned</span><span style="color: #000000; ">.</span><span style="color: #000000; ">DatarateChannel</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">Processor</span><span style="color: #000000; ">.</span><span style="color: #000000; ">toLightSensor</span><span style="color: #000000; ">;
+        }
+}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

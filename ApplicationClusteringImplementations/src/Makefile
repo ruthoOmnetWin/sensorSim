@@ -530,6 +530,7 @@ $O/Netwl/ClusterApplWiseRoute.o: Netwl/ClusterApplWiseRoute.cc \
 	$(MIXIM_PROJ)/src/base/messages/MiximAirFrame_m.h \
 	$(MIXIM_PROJ)/src/base/messages/NetwPkt_m.h \
 	$(MIXIM_PROJ)/src/base/messages/WakeUpPacket_m.h \
+	$(MIXIM_PROJ)/src/base/modules/ArpInterface.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseBattery.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseLayer.h \
 	$(MIXIM_PROJ)/src/base/modules/BaseModule.h \

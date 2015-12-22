@@ -28,7 +28,7 @@ protected:
     bool isLeafClusterAppl;
     bool isClusterMasterClusterAppl;
     void handleLowerMsg(cMessage* msg);
-
+    void handleUpperMsg(cMessage* msg);
 public:
     LAddress::L3Type getMyNetworkAddress();
     void initialize(int stage);

@@ -49,6 +49,7 @@ public:
     AdjListElement* findListEnd(AdjListElement*);
     void insertList(int index, int value);
     bool containsElement(AdjListElement* elem, int value);
+    bool isAddrFatherOrChild(int addr);
 
     int* routeTree;
     AdjListElement* routeTreeAdjList;

@@ -27,6 +27,11 @@ import org.mixim.base.modules.BaseNetwork;
 ////direct childs of the master are ClusterMaster. they must use the appl layer ClusterMasterClusterAppl.
 ////the leaf nodes in the routing tree should connect directly to a clusterMaster. they must use the appl layer LeafClusterAppl.
 //
+//organize cluster
+//
+////use the given module types to define one Master and muliple clusters with one ClusterMaster and multiple Leafs for each
+////define special cluster information inside the ClusterMaster, is will be transferred to the Leafs automatically
+////these informations can be: room number
 network Szenario2 extends BaseNetwork
 {
     parameters:

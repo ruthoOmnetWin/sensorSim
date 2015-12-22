@@ -1,0 +1,410 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Simple Module <i>CSMA802154HostStateHandled</i></h2>
+<b>Package:</b> applicationclusteringimplementations.MacLayer<br/><b>File: <a href="src-MacLayer-CSMA802154.ned.html">src/MacLayer/CSMA802154.ned</a></b><br/><p><a href="../doxy/classCSMA802154HostStateHandled.html" target="mainframe"><b>C++ definition</b></a></p>
+<p>(no description)</p><h3 class="subtitle">Extends:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="../../../MiXiM/doc/neddoc/org.mixim.modules.mac.csma.html">csma</a>
+   </td>
+   <td>
+<i>simple&nbsp;module</i>
+   </td>
+   <td>
+
+<p>Generic CSMA protocol supporting Mac-ACKs as well as
+constant, linear or exponential backoff times.</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Used in compound modules:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="applicationclusteringimplementations.Wakeup_Nic802154_TI_CC2420A.html">Wakeup_Nic802154_TI_CC2420A</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+
+<p>This NIC implements a Texas Instruments CC 2420 802.15.4 network interface card
+using the CSMA protocol as specified in IEEE 802.15.4-2006.</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>notAffectedByHostState</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>72 bit</td>
+   <td>
+<p>length of the MAC packet header (in bits)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>address</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"auto"</td>
+   <td>
+<p>MAC address as hex string (12 hex digits), or
+"auto". "auto" values will be replaced by
+a generated MAC address in init stage 1.</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr class="inherited">
+   <td>trace</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>queueLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100</td>
+   <td>
+<p>size of the MAC queue (maximum number of packets in Tx buffer)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>bitrate</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>250000 bps</td>
+   <td>
+<p>bit rate</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>ccaDetectionTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.000128 s</td>
+   <td>
+<p>Clear Channel Assessment detection time</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>rxSetupTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>Time to setup radio to reception state</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>aTurnaroundTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.000192 s</td>
+   <td>
+<p>Time to switch radio from Rx to Tx state</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>txPower</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>tx power [mW]</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>useMACAcks</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>Send/Expect MAC acks for unicast traffic?</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>macMaxFrameRetries</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>3</td>
+   <td>
+<p>Maximum number of frame retransmission,
+only used when usage of MAC acks is enabled.</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>macAckWaitDuration</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.00056 s</td>
+   <td>
+<p>Time to wait for an acknowledgement after transmitting a unicast frame.
+Only used when usage of MAC acks is enabled.
+Value is calculated from 1+12+10+12 symbols, which is defined for nonbeacon-enabled PAN.
+In the non-beacon-enabled case, the receiver responds at aTurnaroundTime 
+(i.e. the time for the sender and receiver to both be guaranteed to have 
+switched from Tx to Rx and vice verse).  This gives the value 192us + 
+352us = 544us (there's been some discussion about the "extra" 1 symbol == 16us) 
+[section 7.5.6.4.2 of the specification].</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>ackLength</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>40 bit</td>
+   <td>
+<p>Complete MAC ack message length (in bits) 
+(! headerLength is not added to this),
+only used when usage of MAC acks is enabled.</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>sifs</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.000192 s</td>
+   <td>
+<p>Simple interframe space (12 symbols). Time to wait between receiving a frame and acknowledging it.
+Should be bigger than the maximum time for switching between Tx and Rx at the receiver.
+Only used when usage of MAC acks is enabled.</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>backoffMethod</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"exponential"</td>
+   <td>
+<p>Backoff method to use: constant, linear or exponential</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>macMaxCSMABackoffs</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>
+<p>maximum backoffs</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>aUnitBackoffPeriod</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.00032 s</td>
+   <td>
+<p>base unit for all backoff calculations</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>contentionWindow</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p># of backoff periods of the initial contention window
+(for linear and constant backoff method only)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>macMinBE</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>3</td>
+   <td>
+<p>minimum backoff exponent (for exponential backoff method only)</p>
+   </td>
+</tr>
+<tr class="inherited">
+   <td>macMaxBE</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>5</td>
+   <td>
+<p>maximum backoff exponent (for exponential backoff method only)</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Properties:</h3>
+<table class="propertiestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>class</td>
+   <td><i>CSMA802154HostStateHandled</i></td>
+   <td>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="inherited">
+   <td>upperLayerIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>from upper layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>upperLayerOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>to uppe layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>upperControlIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>control from upper layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>upperControlOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>control to upper layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>lowerLayerIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>from lower layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>lowerLayerOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>to lower layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>lowerControlIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>control from lower layer</p>
+</td>
+</tr>
+<tr class="inherited">
+   <td>lowerControlOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>control to lower layer</p>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #800000; font-weight: bold; ">simple</span><span style="color: #000000; "> </span><span style="color: #000000; ">CSMA802154HostStateHandled</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">csma</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; font-weight: bold; ">@class</span><span style="color: #000000; ">(</span><span style="color: #000000; ">CSMA802154HostStateHandled</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000000; ">headerLength</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">bit</span><span style="color: #000000; ">) = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">72</span><span style="color: #000000; "> </span><span style="color: #000000; ">bit</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">macMaxCSMABackoffs</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">4</span><span style="color: #000000; ">);  </span><span style="color: #808080; font-style: italic; ">// takes values between 0 and 5  
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//txPower @unit(mW);
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">useMACAcks</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">true</span><span style="color: #000000; ">);
+
+        </span><span style="color: #000000; ">backoffMethod</span><span style="color: #000000; "> = </span><span style="color: #008000; ">&quot;exponential&quot;</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">macMaxBE</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">5</span><span style="color: #000000; ">);	</span><span style="color: #808080; font-style: italic; ">// takes values between 3 and 8
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">macMinBE</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">3</span><span style="color: #000000; ">);	</span><span style="color: #808080; font-style: italic; ">// takes values between 0 and macMaxBE
+</span><span style="color: #000000; ">}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

@@ -1,0 +1,1694 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>AbstractClusterAppl.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>AbstractClusterAppl_8cc</filename>
+    <includes id="AbstractClusterAppl_8h" name="AbstractClusterAppl.h" local="no" imported="no">AbstractClusterAppl.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>AbstractClusterAppl.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>AbstractClusterAppl_8h</filename>
+    <class kind="class">AbstractClusterAppl</class>
+  </compound>
+  <compound kind="file">
+    <name>ApplicationClusteringImplementations.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/ACI/</path>
+    <filename>ApplicationClusteringImplementations_8cc</filename>
+    <includes id="ApplicationClusteringImplementations_8h" name="ApplicationClusteringImplementations.h" local="no" imported="no">ApplicationClusteringImplementations.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>ApplicationClusteringImplementations.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/ACI/</path>
+    <filename>ApplicationClusteringImplementations_8h</filename>
+    <class kind="class">ApplicationClusteringImplementations</class>
+  </compound>
+  <compound kind="file">
+    <name>BatteryStatsInfo_m.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/BatteryStatsInfo/</path>
+    <filename>BatteryStatsInfo__m_8h</filename>
+    <class kind="class">BatteryStatsInfo</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>MSGC_VERSION</name>
+      <anchorfile>BatteryStatsInfo__m_8h.html</anchorfile>
+      <anchor>a77f5ea746b531cbdbc322a93741e33a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>doPacking</name>
+      <anchorfile>BatteryStatsInfo__m_8h.html</anchorfile>
+      <anchor>a9e6f3a00952bb93501c6df8f2597c8c1</anchor>
+      <arglist>(cCommBuffer *b, BatteryStatsInfo &amp;obj)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>doUnpacking</name>
+      <anchorfile>BatteryStatsInfo__m_8h.html</anchorfile>
+      <anchor>ad96f9a2ba55dc5ab95010093b8243894</anchor>
+      <arglist>(cCommBuffer *b, BatteryStatsInfo &amp;obj)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>BatteryStatsInfoPkt_m.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/BatteryStatsInfo/</path>
+    <filename>BatteryStatsInfoPkt__m_8h</filename>
+    <class kind="class">ApplPkt</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>MSGC_VERSION</name>
+      <anchorfile>BatteryStatsInfoPkt__m_8h.html</anchorfile>
+      <anchor>a77f5ea746b531cbdbc322a93741e33a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>doPacking</name>
+      <anchorfile>BatteryStatsInfoPkt__m_8h.html</anchorfile>
+      <anchor>a6c7f67340e32c02922398e419e944113</anchor>
+      <arglist>(cCommBuffer *b, ApplPkt &amp;obj)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>doUnpacking</name>
+      <anchorfile>BatteryStatsInfoPkt__m_8h.html</anchorfile>
+      <anchor>ae307d9cfe69e3ff0d985af50f8a22f5f</anchor>
+      <arglist>(cCommBuffer *b, ApplPkt &amp;obj)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ClusterApplWiseRoute.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Netwl/</path>
+    <filename>ClusterApplWiseRoute_8cc</filename>
+    <includes id="ClusterApplWiseRoute_8h" name="ClusterApplWiseRoute.h" local="no" imported="no">ClusterApplWiseRoute.h</includes>
+    <includes id="LeafClusterAppl_8h" name="LeafClusterAppl.h" local="no" imported="no">LeafClusterAppl.h</includes>
+    <includes id="ClusterMasterClusterAppl_8h" name="ClusterMasterClusterAppl.h" local="no" imported="no">ClusterMasterClusterAppl.h</includes>
+    <includes id="MasterClusterAppl_8h" name="MasterClusterAppl.h" local="no" imported="no">MasterClusterAppl.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>ClusterApplWiseRoute_8cc.html</anchorfile>
+      <anchor>a8391cd0a049993797d76cc4be4d7ede7</anchor>
+      <arglist>(ClusterApplWiseRoute)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ClusterApplWiseRoute.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Netwl/</path>
+    <filename>ClusterApplWiseRoute_8h</filename>
+    <includes id="CustomWiseRoute_8h" name="CustomWiseRoute.h" local="no" imported="no">CustomWiseRoute.h</includes>
+    <includes id="AbstractClusterAppl_8h" name="AbstractClusterAppl.h" local="no" imported="no">AbstractClusterAppl.h</includes>
+    <class kind="class">ClusterApplWiseRoute</class>
+  </compound>
+  <compound kind="file">
+    <name>ClusterMasterClusterAppl.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>ClusterMasterClusterAppl_8cc</filename>
+    <includes id="ClusterMasterClusterAppl_8h" name="ClusterMasterClusterAppl.h" local="no" imported="no">ClusterMasterClusterAppl.h</includes>
+    <includes id="SimpleBatteryStatsInfo_8h" name="SimpleBatteryStatsInfo.h" local="no" imported="no">SimpleBatteryStatsInfo.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>ClusterMasterClusterAppl_8cc.html</anchorfile>
+      <anchor>a8b498f9c1518fb2788363bb2ad7c15c5</anchor>
+      <arglist>(ClusterMasterClusterAppl)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>ClusterMasterClusterAppl.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>ClusterMasterClusterAppl_8h</filename>
+    <includes id="AbstractClusterAppl_8h" name="AbstractClusterAppl.h" local="no" imported="no">AbstractClusterAppl.h</includes>
+    <includes id="ClusterApplWiseRoute_8h" name="ClusterApplWiseRoute.h" local="no" imported="no">ClusterApplWiseRoute.h</includes>
+    <includes id="CustomMatrixApplication_8h" name="CustomMatrixApplication.h" local="no" imported="no">CustomMatrixApplication.h</includes>
+    <class kind="class">ClusterMasterClusterAppl</class>
+    <class kind="struct">ClusterMasterClusterAppl::SensorTypeInformation</class>
+  </compound>
+  <compound kind="file">
+    <name>CSMA802154HostStateHandled.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/MacLayer/</path>
+    <filename>CSMA802154HostStateHandled_8cc</filename>
+    <includes id="CSMA802154HostStateHandled_8h" name="CSMA802154HostStateHandled.h" local="no" imported="no">CSMA802154HostStateHandled.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>CSMA802154HostStateHandled_8cc.html</anchorfile>
+      <anchor>a60502d49b16576fcd0bfaa5e760c7b41</anchor>
+      <arglist>(CSMA802154HostStateHandled)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CSMA802154HostStateHandled.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/MacLayer/</path>
+    <filename>CSMA802154HostStateHandled_8h</filename>
+    <class kind="class">CSMA802154HostStateHandled</class>
+  </compound>
+  <compound kind="file">
+    <name>CustomDiceApplication.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>CustomDiceApplication_8cc</filename>
+    <includes id="CustomDiceApplication_8h" name="CustomDiceApplication.h" local="no" imported="no">CustomDiceApplication.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>CustomDiceApplication_8cc.html</anchorfile>
+      <anchor>ad58b802c095c3b7a98581a7d5e5d1edd</anchor>
+      <arglist>(CustomDiceApplication)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CustomDiceApplication.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>CustomDiceApplication_8h</filename>
+    <class kind="class">CustomDiceApplication</class>
+  </compound>
+  <compound kind="file">
+    <name>CustomMatrixApplication.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>CustomMatrixApplication_8cc</filename>
+    <includes id="CustomMatrixApplication_8h" name="CustomMatrixApplication.h" local="no" imported="no">CustomMatrixApplication.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>CustomMatrixApplication_8cc.html</anchorfile>
+      <anchor>ae8f791525cb577de8d5b5a2f7917cd5f</anchor>
+      <arglist>(CustomMatrixApplication)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CustomMatrixApplication.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>CustomMatrixApplication_8h</filename>
+    <class kind="class">CustomMatrixApplication</class>
+  </compound>
+  <compound kind="file">
+    <name>CustomWiseRoute.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Netwl/</path>
+    <filename>CustomWiseRoute_8cc</filename>
+    <includes id="CustomWiseRoute_8h" name="CustomWiseRoute.h" local="no" imported="no">CustomWiseRoute.h</includes>
+    <includes id="NoApplicationClusteringAppl_8h" name="NoApplicationClusteringAppl.h" local="no" imported="no">NoApplicationClusteringAppl.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>CustomWiseRoute_8cc.html</anchorfile>
+      <anchor>a06b806446d81352d0d8a8960aebd89a1</anchor>
+      <arglist>(CustomWiseRoute)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CustomWiseRoute.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Netwl/</path>
+    <filename>CustomWiseRoute_8h</filename>
+    <class kind="class">CustomWiseRoute</class>
+    <class kind="struct">CustomWiseRoute::AdjListElement</class>
+  </compound>
+  <compound kind="file">
+    <name>LeafClusterAppl.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>LeafClusterAppl_8cc</filename>
+    <includes id="LeafClusterAppl_8h" name="LeafClusterAppl.h" local="no" imported="no">LeafClusterAppl.h</includes>
+    <includes id="BatteryStatsInfo__m_8h" name="BatteryStatsInfo_m.h" local="no" imported="no">BatteryStatsInfo_m.h</includes>
+    <includes id="SimpleBatteryStatsInfo_8h" name="SimpleBatteryStatsInfo.h" local="no" imported="no">SimpleBatteryStatsInfo.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>LeafClusterAppl_8cc.html</anchorfile>
+      <anchor>a6e9501b2e8c37f3c939dd5143ee7443d</anchor>
+      <arglist>(LeafClusterAppl)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>LeafClusterAppl.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>LeafClusterAppl_8h</filename>
+    <includes id="AbstractClusterAppl_8h" name="AbstractClusterAppl.h" local="no" imported="no">AbstractClusterAppl.h</includes>
+    <includes id="CustomMatrixApplication_8h" name="CustomMatrixApplication.h" local="no" imported="no">CustomMatrixApplication.h</includes>
+    <class kind="class">LeafClusterAppl</class>
+  </compound>
+  <compound kind="file">
+    <name>MasterClusterAppl.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>MasterClusterAppl_8cc</filename>
+    <includes id="MasterClusterAppl_8h" name="MasterClusterAppl.h" local="no" imported="no">MasterClusterAppl.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>MasterClusterAppl_8cc.html</anchorfile>
+      <anchor>a042fb2018390f260690b83ac20f7befa</anchor>
+      <arglist>(MasterClusterAppl)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>MasterClusterAppl.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>MasterClusterAppl_8h</filename>
+    <includes id="CustomDiceApplication_8h" name="CustomDiceApplication.h" local="no" imported="no">CustomDiceApplication.h</includes>
+    <includes id="AbstractClusterAppl_8h" name="AbstractClusterAppl.h" local="no" imported="no">AbstractClusterAppl.h</includes>
+    <includes id="ClusterApplWiseRoute_8h" name="ClusterApplWiseRoute.h" local="no" imported="no">ClusterApplWiseRoute.h</includes>
+    <class kind="class">MasterClusterAppl</class>
+  </compound>
+  <compound kind="file">
+    <name>NoApplicationClusteringAppl.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>NoApplicationClusteringAppl_8cc</filename>
+    <includes id="NoApplicationClusteringAppl_8h" name="NoApplicationClusteringAppl.h" local="no" imported="no">NoApplicationClusteringAppl.h</includes>
+    <member kind="function">
+      <type></type>
+      <name>Define_Module</name>
+      <anchorfile>NoApplicationClusteringAppl_8cc.html</anchorfile>
+      <anchor>a2f73610a476b2327bcbeda1f0935ba7d</anchor>
+      <arglist>(NoApplicationClusteringAppl)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>NoApplicationClusteringAppl.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/Appl/</path>
+    <filename>NoApplicationClusteringAppl_8h</filename>
+    <class kind="class">NoApplicationClusteringAppl</class>
+  </compound>
+  <compound kind="file">
+    <name>README.md</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/</path>
+    <filename>README_8md</filename>
+  </compound>
+  <compound kind="file">
+    <name>SimpleBatteryStatsInfo.cc</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/BatteryStatsInfo/</path>
+    <filename>SimpleBatteryStatsInfo_8cc</filename>
+    <includes id="SimpleBatteryStatsInfo_8h" name="SimpleBatteryStatsInfo.h" local="no" imported="no">SimpleBatteryStatsInfo.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>SimpleBatteryStatsInfo.h</name>
+    <path>/home/rutho/BA/sensorSim/ApplicationClusteringImplementations/src/BatteryStatsInfo/</path>
+    <filename>SimpleBatteryStatsInfo_8h</filename>
+    <class kind="class">SimpleBatteryStatsInfo</class>
+  </compound>
+  <compound kind="class">
+    <name>AbstractClusterAppl</name>
+    <filename>classAbstractClusterAppl.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>ApplClusteringEvents</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>a39c6bb90ce1e25582afa96dfc34da2f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GET_SENSOR_DATA</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>a39c6bb90ce1e25582afa96dfc34da2f9afb6492b08fe883a6fb1c944604413dda</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GET_SENSOR_TYPES</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>a39c6bb90ce1e25582afa96dfc34da2f9a05f9a0a73a30143cbf8d99fb5f674b09</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GET_BATTERY_RES</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>a39c6bb90ce1e25582afa96dfc34da2f9a538794e963faceb0b435aaa39a3fd9af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>COUNT_EVENTS</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>a39c6bb90ce1e25582afa96dfc34da2f9ac078929317cdaf37f21e1733756f6d56</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SensorTypes</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>aecdaa24549e926e732bcf2d55b7bc6dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TEMPERATURE_SENSOR_TYPE</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>aecdaa24549e926e732bcf2d55b7bc6dda7443b0a446517803af60e6d1b29424a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PRESSURE_SENSOR_TYPE</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>aecdaa24549e926e732bcf2d55b7bc6dda4a15e633cefb28ce612f9276b49ac7f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>HUMIDITY_SENSOR_TYPE</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>aecdaa24549e926e732bcf2d55b7bc6dda7f8cc2410951a3cedcf5279f94a01b28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LIGHT_SENSOR_TYPE</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>aecdaa24549e926e732bcf2d55b7bc6dda3affe358e88511689edd64be2ee4adff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GET_SENSOR_DATA</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>a39c6bb90ce1e25582afa96dfc34da2f9afb6492b08fe883a6fb1c944604413dda</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GET_SENSOR_TYPES</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>a39c6bb90ce1e25582afa96dfc34da2f9a05f9a0a73a30143cbf8d99fb5f674b09</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GET_BATTERY_RES</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>a39c6bb90ce1e25582afa96dfc34da2f9a538794e963faceb0b435aaa39a3fd9af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>COUNT_EVENTS</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>a39c6bb90ce1e25582afa96dfc34da2f9ac078929317cdaf37f21e1733756f6d56</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TEMPERATURE_SENSOR_TYPE</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>aecdaa24549e926e732bcf2d55b7bc6dda7443b0a446517803af60e6d1b29424a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PRESSURE_SENSOR_TYPE</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>aecdaa24549e926e732bcf2d55b7bc6dda4a15e633cefb28ce612f9276b49ac7f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>HUMIDITY_SENSOR_TYPE</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>aecdaa24549e926e732bcf2d55b7bc6dda7f8cc2410951a3cedcf5279f94a01b28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LIGHT_SENSOR_TYPE</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>aecdaa24549e926e732bcf2d55b7bc6dda3affe358e88511689edd64be2ee4adff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>AbstractClusterAppl</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>a9a0e9582c432714de01af358cfda4deb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~AbstractClusterAppl</name>
+      <anchorfile>classAbstractClusterAppl.html</anchorfile>
+      <anchor>ac9e7729cc7af4416edc447ad8cceb772</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>CustomWiseRoute::AdjListElement</name>
+    <filename>structCustomWiseRoute_1_1AdjListElement.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>value</name>
+      <anchorfile>structCustomWiseRoute_1_1AdjListElement.html</anchorfile>
+      <anchor>a181dd971183cfd910954ed97484e3e58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>AdjListElement *</type>
+      <name>next</name>
+      <anchorfile>structCustomWiseRoute_1_1AdjListElement.html</anchorfile>
+      <anchor>a7b15c3a1a5e8bf94169eb07dafc32deb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ApplicationClusteringImplementations</name>
+    <filename>classApplicationClusteringImplementations.html</filename>
+    <member kind="variable" protection="private">
+      <type>SensorNode</type>
+      <name>node</name>
+      <anchorfile>classApplicationClusteringImplementations.html</anchorfile>
+      <anchor>a86c8c6823ac2bc2753738fcc53be964a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ApplPkt</name>
+    <filename>classApplPkt.html</filename>
+    <base>cPacket</base>
+    <member kind="function">
+      <type></type>
+      <name>ApplPkt</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a058f8b0ecf2d91e8cab115c71c003125</anchor>
+      <arglist>(const char *name=NULL, int kind=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ApplPkt</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a99ac5e3ea483f0aae9772447d96b9972</anchor>
+      <arglist>(const ApplPkt &amp;other)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ApplPkt</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a7e06ca5568d01a93475fdfba47d370d4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ApplPkt &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a39d15f9ca6dbf6f4922d698bdae9476c</anchor>
+      <arglist>(const ApplPkt &amp;other)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ApplPkt *</type>
+      <name>dup</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a429643038a35d9e6ce3534a2b94bcc52</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>parsimPack</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a23d07f90d0ff921cdcce9f9f0df06584</anchor>
+      <arglist>(cCommBuffer *b)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>parsimUnpack</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a35eacd7af620f71d041b3ea494b4734d</anchor>
+      <arglist>(cCommBuffer *b)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LAddress::L3Type &amp;</type>
+      <name>getDestAddr</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a4dd53461ed760068c5870935a6cf6308</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const LAddress::L3Type &amp;</type>
+      <name>getDestAddr</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a76e41003649f2f12390bbb9804451534</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setDestAddr</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a21deadd525feefe7b11d904358223b70</anchor>
+      <arglist>(const LAddress::L3Type &amp;destAddr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LAddress::L3Type &amp;</type>
+      <name>getSrcAddr</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>aed0d418d4d2489524b7077c705c61fd5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const LAddress::L3Type &amp;</type>
+      <name>getSrcAddr</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>abd501135899b049fcf58da780416606e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setSrcAddr</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>ac91196a6eb792f4cbc5e55e7f7de1098</anchor>
+      <arglist>(const LAddress::L3Type &amp;srcAddr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>getResidualRelative</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a1850b6d5d88a3fb335edc740af3cdfdc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setResidualRelative</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a9782ff4443fb7644480f5b5b642a3ec2</anchor>
+      <arglist>(double residualRelative)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>aa182016e08f9584780618ddf1ecb7237</anchor>
+      <arglist>(const ApplPkt &amp;)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>LAddress::L3Type</type>
+      <name>destAddr_var</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>acbe0030aea6e919812ea73cd63f075e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>LAddress::L3Type</type>
+      <name>srcAddr_var</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a482f3fb5f817290368a9254b73ca8976</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>residualRelative_var</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>a7cf3e80aa2ba0ed25ee04d74be6cae4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>copy</name>
+      <anchorfile>classApplPkt.html</anchorfile>
+      <anchor>afa180002894ff1e90a0da9a704ee0634</anchor>
+      <arglist>(const ApplPkt &amp;other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>BatteryStatsInfo</name>
+    <filename>classBatteryStatsInfo.html</filename>
+    <base>cMessage</base>
+    <member kind="function">
+      <type></type>
+      <name>BatteryStatsInfo</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>abd1523355c70a91bf3cf7aa14ca86874</anchor>
+      <arglist>(const char *name=NULL, int kind=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>BatteryStatsInfo</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a34df597004795e0d1a49d21f530e468a</anchor>
+      <arglist>(const BatteryStatsInfo &amp;other)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~BatteryStatsInfo</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a7aeb9d9eb725b581e60e431d5cccd884</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>BatteryStatsInfo &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>ac46c23aea0730f9e4273f2c0c7dfa992</anchor>
+      <arglist>(const BatteryStatsInfo &amp;other)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual BatteryStatsInfo *</type>
+      <name>dup</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>ae0838d8a36c59bd6b900b760ef5a0a36</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>parsimPack</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a17cc8f4df9554e45e29e1e97b50f4fd3</anchor>
+      <arglist>(cCommBuffer *b)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>parsimUnpack</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a07283aa9a6af0231c482c21cfb0c247b</anchor>
+      <arglist>(cCommBuffer *b)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>getSource</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a55469e83a2578b2e050d7bdf0ea5df7f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setSource</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a49de1db4e641270eaef6eb6c6eba660d</anchor>
+      <arglist>(int source)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>getDestination</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a73534bab019b1d6f233744b5ca8201a1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setDestination</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a5a2c53683ca8759065564c9f857c2ce8</anchor>
+      <arglist>(int destination)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>getResidualRelative</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a02839641de08091425ba6042f6fa90de</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setResidualRelative</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a8398c99ab3374e881a4eb7a89244bf64</anchor>
+      <arglist>(double residualRelative)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a09842af3a399fd455251e24a90eb61e8</anchor>
+      <arglist>(const BatteryStatsInfo &amp;)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>source_var</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>adbe826ae155e4a20c751990c9e6eb57d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>destination_var</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>aa4894cc13b02de6731f1c34fa7fbaf3a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>residualRelative_var</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a22312780f9380b4a64a325fa8f0a410c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>copy</name>
+      <anchorfile>classBatteryStatsInfo.html</anchorfile>
+      <anchor>a26f66fb22e1c7037acba65ad785106f1</anchor>
+      <arglist>(const BatteryStatsInfo &amp;other)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ClusterApplWiseRoute</name>
+    <filename>classClusterApplWiseRoute.html</filename>
+    <base>CustomWiseRoute</base>
+    <member kind="function">
+      <type>LAddress::L3Type</type>
+      <name>getMyNetworkAddress</name>
+      <anchorfile>classClusterApplWiseRoute.html</anchorfile>
+      <anchor>adab7fa128ed12f68d9e58d6c3c87263e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classClusterApplWiseRoute.html</anchorfile>
+      <anchor>a36dcc253ae63395ae5f40e1efa2ef081</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleLowerMsg</name>
+      <anchorfile>classClusterApplWiseRoute.html</anchorfile>
+      <anchor>af5ae642c675732c7b3cb3c18ec412044</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleUpperMsg</name>
+      <anchorfile>classClusterApplWiseRoute.html</anchorfile>
+      <anchor>a0980640ed16546c3922a8535d24fd22b</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>AbstractClusterAppl *</type>
+      <name>appl</name>
+      <anchorfile>classClusterApplWiseRoute.html</anchorfile>
+      <anchor>a4cb9c2d6f039812268f295ae193a041d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>isMasterClusterAppl</name>
+      <anchorfile>classClusterApplWiseRoute.html</anchorfile>
+      <anchor>a86c233d129e74d960ff36b56c59ce934</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>isLeafClusterAppl</name>
+      <anchorfile>classClusterApplWiseRoute.html</anchorfile>
+      <anchor>a60c26e0d35f706f5aaaee18cd159182d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>isClusterMasterClusterAppl</name>
+      <anchorfile>classClusterApplWiseRoute.html</anchorfile>
+      <anchor>a3a62a92c49d452f00cef65934966ea4f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ClusterMasterClusterAppl</name>
+    <filename>classClusterMasterClusterAppl.html</filename>
+    <base>CustomMatrixApplication</base>
+    <base>AbstractClusterAppl</base>
+    <class kind="struct">ClusterMasterClusterAppl::SensorTypeInformation</class>
+    <member kind="function">
+      <type></type>
+      <name>ClusterMasterClusterAppl</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>a18f74ca7b6f84a6cd109d21c5a756903</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ClusterMasterClusterAppl</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>adc0fed68d02f98f9aad04b259753cbe3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>ae02050b6428b843687bc306e32469ae8</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>aabd2a3512d1c6782fb07ee74fbc9a4e9</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>SensorTypeInformation *</type>
+      <name>findNodeById</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>aa7f2f011b50d9cbd3e713683941a864c</anchor>
+      <arglist>(int nodeNetwAddr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>incrementCounterSensorNodeAnswers</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>a5a3f1a7a874f3c85ed0273c29ea92708</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; SensorTypeInformation &gt;</type>
+      <name>SensorTypeInformationVector</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>ae8ecb43f4ee7908573980de2ee819ecb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>numChildNodes</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>aa3ffda73f6f3774c893c0feb6da9f19f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>counterSensorNodeAnswers</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>a9c4178cc4a11cee12056c7c947c757db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ClusterApplWiseRoute *</type>
+      <name>NetwLayer</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>ae1a3de60c327dfb359bce974a0aa20af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>CustomWiseRoute::AdjListElement *</type>
+      <name>childNodes</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>a5bbde0af0a053949bd02537e107818be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cMessage *</type>
+      <name>InitMeasuringEvent</name>
+      <anchorfile>classClusterMasterClusterAppl.html</anchorfile>
+      <anchor>ad86a19c0351afdd7c03714b365a92417</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>CSMA802154HostStateHandled</name>
+    <filename>classCSMA802154HostStateHandled.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>~CSMA802154HostStateHandled</name>
+      <anchorfile>classCSMA802154HostStateHandled.html</anchorfile>
+      <anchor>a56781a00d6f589177fba0c779be9f387</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSMA802154HostStateHandled</name>
+      <anchorfile>classCSMA802154HostStateHandled.html</anchorfile>
+      <anchor>acf911c93418d822ccf5908c12e527581</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>active</name>
+      <anchorfile>classCSMA802154HostStateHandled.html</anchorfile>
+      <anchor>a93c029337ac839ea615aa82a77799855</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classCSMA802154HostStateHandled.html</anchorfile>
+      <anchor>a0d9feb9c42cd8abccf8fd9083fa922b2</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleHostState</name>
+      <anchorfile>classCSMA802154HostStateHandled.html</anchorfile>
+      <anchor>ae2341347d5b54ac5424ce2e7bef7a99b</anchor>
+      <arglist>(const HostState &amp;state)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>cPacket *</type>
+      <name>decapsMsg</name>
+      <anchorfile>classCSMA802154HostStateHandled.html</anchorfile>
+      <anchor>addf9cc32d781875861d645839911cfb0</anchor>
+      <arglist>(macpkt_ptr_t macPkt)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleLowerControl</name>
+      <anchorfile>classCSMA802154HostStateHandled.html</anchorfile>
+      <anchor>a1d34033fd23e2a7c8f52225bda828172</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleLowerMsg</name>
+      <anchorfile>classCSMA802154HostStateHandled.html</anchorfile>
+      <anchor>a350a2e7efb816145e848345f1dce0c55</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>CustomDiceApplication</name>
+    <filename>classCustomDiceApplication.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classCustomDiceApplication.html</anchorfile>
+      <anchor>a3df0464c0b5235eff01659c377590ab2</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleHostState</name>
+      <anchorfile>classCustomDiceApplication.html</anchorfile>
+      <anchor>a6766cb2fc91ac849b43c984c3c545c59</anchor>
+      <arglist>(const HostState &amp;state)</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>bool</type>
+      <name>active</name>
+      <anchorfile>classCustomDiceApplication.html</anchorfile>
+      <anchor>a34b36d116063c3f0652e04a5161cb817</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>CustomMatrixApplication</name>
+    <filename>classCustomMatrixApplication.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>handleHostState</name>
+      <anchorfile>classCustomMatrixApplication.html</anchorfile>
+      <anchor>a8053e6b5d315b459814301d36321556d</anchor>
+      <arglist>(const HostState &amp;state)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classCustomMatrixApplication.html</anchorfile>
+      <anchor>ac615d428ab4bb344367a527c8ed01088</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~CustomMatrixApplication</name>
+      <anchorfile>classCustomMatrixApplication.html</anchorfile>
+      <anchor>a65b0e95bb5ac6c4294f231b4e3fa805c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>bool</type>
+      <name>active</name>
+      <anchorfile>classCustomMatrixApplication.html</anchorfile>
+      <anchor>a639bfda4333a5d1505dd689af98de6c8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>CustomWiseRoute</name>
+    <filename>classCustomWiseRoute.html</filename>
+    <class kind="struct">CustomWiseRoute::AdjListElement</class>
+    <member kind="function">
+      <type></type>
+      <name>CustomWiseRoute</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>aa695963bda5019a6f77dfaacdaa741bf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>af3cb4f6b4bf22701e078bca2f338b10e</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>finish</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>ad6d7555931de9bba7c9caca3c69a278c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>adcca1fbbf5cd472511415002ec8feecf</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>convertTreeToRouteTable</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a7f974c7eb3a7f4d52549e38649c69d25</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>makeEntry</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a3d1f1b8599560f6124b24e7a6ae55c33</anchor>
+      <arglist>(int targetAddr, int nextAddr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>proccessChildNodes</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a9e320cacd71c4d233c4ff6d8d06d13ba</anchor>
+      <arglist>(int routeAddr, int father)</arglist>
+    </member>
+    <member kind="function">
+      <type>AdjListElement *</type>
+      <name>getChildNodes</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a4a6bc5a99c38b353723715f9d520eff7</anchor>
+      <arglist>(int nodeId)</arglist>
+    </member>
+    <member kind="function">
+      <type>AdjListElement *</type>
+      <name>findListEnd</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a5a2881179295fa2e9e98ff463890d479</anchor>
+      <arglist>(AdjListElement *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>insertList</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a5d66c9ebb32e322b503d229894018c57</anchor>
+      <arglist>(int index, int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>containsElement</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a322b8173839975b5cea2ba157c8be6a8</anchor>
+      <arglist>(AdjListElement *elem, int value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isAddrFatherOrChild</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a325d9f1423baa489d76e9cb69cd4c47b</anchor>
+      <arglist>(int addr)</arglist>
+    </member>
+    <member kind="variable">
+      <type>int *</type>
+      <name>routeTree</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>ad13963fde9a857d3cc5f7bdcf45af765</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>AdjListElement *</type>
+      <name>routeTreeAdjList</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a3ee45a1aee945cdde654ba2267e1cde4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>numHosts</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>aa75240b7547cf670e572338cbf27e915</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>isRoot</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>ac53381468588a92c7f497da6de0683d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>isLeaf</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a822bfbb18fd590b38bb84bb4bc7630cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>active</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a3ef541aa2ff71276e9b7289c69f13b3b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>bcName</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a16755afa94e40a58c1dca193dcfc480a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>messagesTypes</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>UNKNOWN</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9ea46337dbf33218d9c732c3ff4dad8cf66</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>DATA</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9eacf8526d99509d081867ce6aff9a7a83b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>ROUTE_FLOOD</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9ea28fce003e85b80407013cb31cecc731f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>SEND_ROUTE_FLOOD_TIMER</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9eada06e672e11f3e7c63c81bad9c683d83</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FORWARD_DELAYED</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9eae38f5e95971846d7bfd3dd271cf5d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>UNKNOWN</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9ea46337dbf33218d9c732c3ff4dad8cf66</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>DATA</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9eacf8526d99509d081867ce6aff9a7a83b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>ROUTE_FLOOD</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9ea28fce003e85b80407013cb31cecc731f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>SEND_ROUTE_FLOOD_TIMER</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9eada06e672e11f3e7c63c81bad9c683d83</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FORWARD_DELAYED</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a13fde26ee214454f81ca2a68fa4b6c9eae38f5e95971846d7bfd3dd271cf5d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>sendToNeighbor</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a8deb02e68a640ea2fc2734c79792f96c</anchor>
+      <arglist>(cMessage *msg, LAddress::L3Type &amp;finalDestAddr, LAddress::L3Type &amp;nextHopAddr, LAddress::L3Type &amp;initialSrcAddr, LAddress::L3Type &amp;srcAddr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>forward</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a98834231bf1a88afc4f268777b3c5fb8</anchor>
+      <arglist>(ApplPkt *msg, LAddress::L3Type)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>forward</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a293eaba3eed5d866e525e715f1950aa2</anchor>
+      <arglist>(cMessage *msg, LAddress::L3Type)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleSelfMsg</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a74646c645fa0d781ed8df7d489adc90f</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleLowerMsg</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>ac383878848b472bb3bd68e81e3e77554</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleUpperControl</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a583d22f9657705c76079199e1361b241</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleLowerControl</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a59d58e252ccdd230c681f8f8e98d7142</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleUpperMsg</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>ad291198d9aa73eac038c6fa239bd8f30</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>netwpkt_ptr_t</type>
+      <name>encapsMsg</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a7e744c80281fdf125f5d41143efba54c</anchor>
+      <arglist>(cPacket *appPkt)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>cPacket *</type>
+      <name>decapsMsg</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>aa804195da79173753f3b6a3961fa8d1d</anchor>
+      <arglist>(netwpkt_ptr_t msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>handleHostState</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a60c5dd51ea61d4d80637d0bb3efcd721</anchor>
+      <arglist>(const HostState &amp;state)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cArray *</type>
+      <name>MessagesToBeForwarded</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>abc613921af0ec8fe3b171c6d998c7d9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cMessage *</type>
+      <name>forwardMessagesSelfMsg</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a7da0eb4ecf91658500ec9278e89fb721</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>sendingIntervall</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a9f2ec093eefe340f7c3b07f8e9e2c84e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; int &gt;</type>
+      <name>lastBroadcastId</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a1154c9be8314a6a8f1ebcbb129ec7a1c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>stats</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a219919907d77bedca95c2da1035a6b37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>trace</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a49d1a46277bee51d0bb465759db703d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>networkID</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a4f85685bcdc40862f18b29bc975cbdd7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>ip</name>
+      <anchorfile>classCustomWiseRoute.html</anchorfile>
+      <anchor>a8be8391b92ab64acb49673a8f4731105</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>LeafClusterAppl</name>
+    <filename>classLeafClusterAppl.html</filename>
+    <base>CustomMatrixApplication</base>
+    <base>AbstractClusterAppl</base>
+    <member kind="function">
+      <type></type>
+      <name>LeafClusterAppl</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>a6eaf6e632e8c09f4734f320440542033</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~LeafClusterAppl</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>a57ebd9d05362e07f1ae5f71b908471e6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>a46cc02899e88ca31b1340ade93705037</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>a7d4e1707fe012706ec07b78a3884751b</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>sendBatteryStatus</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>a6d80147ada917c3f9c3a0b31c2246701</anchor>
+      <arglist>(int target)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SimpleBattery *</type>
+      <name>battery</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>a36903977d2e2ee6c3cb1f696a0124d88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Processor *</type>
+      <name>processor</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>a35293bdd66f05f4bcdf2c8fc2a4ad3ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Memory *</type>
+      <name>memory</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>a77cd3761d2f0feb4b722c02ef1dbc1a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>hasTemperatureSensor</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>ae48a8665416ae5793117d895cf217b54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>hasHumiditySensor</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>acddfb137a3d8875912020560d3944426</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>hasPressureSensor</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>a49fa739ed7f86cabdfd2adc986a0be58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>hasLightSensor</name>
+      <anchorfile>classLeafClusterAppl.html</anchorfile>
+      <anchor>a7d1cdc9bc6c6db61367d3e969fe5ce52</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>MasterClusterAppl</name>
+    <filename>classMasterClusterAppl.html</filename>
+    <base>CustomDiceApplication</base>
+    <base>AbstractClusterAppl</base>
+    <member kind="function">
+      <type></type>
+      <name>MasterClusterAppl</name>
+      <anchorfile>classMasterClusterAppl.html</anchorfile>
+      <anchor>a0d1df39809b5e14f230fff5a04291d96</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~MasterClusterAppl</name>
+      <anchorfile>classMasterClusterAppl.html</anchorfile>
+      <anchor>ab522f1676687112e1bacc42e35bd591b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classMasterClusterAppl.html</anchorfile>
+      <anchor>ad43a2d32882022b70392db9212c2fb0c</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classMasterClusterAppl.html</anchorfile>
+      <anchor>ad6abd849334889b05db28ab8fb7a210b</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNextEvent</name>
+      <anchorfile>classMasterClusterAppl.html</anchorfile>
+      <anchor>a07b034d8eab6e1fddcb9ecb8dcc77402</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>sendDiceEvent</name>
+      <anchorfile>classMasterClusterAppl.html</anchorfile>
+      <anchor>a5ad31a3a13dd386359e534dad2588c9e</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>cMessage *</type>
+      <name>measuringTimer</name>
+      <anchorfile>classMasterClusterAppl.html</anchorfile>
+      <anchor>a97988f2560d2bf27a74d7f8ba56fa275</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>coordinatorNodeAddr</name>
+      <anchorfile>classMasterClusterAppl.html</anchorfile>
+      <anchor>a34adfcf8b1be7e035318860c17af648a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>measureTimerIntervall</name>
+      <anchorfile>classMasterClusterAppl.html</anchorfile>
+      <anchor>a869d009aab090a56a21de903fbaf6e42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ClusterApplWiseRoute *</type>
+      <name>NetwLayer</name>
+      <anchorfile>classMasterClusterAppl.html</anchorfile>
+      <anchor>ada279efd59a093852c1f3dd7a92736dd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>NoApplicationClusteringAppl</name>
+    <filename>classNoApplicationClusteringAppl.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>NoApplicationClusteringAppl</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>aaffb9cf253a53e7955d01091ba48adef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~NoApplicationClusteringAppl</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>ad39a52b1d2e93618228db95c4cd2def0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>a1014391a089e36ebfb37e37d33b17246</anchor>
+      <arglist>(int stage)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleMessage</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>ac3da78ffeba23360214ae6eed52ae246</anchor>
+      <arglist>(cMessage *msg)</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>iAmLeafNode</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>ad969f36e14bd348df5fc85c05f586131</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>myNetworkAddr</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>a575ef0e69aa10c35b178f51bab3f256d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cMessage *</type>
+      <name>sendToMaster</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>acc419de5613cd57f79a6b1b6bf8ac1be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>dataOut</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>aba5cb535498ae35936cf0cf3a28c60dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>dataIn</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>a7d92d2a69b11215b7e76ae8768e51502</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>ctrlOut</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>a958637042ccbeda7e75aa3f59ff10fd4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>ctrlIn</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>a41272ba231decb12e3a6155b4e5296d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>coordinatorNodeAddr</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>a258f38caafbf7ed72ec7c9700d8911a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>sendSensorDataToMasterIntervall</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>a32af3372f669a1a90c513956c72c2b5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Memory *</type>
+      <name>memory</name>
+      <anchorfile>classNoApplicationClusteringAppl.html</anchorfile>
+      <anchor>ab360105a48236ca55ab13a1a22cd82b5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ClusterMasterClusterAppl::SensorTypeInformation</name>
+    <filename>structClusterMasterClusterAppl_1_1SensorTypeInformation.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>nodeNetwAddr</name>
+      <anchorfile>structClusterMasterClusterAppl_1_1SensorTypeInformation.html</anchorfile>
+      <anchor>ae198743ce68903dc24b7aa41987a5d54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>SensorNode *</type>
+      <name>nodeObject</name>
+      <anchorfile>structClusterMasterClusterAppl_1_1SensorTypeInformation.html</anchorfile>
+      <anchor>a48434a6a4fce5410fdebceb7415bf64c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>hasTemperatureSensor</name>
+      <anchorfile>structClusterMasterClusterAppl_1_1SensorTypeInformation.html</anchorfile>
+      <anchor>a8ff08119da8bf4f2ad0e2ebe9091cc2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>hasHumiditySensor</name>
+      <anchorfile>structClusterMasterClusterAppl_1_1SensorTypeInformation.html</anchorfile>
+      <anchor>a89eaff943338b904cfe238e36640b10f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>hasPressureSensor</name>
+      <anchorfile>structClusterMasterClusterAppl_1_1SensorTypeInformation.html</anchorfile>
+      <anchor>a5fe38472b3a9186912787c756e2e6515</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>hasLightSensor</name>
+      <anchorfile>structClusterMasterClusterAppl_1_1SensorTypeInformation.html</anchorfile>
+      <anchor>a6e74ca4eef9c8de454a3d9b5f7250513</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>residualRelative</name>
+      <anchorfile>structClusterMasterClusterAppl_1_1SensorTypeInformation.html</anchorfile>
+      <anchor>a88775967a7ea3b73b3e4600313fc19be</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>SimpleBatteryStatsInfo</name>
+    <filename>classSimpleBatteryStatsInfo.html</filename>
+    <base>cNamedObject</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual SimpleBatteryStatsInfo *</type>
+      <name>dup</name>
+      <anchorfile>classSimpleBatteryStatsInfo.html</anchorfile>
+      <anchor>aa09e8655a27d68ae46ff618bebc70a8c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SimpleBatteryStatsInfo</name>
+      <anchorfile>classSimpleBatteryStatsInfo.html</anchorfile>
+      <anchor>a65d30a7d51eac4ce5eea25bd6fec3cf4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SimpleBatteryStatsInfo</name>
+      <anchorfile>classSimpleBatteryStatsInfo.html</anchorfile>
+      <anchor>a79bd8e7fdb0376235d98bd9d0d320c58</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SimpleBatteryStatsInfo</name>
+      <anchorfile>classSimpleBatteryStatsInfo.html</anchorfile>
+      <anchor>a381e5ef5816787ff783daa97bd8d6068</anchor>
+      <arglist>(const char *name, double residualRelative, bool namepooling=true)</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>residualRelative</name>
+      <anchorfile>classSimpleBatteryStatsInfo.html</anchorfile>
+      <anchor>a86202f8066d115aca3d904b60b8b105f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="page">
+    <name>md_README</name>
+    <title>ApplicationClusteringImplementations</title>
+    <filename>md_README</filename>
+  </compound>
+</tagfile>
