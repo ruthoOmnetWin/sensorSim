@@ -78,7 +78,45 @@ void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
 
     if (msg == InitMeasuringEvent
             || strcmp(InitMeasuringEvent->getName(), msg->getName()) == 0 ) {
-        EV << "InitMeasuringEvent" << endl;
+
+        int highestTemperatureBatteryId = -1;
+        int highestPressureBatteryId = -1;
+        int highestLightBatteryId = -1;
+        int highestHumidityBatteryId = -1;
+
+        double highestTemperatureBatteryValue = 1;
+        double highestPressureBatteryValue = 1;
+        double highestLightBatteryValue = 1;
+        double highestHumidityBatteryValue = 1;
+
+        for (int i = 0; i < numChildNodes; i++) {
+            if (SensorTypeInformationVector.at(i).hasTemperatureSensor) {
+                if (SensorTypeInformationVector.at(i).residualRelative < highestTemperatureBatteryValue) {
+                    highestTemperatureBatteryValue = SensorTypeInformationVector.at(i).residualRelative;
+                    highestTemperatureBatteryId = SensorTypeInformationVector.at(i).nodeNetwAddr;
+                }
+            }
+            if (SensorTypeInformationVector.at(i).hasPressureSensor) {
+                if (SensorTypeInformationVector.at(i).residualRelative < highestPressureBatteryValue) {
+                    highestPressureBatteryValue = SensorTypeInformationVector.at(i).residualRelative;
+                    highestPressureBatteryId = SensorTypeInformationVector.at(i).nodeNetwAddr;
+                }
+            }
+            if (SensorTypeInformationVector.at(i).hasLightSensor) {
+                if (SensorTypeInformationVector.at(i).residualRelative < highestLightBatteryValue) {
+                    highestLightBatteryValue = SensorTypeInformationVector.at(i).residualRelative;
+                    highestLightBatteryId = SensorTypeInformationVector.at(i).nodeNetwAddr;
+                }
+            }
+            if (SensorTypeInformationVector.at(i).hasHumiditySensor) {
+                if (SensorTypeInformationVector.at(i).residualRelative < highestHumidityBatteryValue) {
+                    highestHumidityBatteryValue = SensorTypeInformationVector.at(i).residualRelative;
+                    highestHumidityBatteryId = SensorTypeInformationVector.at(i).nodeNetwAddr;
+                }
+            }
+        }
+
+        return;
     }
 
     if (strcmp(msg->getName(), "estimateResidualRelative") == 0) {
