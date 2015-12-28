@@ -19,9 +19,7 @@
 #define emptyTime -1
 
 Memory::Memory() : empty({"", error, emptyTime}) {
-    const storage emptyStorage = {"", error, emptyTime};
     storageDataSets = 0;
-    //empty = emptyStorage;
 }
 
 Memory::~Memory() {
@@ -99,6 +97,7 @@ void Memory::handleMessage(cMessage *msg)
  */
 storage* Memory::readAllAndClear()
 {
+    Enter_Method_Silent();
     storage *returnDataSet = new storage[storageDataSets];
     int counter = 0;
     int pos = 0;

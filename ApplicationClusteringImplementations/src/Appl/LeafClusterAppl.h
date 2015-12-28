@@ -35,6 +35,9 @@ protected:
     bool hasLightSensor;
 
     void sendBatteryStatus(int target);
+
+    cMessage* readMemorySelfmessage;
+
 public:
     LeafClusterAppl();
     virtual ~LeafClusterAppl();

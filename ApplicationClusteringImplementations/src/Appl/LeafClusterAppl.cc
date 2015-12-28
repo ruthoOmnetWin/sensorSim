@@ -21,8 +21,12 @@
 #include <ApplPkt_m.h>
 #include <SimpleBatteryStatsInfo.h>
 #include <string.h>
+#include <SimpleSensorData.h>
 
 Define_Module(LeafClusterAppl);
+
+#define error -9999
+#define emptyTime -1
 
 #define ALL 0
 #define TEMPERATURE 1
@@ -53,15 +57,38 @@ void LeafClusterAppl::initialize(int stage) {
         clusterApp->wakeupSleepEnterSleep();
         findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
 
+        readMemorySelfmessage = new cMessage();
+        readMemorySelfmessage->setName("readMemorySelfmessage");
+
 //        double volt = battery->getVoltage();
 //        double rel = battery->estimateResidualRelative();
 //        double abs = battery->estimateResidualAbs();
-
-        //todo get my sensor types
     }
 }
 
 void LeafClusterAppl::handleMessage(cMessage* msg) {
+
+    if (msg->isSelfMessage() && (msg == readMemorySelfmessage || msg->getName() == readMemorySelfmessage->getName())) {
+        int storageCounter = memory->storageDataSets;
+        storage* dataStorage = memory->readAllAndClear();
+
+        for (int i = 0; i < storageCounter; i++) {
+            if (dataStorage[i].value != error
+                && dataStorage[i].type != ""
+            ) {
+                SimpleSensorData* ssd = new SimpleSensorData(dataStorage[i].type.c_str(), dataStorage[i].value);
+                ApplPkt* aPkt = new ApplPkt;
+                aPkt->getParList().add(ssd);
+                aPkt->setSrcAddr(clusterApp->myNodeId);
+                aPkt->setDestAddr(LAddress::L3BROADCAST);
+                aPkt->setName("estimateResidualRelative");
+                sendDelayed(aPkt, 0.1 + 0.05 * roomId, dataOut);
+            }
+        }
+
+        delete msg;
+        return;
+    }
 
     char bubblestr[16];
     double energy = clusterApp->mySimpleBattery->estimateResidualRelative() * 100;
@@ -174,6 +201,8 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
 //                bsMsg->setSource();
 //                bsMsg->setResidualRelative(rel);
 
+                //TODO only when correct event is sent start the measuring
+
                 SimpleBatteryStatsInfo* sbfi = new SimpleBatteryStatsInfo("estimateResidualRelative", battery->estimateResidualRelative());
                 ApplPkt* aPkt = new ApplPkt;
                 aPkt->getParList().add(sbfi);
@@ -202,6 +231,8 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
                     processor->startSensingUnit(LIGHT);
                 }
             }
+
+            scheduleAt(simTime() + 0.001, readMemorySelfmessage->dup());
         }
         delete msg;
     }

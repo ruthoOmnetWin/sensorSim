@@ -37,9 +37,9 @@ class Memory : public BatteryAccess {
 protected:
     const storage empty; //for resetting the store
     storage* measureDataStorage;
-    int storageSize;
-    int storageDataSets;
 public:
+    int storageDataSets;
+    int storageSize;
     Memory();
     virtual ~Memory();
     void initialize(int stage);
