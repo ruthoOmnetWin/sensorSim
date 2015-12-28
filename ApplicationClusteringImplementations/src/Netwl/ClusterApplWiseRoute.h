@@ -23,6 +23,12 @@
 class ClusterApplWiseRoute : public CustomWiseRoute
 {
 protected:
+    // gates
+    int dataOut;
+    int dataIn;
+    int ctrlOut;
+    int ctrlIn;
+
     AbstractClusterAppl* appl;
     bool isMasterClusterAppl;
     bool isLeafClusterAppl;

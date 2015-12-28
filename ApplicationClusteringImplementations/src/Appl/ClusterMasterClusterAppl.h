@@ -30,6 +30,13 @@ protected:
     CustomWiseRoute::AdjListElement* childNodes;
     cMessage* InitMeasuringEvent;
     int roomNumber;
+    cArray sensorValues;
+
+    bool hasTemperatureSensor;
+    bool hasHumiditySensor;
+    bool hasPressureSensor;
+    bool hasLightSensor;
+    int sensorSum;
 
 public:
     ClusterMasterClusterAppl();

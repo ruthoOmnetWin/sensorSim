@@ -68,21 +68,30 @@ void LeafClusterAppl::initialize(int stage) {
 
 void LeafClusterAppl::handleMessage(cMessage* msg) {
 
-    if (msg->isSelfMessage() && (msg == readMemorySelfmessage || msg->getName() == readMemorySelfmessage->getName())) {
+    if (msg->isSelfMessage() && (msg == readMemorySelfmessage || 0 == strcmp(msg->getName(), readMemorySelfmessage->getName()))) {
         int storageCounter = memory->storageDataSets;
-        storage* dataStorage = memory->readAllAndClear();
-
-        for (int i = 0; i < storageCounter; i++) {
-            if (dataStorage[i].value != error
-                && dataStorage[i].type != ""
-            ) {
-                SimpleSensorData* ssd = new SimpleSensorData(dataStorage[i].type.c_str(), dataStorage[i].value);
-                ApplPkt* aPkt = new ApplPkt;
-                aPkt->getParList().add(ssd);
-                aPkt->setSrcAddr(clusterApp->myNodeId);
-                aPkt->setDestAddr(LAddress::L3BROADCAST);
-                aPkt->setName("estimateResidualRelative");
-                sendDelayed(aPkt, 0.1 + 0.05 * roomId, dataOut);
+        if (storageCounter < 1) {
+            SimpleSensorData* ssd = new SimpleSensorData("invalid memory state", -1);
+            ApplPkt* aPkt = new ApplPkt;
+            aPkt->getParList().add(ssd);
+            aPkt->setSrcAddr(clusterApp->myNodeId);
+            aPkt->setDestAddr(LAddress::L3BROADCAST);
+            aPkt->setName("measuredValue");
+            send(aPkt/*, 0.3  + 0.1 * roomId*/, dataOut);
+        } else {
+            storage* dataStorage = memory->readAllAndClear();
+            for (int i = 0; i < storageCounter; i++) {
+                if (dataStorage[i].value != error
+                    && dataStorage[i].type != ""
+                ) {
+                    SimpleSensorData* ssd = new SimpleSensorData(dataStorage[i].type.c_str(), dataStorage[i].value);
+                    ApplPkt* aPkt = new ApplPkt;
+                    aPkt->getParList().add(ssd);
+                    aPkt->setSrcAddr(clusterApp->myNodeId);
+                    aPkt->setDestAddr(LAddress::L3BROADCAST);
+                    aPkt->setName("measuredValue");
+                    send(aPkt/*, 0.3  + 0.1 * roomId*/, dataOut);
+                }
             }
         }
 

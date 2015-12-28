@@ -47,6 +47,11 @@ void ClusterApplWiseRoute::initialize(int stage) {
         } else {
             opp_error("Inside ClusterApplWiseRoute::initialize(): Could not get the type of the Application Layer. There was an invalid type given.");
         }
+
+        dataOut = findGate("lowerLayerOut");
+        dataIn = findGate("lowerLayerIn");
+        ctrlOut = findGate("lowerControlOut");
+        ctrlIn = findGate("lowerControlIn");
     }
 }
 
@@ -104,6 +109,10 @@ void ClusterApplWiseRoute::handleLowerMsg(cMessage* msg) {
 
     } else
     if (strcmp(msg->getName(), "estimateResidualRelative") == 0) {
+        EV << "Received message not to be forwarded" << endl;
+        WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+        sendUp(decapsMsg(pkt));
+    } else if (strcmp(msg->getName(), "measuredValue") == 0) {
         EV << "Received message not to be forwarded" << endl;
         WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
         sendUp(decapsMsg(pkt));

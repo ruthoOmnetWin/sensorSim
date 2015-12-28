@@ -24,12 +24,19 @@
 #include <SimpleBatteryStatsInfo.h>
 #include <LeafClusterAppl.h>
 #include <NetwControlInfo.h>
+#include <ApplPkt_m.h>
+#include <carray.h>
 
 Define_Module(ClusterMasterClusterAppl);
 
 ClusterMasterClusterAppl::ClusterMasterClusterAppl() {
     counterSensorNodeAnswers = 0;
     numChildNodes = 0;
+    hasTemperatureSensor = false;
+    hasHumiditySensor = false;
+    hasPressureSensor = false;
+    hasLightSensor = false;
+    sensorSum = 0;
 }
 
 ClusterMasterClusterAppl::~ClusterMasterClusterAppl() {
@@ -38,6 +45,7 @@ ClusterMasterClusterAppl::~ClusterMasterClusterAppl() {
 void ClusterMasterClusterAppl::initialize(int stage) {
     CustomMatrixApplication::initialize(stage);
     if (stage == 1) {
+
         NetwLayer = FindModule<ClusterApplWiseRoute*>::findSubModule(findHost());
         childNodes = NetwLayer->getChildNodes(NetwLayer->getMyNetworkAddress());
 
@@ -71,9 +79,25 @@ void ClusterMasterClusterAppl::initialize(int stage) {
                     sti->nodeObject = sNode;
 
                     sti->hasTemperatureSensor = sNode->par("hasTemperatureSensor");
+                    if (sti->hasTemperatureSensor && !hasTemperatureSensor) {
+                        hasTemperatureSensor = true;
+                        sensorSum++;
+                    }
                     sti->hasHumiditySensor = sNode->par("hasHumiditySensor");
+                    if (sti->hasHumiditySensor && !hasHumiditySensor) {
+                        hasHumiditySensor = true;
+                        sensorSum++;
+                    }
                     sti->hasPressureSensor = sNode->par("hasPressureSensor");
+                    if (sti->hasPressureSensor && !hasPressureSensor) {
+                        hasPressureSensor = true;
+                        sensorSum++;
+                    }
                     sti->hasLightSensor = sNode->par("hasLightSensor");
+                    if (sti->hasLightSensor && !hasLightSensor) {
+                        hasLightSensor = true;
+                        sensorSum++;
+                    }
                     numChildNodes ++;
                     SensorTypeInformationVector.push_back(*sti);
                 }
@@ -88,6 +112,8 @@ void ClusterMasterClusterAppl::initialize(int stage) {
 
         InitMeasuringEvent = new cMessage();
         InitMeasuringEvent->setName("InitMeasuringEvent");
+
+        sensorValues = *(new cArray);
     }
 }
 
@@ -153,7 +179,7 @@ void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
             aPkt->setName("measure light");
             aPkt->setDestAddr(highestPressureBatteryId);
             NetwControlInfo::setControlInfo(aPkt, highestPressureBatteryId);
-            sendDelayed(aPkt, 0.10, dataOut);
+            sendDelayed(aPkt, 0.1, dataOut);
         }
         if (highestHumidityBatteryId > -1) {
             ApplPkt* aPkt = new ApplPkt();
@@ -180,6 +206,34 @@ void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
             }
             incrementCounterSensorNodeAnswers();
         }
+        return;
+    }
+
+    if (strcmp(msg->getName(), "measuredValue") == 0) {
+
+        ApplPkt* Apkt = dynamic_cast<ApplPkt*>(msg);
+        SimpleSensorData* ssd;
+        if (Apkt != NULL) {
+            //int srcId = Apkt->getSrcAddr();
+
+            //int size = Apkt->getParList().size();
+
+            cObject* parZero = Apkt->getParList().get(0);
+            ssd = dynamic_cast<SimpleSensorData*>(parZero);
+
+        } else {
+
+            ssd = new SimpleSensorData("faulty package", -1);
+
+        }
+
+        sensorValues.add(ssd);
+        if (sensorValues.size() == sensorSum) {
+            cMessage* nMsg = new cMessage;
+            nMsg->getParList() = sensorValues;
+            sensorValues = *(new cArray);
+        }
+
         return;
     }
 
@@ -316,5 +370,6 @@ void ClusterMasterClusterAppl::incrementCounterSensorNodeAnswers() {
     counterSensorNodeAnswers++;
     if (counterSensorNodeAnswers == numChildNodes) {
         scheduleAt(simTime() + 0.0001, InitMeasuringEvent);
+        counterSensorNodeAnswers = 0;
     }
 }
