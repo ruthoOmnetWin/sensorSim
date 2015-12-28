@@ -62,6 +62,9 @@ void ClusterApplWiseRoute::handleLowerMsg(cMessage* msg) {
     // -> keep message that are addressed to me
     //if i am master or leaf -> never forward
 
+    if (strcmp(msg->getName(), "measuredValue") == 0) {
+        EV << "measuredValue" << endl;
+    }
     WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
     if (pkt != NULL) {
         LAddress::L3Type srcAddr = pkt->getSrcAddr();
@@ -113,6 +116,13 @@ void ClusterApplWiseRoute::handleLowerMsg(cMessage* msg) {
         WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
         sendUp(decapsMsg(pkt));
     } else if (strcmp(msg->getName(), "measuredValue") == 0) {
+        EV << "Received message not to be forwarded" << endl;
+        WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
+        sendUp(decapsMsg(pkt));
+    } else if (strcmp(msg->getName(), "Complete Sensor Data") == 0) {
+        if (isLeafClusterAppl) {
+            return;
+        }
         EV << "Received message not to be forwarded" << endl;
         WiseRoutePkt* pkt = check_and_cast<WiseRoutePkt*>(msg);
         sendUp(decapsMsg(pkt));

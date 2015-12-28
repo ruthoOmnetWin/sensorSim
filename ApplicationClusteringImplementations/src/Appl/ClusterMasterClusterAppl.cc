@@ -232,6 +232,14 @@ void ClusterMasterClusterAppl::handleMessage(cMessage* msg) {
             cMessage* nMsg = new cMessage;
             nMsg->getParList() = sensorValues;
             sensorValues = *(new cArray);
+
+            ApplPkt* aPkt = new ApplPkt;
+            aPkt->getParList() = sensorValues;
+            aPkt->setSrcAddr(clusterApp->myNodeId);
+            aPkt->setDestAddr(0);
+            aPkt->setName("Complete Sensor Data");
+            send(aPkt/*, 0.3  + 0.1 * roomId*/, dataOut);
+
         }
 
         return;

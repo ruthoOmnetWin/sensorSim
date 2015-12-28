@@ -224,6 +224,12 @@ void LeafClusterAppl::handleMessage(cMessage* msg) {
         }
         ApplPkt* aPkt = dynamic_cast<ApplPkt*>(msg);
         if (aPkt) {
+            if (strcmp(aPkt->getName(), "measuredValue") == 0) {
+                EV << "measuredValue" << endl;
+            }
+            if (strcmp(aPkt->getName(), "Complete Sensor Data") == 0) {
+                EV << "Complete Sensor Data" << endl;
+            }
             const char* name = msg->getName();
             std::string nameString = name;
             //measure
