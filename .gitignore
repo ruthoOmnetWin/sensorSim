@@ -2,5 +2,5 @@
 .plugins/
 .log
 core.*
-MyNetwork/results/
-SensorTechnology/results/
+results/
+

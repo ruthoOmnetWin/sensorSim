@@ -53,6 +53,7 @@ INCLUDE_PATH = \
     -IMacLayer \
     -INetwl \
     -Idata \
+    -Iimg \
     -Iresults
 
 # Additional object and library files to link with
@@ -173,6 +174,7 @@ clean:
 	$(Q)-rm -f MacLayer/*_m.cc MacLayer/*_m.h
 	$(Q)-rm -f Netwl/*_m.cc Netwl/*_m.h
 	$(Q)-rm -f data/*_m.cc data/*_m.h
+	$(Q)-rm -f img/*_m.cc img/*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
 
 cleanall: clean
@@ -180,7 +182,7 @@ cleanall: clean
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ACI/*.cc Appl/*.cc BatteryStatsInfo/*.cc MacLayer/*.cc Netwl/*.cc data/*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc ACI/*.cc Appl/*.cc BatteryStatsInfo/*.cc MacLayer/*.cc Netwl/*.cc data/*.cc img/*.cc results/*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/ACI/ApplicationClusteringImplementations.o: ACI/ApplicationClusteringImplementations.cc \
