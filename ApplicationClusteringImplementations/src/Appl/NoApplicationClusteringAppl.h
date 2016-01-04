@@ -19,8 +19,10 @@
 #include <omnetpp.h>
 #include <BaseModule.h>
 #include <Memory.h>
+#include <PhyLayer.h>
+#include <CustomMatrixApplication.h>
 
-class NoApplicationClusteringAppl : public BaseModule
+class NoApplicationClusteringAppl : public CustomMatrixApplication
 {
 protected:
     int dataOut;
@@ -30,6 +32,7 @@ protected:
     int coordinatorNodeAddr;
     int sendSensorDataToMasterIntervall;
     Memory* memory;
+    SimpleBattery* battery;
 public:
     bool iAmLeafNode;
     int myNetworkAddr;
@@ -41,6 +44,11 @@ public:
 
     void initialize(int stage);
     void handleMessage(cMessage* msg);
+
+    void wakeupSleepInit(void);
+    void wakeupSleepUpdateTimer(void);
+    void wakeupSleepEnterSleep(void);
+    void wakeupSleepLeaveSleep(void);
 };
 
 #endif /* NOAPPLICATIONCLUSTERINGAPPL_H_ */

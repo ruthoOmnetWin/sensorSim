@@ -426,7 +426,7 @@ void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
 
                     forwardMsgEvent->setName(char_type);
 
-                    scheduleAt(simTime() + 5, forwardMsgEvent);
+                    scheduleAt(simTime() + 0.5, forwardMsgEvent);
                 }
                 EV << "-------------------- I am NODE " << myNetwAddr << ". GOT MESSAGE TO BE FORWARDED LATER. WAITING FOR MORE MESSAGES FIRST." << endl;
             }
