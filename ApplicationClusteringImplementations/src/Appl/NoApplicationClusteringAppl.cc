@@ -85,6 +85,58 @@ void NoApplicationClusteringAppl::handleMessage(cMessage* msg) {
             //forward selfmessage
             scheduleAt(simTime() + sendSensorDataToMasterIntervall, sendToMaster);
         }
+
+        //update tick counter
+        char bubblestr[16];
+        clusterApp->clusterApplicationUpdateTickCounter(simTime().inUnit(-3));
+
+        debugEV << "In DiceApplication::handleMessage" << endl;
+
+        if (msg == measuringTimer) {
+
+        }
+        else if (msg == sleepTimer)
+        {
+            clusterApp->wakeupSleepEnterSleep();
+            findHost()->getDisplayString().setTagArg("i2", 0, "status/red");
+        }
+        else if (msg == sysTimer)
+        {
+            clusterApp->clusterApplicationTimerEvent(msg->par("timerId"), msg->par("timerValue"));
+            //delete msg;
+        }
+        else if (msg == delayTimer)
+        {
+            clusterApp->wakeupSleepLeaveSleep();
+            findHost()->getDisplayString().setTagArg("i2", 0, "status/green");
+
+            if (clusterApp->otherNodesInSleepMode)
+            {
+                clusterApp->otherNodesInSleepMode = false;
+                //Send WakeUp-Packet
+                debugEV << "  start wakeup" << endl;
+                WakeUpPacket* wuPacketP = new WakeUpPacket();
+                wuPacketP->setDestAddr(LAddress::L3BROADCAST);
+                wuPacketP->setName("WakeUpReceiverPacket");
+                NetwControlInfo::setControlInfo(wuPacketP, LAddress::L3BROADCAST);
+                send(wuPacketP, dataOut);
+                //sendDown(gPacketP);
+                //wait some ms
+                scheduleAt(simTime() + 0.05 + uniform(0, 0.001), delayTimer);
+            }
+            else
+            {
+                sendDiceEvent();
+
+                //nextDice = 0;
+                debugEV << "  processing application timer." << endl;
+                if (!delayTimer->isScheduled())
+                {
+                    scheduleAt(simTime() + measureTimerIntervall + uniform(0, 0.001), delayTimer);
+                }
+            }
+        }
+
     } else {
         if (myNetworkAddr == coordinatorNodeAddr) {
             EV << "============= Coordinator: Received external Message" << endl;

@@ -98,12 +98,88 @@ void CustomDiceApplication::handleMessage(cMessage * msg)
 
 void CustomDiceApplication::handleHostState(const HostState& state)
 {
-       if(notAffectedByHostState)
-           return;
+   if(notAffectedByHostState)
+       return;
 
-       if(state.get() != HostState::ACTIVE) {
-           active = false;
-       } else {
-           active = true;
-       }
+   if(state.get() != HostState::ACTIVE) {
+       active = false;
+   } else {
+       active = true;
    }
+}
+
+/****************************************************************************
+ * WakeUp Sleep
+ ****************************************************************************/
+void CustomDiceApplication::wakeupSleepInit(void)
+{
+    if (sleepTimer->isScheduled())
+    {
+        myBaseModule->cancelEvent(sleepTimer);
+    }
+    myBaseModule->scheduleAt(simTime() + ((sleepTimeout) * 0.001) + uniform(0, 0.001), sleepTimer);
+
+
+}
+
+void CustomDiceApplication::wakeupSleepUpdateTimer(void)
+{
+
+    if (sleepTimer->isScheduled())
+    {
+        myBaseModule->cancelEvent(sleepTimer);
+    }
+    myBaseModule->scheduleAt(simTime() + ((sleepTimeout) * 0.001) + uniform(0, 0.001), sleepTimer);
+
+
+    /*
+    clusterApplicationUpdateTimer(
+            TIMER_ID_WAKEUP_SLEEP_TIMER,
+            TIMER_TYPE_OFFSET,
+            sleepTimeout
+    );
+    */
+}
+
+void CustomDiceApplication::wakeupSleepEnterSleep(void)
+{
+    EV << "----------> Entering Sleep Mode" << endl;
+    if (sleepTimer->isScheduled())
+    {
+        myBaseModule->cancelEvent(sleepTimer);
+    }
+    myBaseHost->getDisplayString().setTagArg("b", 3, "white");
+    isInSleepMode = true;
+    otherNodesInSleepMode = true;
+/*
+    clusterApplicationUpdateTimer(
+            TIMER_ID_WAKEUP_SLEEP_TIMER,
+            TIMER_TYPE_DELETE,
+            0
+    );
+    */
+    //TODO
+    myPhyLayerBattery->setRadioState(WakeupMiximRadio::SLEEP);
+
+}
+
+void CustomDiceApplication::wakeupSleepLeaveSleep(void)
+{
+    EV << "----------> Leaving Sleep Mode" << endl;
+    if (sleepTimer->isScheduled())
+    {
+        myBaseModule->cancelEvent(sleepTimer);
+    }
+    myBaseModule->scheduleAt(simTime() + (( sleepTimeout) * 0.001) + uniform(0, 0.001), sleepTimer);
+
+
+
+    //myPhyLayerBattery->setRadioState(0);
+    int radioState = myPhyLayerBattery->getRadioState();
+    if (radioState == WakeupMiximRadio::SLEEP) {
+        myPhyLayerBattery->setRadioState(WakeupMiximRadio::RX);
+        myBaseHost->getDisplayString().setTagArg("b", 3, "yellow");
+        isInSleepMode = true;
+        wakeupSleepUpdateTimer();
+    }
+}
