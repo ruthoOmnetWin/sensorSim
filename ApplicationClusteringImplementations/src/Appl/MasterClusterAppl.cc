@@ -122,10 +122,7 @@ void MasterClusterAppl::handleMessage(cMessage * msg)
 
             //nextDice = 0;
             debugEV << "  processing application timer." << endl;
-            if (!delayTimer->isScheduled())
-            {
-                scheduleAt(simTime() + measureTimerIntervall + uniform(0, 0.001), delayTimer);
-            }
+            scheduleAt(simTime() + measureTimerIntervall + uniform(0, 0.001), delayTimer);
         }
     }
     else if (msg->getArrivalGateId() == dataIn)
