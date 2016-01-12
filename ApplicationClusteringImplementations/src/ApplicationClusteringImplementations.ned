@@ -23,69 +23,70 @@ network ApplicationClusteringImplementations extends BaseNetwork
         int numNodes; // total number of hosts in the network
         numNodes = 38;
 
-        @display("bgi=background/roomsBigger;bgb=867,430");
+        //@display("bgi=floorplan;bgb=867,430");
+        @display("bgi=../../sensorSim/ApplicationClusteringImplementations/src/img/rooms;bgb=801,601");
         wuType = default("sensortechnology.src.WorldModel.CustomWorldUtility");
 
     submodules:
         Node0: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=408,218");
+            @display("p=400,280");
             //hasTemperatureSensor = true;
                     //@class(ApplicationClusteringImplementations);
         }
         Node1: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=311,154");
+            @display("p=280,191");
             //hasTemperatureSensor = true;
         }
         Node2: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=303,64");
+            @display("p=249,84");
             //hasTemperatureSensor = true;
         }
         Node3: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=193,142");
+            @display("p=132,171");
             //hasTemperatureSensor = true;
         }
         Node4: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=241,77");
+            @display("p=162,84");
             //hasTemperatureSensor = true;
         }
         Node5: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=342,296");
+            @display("p=280,280");
             //hasTemperatureSensor = true;
         }
         Node6: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=342,381");
+            @display("p=218,337");
             //hasTemperatureSensor = true;
         }
         Node7: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=232,277");
+            @display("p=179,230");
             //hasTemperatureSensor = true;
         }
         Node8: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=241,373");
+            @display("p=132,298");
             //hasTemperatureSensor = true;
         }
         Node9: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=558,103");
+            @display("p=326,109");
             //hasTemperatureSensor = true;
         }
         Node10: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=619,172");
+            @display("p=361,60");
             //hasTemperatureSensor = true;
         }
         Node11: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=619,257");
+            @display("p=439,60");
             //hasTemperatureSensor = true;
         }
         Node12: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=558,334");
+            @display("p=470,123");
             //hasTemperatureSensor = true;
         }
         Node13: Sensor_Wakeup_DicePhyMacHost {
-            @display("p=519,218");
+            @display("p=400,191");
             //hasTemperatureSensor = true;
         }
 //        Node14: Sensor_Wakeup_DicePhyMacHost {
-//            @display("p=589,328");
+//            @display("p=597,555");
 //            //hasTemperatureSensor = true;
 //        }
 //        Node15: Sensor_Wakeup_DicePhyMacHost {

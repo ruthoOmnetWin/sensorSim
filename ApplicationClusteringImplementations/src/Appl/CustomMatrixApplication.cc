@@ -51,7 +51,7 @@ CustomMatrixApplication::~CustomMatrixApplication() {
 
     if (active) {
         if (delayTimer) {
-            cancelAndDelete(delayTimer);
+            //cancelAndDelete(delayTimer);
             delayTimer = NULL;
         }
     } else {

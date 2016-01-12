@@ -98,12 +98,12 @@ void CustomDiceApplication::handleMessage(cMessage * msg)
 
 void CustomDiceApplication::handleHostState(const HostState& state)
 {
-       if(notAffectedByHostState)
-           return;
+   if(notAffectedByHostState)
+       return;
 
-       if(state.get() != HostState::ACTIVE) {
-           active = false;
-       } else {
-           active = true;
-       }
+   if(state.get() != HostState::ACTIVE) {
+       active = false;
+   } else {
+       active = true;
    }
+}

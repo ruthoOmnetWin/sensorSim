@@ -17,13 +17,13 @@
 #define LEAFCLUSTERAPPL_H_
 
 #include <omnetpp.h>
-#include <BaseModule.h>
 #include <SimpleBattery.h>
 #include <AbstractClusterAppl.h>
 #include <Memory.h>
 #include <Processor.h>
+#include <CustomMatrixApplication.h>
 
-class LeafClusterAppl : public BaseModule, public AbstractClusterAppl {
+class LeafClusterAppl : public CustomMatrixApplication, public AbstractClusterAppl {
 protected:
     SimpleBattery* battery;
     Processor* processor;
@@ -33,11 +33,19 @@ protected:
     bool hasHumiditySensor;
     bool hasPressureSensor;
     bool hasLightSensor;
+
+    void sendBatteryStatus(int target);
+
+    cMessage* readMemorySelfmessage;
+
 public:
     LeafClusterAppl();
     virtual ~LeafClusterAppl();
     void initialize(int stage);
     void handleMessage(cMessage* msg);
+
+    int roomNumber;
+    int roomId;
 };
 
 #endif /* LEAFCLUSTERAPPL_H_ */

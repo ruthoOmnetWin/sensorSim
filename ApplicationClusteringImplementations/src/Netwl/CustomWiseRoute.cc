@@ -199,6 +199,33 @@ void CustomWiseRoute::makeEntry(int targetAddr, int nextAddr) {
 }
 
 /**
+ * check if the given address belongs to a node which is either my father node or one of my child nodes
+ */
+bool CustomWiseRoute::isAddrFatherOrChild(int addr) {
+    if (isLeaf) {
+
+    } else {
+        AdjListElement* childs = getChildNodes(myNetwAddr);
+        do {
+            if (childs->value == addr) {
+                return true;
+            }
+
+            childs = childs->next;
+        } while (childs != NULL);
+    }
+    if (isRoot) {
+
+    } else {
+        int fatherAddress = routeTree[myNetwAddr];
+        if (fatherAddress == addr) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
  * convert the general routing tree into the node specific routing table
  */
 void CustomWiseRoute::convertTreeToRouteTable() {
@@ -399,7 +426,7 @@ void CustomWiseRoute::handleLowerMsg(cMessage* msg) {
 
                     forwardMsgEvent->setName(char_type);
 
-                    scheduleAt(simTime() + 5, forwardMsgEvent);
+                    scheduleAt(simTime() + 0.5, forwardMsgEvent);
                 }
                 EV << "-------------------- I am NODE " << myNetwAddr << ". GOT MESSAGE TO BE FORWARDED LATER. WAITING FOR MORE MESSAGES FIRST." << endl;
             }

@@ -1,0 +1,220 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">NED File <i>src/ApplicationClusteringImplementations.ned</i></h2>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="applicationclusteringimplementations.ApplicationClusteringImplementations.html">ApplicationClusteringImplementations</a>
+   </td>
+   <td>
+<i>network</i>
+   </td>
+   <td>
+<i>(no description)</i>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+</span><span style="color: #000000; ">
+</span><span style="color: #800000; font-weight: bold; ">package</span><span style="color: #000000; "> </span><span style="color: #000000; ">applicationclusteringimplementations</span><span style="color: #000000; ">;
+
+</span><span style="color: #800000; font-weight: bold; ">import</span><span style="color: #000000; "> </span><span style="color: #000000; ">org</span><span style="color: #000000; ">.</span><span style="color: #000000; ">mixim</span><span style="color: #000000; ">.</span><span style="color: #000000; ">base</span><span style="color: #000000; ">.</span><span style="color: #000000; ">modules</span><span style="color: #000000; ">.</span><span style="color: #000000; ">BaseNetwork</span><span style="color: #000000; ">;
+
+</span><span style="color: #800000; font-weight: bold; ">network</span><span style="color: #000000; "> </span><span style="color: #000000; ">ApplicationClusteringImplementations</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">extends</span><span style="color: #000000; "> </span><span style="color: #000000; ">BaseNetwork</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">int</span><span style="color: #000000; "> </span><span style="color: #000000; ">numNodes</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// total number of hosts in the network
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">numNodes</span><span style="color: #000000; "> = </span><span style="color: #008000; ">38</span><span style="color: #000000; ">;
+
+        </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;bgi=background/roomsBigger;bgb=867,430&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #000000; ">wuType</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;sensortechnology.src.WorldModel.CustomWorldUtility&quot;</span><span style="color: #000000; ">);
+
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">Node0</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=408,218&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">                    </span><span style="color: #808080; font-style: italic; ">//@class(ApplicationClusteringImplementations);
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node1</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=311,154&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node2</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=303,64&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node3</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=193,142&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node4</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=241,77&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node5</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=342,296&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node6</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=342,381&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node7</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=232,277&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node8</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=241,373&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node9</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=558,103&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node10</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=619,172&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node11</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=619,257&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node12</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=558,334&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+        </span><span style="color: #000000; ">Node13</span><span style="color: #000000; ">: </span><span style="color: #000000; ">Sensor_Wakeup_DicePhyMacHost</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=519,218&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #808080; font-style: italic; ">//hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        }
+</span><span style="color: #808080; font-style: italic; ">//        Node14: Sensor_Wakeup_DicePhyMacHost {
+//            @display(&quot;p=589,328&quot;);
+//            //hasTemperatureSensor = true;
+//        }
+//        Node15: Sensor_Wakeup_DicePhyMacHost {
+//            @display(&quot;p=652,349&quot;);
+//            //hasTemperatureSensor = true;
+//        }
+//        Node16: Sensor_Wakeup_DicePhyMacHost {
+//            @display(&quot;p=746,349&quot;);
+//            //hasTemperatureSensor = true;
+//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node17: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=411,125&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node18: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=385,45&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node19: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=472,78&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node20: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=472,125&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node21: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=537,50&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node22: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=585,59&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node23: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=635,59&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node24: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=683,59&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node25: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=546,125&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node26: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=563,199&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node27: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=635,156&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node28: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=701,139&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node29: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=612,251&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node30: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=651,251&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node31: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=701,238&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node32: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=754,238&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node33: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=768,136&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node34: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=768,185&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node35: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=729,59&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node36: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=793,45&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        Node37: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=807,98&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">    </span><span style="color: #808080; font-style: italic; ">//        Node38: Sensor_Wakeup_DicePhyMacHost {
+</span><span style="color: #000000; ">    </span><span style="color: #808080; font-style: italic; ">//            @display(&quot;p=258,125&quot;);
+</span><span style="color: #000000; ">    </span><span style="color: #808080; font-style: italic; ">//            //hasTemperatureSensor = true;
+</span><span style="color: #000000; ">    </span><span style="color: #808080; font-style: italic; ">//        }
+</span><span style="color: #000000; ">    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">allowunconnected</span><span style="color: #000000; ">:
+
+    </span><span style="color: #808080; font-style: italic; ">// all connections and gates are to be generated dynamically
+</span><span style="color: #000000; ">}
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

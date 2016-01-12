@@ -23,14 +23,22 @@
 class ClusterApplWiseRoute : public CustomWiseRoute
 {
 protected:
+    // gates
+    int dataOut;
+    int dataIn;
+    int ctrlOut;
+    int ctrlIn;
+
     AbstractClusterAppl* appl;
     bool isMasterClusterAppl;
     bool isLeafClusterAppl;
     bool isClusterMasterClusterAppl;
-
+    void handleLowerMsg(cMessage* msg);
+    void handleUpperMsg(cMessage* msg);
 public:
     LAddress::L3Type getMyNetworkAddress();
     void initialize(int stage);
+
 };
 
 #endif /* CLUSTERAPPLWISEROUTE_H_ */

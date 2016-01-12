@@ -42,7 +42,7 @@ void AbstractSensingUnit::initialize(int stage) {
         say("CustomWorldUtility found");
 
     } else if (stage == 1) {
-        readAndForward();
+        //readAndForward();
     }
 }
 
@@ -92,6 +92,9 @@ int AbstractSensingUnit::readData()
     Coord *position = getLocation();
     cModule* Sensor = getParentModule();
     std::string type = Sensor->par("type");
+    if (strcmp(type.c_str(), "") == 0) {
+        EV << "error" << endl;
+    }
     int data = world->getValueByPosition(type, position);
     delete position;
     std::stringstream ss;

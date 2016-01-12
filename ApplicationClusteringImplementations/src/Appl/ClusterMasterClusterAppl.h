@@ -17,17 +17,26 @@
 #define CLUSTERMASTERCLUSTERAPPL_H_
 
 #include <omnetpp.h>
-#include <BaseModule.h>
 #include <AbstractClusterAppl.h>
 #include <ClusterApplWiseRoute.h>
 #include <SensorNode.h>
 #include <vector>
+#include <CustomMatrixApplication.h>
+#include <ApplPkt_m.h>
 
-class ClusterMasterClusterAppl : public BaseModule, public AbstractClusterAppl {
+class ClusterMasterClusterAppl : public CustomMatrixApplication, public AbstractClusterAppl {
 protected:
     ClusterApplWiseRoute* NetwLayer;
-
     CustomWiseRoute::AdjListElement* childNodes;
+    cMessage* InitMeasuringEvent;
+    int roomNumber;
+    cArray sensorValues;
+
+    bool hasTemperatureSensor;
+    bool hasHumiditySensor;
+    bool hasPressureSensor;
+    bool hasLightSensor;
+    int sensorSum;
 
 public:
     ClusterMasterClusterAppl();
@@ -42,9 +51,14 @@ public:
         bool hasHumiditySensor = false;
         bool hasPressureSensor = false;
         bool hasLightSensor = false;
+        double residualRelative = 0;
     };
 
     std::vector<SensorTypeInformation> SensorTypeInformationVector;
+    SensorTypeInformation* findNodeById(int nodeNetwAddr);
+    int numChildNodes;
+    int counterSensorNodeAnswers;
+    void incrementCounterSensorNodeAnswers();
 
 };
 

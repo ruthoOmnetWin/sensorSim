@@ -1,0 +1,742 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+   </head>
+   <body onload="if (top.frames['componentsframe'] == undefined) { s = window.location.toString(); window.location = 'index.html?p=' + s.substring(s.lastIndexOf('/')+1); }">
+<h2 class="comptitle">Compound Module <i>Wakeup_Nic802154_TI_CC2420A</i></h2>
+<b>Package:</b> applicationclusteringimplementations<br/><b>File: <a href="src-Wakeup_Nic802154_TI_CC2420A.ned.html">src/Wakeup_Nic802154_TI_CC2420A.ned</a></b><br/>
+<p>This NIC implements a Texas Instruments CC 2420 802.15.4 network interface card
+using the CSMA protocol as specified in IEEE 802.15.4-2006.</p>
+<p>Note: To be able to use this Nic in your simulation you have to copy the file 
+"Nic802154_TI_CC2420_Decider.xml" from "modules/nic/" to your simulation directory.</p>
+<p><b>Author:</b> Jerome Rousselot</p>
+<h3 class="subtitle">Used in compound modules:</h3>
+<table class="typestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td>
+<a href="applicationclusteringimplementations.Sensor_Wakeup_DicePhyMacHost.html">Sensor_Wakeup_DicePhyMacHost</a>
+   </td>
+   <td>
+<i>compound&nbsp;module</i>
+   </td>
+   <td>
+
+<p>compound module for a sensor node with wakeup receiver using the DicePhyMacHost
+this module is similar to the DicePhyMacHost (but wakeup and sensor functionality is added)</p>
+
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Parameters:</h3>
+<table class="paramstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>connectionManagerName</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>""</td>
+   <td>
+<p>name of the ConnectionManager module
+string phyType = default("org.mixim.modules.phy.PhyLayerBattery");
+string macType = default("<a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">CSMA802154HostStateHandled</a>");</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>sleepCurrent</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.1mA</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>rxCurrent</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>18.8 mA</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>decodingCurrentDelta</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0 mA</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>txCurrent</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>17.4 mA</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>setupRxCurrent</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.6391mA</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>setupTxCurrent</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.6845mA</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>rxTxCurrent</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>18.8 mA</td>
+   <td>   </td>
+</tr>
+<tr class="local">
+   <td>txRxCurrent</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>18.8 mA</td>
+   <td>
+   </td>
+</tr>
+<tr class="local">
+   <td>setupWakeupCurrent</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.1mA</td>
+   <td>
+<p>power consumption from boards (at 3.3V)</p>
+   </td>
+</tr>
+<tr class="local">
+   <td>wakeupCurrent</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.1mA</td>
+   <td>
+<p>0.021 &micro;A</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Gates:</h3>
+<table class="gatestable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Direction</th>
+      <th class="gatesize">Size</th>
+      <th class="description">Description</th>
+   </tr>
+<tr class="local">
+   <td>upperLayerIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>to upper layers</p>
+</td>
+</tr>
+<tr class="local">
+   <td>upperLayerOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>from upper layers</p>
+</td>
+</tr>
+<tr class="local">
+   <td>upperControlOut</xsl:if></td>
+   <td><i>output</i></td>
+   <td></td>   <td>
+<p>control information</p>
+</td>
+</tr>
+<tr class="local">
+   <td>upperControlIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>control information</p>
+</td>
+</tr>
+<tr class="local">
+   <td>radioIn</xsl:if></td>
+   <td><i>input</i></td>
+   <td></td>   <td>
+<p>radioIn gate for sendDirect</p>
+</td>
+</tr>
+</table>
+<h3 class="subtitle">Unassigned submodule parameters:</h3>
+<table class="deepparamstable">
+   <tr>
+      <th class="name">Name</th>
+      <th class="type">Type</th>
+      <th class="defaultvalue">Default value</th>
+      <th class="description">Description</th>
+   </tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.notAffectedByHostState</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>72 bit</td>
+   <td>
+<p>length of the MAC packet header (in bits)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.address</td>
+   <td>
+      <i>string</i>
+   </td>
+   <td>"auto"</td>
+   <td>
+<p>MAC address as hex string (12 hex digits), or
+"auto". "auto" values will be replaced by
+a generated MAC address in init stage 1.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.debug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.stats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.trace</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.queueLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>100</td>
+   <td>
+<p>size of the MAC queue (maximum number of packets in Tx buffer)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.bitrate</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>250000 bps</td>
+   <td>
+<p>bit rate</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.ccaDetectionTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.000128 s</td>
+   <td>
+<p>Clear Channel Assessment detection time</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.rxSetupTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>Time to setup radio to reception state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.aTurnaroundTime</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.000192 s</td>
+   <td>
+<p>Time to switch radio from Rx to Tx state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.txPower</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>tx power [mW]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.useMACAcks</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>true</td>
+   <td>
+<p>Send/Expect MAC acks for unicast traffic?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.macMaxFrameRetries</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>3</td>
+   <td>
+<p>Maximum number of frame retransmission,
+only used when usage of MAC acks is enabled.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.macAckWaitDuration</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.00056 s</td>
+   <td>
+<p>Time to wait for an acknowledgement after transmitting a unicast frame.
+Only used when usage of MAC acks is enabled.
+Value is calculated from 1+12+10+12 symbols, which is defined for nonbeacon-enabled PAN.
+In the non-beacon-enabled case, the receiver responds at aTurnaroundTime 
+(i.e. the time for the sender and receiver to both be guaranteed to have 
+switched from Tx to Rx and vice verse).  This gives the value 192us + 
+352us = 544us (there's been some discussion about the "extra" 1 symbol == 16us) 
+[section 7.5.6.4.2 of the specification].</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.ackLength</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>40 bit</td>
+   <td>
+<p>Complete MAC ack message length (in bits) 
+(! headerLength is not added to this),
+only used when usage of MAC acks is enabled.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.sifs</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.000192 s</td>
+   <td>
+<p>Simple interframe space (12 symbols). Time to wait between receiving a frame and acknowledging it.
+Should be bigger than the maximum time for switching between Tx and Rx at the receiver.
+Only used when usage of MAC acks is enabled.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.macMaxCSMABackoffs</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>4</td>
+   <td>
+<p>maximum backoffs</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.aUnitBackoffPeriod</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.00032 s</td>
+   <td>
+<p>base unit for all backoff calculations</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.contentionWindow</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>2</td>
+   <td>
+<p># of backoff periods of the initial contention window
+(for linear and constant backoff method only)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.macMinBE</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>3</td>
+   <td>
+<p>minimum backoff exponent (for exponential backoff method only)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="applicationclusteringimplementations.MacLayer.CSMA802154HostStateHandled.html">mac</a>.macMaxBE</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>5</td>
+   <td>
+<p>maximum backoff exponent (for exponential backoff method only)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.coreDebug</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>debug switch for core framework</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.recordStats</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td>false</td>
+   <td>
+<p>enable/disable tracking of statistics (eg. cOutvectors)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.headerLength</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>defines the length of the phy header (/preamble)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.usePropagationDelay</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>Should transmission delay be simulated?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.thermalNoise</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>the strength of the thermal noise [dBm]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.useThermalNoise</td>
+   <td>
+      <i>bool</i>
+   </td>
+   <td></td>
+   <td>
+<p>should thermal noise be considered?</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.analogueModels</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>
+<p>Specification of the analogue models to use and their parameters</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.decider</td>
+   <td>
+      <i>xml</i>
+   </td>
+   <td></td>
+   <td>
+<p>Specification of the decider to use and its parameters</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.sensitivity</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>The sensitivity of the physical layer [dBm]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.maxTXPower</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td></td>
+   <td>
+<p>The maximum transimission power of the physical layer [mW]</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeRXToTX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeRXToSleep</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Elapsed time to switch from receive to sleep state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeTXToRX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Elapsed time to switch from send to receive state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeTXToSleep</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Elapsed time to switch from send to sleep state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeSleepToRX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Elapsed time to switch from sleep to receive state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.timeSleepToTX</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Elapsed time to switch from sleep to send state</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.initialRadioState</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>State the radio is initially in (0=RX, 1=TX, 2=Sleep)</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.radioMinAtt</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>1.0</td>
+   <td>
+<p>radios gain factor (attenuation) while receiving</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.radioMaxAtt</td>
+   <td>
+      <i>double</i>
+   </td>
+   <td>0.0</td>
+   <td>
+<p>radios gain factor (attenuation) while not receiving</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.nbRadioChannels</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>1</td>
+   <td>
+<p>Number of available radio channels. Defaults to single channel radio.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.initialRadioChannel</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>0</td>
+   <td>
+<p>Initial radio channel.</p>
+   </td>
+</tr>
+<tr>
+   <td><a href="../../../WakeUpRecv/doc/neddoc/wakeuprecv.WakeupPhyLayerBattery.html">phy</a>.numActivities</td>
+   <td>
+      <i>int</i>
+   </td>
+   <td>7</td>
+   <td>
+<p>the number of different power consuming activities the phy layer has
+change this parameter if your decider or physical layer uses more
+than the default 5 activities (sleep, rx, tx, switching, decoding)</p>
+   </td>
+</tr>
+</table>
+<h3 class="subtitle">Source code:</h3>
+<pre class="src"><span style="color: #808080; font-style: italic; ">//
+// This NIC implements a Texas Instruments CC 2420 802.15.4 network interface card
+// using the CSMA protocol as specified in IEEE 802.15.4-2006.
+//
+//Note: To be able to use this Nic in your simulation you have to copy the file 
+//&quot;Nic802154_TI_CC2420_Decider.xml&quot; from &quot;modules/nic/&quot; to your simulation directory.
+// </span><span style="color: #000080; ">@author</span><span style="color: #808080; font-style: italic; "> Jerome Rousselot
+//
+</span><span style="color: #800000; font-weight: bold; ">module</span><span style="color: #000000; "> </span><span style="color: #000000; ">Wakeup_Nic802154_TI_CC2420A</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">like</span><span style="color: #000000; "> </span><span style="color: #000000; ">IWirelessNicUpperCtrl</span><span style="color: #000000; ">
+{
+    </span><span style="color: #800000; font-weight: bold; ">parameters</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">string</span><span style="color: #000000; "> </span><span style="color: #000000; ">connectionManagerName</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;&quot;</span><span style="color: #000000; ">);   </span><span style="color: #808080; font-style: italic; ">//name of the ConnectionManager module
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//string phyType = default(&quot;org.mixim.modules.phy.PhyLayerBattery&quot;);
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//string macType = default(&quot;CSMA802154HostStateHandled&quot;);
+</span><span style="color: #000000; ">
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">sleepCurrent</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">rxCurrent</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">decodingCurrentDelta</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">txCurrent</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">setupRxCurrent</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">setupTxCurrent</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">rxTxCurrent</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">);
+        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">txRxCurrent</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">);
+
+        </span><span style="color: #808080; font-style: italic; ">// power consumption from boards (at 3.3V)
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">setupWakeupCurrent</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">) = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">1</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// 0.021 &micro;A
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">double</span><span style="color: #000000; "> </span><span style="color: #000000; ">wakeupCurrent</span><span style="color: #000000; "> </span><span style="color: #000000; font-weight: bold; ">@unit</span><span style="color: #000000; ">(</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">) = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">1</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// 0.021 &micro;A
+</span><span style="color: #000000; ">        </span><span style="color: #808080; font-style: italic; ">//sleepCurrent         = 0.000021mA; // 0.021 &micro;A
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">sleepCurrent</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">1</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">rxCurrent</span><span style="color: #000000; "> = </span><span style="color: #008000; ">18</span><span style="color: #000000; ">.</span><span style="color: #008000; ">8</span><span style="color: #000000; "> </span><span style="color: #000000; ">mA</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">decodingCurrentDelta</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; "> </span><span style="color: #000000; ">mA</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">txCurrent</span><span style="color: #000000; "> = </span><span style="color: #008000; ">17</span><span style="color: #000000; ">.</span><span style="color: #008000; ">4</span><span style="color: #000000; "> </span><span style="color: #000000; ">mA</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">setupRxCurrent</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">6391</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// 0.002109 W = (ESetupPower+ESetupXtal+ETxCalibrate)/TSetupTx
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">setupTxCurrent</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">6845</span><span style="color: #000000; ">mA</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// 0.002259 W = (ESetupPower+ESetupXtal+ERxCalibrate)/TSetupRx
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">rxTxCurrent</span><span style="color: #000000; "> = </span><span style="color: #008000; ">18</span><span style="color: #000000; ">.</span><span style="color: #008000; ">8</span><span style="color: #000000; "> </span><span style="color: #000000; ">mA</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// Upper bound
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">txRxCurrent</span><span style="color: #000000; "> = </span><span style="color: #008000; ">18</span><span style="color: #000000; ">.</span><span style="color: #008000; ">8</span><span style="color: #000000; "> </span><span style="color: #000000; ">mA</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// idem
+</span><span style="color: #000000; ">
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">decider</span><span style="color: #000000; "> = </span><span style="color: #800080; font-weight: bold; ">xmldoc</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;Nic802154_TI_CC2420_Decider.xml&quot;</span><span style="color: #000000; ">);
+        </span><span style="color: #808080; font-style: italic; ">//phy.publishRSSIAlways = false;
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">headerLength</span><span style="color: #000000; "> = </span><span style="color: #008000; ">48</span><span style="color: #000000; "> </span><span style="color: #000000; ">bit</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// ieee 802.15.4                
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">thermalNoise</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(-</span><span style="color: #008000; ">110</span><span style="color: #000000; "> </span><span style="color: #000000; ">dBm</span><span style="color: #000000; ">);
+        </span><span style="color: #808080; font-style: italic; ">// From TI CC1100 datasheet rev. C
+</span><span style="color: #000000; ">        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">timeSleepToRX</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">001792</span><span style="color: #000000; "> </span><span style="color: #000000; ">s</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">timeSleepToTX</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">001792</span><span style="color: #000000; "> </span><span style="color: #000000; ">s</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">timeRXToTX</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">000192</span><span style="color: #000000; "> </span><span style="color: #000000; ">s</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">timeTXToRX</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">000192</span><span style="color: #000000; "> </span><span style="color: #000000; ">s</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">timeRXToSleep</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; "> </span><span style="color: #000000; ">s</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">timeTXToSleep</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; "> </span><span style="color: #000000; ">s</span><span style="color: #000000; ">;
+
+        </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">.</span><span style="color: #000000; ">rxSetupTime</span><span style="color: #000000; "> = </span><span style="color: #008000; ">0</span><span style="color: #000000; ">.</span><span style="color: #008000; ">001792</span><span style="color: #000000; "> </span><span style="color: #000000; ">s</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">.</span><span style="color: #000000; ">txPower</span><span style="color: #000000; "> = </span><span style="color: #800000; font-weight: bold; ">default</span><span style="color: #000000; ">(</span><span style="color: #008000; ">1</span><span style="color: #000000; "> </span><span style="color: #000000; ">mW</span><span style="color: #000000; ">);
+
+    </span><span style="color: #800000; font-weight: bold; ">gates</span><span style="color: #000000; ">:
+        </span><span style="color: #000080; font-weight: bold; ">input</span><span style="color: #000000; "> </span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// to upper layers
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">output</span><span style="color: #000000; "> </span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// from upper layers
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">output</span><span style="color: #000000; "> </span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// control information 
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">input</span><span style="color: #000000; "> </span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// control information 
+</span><span style="color: #000000; ">        </span><span style="color: #000080; font-weight: bold; ">input</span><span style="color: #000000; "> </span><span style="color: #000000; ">radioIn</span><span style="color: #000000; ">; </span><span style="color: #808080; font-style: italic; ">// radioIn gate for sendDirect
+</span><span style="color: #000000; ">
+    </span><span style="color: #800000; font-weight: bold; ">submodules</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">: </span><span style="color: #000000; ">CSMA802154HostStateHandled</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=52,51;i=block/layer&quot;</span><span style="color: #000000; ">);
+            </span><span style="color: #000000; font-weight: bold; ">@class</span><span style="color: #000000; ">(</span><span style="color: #000000; ">CSMA802154HostStateHandled</span><span style="color: #000000; ">);
+        }
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">: </span><span style="color: #000000; ">WakeupPhyLayerBattery</span><span style="color: #000000; "> {
+            </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;p=52,125;i=block/process_s&quot;</span><span style="color: #000000; ">);
+        }
+    </span><span style="color: #800000; font-weight: bold; ">connections</span><span style="color: #000000; ">:
+        </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=black;m=m,25,50,25,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=black;m=m,15,50,15,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,75,50,75,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,85,0,85,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; ">;
+
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=black;m=m,25,50,25,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerIn</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperLayerIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=black;m=m,15,50,15,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerLayerOut</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlOut</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,75,50,75,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlIn</span><span style="color: #000000; ">;
+        </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">upperControlIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> { </span><span style="color: #000000; font-weight: bold; ">@display</span><span style="color: #000000; ">(</span><span style="color: #008000; ">&quot;ls=red;m=m,85,0,85,0&quot;</span><span style="color: #000000; ">); } </span><span style="color: #800000; font-weight: bold; ">&lt;--</span><span style="color: #000000; "> </span><span style="color: #000000; ">mac</span><span style="color: #000000; ">.</span><span style="color: #000000; ">lowerControlOut</span><span style="color: #000000; ">;
+
+        </span><span style="color: #000000; ">radioIn</span><span style="color: #000000; "> </span><span style="color: #800000; font-weight: bold; ">--&gt;</span><span style="color: #000000; "> </span><span style="color: #000000; ">phy</span><span style="color: #000000; ">.</span><span style="color: #000000; ">radioIn</span><span style="color: #000000; ">;
+}
+
+</span></pre>
+   <hr><p class="footer"><a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top"><img src="by-sa.png"></a> This documentation is released under the <a href="http://creativecommons.org/licenses/by-sa/3.0" target="_top">Creative Commons license</a></p>
+   </body>
+</html>

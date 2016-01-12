@@ -21,6 +21,12 @@
 #include "Memory.h"
 #include <sstream>
 
+#define ALL 0
+#define TEMPERATURE 1
+#define PRESSURE 2
+#define HUMIDITY 3
+#define LIGHT 4
+
 Processor::Processor() {
     sensingIntervall = 0;
     selfMessageMeasure = NULL;
@@ -164,8 +170,7 @@ void Processor::handleMessage(cMessage *msg)
         if (name == "startSensingUnit") {
             say("Processor: scheduling startSensingUnit");
             schedulePeriodicSelfMessage(msg, sensing);
-            startSensingUnit();
-            sensorUnitsActive.record(1);
+            startSensingUnit(ALL);
         } else if (name == "shiftMode") {
             say("Processor: scheduling shiftMode");
             switchProcessorMode();
@@ -272,28 +277,34 @@ void Processor::schedulePeriodicSelfMessage(int intervallType)
 /**
  * send signal to start sensing
  */
-void Processor::startSensingUnit()
+void Processor::startSensingUnit(int type)
 {
+    Enter_Method_Silent();
     say("Processor: Initiating measuring");
     cModule* SensorNode = getParentModule();
 
-    if (SensorNode->par("hasTemperatureSensor")) {
+    if (SensorNode->par("hasTemperatureSensor")
+            && (type == ALL || type == TEMPERATURE)) {
         cMessage* msg = new cMessage("startMeasuring");
         send(msg, "toTemperatureSensor");
     }
-    if (SensorNode->par("hasHumiditySensor")) {
+    if (SensorNode->par("hasHumiditySensor")
+            && (type == ALL || type == HUMIDITY)) {
         cMessage* msg = new cMessage("startMeasuring");
         send(msg, "toHumiditySensor");
     }
-    if (SensorNode->par("hasPressureSensor")) {
+    if (SensorNode->par("hasPressureSensor")
+            && (type == ALL || type == PRESSURE)) {
         cMessage* msg = new cMessage("startMeasuring");
         send(msg, "toPressureSensor");
     }
-    if (SensorNode->par("hasLightSensor")) {
+    if (SensorNode->par("hasLightSensor")
+            && (type == ALL || type == LIGHT)) {
         cMessage* msg = new cMessage("startMeasuring");
         send(msg, "toLightSensor");
     }
-
+    sensorUnitsActive.record(1);
+    draw();
 }
 
 /**

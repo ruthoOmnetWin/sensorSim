@@ -125,6 +125,7 @@ void CustomWorldUtility::initialize(int stage)
         this->sizeX = (int)par("playgroundSizeX").longValue()/par("dataGranularity").longValue();
         this->sizeY = (int)par("playgroundSizeY").longValue()/par("dataGranularity").longValue();
         this->sizeZ = (int)par("playgroundSizeZ").longValue()/par("dataGranularity").longValue();
+        this->sizeZ = this->sizeZ ? this->sizeZ : 1;
 
         if (par("createData")) {
             say("Generating New Environment Data");

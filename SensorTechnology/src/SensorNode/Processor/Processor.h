@@ -111,7 +111,7 @@ public:
     void finish();
     void schedulePeriodicSelfMessage(int);
     void schedulePeriodicSelfMessage(cMessage*, int);
-    void startSensingUnit();
+    void startSensingUnit(int type);
     void draw();
     void doCollectStatistics();
     virtual void handleHostState(const HostState& state);

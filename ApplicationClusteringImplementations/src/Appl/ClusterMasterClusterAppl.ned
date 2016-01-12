@@ -24,6 +24,8 @@ simple ClusterMasterClusterAppl like IBaseApplLayer
     parameters:
         int headerLength @unit("bit"); // length of the application message header (in bits)
         int coordinatorNodeAddr;
+        int nodeAddr;        // node address
+        int roomNumber = default(-1);
         
         @class(ClusterMasterClusterAppl);
     gates:
